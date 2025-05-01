@@ -1,7 +1,7 @@
 import spritesData from "../data/sprites.json";
 import shinySpritesData from "../data/shinySprites.json";
 
-import { TypeBadge } from "./TypeBadges/TypeBadge";
+import { TypeBadge } from "./TypeBadge";
 import { getAbilityName } from "../utils/abilityData";
 import { Pokemon } from "../types";
 
@@ -53,7 +53,7 @@ export function PokemonCard({
                 target.src = fallbackSprite;
               }}
             />
-            <div className="text-md min-w-25 font-bold">{nameKey}</div>
+            <div className="text-md min-w-25 text-2xl pkmnem-face-shadow font-bold font-pkmnem-short">{nameKey}</div>
 
             {/* Types */}
             <div className="mt-1 flex flex-row items-center gap-1 justify-self-end px-2 max-sm:flex-col">
@@ -68,11 +68,11 @@ export function PokemonCard({
         </div>
 
         {/* Card body */}
-        <div className="bg-gray-800 px-5 py-3 pt-4">
+        <div className="bg-gray-800 px-5 py-3 pt-4 font-pkmnem-short pkmnem-face-shadow text-2xl">
           <div className="border-3 border-fieldset-border relative mt-1.5 flex flex-row gap-5 rounded-md p-4 py-2">
-            <span className="font-pkmnem-short pkmnem-face-shadow bg-fieldset absolute -top-2.5 left-2 h-4 rounded-sm px-2 py-0 text-xs text-gray-200 md:-top-3 md:h-5">
-              <p className="ios-padding-fix -mt-[1px] p-0 md:mt-[1px]">
-                ABILITIES
+            <span className="bg-fieldset absolute -top-2.5 left-2 h-4 text-lg rounded-sm px-2 py-0 text-gray-200 md:-top-3 md:h-5">
+              <p className="ios-padding-fix -mt-[4px] p-0 md:-mt-[2px]">
+                Abilities
               </p>
             </span>
             {/* Abilities */}

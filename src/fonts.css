@@ -29,8 +29,8 @@
 
 @theme {
   --font-pixel: "Pixel Operator", sans-serif;
-  --font-pkmnem: "Emerald", sans-serif;
-  --font-pkmnem-short: "Emerald-Short", sans-serif;
+  --font-pkmnem: "PP NeueBit", sans-serif;
+  --font-pkmnem-short: "PP NeueBit", sans-serif;
 }
 
 @layer components {

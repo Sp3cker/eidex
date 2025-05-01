@@ -1,4 +1,4 @@
-import { typeDataArray, getTypeName} from "../utils/typeInfo";
+import { typeDataArray, getTypeName } from "../utils/typeInfo";
 import { FilterOptions } from "../types";
 
 interface SearchInputProps {
@@ -33,7 +33,10 @@ function SearchInput({ value, onChange, placeholder, icon }: SearchInputProps) {
   );
 }
 
-function NameSearchInput({ value, onChange }: Omit<SearchInputProps, 'placeholder' | 'icon'>) {
+function NameSearchInput({
+  value,
+  onChange,
+}: Omit<SearchInputProps, "placeholder" | "icon">) {
   const searchIcon = (
     <svg
       xmlns="https://www.w3.org/2000/svg"
@@ -50,23 +53,32 @@ function NameSearchInput({ value, onChange }: Omit<SearchInputProps, 'placeholde
       />
     </svg>
   );
-  
+
   return (
-    <SearchInput
-      value={value}
-      onChange={onChange}
-      placeholder="Search Pokémon"
-      icon={searchIcon}
-    />
+    <div className="relative">
+      <div className="font-pkmnem pkmnem-face-shadow -top-5.5 absolute h-5 rounded-sm py-0 text-gray-200">
+        <p className="ios-padding-fix -mt-[1px] p-0 md:mt-[1px]">
+          Pokémon Name
+        </p>
+      </div>
+      <SearchInput
+        value={value}
+        onChange={onChange}
+        placeholder="Search Pokémon"
+        icon={searchIcon}
+      />
+    </div>
   );
 }
 
-function TypeDropdown({
-  value,
-  onChange,
-}: TypeDropdownProps) {
+function TypeDropdown({ value, onChange }: TypeDropdownProps) {
   return (
     <div className="relative">
+      <div className="relative">
+        <div className="font-pkmnem pkmnem-face-shadow -top-5.5 absolute h-5 rounded-sm py-0 text-gray-200">
+          <p className="ios-padding-fix -mt-[1px] p-0 md:mt-[1px]">Type</p>
+        </div>
+      </div>
       <select
         value={value ?? ""}
         onChange={(e) =>
@@ -76,10 +88,7 @@ function TypeDropdown({
       >
         <option value="">All</option>
         {typeDataArray.map((typeInfo) => (
-          <option 
-            key={typeInfo.typeID} 
-            value={typeInfo.typeID}
-          >
+          <option key={typeInfo.typeID} value={typeInfo.typeID}>
             {getTypeName(typeInfo.typeID)}
           </option>
         ))}
@@ -114,47 +123,57 @@ function StatFilter({
   onStatTypeChange: (v: string) => void;
 }) {
   return (
-    <div className="group flex items-center overflow-hidden rounded-md bg-gray-800 focus-within:ring-1 focus-within:ring-blue-400">
-      <input
-        type="number"
-        placeholder="Min"
-        value={minStat ?? ""}
-        onChange={(e) =>
-          onMinStatChange(e.target.value ? Number(e.target.value) : undefined)
-        }
-        className="h-8 w-16 border-0 bg-transparent pl-2 text-sm text-white focus:outline-none focus:ring-0"
-      />
-      <div className="flex h-8 items-center px-1">
-        <span className="text-xs text-gray-400">in</span>
-      </div>
+    <div>
       <div className="relative">
-        <select
-          value={statType || "bst"}
-          onChange={(e) => onStatTypeChange(e.target.value)}
-          className="h-8 w-20 appearance-none border-0 bg-gray-800 pl-2 pr-6 text-sm text-white focus:outline-none focus:ring-0"
-        >
-          <option value="">BST</option>
-          <option value="hp">HP</option>
-          <option value="attack">Atk</option>
-          <option value="defense">Def</option>
-          <option value="spAtk">SpA</option>
-          <option value="spDef">SpD</option>
-          <option value="speed">Spe</option>
-        </select>
-        <svg
-          xmlns="https://www.w3.org/2000/svg"
-          className="pointer-events-none absolute right-2 top-2 h-4 w-4 text-gray-400"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
+        <div className="font-pkmnem pkmnem-face-shadow -top-5.5 absolute h-5 rounded-sm py-0 text-gray-200">
+          <p className="ios-padding-fix -mt-[1px] p-0 md:mt-[1px]">
+            Minimun Stat
+          </p>
+        </div>
+      </div>
+
+      <div className="flex items-center overflow-hidden rounded-md bg-gray-800 focus-within:ring-1 focus-within:ring-blue-400">
+        <input
+          type="number"
+          placeholder="Min"
+          value={minStat ?? ""}
+          onChange={(e) =>
+            onMinStatChange(e.target.value ? Number(e.target.value) : undefined)
+          }
+          className="h-8 w-16 border-0 bg-transparent pl-2 text-sm text-white focus:outline-none focus:ring-0"
+        />
+        <div className="flex h-8 items-center px-1">
+          <span className="text-xs text-gray-400">in</span>
+        </div>
+        <div className="relative">
+          <select
+            value={statType || "bst"}
+            onChange={(e) => onStatTypeChange(e.target.value)}
+            className="h-8 w-20 appearance-none border-0 bg-gray-800 pl-2 pr-6 text-sm text-white focus:outline-none focus:ring-0"
+          >
+            <option value="">BST</option>
+            <option value="hp">HP</option>
+            <option value="attack">Atk</option>
+            <option value="defense">Def</option>
+            <option value="spAtk">SpA</option>
+            <option value="spDef">SpD</option>
+            <option value="speed">Spe</option>
+          </select>
+          <svg
+            xmlns="https://www.w3.org/2000/svg"
+            className="pointer-events-none absolute right-2 top-2 h-4 w-4 text-gray-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   );
@@ -163,7 +182,7 @@ function StatFilter({
 function AbilitySearchInput({
   value,
   onChange,
-}: Omit<SearchInputProps, 'placeholder' | 'icon'>) {
+}: Omit<SearchInputProps, "placeholder" | "icon">) {
   const abilityIcon = (
     <svg
       xmlns="https://www.w3.org/2000/svg"
@@ -182,40 +201,56 @@ function AbilitySearchInput({
   );
 
   return (
-    <SearchInput
-      value={value}
-      onChange={onChange}
-      placeholder="Ability"
-      icon={abilityIcon}
-    />
+    <div>
+      <div className="relative">
+        <div className="font-pkmnem pkmnem-face-shadow text-md -top-4.5 absolute h-5 md:-top-6 rounded-sm py-0 text-gray-200">
+          <p className="ios-padding-fix -mt-[1px] p-0 md:mt-[1px]">Ability</p>
+        </div>
+      </div>
+      <SearchInput
+        value={value}
+        onChange={onChange}
+        placeholder="Ability"
+        icon={abilityIcon}
+      />
+    </div>
   );
 }
 
 export function FilterBar({ filters, setFilters }: FilterBarProps) {
   return (
-    <div className="flex w-full flex-wrap items-center justify-evenly gap-3 rounded-t-lg bg-gray-900/90 px-3 py-2 shadow-lg">
-      <NameSearchInput
-        value={filters.name || ""}
-        onChange={(name) => setFilters((prev) => ({ ...prev, name }))}
-      />
-      <TypeDropdown
-        value={filters.typeId}
-        onChange={(typeId) => setFilters((prev) => ({ ...prev, typeId }))}
-      />
-      <AbilitySearchInput
-        value={filters.ability || ""}
-        onChange={(ability) => setFilters((prev) => ({ ...prev, ability }))}
-      />
-      <StatFilter
-        minStat={filters.minStat}
-        statType={filters.statType}
-        onMinStatChange={(minStat) =>
-          setFilters((prev) => ({ ...prev, minStat }))
-        }
-        onStatTypeChange={(statType) =>
-          setFilters((prev) => ({ ...prev, statType }))
-        }
-      />
+    <div className="md:border-fieldset-border rounded-t-lg bg-gray-900 px-3 py-3 shadow-lg md:rounded-md md:border">
+      <div className="relative hidden md:block">
+        <div className="font-pkmnem-short pkmnem-face-shadow bg-fieldset -top-5.5 absolute left-2 h-5 rounded-sm px-2 py-0 text-xl text-gray-200">
+          <p className="ios-padding-fix -mt-[1px] p-0 md:-mt-[3px]">
+            Search & Filter
+          </p>
+        </div>
+      </div>
+      <div className="flex w-full flex-wrap items-left md:items-center justify-left gap-7 pt-5">
+        <NameSearchInput
+          value={filters.name || ""}
+          onChange={(name) => setFilters((prev) => ({ ...prev, name }))}
+        />
+        <TypeDropdown
+          value={filters.typeId}
+          onChange={(typeId) => setFilters((prev) => ({ ...prev, typeId }))}
+        />
+        <AbilitySearchInput
+          value={filters.ability || ""}
+          onChange={(ability) => setFilters((prev) => ({ ...prev, ability }))}
+        />
+        <StatFilter
+          minStat={filters.minStat}
+          statType={filters.statType}
+          onMinStatChange={(minStat) =>
+            setFilters((prev) => ({ ...prev, minStat }))
+          }
+          onStatTypeChange={(statType) =>
+            setFilters((prev) => ({ ...prev, statType }))
+          }
+        />
+      </div>
     </div>
   );
 }
