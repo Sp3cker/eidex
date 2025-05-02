@@ -1,5 +1,5 @@
-import { typeDataArray, getTypeName } from "../utils/typeInfo";
-import { FilterOptions } from "../types";
+import { typeDataArray, getTypeName } from "../../utils/typeInfo";
+import { FilterOptions } from "../../types";
 
 interface SearchInputProps {
   value: string;
@@ -219,7 +219,7 @@ export function FilterBar({ filters, setFilters }: FilterBarProps) {
           <p className="relative -top-[6px]">Search & Filter</p>
         </div>
       </div>
-      <div className="items-left justify-left flex w-full flex-wrap gap-7 pt-0 md:items-center">
+      <div className="items-left justify-left flex w-50% flex-wrap gap-7 pt-0 md:items-center">
         <NameSearchInput
           value={filters.name || ""}
           onChange={(name) => setFilters((prev) => ({ ...prev, name }))}

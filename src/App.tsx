@@ -5,7 +5,7 @@ import { FilterBar } from "./components/FilterUI";
 import { useState, useMemo, useEffect } from "react";
 import { FilterOptions } from "./types";
 import CreditsButton from "./components/CreditsButton";
-
+import { DrawerContainer } from "./components/FilterUI/Drawer";
 const pokemonData = Object.values(speciesData);
 
 function App() {
@@ -88,7 +88,7 @@ function App() {
           <PokemonList pokemons={filteredPokemon} isShiny={isShiny} />
         </div>
         <div className="order-1 w-full md:order-2 md:w-auto md:pl-1">
-          <FilterBar filters={rawFilters} setFilters={setRawFilters} />
+          <DrawerContainer filters={rawFilters} setFilters={setRawFilters} />
         </div>
       </div>
     </div>
