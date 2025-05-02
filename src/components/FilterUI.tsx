@@ -56,15 +56,13 @@ function NameSearchInput({
 
   return (
     <div className="relative">
-      <div className="font-pkmnem pkmnem-face-shadow -top-5.5 absolute h-5 rounded-sm py-0 text-gray-200">
-        <p className="ios-padding-fix -mt-[1px] p-0 md:mt-[1px]">
-          Pokémon Name
-        </p>
+      <div className="pkmnem-face-shadow eidex-input-label">
+        <p>Pokémon Name</p>
       </div>
       <SearchInput
         value={value}
         onChange={onChange}
-        placeholder="Search Pokémon"
+        // placeholder="Search Pokémon"
         icon={searchIcon}
       />
     </div>
@@ -73,40 +71,40 @@ function NameSearchInput({
 
 function TypeDropdown({ value, onChange }: TypeDropdownProps) {
   return (
-    <div className="relative">
-      <div className="relative">
-        <div className="font-pkmnem pkmnem-face-shadow -top-5.5 absolute h-5 rounded-sm py-0 text-gray-200">
-          <p className="ios-padding-fix -mt-[1px] p-0 md:mt-[1px]">Type</p>
-        </div>
+    <div>
+      <div className="pkmnem-face-shadow eidex-input-label">
+        <p>Type</p>
       </div>
-      <select
-        value={value ?? ""}
-        onChange={(e) =>
-          onChange(e.target.value ? Number(e.target.value) : undefined)
-        }
-        className="h-9 w-32 appearance-none rounded-md border-0 bg-gray-800 pl-3 pr-8 text-sm text-white focus:ring-1 focus:ring-blue-400"
-      >
-        <option value="">All</option>
-        {typeDataArray.map((typeInfo) => (
-          <option key={typeInfo.typeID} value={typeInfo.typeID}>
-            {getTypeName(typeInfo.typeID)}
-          </option>
-        ))}
-      </select>
-      <svg
-        xmlns="https://www.w3.org/2000/svg"
-        className="pointer-events-none absolute right-2 top-2.5 h-4 w-4 text-gray-400"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M19 9l-7 7-7-7"
-        />
-      </svg>
+      <div className="relative">
+        <select
+          value={value ?? ""}
+          onChange={(e) =>
+            onChange(e.target.value ? Number(e.target.value) : undefined)
+          }
+          className="h-9 w-32 appearance-none rounded-md border-0 bg-gray-800 pl-3 pr-8 text-sm text-white focus:ring-1 focus:ring-blue-400"
+        >
+          <option value="">All</option>
+          {typeDataArray.map((typeInfo) => (
+            <option key={typeInfo.typeID} value={typeInfo.typeID}>
+              {getTypeName(typeInfo.typeID)}
+            </option>
+          ))}
+        </select>
+        <svg
+          xmlns="https://www.w3.org/2000/svg"
+          className="pointer-events-none absolute right-2 top-2.5 h-4 w-4 text-gray-400"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </div>
     </div>
   );
 }
@@ -123,13 +121,9 @@ function StatFilter({
   onStatTypeChange: (v: string) => void;
 }) {
   return (
-    <div>
-      <div className="relative">
-        <div className="font-pkmnem pkmnem-face-shadow -top-5.5 absolute h-5 rounded-sm py-0 text-gray-200">
-          <p className="ios-padding-fix -mt-[1px] p-0 md:mt-[1px]">
-            Minimun Stat
-          </p>
-        </div>
+    <div className="relative">
+      <div className="eidex-input-label pkmnem-face-shadow">
+        <p>Minimun Stat</p>
       </div>
 
       <div className="flex items-center overflow-hidden rounded-md bg-gray-800 focus-within:ring-1 focus-within:ring-blue-400">
@@ -203,8 +197,8 @@ function AbilitySearchInput({
   return (
     <div>
       <div className="relative">
-        <div className="font-pkmnem pkmnem-face-shadow text-md -top-4.5 absolute h-5 md:-top-6 rounded-sm py-0 text-gray-200">
-          <p className="ios-padding-fix -mt-[1px] p-0 md:mt-[1px]">Ability</p>
+        <div className="eidex-input-label pkmnem-face-shadow">
+          <p>Ability</p>
         </div>
       </div>
       <SearchInput
@@ -220,14 +214,12 @@ function AbilitySearchInput({
 export function FilterBar({ filters, setFilters }: FilterBarProps) {
   return (
     <div className="md:border-fieldset-border rounded-t-lg bg-gray-900 px-3 py-3 shadow-lg md:rounded-md md:border">
-      <div className="relative hidden md:block">
-        <div className="font-pkmnem-short pkmnem-face-shadow bg-fieldset -top-5.5 absolute left-2 h-5 rounded-sm px-2 py-0 text-xl text-gray-200">
-          <p className="ios-padding-fix -mt-[1px] p-0 md:-mt-[3px]">
-            Search & Filter
-          </p>
+      <div className="absolute hidden md:block">
+        <div className="font-pkmnem bg-fieldset pkmnem-face-shadow absolute -top-[22px] left-2 w-28 rounded-sm px-2 py-0 font-bold text-gray-200 md:h-5 md:text-xl">
+          <p className="relative -top-[6px]">Search & Filter</p>
         </div>
       </div>
-      <div className="flex w-full flex-wrap items-left md:items-center justify-left gap-7 pt-5">
+      <div className="items-left justify-left flex w-full flex-wrap gap-7 pt-0 md:items-center">
         <NameSearchInput
           value={filters.name || ""}
           onChange={(name) => setFilters((prev) => ({ ...prev, name }))}

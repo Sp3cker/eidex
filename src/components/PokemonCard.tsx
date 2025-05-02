@@ -70,8 +70,8 @@ export function PokemonCard({
         {/* Card body */}
         <div className="bg-gray-800 px-5 py-3 pt-4">
           <div className="border-3 border-fieldset-border relative mt-1.5 flex flex-row gap-5 rounded-md p-4 py-2">
-            <span className="font-pkmnem-short pkmnem-face-shadow bg-fieldset absolute -top-2.5 left-2 h-4 rounded-sm px-2 py-0 text-xs text-gray-200 md:-top-3 md:h-5">
-              <p className="ios-padding-fix -mt-[1px] p-0 md:mt-[1px]">
+            <span className="abilities-fieldset pkmnem-face-shadow">
+              <p>
                 ABILITIES
               </p>
             </span>
