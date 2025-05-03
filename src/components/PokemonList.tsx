@@ -7,11 +7,17 @@ import useBodyScrollLock from "../hooks/useBodyScrollLock";
 type PokemonListProps = {
   pokemons: Pokemon[];
   isShiny?: boolean;
+  setSelectedPokemon: (p: Pokemon | null) => void;
+  selectedPokemon: Pokemon | null;
 };
 
-export function PokemonList({ pokemons, isShiny }: PokemonListProps) {
+export function PokemonList({
+  pokemons,
+  isShiny,
+  setSelectedPokemon,
+  selectedPokemon,
+}: PokemonListProps) {
   const [visibleCount, setVisibleCount] = useState(10);
-  const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {

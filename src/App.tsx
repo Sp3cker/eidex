@@ -1,11 +1,11 @@
 import speciesData from "./data/speciesData.json";
 import { PokemonList } from "./components/PokemonList";
 import { filterPokemon } from "./utils/filterPokemon";
-import { FilterBar } from "./components/FilterUI";
 import { useState, useMemo, useEffect } from "react";
-import { FilterOptions } from "./types";
+import { FilterOptions, Pokemon } from "./types";
 import CreditsButton from "./components/CreditsButton";
 import { DrawerContainer } from "./components/FilterUI/Drawer";
+import { PokemonModal } from "./components/PokemonModal/PokemonModal";
 const pokemonData = Object.values(speciesData);
 
 function App() {
@@ -34,6 +34,7 @@ function App() {
     tmMove: "",
     tutorMove: "",
   });
+  const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(null);
 
   // Debounce delay in milliseconds
   const DEBOUNCE_DELAY = 300;
@@ -91,8 +92,18 @@ function App() {
             <CreditsButton />
           </div>
 
-          <PokemonList pokemons={filteredPokemon} isShiny={isShiny} />
+          <PokemonList
+            pokemons={filteredPokemon}
+            isShiny={isShiny}
+            selectedPokemon={selectedPokemon}
+            setSelectedPokemon={setSelectedPokemon}
+          />
         </div>
+        <PokemonModal
+          pokemon={selectedPokemon}
+          onClose={() => setSelectedPokemon(null)}
+          isShiny={isShiny}
+        />
         <div className="order-1 w-full md:order-2 md:w-auto md:pl-1">
           <DrawerContainer filters={rawFilters} setFilters={setRawFilters} />
         </div>

@@ -1,32 +1,30 @@
-import React, { useActionState, useEffect, useReducer, useState } from "react";
+import { useEffect, useState } from "react";
 import { FilterBar } from "./FilterUI";
-import { useTailwindWidth } from "../../hooks/useWindowDimensions";
+import { useScreenWidth } from "../../hooks/useScreenWidth";
 
 const Drawer = ({ currOpen, toggleOpen, currTailwindSize, ...props }: any) => {
   const [currDisplayString, setCurrDisplayString] =
     useState("flex mt-20 pt-10");
-  const desktopStyle = "fixed z-10 w-3/4 h-screen right-0 inset-y-0 bg-black/30 backdrop-blur-md";
+  const screenWidth = useScreenWidth();
+  const desktopStyle =
+    "fixed w-3/4 h-screen right-0 inset-y-0 bg-black/30 backdrop-blur-md";
 
   useEffect(() => {
-    console.log(currTailwindSize);
-    if (currTailwindSize === "md") {
+    if (screenWidth === "md") {
       toggleOpen(false);
       return setCurrDisplayString("");
     }
     if (currOpen === true) {
-      console.log(currOpen);
       // This initializes as false
-      setCurrDisplayString(`${desktopStyle} block`);
+      setCurrDisplayString(`${desktopStyle}`);
     }
     if (currOpen === false) {
       return setCurrDisplayString(`${desktopStyle} hidden`);
     }
   }, [currOpen, currTailwindSize]);
 
-
   return (
     <nav className={currDisplayString}>
-      
       <button
         style={{ display: currTailwindSize === "md" ? "none" : "" }}
         onClick={() => toggleOpen(!currOpen)}
@@ -53,11 +51,11 @@ const Drawer = ({ currOpen, toggleOpen, currTailwindSize, ...props }: any) => {
 
 const DrawerContainer = (props: any) => {
   const [currOpen, toggleOpen] = useState(false);
-  const currBreakpoint = useTailwindWidth();
+  const currBreakpoint = useScreenWidth();
   return (
     <div>
       <button
-        className={`${currBreakpoint === "md" ? "hidden" : ""} float-right pkmnem-face-shadow bg-fieldset font-pkmnem hover:bg-fieldset/80 rounded-sm px-5 text-lg text-gray-200`}
+        className={`${currBreakpoint === "md" ? "hidden" : ""} pkmnem-face-shadow bg-fieldset font-pkmnem hover:bg-fieldset/80 float-right rounded-sm px-5 text-lg text-gray-200`}
         onClick={() => toggleOpen(!currOpen)}
       >
         Filters
