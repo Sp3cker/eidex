@@ -47,9 +47,9 @@ input[type="number"] {
   }
   .pkmnem-face-shadow {
     text-shadow:
-      0px 0.5px #413141,
-      0.3px 0.3px #413141,
-      0.3px 0px #413141,
+      1px 1px #454547,
+      0.3px 0.3px #454547,
+      0.3px 0px #454547,
       0.6px 0.7px #6a5a5a,
       0.5px 0px 2px rgba(129, 119, 111, 0.2);
   }
@@ -61,7 +61,7 @@ input[type="number"] {
   }
 
   .abilities-fieldset {
-    @apply font-pkmnem-short bg-fieldset md:-top-2.75 absolute -top-2.5 left-2 h-4 rounded-sm px-2 md:pt-[1px] text-xs/4 font-semibold text-gray-200 md:h-5;
+    @apply font-pkmnem-short bg-fieldset md:-top-2.75 absolute -top-2.5 left-2 h-4 rounded-sm px-2 text-xs/4 font-semibold text-gray-200 md:h-5 md:pt-[1px];
   }
   .abilities-fieldset p {
     position: relative;
@@ -69,5 +69,17 @@ input[type="number"] {
   .eidex-input-label {
     @apply font-pkmnem absolute -top-1.5 left-1 h-5 rounded-sm py-0 text-xl text-gray-100;
     position: relative;
+  }
+  .drawer-button {
+    @apply flex flex-row items-center justify-between rounded-md px-4 py-2 text-center md:text-3xl text-xl text-white shadow transition-all hover:shadow-lg focus:shadow-none active:shadow-none;
+    background: linear-gradient(
+      to top,
+      /* var(--color-fieldset) 29%, */
+      var(--color-stone-800) 0 29%,
+      var(--color-neutral-800) 100%
+    );
+  }
+  .drawer-button:hover {
+    cursor: pointer;
   }
 }

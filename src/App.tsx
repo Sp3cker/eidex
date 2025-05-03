@@ -105,7 +105,11 @@ function App() {
           isShiny={isShiny}
         />
         <div className="order-1 w-full md:order-2 md:w-auto md:pl-1">
-          <DrawerContainer filters={rawFilters} setFilters={setRawFilters} />
+          <DrawerContainer
+            closeDrawer={selectedPokemon !== null}
+            filters={rawFilters}
+            setFilters={setRawFilters}
+          />
         </div>
       </div>
     </div>
