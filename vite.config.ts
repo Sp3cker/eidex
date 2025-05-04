@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/postcss'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/eidex',
   css: {
     postcss: {
       plugins: [tailwindcss()],

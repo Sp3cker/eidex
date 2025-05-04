@@ -1,6 +1,4 @@
 import { Pokemon, Ability } from "../../types";
-import spritesData from "../../data/sprites.json";
-import shinySpritesData from "../../data/shinySprites.json";
 import { useState } from "react";
 import TabbedInterface from "./TabbedInterface";
 import EvolutionBox from "./EvolutionBox";
@@ -26,10 +24,10 @@ function PokemonView({
 }) {
   const [selectedAbility, setSelectedAbility] = useState<Ability | null>(null);
 
-  const shinySprite = `data:image/png;base64,${shinySpritesData[pokemon.ID.toString() as keyof typeof shinySpritesData]}`;
-  const regularSprite = `data:image/png;base64,${spritesData[pokemon.ID.toString() as keyof typeof spritesData]}`;
+  const shinySpritePath = `/eidex/shinySpritesPNG/${pokemon.ID.toString()}.png`;
+  const regularSpritePath = `/eidex/spritesPNG/${pokemon.ID.toString()}.png`;
+  const displaySprite = isShiny ? shinySpritePath : regularSpritePath;
 
-  const displaySprite = isShiny ? shinySprite : regularSprite;
   const reorderedAbilities = [...pokemon.abilities.slice(1)];
   const hiddenAbility = pokemon.abilities[0];
 

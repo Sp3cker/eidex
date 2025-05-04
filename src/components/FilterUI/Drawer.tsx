@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { FilterBar } from "./FilterUI";
 import { useScreenWidth } from "../../hooks/useScreenWidth";
-import { useSpring, animated, useTransition } from "react-spring";
+import { useSpring, animated } from "react-spring";
 
 const Drawer = ({
   currOpen,
@@ -71,7 +71,7 @@ const DrawerContainer = (props: any) => {
     <div ref={containerRef}>
       <div className="md: flex justify-between px-2 py-0 py-1">
         <img
-          src="/public/Pokemans_395-1200px.webp"
+          src="/eidex/Pokemans_395-1200px.webp"
           alt="Imperium Pokedex"
           className="h-9"
         />

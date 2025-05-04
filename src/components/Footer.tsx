@@ -1,4 +1,3 @@
-import react from "react";
 import { FaDiscord, FaGithubAlt } from "react-icons/fa";
 import { IconContext } from "react-icons";
 

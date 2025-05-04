@@ -62,7 +62,7 @@ function NameSearchInput({
       <SearchInput
         value={value}
         onChange={onChange}
-        // placeholder="Search Pokémon"
+        placeholder="Search Pokémon"
         icon={searchIcon}
       />
     </div>

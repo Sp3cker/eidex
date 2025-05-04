@@ -1,5 +1,3 @@
-import spritesData from "../../data/sprites.json";
-import shinySpritesData from "../../data/shinySprites.json";
 import { getTypeSnapColor } from "../../utils/typeInfo";
 import { TypeBadge } from "../TypeBadges/TypeBadge";
 import { getAbilityName } from "../../utils/abilityData";
@@ -46,12 +44,13 @@ export function PokemonCard({
   const reorderedAbilities = [...abilities.slice(1), abilities[0]];
 
   // If the sprite is "", then use the default sprite
-  const fallbackSprite = "/missingno.png";
+  const fallbackSprite = "/eidex/missingno.png";
 
-  const shinySprite = `data:image/png;base64,${shinySpritesData[ID.toString() as keyof typeof shinySpritesData]}`;
-  const regularSprite = `data:image/png;base64,${spritesData[ID.toString() as keyof typeof spritesData]}`;
-
-  const displaySprite = isShiny ? shinySprite : regularSprite;
+  // const shinySprite = `data:image/png;base64,${shinySpritesData[ID.toString() as keyof typeof shinySpritesData]}`;
+  // const regularSprite = `data:image/png;base64,${spritesData[ID.toString() as keyof typeof spritesData]}`;
+  const shinySpritePath = `/eidex/shinySpritesPNG/${ID.toString()}.png`;
+  const regularSpritePath = `/eidex/spritesPNG/${ID.toString()}.png`;
+  const displaySprite = isShiny ? shinySpritePath : regularSpritePath;
 
   const typeId = type[0];
   let adjustedBg = adjustedBgCache[typeId];
