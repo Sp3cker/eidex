@@ -89,4 +89,7 @@ input[type="number"] {
     color: white;
     text-align: center;
   }
+  .evolution_box {
+    @apply font-pixel text-shadow-lg/40 border-3 my-5 flex rounded-sm border-neutral-600 bg-zinc-800 p-2 text-base text-white;
+  }
 }

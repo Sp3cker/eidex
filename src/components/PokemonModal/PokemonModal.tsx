@@ -3,7 +3,7 @@ import spritesData from "../../data/sprites.json";
 import shinySpritesData from "../../data/shinySprites.json";
 import { useState } from "react";
 import TabbedInterface from "./TabbedInterface";
-
+import EvolutionBox from "./EvolutionBox";
 import CloseButton from "../CloseButton";
 import AbilityBadge from "./AbilityBadge";
 import AbilityDescription from "./AbiltyDescription";
@@ -53,7 +53,7 @@ function PokemonView({
         <div className="text-md font-pixel text-gray-400">#{pokemon.ID}</div>
       </div>
       <div className="my-2 flex w-full flex-col">
-        <div className="border-3 border-fieldset-border relative flex w-full flex-row justify-evenly rounded-sm px-3 py-7 text-center">
+        <div className="border-3 border-neutral-600 relative flex w-full flex-row justify-evenly rounded-sm px-3 py-7 text-center">
           {/* Abilities Label */}
           <div className="w-19 font-pkmnem-short absolute left-6 top-0 flex translate-y-[-50%] select-none items-center justify-center rounded border border-gray-300 bg-blue-900 px-4 py-1 text-center text-xs font-bold uppercase text-gray-100">
             Abilities
@@ -78,6 +78,9 @@ function PokemonView({
             onClose={() => setSelectedAbility(null)}
           />
         </div>
+        <div>
+          <EvolutionBox pokemon={pokemon} />
+        </div>
         <div className="flex flex-wrap text-gray-100">
           <TypeMatchup pokemon={pokemon} />
         </div>
@@ -97,8 +100,14 @@ export function PokemonModal({
   if (!pokemon) return null;
 
   return (
-    <div className="fixed z-10 inset-0 flex items-center justify-center bg-black/30 backdrop-blur-md">
-      <div className="w-xl no-scrollbar relative my-5 h-[95dvh] max-h-screen justify-normal overflow-y-auto rounded-lg border border-gray-100 bg-zinc-800 p-6">
+    <div
+      className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-md"
+      onClick={onClose}
+    >
+      <div
+        className="w-xl no-scrollbar relative my-5 h-[95dvh] max-h-screen justify-normal overflow-y-auto rounded-lg border border-gray-100 bg-zinc-800 p-6"
+        onClick={(e) => e.stopPropagation()}
+      >
         <CloseButton onClick={onClose} />
         <PokemonView pokemon={pokemon} isShiny={isShiny} />
       </div>

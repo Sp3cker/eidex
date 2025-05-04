@@ -64,12 +64,12 @@ function App() {
   }, [isShiny]);
 
   return (
-    <div className="flex w-full flex-col ring-5 ring-fieldset p-0 md:flex-row">
-      {/* Pass rawFilters and setRawFilters to FilterBar for immediate UI updates */}
+    <div className="flex min-h-screen justify-center bg-zinc-800">
+      <div className="flex w-full max-w-3xl flex-col border-neutral-900/50 border-1 rounded-lg shadow-2xl/60 mt-4">
+        {/* Pass rawFilters and setRawFilters to FilterBar for immediate UI updates */}
 
-      {/* Shiny toggle UI */}
-      <div className="order-2 w-full md:order-1 md:w-3/4">
-        <div className="flex items-center justify-between gap-2 bg-slate-900/50 px-3 py-2">
+        {/* Shiny toggle UI */}
+        <div className="flex items-center justify-between gap-2 bg-neutral-800/30 px-3 py-2">
           <div className="flex flex-row items-center">
             <img
               src="/shinycharm.png"
