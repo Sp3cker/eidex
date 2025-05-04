@@ -47,7 +47,6 @@ input[type="number"] {
   }
   .pkmnem-face-shadow {
     text-shadow:
-      1px 1px #454547,
       0.3px 0.3px #454547,
       0.3px 0px #454547,
       0.6px 0.7px #6a5a5a,
@@ -71,15 +70,23 @@ input[type="number"] {
     position: relative;
   }
   .drawer-button {
-    @apply flex flex-row items-center justify-between rounded-md px-4 py-2 text-center md:text-3xl text-xl text-white shadow transition-all hover:shadow-lg focus:shadow-none active:shadow-none;
+    @apply flex flex-row items-center justify-between rounded-md px-4 py-2 text-center text-xl text-white shadow transition-all hover:shadow-lg focus:shadow-none active:shadow-none md:text-3xl;
     background: linear-gradient(
       to top,
-      /* var(--color-fieldset) 29%, */
-      var(--color-stone-800) 0 29%,
+      /* var(--color-fieldset) 29%, */ var(--color-stone-800) 0 29%,
       var(--color-neutral-800) 100%
     );
   }
   .drawer-button:hover {
     cursor: pointer;
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
   }
 }

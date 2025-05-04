@@ -69,12 +69,19 @@ const DrawerContainer = (props: any) => {
   }, [props.closeDrawer]);
   return (
     <div ref={containerRef}>
+      <div className="md: flex justify-between px-2 py-0 py-1">
+        <img
+          src="/public/Pokemans_395-1200px.webp"
+          alt="Imperium Pokedex"
+          className="h-9"
+        />
       <button
         className={`${currBreakpoint === "md" ? "hidden" : ""} pkmnem-face-shadow bg-fieldset font-pkmnem hover:bg-fieldset/80 float-right rounded-sm px-5 text-lg text-gray-200`}
         onClick={() => toggleOpen(!currOpen)}
       >
         ✨ Filters
       </button>
+      </div>
       {currBreakpoint === "md" ? (
         <FilterBar filters={props.filters} setFilters={props.setFilters} />
       ) : (

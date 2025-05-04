@@ -31,7 +31,7 @@ function TypeBadge({
             <img
               src={icon}
               alt={name}
-              className="h-6 w-20 object-contain"
+              className="pl-1 h-6 object-contain"
               aria-hidden="true"
             />
           )}

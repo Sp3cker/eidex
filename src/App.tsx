@@ -6,6 +6,7 @@ import { FilterOptions, Pokemon } from "./types";
 import CreditsButton from "./components/CreditsButton";
 import { DrawerContainer } from "./components/FilterUI/Drawer";
 import { PokemonModal } from "./components/PokemonModal/PokemonModal";
+import Footer from "./components/Footer";
 const pokemonData = Object.values(speciesData);
 
 function App() {
@@ -63,56 +64,62 @@ function App() {
   }, [isShiny]);
 
   return (
-    <div className="flex min-h-screen bg-zinc-800">
-      <div className="flex w-full flex-col p-4 md:flex-row">
-        {/* Pass rawFilters and setRawFilters to FilterBar for immediate UI updates */}
+    <div className="flex w-full flex-col ring-5 ring-fieldset p-0 md:flex-row">
+      {/* Pass rawFilters and setRawFilters to FilterBar for immediate UI updates */}
 
-        {/* Shiny toggle UI */}
-        <div className="order-2 w-full md:order-1 md:w-3/4">
-          <div className="flex items-center justify-between gap-2 bg-slate-900/50 px-3 py-2">
-            <div className="flex flex-row items-center">
-              <img
-                src="/shinycharm.png"
-                alt="Shiny Mode"
-                className="h-6.5 w-6.5 object-contain"
-                title="Shiny Mode"
+      {/* Shiny toggle UI */}
+      <div className="order-2 w-full md:order-1 md:w-3/4">
+        <div className="flex items-center justify-between gap-2 bg-slate-900/50 px-3 py-2">
+          <div className="flex flex-row items-center">
+            <img
+              src="/shinycharm.png"
+              alt="Shiny Mode"
+              className="h-6.5 w-6.5 object-contain"
+              title="Shiny Mode"
+            />
+            <button
+              type="button"
+              role="switch"
+              aria-checked={isShiny}
+              onClick={() => setIsShiny((prev) => !prev)}
+              className={`relative inline-flex h-5 w-10 items-center rounded-full transition-colors duration-200 focus:outline-none ${isShiny ? "bg-blue-600" : "bg-zinc-600"}`}
+            >
+              <span
+                className={`inline-block h-3 w-3 transform rounded-full bg-white shadow transition-transform duration-200 ${isShiny ? "translate-x-5" : "translate-x-1"}`}
               />
-              <button
-                type="button"
-                role="switch"
-                aria-checked={isShiny}
-                onClick={() => setIsShiny((prev) => !prev)}
-                className={`relative inline-flex h-5 w-10 items-center rounded-full transition-colors duration-200 focus:outline-none ${isShiny ? "bg-blue-600" : "bg-zinc-600"}`}
-              >
-                <span
-                  className={`inline-block h-3 w-3 transform rounded-full bg-white shadow transition-transform duration-200 ${isShiny ? "translate-x-5" : "translate-x-1"}`}
-                />
-              </button>
-            </div>
-            <CreditsButton />
+            </button>
           </div>
+          <CreditsButton />
+        </div>
 
-          <PokemonList
-            pokemons={filteredPokemon}
-            isShiny={isShiny}
-            selectedPokemon={selectedPokemon}
-            setSelectedPokemon={setSelectedPokemon}
-          />
-        </div>
-        <PokemonModal
-          pokemon={selectedPokemon}
-          onClose={() => setSelectedPokemon(null)}
+        <PokemonList
+          pokemons={filteredPokemon}
           isShiny={isShiny}
+          selectedPokemon={selectedPokemon}
+          setSelectedPokemon={setSelectedPokemon}
         />
-        <div className="order-1 w-full md:order-2 md:w-auto md:pl-1">
-          <DrawerContainer
-            closeDrawer={selectedPokemon !== null}
-            filters={rawFilters}
-            setFilters={setRawFilters}
-          />
-        </div>
+      </div>
+      <PokemonModal
+        pokemon={selectedPokemon}
+        onClose={() => setSelectedPokemon(null)}
+        isShiny={isShiny}
+      />
+      <div className="order-1 w-full md:order-2 md:w-auto md:pl-1">
+        <DrawerContainer
+          closeDrawer={selectedPokemon !== null}
+          filters={rawFilters}
+          setFilters={setRawFilters}
+        />
       </div>
     </div>
   );
 }
-export default App;
+const AppWrapper = () => {
+  return (
+    <div className="flex flex-col">
+      <App />
+      <Footer />
+    </div>
+  );
+};
+export default AppWrapper;
