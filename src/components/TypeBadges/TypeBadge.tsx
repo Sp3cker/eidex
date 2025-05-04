@@ -1,12 +1,12 @@
 import { getTypeName, getTypeSnapColor } from "../../utils/typeInfo";
+import { memo } from "react";
 import { typeIcons } from "../../utils/typeIcons";
 import adjustTypeForDevice from "../../utils/adjustType";
 
 const makeBackgroundStyle = (typeColor: string, screenWidth: string) =>
   `linear-gradient(120deg, ${typeColor} 0 ${screenWidth === "md" ? "36%" : "40%"}, var(--color-stone-700) 33% 100%)`;
 
-
-function TypeBadge({
+const TypeBadge = memo(function TypeBadge({
   typeId,
   screenWidth,
 }: {
@@ -21,7 +21,7 @@ function TypeBadge({
 
   return (
     <span
-      className="w-[64px] relative inline-flex h-[22px] md:h-[24px] select-none items-center overflow-hidden rounded-full md:w-[86px]"
+      className="relative inline-flex h-[22px] w-[64px] select-none items-center overflow-hidden rounded-full md:h-[24px] md:w-[86px]"
       style={{ background: spriteBackground }}
     >
       <span className="flex h-full w-full flex-row items-center">
@@ -31,7 +31,7 @@ function TypeBadge({
             <img
               src={icon}
               alt={name}
-              className="pl-1 h-6 object-contain"
+              className="h-6 w-20 object-contain"
               aria-hidden="true"
             />
           )}
@@ -45,6 +45,6 @@ function TypeBadge({
       </span>
     </span>
   );
-}
+});
 
 export { TypeBadge };
