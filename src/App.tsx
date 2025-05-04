@@ -64,8 +64,8 @@ function App() {
   }, [isShiny]);
 
   return (
-    <div className="flex min-h-screen justify-center bg-zinc-800">
-      <div className="flex w-full max-w-3xl flex-col border-neutral-900/50 border-1 rounded-lg shadow-2xl/60 mt-4">
+    <div className="flex min-h-screen flex-col md:flex-row justify-center bg-zinc-800">
+      <div className="border-1 shadow-2xl/60 order-2 flex w-full flex-col rounded-lg border-neutral-900/50 md:order-1 md:w-3/4">
         {/* Pass rawFilters and setRawFilters to FilterBar for immediate UI updates */}
 
         {/* Shiny toggle UI */}
@@ -91,7 +91,6 @@ function App() {
           </div>
           <CreditsButton />
         </div>
-
         <PokemonList
           pokemons={filteredPokemon}
           isShiny={isShiny}
