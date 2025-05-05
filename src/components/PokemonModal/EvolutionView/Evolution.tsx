@@ -4,18 +4,25 @@ type EvolutionProps = {
   sprite: string;
   requirements?: string;
 };
-const Evolution = ({ onClick, alt, sprite, requirements = "" }: EvolutionProps) => {
+const Evolution = ({
+  onClick,
+  alt,
+  sprite,
+  requirements = "",
+}: EvolutionProps) => {
   return (
     <div
-      className="my-1 rounded-md bg-neutral-700 p-3 text-center"
+      className="rounded-md bg-neutral-700 p-1 text-center md:p-3"
       onClick={onClick}
     >
       <img
         src={sprite}
         alt={alt}
-        className="h-[48px] w-[48px] object-contain"
+        className="m-auto aspect-square md: object-contain"
       />
-      <p className="text-xs md:text-sm text-center max-w-20">{requirements}</p>
+      <p className="pkmnem-face-shadow max-w-20 text-center text-xs leading-3 md:text-sm">
+        {requirements}
+      </p>
     </div>
   );
 };
