@@ -7,6 +7,7 @@ import useBodyScrollLock from "../../hooks/useBodyScrollLock";
 
 type PokemonListProps = {
   pokemons: Pokemon[];
+  fullPokemons: Pokemon[];
   isShiny?: boolean;
   setSelectedPokemon: (p: Pokemon | null) => void;
   selectedPokemon: Pokemon | null;
@@ -53,6 +54,12 @@ export function PokemonList({
         pokemon={selectedPokemon}
         onClose={() => setSelectedPokemon(null)}
         isShiny={isShiny}
+        onSelectPokemon={(id) => {
+          const selected = fullPokemons.find((p) => p.ID === id);
+          setSelectedPokemon(selected || null);
+        }
+
+        }
       />
     </div>
   );
