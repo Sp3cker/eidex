@@ -7,6 +7,7 @@ import CreditsButton from "./components/CreditsButton";
 import { DrawerContainer } from "./components/FilterUI/Drawer";
 import { PokemonModal } from "./components/PokemonModal/PokemonModal";
 import Footer from "./components/Footer";
+import { useTheme } from "./context/ThemeContext";
 const pokemonData = Object.values(speciesData);
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
     tmMove: "",
     tutorMove: "",
   });
-
+  const { theme, toggleTheme } = useTheme();
   // Retrieve the shiny state from localStorage or default to false
   const [isShiny, setIsShiny] = useState(() => {
     const savedShinyState = localStorage.getItem("isShiny");
@@ -64,7 +65,9 @@ function App() {
   }, [isShiny]);
 
   return (
-    <div className="flex min-h-screen flex-col md:flex-row justify-center bg-zinc-800">
+    <div
+      className={`${theme} flex min-h-screen flex-col justify-center bg-zinc-800 md:flex-row`}
+    >
       <div className="border-1 shadow-2xl/60 order-2 flex w-full flex-col rounded-lg border-neutral-900/50 md:order-1 md:w-3/4">
         {/* Pass rawFilters and setRawFilters to FilterBar for immediate UI updates */}
 
@@ -90,6 +93,7 @@ function App() {
             </button>
           </div>
           <CreditsButton />
+          <button onClick={toggleTheme} className="btn">Theme</button>
         </div>
         <PokemonList
           pokemons={filteredPokemon}

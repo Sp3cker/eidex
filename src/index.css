@@ -4,14 +4,81 @@
 
 @custom-variant dark (&:is(.dark *));
 
+body {
+  @apply bg-zinc-800;
+}
 @theme {
   --color-fieldset: #4a73ac;
   --color-fieldset-border: #414a6a;
 }
 
-body {
-  @apply bg-zinc-700;
+html[data-theme="specker"] {
+  --color-zinc-50: #dbd5b3;
+  --color-zinc-100: #ddd7b4;
+  --color-zinc-200: #ded9b6;
+  --color-zinc-300: #dcd7b5;
+  --color-zinc-400: #d5d0af;
+  --color-zinc-500: #c6c1a3;
+  --color-zinc-600: #aeaa90;
+  --color-zinc-700: #8f8c76;
+  --color-zinc-800: #dbd5b3;
+  --color-zinc-900: #424037;
+  --color-gray-50: #dcc5af;
+	--color-gray-100: #dec5ad;
+	--color-gray-200: #e2c3a8;
+	--color-gray-300: #e1bea1;
+	--color-gray-400: #dbb598;
+	--color-gray-500: #cca88d;
+	--color-gray-600: #b4957e;
+	--color-gray-700: #947d6b;
+	--color-gray-800: #6e5f53;
+	--color-gray-900: #443c36;
+  --color-neutral-50: #c9c4a5;
+  --color-neutral-100: #bab599;
+  --color-neutral-200: #9b9780;
+  --color-neutral-300: #7f7c6a;
+  --color-neutral-400: #666355;
+  --color-neutral-500: #504e43;
+  --color-neutral-600: #3f3d35;
+  --color-neutral-700: #32312a;
+  --color-neutral-800: #282721;
+  --color-neutral-900: #1f1e1a;
+  --color-blue-50: #c9c4a5;
+  --color-blue-100: #bab599;
+  --color-blue-200: #9b9780;
+  --color-blue-300: #7f7c6a;
+  --color-blue-400: #666355;
+  --color-blue-500: #504e43;
+  --color-blue-600: #3f3d35;
+  --color-blue-700: #32312a;
+  --color-blue-800: #282721;
+  --color-blue-900: #1f1e1a;
+  --color-gray-800: #504e43;
+  --color-white: #4b413d;
 }
+
+@layer utilities {
+  .bg-neutral-700 {
+    background-color: var(--neutral-700);
+  }
+  .bg-zinc-700 {
+    background-color: var(--zinc-700);
+  }
+  .bg-zinc-800 {
+    background-color: var(--zinc-800);
+  }
+
+  .text-blue-500 {
+    color: var(--blue-500);
+  }
+
+  .bg-blue-600 {
+    background-color: var(--blue-600);
+  }
+}
+/* body {
+  @apply var(--zinc-700);
+} */
 
 select {
   outline: none;
@@ -134,7 +201,7 @@ input[type="number"] {
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
-
+/* 
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -202,7 +269,7 @@ input[type="number"] {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-}
+} */
 
 @layer base {
   * {
