@@ -102,11 +102,7 @@ function App() {
           setSelectedPokemon={setSelectedPokemon}
         />
       </div>
-      <PokemonModal
-        pokemon={selectedPokemon}
-        onClose={() => setSelectedPokemon(null)}
-        isShiny={isShiny}
-      />
+    
       <div className="order-1 w-full md:order-2 md:w-auto md:pl-1">
         <DrawerContainer
           closeDrawer={selectedPokemon !== null}
@@ -114,6 +110,11 @@ function App() {
           setFilters={setRawFilters}
         />
       </div>
+      <PokemonModal
+        pokemon={selectedPokemon}
+        onClose={() => setSelectedPokemon(null)}
+        isShiny={isShiny}
+      />
     </div>
   );
 }

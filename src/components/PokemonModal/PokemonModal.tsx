@@ -12,6 +12,7 @@ import { getEvolutionaryFamily } from "../../utils/evoFamily";
 import EvolutionView from "./EvolutionView/evolutionView";
 
 import TypeMatchup from "./TypeMatchup";
+import PokemonSprite from "./PokemonSprite";
 
 type PokemonModalProps = PokemonViewProps & {
   onClose: () => void;
@@ -49,11 +50,7 @@ function PokemonView({
 
   return (
     <div className="flex w-full flex-col items-center gap-1">
-      <img
-        src={displaySprite}
-        alt={pokemon.name}
-        className="h-[128px] w-[128px] object-contain py-0"
-      />
+      <PokemonSprite src={displaySprite} alt={pokemon.name} isOpen={pokemon !== null} />
       <div className="flex items-center gap-3">
         <div className="font-pixel text-xl font-bold text-gray-200">
           {pokemon.name}
@@ -101,7 +98,7 @@ function PokemonView({
         </div>
       </div>
       <div className="flex w-full flex-grow">
-        <TabbedInterface tabs={tabsData} />
+        {/* <TabbedInterface tabs={tabsData} /> */}
       </div>
     </div>
   );
@@ -121,7 +118,7 @@ export function PokemonModal({
       onClick={onClose}
     >
       <div
-        className="w-xl no-scrollbar relative my-5 h-[95dvh] max-h-screen justify-normal overflow-y-auto rounded-lg border border-gray-100 bg-zinc-800 p-6"
+        className="w-xl relative my-5 h-[95dvh] max-h-screen justify-normal overflow-y-auto rounded-lg border border-gray-100 bg-zinc-800 p-6"
         onClick={(e) => e.stopPropagation()}
       >
         <CloseButton onClick={onClose} />
