@@ -4,6 +4,8 @@ import shinySpritesData from "../../data/shinySprites.json";
 import { useState } from "react";
 import TabbedInterface from "./TabbedInterface";
 import EvolutionBox from "./EvolutionBox";
+import { ErrorBoundary } from "react-error-boundary";
+
 import CloseButton from "../CloseButton";
 import AbilityBadge from "./AbilityBadge";
 import AbilityDescription from "./AbiltyDescription";
@@ -50,7 +52,13 @@ function PokemonView({
 
   return (
     <div className="flex w-full flex-col items-center gap-1">
-      <PokemonSprite src={displaySprite} alt={pokemon.name} isOpen={pokemon !== null} />
+      <ErrorBoundary fallback={<div>Something went wrong</div>}>
+        <PokemonSprite
+          spriteIndex={pokemon.dexID}
+          alt={pokemon.name}
+          isOpen={pokemon !== null}
+        />
+      </ErrorBoundary>
       <div className="flex items-center gap-3">
         <div className="font-pixel text-xl font-bold text-gray-200">
           {pokemon.name}

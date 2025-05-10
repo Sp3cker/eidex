@@ -152,6 +152,9 @@ input[type="number"] {
     width: calc(128px * 6);
     position: absolute;
   }
+  /* .pokemon-sprite .clip-top {
+    transform: translate3d(0, 100%, 0);
+  } */
   .sprite-box {
     width: calc(32px * 8);
     height: calc(32px * 8);

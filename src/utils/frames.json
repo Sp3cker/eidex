@@ -1,0 +1,10903 @@
+[
+  {
+    "speciesName": "None",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Bulbasaur",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Ivysaur",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Venusaur",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Charmander",
+    "form": null,
+    "frames": [
+      [0, 2],
+      [1, 46],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Charmeleon",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Charizard",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Squirtle",
+    "form": null,
+    "frames": [
+      [1, 11],
+      [0, 11],
+      [1, 11],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Wartortle",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 20],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Blastoise",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 20],
+      [1, 25],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Caterpie",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Metapod",
+    "form": null,
+    "frames": [
+      [1, 45],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Butterfree",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 25],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Weedle",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Kakuna",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 20],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Beedrill",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 35],
+      [0, 15],
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Pidgey",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 25],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Pidgeotto",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 10],
+      [0, 10],
+      [1, 35],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Pidgeot",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Rattata",
+    "form": null,
+    "frames": [
+      [1, 11],
+      [0, 11],
+      [1, 11],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Raticate",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Spearow",
+    "form": null,
+    "frames": [
+      [1, 11],
+      [0, 11],
+      [1, 11],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Fearow",
+    "form": null,
+    "frames": [
+      [1, 7],
+      [0, 7],
+      [1, 7],
+      [0, 15],
+      [1, 7],
+      [0, 7],
+      [1, 7],
+      [0, 7]
+    ]
+  },
+  {
+    "speciesName": "Ekans",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 40],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Arbok",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 35],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Pichu",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "PichuSpikyEared",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 60],
+      [1, 20],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Raichu",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Sandshrew",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Sandslash",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "NidoranF",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 50],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Nidorina",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Nidoqueen",
+    "form": null,
+    "frames": [
+      [1, 45],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "NidoranM",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Nidorino",
+    "form": null,
+    "frames": [
+      [0, 7],
+      [1, 23],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Nidoking",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 15],
+      [1, 40],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Cleffa",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Clefairy",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Clefable",
+    "form": null,
+    "frames": [
+      [0, 16],
+      [1, 48],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Vulpix",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Ninetales",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Igglybuff",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Jigglypuff",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Wigglytuff",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Zubat",
+    "form": null,
+    "frames": [
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3]
+    ]
+  },
+  {
+    "speciesName": "Golbat",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Crobat",
+    "form": null,
+    "frames": [
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2]
+    ]
+  },
+  {
+    "speciesName": "Oddish",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 11],
+      [0, 11],
+      [1, 11],
+      [0, 11],
+      [1, 11],
+      [0, 6]
+    ]
+  },
+  {
+    "speciesName": "Gloom",
+    "form": null,
+    "frames": [
+      [0, 21],
+      [1, 45],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Vileplume",
+    "form": null,
+    "frames": [
+      [1, 38],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Bellossom",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 15],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 15],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 15],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Paras",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 15],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 15],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 15],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Parasect",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 15],
+      [1, 35],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Venonat",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 35],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Venomoth",
+    "form": null,
+    "frames": [
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 10],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 10],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4]
+    ]
+  },
+  {
+    "speciesName": "Diglett",
+    "form": null,
+    "frames": [
+      [0, 25],
+      [1, 35],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Dugtrio",
+    "form": null,
+    "frames": [
+      [1, 35],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Meowth",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 17],
+      [1, 30],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Persian",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Psyduck",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Golduck",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Mankey",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 28],
+      [1, 20],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Primeape",
+    "form": null,
+    "frames": [
+      [0, 14],
+      [1, 14],
+      [0, 14],
+      [1, 14],
+      [0, 14],
+      [1, 10],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Growlithe",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 15],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Arcanine",
+    "form": null,
+    "frames": [
+      [1, 38],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Poliwag",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Poliwhirl",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Poliwrath",
+    "form": null,
+    "frames": [
+      [1, 45],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Politoed",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 35],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Abra",
+    "form": null,
+    "frames": [
+      [0, 7],
+      [1, 21],
+      [0, 13],
+      [1, 21],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Kadabra",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Alakazam",
+    "form": null,
+    "frames": [
+      [0, 9],
+      [1, 54],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Machop",
+    "form": null,
+    "frames": [
+      [0, 6],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Machoke",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 44],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Machamp",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 11],
+      [0, 11],
+      [1, 11],
+      [0, 11],
+      [1, 11],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Bellsprout",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 25],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Weepinbell",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 25],
+      [0, 10],
+      [1, 25],
+      [0, 10],
+      [1, 25],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Victreebel",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Tentacool",
+    "form": null,
+    "frames": [
+      [0, 8],
+      [1, 15],
+      [0, 7],
+      [1, 11],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Tentacruel",
+    "form": null,
+    "frames": [
+      [0, 19],
+      [1, 35],
+      [0, 19],
+      [1, 19],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Geodude",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Graveler",
+    "form": null,
+    "frames": [
+      [0, 16],
+      [1, 16],
+      [0, 16],
+      [1, 16],
+      [0, 16]
+    ]
+  },
+  {
+    "speciesName": "Golem",
+    "form": null,
+    "frames": [
+      [0, 8],
+      [1, 31],
+      [0, 1],
+      [0, 2],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Ponyta",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Rapidash",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 40],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Slowpoke",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 50],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Slowbro",
+    "form": null,
+    "frames": [
+      [1, 45],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Slowking",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Magnemite",
+    "form": null,
+    "frames": [
+      [0, 28],
+      [1, 28],
+      [0, 28],
+      [1, 28],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Magneton",
+    "form": null,
+    "frames": [
+      [0, 14],
+      [1, 14],
+      [0, 14],
+      [1, 14],
+      [0, 14],
+      [1, 14],
+      [0, 14]
+    ]
+  },
+  {
+    "speciesName": "Magnezone",
+    "form": null,
+    "frames": [
+      [0, 16],
+      [1, 16],
+      [0, 16],
+      [1, 16],
+      [0, 16]
+    ]
+  },
+  {
+    "speciesName": "Farfetchd",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 15],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 15],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Doduo",
+    "form": null,
+    "frames": [
+      [0, 18],
+      [1, 18],
+      [0, 18],
+      [1, 18],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Dodrio",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Seel",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 20],
+      [1, 30],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Dewgong",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Grimer",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Muk",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Shellder",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 45],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Cloyster",
+    "form": null,
+    "frames": [
+      [1, 32],
+      [0, 14],
+      [1, 18],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Gastly",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 18],
+      [0, 10],
+      [1, 10],
+      [0, 8],
+      [1, 8],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Haunter",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 15],
+      [1, 35],
+      [1, 30],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Gengar",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 40],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Onix",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Steelix",
+    "form": null,
+    "frames": [
+      [0, 7],
+      [1, 21],
+      [0, 13],
+      [1, 21],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Drowzee",
+    "form": null,
+    "frames": [
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 12],
+      [1, 45],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Hypno",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Krabby",
+    "form": null,
+    "frames": [
+      [1, 16],
+      [0, 16],
+      [1, 16],
+      [0, 16],
+      [1, 16],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Kingler",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [0, 14]
+    ]
+  },
+  {
+    "speciesName": "Voltorb",
+    "form": null,
+    "frames": [
+      [0, 4],
+      [1, 25],
+      [0, 4],
+      [1, 25],
+      [0, 4]
+    ]
+  },
+  {
+    "speciesName": "Electrode",
+    "form": null,
+    "frames": [
+      [0, 14],
+      [1, 34],
+      [1, 34],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Exeggcute",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Exeggutor",
+    "form": null,
+    "frames": [
+      [1, 35],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Cubone",
+    "form": null,
+    "frames": [
+      [1, 6],
+      [0, 6],
+      [0, 12],
+      [1, 32],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Marowak",
+    "form": null,
+    "frames": [
+      [1, 14],
+      [0, 14],
+      [1, 14],
+      [0, 14],
+      [1, 14],
+      [0, 14]
+    ]
+  },
+  {
+    "speciesName": "Tyrogue",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Hitmonlee",
+    "form": null,
+    "frames": [
+      [0, 16],
+      [1, 18],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Hitmonchan",
+    "form": null,
+    "frames": [
+      [0, 17],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4]
+    ]
+  },
+  {
+    "speciesName": "Hitmontop",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 26],
+      [0, 14],
+      [1, 32],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Lickitung",
+    "form": null,
+    "frames": [
+      [1, 16],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Lickilicky",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 50],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Koffing",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Weezing",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Rhyhorn",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Rhydon",
+    "form": null,
+    "frames": [
+      [1, 16],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Rhyperior",
+    "form": null,
+    "frames": [
+      [0, 50],
+      [1, 25],
+      [0, 20],
+      [1, 25],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Happiny",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Chansey",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Blissey",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Tangela",
+    "form": null,
+    "frames": [
+      [0, 40],
+      [1, 24],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Tangrowth",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Kangaskhan",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Horsea",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Seadra",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Kingdra",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Goldeen",
+    "form": null,
+    "frames": [
+      [0, 16],
+      [1, 16],
+      [0, 16],
+      [1, 16],
+      [0, 16],
+      [1, 16],
+      [0, 16],
+      [1, 16],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Seaking",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 20],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Staryu",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Starmie",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "MimeJr",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "MrMime",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Scyther",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 25],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Scizor",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Smoochum",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Jynx",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 10],
+      [1, 50],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Elekid",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Electabuzz",
+    "form": null,
+    "frames": [
+      [0, 22],
+      [1, 22],
+      [0, 22],
+      [1, 22],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Electivire",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 15],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Magby",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Magmar",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Magmortar",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Pinsir",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Tauros",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 20],
+      [1, 25],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Magikarp",
+    "form": null,
+    "frames": [
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Gyarados",
+    "form": null,
+    "frames": [
+      [0, 8],
+      [1, 32],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Lapras",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Ditto",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Eevee",
+    "form": null,
+    "frames": [
+      [1, 33],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Vaporeon",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Jolteon",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Flareon",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Espeon",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 25],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Umbreon",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Leafeon",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 20],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Glaceon",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Sylveon",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 20],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Porygon",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Porygon2",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Porygon_Z",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 30],
+      [1, 30],
+      [0, 40]
+    ]
+  },
+  {
+    "speciesName": "Omanyte",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Omastar",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Kabuto",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 20],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Kabutops",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Aerodactyl",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 25],
+      [1, 10],
+      [0, 25]
+    ]
+  },
+  {
+    "speciesName": "Munchlax",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Snorlax",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 50],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Articuno",
+    "form": null,
+    "frames": [
+      [1, 25],
+      [0, 15],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Zapdos",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 30],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Moltres",
+    "form": null,
+    "frames": [
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3]
+    ]
+  },
+  {
+    "speciesName": "Dratini",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Dragonair",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Dragonite",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 30],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Mewtwo",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Mew",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 40],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Chikorita",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Bayleef",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Meganium",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Cyndaquil",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Quilava",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Typhlosion",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Totodile",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Croconaw",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Feraligatr",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 25],
+      [0, 40]
+    ]
+  },
+  {
+    "speciesName": "Sentret",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Furret",
+    "form": null,
+    "frames": [
+      [1, 35],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Hoothoot",
+    "form": null,
+    "frames": [
+      [1, 7],
+      [0, 7],
+      [1, 7],
+      [0, 7],
+      [1, 7],
+      [0, 7],
+      [1, 7],
+      [0, 7],
+      [1, 7],
+      [0, 7],
+      [1, 7],
+      [0, 7]
+    ]
+  },
+  {
+    "speciesName": "Noctowl",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Ledyba",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Ledian",
+    "form": null,
+    "frames": [
+      [1, 25],
+      [0, 25],
+      [1, 25],
+      [0, 25]
+    ]
+  },
+  {
+    "speciesName": "Spinarak",
+    "form": null,
+    "frames": [
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6]
+    ]
+  },
+  {
+    "speciesName": "Ariados",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Chinchou",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Lanturn",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Togepi",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 50],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Togetic",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Togekiss",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Natu",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Xatu",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 45],
+      [0, 15],
+      [1, 10],
+      [0, 15],
+      [1, 10],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Mareep",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Flaaffy",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Ampharos",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 15],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Azurill",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 12]
+    ]
+  },
+  {
+    "speciesName": "Marill",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Azumarill",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Bonsly",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Sudowoodo",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Hoppip",
+    "form": null,
+    "frames": [
+      [1, 25],
+      [0, 25],
+      [1, 25],
+      [0, 25]
+    ]
+  },
+  {
+    "speciesName": "Skiploom",
+    "form": null,
+    "frames": [
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 30],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Jumpluff",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 25],
+      [1, 15],
+      [0, 25],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Aipom",
+    "form": null,
+    "frames": [
+      [1, 35],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Ambipom",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Sunkern",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Sunflora",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Yanma",
+    "form": null,
+    "frames": [
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 20],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2]
+    ]
+  },
+  {
+    "speciesName": "Yanmega",
+    "form": null,
+    "frames": [
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3]
+    ]
+  },
+  {
+    "speciesName": "Wooper",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Quagsire",
+    "form": null,
+    "frames": [
+      [1, 32],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Murkrow",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Honchkrow",
+    "form": null,
+    "frames": [
+      [0, 21],
+      [1, 45],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Misdreavus",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Mismagius",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Wynaut",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Wobbuffet",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Girafarig",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Pineco",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Forretress",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Dunsparce",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 15],
+      [1, 15],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Gligar",
+    "form": null,
+    "frames": [
+      [1, 17],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Gliscor",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 30],
+      [1, 30],
+      [0, 40]
+    ]
+  },
+  {
+    "speciesName": "Snubbull",
+    "form": null,
+    "frames": [
+      [1, 32],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Granbull",
+    "form": null,
+    "frames": [
+      [1, 35],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Qwilfish",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 15],
+      [1, 50],
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Shuckle",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 50],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Heracross",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Sneasel",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Weavile",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Teddiursa",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Ursaring",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Slugma",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Magcargo",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Swinub",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Piloswine",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Mamoswine",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Corsola",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Remoraid",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Octillery",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 30],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Delibird",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Mantyke",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 45],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Mantine",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 30],
+      [1, 30],
+      [0, 40]
+    ]
+  },
+  {
+    "speciesName": "Skarmory",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Houndour",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Houndoom",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Phanpy",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 10],
+      [0, 15],
+      [1, 10],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Donphan",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Stantler",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Smeargle",
+    "form": null,
+    "frames": [
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Miltank",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Raikou",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Entei",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Suicune",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Larvitar",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Pupitar",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Tyranitar",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 30],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Lugia",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 10],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 10],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "HoOh",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Celebi",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 30],
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Treecko",
+    "form": null,
+    "frames": [
+      [0, 6],
+      [1, 15],
+      [0, 6],
+      [1, 15],
+      [0, 3]
+    ]
+  },
+  {
+    "speciesName": "Grovyle",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 18],
+      [0, 7],
+      [1, 12],
+      [0, 6]
+    ]
+  },
+  {
+    "speciesName": "Sceptile",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 26],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Torchic",
+    "form": null,
+    "frames": [
+      [0, 7],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Combusken",
+    "form": null,
+    "frames": [
+      [0, 8],
+      [1, 25],
+      [0, 12]
+    ]
+  },
+  {
+    "speciesName": "Blaziken",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 25],
+      [0, 7],
+      [1, 7],
+      [0, 7]
+    ]
+  },
+  {
+    "speciesName": "Mudkip",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 8],
+      [0, 10],
+      [1, 13],
+      [0, 7]
+    ]
+  },
+  {
+    "speciesName": "Marshtomp",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Swampert",
+    "form": null,
+    "frames": [
+      [0, 8],
+      [1, 44],
+      [0, 18],
+      [1, 18],
+      [0, 7]
+    ]
+  },
+  {
+    "speciesName": "Poochyena",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 44],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Mightyena",
+    "form": null,
+    "frames": [
+      [0, 27],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6]
+    ]
+  },
+  {
+    "speciesName": "Zigzagoon",
+    "form": null,
+    "frames": [
+      [0, 27],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Linoone",
+    "form": null,
+    "frames": [
+      [0, 14],
+      [1, 14],
+      [0, 14],
+      [1, 14],
+      [0, 14]
+    ]
+  },
+  {
+    "speciesName": "Wurmple",
+    "form": null,
+    "frames": [
+      [0, 22],
+      [1, 35],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Silcoon",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 25],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Beautifly",
+    "form": null,
+    "frames": [
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2]
+    ]
+  },
+  {
+    "speciesName": "Cascoon",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Dustox",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 2],
+      [1, 2],
+      [0, 3],
+      [1, 3],
+      [0, 4],
+      [1, 4],
+      [0, 8],
+      [1, 8],
+      [0, 12],
+      [1, 20],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Lotad",
+    "form": null,
+    "frames": [
+      [0, 22],
+      [1, 55],
+      [0, 22]
+    ]
+  },
+  {
+    "speciesName": "Lombre",
+    "form": null,
+    "frames": [
+      [0, 6],
+      [1, 30],
+      [0, 6],
+      [1, 30],
+      [0, 7]
+    ]
+  },
+  {
+    "speciesName": "Ludicolo",
+    "form": null,
+    "frames": [
+      [0, 22],
+      [1, 22],
+      [0, 22],
+      [1, 22],
+      [0, 22],
+      [1, 22],
+      [0, 22]
+    ]
+  },
+  {
+    "speciesName": "Seedot",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Nuzleaf",
+    "form": null,
+    "frames": [
+      [0, 7],
+      [1, 15],
+      [0, 7],
+      [1, 15],
+      [0, 7],
+      [1, 15],
+      [0, 7],
+      [1, 15],
+      [0, 7]
+    ]
+  },
+  {
+    "speciesName": "Shiftry",
+    "form": null,
+    "frames": [
+      [0, 7],
+      [1, 35],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Taillow",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 15],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Swellow",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 18],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Wingull",
+    "form": null,
+    "frames": [
+      [0, 17],
+      [1, 23],
+      [0, 13]
+    ]
+  },
+  {
+    "speciesName": "Pelipper",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Ralts",
+    "form": null,
+    "frames": [
+      [0, 8],
+      [1, 25],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Kirlia",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 39],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Gardevoir",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Gallade",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Surskit",
+    "form": null,
+    "frames": [
+      [0, 6],
+      [1, 18],
+      [0, 6],
+      [1, 18],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Masquerain",
+    "form": null,
+    "frames": [
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Shroomish",
+    "form": null,
+    "frames": [
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6]
+    ]
+  },
+  {
+    "speciesName": "Breloom",
+    "form": null,
+    "frames": [
+      [0, 6],
+      [1, 30],
+      [0, 6],
+      [1, 30],
+      [0, 7]
+    ]
+  },
+  {
+    "speciesName": "Slakoth",
+    "form": null,
+    "frames": [
+      [0, 13],
+      [1, 22],
+      [0, 8],
+      [1, 22],
+      [0, 11],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Vigoroth",
+    "form": null,
+    "frames": [
+      [0, 13],
+      [1, 7],
+      [0, 13],
+      [1, 7],
+      [0, 13],
+      [1, 7],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Slaking",
+    "form": null,
+    "frames": [
+      [0, 22],
+      [1, 22],
+      [0, 22],
+      [1, 22],
+      [0, 22],
+      [1, 22],
+      [0, 22]
+    ]
+  },
+  {
+    "speciesName": "Nincada",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 22],
+      [0, 11],
+      [1, 33],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Ninjask",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 33],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Shedinja",
+    "form": null,
+    "frames": [
+      [0, 33],
+      [1, 33],
+      [0, 33],
+      [1, 33],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Whismur",
+    "form": null,
+    "frames": [
+      [0, 9],
+      [1, 9],
+      [0, 9],
+      [1, 9],
+      [0, 33],
+      [0, 9],
+      [1, 9],
+      [0, 9],
+      [1, 9],
+      [0, 9]
+    ]
+  },
+  {
+    "speciesName": "Loudred",
+    "form": null,
+    "frames": [
+      [0, 9],
+      [1, 9],
+      [0, 9],
+      [1, 9],
+      [0, 33]
+    ]
+  },
+  {
+    "speciesName": "Exploud",
+    "form": null,
+    "frames": [
+      [0, 9],
+      [1, 44],
+      [0, 9]
+    ]
+  },
+  {
+    "speciesName": "Makuhita",
+    "form": null,
+    "frames": [
+      [0, 7],
+      [1, 10],
+      [0, 7],
+      [1, 10],
+      [0, 7],
+      [1, 10],
+      [0, 7],
+      [1, 10],
+      [0, 22]
+    ]
+  },
+  {
+    "speciesName": "Hariyama",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [1, 16],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Nosepass",
+    "form": null,
+    "frames": [
+      [0, 27],
+      [1, 27],
+      [0, 27],
+      [1, 27],
+      [0, 27],
+      [1, 27],
+      [0, 3]
+    ]
+  },
+  {
+    "speciesName": "Probopass",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Skitty",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 35],
+      [0, 9]
+    ]
+  },
+  {
+    "speciesName": "Delcatty",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 46],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Sableye",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Mawile",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Aron",
+    "form": null,
+    "frames": [
+      [0, 33],
+      [1, 44],
+      [0, 33],
+      [1, 33],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Lairon",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 29],
+      [0, 10],
+      [1, 29],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Aggron",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 44],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Meditite",
+    "form": null,
+    "frames": [
+      [0, 22],
+      [1, 2],
+      [0, 22]
+    ]
+  },
+  {
+    "speciesName": "Medicham",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 11],
+      [0, 11],
+      [1, 11],
+      [0, 11],
+      [1, 11],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Electrike",
+    "form": null,
+    "frames": [
+      [0, 8],
+      [1, 25],
+      [0, 17],
+      [1, 25],
+      [0, 3]
+    ]
+  },
+  {
+    "speciesName": "Manectric",
+    "form": null,
+    "frames": [
+      [0, 8],
+      [1, 33],
+      [0, 10],
+      [1, 25],
+      [0, 3]
+    ]
+  },
+  {
+    "speciesName": "Plusle",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Minun",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Volbeat",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 11],
+      [0, 11],
+      [1, 11],
+      [0, 11],
+      [1, 11],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Illumise",
+    "form": null,
+    "frames": [
+      [0, 22],
+      [1, 22],
+      [0, 22],
+      [1, 22],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Budew",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Roselia",
+    "form": null,
+    "frames": [
+      [0, 18],
+      [1, 44],
+      [0, 22]
+    ]
+  },
+  {
+    "speciesName": "Roserade",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Gulpin",
+    "form": null,
+    "frames": [
+      [0, 14],
+      [1, 14],
+      [0, 14],
+      [1, 14],
+      [0, 4]
+    ]
+  },
+  {
+    "speciesName": "Swalot",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 30],
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Carvanha",
+    "form": null,
+    "frames": [
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6]
+    ]
+  },
+  {
+    "speciesName": "Sharpedo",
+    "form": null,
+    "frames": [
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 22]
+    ]
+  },
+  {
+    "speciesName": "Wailmer",
+    "form": null,
+    "frames": [
+      [0, 22],
+      [1, 22],
+      [0, 22],
+      [1, 22],
+      [0, 22],
+      [1, 22],
+      [0, 22]
+    ]
+  },
+  {
+    "speciesName": "Wailord",
+    "form": null,
+    "frames": [
+      [0, 26],
+      [1, 48],
+      [0, 33]
+    ]
+  },
+  {
+    "speciesName": "Numel",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 20],
+      [1, 15],
+      [0, 40]
+    ]
+  },
+  {
+    "speciesName": "Camerupt",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Torkoal",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Spoink",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Grumpig",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Spinda",
+    "form": null,
+    "frames": [
+      [0, 17],
+      [1, 23],
+      [0, 17],
+      [1, 23],
+      [0, 13]
+    ]
+  },
+  {
+    "speciesName": "Trapinch",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Vibrava",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Flygon",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Cacnea",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Cacturne",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Swablu",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Altaria",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Zangoose",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Seviper",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Lunatone",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Solrock",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Barboach",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Whiscash",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Corphish",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Crawdaunt",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Baltoy",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Claydol",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Lileep",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Cradily",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Anorith",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Armaldo",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Feebas",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Milotic",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Castform",
+    "form": "Normal",
+    "frames": [
+      [0, 12],
+      [1, 24],
+      [0, 24],
+      [1, 24],
+      [0, 24]
+    ]
+  },
+  {
+    "speciesName": "Castform",
+    "form": "Sunny",
+    "frames": [
+      [0, 12],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 12]
+    ]
+  },
+  {
+    "speciesName": "CastformRainy",
+    "form": null,
+    "frames": [
+      [0, 22],
+      [1, 22],
+      [0, 22],
+      [1, 22],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "CastformSnowy",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 12],
+      [0, 12],
+      [1, 29],
+      [0, 12]
+    ]
+  },
+  {
+    "speciesName": "Kecleon",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 18],
+      [0, 8],
+      [1, 8],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Shuppet",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Banette",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Duskull",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Dusclops",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Dusknoir",
+    "form": null,
+    "frames": [
+      [1, 9],
+      [0, 9],
+      [1, 9],
+      [0, 9],
+      [1, 9],
+      [0, 9],
+      [1, 9],
+      [0, 9],
+      [1, 9],
+      [0, 9]
+    ]
+  },
+  {
+    "speciesName": "Tropius",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Chingling",
+    "form": null,
+    "frames": [
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 30],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Chimecho",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Absol",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Snorunt",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Glalie",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Froslass",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 30],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Spheal",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 43],
+      [1, 60],
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Sealeo",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Walrein",
+    "form": null,
+    "frames": [
+      [0, 2],
+      [1, 10],
+      [0, 30],
+      [1, 6],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Clamperl",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Huntail",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Gorebyss",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Relicanth",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Luvdisc",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Bagon",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Shelgon",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Salamence",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 30],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Beldum",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Metang",
+    "form": null,
+    "frames": [
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Metagross",
+    "form": null,
+    "frames": [
+      [0, 16],
+      [1, 16],
+      [0, 16],
+      [1, 16],
+      [0, 16]
+    ]
+  },
+  {
+    "speciesName": "Regirock",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Regice",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 15],
+      [0, 10],
+      [1, 18],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Registeel",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Latias",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Latios",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Kyogre",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Groudon",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Rayquaza",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 8],
+      [0, 22],
+      [1, 6],
+      [0, 6]
+    ]
+  },
+  {
+    "speciesName": "Jirachi",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Deoxys",
+    "form": "Speed",
+    "frames": [
+      [0, 16],
+      [1, 16],
+      [1, 26],
+      [0, 16]
+    ]
+  },
+  {
+    "speciesName": "Deoxys",
+    "form": null,
+    "frames": [
+      [0, 16],
+      [1, 16],
+      [0, 26],
+      [1, 16],
+      [0, 16]
+    ]
+  },
+  {
+    "speciesName": "Deoxys",
+    "form": "Defense",
+    "frames": [
+      [0, 16],
+      [1, 16],
+      [0, 26],
+      [1, 16],
+      [0, 16]
+    ]
+  },
+  {
+    "speciesName": "Deoxys",
+    "form": "Speed",
+    "frames": [
+      [0, 16],
+      [1, 16],
+      [0, 26],
+      [1, 16],
+      [0, 16]
+    ]
+  },
+  {
+    "speciesName": "Turtwig",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Grotle",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Torterra",
+    "form": null,
+    "frames": [
+      [1, 45],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Chimchar",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Monferno",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Infernape",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Piplup",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Prinplup",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 50],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Empoleon",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Starly",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 10],
+      [0, 10],
+      [1, 35],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Staravia",
+    "form": null,
+    "frames": [
+      [1, 32],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Staraptor",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Bidoof",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Bibarel",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Kricketot",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 20],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Kricketune",
+    "form": null,
+    "frames": [
+      [0, 27],
+      [1, 27],
+      [0, 27],
+      [1, 27],
+      [0, 27],
+      [1, 27],
+      [0, 3]
+    ]
+  },
+  {
+    "speciesName": "Shinx",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Luxio",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Luxray",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Cranidos",
+    "form": null,
+    "frames": [
+      [1, 32],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Rampardos",
+    "form": null,
+    "frames": [
+      [0, 50],
+      [1, 25],
+      [0, 20],
+      [1, 25],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Shieldon",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Bastiodon",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Burmy",
+    "form": null,
+    "frames": [
+      [1, 32],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Wormadam",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Mothim",
+    "form": null,
+    "frames": [
+      [0, 4],
+      [1, 4],
+      [0, 6],
+      [1, 6],
+      [0, 5],
+      [1, 5],
+      [0, 25],
+      [1, 6],
+      [0, 6],
+      [1, 4],
+      [0, 4],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Combee",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 15],
+      [0, 20],
+      [1, 20],
+      [0, 20],
+      [1, 20],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Vespiquen",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Pachirisu",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 50],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Buizel",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Floatzel",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 28],
+      [1, 20],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Cherubi",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 50],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Cherrim",
+    "form": "Overcast",
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Cherrim",
+    "form": "Sunshine",
+    "frames": [
+      [1, 6],
+      [0, 28],
+      [1, 12],
+      [0, 28],
+      [1, 7],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Shellos",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Gastrodon",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Drifloon",
+    "form": null,
+    "frames": [
+      [1, 25],
+      [0, 25],
+      [1, 25],
+      [0, 25]
+    ]
+  },
+  {
+    "speciesName": "Drifblim",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 25],
+      [1, 15],
+      [0, 25],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Buneary",
+    "form": null,
+    "frames": [
+      [1, 35],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Lopunny",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Glameow",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Purugly",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Stunky",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Skuntank",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Bronzor",
+    "form": null,
+    "frames": [
+      [1, 9],
+      [0, 9],
+      [1, 9],
+      [0, 9],
+      [1, 9],
+      [0, 9],
+      [1, 9],
+      [0, 9],
+      [1, 9],
+      [0, 9]
+    ]
+  },
+  {
+    "speciesName": "Bronzong",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Chatot",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 20],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Spiritomb",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Gible",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Gabite",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Garchomp",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 8],
+      [1, 10],
+      [0, 20],
+      [1, 35],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Riolu",
+    "form": null,
+    "frames": [
+      [0, 3],
+      [1, 50],
+      [1, 28],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Lucario",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Hippopotas",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Hippowdon",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Skorupi",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 15],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 15],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 15],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Drapion",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 15],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Croagunk",
+    "form": null,
+    "frames": [
+      [0, 3],
+      [1, 50],
+      [1, 28],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Toxicroak",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Carnivine",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Finneon",
+    "form": null,
+    "frames": [
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 30],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Lumineon",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 40],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Snover",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 25],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Abomasnow",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 44],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Rotom",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "RotomHeat",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "RotomWash",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "RotomFrost",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "RotomFan",
+    "form": null,
+    "frames": [
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3],
+      [1, 3],
+      [0, 3]
+    ]
+  },
+  {
+    "speciesName": "RotomMow",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Uxie",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 50],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Mesprit",
+    "form": null,
+    "frames": [
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 30],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Azelf",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 30],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Dialga",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Palkia",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Heatran",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 30],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Regigigas",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Giratina",
+    "form": "Altered",
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Giratina",
+    "form": "Origin",
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Cresselia",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Phione",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Manaphy",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 50],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Darkrai",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 30],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Shaymin",
+    "form": "Land",
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Shaymin",
+    "form": "Sky",
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Arceus",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Victini",
+    "form": null,
+    "frames": [
+      [0, 2],
+      [1, 46],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Snivy",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Servine",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Serperior",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Tepig",
+    "form": null,
+    "frames": [
+      [0, 27],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Pignite",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Emboar",
+    "form": null,
+    "frames": [
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 10],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 10],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4],
+      [1, 4],
+      [0, 4]
+    ]
+  },
+  {
+    "speciesName": "Oshawott",
+    "form": null,
+    "frames": [
+      [0, 13],
+      [1, 7],
+      [0, 13],
+      [1, 7],
+      [0, 13],
+      [1, 7],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Dewott",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 35],
+      [0, 28],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Samurott",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Patrat",
+    "form": null,
+    "frames": [
+      [1, 32],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Watchog",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Lillipup",
+    "form": null,
+    "frames": [
+      [0, 13],
+      [1, 7],
+      [0, 13],
+      [1, 7],
+      [0, 13],
+      [1, 7],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Herdier",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 40],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Stoutland",
+    "form": null,
+    "frames": [
+      [0, 27],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Purrloin",
+    "form": null,
+    "frames": [
+      [0, 9],
+      [1, 54],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Liepard",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Pansage",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 8],
+      [0, 10],
+      [1, 13],
+      [0, 7]
+    ]
+  },
+  {
+    "speciesName": "Simisage",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Pansear",
+    "form": null,
+    "frames": [
+      [1, 32],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Simisear",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Panpour",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Simipour",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Munna",
+    "form": null,
+    "frames": [
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 30],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Musharna",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Pidove",
+    "form": null,
+    "frames": [
+      [0, 2],
+      [1, 46],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Tranquill",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Unfezant",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 20],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Blitzle",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 40],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Zebstrika",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Roggenrola",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Boldore",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Gigalith",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Woobat",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Swoobat",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Drilbur",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Excadrill",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 15],
+      [1, 40],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Audino",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Timburr",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Gurdurr",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Conkeldurr",
+    "form": null,
+    "frames": [
+      [1, 45],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Tympole",
+    "form": null,
+    "frames": [
+      [1, 35],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Palpitoad",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 8],
+      [0, 10],
+      [1, 13],
+      [0, 7]
+    ]
+  },
+  {
+    "speciesName": "Seismitoad",
+    "form": null,
+    "frames": [
+      [0, 13],
+      [1, 7],
+      [0, 13],
+      [1, 7],
+      [0, 13],
+      [1, 7],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Throh",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Sawk",
+    "form": null,
+    "frames": [
+      [1, 45],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Sewaddle",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Swadloon",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Leavanny",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Venipede",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Whirlipede",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 15],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Scolipede",
+    "form": null,
+    "frames": [
+      [1, 45],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Cottonee",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 50],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Whimsicott",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 20],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Petilil",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Lilligant",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Basculin",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 15],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Sandile",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Krokorok",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Krookodile",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Darumaka",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 50],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "DarmanitanStandard",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "DarmanitanZen",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Maractus",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Dwebble",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 50],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Crustle",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Scraggy",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 35],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Scrafty",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Sigilyph",
+    "form": null,
+    "frames": [
+      [1, 7],
+      [0, 7],
+      [1, 7],
+      [0, 15],
+      [1, 7],
+      [0, 7],
+      [1, 7],
+      [0, 7]
+    ]
+  },
+  {
+    "speciesName": "Yamask",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 20],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Cofagrigus",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 30],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Tirtouga",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 30],
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Carracosta",
+    "form": null,
+    "frames": [
+      [1, 35],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Archen",
+    "form": null,
+    "frames": [
+      [0, 2],
+      [1, 46],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Archeops",
+    "form": null,
+    "frames": [
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 30],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Trubbish",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Garbodor",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 35],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Zorua",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Zoroark",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 18],
+      [0, 8],
+      [1, 8],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Minccino",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Cinccino",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Gothita",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Gothorita",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Gothitelle",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Solosis",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 45],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Duosion",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Reuniclus",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 20],
+      [0, 10],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Ducklett",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Swanna",
+    "form": null,
+    "frames": [
+      [1, 32],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Vanillite",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Vanillish",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Vanilluxe",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Deerling",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Sawsbuck",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Emolga",
+    "form": null,
+    "frames": [
+      [0, 21],
+      [1, 45],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Karrablast",
+    "form": null,
+    "frames": [
+      [1, 32],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Escavalier",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Foongus",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Amoonguss",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Frillish",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 30],
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Jellicent",
+    "form": null,
+    "frames": [
+      [0, 8],
+      [1, 30],
+      [0, 8],
+      [1, 30],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Alomomola",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 50],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Joltik",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Galvantula",
+    "form": null,
+    "frames": [
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6]
+    ]
+  },
+  {
+    "speciesName": "Ferroseed",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 35],
+      [0, 28],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Ferrothorn",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Klink",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Klang",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Klinklang",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Tynamo",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 25],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Eelektrik",
+    "form": null,
+    "frames": [
+      [0, 4],
+      [1, 25],
+      [0, 4],
+      [1, 25],
+      [0, 4]
+    ]
+  },
+  {
+    "speciesName": "Eelektross",
+    "form": null,
+    "frames": [
+      [1, 27],
+      [0, 27],
+      [1, 24],
+      [0, 25],
+      [1, 27],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Elgyem",
+    "form": null,
+    "frames": [
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 30],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Beheeyem",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Litwick",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Lampent",
+    "form": null,
+    "frames": [
+      [1, 25],
+      [0, 25],
+      [1, 25],
+      [0, 25]
+    ]
+  },
+  {
+    "speciesName": "Chandelure",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Axew",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Fraxure",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Haxorus",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Cubchoo",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Beartic",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Cryogonal",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 48],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Shelmet",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Accelgor",
+    "form": null,
+    "frames": [
+      [1, 35],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Stunfisk",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Mienfoo",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Mienshao",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Druddigon",
+    "form": null,
+    "frames": [
+      [0, 22],
+      [1, 22],
+      [0, 22],
+      [1, 22],
+      [0, 22],
+      [1, 22],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Golett",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 44],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Golurk",
+    "form": null,
+    "frames": [
+      [1, 45],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Pawniard",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 25],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Bisharp",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Bouffalant",
+    "form": null,
+    "frames": [
+      [0, 28],
+      [1, 32],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Rufflet",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 10],
+      [0, 10],
+      [1, 35],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Braviary",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Vullaby",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Mandibuzz",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Heatmor",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Durant",
+    "form": null,
+    "frames": [
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2]
+    ]
+  },
+  {
+    "speciesName": "Deino",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Zweilous",
+    "form": null,
+    "frames": [
+      [1, 32],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Hydreigon",
+    "form": null,
+    "frames": [
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 30],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Larvesta",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 20],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Volcarona",
+    "form": null,
+    "frames": [
+      [1, 25],
+      [0, 25],
+      [1, 25],
+      [0, 25]
+    ]
+  },
+  {
+    "speciesName": "Cobalion",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Terrakion",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 15],
+      [1, 10],
+      [0, 15],
+      [1, 10],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Virizion",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Tornadus",
+    "form": "Incarnate",
+    "frames": [
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 20],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2]
+    ]
+  },
+  {
+    "speciesName": "Tornadus",
+    "form": "Therian",
+    "frames": [
+      [0, 5],
+      [1, 10],
+      [0, 10],
+      [1, 35],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Thundurus",
+    "form": "Incarnate",
+    "frames": [
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 20],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2]
+    ]
+  },
+  {
+    "speciesName": "Thundurus",
+    "form": "Therian",
+    "frames": [
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 20],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Reshiram",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Zekrom",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Landorus",
+    "form": "Incarnate",
+    "frames": [
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 20],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2],
+      [1, 2],
+      [0, 2]
+    ]
+  },
+  {
+    "speciesName": "Landorus",
+    "form": "Therian",
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Kyurem",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "KyuremWhite",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "KyuremBlack",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Keldeo",
+    "form": "Ordinary",
+    "frames": [
+      [1, 32],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Keldeo",
+    "form": "Resolute",
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Meloetta",
+    "form": "Aria",
+    "frames": [
+      [0, 15],
+      [1, 45],
+      [0, 15],
+      [1, 10],
+      [0, 15],
+      [1, 10],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Meloetta",
+    "form": "Pirouette",
+    "frames": [
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Genesect",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 5],
+      [1, 25],
+      [0, 5],
+      [1, 5],
+      [0, 5],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Chespin",
+    "form": null,
+    "frames": [
+      [0, 8],
+      [1, 24],
+      [0, 8],
+      [1, 24],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Quilladin",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Chesnaught",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 40],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Fennekin",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 20],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Braixen",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Delphox",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Froakie",
+    "form": null,
+    "frames": [
+      [0, 13],
+      [1, 7],
+      [0, 13],
+      [1, 7],
+      [0, 13],
+      [1, 7],
+      [0, 11]
+    ]
+  },
+  {
+    "speciesName": "Frogadier",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Greninja",
+    "form": null,
+    "frames": [
+      [1, 32],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "GreninjaAsh",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 15],
+      [1, 35],
+      [1, 30],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Bunnelby",
+    "form": null,
+    "frames": [
+      [1, 25],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Diggersby",
+    "form": null,
+    "frames": [
+      [1, 35],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Fletchling",
+    "form": null,
+    "frames": [
+      [1, 7],
+      [0, 3],
+      [1, 7],
+      [0, 3],
+      [1, 10],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Fletchinder",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 10],
+      [1, 5],
+      [0, 30],
+      [1, 5],
+      [0, 10],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Talonflame",
+    "form": null,
+    "frames": [
+      [1, 55],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Scatterbug",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 10],
+      [0, 10],
+      [1, 35],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Spewpa",
+    "form": null,
+    "frames": [
+      [0, 18],
+      [1, 18],
+      [0, 18],
+      [1, 18],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Vivillon",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Litleo",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Pyroar",
+    "form": null,
+    "frames": [
+      [1, 45],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Flabebe",
+    "form": null,
+    "frames": [
+      [1, 27],
+      [0, 20],
+      [1, 23],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Floette",
+    "form": null,
+    "frames": [
+      [0, 25],
+      [1, 50],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Florges",
+    "form": null,
+    "frames": [
+      [1, 45],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Skiddo",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Gogoat",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 36],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Pancham",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 40],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Pangoro",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 15],
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Furfrou",
+    "form": null,
+    "frames": [
+      [0, 27],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Espurr",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Meowstic",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Honedge",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 40],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Doublade",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Aegislash",
+    "form": "Shield",
+    "frames": [
+      [0, 18],
+      [1, 18],
+      [0, 18],
+      [1, 18],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Aegislash",
+    "form": "Blade",
+    "frames": [
+      [0, 18],
+      [1, 18],
+      [0, 18],
+      [1, 18],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Spritzee",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 25],
+      [1, 15],
+      [0, 25],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Aromatisse",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Swirlix",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Slurpuff",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 10],
+      [0, 10],
+      [1, 35],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Inkay",
+    "form": null,
+    "frames": [
+      [1, 25],
+      [0, 25],
+      [1, 25],
+      [0, 25]
+    ]
+  },
+  {
+    "speciesName": "Malamar",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Binacle",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Barbaracle",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Skrelp",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 20],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Dragalge",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 10],
+      [1, 15],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Clauncher",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Clawitzer",
+    "form": null,
+    "frames": [
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6],
+      [1, 6],
+      [0, 6]
+    ]
+  },
+  {
+    "speciesName": "Helioptile",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 15],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Heliolisk",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 30],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Tyrunt",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Tyrantrum",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Amaura",
+    "form": null,
+    "frames": [
+      [1, 5],
+      [0, 4],
+      [1, 8],
+      [0, 8],
+      [1, 11],
+      [0, 6],
+      [1, 8],
+      [0, 8],
+      [1, 5],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Aurorus",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Hawlucha",
+    "form": null,
+    "frames": [
+      [0, 28],
+      [1, 32],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Dedenne",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 15],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Carbink",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 15],
+      [0, 10],
+      [1, 15],
+      [0, 25],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Goomy",
+    "form": null,
+    "frames": [
+      [0, 28],
+      [1, 32],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Sliggoo",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Goodra",
+    "form": null,
+    "frames": [
+      [0, 18],
+      [1, 18],
+      [0, 18],
+      [1, 18],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Klefki",
+    "form": null,
+    "frames": [
+      [0, 5],
+      [1, 15],
+      [0, 10],
+      [1, 15],
+      [0, 25],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Phantump",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Trevenant",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15],
+      [1, 15],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Pumpkaboo",
+    "form": null,
+    "frames": [
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 30],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Gourgeist",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 15],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Bergmite",
+    "form": null,
+    "frames": [
+      [0, 11],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Avalugg",
+    "form": null,
+    "frames": [
+      [1, 10],
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Noibat",
+    "form": null,
+    "frames": [
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 30],
+      [1, 12],
+      [0, 12],
+      [1, 12],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Noivern",
+    "form": null,
+    "frames": [
+      [1, 32],
+      [0, 20]
+    ]
+  },
+  {
+    "speciesName": "Xerneas",
+    "form": null,
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Yveltal",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 10],
+      [1, 15],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Zygarde",
+    "form": "50",
+    "frames": [
+      [0, 10],
+      [1, 25],
+      [0, 30]
+    ]
+  },
+  {
+    "speciesName": "Zygarde",
+    "form": "10",
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Zygarde",
+    "form": "Complete",
+    "frames": [
+      [0, 12],
+      [1, 45],
+      [0, 15]
+    ]
+  },
+  {
+    "speciesName": "Diancie",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Hoopa",
+    "form": "Confined",
+    "frames": [
+      [0, 5],
+      [1, 15],
+      [0, 10],
+      [1, 15],
+      [0, 25],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Hoopa",
+    "form": "Unbound",
+    "frames": [
+      [1, 20],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Volcanion",
+    "form": null,
+    "frames": [
+      [1, 45],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Rowlet",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Dartrix",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Decidueye",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Pikipek",
+    "form": null,
+    "frames": [
+      [0, 15],
+      [1, 20],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Trumbeak",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 10],
+      [1, 30],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Toucannon",
+    "form": null,
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Grubbin",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 15],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Charjabug",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 15],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Vikavolt",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Cutiefly",
+    "form": null,
+    "frames": [
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 35],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 1],
+      [1, 1],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Ribombee",
+    "form": null,
+    "frames": [
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8],
+      [1, 8],
+      [0, 8]
+    ]
+  },
+  {
+    "speciesName": "Rockruff",
+    "form": null,
+    "frames": [
+      [1, 9],
+      [0, 8],
+      [1, 8],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Lycanroc",
+    "form": "Midday",
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Lycanroc",
+    "form": "Midnight",
+    "frames": [
+      [1, 30],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Lycanroc",
+    "form": "Dusk",
+    "frames": [
+      [1, 40],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Dewpider",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 9],
+      [0, 9],
+      [0, 1],
+      [1, 9],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Araquanid",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 45],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Salandit",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 50],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Salazzle",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 30],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Stufful",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 44],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Bewear",
+    "form": null,
+    "frames": [
+      [0, 20],
+      [1, 60],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Oranguru",
+    "form": null,
+    "frames": [
+      [1, 20],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Passimian",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Wimpod",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 25],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Golisopod",
+    "form": null,
+    "frames": [
+      [0, 25],
+      [1, 15],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Pyukumuku",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 25],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Turtonator",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 44],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Togedemaru",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Drampa",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [0, 50]
+    ]
+  },
+  {
+    "speciesName": "Jangmo_O",
+    "form": null,
+    "frames": [
+      [1, 15],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Hakamo_O",
+    "form": null,
+    "frames": [
+      [1, 30],
+      [0, 5]
+    ]
+  },
+  {
+    "speciesName": "Kommo_O",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 20],
+      [0, 20],
+      [1, 20],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "TapuKoko",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 40],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "TapuLele",
+    "form": null,
+    "frames": [
+      [1, 50],
+      [1, 50],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "TapuBulu",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 40],
+      [0, 10],
+      [1, 40],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "TapuFini",
+    "form": null,
+    "frames": [
+      [1, 60],
+      [1, 60],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Marshadow",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 54],
+      [0, 10]
+    ]
+  },
+  {
+    "speciesName": "Rookidee",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 15],
+      [0, 15],
+      [1, 25],
+      [0, 10],
+      [1, 10],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Corvisquire",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 10],
+      [1, 10],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Corviknight",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 50],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Chewtle",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 20],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Drednaw",
+    "form": null,
+    "frames": [
+      [0, 10],
+      [1, 30],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Sizzlipede",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 25],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Centiskorch",
+    "form": null,
+    "frames": [
+      [0, 1],
+      [1, 35],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "TerapagosNormal",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "TerapagosTerastal",
+    "form": null,
+    "frames": [
+      [0, 30],
+      [1, 30],
+      [0, 1]
+    ]
+  },
+  {
+    "speciesName": "Egg",
+    "form": null,
+    "frames": [
+      [0, 6],
+      [1, 6],
+      [2, 6],
+      [3, 6]
+    ]
+  },
+  {
+    "speciesName": "Venusaur",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Venusaur",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Charizard",
+    "form": "MegaX",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Charizard",
+    "form": "MegaY",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Charizard",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Blastoise",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Blastoise",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Butterfree",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Beedrill",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pidgeot",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Rattata",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Raticate",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "Cosplay",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "RockStar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "Belle",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "PopStar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "PhD",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "Libre",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "Surfing",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "Flying",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "Original",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "Hoenn",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "Sinnoh",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "Unova",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "Kalos",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "Partner",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "World",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pikachu",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Raichu",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sandshrew",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sandslash",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Vulpix",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Ninetales",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Diglett",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dugtrio",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Meowth",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Persian",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Meowth",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Perrserker",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Meowth",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Annihilape",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Growlithe",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Arcanine",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Alakazam",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Machamp",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Geodude",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Graveler",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Golem",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Ponyta",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Rapidash",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Slowbro",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Slowpoke",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Slowbro",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Slowking",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Farfetchd",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sirfetchd",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Grimer",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Muk",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Gengar",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Gengar",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Steelix",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Kingler",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Voltorb",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Electrode",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Marowak",
+    "form": "Alola",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Weezing",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Kangaskhan",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Mr",
+    "form": "MimeGalar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Mr",
+    "form": "Rime",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Scizor",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Kleavor",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pinsir",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Tauros",
+    "form": "Paldea",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Gyarados",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Lapras",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Eevee",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Aerodactyl",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Snorlax",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Articuno",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Zapdos",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Moltres",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Mewtwo",
+    "form": "MegaX",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Mewtwo",
+    "form": "MegaY",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Typhlosion",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Ampharos",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Wooper",
+    "form": "Paldea",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Clodsire",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Unown",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Farigiraf",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dudunsparce",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Qwilfish",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Overqwil",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Heracross",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sneasel",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sneasler",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Ursaluna",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Ursaluna",
+    "form": "Bloodmoon",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Corsola",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Cursola",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Houndoom",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Wyrdeer",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Tyranitar",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sceptile",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Blaziken",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Swampert",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Zigzagoon",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Linoone",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Obstagoon",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Gardevoir",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Gallade",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Slaking",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sableye",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Mawile",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Aggron",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Medicham",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Manectric",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Roserade",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sharpedo",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Camerupt",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Altaria",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Banette",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dusknoir",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Absol",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Glalie",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Salamence",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Metagross",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Latias",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Latios",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Kyogre",
+    "form": "Primal",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Groudon",
+    "form": "Primal",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Rayquaza",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Torterra",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Infernape",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Empoleon",
+    "form": "MegaD",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Empoleon",
+    "form": "MegaO",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Luxray",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Lopunny",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Garchomp",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Lucario",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Abomasnow",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dialga",
+    "form": "Origin",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Palkia",
+    "form": "Origin",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Samurott",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Audino",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Lilligant",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Basculegion",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Darumaka",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Darmanitan",
+    "form": "GalarStandard",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Darmanitan",
+    "form": "GalarZen",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Yamask",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Runerigus",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Garbodor",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Zorua",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Zoroark",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Stunfisk",
+    "form": "Galar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Kingambit",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Braviary",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sliggoo",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Goodra",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Avalugg",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Diancie",
+    "form": "Mega",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Decidueye",
+    "form": "Hisui",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Litten",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Torracat",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Incineroar",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Popplio",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Brionne",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Primarina",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Yungoos",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Gumshoos",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Crabrawler",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Crabominable",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Oricorio",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Wishiwashi",
+    "form": "Solo",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Wishiwashi",
+    "form": "School",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Mareanie",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Toxapex",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Mudbray",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Mudsdale",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Fomantis",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Lurantis",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Morelull",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Shiinotic",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Bounsweet",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Steenee",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Tsareena",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Comfey",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sandygast",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Palossand",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Type: Null",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Silvally",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Minior",
+    "form": "Meteor",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Minior",
+    "form": "Core",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Komala",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Mimikyu",
+    "form": "Disguised",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Mimikyu",
+    "form": "Busted",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Bruxish",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dhelmise",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Cosmog",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Cosmoem",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Solgaleo",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Lunala",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Nihilego",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Buzzwole",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pheromosa",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Xurkitree",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Celesteela",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Kartana",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Guzzlord",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Necrozma",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Magearna",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Poipole",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Naganadel",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Stakataka",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Blacephalon",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Zeraora",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Meltan",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Melmetal",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Melmetal",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Grookey",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Thwackey",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Rillaboom",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Rillaboom",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Scorbunny",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Raboot",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Cinderace",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Cinderace",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sobble",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Drizzile",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Inteleon",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Inteleon",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Skwovet",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Greedent",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Corviknight",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Blipbug",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dottler",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Orbeetle",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Orbeetle",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Nickit",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Thievul",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Gossifleur",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Eldegoss",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Wooloo",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dubwool",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Drednaw",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Yamper",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Boltund",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Coalossal",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Flapple",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Appletun",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dipplin",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Hydrapple",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Silicobra",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sandaconda",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sandaconda",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Cramorant",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Arrokuda",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Barraskewda",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Toxel",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Toxtricity",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Toxtricity",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Centiskorch",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Clobbopus",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Grapploct",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sinistea",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Polteageist",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Hatenna",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Hattrem",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Hatterene",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Hatterene",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Impidimp",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Morgrem",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Grimmsnarl",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Grimmsnarl",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Milcery",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Alcremie",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Alcremie",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Falinks",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Snom",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Frosmoth",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Stonjourner",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Eiscue",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Indeedee",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Morpeko",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Cufant",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Copperajah",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Copperajah",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dracozolt",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Arctozolt",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dracovish",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Arctovish",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Duraludon",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Duraludon",
+    "form": "Gmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Archaludon",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dreepy",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Drakloak",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dragapult",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Zacian",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Zamazenta",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Eternatus",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Kubfu",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Urshifu",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Urshifu",
+    "form": "SingleStrikeGmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Urshifu",
+    "form": "RapidStrikeGmax",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Zarude",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Regieleki",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Regidrago",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Glastrier",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Spectrier",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Calyrex",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Enamorus",
+    "form": "Incarnate",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Enamorus",
+    "form": "Therian",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sprigatito",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Floragato",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Meowscarada",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Fuecoco",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Crocalor",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Skeledirge",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Quaxly",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Quaxwell",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Quaquaval",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Lechonk",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Oinkologne",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Tarountula",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Spidops",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Nymble",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Lokix",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pawmi",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pawmo",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pawmot",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Tandemaus",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Maushold",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Fidough",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dachsbun",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Smoliv",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dolliv",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Arboliva",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Squawkabilly",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Nacli",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Naclstack",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Garganacl",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Charcadet",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Armarouge",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Ceruledge",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Tadbulb",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Bellibolt",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Wattrel",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Kilowattrel",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Maschiff",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Mabosstiff",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Shroodle",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Grafaiai",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Bramblin",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Brambleghast",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Toedscool",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Toedscruel",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Klawf",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Capsakid",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Scovillain",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Rellor",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Rabsca",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Flittle",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Espathra",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Tinkatink",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Tinkatuff",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Tinkaton",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Wiglett",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Wugtrio",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Bombirdier",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Finizen",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Palafin",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Varoom",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Revavroom",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Cyclizar",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Orthworm",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Glimmet",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Glimmora",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Greavard",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Houndstone",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Flamigo",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Cetoddle",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Cetitan",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Veluza",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Dondozo",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Tatsugiri",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "ScreamTail",
+    "form": "Tail",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "BruteBonnet",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "FlutterMane",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "SlitherWing",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "SandyShocks",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "IronTreads",
+    "form": "Treads",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "IronBundle",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "IronHands",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "IronJugulis",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "IronMoth",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "IronThorns",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Arctibax",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Baxcalibur",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Gimmighoul",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Gholdengo",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "WoChien",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "ChienPao",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "TingLu",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "ChiYu",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "RoaringMoon",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "IronValiant",
+    "form": "",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Koraidon",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Miraidon",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Walking",
+    "form": "Wake",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Iron",
+    "form": "Leaves",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Poltchageist",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Sinistcha",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Okidogi",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Munkidori",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Fezandipiti",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Ogerpon",
+    "form": null,
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Gouging",
+    "form": "Fire",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Raging",
+    "form": "Bolt",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Iron",
+    "form": "Boulder",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Iron",
+    "form": "Crown",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Terapagos",
+    "form": "Stellar",
+    "frames": [[0, 1]]
+  },
+  {
+    "speciesName": "Pecharunt",
+    "form": null,
+    "frames": [[0, 1]]
+  }
+]
