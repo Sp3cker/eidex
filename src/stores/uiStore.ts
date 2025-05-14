@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { Pokemon } from "@/types";
 import { persist } from "zustand/middleware";
 
+
 interface UIState {
   isShiny: boolean;
   selectedPokemon: Pokemon | null;
@@ -13,7 +14,7 @@ interface UIState {
 }
 
 export const useUIStore = create<UIState>()(
-  persist(
+  
     (set) => ({
       //Properties
       isShiny: false,
@@ -25,12 +26,7 @@ export const useUIStore = create<UIState>()(
       setSelectedPokemon: (pokemon) => set({ selectedPokemon: pokemon }),
       openModal: (pokemon) =>
         set({ selectedPokemon: pokemon, isModalOpen: true }),
-      closeModal: () => set({ isModalOpen: false }),
+      closeModal: () => set({ isModalOpen: false, selectedPokemon: null }),
     }),
-    {
-      name: "eidex-ui-storage",
-      // Only persist the shiny state
-      partialize: (state) => ({ isShiny: state.isShiny }),
-    },
-  ),
+  
 );

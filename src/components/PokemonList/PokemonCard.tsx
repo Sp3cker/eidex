@@ -6,6 +6,7 @@ import chroma from "chroma-js";
 import getSprite from "@/utils/getSprite";
 import { useUIStore } from "@/stores/uiStore";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
+import React from "react";
 
 type PokemonCardProps = {
   pokemon: Pokemon;
@@ -13,7 +14,7 @@ type PokemonCardProps = {
 
 const adjustedBgCache: Record<number, string> = {};
 
-export function PokemonCard({pokemon}: PokemonCardProps) {
+export const PokemonCard = React.memo(({ pokemon }: PokemonCardProps) => {
   // Get UI State from store
   const { isShiny, openModal } = useUIStore();
   const screenWidth = useScreenWidth();
@@ -140,4 +141,4 @@ export function PokemonCard({pokemon}: PokemonCardProps) {
       </div>
     </div>
   );
-}
+});

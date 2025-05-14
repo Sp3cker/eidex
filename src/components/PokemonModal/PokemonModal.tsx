@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { lazy, useState } from "react";
 import { Ability, Pokemon, StatArray } from "../../types";
 import CloseButton from "../CloseButton";
 import EvolutionView from "../EvolutionView/EvolutionView";
@@ -16,12 +16,13 @@ import { getSpeciesData, hasForms } from "@/utils/speciesData";
 import { Switch } from "@headlessui/react";
 import { useUIStore } from "@/stores/uiStore";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
+import { useInView } from "@react-spring/web";
 
 function PokemonView({ pokemon }: { pokemon: Pokemon }) {
   const { isShiny, setSelectedPokemon } = useUIStore();
   const screenWidth = useScreenWidth();
   const [selectedAbility, setSelectedAbility] = useState<Ability | null>(null);
-
+  const [tabsRef, tabsInView] = useInView();
   const evoFamily = getEvolutionaryFamily(pokemon.index);
   const tabsData = buildPokemonMoveTabs(pokemon);
 
@@ -85,8 +86,9 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
           <TypeMatchup pokemon={pokemon} />
         </div>
       </div>
-      <div className="flex w-full flex-grow">
-        <TabbedInterface tabs={tabsData} />
+
+      <div className="flex w-full flex-grow" ref={tabsRef}>
+        {tabsInView && <TabbedInterface  tabs={tabsData} />}
       </div>
     </div>
   );

@@ -7,22 +7,17 @@ import { SortBar } from "./PokemonSortBar";
 import excludeForms from "@/utils/excludeForms";
 import { useUIStore } from "@/stores/uiStore";
 import { useFilterStore } from "@/stores/filterStore";
+import usePokemonStore from "@/stores/pokemonStore";
 
 type PokemonListProps = {
   pokemonToShow: Pokemon[];
   allPokemon: Pokemon[];
 };
 
-export default function PokemonList({
-  pokemonToShow,
-}: PokemonListProps) {
-  const [visibleCount, setVisibleCount] = useState(10);
-
+export default function PokemonList() {
+  const pokemon = usePokemonStore(10);
   // Get UI State from store
-  const {
-    selectedPokemon,
-    isModalOpen,
-  } = useUIStore();
+  const { isModalOpen } = useUIStore();
 
   //Get filter state from store
   const {
@@ -34,28 +29,11 @@ export default function PokemonList({
     toggleSortDirection,
   } = useFilterStore();
 
-  const ignoreList: number[] = [1435];
-
-  //Infinite Scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      if (
-        window.innerHeight + window.scrollY >=
-        document.body.offsetHeight - 300
-      ) {
-        setVisibleCount((prev) => Math.min(prev + 10, pokemonToShow.length));
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [pokemonToShow.length]);
-
   // Prevent background scroll when modal is open
   useBodyScrollLock(isModalOpen);
 
   return (
-    <div className="flex w-full flex-col items-center select-none">
+    <div className="flex w-full select-none flex-col items-center">
       <SortBar
         sortBy={sortBy}
         statType={sortStat}
@@ -67,18 +45,10 @@ export default function PokemonList({
         onDirectionChange={toggleSortDirection}
       />
       <div className="w-full">
-        {pokemonToShow
-          .slice(0, visibleCount)
-          .filter(
-            (pokemon) =>
-              !ignoreList.includes(pokemon.index) &&
-              !excludeForms(pokemon.forms),
-          )
-          .map((pokemon) => (
-            <PokemonCard key={pokemon.index} pokemon={pokemon} />
-          ))}
+        {pokemon.map((pokemon) => (
+          <PokemonCard key={pokemon.index} pokemon={pokemon} />
+        ))}
       </div>
-      {selectedPokemon && isModalOpen && <PokemonModal />}
     </div>
   );
 }
