@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import "./App.css";
 import FilterBar from "./components/Filter/FilterBar";
 import PokemonList from "./components/PokemonList/PokemonList";

@@ -5,15 +5,15 @@ import { filterPokemon } from "@/utils/filterPokemon";
 import { Pokemon } from "@/types";
 import excludeForms from "@/utils/excludeForms";
 
-const usePokemonStore = (visibleCount: number) => {
+const usePokemonStore = (visibleCount = 10) => {
   const filters = useFilterStore((state) => state.filters);
-  const [visible, setVisibleCount] = useState(10);
+  const [visible, setVisibleCount] = useState(visibleCount);
   // // Memoized filtered Pokémon list (only updates when filters change)
   const ignoreList: number[] = [1435];
 
   const filteredPokemon = useMemo(() => {
     return filterPokemon(pokemon as Pokemon[], filters)
-      .slice(0, visibleCount)
+      .slice(0, visible)
       .filter(
         (pokemon) =>
           !ignoreList.includes(pokemon.index) && !excludeForms(pokemon.forms),
@@ -33,7 +33,7 @@ const usePokemonStore = (visibleCount: number) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pokemon.length]);
-  
+
   return filteredPokemon;
 };
 

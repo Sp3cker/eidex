@@ -1,4 +1,4 @@
-import { lazy, useState } from "react";
+import { useState } from "react";
 import { Ability, Pokemon, StatArray } from "../../types";
 import CloseButton from "../CloseButton";
 import EvolutionView from "../EvolutionView/EvolutionView";
@@ -88,7 +88,7 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
       </div>
 
       <div className="flex w-full flex-grow" ref={tabsRef}>
-        {tabsInView && <TabbedInterface  tabs={tabsData} />}
+        {tabsInView && <TabbedInterface tabs={tabsData} />}
       </div>
     </div>
   );

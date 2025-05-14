@@ -1,18 +1,9 @@
-import { useEffect, useState } from "react";
 import { PokemonCard } from "./PokemonCard";
-import { Pokemon } from "../../types";
-import PokemonModal from "../PokemonModal/PokemonModal";
 import useBodyScrollLock from "../../hooks/useBodyScrollLock";
 import { SortBar } from "./PokemonSortBar";
-import excludeForms from "@/utils/excludeForms";
 import { useUIStore } from "@/stores/uiStore";
 import { useFilterStore } from "@/stores/filterStore";
 import usePokemonStore from "@/stores/pokemonStore";
-
-type PokemonListProps = {
-  pokemonToShow: Pokemon[];
-  allPokemon: Pokemon[];
-};
 
 export default function PokemonList() {
   const pokemon = usePokemonStore(10);
