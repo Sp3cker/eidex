@@ -5,6 +5,7 @@ import PokemonModal from "./components/PokemonModal/PokemonModal";
 import CreditsButton from "./components/CreditsButton";
 
 import ShinySwitch from "./components/ui/ShinySwitch";
+import Map from "./Map/Map";
 
 function App() {
   // Get filter state from Zustand store
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <div className="flex min-h-screen justify-center bg-zinc-800">
+     <Map/>
       <div className="border-1 shadow-2xl/60 flex w-full max-w-3xl flex-col rounded-lg border-neutral-900/50">
         <FilterBar />
 
