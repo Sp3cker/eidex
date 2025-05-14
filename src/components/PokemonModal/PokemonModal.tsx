@@ -19,7 +19,8 @@ import { useScreenWidth } from "@/hooks/useScreenWidth";
 import { useInView } from "@react-spring/web";
 
 function PokemonView({ pokemon }: { pokemon: Pokemon }) {
-  const { isShiny, setSelectedPokemon } = useUIStore();
+  const setSelectedPokemon = useUIStore((state) => state.setSelectedPokemon);
+  const isShiny = useUIStore((state) => state.isShiny);
   const screenWidth = useScreenWidth();
   const [selectedAbility, setSelectedAbility] = useState<Ability | null>(null);
   const [tabsRef, tabsInView] = useInView();
@@ -34,7 +35,6 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
   return (
     <div className="flex w-full flex-col items-center">
       <PokemonSprite
-        isShiny={isShiny}
         isOpen={pokemon !== null}
         spriteIndex={pokemon.index}
         alt={pokemon.speciesName}

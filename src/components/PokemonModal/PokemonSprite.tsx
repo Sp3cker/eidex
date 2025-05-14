@@ -2,19 +2,18 @@ import { useEffect, useState } from "react";
 import { animated } from "react-spring";
 import { useAnimConfig } from "@/utils/animConfigs";
 import getSprite from "@/utils/getSprite";
+import { useUIStore } from "@/stores/uiStore";
 
 const PokemonSprite = ({
   spriteIndex,
   alt,
-  isShiny,
 }: {
   spriteIndex: number;
   alt: string;
   isOpen: boolean;
-  isShiny: boolean;
 }) => {
+  const isShiny = useUIStore((state) => state.isShiny);
   const imgDir = `sprites/${isShiny ? "anim_shiny" : "anim"}/${spriteIndex}/anim_front.webp`;
-
   const [displaySprite, setDisplaySprite] = useState(imgDir);
   const [frame, setFrame] = useState(0);
   const [isRunning, setIsRunning] = useState(false);

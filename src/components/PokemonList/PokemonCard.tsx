@@ -16,7 +16,8 @@ const adjustedBgCache: Record<number, string> = {};
 
 export const PokemonCard = React.memo(({ pokemon }: PokemonCardProps) => {
   // Get UI State from store
-  const { isShiny, openModal } = useUIStore();
+  const openModal = useUIStore((state) => state.openModal);
+  const isShiny = useUIStore((state) => state.isShiny);
   const screenWidth = useScreenWidth();
 
   const { index, dexId, nameKey, types, stats, abilities } = pokemon;

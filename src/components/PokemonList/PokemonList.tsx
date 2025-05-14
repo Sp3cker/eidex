@@ -8,7 +8,7 @@ import usePokemonStore from "@/stores/pokemonStore";
 export default function PokemonList() {
   const pokemon = usePokemonStore(10);
   // Get UI State from store
-  const { isModalOpen } = useUIStore();
+  const isModalOpen = useUIStore((state) => state.isModalOpen);
 
   //Get filter state from store
   const {
