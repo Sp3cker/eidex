@@ -5,7 +5,6 @@ import PokemonModal from "./components/PokemonModal/PokemonModal";
 import CreditsButton from "./components/CreditsButton";
 
 import ShinySwitch from "./components/ui/ShinySwitch";
-import Map from "./Map/Map";
 
 function App() {
   // Get filter state from Zustand store
