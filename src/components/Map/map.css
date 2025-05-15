@@ -6,7 +6,10 @@
   grid-auto-flow: row;
 }
 .cool-font {
-  font-family: 'NeueBit', 'PP NeueBit';
+  font-family: 'Calamity';
+}
+.lil-font {
+  font-family: 'NeueBit'
 }
 .water {
   background-color: var(--color-blue-500);

@@ -74,11 +74,10 @@ input[type="number"] {
     overflow: hidden;
     position: relative;
   }
-
-@layer utilities{
+}
+@layer utilities {
   .rendering-pixelated {
     image-rendering: pixelated;
-
   }
 }
 
