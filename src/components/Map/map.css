@@ -1,563 +1,394 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
+}
+.cool-font {
+  font-family: 'NeueBit', 'PP NeueBit';
 }
 .water {
   background-color: var(--color-blue-500);
   border: 1px solid var(--color-sky-500);
 }
+
 .town {
   background-color: var(--color-red-400);
   border-radius: 50px;
 }
+
 .city {
   background-color: var(--color-red-600);
   border-radius: 35px;
 }
+
 .route {
   border: 1px solid var(--color-emerald-300);
 }
+
 .land {
   background-color: var(--color-emerald-500);
 }
+
 .dungeon {
-    background-color: var(--color-green-600);
-    border: 1px solid var(--color-green-800);
+  background-color: var(--color-green-600);
+  border: 1px solid var(--color-green-800);
 }
-.r115n {
-  grid-area: 3 / 1 / 4 / 2;
+
+.small-location {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* Northwest */
+.MAP_ROUTE115 {
+  grid-area: 5 / 1 / 7 / 2;
   content: attr("title");
 }
 
-.r115s {
-  grid-area: 4 / 1 / 5 / 2;
+.MAP_METEOR_FALLS {
+  grid-area: 4 / 2 / 5 / 3;
 }
 
-.meteor-falls {
-  grid-area: 2 / 2 / 3 / 3;
+.MAP_RUSTBORO_CITY {
+  grid-area: 8 / 1 / 9 / 2;
 }
 
-.r115 {
-  grid-area: 3 / 1 / 6 / 2;
+.MAP_ROUTE116 {
+  grid-area: 8 / 2 / 9 / 5;
 }
 
-.rustboro-city {
-  grid-area: 6 / 1 / 7 / 2;
+.MAP_RUSTURF_TUNNEL {
+  grid-area: 7 / 4 / 8 / 5;
 }
 
-.r104 {
-  grid-area: 7 / 1 / 10 / 2;
+.MAP_FALLARBOR_TOWN {
+  grid-area: 3 / 5 / 4 / 6;
 }
 
-.petalburg-woods {
-  grid-area: 8 / 2 / 9 / 3;
+/* Southwest */
+.MAP_ROUTE104 {
+  grid-area: 9 / 1 / 12 / 2;
 }
 
-.petalburg-city {
-  grid-area: 9 / 2 / 10 / 3;
+.MAP_PETALBURG_WOODS {
+  grid-area: 10 / 2 / 11 / 3;
 }
 
-.r102 {
-  grid-area: 9 / 3 / 10 / 5;
+.MAP_PETALBURG_CITY {
+  grid-area: 11 / 2 / 12 / 3;
 }
 
-.oldale-town {
-  grid-area: 9 / 5 / 10 / 6;
+.MAP_ROUTE102 {
+  grid-area: 11 / 3 / 12 / 5;
 }
 
-.r101 {
-  grid-area: 10 / 5 / 11 / 6;
-}
-
-.littleroot-town {
+.MAP_OLDALE_TOWN {
   grid-area: 11 / 5 / 12 / 6;
 }
 
-.r115n { grid-area: 3 / 1 / 4 / 2; }
-
-.r115s { grid-area: 4 / 1 / 5 / 2; }
-
-.meteor-falls { grid-area: 2 / 2 / 3 / 3; }
-
-.r115 { grid-area: 3 / 1 / 6 / 2; }
-
-.rustboro-city { grid-area: 6 / 1 / 7 / 2; }
-
-.r104 { grid-area: 7 / 1 / 10 / 2; }
-
-.petalburg-woods { grid-area: 8 / 2 / 9 / 3; }
-
-.petalburg-city { grid-area: 9 / 2 / 10 / 3; }
-
-.r102 { grid-area: 9 / 3 / 10 / 5; }
-
-.oldale-town { grid-area: 9 / 5 / 10 / 6; }
-
-.r101 { grid-area: 10 / 5 / 11 / 6; }
-
-.littleroot-town { grid-area: 11 / 5 / 12 / 6; }
-
-.r103 { grid-area: 7 / 5 / 9 / 6; }
-
-.r103-w { grid-area: 7 / 6 / 8 / 7; }
-
-.r103-east { grid-area: 7 / 6 / 8 / 8; }
-
-.slateport-city { grid-area: 9 / 8 / 10 / 9; }
-
-.verdanturf-town { grid-area: 5 / 5 / 6 / 6; }
-
-.r116 { grid-area: 6 / 2 / 7 / 5; }
-
-.rusturf-tunnel { grid-area: 5 / 4 / 6 / 5; }
-
-.r117 { grid-area: 5 / 6 / 6 / 8; }
-
-.maulville-city { grid-area: 5 / 8 / 6 / 9; }
-
-.r110 { grid-area: 6 / 8 / 9 / 9; }
-
-.lavaridge-town { grid-area: 3 / 6 / 4 / 7; }
-
-.fallarbor-town { grid-area: 1 / 5 / 2 / 6; }
-
-.r113 { grid-area: 1 / 6 / 2 / 9; }
-
-.r111 { grid-area: 2 / 8 / 5 / 9; }
-
-.r112 { grid-area: 3 / 7 / 4 / 8; }
-
-.r118 { grid-area: 5 / 9 / 6 / 11; }
-
-.r119 { grid-area: 1 / 10 / 5 / 11; }
-
-.fortree-city { grid-area: 1 / 11 / 2 / 12; }
-
-.r120 { grid-area: 1 / 12 / 4 / 13; }
-
-.r121 { grid-area: 3 / 13 / 4 / 16; }
-
-.lilycove-city { grid-area: 3 / 16 / 4 / 17; }
-
-.mossdeep-city { grid-area: 4 / 19 / 5 / 20; }
-
-.sootopolis-city { grid-area: 6 / 17 / 7 / 18; }
-
-.ever-grande-city { grid-area: 7 / 21 / 9 / 22; }
-
-.r128 { grid-area: 9 / 19 / 10 / 22; }
-
-.r127 { grid-area: 5 / 19 / 9 / 20; }
-
-.r126 { grid-area: 6 / 18 / 7 / 19; }
-
-.r124 { grid-area: 3 / 17 / 6 / 18; }
-
-.pacifidlog-town { grid-area: 9 / 15 / 10 / 16; }
-
-.r129 { grid-area: 9 / 18 / 10 / 19; }
-
-.r130 { grid-area: 9 / 17 / 10 / 18; }
-
-.r131 { grid-area: 9 / 16 / 10 / 17; }
-
-.r134 { grid-area: 9 / 9 / 10 / 11; }
-
-.r133 { grid-area: 9 / 11 / 10 / 13; }
-
-.r132 { grid-area: 9 / 13 / 10 / 15; }
-
-.r109 { grid-area: 12 / 5 / 13 / 6; }
-
-.r108 { grid-area: 12 / 4 / 13 / 5; }
-
-.r107 { grid-area: 12 / 3 / 13 / 4; }
-
-.dewford-town { grid-area: 12 / 2 / 13 / 3; }
-
-.r105 { grid-area: 10 / 1 / 12 / 2; }
-
-.r106 { grid-area: 11 / 2 / 12 / 3; }
-
-@media all and (-ms-high-contrast:none) {
-  .container {
-    display: -ms-grid;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr 0.8fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
-
-  .r115n {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .r115s {
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .meteor-falls {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-  }
-
-  .r115 {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .rustboro-city {
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .r104 {
-    -ms-grid-row: 7;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .petalburg-woods {
-    -ms-grid-row: 8;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-  }
-
-  .Petalburg-city {
-    -ms-grid-row: 9;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-  }
-
-  .r102 {
-    -ms-grid-row: 9;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 2;
-  }
-
-  .oldale-town {
-    -ms-grid-row: 9;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 1;
-  }
-
-  .r101 {
-    -ms-grid-row: 10;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 1;
-  }
-
-  .littleroot-town {
-    -ms-grid-row: 11;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 1;
-  }
-
-  .r103 {
-    -ms-grid-row: 7;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 1;
-  }
-
-  .r103-w {
-    -ms-grid-row: 7;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 1;
-  }
-
-  .r103-east {
-    -ms-grid-row: 7;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 2;
-  }
-
-  .Slateport-city {
-    -ms-grid-row: 9;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 1;
-  }
-
-  .verdanturf-town {
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 1;
-  }
-
-  .r116 {
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 3;
-  }
-
-  .rusturf-tunnel {
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 4;
-    -ms-grid-column-span: 1;
-  }
-
-  .r117 {
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 2;
-  }
-
-  .Maulville-city {
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 1;
-  }
-
-  .r110 {
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 1;
-  }
-
-  .lavaridge-town {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 1;
-  }
-
-  .fallarbor-town {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 1;
-  }
-
-  .r113 {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 3;
-  }
-
-  .r111 {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 1;
-  }
-
-  .r112 {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 1;
-  }
-
-  .r118 {
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 9;
-    -ms-grid-column-span: 2;
-  }
-
-  .r119 {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 4;
-    -ms-grid-column: 10;
-    -ms-grid-column-span: 1;
-  }
-
-  .fortree-city {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 11;
-    -ms-grid-column-span: 1;
-  }
-
-  .r120 {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 12;
-    -ms-grid-column-span: 1;
-  }
-
-  .r121 {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 13;
-    -ms-grid-column-span: 3;
-  }
-
-  .lilycove-city {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 16;
-    -ms-grid-column-span: 1;
-  }
-
-  .mossdeep-city {
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 19;
-    -ms-grid-column-span: 1;
-  }
-
-  .sootopolis-city {
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 17;
-    -ms-grid-column-span: 1;
-  }
-
-  .ever-grande-city {
-    -ms-grid-row: 7;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 21;
-    -ms-grid-column-span: 1;
-  }
-
-  .r128 {
-    -ms-grid-row: 9;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 19;
-    -ms-grid-column-span: 3;
-  }
-
-  .r127 {
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 4;
-    -ms-grid-column: 19;
-    -ms-grid-column-span: 1;
-  }
-
-  .r126 {
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 18;
-    -ms-grid-column-span: 1;
-  }
-
-  .r124 {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 17;
-    -ms-grid-column-span: 1;
-  }
-
-  .pacifidlg-town {
-    -ms-grid-row: 9;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 15;
-    -ms-grid-column-span: 1;
-  }
-
-  .r129 {
-    -ms-grid-row: 9;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 18;
-    -ms-grid-column-span: 1;
-  }
-
-  .r130 {
-    -ms-grid-row: 9;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 17;
-    -ms-grid-column-span: 1;
-  }
-
-  .r131 {
-    -ms-grid-row: 9;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 16;
-    -ms-grid-column-span: 1;
-  }
-
-  .r134 {
-    -ms-grid-row: 9;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 9;
-    -ms-grid-column-span: 2;
-  }
-
-  .r133 {
-    -ms-grid-row: 9;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 11;
-    -ms-grid-column-span: 2;
-  }
-
-  .r132 {
-    -ms-grid-row: 9;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 13;
-    -ms-grid-column-span: 2;
-  }
-
-  .r109 {
-    -ms-grid-row: 12;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 1;
-  }
-
-  .r108 {
-    -ms-grid-row: 12;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 4;
-    -ms-grid-column-span: 1;
-  }
-
-  .r107 {
-    -ms-grid-row: 12;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-  }
-
-  .dewford-town {
-    -ms-grid-row: 12;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-  }
-
-  .r105 {
-    -ms-grid-row: 10;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .r106 {
-    -ms-grid-row: 11;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-  }
+.MAP_ROUTE101 {
+  grid-area: 12 / 5 / 13 / 6;
+}
+
+.MAP_LITTLEROOT_TOWN {
+  grid-area: 13 / 5 / 14 / 6;
+}
+
+.MAP_ROUTE103 {
+  grid-area: 9 / 5 / 11 / 6;
+}
+
+.MAP_ROUTE105 {
+  grid-area: 12 / 1 / 14 / 2;
+}
+
+.MAP_ROUTE106 {
+  grid-area: 13 / 2 / 14 / 3;
+}
+
+.MAP_DEWFORD_TOWN {
+  grid-area: 14 / 2 / 15 / 3;
+}
+
+.MAP_GRANITE_CAVE {
+  grid-area: 13 / 3 / 14 / 4;
+}
+
+.MAP_ROUTE107 {
+  grid-area: 14 / 3 / 15 / 4;
+}
+
+.MAP_ROUTE108 {
+  grid-area: 14 / 4 / 15 / 5;
+}
+
+.MAP_ROUTE109 {
+  grid-area: 14 / 5 / 15 / 6;
+}
+
+/* Central */
+.MAP_VERDANTURF_TOWN {
+  grid-area: 7 / 5 / 8 / 6;
+}
+
+.MAP_ROUTE117 {
+  grid-area: 7 / 6 / 8 / 8;
+}
+
+.MAP_MAUVILLE_CITY {
+  grid-area: 7 / 8 / 8 / 9;
+}
+
+.MAP_ROUTE110 {
+  grid-area: 8 / 8 / 11 / 9;
+}
+
+.MAP_SLATEPORT_CITY {
+  grid-area: 11 / 8 / 12 / 9;
+}
+
+.MAP_ROUTE113 {
+  grid-area: 3 / 6 / 4 / 9;
+}
+
+.MAP_ROUTE111 {
+  grid-area: 4 / 8 / 7 / 9;
+}
+
+.MAP_DESERT_RUINS {
+  grid-area: 5 / 8 / 6 / 9;
+}
+
+.MAP_ROUTE112 {
+  grid-area: 5 / 7 / 6 / 8;
+}
+
+.MAP_LAVARIDGE_TOWN {
+  grid-area: 5 / 6 / 6 / 7;
+}
+
+.MAP_MT_CHIMNEY {
+  grid-area: 4 / 7 / 5 / 8;
+}
+
+.MAP_JAGGED_PASS {
+  grid-area: 4 / 6 / 5 / 7;
+}
+
+/* Northeast */
+.MAP_ROUTE119 {
+  grid-area: 3 / 10 / 7 / 11;
+}
+
+.MAP_FORTREE_CITY {
+  grid-area: 3 / 11 / 4 / 12;
+}
+
+.MAP_ROUTE120 {
+  grid-area: 3 / 12 / 6 / 13;
+}
+
+.MAP_SAFARI_ZONE {
+  grid-area: 4 / 12 / 5 / 13;
+}
+
+.MAP_ROUTE121 {
+  grid-area: 5 / 13 / 6 / 16;
+}
+
+.MAP_LILYCOVE_CITY {
+  grid-area: 5 / 16 / 6 / 17;
+}
+
+.MAP_MT_PYRE {
+  grid-area: 6 / 13 / 7 / 14;
+}
+
+.MAP_ROUTE122 {
+  grid-area: 6 / 14 / 7 / 15;
+}
+
+.MAP_ROUTE123 {
+  grid-area: 6 / 15 / 7 / 16;
+}
+
+.MAP_MAGMA_HIDEOUT {
+  grid-area: 4 / 13 / 5 / 14;
+}
+
+/* Southeast */
+.MAP_ROUTE124 {
+  grid-area: 5 / 17 / 8 / 18;
+}
+
+.MAP_MOSSDEEP_CITY {
+  grid-area: 6 / 19 / 7 / 20;
+}
+
+.MAP_SPACE_CENTER {
+  grid-area: 5 / 19 / 6 / 20;
+}
+
+.MAP_ROUTE125 {
+  grid-area: 5 / 20 / 6 / 21;
+}
+
+.MAP_SHOAL_CAVE {
+  grid-area: 5 / 21 / 6 / 22;
+}
+
+.MAP_ROUTE126 {
+  grid-area: 8 / 18 / 9 / 19;
+}
+
+.MAP_SOOTOPOLIS_CITY {
+  grid-area: 8 / 17 / 9 / 18;
+}
+
+.MAP_CAVE_OF_ORIGIN {
+  grid-area: 7 / 17 / 8 / 18;
+}
+
+.MAP_ROUTE127 {
+  grid-area: 7 / 19 / 11 / 20;
+}
+
+.MAP_ROUTE128 {
+  grid-area: 11 / 19 / 12 / 22;
+}
+
+.MAP_EVER_GRANDE_CITY {
+  grid-area: 9 / 21 / 11 / 22;
+}
+
+.MAP_VICTORY_ROAD {
+  grid-area: 8 / 21 / 9 / 22;
+}
+
+.MAP_POKEMON_LEAGUE {
+  grid-area: 7 / 21 / 8 / 22;
+}
+
+.MAP_ROUTE129 {
+  grid-area: 11 / 18 / 12 / 19;
+}
+
+.MAP_ROUTE130 {
+  grid-area: 11 / 17 / 12 / 18;
+}
+
+.MAP_ROUTE131 {
+  grid-area: 11 / 16 / 12 / 17;
+}
+
+.MAP_PACIFIDLOG_TOWN {
+  grid-area: 11 / 15 / 12 / 16;
+}
+
+.MAP_SKY_PILLAR {
+  grid-area: 10 / 15 / 11 / 16;
+}
+
+.MAP_ROUTE132 {
+  grid-area: 11 / 13 / 12 / 15;
+}
+
+.MAP_ROUTE133 {
+  grid-area: 11 / 11 / 12 / 13;
+}
+
+.MAP_ROUTE134 {
+  grid-area: 11 / 9 / 12 / 11;
+}
+
+.MAP_SEALED_CHAMBER {
+  grid-area: 10 / 13 / 11 / 14;
+}
+
+.MAP_ISLAND_CAVE {
+  grid-area: 10 / 11 / 11 / 12;
+}
+
+.MAP_ANCIENT_TOMB {
+  grid-area: 10 / 9 / 11 / 10;
+}
+
+/* Previously Added Locations (Non-Overlapping) */
+.MAP_ROUTE114 {
+  grid-area: 2 / 3 / 4 / 4;
+}
+
+.MAP_ROUTE118 {
+  grid-area: 7 / 11 / 8 / 13;
+}
+
+.MAP_UNDERWATER_ROUTE126 {
+  grid-area: 9 / 18 / 10 / 19;
+}
+
+.MAP_UNDERWATER_ROUTE124 {
+  grid-area: 8 / 17 / 9 / 18;
+}
+
+.MAP_ABANDONED_SHIP {
+  grid-area: 15 / 4 / 16 / 5;
+}
+
+.MAP_FIERY_PATH {
+  grid-area: 6 / 7 / 7 / 8;
+}
+
+.MAP_NEW_MAUVILLE {
+  grid-area: 8 / 8 / 9 / 9;
+}
+
+.MAP_SAFARI_ZONE_SOUTHWEST {
+  grid-area: 5 / 11 / 6 / 12;
+}
+
+.MAP_SAFARI_ZONE_NORTH {
+  grid-area: 3 / 12 / 4 / 13;
+}
+
+.MAP_SAFARI_ZONE_NORTHWEST {
+  grid-area: 3 / 11 / 4 / 12;
+}
+
+.MAP_SAFARI_ZONE {
+  grid-area: 5 / 14 / 6 / 15;
+}
+
+.MAP_SAFARI_ZONE_NORTHEAST {
+  grid-area: 3 / 13 / 4 / 14;
+}
+
+.MAP_ALTERING_CAVE {
+  grid-area: 10 / 6 / 11 / 7;
+}
+
+.MAP_SCORCHED_SLAB {
+  grid-area: 4 / 10 / 5 / 11;
+}
+
+/* Additional Dungeons (Simplified Names) */
+.MAP_MIRAGE_TOWER {
+  grid-area: 3 / 9 / 4 / 10;
+}
+
+.MAP_DESERT_UNDERPASS {
+  grid-area: 6 / 8 / 7 / 9;
+}
+
+.MAP_ARTISAN_CAVE {
+  grid-area: 6 / 16 / 7 / 17;
+}
+
+.MAP_SEAFLOOR_CAVERN {
+  grid-area: 10 / 17 / 11 / 18;
 }
