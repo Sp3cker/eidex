@@ -69,7 +69,6 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
           <EvolutionView
             pokemon={pokemon}
             family={evoFamily}
-            isShiny={isShiny}
             onClickPokemon={handleSelectPokemon}
           />
         </div>

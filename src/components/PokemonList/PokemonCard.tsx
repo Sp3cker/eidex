@@ -3,10 +3,10 @@ import { TypeBadge } from "../TypeBadges/TypeBadge";
 import { getAbilityName } from "../../utils/abilityData";
 import { Pokemon } from "../../types";
 import chroma from "chroma-js";
-import getSprite from "@/utils/getSprite";
 import { useUIStore } from "@/stores/uiStore";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
 import React from "react";
+import SpriteImage from "../SpriteImage";
 
 type PokemonCardProps = {
   pokemon: Pokemon;
@@ -20,7 +20,7 @@ export const PokemonCard = React.memo(({ pokemon }: PokemonCardProps) => {
   const isShiny = useUIStore((state) => state.isShiny);
   const screenWidth = useScreenWidth();
 
-  const { index, dexId, nameKey, types, stats, abilities } = pokemon;
+  const { dexId, nameKey, types, stats, abilities } = pokemon;
 
   // Convert the ID to a string and pad it with leading zeros and a #
   const formattedId = `#${String(dexId).padStart(3, "0")}`;
@@ -39,11 +39,6 @@ export const PokemonCard = React.memo(({ pokemon }: PokemonCardProps) => {
 
   // Calculate the BST (Base Stat Total)
   const bst = stats.reduce((sum, stat) => sum + stat, 0);
-
-  // If the sprite is "", then use the default sprite
-  const fallbackSprite = `missingno.png`;
-
-  const displaySprite = getSprite(index, isShiny);
 
   const typeId = types[0];
   let adjustedBg = adjustedBgCache[typeId];
@@ -68,14 +63,7 @@ export const PokemonCard = React.memo(({ pokemon }: PokemonCardProps) => {
         <div className="flex justify-between bg-neutral-900/20 py-1 pl-2">
           <div className="flex items-center gap-1">
             {/* Sprite and name  */}
-            <img
-              src={displaySprite || fallbackSprite}
-              className="h-[64px] w-[64px] object-contain"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.src = fallbackSprite;
-              }}
-            />
+            <SpriteImage pokemon={pokemon}/>
             <div className="text-md font-bold">{nameKey}</div>
 
             {/* Types */}
