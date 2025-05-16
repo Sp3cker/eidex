@@ -7,13 +7,13 @@ import { useDrag, usePinch, useWheel } from "@use-gesture/react";
 import { useRef } from "react";
 import Floater from "./Floater";
 import MapPlace from "./MapPlace";
+
 const Map = () => {
   const selectedMap = useMapStore((state) => state.selectedMap);
   const setMapScale = useMapStore((state) => state.setMapScale);
   console.log("render");
   const [{ scale, centerOffset }, api] = useSpring(() => ({
     scale: 1,
-
     centerOffset: [0, 0],
     config: { precision: 0.1, ...config.slow },
   }));
@@ -26,7 +26,7 @@ const Map = () => {
     { target: targetRef, scaleBounds: { min: 0.5, max: 1.5 } },
   );
   useWheel(
-    ({ delta: [, dy], movement: [, y] }) => {
+    ({ movement: [, y] }) => {
       const calcY = Math.abs(Math.min(Math.max(y, 0.75), 2));
       setMapScale(calcY);
       api.start({ scale: calcY }); // Limit: 0.5x to 3x
@@ -39,7 +39,9 @@ const Map = () => {
   );
   useDrag(
     ({ offset: [x, y], dragging }) => {
-      dragging && api.start({ centerOffset: [x, y] });
+      if (dragging) {
+        api.start({ centerOffset: [x, y] });
+      }
     },
     {
       target: targetRef,
@@ -62,7 +64,6 @@ const Map = () => {
             cursor: "move",
             //@ts-ignore
             transform: to([centerOffset, scale], ([x, y], z) => {
-              // console.log(x, y);
               return `translate3d(${x}px,${y}px, ${x * y * 1000}px) scale(${z})`;
             }),
             transformOrigin: "center",
