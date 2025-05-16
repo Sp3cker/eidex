@@ -16,11 +16,6 @@ type EncounterMonsFromJSON = {
   index?: number; // doesn't exist until we derive it
 };
 
-type EncounterZone = {
-  encounter_rate: number;
-  mons: EncounterMons;
-};
-
 type MapStore = {
   encounters: any[];
   selectedMap: string | null;
@@ -28,9 +23,13 @@ type MapStore = {
   selectedMapWaterMons: EncounterMons[] | undefined;
   selectedMapFishingMons: EncounterMons[] | undefined;
   selectedPokemon: Pokemon | null;
+  selectedCoordinates: number[];
+  mapScale: number;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
   setSelectedPokemon: (name_no_prefix: string) => void;
+  setSelectedCoordinates: (coords: number[]) => void;
+  setMapScale: (n: number) => void;
 };
 const UnderscoreRegex = new RegExp(/^[^_]*_/);
 
@@ -53,6 +52,8 @@ const useMapStore = create<MapStore>((set) => ({
   selectedMapLandMons: undefined,
   selectedMapWaterMons: undefined,
   selectedMapFishingMons: undefined,
+  selectedCoordinates: [0, 0, 0, 0],
+  mapScale: 1,
   deselectMap: () => set({ selectedMap: null }),
   setSelectedMap: (map: string) => {
     const targetMapArr = getMap(map);
@@ -95,6 +96,8 @@ const useMapStore = create<MapStore>((set) => ({
     set({ selectedPokemon: poke[0] });
   },
   selectedPokemon: null,
+  setSelectedCoordinates: (coords) => set({ selectedCoordinates: coords }),
+  setMapScale: (n) => set({ mapScale: n }),
 }));
 
 export default useMapStore;

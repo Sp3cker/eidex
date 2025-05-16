@@ -5,6 +5,10 @@
   gap: 0px 0px;
   grid-auto-flow: row;
 }
+.floater {
+  position: absolute;
+  touch-action: none;
+}
 .cool-font {
   font-family: 'Calamity';
 }
