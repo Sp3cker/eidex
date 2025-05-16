@@ -27,7 +27,9 @@
 }
 
 .route {
-  border: 1px solid var(--color-emerald-300);
+  border: 1px solid var(--color-emerald-400);
+
+  background-color: var(--color-green-600);
 }
 
 .land {
@@ -35,7 +37,7 @@
 }
 
 .dungeon {
-  background-color: var(--color-green-600);
+  content: "⭐️";
   border: 1px solid var(--color-green-800);
 }
 

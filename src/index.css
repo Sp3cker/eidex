@@ -67,7 +67,18 @@ input[type="number"] {
     position: absolute;
     image-rendering: pixelated;
   }
-
+  .pokemon-icon-sprite {
+    width: 48px;
+    position: absolute;
+    image-rendering: pixelated;
+    animation: pokemon-icon-animation 0.5s steps(2) infinite;
+  }
+  .icon-sprite-box {
+    width: 48px;
+    height:48px;
+    overflow: hidden;
+    position: relative;
+  }
   .sprite-box {
     width: calc(32px * 5);
     height: calc(32px * 5);
@@ -75,12 +86,22 @@ input[type="number"] {
     position: relative;
   }
 }
+
 @layer utilities {
   .rendering-pixelated {
     image-rendering: pixelated;
   }
 }
-
+@keyframes pokemon-icon-animation {
+  from {
+    /* first frame */
+    transform: translate3d(0, 0px, 0);
+  }
+  to {
+    /* last frame */
+    transform: translate3d(0, -100%, 0);
+  }
+}
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
