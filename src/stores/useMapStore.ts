@@ -8,6 +8,7 @@ type EncounterMons = {
   max_level: number;
   species: string;
   index: number;
+  rate: number;
 };
 type EncounterMonsFromJSON = {
   min_level: number;
@@ -25,11 +26,15 @@ type MapStore = {
   selectedPokemon: Pokemon | null;
   selectedCoordinates: number[];
   mapScale: number;
+  mapOffset: number[];
+  hoveredMap: string | null;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
   setSelectedPokemon: (name_no_prefix: string) => void;
   setSelectedCoordinates: (coords: number[]) => void;
   setMapScale: (n: number) => void;
+  setMapOffset: (offset: number[]) => void;
+  setHoveredMap: (map: string) => void;
 };
 const UnderscoreRegex = new RegExp(/^[^_]*_/);
 
@@ -39,14 +44,54 @@ const putIdOnEncounter: (
 ) => asserts enc is EncounterMons[] = (enc, monsNameKeys) => {
   enc.forEach((specie, index) => {
     const specieIndex = monsNameKeys.get(specie.species);
-    if (specieIndex !== undefined) {
-      enc[index].index = specieIndex;
+    if (specieIndex === undefined) {
+      return;
+    }
+    return (enc[index].index = specieIndex);
+  });
+};
+const putEncounterRate = (mons: EncounterMons[]) => {
+  const rates = [20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1];
+  const encounterRates = new Map<string, number>();
+  const monsterProps = new Map<string, EncounterMons>();
+  // Calculate total rates for each monster
+  mons.forEach((encounter, index) => {
+    if (index < rates.length) {
+      // let currentRate = arr[index].rate || 0
+      // currentRate += rates[index];
+      const currentRate = encounterRates.get(encounter.species) || 0;
+      encounterRates.set(encounter.species, currentRate + rates[index]);
+      const monsNewRate = encounterRates.get(encounter.species) || 0;
+      monsterProps.set(encounter.species, {
+        species: encounter.species,
+        max_level: encounter.max_level,
+        min_level: encounter.min_level,
+        index: encounter.index,
+        rate: monsNewRate,
+      });
     }
   });
-  // const nameKeysId = monsNameKeys.get()
-};
 
-const useMapStore = create<MapStore>((set) => ({
+  return Array.from(monsterProps.values()) as EncounterMons[];
+};
+export function formatMapString(mapNameFromJson: string) {
+  return (
+    mapNameFromJson
+      .replace(/^MAP_/, "") // Remove 'MAP_' prefix
+      // .toLowerCase() // Convert to lowercase
+      .replace(
+        /([A-Z]+)_?/g,
+        (match, p1) =>
+          p1.charAt(0).toUpperCase() + p1.slice(1).toLowerCase() + " ",
+      )
+      .trim()
+      .replace(/(^|_)([a-z])/g, (_: any, __: any, letter: string) =>
+        letter.toUpperCase(),
+      ) // Capitalize first letter and after underscores
+
+  );
+}
+export const useMapStore = create<MapStore>((set) => ({
   encounters,
   selectedMap: null,
   selectedMapLandMons: undefined,
@@ -54,6 +99,8 @@ const useMapStore = create<MapStore>((set) => ({
   selectedMapFishingMons: undefined,
   selectedCoordinates: [0, 0, 0, 0],
   mapScale: 1,
+  mapOffset: [0, 0],
+  hoveredMap: null,
   deselectMap: () => set({ selectedMap: null }),
   setSelectedMap: (map: string) => {
     const targetMapArr = getMap(map);
@@ -62,27 +109,32 @@ const useMapStore = create<MapStore>((set) => ({
       return;
     }
     /** Put ID on each mon so we can get their sprite andn info later
-     * Build a Set so we don't have to `map` through the `encounters` json for each lookup :3
+     * Build a Map so we don't have to `map` through the `encounters` json for each lookup :3
      */
-    const monsNameKeys = new Map(
-      pokemon.map((p) => [p.nameKey.toLowerCase(), p.index]), //nameKey cause it probly matches encounter Data
-      // targetMapArr[0].land_mons.mons.map((p) => p.species),
-    );
+    const monsNameKeys = new Map<string, number>([]);
+    pokemon.forEach((p) => {
+      monsNameKeys.set(p.speciesName.toLowerCase(), p.index);
+      monsNameKeys.set(p.nameKey.replace("-", "_").toLowerCase(), p.index);
+    }); //nameKey cause it probly matches encounter Data
+    // targetMapArr[0].land_mons.mons.map((p) => p.species),
+    let landEncounters, waterEncounters, fishingEncounters;
     if (targetMapArr[0].land_mons) {
       putIdOnEncounter(targetMapArr[0].land_mons.mons, monsNameKeys);
+      landEncounters = putEncounterRate(targetMapArr[0].land_mons?.mons);
     }
     if (targetMapArr[0].water_mons) {
       putIdOnEncounter(targetMapArr[0].water_mons.mons, monsNameKeys);
+      waterEncounters = putEncounterRate(targetMapArr[0].water_mons?.mons);
     }
     if (targetMapArr[0].fishing_mons) {
       putIdOnEncounter(targetMapArr[0].fishing_mons.mons, monsNameKeys);
+      fishingEncounters = putEncounterRate(targetMapArr[0].fishing_mons.mons);
     }
     set({
-      selectedMap: targetMapArr[0].base_label,
-      selectedMapFishingMons: targetMapArr[0].fishing_mons
-        ?.mons as EncounterMons[],
-      selectedMapLandMons: targetMapArr[0].land_mons?.mons as EncounterMons[],
-      selectedMapWaterMons: targetMapArr[0].water_mons?.mons as EncounterMons[],
+      selectedMap: targetMapArr[0].map,
+      selectedMapLandMons: landEncounters,
+      selectedMapWaterMons: waterEncounters,
+      selectedMapFishingMons: fishingEncounters,
     });
   },
   setSelectedPokemon: (name: string) => {
@@ -96,8 +148,12 @@ const useMapStore = create<MapStore>((set) => ({
     set({ selectedPokemon: poke[0] });
   },
   selectedPokemon: null,
-  setSelectedCoordinates: (coords) => set({ selectedCoordinates: coords }),
+  setSelectedCoordinates: (coords) => {
+    set({ selectedCoordinates: coords });
+  },
   setMapScale: (n) => set({ mapScale: n }),
+  setMapOffset: (offset) => set({ mapOffset: offset }),
+  setHoveredMap: (map: string) => set({ hoveredMap: map }),
 }));
 
 export default useMapStore;

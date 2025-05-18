@@ -1,42 +1,44 @@
 import useMapStore from "@/stores/useMapStore";
 import "./map.css";
-import maps from "@/data/map/maps.json";
-import EncounterZone from "./EncounterZone";
 import { useSpring, animated, config, to } from "@react-spring/web";
-import { useDrag, usePinch, useWheel } from "@use-gesture/react";
+import { useDrag } from "@use-gesture/react";
 import { useRef } from "react";
 import Floater from "./Floater";
-import MapPlace from "./MapPlace";
-
+import HoennMap from "./FUCK.tsx";
+import Dexnav from "./Dexnax.tsx";
 const Map = () => {
-  const selectedMap = useMapStore((state) => state.selectedMap);
-  const setMapScale = useMapStore((state) => state.setMapScale);
+  const setMapOffset = useMapStore((state) => state.setMapOffset);
   console.log("render");
-  const [{ scale, centerOffset }, api] = useSpring(() => ({
-    scale: 1,
-    centerOffset: [0, 0],
-    config: { precision: 0.1, ...config.slow },
-  }));
+  const [{ scale, centerOffset }, api] = useSpring(
+    () => ({
+      scale: 1,
+      centerOffset: [0, 0],
+      config: { precision: 0.1, ...config.slow },
+      onRest: () => {
+        setMapOffset(centerOffset.toJSON());
+      },
+    }),
+    [],
+  );
   const targetRef = useRef<HTMLDivElement>(null);
   // Pinch-to-zoom
-  usePinch(
-    ({ offset: [s] }) => {
-      api.start({ scale: Math.min(Math.max(s, 0.5), 1.5) }); // Limit: 0.5x to 3x
-    },
-    { target: targetRef, scaleBounds: { min: 0.5, max: 1.5 } },
-  );
-  useWheel(
-    ({ movement: [, y] }) => {
-      const calcY = Math.abs(Math.min(Math.max(y, 0.75), 2));
-      setMapScale(calcY);
-      api.start({ scale: calcY }); // Limit: 0.5x to 3x
-    },
-    {
-      target: targetRef,
-      bounds: { bottom: 1 },
-      rubberband: true,
-    },
-  );
+  // usePinch(
+  //   ({ offset: [s] }) => {
+  //     api.start({ scale: Math.min(Math.max(s, 0.5), 1.5) }); // Limit: 0.5x to 3x
+  //   },
+  //   { target: targetRef, scaleBounds: { min: 0.5, max: 1.5 } },
+  // );
+  // useWheel(
+  //   ({ movement: [, y] }) => {
+  //     const calcY = Math.abs(Math.min(Math.max(y, 0.75), 2));
+  //     setMapScale(calcY);
+  //     api.start({ scale: calcY }); // Limit: 0.5x to 3x
+  //   },
+  //   {
+  //     target: targetRef,
+  //     bounds: { bottom: 1 },
+  //   },
+  // );
   useDrag(
     ({ offset: [x, y], dragging }) => {
       if (dragging) {
@@ -47,7 +49,7 @@ const Map = () => {
       target: targetRef,
       rubberband: true,
       filterTaps: true,
-      bounds: { top: -100, bottom: 100, left: -100, right: 100 },
+      bounds: { top: -100, bottom: 100, left: -500, right: 100 },
       from: () => {
         console.log(centerOffset.get());
         return [centerOffset.get()[0], centerOffset.get()[1]];
@@ -55,8 +57,8 @@ const Map = () => {
     },
   );
   return (
-    <div className="flex h-screen flex-col overflow-auto bg-gray-200">
-      <animated.div className="cool-font inline-block p-4">
+    <div className="flex h-screen w-full flex-col overflow-auto bg-sky-700">
+      <animated.div className="cool-font">
         <animated.div
           ref={targetRef}
           style={{
@@ -68,31 +70,13 @@ const Map = () => {
             }),
             transformOrigin: "center",
           }}
-          className="container h-[680px] w-[800px]"
+          className="h-[680px] w-[800px] shadow-sm"
         >
-          <Floater selectedMap={selectedMap} />
-          {maps.map((m) => (
-            <MapPlace key={m.map} {...m} />
-          ))}
+          <Floater />
+          <HoennMap />
         </animated.div>
       </animated.div>
-      <nav className="fixed bottom-0 left-0 right-0 z-10 h-1/3 overflow-scroll rounded-lg border-4 border-blue-600 bg-amber-600 bg-gray-300 p-2">
-        <div className="flex justify-between text-white">
-          <h1 className="cool-font font-bold text-neutral-800">
-            {selectedMap}
-          </h1>
-        </div>
-        <div className="cool-font flex flex-col">
-          <div className="bg-blue-600 px-2 text-white">Water</div>
-          <div className="flex flex-row bg-amber-100">
-            <EncounterZone zone="water" />
-          </div>
-          <div className="bg-brown-600 px-2 text-neutral-800">Land</div>
-          <div className="flex w-full flex-row flex-wrap">
-            <EncounterZone zone="land" />
-          </div>
-        </div>
-      </nav>
+      <Dexnav />
     </div>
   );
 };

@@ -1,39 +1,42 @@
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
+.image {
+  background-image: url("hoenn.jpg");
+  background-position: "top left";
 }
 .floater {
   position: absolute;
   touch-action: none;
 }
 .cool-font {
-  font-family: 'Calamity';
+  font-family: "Calamity";
 }
 .lil-font {
-  font-family: 'NeueBit'
+  font-family: "Inter";
+}
+.fot {
+  font-family: "FOT-Rodin Pro";
 }
 .water {
-  background-color: var(--color-blue-500);
+  fill: var(--color-blue-500);
   border: 1px solid var(--color-sky-500);
 }
 
 .town {
-  background-color: var(--color-red-400);
+  fill: var(--color-sky-400);
+  opacity: 50%;
   border-radius: 50px;
 }
 
 .city {
   background-color: var(--color-red-600);
   border-radius: 35px;
+  opacity: 90%;
+  fill: var(--color-red-600);
 }
 
 .route {
   border: 1px solid var(--color-emerald-400);
-
-  background-color: var(--color-green-600);
+  opacity: 20%;
+  fill: var(--color-green-600);
 }
 
 .land {
@@ -42,9 +45,21 @@
 
 .dungeon {
   content: "⭐️";
+  fill: var(--color--emerald-200);
+  opacity: 40%;
   border: 1px solid var(--color-green-800);
 }
-
+.water-zone {
+  background-image: url("eidex/slice2.png");
+  background-size: 38px;
+  background-repeat: repeat;
+}
+.land-zone {
+  background-image: linear-gradient(
+    var(--color-emerald-600),
+    var(--color-green-800)
+  );
+}
 .small-location {
   width: 50%;
   height: 50%;

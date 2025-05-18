@@ -68,14 +68,14 @@ input[type="number"] {
     image-rendering: pixelated;
   }
   .pokemon-icon-sprite {
-    width: 48px;
+    width: 40px;
     position: absolute;
     image-rendering: pixelated;
     animation: pokemon-icon-animation 0.5s steps(2) infinite;
   }
   .icon-sprite-box {
-    width: 48px;
-    height:48px;
+    width: 40px;
+    height:40px;
     overflow: hidden;
     position: relative;
   }

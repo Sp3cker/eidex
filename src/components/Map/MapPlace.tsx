@@ -1,40 +1,89 @@
 import useMapStore from "@/stores/useMapStore";
-import { forwardRef, Ref, useCallback } from "react";
+import {
+  FullGestureState,
+  SharedGestureState,
+  useGesture,
+} from "@use-gesture/react";
+import { useCallback } from "react";
 
 interface MapPlaceProps {
-  mapName: string;
-  type: string;
+  item: Record<string, any>;
+  // map: string; //name of map "MAP_ROUTE111"
+  // type: string;
 }
-const MapPlace = forwardRef<HTMLDivElement, MapPlaceProps>(function MapPlace(
-  { mapName, type }: MapPlaceProps,
-  ref: Ref<HTMLDivElement>,
-) {
+const MapPlace = ({ item, ...rest }: MapPlaceProps) => {
   const setSelectedCoordinates = useMapStore(
     (state) => state.setSelectedCoordinates,
   );
   const mapScale = useMapStore((state) => state.mapScale);
   const setSelectedMap = useMapStore((state) => state.setSelectedMap);
-  const handleClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    if (e && e.currentTarget && e.currentTarget.parentElement) {
-      const childRect = e.currentTarget.getBoundingClientRect();
-      const parentRect = e.currentTarget.parentElement.getBoundingClientRect();
+  const selectedMap = useMapStore((state) => state.selectedMap);
+  const setHoveredMap = useMapStore((state) => state.setHoveredMap);
+  const handleHover = useCallback(
+    (
+      state: Omit<FullGestureState<"hover">, "event"> & {
+        event: PointerEvent;
+      },
+    ) => {
+      const { hovering } = state;
+      if (hovering) {
+        const e = state.event as unknown as React.PointerEvent;
 
-      setSelectedCoordinates([
-        (childRect.x - parentRect.x) * mapScale,
-        (childRect.y - parentRect.y) * mapScale,
-      ]);
-      setSelectedMap(mapName);
-    }
-  }, []);
-
-  return (
-    <div
-      ref={ref}
-      onClick={(e: React.MouseEvent<HTMLDivElement>) => handleClick(e)}
-      title={mapName}
-      className={`touch-none ${mapName} ${type}`}
-    ></div>
+        //@ts-ignore
+        const childRect = e.currentTarget.getBoundingClientRect();
+        setSelectedCoordinates([
+          childRect.x * mapScale,
+          childRect.y * mapScale,
+        ]);
+        setHoveredMap(item.id);
+      }
+    },
+    [item.id, mapScale],
   );
-});
+  const handleClick = () => {
+    setSelectedMap(item.id);
+  };
+  const bind = useGesture(
+    {
+      onHover: (state) => handleHover(state),
+      onMouseDown: () => handleClick(),
+    },
+    { hover: {} },
+  );
+  return (
+    <g
+      key={item.id}
+      id={item.id}
+      transform={item.transform}
+          className={`${selectedMap === item.id ? "fill-neutral-800" : 'fill-yellow-900/10 hover:fill-yellow-300/50'} border-yellow  transition-all `}
+      {...bind()}
+    >
+      {item.type === "rect" && (
+        <rect
+          x={item.x}
+          y={item.y}
+          width={item.width}
+          height={item.height}
+          className={`${selectedMap === item.id ? "fill-amber-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow  transition-all `}
+
+          // style={item.style}
+        />
+      )}
+      {item.type === "path" && <path d={item.d} style={item.style} />}
+      {item.type === "circle" && (
+        <circle cx={item.cx} cy={item.cy} r={item.r} style={item.style} />
+      )}
+      {item.type === "use" && (
+        <use
+          xlinkHref={item.xlinkHref}
+          x={item.x}
+          y={item.y}
+          width={item.width}
+          height={item.height}
+        />
+      )}
+    </g>
+  );
+};
 
 export default MapPlace;

@@ -1,4 +1,4 @@
-import useMapStore from "@/stores/useMapStore";
+import { useMapStore, formatMapString } from "@/stores/useMapStore";
 import React from "react";
 function formatString(str: string) {
   return str.replace(/_/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
@@ -13,15 +13,30 @@ const EncounterZone = React.memo(function EncounterZone({
     if (zone === "land") return state.selectedMapLandMons;
     if (zone === "fishing") return state.selectedMapFishingMons;
   });
-  if (encounter) {
-    return encounter.map((mon, index) => (
-      <div key={`${mon}${index}`} className="icon-sprite-box -mt-1">
-        <img
-          className="pokemon-icon-sprite"
-          src={`icon/${mon.index}/icon.webp`}
-        />
-      </div>
-    ));
-  }
+  return (
+    <div className={`flex  flex-wrap`}>
+      {encounter &&
+        encounter.map((mon, index) => (
+          <div
+            key={`${mon}${index}`}
+            className="flex flex-col content-center items-center px-1"
+          >
+            <p className="-mb-1 text-center text-xs text-neutral-100 shadow-md">
+              {formatMapString(mon.species)}
+            </p>
+            <div className="icon-sprite-box -mt-2">
+              <img
+                className="pokemon-icon-sprite"
+                style={{
+                  filter: "drop-shadow(1px 0px 3px #2b2b2b50)",
+                }}
+                src={`eidex/icon/${mon.index}/icon.png`}
+              />
+            </div>
+            <p className="float text-start text-xs text-neutral-100">{mon.rate}%</p>
+          </div>
+        ))}
+    </div>
+  );
 });
 export default EncounterZone;

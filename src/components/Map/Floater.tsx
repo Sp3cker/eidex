@@ -1,9 +1,13 @@
-import useMapStore from "@/stores/useMapStore";
-import { useLayoutEffect } from "react";
+import { useMapStore, formatMapString } from "@/stores/useMapStore";
+import { memo, useLayoutEffect, useRef } from "react";
 import { animated, to, useSpring } from "@react-spring/web";
+import useMousePosition from "@/hooks/useMousePosition";
 
-const Floater = ({ selectedMap }: { selectedMap: string }) => {
+const Floater = memo(function Floater() {
   const selectedCoordinates = useMapStore((state) => state.selectedCoordinates);
+  const mousePosition = useMousePosition();
+  const hoveredMap = useMapStore((state) => state.hoveredMap);
+  const ref = useRef<HTMLDivElement>(null);
   //   const mapScale = useMapStore((state) => state.mapScale);
   const [{ pos }, api] = useSpring(
     () => ({
@@ -15,12 +19,13 @@ const Floater = ({ selectedMap }: { selectedMap: string }) => {
   useLayoutEffect(() => {
     if (selectedCoordinates[0]) {
       const mapScale = useMapStore.getState().mapScale;
+      const mapOffset = useMapStore.getState().mapOffset;
+      const floaterSize = ref?.current?.clientHeight || 0; // Moves floater up so you can click thru it.
 
-      const x = selectedCoordinates[0] / mapScale;
-      const xx = selectedCoordinates[0];
-      const y = selectedCoordinates[1] / mapScale;
-      const yy = selectedCoordinates[1];
-      console.log(`${xx}, ${yy}, but ${x}, ${y} scale ${mapScale}`);
+      const x = selectedCoordinates[0] - mapOffset[0];
+      // const xx = selectedCoordinates[0];
+      const y = selectedCoordinates[1] - mapOffset[1] - floaterSize;
+      const { x: mouseX, y: mouseY } = mousePosition;
       api.start({
         pos: [x, y],
       });
@@ -28,17 +33,19 @@ const Floater = ({ selectedMap }: { selectedMap: string }) => {
   }, [selectedCoordinates]);
   return (
     <animated.div
+      ref={ref}
       style={{
-        transformOrigin: "center",
+        touchAction: "none",
+        transformOrigin: " left",
         transform: to([pos], ([x, y]) => {
           return `translate3d(${x}px, ${y}px, 0)`;
         }),
       }}
-      className="floater rounded-sm bg-gray-300 p-1 text-sm font-bold md:h-[8vh] md:w-[8vw]"
+      className="floater rounded-sm bg-gray-300 p-1 text-sm font-bold opacity-75 md:h-[8vh]"
     >
-      {selectedMap}
+      {formatMapString(hoveredMap || "")}
     </animated.div>
   );
-};
+});
 
 export default Floater;
