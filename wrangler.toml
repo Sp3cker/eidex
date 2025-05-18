@@ -1,5 +1,5 @@
 name = "vite-worker-app"
-main = "./dist/worker.js"
+
 compatibility_date = "2025-05-18"
 
 [site]
