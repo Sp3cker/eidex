@@ -5,7 +5,7 @@ import App from "./App";
 const AppRouter = () => {
   return (
     <div className="flex min-h-screen justify-center bg-zinc-800">
-      <Router base="/eidex">
+      <Router base={import.meta.env.BASE_PATH || "/eidex"}>  
         <Switch>
           <Route path="/" component={Map} />
         </Switch>
