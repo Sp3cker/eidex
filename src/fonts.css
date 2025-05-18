@@ -30,12 +30,30 @@
 @font-face {
   font-family: "Calamity";
   src: url("./fonts/calamity/Calamity-Regular.woff2") format("woff2");
-  font-weight: normal;
+ font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Calamity";
   src: url("./fonts/calamity/Calamity-Bold.woff2") format("woff2");
   font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Calamity";
+  src: url("./fonts/calamity/Calamity-Bold.otf") format("OpenType");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Calamity";
+  src: url("./fonts/calamity/Calamity-Regular.otf") format("OpenType");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 @theme {
   --font-pixel: "Pixel Operator", sans-serif;
