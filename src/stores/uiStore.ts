@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { Pokemon } from "@/types";
 import { persist } from "zustand/middleware";
+import pokemons from "@/data/speciesData.json";
 
 interface UIState {
   isShiny: boolean;
@@ -9,6 +10,7 @@ interface UIState {
   isModalOpen: boolean;
   toggleShiny: () => void;
   setSelectedPokemon: (pokemon: Pokemon | null) => void;
+  setSelectedPokemonByIndex: (index: number) => void;
   openModal: (pokemon: Pokemon) => void;
   closeModal: () => void;
 }
@@ -24,6 +26,12 @@ export const useUIStore = create<UIState>()(
       //Actions
       toggleShiny: () => set((state) => ({ isShiny: !state.isShiny })),
       setSelectedPokemon: (pokemon) => set({ selectedPokemon: pokemon }),
+      setSelectedPokemonByIndex: (index: number) => {
+        const pokemon = pokemons.find((p) => p.index === index);
+        if (pokemon) {
+          set({ selectedPokemon: pokemon });
+        }
+      },
       openModal: (pokemon) =>
         set({ selectedPokemon: pokemon, isModalOpen: true }),
       closeModal: () => set({ isModalOpen: false, selectedPokemon: null }),

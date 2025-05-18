@@ -73,7 +73,7 @@ const Map = () => {
   return (
     <div
       ref={targetRef}
-      className="flex h-screen w-full touch-none flex-col overflow-auto bg-sky-700"
+      className="flex font-calamity h-screen w-full touch-none flex-col overflow-auto bg-sky-700"
     >
       <animated.div
         ref={targetRef}
