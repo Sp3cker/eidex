@@ -14,10 +14,9 @@ type PokemonCardProps = {
 
 const adjustedBgCache: Record<number, string> = {};
 
-export const PokemonCard = React.memo(({ pokemon }: PokemonCardProps) => {
+export const PokemonCard = React.memo(function Card({ pokemon }: PokemonCardProps) {
   // Get UI State from store
   const openModal = useUIStore((state) => state.openModal);
-  const isShiny = useUIStore((state) => state.isShiny);
   const screenWidth = useScreenWidth();
 
   const { dexId, nameKey, types, stats, abilities } = pokemon;
@@ -63,7 +62,7 @@ export const PokemonCard = React.memo(({ pokemon }: PokemonCardProps) => {
         <div className="flex justify-between bg-neutral-900/20 py-1 pl-2">
           <div className="flex items-center gap-1">
             {/* Sprite and name  */}
-            <SpriteImage pokemon={pokemon}/>
+            <SpriteImage pokemon={pokemon} />
             <div className="text-md font-bold">{nameKey}</div>
 
             {/* Types */}

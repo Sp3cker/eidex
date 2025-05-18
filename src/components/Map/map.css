@@ -12,9 +12,7 @@
 .lil-font {
   font-family: "Inter";
 }
-.fot {
-  font-family: "FOT-Rodin Pro";
-}
+
 .water {
   fill: var(--color-blue-500);
   border: 1px solid var(--color-sky-500);

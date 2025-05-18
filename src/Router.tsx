@@ -1,4 +1,4 @@
-import App from "./App";
+
 import Map from "./components/Map/Map";
 import { Route, Router, Switch } from "wouter";
 const AppRouter = () => {

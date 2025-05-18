@@ -1,8 +1,6 @@
 import { useMapStore, formatMapString } from "@/stores/useMapStore";
 import React from "react";
-function formatString(str: string) {
-  return str.replace(/_/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
-}
+
 const EncounterZone = React.memo(function EncounterZone({
   zone,
 }: {
@@ -30,7 +28,7 @@ const EncounterZone = React.memo(function EncounterZone({
                 style={{
                   filter: "drop-shadow(1px 0px 3px #2b2b2b50)",
                 }}
-                src={`eidex/icon/${mon.index}/icon.png`}
+                src={`icon/${mon.index}/icon.png`}
               />
             </div>
             <p className="float text-start text-xs text-neutral-100">{mon.rate}%</p>

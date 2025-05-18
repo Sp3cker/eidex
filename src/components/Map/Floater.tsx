@@ -7,8 +7,8 @@ const Floater = memo(function Floater() {
   const selectedCoordinates = useMapStore((state) => state.selectedCoordinates);
   const mousePosition = useMousePosition();
   const hoveredMap = useMapStore((state) => state.hoveredMap);
+  const selectedMap = useMapStore((state) => state.selectedMap);
   const ref = useRef<HTMLDivElement>(null);
-  //   const mapScale = useMapStore((state) => state.mapScale);
   const [{ pos }, api] = useSpring(
     () => ({
       pos: [0, 0],
@@ -25,12 +25,13 @@ const Floater = memo(function Floater() {
       const x = selectedCoordinates[0] - mapOffset[0];
       // const xx = selectedCoordinates[0];
       const y = selectedCoordinates[1] - mapOffset[1] - floaterSize;
-      const { x: mouseX, y: mouseY } = mousePosition;
+      // const { x: mouseX, y: mouseY } = mousePosition;
+
       api.start({
-        pos: [x, y],
+        pos: [x + (x * mapScale - x), y + (y * mapScale - y)],
       });
     }
-  }, [selectedCoordinates]);
+  }, [selectedCoordinates, mousePosition, api]);
   return (
     <animated.div
       ref={ref}
@@ -38,12 +39,12 @@ const Floater = memo(function Floater() {
         touchAction: "none",
         transformOrigin: " left",
         transform: to([pos], ([x, y]) => {
-          return `translate3d(${x}px, ${y}px, 0)`;
+          return `translate3d(${x}px, ${y}px, 0px)`;
         }),
       }}
       className="floater rounded-sm bg-gray-300 p-1 text-sm font-bold opacity-75 md:h-[8vh]"
     >
-      {formatMapString(hoveredMap || "")}
+      {formatMapString(hoveredMap || selectedMap || "")}
     </animated.div>
   );
 });

@@ -27,10 +27,21 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Calamity";
+  src: url("./fonts/calamity/Calamity-Regular.woff2") format("woff2");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Calamity";
+  src: url("./fonts/calamity/Calamity-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
 @theme {
   --font-pixel: "Pixel Operator", sans-serif;
   --font-pkmnem: "Emerald", sans-serif;
   --font-pkmnem-short: "Emerald-Short", sans-serif;
+  --font-calamity: "Calamity", sans-serif;
 }
 
 @layer components {

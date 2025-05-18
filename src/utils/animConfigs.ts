@@ -59,7 +59,7 @@ const animConfigs = (id: number): [AnimFrames, AnimationConfig | undefined] => {
   const anim = pkmn.animation || "ANIM_H_VIBRATE";
 
   const { animationType } = AnimMaps[anim];
-  console.log(animationType);
+
   const weight = pkmn.weight || 30;
 
   const toReturn = [
@@ -71,7 +71,7 @@ const animConfigs = (id: number): [AnimFrames, AnimationConfig | undefined] => {
 };
 const useAnimConfig = (index: number, frame: number): [AnimFrames, any] => {
   const [animeFrames, animConfig] = useMemo(() => animConfigs(index), [index]);
-  console.log(animConfig);
+
   const [springProps] = useSpring(
     () =>
       animConfig && {

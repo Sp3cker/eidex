@@ -1,33 +1,42 @@
 import useMapStore from "@/stores/useMapStore";
 import "./map.css";
-import { useSpring, animated, config, to } from "@react-spring/web";
-import { useDrag } from "@use-gesture/react";
+import { useSpring, animated, to } from "@react-spring/web";
+import { useDrag, usePinch } from "@use-gesture/react";
 import { useRef } from "react";
 import Floater from "./Floater";
-import HoennMap from "./FUCK.tsx";
-import Dexnav from "./Dexnax.tsx";
+import HoennMap from "./HoennMap";
+import Dexnav from "./Dexnax";
+document.addEventListener("gesturestart", (e) => e.preventDefault());
+document.addEventListener("gesturechange", (e) => e.preventDefault());
 const Map = () => {
   const setMapOffset = useMapStore((state) => state.setMapOffset);
-  console.log("render");
+  const mapRef = useRef<HTMLDivElement>(null);
+  // const { zoomingState } = usePinchZoom(mapRef);
+
   const [{ scale, centerOffset }, api] = useSpring(
     () => ({
       scale: 1,
       centerOffset: [0, 0],
-      config: { precision: 0.1, ...config.slow },
+      config: { mass: 5, tension: 2000, friction: 200 },
       onRest: () => {
         setMapOffset(centerOffset.toJSON());
       },
     }),
     [],
   );
+
   const targetRef = useRef<HTMLDivElement>(null);
   // Pinch-to-zoom
-  // usePinch(
-  //   ({ offset: [s] }) => {
-  //     api.start({ scale: Math.min(Math.max(s, 0.5), 1.5) }); // Limit: 0.5x to 3x
-  //   },
-  //   { target: targetRef, scaleBounds: { min: 0.5, max: 1.5 } },
-  // );
+  usePinch(
+    ({ offset: [s] }) => {
+
+      api.set({ scale: Math.min(Math.max(s, 0.5), 1.5) }); // Limit: 0.5x to 3x
+    },
+    {
+      target: mapRef,
+      scaleBounds: { min: 0.5, max: 1.5 },
+    },
+  );
   // useWheel(
   //   ({ movement: [, y] }) => {
   //     const calcY = Math.abs(Math.min(Math.max(y, 0.75), 2));
@@ -49,24 +58,35 @@ const Map = () => {
       target: targetRef,
       rubberband: true,
       filterTaps: true,
-      bounds: { top: -100, bottom: 100, left: -500, right: 100 },
+      bounds: {
+        top: -200 ^ scale.toJSON(),
+        bottom: 200 ^ scale.toJSON(),
+        left: -500 ^ scale.toJSON(),
+        right: 100 ^ scale.toJSON(),
+      },
       from: () => {
-        console.log(centerOffset.get());
+        // console.log(centerOffset.get());
         return [centerOffset.get()[0], centerOffset.get()[1]];
       },
     },
   );
   return (
-    <div className="flex h-screen w-full flex-col overflow-auto bg-sky-700">
-      <animated.div className="cool-font">
+    <div
+      ref={targetRef}
+      className="flex h-screen w-full touch-none flex-col overflow-auto bg-sky-700"
+    >
+      <animated.div
+        ref={targetRef}
+        style={{ scale: scale }}
+        className="cool-font"
+      >
         <animated.div
-          ref={targetRef}
           style={{
             touchAction: "none",
             cursor: "move",
             //@ts-ignore
             transform: to([centerOffset, scale], ([x, y], z) => {
-              return `translate3d(${x}px,${y}px, ${x * y * 1000}px) scale(${z})`;
+              return `translate3d(${x}px,${y}px, ${x}px)`;
             }),
             transformOrigin: "center",
           }}

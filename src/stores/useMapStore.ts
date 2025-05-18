@@ -81,7 +81,7 @@ export function formatMapString(mapNameFromJson: string) {
       // .toLowerCase() // Convert to lowercase
       .replace(
         /([A-Z]+)_?/g,
-        (match, p1) =>
+        (_, p1) =>
           p1.charAt(0).toUpperCase() + p1.slice(1).toLowerCase() + " ",
       )
       .trim()

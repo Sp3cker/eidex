@@ -1,9 +1,5 @@
 import useMapStore from "@/stores/useMapStore";
-import {
-  FullGestureState,
-  SharedGestureState,
-  useGesture,
-} from "@use-gesture/react";
+import { FullGestureState, SharedGestureState, useGesture } from "@use-gesture/react";
 import { useCallback } from "react";
 
 interface MapPlaceProps {
@@ -11,7 +7,7 @@ interface MapPlaceProps {
   // map: string; //name of map "MAP_ROUTE111"
   // type: string;
 }
-const MapPlace = ({ item, ...rest }: MapPlaceProps) => {
+const MapPlace = ({ item }: MapPlaceProps) => {
   const setSelectedCoordinates = useMapStore(
     (state) => state.setSelectedCoordinates,
   );
@@ -40,13 +36,17 @@ const MapPlace = ({ item, ...rest }: MapPlaceProps) => {
     },
     [item.id, mapScale],
   );
-  const handleClick = () => {
+  const handleClick = (state?: SharedGestureState) => {
     setSelectedMap(item.id);
+    if (state) { // State isn't passed on desktop.
+      handleHover(state as any);
+    }
   };
   const bind = useGesture(
     {
       onHover: (state) => handleHover(state),
       onMouseDown: () => handleClick(),
+      onTouchStart: (state) => handleClick(state),
     },
     { hover: {} },
   );
@@ -55,7 +55,7 @@ const MapPlace = ({ item, ...rest }: MapPlaceProps) => {
       key={item.id}
       id={item.id}
       transform={item.transform}
-          className={`${selectedMap === item.id ? "fill-neutral-800" : 'fill-yellow-900/10 hover:fill-yellow-300/50'} border-yellow  transition-all `}
+      className={`${selectedMap === item.id ? "fill-neutral-800" : "touch-none fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-all`}
       {...bind()}
     >
       {item.type === "rect" && (
@@ -64,7 +64,7 @@ const MapPlace = ({ item, ...rest }: MapPlaceProps) => {
           y={item.y}
           width={item.width}
           height={item.height}
-          className={`${selectedMap === item.id ? "fill-amber-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow  transition-all `}
+          className={`${selectedMap === item.id ? "fill-amber-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-all`}
 
           // style={item.style}
         />
