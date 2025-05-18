@@ -1,0 +1,31 @@
+import { Link } from "wouter";
+
+const Header = () => (
+  <div className="flex items-center justify-between px-1 py-1">
+    <img
+      src="/public/Pokemans_395-1200px.webp"
+      alt="Imperium Pokedex"
+      className="h-9"
+    />
+    <div>
+      <Link to="/dex">
+        <button className="pkmnem-face-shadow bg-fieldset font-pkmnem hover:bg-fieldset/80 rounded-sm px-5 text-lg text-gray-200">
+          Dex
+        </button>
+      </Link>
+
+      <Link to="/">
+        <button className="pkmnem-face-shadow bg-fieldset font-pkmnem hover:bg-fieldset/80 rounded-sm px-5 text-lg text-gray-200">
+          Map
+        </button>
+      </Link>
+    </div>
+    {/* <button
+        className={`${currBreakpoint === "md" ? "hidden" : ""} pkmnem-face-shadow bg-fieldset font-pkmnem hover:bg-fieldset/80 float-right rounded-sm px-5 text-lg text-gray-200`}
+        onClick={() => toggleOpen(!currOpen)}
+      >
+        ✨ Filters */}
+    {/* </button> */}
+  </div>
+);
+export default Header;

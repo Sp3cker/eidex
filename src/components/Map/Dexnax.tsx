@@ -5,7 +5,7 @@ import { useMapStore, formatMapString } from "@/stores/useMapStore";
 const Dexnav = memo(function Dexnav() {
   const selectedMap = useMapStore((state) => state.selectedMap);
   return (
-    <nav className="fixed bottom-0 left-10 right-10 h-2/5 overflow-scroll rounded-sm bg-neutral-700 p-2 shadow-lg">
+    <nav className="fixed bottom-5 left-10 right-10 h-2/5 overflow-scroll rounded-sm bg-neutral-700 p-2 shadow-lg">
       <div className="flex justify-between text-white">
         <h1 className="cool-font text-white-500 font-bold">
           {formatMapString(selectedMap || "")}
