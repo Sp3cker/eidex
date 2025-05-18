@@ -1,5 +1,9 @@
 import useMapStore from "@/stores/useMapStore";
-import { FullGestureState, SharedGestureState, useGesture } from "@use-gesture/react";
+import {
+  FullGestureState,
+  SharedGestureState,
+  useGesture,
+} from "@use-gesture/react";
 import { useCallback } from "react";
 
 interface MapPlaceProps {
@@ -27,10 +31,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
 
         //@ts-ignore
         const childRect = e.currentTarget.getBoundingClientRect();
-        setSelectedCoordinates([
-          childRect.x * mapScale,
-          childRect.y * mapScale,
-        ]);
+        setSelectedCoordinates([childRect.x, childRect.y]);
         setHoveredMap(item.id);
       }
     },
@@ -38,7 +39,8 @@ const MapPlace = ({ item }: MapPlaceProps) => {
   );
   const handleClick = (state?: SharedGestureState) => {
     setSelectedMap(item.id);
-    if (state) { // State isn't passed on desktop.
+    if (state) {
+      // State isn't passed on desktop.
       handleHover(state as any);
     }
   };

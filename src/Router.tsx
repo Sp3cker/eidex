@@ -6,7 +6,7 @@ import Header from "./components/ui/Header";
 import Footer from "./components/ui/Footer";
 const AppRouter = () => {
   return (
-    <>
+    <div className="flex flex-col ">
       <Header />
       <div className="flex min-h-screen justify-center bg-zinc-800">
         <Router base={import.meta.env.BASE_PATH || "/"}>
@@ -19,8 +19,8 @@ const AppRouter = () => {
         </Router>
         <PokemonModal />
       </div>
-      <Footer/>
-    </>
+      <Footer />
+    </div>
   );
 };
 

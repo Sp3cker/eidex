@@ -11,6 +11,7 @@ const EncounterZone = React.memo(function EncounterZone({
   const setSelectedPokemon = useUIStore(
     (state) => state.setSelectedPokemonByIndex,
   );
+
   const encounter = useMapStore((state) => {
     if (zone === "water") return state.selectedMapWaterMons;
     if (zone === "land") return state.selectedMapLandMons;
@@ -30,7 +31,7 @@ const EncounterZone = React.memo(function EncounterZone({
             <p className="-mb-1 text-center text-xs text-neutral-100 shadow-md">
               {formatMapString(mon.species)}
             </p>
-            <div className="icon-sprite-box -mt-2">
+            <div className="icon-sprite-box -mt-0">
               <img
                 className="pokemon-icon-sprite"
                 style={{
@@ -39,7 +40,7 @@ const EncounterZone = React.memo(function EncounterZone({
                 src={`icon/${mon.index}/icon.webp`}
               />
             </div>
-            <p className="float text-start text-xs text-neutral-100">
+            <p className="float text-start text-[8px] mb-1 text-neutral-100">
               {mon.rate}%
             </p>
           </div>

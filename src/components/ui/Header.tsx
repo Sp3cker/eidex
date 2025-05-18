@@ -9,13 +9,13 @@ const Header = () => (
     />
     <div>
       <Link to="/dex">
-        <button className="pkmnem-face-shadow bg-fieldset font-pkmnem hover:bg-fieldset/80 rounded-sm px-5 text-lg text-gray-200">
+        <button className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 rounded-sm px-5 py-1 text-sm text-gray-200">
           Dex
         </button>
       </Link>
 
       <Link to="/">
-        <button className="pkmnem-face-shadow bg-fieldset font-pkmnem hover:bg-fieldset/80 rounded-sm px-5 text-lg text-gray-200">
+        <button className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 rounded-sm px-5 py-1 text-sm text-gray-200">
           Map
         </button>
       </Link>

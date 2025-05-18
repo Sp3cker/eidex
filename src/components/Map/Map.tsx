@@ -34,7 +34,7 @@ const Map = () => {
     },
     {
       target: mapRef,
-      scaleBounds: { min: 0.5, max: 1.5 },
+      scaleBounds: { min: 0.75, max: 1.5 },
     },
   );
   // useWheel(
@@ -76,7 +76,7 @@ const Map = () => {
       className="flex font-calamity h-screen w-full touch-none flex-col overflow-auto bg-sky-700"
     >
       <animated.div
-        ref={targetRef}
+        ref={mapRef}
         style={{ scale: scale }}
         className="cool-font"
       >
@@ -85,7 +85,7 @@ const Map = () => {
             touchAction: "none",
             cursor: "move",
             //@ts-ignore
-            transform: to([centerOffset, scale], ([x, y], z) => {
+            transform: to([centerOffset], ([x, y]) => {
               return `translate3d(${x}px,${y}px, ${x}px)`;
             }),
             transformOrigin: "center",
