@@ -6,10 +6,12 @@ import { useRef } from "react";
 import Floater from "./Floater";
 import HoennMap from "./HoennMap";
 import Dexnav from "./Dexnax";
+import MapPlaceInfo from "./MapPlaceInfo";
 document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
 const Map = () => {
   const setMapOffset = useMapStore((state) => state.setMapOffset);
+
   const mapRef = useRef<HTMLDivElement>(null);
   // const { zoomingState } = usePinchZoom(mapRef);
 
@@ -29,7 +31,6 @@ const Map = () => {
   // Pinch-to-zoom
   usePinch(
     ({ offset: [s] }) => {
-
       api.set({ scale: Math.min(Math.max(s, 0.5), 1.5) }); // Limit: 0.5x to 3x
     },
     {
@@ -73,13 +74,11 @@ const Map = () => {
   return (
     <div
       ref={targetRef}
-      className="flex font-calamity h-screen w-full touch-none flex-col overflow-auto bg-sky-700"
+      className="font-calamity flex h-screen w-full touch-none flex-col overflow-auto bg-sky-700"
     >
-      <animated.div
-        ref={mapRef}
-        style={{ scale: scale }}
-        className="cool-font"
-      >
+      {/* <MapPlaceInfo /> */}
+
+      <animated.div ref={mapRef} style={{ scale: scale }} className="cool-font">
         <animated.div
           style={{
             touchAction: "none",

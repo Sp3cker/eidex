@@ -28,6 +28,7 @@ type MapStore = {
   mapScale: number;
   mapOffset: number[];
   hoveredMap: string | null;
+  dexNavIsOpen: boolean;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
   setSelectedPokemon: (name_no_prefix: string) => void;
@@ -35,6 +36,7 @@ type MapStore = {
   setMapScale: (n: number) => void;
   setMapOffset: (offset: number[]) => void;
   setHoveredMap: (map: string) => void;
+  setDexnavIsOpen: (isOpen: boolean) => void;
 };
 const UnderscoreRegex = new RegExp(/^[^_]*_/);
 
@@ -81,14 +83,12 @@ export function formatMapString(mapNameFromJson: string) {
       // .toLowerCase() // Convert to lowercase
       .replace(
         /([A-Z]+)_?/g,
-        (_, p1) =>
-          p1.charAt(0).toUpperCase() + p1.slice(1).toLowerCase() + " ",
+        (_, p1) => p1.charAt(0).toUpperCase() + p1.slice(1).toLowerCase() + " ",
       )
       .trim()
       .replace(/(^|_)([a-z])/g, (_: any, __: any, letter: string) =>
         letter.toUpperCase(),
       ) // Capitalize first letter and after underscores
-
   );
 }
 export const useMapStore = create<MapStore>((set) => ({
@@ -101,8 +101,13 @@ export const useMapStore = create<MapStore>((set) => ({
   mapScale: 1,
   mapOffset: [0, 0],
   hoveredMap: null,
+  dexNavIsOpen: false,
   deselectMap: () => set({ selectedMap: null }),
   setSelectedMap: (map: string) => {
+    if (map === null) {
+      set({ selectedMap: null });
+      return;
+    }
     const targetMapArr = getMap(map);
     if (targetMapArr.length === 0) {
       console.error("Error selecting map %s", map);
@@ -154,6 +159,7 @@ export const useMapStore = create<MapStore>((set) => ({
   setMapScale: (n) => set({ mapScale: n }),
   setMapOffset: (offset) => set({ mapOffset: offset }),
   setHoveredMap: (map: string) => set({ hoveredMap: map }),
+  setDexnavIsOpen: (isOpen) => set({ dexNavIsOpen: isOpen }),
 }));
 
 export default useMapStore;

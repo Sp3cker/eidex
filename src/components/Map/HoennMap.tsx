@@ -1,12 +1,13 @@
 import svgData from "./svgData";
 
 import MapPlace from "./MapPlace";
+import useMapStore from "@/stores/useMapStore";
 
 const SvgMap = () => {
+  const setDexNavIsOpen = useMapStore((state) => state.setDexnavIsOpen);
   return (
     <svg
       id="mapSvg"
-    
       viewBox="0 0 6923 3695"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -20,6 +21,7 @@ const SvgMap = () => {
     >
       <g transform="matrix(5.55556,0,0,5.55556,0,0)">
         <use
+          onClick={() => setDexNavIsOpen(null)}
           xlinkHref="#_Image1"
           x={0}
           y={0}

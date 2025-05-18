@@ -19,6 +19,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
   const setSelectedMap = useMapStore((state) => state.setSelectedMap);
   const selectedMap = useMapStore((state) => state.selectedMap);
   const setHoveredMap = useMapStore((state) => state.setHoveredMap);
+  const setDexNavIsOpen = useMapStore((state) => state.setDexnavIsOpen);
   const handleHover = useCallback(
     (
       state: Omit<FullGestureState<"hover">, "event"> & {
@@ -39,6 +40,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
   );
   const handleClick = (state?: SharedGestureState) => {
     setSelectedMap(item.id);
+    setDexNavIsOpen(true);
     if (state) {
       // State isn't passed on desktop.
       handleHover(state as any);
@@ -57,7 +59,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
       key={item.id}
       id={item.id}
       transform={item.transform}
-      className={`${selectedMap === item.id ? "fill-neutral-800" : "touch-none fill-yellow-900/10 hover:fill-yellow-300/50 " } stroke-1 md:stroke-0 stroke-yellow-900 border-yellow transition-all`}
+      className={`${selectedMap === item.id ? "fill-neutral-800" : "touch-none fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
       {...bind()}
     >
       {item.type === "rect" && (
@@ -66,7 +68,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
           y={item.y}
           width={item.width}
           height={item.height}
-          className={`${selectedMap === item.id ? "fill-amber-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow  transition-all`}
+          className={`${selectedMap === item.id ? "fill-amber-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-all`}
 
           // style={item.style}
         />
