@@ -42,7 +42,7 @@ const Floater = memo(function Floater() {
           return `translate3d(${x}px, ${y}px, 0px)`;
         }),
       }}
-      className="floater rounded-sm bg-gray-300 p-1 text-sm font-bold opacity-75 md:h-[8vh]"
+      className="floater rounded-sm bg-gray-300 p-1 text-sm font-bold opacity-75 md:h-[5vh]"
     >
       {formatMapString(hoveredMap || selectedMap || "")}
     </animated.div>
