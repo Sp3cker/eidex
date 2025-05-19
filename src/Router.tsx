@@ -1,12 +1,14 @@
 import Map from "./components/Map/Map";
+import { lazy, Suspense } from "react";
 import { Route, Router, Switch } from "wouter";
 import PokemonModal from "./components/PokemonModal/PokemonModal";
-import App from "./App";
+const App = lazy(() => import("./App"));
 import Header from "./components/ui/Header";
 import Footer from "./components/ui/Footer";
+
 const AppRouter = () => {
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col">
       <Header />
       <div className="flex min-h-screen justify-center bg-zinc-800">
         <Router base={import.meta.env.BASE_PATH || "/"}>
@@ -14,7 +16,14 @@ const AppRouter = () => {
             <Route path="/" component={Map} />
           </Switch>
           <Switch>
-            <Route path="/dex" component={App} />
+            <Route
+              path="/dex"
+              component={() => (
+                <Suspense fallback={<p>Loading...</p>}>
+                  <App />
+                </Suspense>
+              )}
+            />
           </Switch>
         </Router>
         <PokemonModal />
