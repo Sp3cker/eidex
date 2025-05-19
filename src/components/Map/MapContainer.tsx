@@ -1,9 +1,9 @@
 import useMapStore from "@/stores/useMapStore";
 import { useSpring, animated, to } from "@react-spring/web";
 import { useDrag, usePinch } from "@use-gesture/react";
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect,  useRef } from "react";
 
-const MapContainer = ({ children }) => {
+const MapContainer = ({ children }: any) => {
   const setMapOffset = useMapStore((state) => state.setMapOffset);
   const selectedCoordinates = useMapStore((state) => state.selectedCoordinates);
   const mapRef = useRef<HTMLDivElement>(null);

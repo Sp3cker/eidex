@@ -1,4 +1,4 @@
-import useMapStore from "@/stores/useMapStore";
+
 import "./map.css";
 
 import HoennMap from "./HoennMap";

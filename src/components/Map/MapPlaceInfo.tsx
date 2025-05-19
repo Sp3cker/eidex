@@ -1,7 +1,7 @@
 import { animated, useSpring } from "react-spring";
 import { useMapStore, formatMapString } from "@/stores/useMapStore";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-const data = Array(17).fill("aaa");
+import { useEffect, useRef, useState } from "react";
+
 const MapPlaceInfo = () => {
   const [clientWidth, setClientWidth] = useState(window.innerWidth);
   //   const [mouseMoving, setMouseMoving] = useState(false);
@@ -12,9 +12,9 @@ const MapPlaceInfo = () => {
     {
       translateOrigin: "top left",
       //   translateX: window.innerWidth + 100,
-      translate: clientWidth ,
+      translate: clientWidth,
     },
-    [dexNavIsOpen, clientWidth],
+    [clientWidth],
   );
   useEffect(() => {
     const handleResize = () => {
@@ -28,7 +28,8 @@ const MapPlaceInfo = () => {
   }, []);
   useEffect(() => {
     if (dexNavIsOpen) {
-      api.start({ translate: clientWidth - 800 });
+      console.log(`${clientWidth} ${clientWidth - clientWidth /5}`)
+      api.start({ translate: clientWidth / 3 });
     } else {
       api.start({ translate: clientWidth });
     }
@@ -39,9 +40,9 @@ const MapPlaceInfo = () => {
       style={{
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`absolute font-calamity top-[10%] cursor-move touch-none items-center justify-center hover:opacity-80`}
+      className={`font-calamity absolute top-[10%] cursor-move touch-none items-center justify-center hover:opacity-80`}
     >
-      <div className="map-place-info-textbox rounded p-4 shadow-lg w-[130px] overflow-hidden ">
+      <div className="map-place-info-textbox w-[130px] overflow-hidden rounded p-4 shadow-lg">
         <h2 className="text-sm font-bold">
           {formatMapString(selectedMap || "")}
         </h2>

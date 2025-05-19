@@ -7,7 +7,7 @@ const Dexnav = memo(function Dexnav() {
   // const selectedMap = useMapStore((state) => state.selectedMap);
   const dexNavIsOpen = useMapStore((state) => state.dexNavIsOpen);
   const springs = useSpring({
-    from: { opacity: 0, translateY: (window.innerHeight * 2) / 5 },
+    // from: { opacity: 0, translateY: (window.innerHeight * 2) / 5 },
     opacity: dexNavIsOpen ? 1 : 0,
     translateY: dexNavIsOpen ? 0 : (window.innerHeight * 2) / 5,
     // config: { duration: 500 },
