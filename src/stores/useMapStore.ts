@@ -47,9 +47,26 @@ const putIdOnEncounter: (
   monsNameKeys: Map<string, number>,
 ) => asserts enc is EncounterMons[] = (enc, monsNameKeys) => {
   enc.forEach((specie, index) => {
-    const specieIndex = monsNameKeys.get(specie.species);
+    let specieIndex = monsNameKeys.get(specie.species);
     if (specieIndex === undefined) {
-      return;
+      // "iron_valiant" from encounters file -> iron valiant in nameKeys
+      specieIndex = monsNameKeys.get(
+        specie.species.replace("_", " ").toLowerCase(),
+      );
+      if (specieIndex === undefined) {
+        // If it gets this far, the mon in 'Encounters' doesn't specify its form so fuck it
+        const monInJson = pokemon.findIndex(
+          (p) => p.speciesName.toLowerCase() === specie.species,
+        );
+        if (monInJson === -1) {
+          console.error(
+            "Error: %s not found in encounters.json or speciesData.json",
+            specie.species,
+          );
+          return;
+        }
+        specieIndex = pokemon[monInJson].index;
+      }
     }
     return (enc[index].index = specieIndex);
   });
@@ -121,8 +138,8 @@ export const useMapStore = create<MapStore>((set) => ({
      */
     const monsNameKeys = new Map<string, number>([]);
     pokemon.forEach((p) => {
-      monsNameKeys.set(p.speciesName.toLowerCase(), p.index);
-      monsNameKeys.set(p.nameKey.replace("-", "_").toLowerCase(), p.index);
+      monsNameKeys.set(p.nameKey.toLowerCase().replace(/-/g, "_"), p.index);
+      // monsNameKeys.set(p.speciesName.replace("-", "_").toLowerCase(), p.index);
     }); //nameKey cause it probly matches encounter Data
     // targetMapArr[0].land_mons.mons.map((p) => p.species),
     let landEncounters, waterEncounters, fishingEncounters;

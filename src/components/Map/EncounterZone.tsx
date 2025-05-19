@@ -17,6 +17,7 @@ const EncounterZone = React.memo(function EncounterZone({
     if (zone === "land") return state.selectedMapLandMons;
     if (zone === "fishing") return state.selectedMapFishingMons;
   });
+
   return (
     <div className={`flex flex-wrap`}>
       {encounter &&
@@ -40,7 +41,7 @@ const EncounterZone = React.memo(function EncounterZone({
                 src={`icon/${mon.index}/icon.webp`}
               />
             </div>
-            <p className="float text-start text-[8px] mb-1 text-neutral-100">
+            <p className="float mb-1 text-start text-[8px] text-neutral-100">
               {mon.rate}%
             </p>
           </div>
