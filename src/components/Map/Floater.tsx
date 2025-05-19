@@ -19,16 +19,11 @@ const Floater = memo(function Floater() {
   useLayoutEffect(() => {
     if (selectedCoordinates[0]) {
       const mapScale = useMapStore.getState().mapScale;
-      const mapOffset = useMapStore.getState().mapOffset;
+      // const mapOffset = useMapStore.getState().mapOffset;
       const floaterSize = ref?.current?.clientHeight || 0; // Moves floater up so you can click thru it.
 
-      const x = selectedCoordinates[0] - mapOffset[0];
-      // const xx = selectedCoordinates[0];
-      const y = selectedCoordinates[1] - mapOffset[1] - floaterSize;
-      // const { x: mouseX, y: mouseY } = mousePosition;
-
       api.start({
-        pos: [x + (x * mapScale - x), y + (y * mapScale - y)],
+        pos: [selectedCoordinates[0], selectedCoordinates[1]],
       });
     }
   }, [selectedCoordinates, mousePosition, api]);

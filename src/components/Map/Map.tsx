@@ -2,7 +2,7 @@ import useMapStore from "@/stores/useMapStore";
 import "./map.css";
 import { useSpring, animated, to } from "@react-spring/web";
 import { useDrag, usePinch } from "@use-gesture/react";
-import { useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import Floater from "./Floater";
 import HoennMap from "./HoennMap";
 import Dexnav from "./Dexnax";
@@ -11,14 +11,16 @@ document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
 const Map = () => {
   const setMapOffset = useMapStore((state) => state.setMapOffset);
-
+  const selectedCoordinates = useMapStore((state) => state.selectedCoordinates);
   const mapRef = useRef<HTMLDivElement>(null);
+  const setMapScale = useMapStore((state) => state.setMapScale);
+  // const setMapScale = useMapStore((state) => state.setMapScale);
   // const { zoomingState } = usePinchZoom(mapRef);
 
   const [{ scale, centerOffset }, api] = useSpring(
     () => ({
       scale: 1,
-      centerOffset: [0, 0],
+      centerOffset: [400, 340],
       config: { mass: 5, tension: 2000, friction: 200 },
       onRest: () => {
         setMapOffset(centerOffset.toJSON());
@@ -29,9 +31,22 @@ const Map = () => {
 
   const targetRef = useRef<HTMLDivElement>(null);
   // Pinch-to-zoom
+  useLayoutEffect(() => {
+    if (selectedCoordinates && mapRef.current) {
+      const [x, y] = selectedCoordinates;
+      const centerX = window.innerWidth / 2 - x;
+      const centerY = window.innerHeight / 2 - y;
+      api.start({
+        centerOffset: [centerX, centerY],
+      });
+    }
+  }, [selectedCoordinates, api, scale]);
   usePinch(
     ({ offset: [s] }) => {
-      api.set({ scale: Math.min(Math.max(s, 0.5), 1.5) }); // Limit: 0.5x to 3x
+      const toScale = Math.min(Math.max(s, 0.5), 1.5);
+      setMapScale(toScale);
+
+      api.set({ scale: toScale }); // Limit: 0.5x to 3x
     },
     {
       target: mapRef,
@@ -76,10 +91,9 @@ const Map = () => {
       ref={targetRef}
       className="font-calamity flex h-screen w-full touch-none flex-col overflow-auto bg-sky-700"
     >
-      {/* <MapPlaceInfo /> */}
-
       <animated.div ref={mapRef} style={{ scale: scale }} className="cool-font">
         <animated.div
+          id="map"
           style={{
             touchAction: "none",
             cursor: "move",
@@ -91,11 +105,13 @@ const Map = () => {
           }}
           className="h-[680px] w-[800px] shadow-sm"
         >
-          <Floater />
+
           <HoennMap />
         </animated.div>
       </animated.div>
+
       <Dexnav />
+      <MapPlaceInfo />
     </div>
   );
 };

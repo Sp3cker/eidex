@@ -4,7 +4,7 @@ import { useMapStore, formatMapString } from "@/stores/useMapStore";
 import { useSpring, animated } from "react-spring";
 
 const Dexnav = memo(function Dexnav() {
-  const selectedMap = useMapStore((state) => state.selectedMap);
+  // const selectedMap = useMapStore((state) => state.selectedMap);
   const dexNavIsOpen = useMapStore((state) => state.dexNavIsOpen);
   const springs = useSpring({
     from: { opacity: 0, translateY: (window.innerHeight * 2) / 5 },
@@ -17,11 +17,11 @@ const Dexnav = memo(function Dexnav() {
       style={springs}
       className="fixed bottom-7 left-10 right-10 h-2/5 overflow-scroll rounded-sm bg-neutral-700 p-2 shadow-lg"
     >
-      <div className="flex justify-between text-white">
+      {/* <div className="flex justify-between text-white">
         <h1 className="cool-font text-white-500 pl-1 font-bold">
           {formatMapString(selectedMap || "")}
         </h1>
-      </div>
+      </div> */}
       <div className="cool-font flex flex-col rounded-sm">
         <div className="land-zone rounded-sm px-2">
           <p className="pkmnem-face-shadow text-neutral-100">Land</p>

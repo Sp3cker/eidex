@@ -21,7 +21,6 @@ const SvgMap = () => {
     >
       <g transform="matrix(5.55556,0,0,5.55556,0,0)">
         <use
-          onClick={() => setDexNavIsOpen(null)}
           xlinkHref="#_Image1"
           x={0}
           y={0}

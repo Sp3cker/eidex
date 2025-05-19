@@ -48,48 +48,45 @@
   border: 1px solid var(--color-green-800);
 }
 .land-zone {
-  background-image: linear-gradient(100deg,
+  background-image: linear-gradient(
+    100deg,
     var(--color-emerald-600),
     var(--color-green-800)
   );
 }
 .water-zone {
-background-image: linear-gradient(100deg,
+  background-image: linear-gradient(
+    100deg,
     var(--color-sky-600),
     var(--color-blue-800)
   );
-
 }
 .fishing-zone {
-background-image: linear-gradient(100deg,
+  background-image: linear-gradient(
+    100deg,
     var(--color-amber-500),
     var(--color-orange-600)
   );
-
 }
-.small-location {
-  width: 50%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+.map-place-info-textbox {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-neutral-50),
+    var(--color-sky-100)
+  );
 }
 
-/* Northwest */
-.MAP_ROUTE115 {
-  grid-area: 5 / 1 / 7 / 2;
-  content: attr("title");
+.selected-place {
+  animation: selected-place-animation 1s  infinite;
 }
 
-.MAP_METEOR_FALLS {
-  grid-area: 4 / 2 / 5 / 3;
-}
-
-.MAP_RUSTBORO_CITY {
-  grid-area: 8 / 1 / 9 / 2;
-}
-
-.MAP_ROUTE116 {
-  grid-area: 8 / 2 / 9 / 5;
+@keyframes selected-place-animation {
+  from {
+    /* first frame */
+    filter: brightness(100%) blur(10px);
+  }
+  to {
+    /* last frame */
+    filter: brightness(155%) blur(0px);
+  }
 }

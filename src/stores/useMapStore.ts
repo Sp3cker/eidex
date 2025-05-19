@@ -28,6 +28,7 @@ type MapStore = {
   mapScale: number;
   mapOffset: number[];
   hoveredMap: string | null;
+  hoveredCoordinates: number[];
   dexNavIsOpen: boolean;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
@@ -37,6 +38,7 @@ type MapStore = {
   setMapOffset: (offset: number[]) => void;
   setHoveredMap: (map: string) => void;
   setDexnavIsOpen: (isOpen: boolean) => void;
+  setHoveredCoordinates: (coords: number[]) => void;
 };
 const UnderscoreRegex = new RegExp(/^[^_]*_/);
 
@@ -97,10 +99,11 @@ export const useMapStore = create<MapStore>((set) => ({
   selectedMapLandMons: undefined,
   selectedMapWaterMons: undefined,
   selectedMapFishingMons: undefined,
-  selectedCoordinates: [0, 0, 0, 0],
+  selectedCoordinates: [400, 340, 0, 0],
   mapScale: 1,
   mapOffset: [0, 0],
   hoveredMap: null,
+  hoveredCoordinates: [0, 0],
   dexNavIsOpen: false,
   deselectMap: () => set({ selectedMap: null }),
   setSelectedMap: (map: string) => {
@@ -159,6 +162,8 @@ export const useMapStore = create<MapStore>((set) => ({
   setMapScale: (n) => set({ mapScale: n }),
   setMapOffset: (offset) => set({ mapOffset: offset }),
   setHoveredMap: (map: string) => set({ hoveredMap: map }),
+  setHoveredCoordinates: (coords: number[]) =>
+    set({ hoveredCoordinates: coords }),
   setDexnavIsOpen: (isOpen) => set({ dexNavIsOpen: isOpen }),
 }));
 

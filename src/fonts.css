@@ -51,7 +51,7 @@
 @font-face {
   font-family: "Calamity";
   src: url("/fonts/calamity/Calamity-Regular.otf") format("OpenType");
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }

@@ -12,6 +12,9 @@ interface MapPlaceProps {
   // type: string;
 }
 const MapPlace = ({ item }: MapPlaceProps) => {
+  const setHoveredCoordinates = useMapStore(
+    (state) => state.setHoveredCoordinates,
+  );
   const setSelectedCoordinates = useMapStore(
     (state) => state.setSelectedCoordinates,
   );
@@ -27,18 +30,32 @@ const MapPlace = ({ item }: MapPlaceProps) => {
       },
     ) => {
       const { hovering } = state;
+      const e = state.event as unknown as React.PointerEvent;
+      //@ts-ignore
+      const mapRect = document.getElementById("map").getBoundingClientRect(); // Adjust to your map's container
+      //@ts-ignore
+      const rect = e.currentTarget.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2 - mapRect.left;
+      const centerY = rect.top + rect.height / 2 - mapRect.top;
       if (hovering) {
-        const e = state.event as unknown as React.PointerEvent;
-
-        //@ts-ignore
-        const childRect = e.currentTarget.getBoundingClientRect();
-        setSelectedCoordinates([childRect.x, childRect.y]);
+        setHoveredCoordinates([centerX, centerY + 100]);
         setHoveredMap(item.id);
+        return;
       }
     },
     [item.id, mapScale],
   );
-  const handleClick = (state?: SharedGestureState) => {
+  const handleClick = (state: SharedGestureState) => {
+    //@ts-ignore
+    const element = state.event.currentTarget; // The clicked element
+    const rect = element.getBoundingClientRect();
+    const mapRect = document.getElementById("map").getBoundingClientRect(); // Adjust to your map's container
+    // const scale = useMapStore.getState().scale || 1; // Get current scale from store or component
+    const centerX = (rect.left + rect.width / 2 - mapRect.left) / mapScale;
+    const centerY = (rect.top + rect.height / 2 - mapRect.top) / mapScale;
+
+    // useMapStore.getState().setSelectedCoordinates([centerX, centerY]);
+    setSelectedCoordinates([centerX, centerY + 100]); // Adjust Y offset
     setSelectedMap(item.id);
     setDexNavIsOpen(true);
     if (state) {
@@ -49,7 +66,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
   const bind = useGesture(
     {
       onHover: (state) => handleHover(state),
-      onMouseDown: () => handleClick(),
+      onMouseDown: (state) => handleClick(state),
       onTouchStart: (state) => handleClick(state),
     },
     { hover: {} },
@@ -59,7 +76,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
       key={item.id}
       id={item.id}
       transform={item.transform}
-      className={`${selectedMap === item.id ? "fill-neutral-800" : "touch-none fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
+      className={`${selectedMap === item.id ? " selected-place ring" : "touch-none fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
       {...bind()}
     >
       {item.type === "rect" && (
@@ -68,7 +85,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
           y={item.y}
           width={item.width}
           height={item.height}
-          className={`${selectedMap === item.id ? "fill-amber-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-all`}
+          className={`${selectedMap === item.id ? "fill-yellow-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-all`}
 
           // style={item.style}
         />
