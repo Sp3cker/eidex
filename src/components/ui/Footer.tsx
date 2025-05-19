@@ -11,7 +11,7 @@ const Footer = () => {
     >
       <div className="fixed bottom-0 left-0 z-10 flex w-full select-none items-center justify-between bg-gray-800 px-1 ring">
         <div className="text-neutral-100 font-calamity pkmnem-face-shadow ">
-          <h1 className="md:text-baseline text-sm">
+          <h1 className="md:text-baseline text-xs">
             Dex by Kildemal{" – "}
             <a
               href="https://www.youtube.com/watch?v=Vhh_GeBPOhs"

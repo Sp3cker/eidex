@@ -30,13 +30,13 @@ const MapPlace = ({ item }: MapPlaceProps) => {
       },
     ) => {
       const { hovering } = state;
-      const e = state.event as unknown as React.PointerEvent;
-      //@ts-ignore
+      // const e = state.event as unknown as React.PointerEvent;
+      const element = state.event.currentTarget; // The clicked element
+      const rect = element.getBoundingClientRect();
       const mapRect = document.getElementById("map").getBoundingClientRect(); // Adjust to your map's container
-      //@ts-ignore
-      const rect = e.currentTarget.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2 - mapRect.left;
-      const centerY = rect.top + rect.height / 2 - mapRect.top;
+      // const scale = useMapStore.getState().scale || 1; // Get current scale from store or component
+      const centerX = (rect.left + rect.width / 2 - mapRect.left) / mapScale;
+      const centerY = (rect.top + rect.height / 2 - mapRect.top) / mapScale;
       if (hovering) {
         setHoveredCoordinates([centerX, centerY + 100]);
         setHoveredMap(item.id);
@@ -76,7 +76,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
       key={item.id}
       id={item.id}
       transform={item.transform}
-      className={`${selectedMap === item.id ? " selected-place ring" : "touch-none fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
+      className={`${selectedMap === item.id ? "selected-place ring" : "touch-none fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
       {...bind()}
     >
       {item.type === "rect" && (

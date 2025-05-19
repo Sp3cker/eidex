@@ -21,7 +21,7 @@ const Map = () => {
     () => ({
       scale: 1,
       centerOffset: [400, 340],
-      config: { mass: 5, tension: 2000, friction: 200 },
+      config: { mass: 5, tension: 800, friction: 200 },
       onRest: () => {
         setMapOffset(centerOffset.toJSON());
       },
@@ -34,7 +34,7 @@ const Map = () => {
   useLayoutEffect(() => {
     if (selectedCoordinates && mapRef.current) {
       const [x, y] = selectedCoordinates;
-      const centerX = window.innerWidth / 2 - x;
+      const centerX = window.innerWidth / 2 - x; // X/y is center of target locale
       const centerY = window.innerHeight / 2 - y;
       api.start({
         centerOffset: [centerX, centerY],
@@ -105,11 +105,10 @@ const Map = () => {
           }}
           className="h-[680px] w-[800px] shadow-sm"
         >
-
           <HoennMap />
         </animated.div>
       </animated.div>
-
+      {/* <Floater /> */}
       <Dexnav />
       <MapPlaceInfo />
     </div>

@@ -5,34 +5,34 @@ import useMousePosition from "@/hooks/useMousePosition";
 
 const Floater = memo(function Floater() {
   const selectedCoordinates = useMapStore((state) => state.selectedCoordinates);
-  const mousePosition = useMousePosition();
+  const hoveredCoordinates = useMapStore(state => state.hoveredCoordinates);
   const hoveredMap = useMapStore((state) => state.hoveredMap);
   const selectedMap = useMapStore((state) => state.selectedMap);
+  const centerOffset = useMapStore((state) => state.mapOffset || [0, 0]);
+  const mapScale = useMapStore((state) => state.mapScale || 1);
   const ref = useRef<HTMLDivElement>(null);
   const [{ pos }, api] = useSpring(
     () => ({
       pos: [0, 0],
     }),
-    [selectedCoordinates],
+    [],
   );
 
   useLayoutEffect(() => {
-    if (selectedCoordinates[0]) {
-      const mapScale = useMapStore.getState().mapScale;
-      // const mapOffset = useMapStore.getState().mapOffset;
+    if (hoveredCoordinates[0]) {
       const floaterSize = ref?.current?.clientHeight || 0; // Moves floater up so you can click thru it.
-
+      const centerX = hoveredCoordinates[0]
+      const centerY = hoveredCoordinates[1]
       api.start({
-        pos: [selectedCoordinates[0], selectedCoordinates[1]],
+        pos: [centerX, centerY],
       });
     }
-  }, [selectedCoordinates, mousePosition, api]);
+  }, [hoveredCoordinates]);
   return (
     <animated.div
       ref={ref}
       style={{
         touchAction: "none",
-        transformOrigin: " left",
         transform: to([pos], ([x, y]) => {
           return `translate3d(${x}px, ${y}px, 0px)`;
         }),
