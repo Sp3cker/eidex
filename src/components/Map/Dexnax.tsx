@@ -1,6 +1,6 @@
 import { memo } from "react";
 import EncounterZone from "./EncounterZone";
-import { useMapStore, formatMapString } from "@/stores/useMapStore";
+import { useMapStore } from "@/stores/useMapStore";
 import { useSpring, animated } from "react-spring";
 
 const Dexnav = memo(function Dexnav() {

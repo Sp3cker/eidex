@@ -32,7 +32,9 @@ const MapPlace = ({ item }: MapPlaceProps) => {
       const { hovering } = state;
       // const e = state.event as unknown as React.PointerEvent;
       const element = state.event.currentTarget; // The clicked element
+      //@ts-ignore
       const rect = element.getBoundingClientRect();
+      //@ts-ignore
       const mapRect = document.getElementById("map").getBoundingClientRect(); // Adjust to your map's container
       // const scale = useMapStore.getState().scale || 1; // Get current scale from store or component
       const centerX = (rect.left + rect.width / 2 - mapRect.left) / mapScale;
@@ -49,6 +51,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
     //@ts-ignore
     const element = state.event.currentTarget; // The clicked element
     const rect = element.getBoundingClientRect();
+    //@ts-ignore
     const mapRect = document.getElementById("map").getBoundingClientRect(); // Adjust to your map's container
     // const scale = useMapStore.getState().scale || 1; // Get current scale from store or component
     const centerX = (rect.left + rect.width / 2 - mapRect.left) / mapScale;

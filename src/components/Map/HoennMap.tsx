@@ -1,10 +1,10 @@
 import svgData from "./svgData";
 
 import MapPlace from "./MapPlace";
-import useMapStore from "@/stores/useMapStore";
+// import useMapStore from "@/stores/useMapStore";
 
 const SvgMap = () => {
-  const setDexNavIsOpen = useMapStore((state) => state.setDexnavIsOpen);
+  // const setDexNavIsOpen = useMapStore((state) => state.setDexnavIsOpen);
   return (
     <svg
       id="mapSvg"

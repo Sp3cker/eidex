@@ -2,8 +2,8 @@ import useMapStore from "@/stores/useMapStore";
 import "./map.css";
 import { useSpring, animated, to } from "@react-spring/web";
 import { useDrag, usePinch } from "@use-gesture/react";
-import { useEffect, useLayoutEffect, useRef } from "react";
-import Floater from "./Floater";
+import {  useLayoutEffect, useRef } from "react";
+
 import HoennMap from "./HoennMap";
 import Dexnav from "./Dexnax";
 import MapPlaceInfo from "./MapPlaceInfo";

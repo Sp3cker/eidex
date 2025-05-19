@@ -1,4 +1,4 @@
-import { useTransition, animated, useSpring } from "react-spring";
+import { animated, useSpring } from "react-spring";
 import { useMapStore, formatMapString } from "@/stores/useMapStore";
 import { useEffect, useRef, useState } from "react";
 const MapPlaceInfo = () => {
