@@ -94,7 +94,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
       key={item.id}
       id={item.id}
       transform={item.transform}
-      className={`${isSelectedMap ? "selected-place ring" : "touch-none fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
+      className={`${isSelectedMap ? "selected-place ring" : "touch-none"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
       {...bind()}
     >
       {item.type === "rect" && (
@@ -103,7 +103,8 @@ const MapPlace = ({ item }: MapPlaceProps) => {
           y={item.y}
           width={item.width}
           height={item.height}
-          className={`${isSelectedMap ? "fill-yellow-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-all`}
+          className={`${isSelectedMap ? "fill-yellow-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-colors
+`}
 
           // style={item.style}
         />
