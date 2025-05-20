@@ -12,21 +12,16 @@ const SvgMap = () => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       xmlSpace="preserve"
-      style={{
-        fillRule: "evenodd",
-        clipRule: "evenodd",
-        strokeLinejoin: "round",
-        strokeMiterlimit: 2,
-      }}
+      className="content-visibility"
     >
       <g transform="matrix(5.55556,0,0,5.55556,0,0)">
         <use
           xlinkHref="#_Image1"
           x={0}
           y={0}
-          width="1920px"
+          width="1192px"
           patternTransform="matrix(5.55556,0,0,5.55556,0,0)"
-          height="1080px"
+          height="670px"
           transform="matrix(0.649356,0,0,0.649356,-0.560096,-17.3797)"
           // transform="matrix(3.60753,0,0,3.60753,-3.11164,-96.554)"
         />

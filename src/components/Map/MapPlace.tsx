@@ -4,7 +4,8 @@ import {
   SharedGestureState,
   useGesture,
 } from "@use-gesture/react";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
+// import { subscribeWithSelector } from "zustand/middleware";
 
 interface MapPlaceProps {
   item: Record<string, any>;
@@ -20,7 +21,8 @@ const MapPlace = ({ item }: MapPlaceProps) => {
   );
   const mapScale = useMapStore((state) => state.mapScale);
   const setSelectedMap = useMapStore((state) => state.setSelectedMap);
-  const selectedMap = useMapStore((state) => state.selectedMap);
+  // const selectedMap = useMapStore((state) => state.selectedMap);
+  const [isSelectedMap, setIsSelectedMap] = useState(false);
   const setHoveredMap = useMapStore((state) => state.setHoveredMap);
   const setDexNavIsOpen = useMapStore((state) => state.setDexnavIsOpen);
   const handleHover = useCallback(
@@ -74,12 +76,25 @@ const MapPlace = ({ item }: MapPlaceProps) => {
     },
     { hover: {} },
   );
+  useEffect(() => {
+    const unsub = useMapStore.subscribe((state) => {
+      if (state.selectedMap === item.id) {
+        setIsSelectedMap(true);
+
+      } else {
+        setIsSelectedMap(false)
+      }
+    });
+    return () => {
+      unsub();
+    };
+  }, []);
   return (
     <g
       key={item.id}
       id={item.id}
       transform={item.transform}
-      className={`${selectedMap === item.id ? "selected-place ring" : "touch-none fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
+      className={`${isSelectedMap ? "selected-place ring" : "touch-none fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
       {...bind()}
     >
       {item.type === "rect" && (
@@ -88,7 +103,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
           y={item.y}
           width={item.width}
           height={item.height}
-          className={`${selectedMap === item.id ? "fill-yellow-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-all`}
+          className={`${isSelectedMap ? "fill-yellow-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-all`}
 
           // style={item.style}
         />
