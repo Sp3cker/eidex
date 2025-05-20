@@ -1,20 +1,21 @@
 import { animated, useSpring } from "react-spring";
 import { useMapStore, formatMapString } from "@/stores/useMapStore";
-import { useEffect, useRef, useState } from "react";
+import {  useEffect, useState } from "react";
+import EncounterMonsList from "./EncounterMonsList";
 
 const MapPlaceInfo = () => {
   const [clientWidth, setClientWidth] = useState(window.innerWidth);
-  //   const [mouseMoving, setMouseMoving] = useState(false);
+  const [selectedTab, setSelectedTab] = useState("land");
   const selectedMap = useMapStore((state) => state.selectedMap);
   const dexNavIsOpen = useMapStore((state) => state.dexNavIsOpen);
-  const ref = useRef<HTMLDivElement>(null);
+
   const [spring, api] = useSpring(
     {
-      translateOrigin: "top left",
+      translateOrigin: "50% 50%",
       //   translateX: window.innerWidth + 100,
-      translate: clientWidth,
+      translate: dexNavIsOpen ? clientWidth / 3 : clientWidth,
     },
-    [clientWidth],
+    [],
   );
   useEffect(() => {
     const handleResize = () => {
@@ -28,28 +29,61 @@ const MapPlaceInfo = () => {
   }, []);
   useEffect(() => {
     if (dexNavIsOpen) {
-      console.log(`${clientWidth} ${clientWidth - clientWidth /5}`)
       api.start({ translate: clientWidth / 3 });
     } else {
-      api.start({ translate: clientWidth });
+      // api.start({ translate: clientWidth });
     }
   }, [clientWidth, dexNavIsOpen]);
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const target = e.currentTarget;
+    console.log("target", target);
+    const title = target.getAttribute("title");
+    if (title) {
+      setSelectedTab(title);
+    }
+  };
   return (
     <animated.div
-      ref={ref}
       style={{
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`font-calamity absolute top-[10%] cursor-move touch-none items-center justify-center hover:opacity-80`}
+      className={`z-99 content-visibility font-calamity absolute top-[7%] cursor-move items-center justify-center overflow-x-hidden`}
     >
-      <div className="map-place-info-textbox w-[130px] overflow-hidden rounded p-4 shadow-lg">
+      <div className="tabs map-place-info-textbox-gradient w-[150px] overflow-hidden rounded px-3 py-3 shadow-2xl">
         <h2 className="text-sm font-bold">
           {formatMapString(selectedMap || "")}
         </h2>
+        <div className="font-pkmnem tab-list block text-nowrap">
+          <button
+            title="land"
+            className={`text-md tab w-[38px] font-bold ${selectedTab === "land" && "land-tab"}`}
+            onClick={handleClick}
+          >
+            Land
+          </button>
+          <button
+            title="water"
+            className={`text-md tab w-[42px] font-bold ${selectedTab === "water" && "water-tab"}`}
+            onClick={handleClick}
+          >
+            Water
+          </button>
+          <button
+            title="fishing"
+            className={`text-md tab w-[46px] font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
+            onClick={handleClick}
+          >
+            Fishing
+          </button>
+        </div>
         <div className="h-[200px] overflow-scroll">
-          {/* {data.map((d) => (
-            <p>{d}</p>
-          ))} */}
+          {selectedTab === "land" ? (
+            <EncounterMonsList zone="land" />
+          ) : selectedTab === "water" ? (
+            <EncounterMonsList zone="water" />
+          ) : selectedTab === "fishing" ? (
+            <EncounterMonsList zone="fishing" />
+          ) : null}
         </div>
       </div>
     </animated.div>

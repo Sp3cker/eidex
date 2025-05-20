@@ -68,16 +68,42 @@
     var(--color-orange-600)
   );
 }
-.map-place-info-textbox {
+.map-place-info-textbox-gradient {
   background-image: linear-gradient(
     100deg,
     var(--color-neutral-50),
     var(--color-sky-100)
   );
 }
+.tabs {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tab-list {
+
+  /* flex-direction: row; */
+  /* flex-wrap: nowrap; Ensures tabs stay in one line */
+  border-bottom: 1px solid #ccc;
+}
+.land-tab {
+  color: var(--color-emerald-500);
+}
+.water-tab {
+  color: var(--color-sky-500);
+}
+.fishing-tab {
+  color: var(--color-amber-500);
+}
+
+.content-visibility {
+  content-visibility: auto;
+  contain-intrinsic-size: 100px;
+  contain: layout paint;
+}
 
 .selected-place {
-  animation: selected-place-animation 1s  infinite;
+  animation: selected-place-animation 1s infinite;
 }
 
 @keyframes selected-place-animation {

@@ -1,7 +1,7 @@
 import useMapStore from "@/stores/useMapStore";
 import { useSpring, animated, to } from "@react-spring/web";
 import { useDrag, usePinch } from "@use-gesture/react";
-import { useEffect,  useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const MapContainer = ({ children }: any) => {
   const setMapOffset = useMapStore((state) => state.setMapOffset);
@@ -32,6 +32,7 @@ const MapContainer = ({ children }: any) => {
       const centerY = window.innerHeight / 2 - y;
       api.start({
         centerOffset: [centerX, centerY],
+        delay: 42,
       });
     }
   }, [selectedCoordinates, api, scale]);

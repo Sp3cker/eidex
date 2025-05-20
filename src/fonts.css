@@ -1,7 +1,14 @@
 @font-face {
-  font-family: "Emerald";
-  src: url("/fonts/emerald-pro/pokemon-emerald-pro.ttf") format("truetype");
+  font-family: "NBit";
+  src: url("/fonts/emerald-pro/nbit-Regular.woff2") format("woff2");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NBit";
+  src: url("/fonts/emerald-pro/nbit-Bold.woff2") format("woff2");
+  font-weight: Bold;
   font-style: normal;
   font-display: swap;
 }
@@ -58,7 +65,7 @@
 
 @theme {
   --font-pixel: "Pixel Operator", sans-serif;
-  --font-pkmnem: "Emerald", sans-serif;
+  --font-pkmnem: "NBit", sans-serif;
   --font-pkmnem-short: "Emerald-Short", sans-serif;
   --font-calamity: "Calamity", sans-serif;
 }
