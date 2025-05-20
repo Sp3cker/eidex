@@ -32,7 +32,8 @@ const MapContainer = ({ children }: any) => {
       const centerY = window.innerHeight / 2 - y;
       api.start({
         centerOffset: [centerX, centerY],
-        delay: 42,
+        delay: 60,
+        config: { damping: 0.5 },
       });
     }
   }, [selectedCoordinates, api, scale]);
@@ -84,7 +85,7 @@ const MapContainer = ({ children }: any) => {
   return (
     <div
       ref={targetRef}
-      className="font-calamity flex h-screen w-full touch-none flex-col overflow-auto bg-sky-700"
+      className="content-visibility font-calamity flex h-screen w-full touch-none flex-col overflow-auto bg-sky-700"
     >
       <animated.div
         ref={mapRef}
