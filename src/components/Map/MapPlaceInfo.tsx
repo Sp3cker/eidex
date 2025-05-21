@@ -62,7 +62,7 @@ const MapPlaceInfo = () => {
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`content-visibility font-calamity cursor-touch absolute top-[7%] h-[256px] overflow-x-hidden`}
+      className={`content-visibility will-translate font-calamity cursor-touch absolute top-[7%] h-[256px] overflow-x-hidden`}
     >
       <div className="tabs map-place-info-textbox-gradient w-[150px] overflow-hidden rounded px-3 py-3 shadow-2xl">
         <div className="font-pkmnem tab-list block text-nowrap">
