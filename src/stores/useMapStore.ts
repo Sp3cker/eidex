@@ -2,6 +2,8 @@ import { create } from "zustand";
 import encounters from "@/data/map/cleanEncounters.json";
 import pokemon from "@/data/speciesData.json";
 import { Pokemon } from "@/types";
+import ItemSearch, { Item } from "@/utils/itemsData";
+
 const getMap = (map: string) => encounters.filter((m) => m.map === map);
 type EncounterMons = {
   min_level: number;
@@ -30,6 +32,7 @@ type MapStore = {
   hoveredMap: string | null;
   hoveredCoordinates: number[];
   dexNavIsOpen: boolean;
+  selectedMapItems: Item[];
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
   setSelectedPokemon: (name_no_prefix: string) => void;
@@ -122,6 +125,7 @@ export const useMapStore = create<MapStore>((set) => ({
   hoveredMap: null,
   hoveredCoordinates: [0, 0],
   dexNavIsOpen: false,
+  selectedMapItems: [],
   deselectMap: () => set({ selectedMap: null }),
   setSelectedMap: (map: string) => {
     if (map === null) {
@@ -141,7 +145,6 @@ export const useMapStore = create<MapStore>((set) => ({
       monsNameKeys.set(p.nameKey.toLowerCase().replace(/-/g, "_"), p.index);
       // monsNameKeys.set(p.speciesName.replace("-", "_").toLowerCase(), p.index);
     }); //nameKey cause it probly matches encounter Data
-    // targetMapArr[0].land_mons.mons.map((p) => p.species),
     let landEncounters, waterEncounters, fishingEncounters;
     if (targetMapArr[0].land_mons) {
       putIdOnEncounter(targetMapArr[0].land_mons.mons, monsNameKeys);
@@ -155,11 +158,18 @@ export const useMapStore = create<MapStore>((set) => ({
       putIdOnEncounter(targetMapArr[0].fishing_mons.mons, monsNameKeys);
       fishingEncounters = putEncounterRate(targetMapArr[0].fishing_mons.mons);
     }
+
+    /** Parse Out Items for Map */
+    const selectedMapItems = ItemSearch.byMap(map);
+    if (selectedMapItems.length === 0) {
+      console.error("Error selecting map %s", map);
+    }
     set({
       selectedMap: targetMapArr[0].map,
       selectedMapLandMons: landEncounters,
       selectedMapWaterMons: waterEncounters,
       selectedMapFishingMons: fishingEncounters,
+      selectedMapItems,
     });
   },
   setSelectedPokemon: (name: string) => {

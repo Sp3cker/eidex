@@ -19,14 +19,14 @@ const EncounterMonsList = React.memo(function EncounterList({
   return (encounter || []).map((mon, index) => (
     <div
       key={`${mon.index}${index}`}
-      className="relative px-1"
+      className="relative px-1 h-8 w-1"
       onMouseDown={() => {
         setSelectedPokemon(mon.index);
       }}
     >
-      <div className="icon-sprite-box -mt-0">
+      <div className="icon-sprite-box">
         <img
-          className="pokemon-icon-sprite float-right"
+          className="pokemon-icon-sprite"
           style={{
             filter: "drop-shadow(1px 0px 3px #2b2b2b50)",
           }}

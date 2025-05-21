@@ -1,11 +1,17 @@
 //https://stackoverflow.com/questions/36862334/get-viewport-window-height-in-reactjs
 import { useState, useEffect } from "react";
 
-type ScreenWidth = "xs" | "sm" | "md";
+type ScreenWidth = "xs" | "sm" | "md" | "lg";
 
 //Got numbers from here: https://tailwindcss.com/docs/responsive-design
 const getScreenWidth = (): ScreenWidth =>
-  window.innerWidth > 768 ? "md" : window.innerWidth <= 451 ? "sm" : "xs";
+  window.innerWidth > 768
+    ? "md"
+    : window.innerWidth <= 451
+      ? "sm"
+      : window.innerWidth >= 1024
+        ? "lg"
+        : "xs";
 
 export const useScreenWidth = (): ScreenWidth => {
   const [screenWidth, setWindowDimensions] = useState(getScreenWidth());

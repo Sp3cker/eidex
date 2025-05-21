@@ -1,19 +1,22 @@
 import { animated, useSpring } from "react-spring";
-import { useMapStore, formatMapString } from "@/stores/useMapStore";
-import {  useEffect, useState } from "react";
+import { useMapStore } from "@/stores/useMapStore";
+import { useEffect, useLayoutEffect, useState } from "react";
 import EncounterMonsList from "./EncounterMonsList";
-
+import { useScreenWidth } from "@/hooks/useScreenWidth";
 const MapPlaceInfo = () => {
   const [clientWidth, setClientWidth] = useState(window.innerWidth);
   const [selectedTab, setSelectedTab] = useState("land");
-  const selectedMap = useMapStore((state) => state.selectedMap);
   const dexNavIsOpen = useMapStore((state) => state.dexNavIsOpen);
+  const screenWidth = useScreenWidth();
 
   const [spring, api] = useSpring(
     {
-      translateOrigin: "50% 50%",
+      opacity: 0,
+      // translateOrigin: "RIGHT RIGHT",
+
       //   translateX: window.innerWidth + 100,
-      translate: dexNavIsOpen ? clientWidth / 3 : clientWidth,
+      translate: clientWidth, // Start off-screen, animate to 2/3rd position
+      // Start off-screen, animate to 2/3rd position
     },
     [],
   );
@@ -27,16 +30,28 @@ const MapPlaceInfo = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (dexNavIsOpen) {
-      api.start({ translate: clientWidth / 3 });
+      const toSize =
+        screenWidth === "sm"
+          ? 300
+          : screenWidth === "md"
+            ? (clientWidth + 900) / 3
+            : (clientWidth + 600) / 3;
+
+      api.start({
+        delay: (key) => (key === "opacity" ? 0 : 300),
+        opacity: 1,
+        translate: dexNavIsOpen
+          ? clientWidth - toSize // Ensure it doesn't go too far left
+          : clientWidth,
+      });
     } else {
       // api.start({ translate: clientWidth });
     }
-  }, [clientWidth, dexNavIsOpen]);
+  }, [clientWidth, dexNavIsOpen, screenWidth]);
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.currentTarget;
-    console.log("target", target);
     const title = target.getAttribute("title");
     if (title) {
       setSelectedTab(title);
@@ -45,32 +60,30 @@ const MapPlaceInfo = () => {
   return (
     <animated.div
       style={{
+        opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`z-99 content-visibility font-calamity absolute top-[7%] cursor-move items-center justify-center overflow-x-hidden`}
+      className={`z-99 content-visibility font-calamity cursor-touch absolute top-[7%] overflow-x-hidden`}
     >
       <div className="tabs map-place-info-textbox-gradient w-[150px] overflow-hidden rounded px-3 py-3 shadow-2xl">
-        <h2 className="text-sm font-bold">
-          {formatMapString(selectedMap || "")}
-        </h2>
         <div className="font-pkmnem tab-list block text-nowrap">
           <button
             title="land"
-            className={`text-md tab w-[38px] font-bold ${selectedTab === "land" && "land-tab"}`}
+            className={`tab w-[36px] text-lg font-bold ${selectedTab === "land" && "land-tab"}`}
             onClick={handleClick}
           >
             Land
           </button>
           <button
             title="water"
-            className={`text-md tab w-[42px] font-bold ${selectedTab === "water" && "water-tab"}`}
+            className={`tab w-[44px] text-lg font-bold ${selectedTab === "water" && "water-tab"}`}
             onClick={handleClick}
           >
             Water
           </button>
           <button
             title="fishing"
-            className={`text-md tab w-[46px] font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
+            className={`tab w-[46px] text-lg font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
             onClick={handleClick}
           >
             Fishing

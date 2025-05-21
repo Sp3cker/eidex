@@ -1,0 +1,1220 @@
+[
+  {
+    "number": "TM001",
+    "name": "Focus Punch",
+    "map": "MAP_JAGGED_PASS",
+    "qualifier": "From Maylene after defeating her"
+  },
+  {
+    "number": "TM002",
+    "name": "Dragon Claw",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM003",
+    "name": "Flip Turn",
+    "map": "MAP_SLATEPORT_CITY",
+    "qualifier": "From the Aqua grunt nearest the entrace inside"
+  },
+  {
+    "number": "TM004",
+    "name": "Calm Mind",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "From Ursula after defeating her in a \"dance battle\""
+  },
+  {
+    "number": "TM005",
+    "name": "Roar",
+    "map": "MAP_ROUTE114",
+    "qualifier": "From the man next to his Poochyena"
+  },
+  {
+    "number": "TM006",
+    "name": "Toxic",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM007",
+    "name": "Snowscape",
+    "map": "MAP_ROUTE114",
+    "qualifier": "On the cliffs past a smashable rock"
+  },
+  {
+    "number": "TM008",
+    "name": "Bulk Up",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "From Ursula after defeating her in a \"dance battle\""
+  },
+  {
+    "number": "TM009",
+    "name": "Bullet Seed",
+    "map": "MAP_ROUTE103",
+    "qualifier": "West of the Trick House and past the trees that need to be Cut"
+  },
+  {
+    "number": "TM010",
+    "name": "Hidden Power",
+    "map": "MAP_ROUTE117",
+    "qualifier": "From the Ninja Kid hidden below the flower field"
+  },
+  {
+    "number": "TM011",
+    "name": "Sunny Day",
+    "map": "MAP_ROUTE124",
+    "qualifier": "On the ground, requires Surf"
+  },
+  {
+    "number": "TM012",
+    "name": "Taunt",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM013",
+    "name": "Ice Beam",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Mart worker"
+  },
+  {
+    "number": "TM014",
+    "name": "Blizzard",
+    "map": "MAP_ROUTE125",
+    "qualifier": "From Candice after defeating her"
+  },
+  {
+    "number": "TM015",
+    "name": "Electroweb",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Mart workers"
+  },
+  {
+    "number": "TM016",
+    "name": "Light Screen",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM017",
+    "name": "Protect",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM018",
+    "name": "Rain Dance",
+    "map": "MAP_ROUTE121",
+    "qualifier": "On the ground South of the entrance to the Safari Zone"
+  },
+  {
+    "number": "TM019",
+    "name": "Giga Drain",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM020",
+    "name": "Hyper Voice",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Mart worker"
+  },
+  {
+    "number": "TM021",
+    "name": "Icy Wind",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Mart workers"
+  },
+  {
+    "number": "TM022",
+    "name": "Solar Beam",
+    "map": "MAP_TRICK_HOUSE",
+    "qualifier": "Reward for completing second puzzle"
+  },
+  {
+    "number": "TM023",
+    "name": "Iron Tail",
+    "map": "MAP_METEOR_FALLS",
+    "qualifier": "On the ground near the Southern exit"
+  },
+  {
+    "number": "TM024",
+    "name": "Thunderbolt",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Mart worker"
+  },
+  {
+    "number": "TM025",
+    "name": "Thunder",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM026",
+    "name": "Earthquake",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "From creator Xavier after defeating him"
+  },
+  {
+    "number": "TM027",
+    "name": "Return",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "From Norman after defeating him"
+  },
+  {
+    "number": "TM028",
+    "name": "Dig",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From kid brother of the Fossil Maniac"
+  },
+  {
+    "number": "TM029",
+    "name": "Psychic",
+    "map": "MAP_ROUTE117",
+    "qualifier": "From Fantina after defeating her in the flower field"
+  },
+  {
+    "number": "TM030",
+    "name": "Shadow Ball",
+    "map": "MAP_ROUTE117",
+    "qualifier": "From Fantina after defeating her in the flower field"
+  },
+  {
+    "number": "TM031",
+    "name": "Brick Break",
+    "map": "MAP_ROUTE117",
+    "qualifier": "From Fantina after defeating her in the flower field"
+  },
+  {
+    "number": "TM032",
+    "name": "Solar Blade",
+    "map": "MAP_TRICK_HOUSE",
+    "qualifier": "Reward for completing second puzzle"
+  },
+  {
+    "number": "TM033",
+    "name": "Reflect",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM034",
+    "name": "Teleport",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM035",
+    "name": "Flamethrower",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Mart worker"
+  },
+  {
+    "number": "TM036",
+    "name": "Sludge Bomb",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Mart worker"
+  },
+  {
+    "number": "TM037",
+    "name": "Sandstorm",
+    "map": "MAP_ROUTE111",
+    "qualifier": "On the ground near the Southern entrance to the desert"
+  },
+  {
+    "number": "TM038",
+    "name": "Fire Blast",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM039",
+    "name": "Rock Tomb",
+    "map": "MAP_ROUTE116",
+    "qualifier": "From Roark after defeating him"
+  },
+  {
+    "number": "TM040",
+    "name": "Aerial Ace",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Mart workers"
+  },
+  {
+    "number": "TM041",
+    "name": "Dragon Dance",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "From creator Justin after defeating him"
+  },
+  {
+    "number": "TM042",
+    "name": "Facade",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "From Norman after defeating him"
+  },
+  {
+    "number": "TM043",
+    "name": "Defog",
+    "map": "MAP_ROUTE111",
+    "qualifier": "From the kid staring at a tree past Fiery Path"
+  },
+  {
+    "number": "TM044",
+    "name": "Rest",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM045",
+    "name": "Drain Kiss",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "In the lobby of the Battle Tent"
+  },
+  {
+    "number": "TM046",
+    "name": "Thief",
+    "map": "MAP_SLATEPORT_CITY",
+    "qualifier": "In the lobby of the Battle Tent"
+  },
+  {
+    "number": "TM047",
+    "name": "Steel Wing",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "From Steven after delivering the letter to him"
+  },
+  {
+    "number": "TM048",
+    "name": "Meteor Beam",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "From Wally's dad after defeating Norman"
+  },
+  {
+    "number": "TM049",
+    "name": "Leech Life",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM050",
+    "name": "Overheat",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "From Flannery after defeating her"
+  },
+  {
+    "number": "TM051",
+    "name": "Roost",
+    "map": "MAP_ROUTE111",
+    "qualifier": "From Dawn after defeating her"
+  },
+  {
+    "number": "TM052",
+    "name": "Focus Blast",
+    "map": "MAP_JAGGED_PASS",
+    "qualifier": "From Maylene after defeating her"
+  },
+  {
+    "number": "TM053",
+    "name": "Energy Ball",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Mart worker"
+  },
+  {
+    "number": "TM054",
+    "name": "Grassy Glide",
+    "map": "MAP_TRICK_HOUSE",
+    "qualifier": "Reward for completing second puzzle"
+  },
+  {
+    "number": "TM055",
+    "name": "Expanding Force",
+    "map": "MAP_MOSSDEEP_CITY",
+    "qualifier": "From Tate and Liza after defeating them"
+  },
+  {
+    "number": "TM056",
+    "name": "Power up Punch",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "From Ursula after defeating her in a \"dance battle\""
+  },
+  {
+    "number": "TM057",
+    "name": "Charge Beam",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "From Ursula after defeating her in a \"dance battle\""
+  },
+  {
+    "number": "TM058",
+    "name": "Rising Voltage",
+    "map": "MAP_EVERGRANDE_CITY",
+    "qualifier": "From Volkner after defeating him"
+  },
+  {
+    "number": "TM059",
+    "name": "Dragon Pulse",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "From Wally's dad after defeating Norman"
+  },
+  {
+    "number": "TM060",
+    "name": "Drain Punch",
+    "map": "MAP_JAGGED_PASS",
+    "qualifier": "From Maylene after defeating her"
+  },
+  {
+    "number": "TM061",
+    "name": "Will-O-Wisp",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "From Flannery after defeating her"
+  },
+  {
+    "number": "TM062",
+    "name": "Silver Wind",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM063",
+    "name": "Venoshock",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM064",
+    "name": "Explosion",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM065",
+    "name": "Shadow Claw",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM066",
+    "name": "Dazzling Gleam",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM067",
+    "name": "Poltergeist",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM068",
+    "name": "Dual Chop",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "From Wally's dad after defeating Norman"
+  },
+  {
+    "number": "TM069",
+    "name": "Rock Polish",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "From Ursula after defeating her in a \"dance battle\""
+  },
+  {
+    "number": "TM070",
+    "name": "Triple Axel",
+    "map": "MAP_ROUTE125",
+    "qualifier": "From Candice after defeating her"
+  },
+  {
+    "number": "TM071",
+    "name": "Stone Edge",
+    "map": "MAP_TRICK_HOUSE",
+    "qualifier": "Reward for completing third puzzle"
+  },
+  {
+    "number": "TM072",
+    "name": "Psyshock",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM073",
+    "name": "Thunder Wave",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM074",
+    "name": "Gyro Ball",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM075",
+    "name": "Swords Dance",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "From Norman after defeating him"
+  },
+  {
+    "number": "TM076",
+    "name": "Stealth Rock",
+    "map": "MAP_ROUTE120",
+    "qualifier": "From Byron after defeating him"
+  },
+  {
+    "number": "TM077",
+    "name": "Flame Charge",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "From Ursula after defeating her in a \"dance battle\""
+  },
+  {
+    "number": "TM078",
+    "name": "Low Sweep",
+    "map": "MAP_DEWFORD_GYM",
+    "qualifier": "From Brawly after defeating him"
+  },
+  {
+    "number": "TM079",
+    "name": "Dark Pulse",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Mart worker"
+  },
+  {
+    "number": "TM080",
+    "name": "Rock Slide",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM081",
+    "name": "X-Scissor",
+    "map": "MAP_ROUTE113",
+    "qualifier": "Northeast of the Twins"
+  },
+  {
+    "number": "TM082",
+    "name": "Sleep Talk",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM083",
+    "name": "Scald",
+    "map": "MAP_ROUTE111",
+    "qualifier": "From Dawn after defeating her"
+  },
+  {
+    "number": "TM084",
+    "name": "Poison Jab",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM085",
+    "name": "Future Sight",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "From Wally's dad after defeating Norman"
+  },
+  {
+    "number": "TM086",
+    "name": "Grass Knot",
+    "map": "MAP_TRICK_HOUSE",
+    "qualifier": "Reward for completing second puzzle"
+  },
+  {
+    "number": "TM087",
+    "name": "Low Kick",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Mart workers"
+  },
+  {
+    "number": "TM088",
+    "name": "Pluck",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Mart workers"
+  },
+  {
+    "number": "TM089",
+    "name": "U-Turn",
+    "map": "MAP_PETALBURG_WOODS",
+    "qualifier": "From Gardenia after defeating her"
+  },
+  {
+    "number": "TM090",
+    "name": "Substitute",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "From creator Isaac after defeating him"
+  },
+  {
+    "number": "TM091",
+    "name": "Flash Cannon",
+    "map": "MAP_ROUTE111",
+    "qualifier": "From Dawn after defeating her"
+  },
+  {
+    "number": "TM092",
+    "name": "Volt Switch",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "From Wattson after defeating him"
+  },
+  {
+    "number": "TM093",
+    "name": "Dragon Tail",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM094",
+    "name": "Trailblaze",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "From Ursula after defeating her in a \"dance battle\""
+  },
+  {
+    "number": "TM095",
+    "name": "Acrobatics",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "From Winona after defeating her"
+  },
+  {
+    "number": "TM096",
+    "name": "Bulldoze",
+    "map": "MAP_RUSTBORO_GYM",
+    "qualifier": "From Roxanne after defeating him"
+  },
+  {
+    "number": "TM097",
+    "name": "Snarl",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Mart workers"
+  },
+  {
+    "number": "TM098",
+    "name": "Work Up",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "From Ursula after defeating her in a \"dance battle\""
+  },
+  {
+    "number": "TM099",
+    "name": "Wild Charge",
+    "map": "MAP_NEW_MAUVILLE",
+    "qualifier": "On the ground"
+  },
+  {
+    "number": "TM100",
+    "name": "Dual Wingbeat",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "From Wally's dad after defeating Norman"
+  },
+  {
+    "number": "TM101",
+    "name": "Superpower",
+    "map": "MAP_NEW_MAUVILLE",
+    "qualifier": "On the ground"
+  },
+  {
+    "number": "TM102",
+    "name": "Scorching Sands",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM103",
+    "name": "Smack Down",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Mart workers"
+  },
+  {
+    "number": "TM104",
+    "name": "Heat Crash",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "From Flannery after defeating her"
+  },
+  {
+    "number": "TM105",
+    "name": "Body Press",
+    "map": "MAP_JAGGED_PASS",
+    "qualifier": "From Maylene after defeating her"
+  },
+  {
+    "number": "TM106",
+    "name": "Trick Room",
+    "map": "MAP_MOSSDEEP_CITY",
+    "qualifier": "From Tate and Liza after defeating them"
+  },
+  {
+    "number": "TM107",
+    "name": "Brave Bird",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "From Winona after defeating her"
+  },
+  {
+    "number": "TM108",
+    "name": "Ice Spinner",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": ""
+  },
+  {
+    "number": "TM109",
+    "name": "Bug Bite",
+    "map": "MAP_ROUTE104",
+    "qualifier": "From the man close to the northern exit of Petalburg Woods"
+  },
+  {
+    "number": "TM110",
+    "name": "Stomping Tantrum",
+    "map": "MAP_ROUTE104",
+    "qualifier": "Past the tree that needs Cut North of the Woods"
+  },
+  {
+    "number": "TM111",
+    "name": "Fire Punch",
+    "map": "MAP_ROUTE110",
+    "qualifier": "From Rival after defeating them"
+  },
+  {
+    "number": "TM112",
+    "name": "Ice Punch",
+    "map": "MAP_ROUTE110",
+    "qualifier": "From Rival after defeating them"
+  },
+  {
+    "number": "TM113",
+    "name": "Thunder Punch",
+    "map": "MAP_ROUTE110",
+    "qualifier": "From Rival after defeating them"
+  },
+  {
+    "number": "TM114",
+    "name": "Fire Fang",
+    "map": "MAP_ROUTE110",
+    "qualifier": "From Rival after defeating them"
+  },
+  {
+    "number": "TM115",
+    "name": "Ice Fang",
+    "map": "MAP_ROUTE110",
+    "qualifier": "From Rival after defeating them"
+  },
+  {
+    "number": "TM116",
+    "name": "Thunder Fang",
+    "map": "MAP_ROUTE110",
+    "qualifier": "From Rival after defeating them"
+  },
+  {
+    "number": "TM117",
+    "name": "Psychic Fangs",
+    "map": "MAP_ROUTE110",
+    "qualifier": "From Rival after defeating them"
+  },
+  {
+    "number": "TM118",
+    "name": "Poison Fang",
+    "map": "MAP_ROUTE110",
+    "qualifier": "From Rival after defeating them"
+  },
+  {
+    "number": "TM119",
+    "name": "Iron Head",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM120",
+    "name": "Liquidation",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM121",
+    "name": "Hydro Pump",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM122",
+    "name": "Drill Run",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM123",
+    "name": "Blaze Kick",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM124",
+    "name": "Pain Split",
+    "map": "MAP_ROUTE120",
+    "qualifier": "Central part of the route, requires Surf"
+  },
+  {
+    "number": "TM125",
+    "name": "Zen Headbutt",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM126",
+    "name": "Weather Ball",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM127",
+    "name": "Air Slash",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM128",
+    "name": "Hex",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM129",
+    "name": "Mystical Fire",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM130",
+    "name": "Seed Bomb",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM131",
+    "name": "Leaf Blade",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM132",
+    "name": "Knock Off",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM133",
+    "name": "Power Gem",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM134",
+    "name": "Rock Blast",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM135",
+    "name": "Pin Missile",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM136",
+    "name": "Icicle Spear",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM137",
+    "name": "Tail Slap",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM138",
+    "name": "Arm Thrust",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM139",
+    "name": "Foul Play",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM140",
+    "name": "Iron Defense",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM141",
+    "name": "Nasty Plot",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "From Norman after defeating him"
+  },
+  {
+    "number": "TM142",
+    "name": "Earth Power",
+    "map": "MAP_JAGGED_PASS",
+    "qualifier": "On the ground along the East side"
+  },
+  {
+    "number": "TM143",
+    "name": "Aura Sphere",
+    "map": "MAP_JAGGED_PASS",
+    "qualifier": "From Maylene after defeating her"
+  },
+  {
+    "number": "TM144",
+    "name": "Heat Wave",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "From Flannery after defeating her"
+  },
+  {
+    "number": "TM145",
+    "name": "Hurricane",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "From Winona after defeating her"
+  },
+  {
+    "number": "TM146",
+    "name": "Power Whip",
+    "map": "MAP_TRICK_HOUSE",
+    "qualifier": "Reward for completing second puzzle"
+  },
+  {
+    "number": "TM147",
+    "name": "High Horsepower",
+    "map": "MAP_ROUTE120",
+    "qualifier": "From Byron after defeating him"
+  },
+  {
+    "number": "TM148",
+    "name": "Bug Buzz",
+    "map": "MAP_TRICK_HOUSE",
+    "qualifier": "Reward for completing second puzzle"
+  },
+  {
+    "number": "TM149",
+    "name": "Phantom Force",
+    "map": "MAP_ROUTE115",
+    "qualifier": "On the ground, requires Surf"
+  },
+  {
+    "number": "TM150",
+    "name": "Flare Blitz",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "From Flannery after defeating her"
+  },
+  {
+    "number": "TM151",
+    "name": "Stored Power",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "From the old woman after completing her puzzle"
+  },
+  {
+    "number": "TM152",
+    "name": "Gunk Shot",
+    "map": "MAP_TRICK_HOUSE",
+    "qualifier": "Reward for completing first puzzle"
+  },
+  {
+    "number": "TM153",
+    "name": "Tailwind",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "From Winona after defeating her"
+  },
+  {
+    "number": "TM154",
+    "name": "Megahorn",
+    "map": "MAP_TRICK_HOUSE",
+    "qualifier": "Reward for completing second puzzle"
+  },
+  {
+    "number": "TM155",
+    "name": "Draco Meteor",
+    "map": "MAP_EVERGRANDE_CITY",
+    "qualifier": "From Dawn after defeating her and Rival"
+  },
+  {
+    "number": "TM156",
+    "name": "Close Combat",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "From Wattson after shutting down the generator in New Mauville"
+  },
+  {
+    "number": "TM157",
+    "name": "Moonblast",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": "From Juan after defeating him"
+  },
+  {
+    "number": "TM158",
+    "name": "Body Slam",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM157",
+    "name": "Play Rough",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "From the former Move Tutor after defeating Flannery"
+  },
+  {
+    "number": "TM160",
+    "name": "Water Pulse",
+    "map": "MAP_ROUTE118",
+    "qualifier": "On the ground, past two trainers"
+  },
+  {
+    "number": "TM161",
+    "name": "Dark Hole",
+    "map": "MAP_METEOR_FALLS",
+    "qualifier": "Steven's Room on the ground"
+  },
+  {
+    "number": "TM162",
+    "name": "Sludge Wave",
+    "map": "MAP_MT_PYRE",
+    "qualifier": "Outside on a rocky ledge"
+  },
+  {
+    "number": "TM163",
+    "name": "Supercell Slam",
+    "map": "MAP_EVERGRANDE_CITY",
+    "qualifier": "From Volkner after defeating him"
+  },
+  {
+    "number": "TM164",
+    "name": "Temper Flare",
+    "map": "MAP_FIERY_PATH",
+    "qualifier": "On the ground in the northwest corner, requires Strength"
+  },
+  {
+    "number": "TM165",
+    "name": "Scale Shot",
+    "map": "MAP_VICTORY_ROAD",
+    "qualifier": "Floor B2F on the ground, must fight Expert to reach"
+  },
+  {
+    "number": "TM166",
+    "name": "Psychic Noise",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Floor B2F on the ground, requires Mach Bike"
+  },
+  {
+    "number": "TM167",
+    "name": "Alluring Voice",
+    "map": "MAP_RUSTURF_TUNNEL",
+    "qualifier": "On the ground near the Verdanturf Town entrance"
+  },
+  {
+    "number": "TM168",
+    "name": "Vacuum Wave",
+    "map": "MAP_ROUTE110",
+    "qualifier": "On the ground below Cycling Road"
+  },
+  {
+    "name": "Electroweb",
+    "number": "TM015",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Clerks"
+  },
+  {
+    "name": "Icy Wind",
+    "number": "TM021",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Clerks"
+  },
+  {
+    "name": "Aerial Ace",
+    "number": "TM040",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Clerks"
+  },
+  {
+    "name": "Low Kick",
+    "number": "TM087",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Clerks"
+  },
+  {
+    "name": "Pluck",
+    "number": "TM088",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Clerks"
+  },
+  {
+    "name": "Snarl",
+    "number": "TM097",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Clerks"
+  },
+  {
+    "name": "Smack Down",
+    "number": "TM103",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Outdoor Clerks"
+  },
+  {
+    "name": "Toxic",
+    "number": "TM006",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Taunt",
+    "number": "TM012",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Light Screen",
+    "number": "TM016",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Protect",
+    "number": "TM017",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Giga Drain",
+    "number": "TM019",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Reflect",
+    "number": "TM033",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Rest",
+    "number": "TM044",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Leech Life",
+    "number": "TM049",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Silver Wind",
+    "number": "TM062",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Venoshock",
+    "number": "TM063",
+    "map": "MAP_MAUVILLE_CCity_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Explosion",
+    "number": "TM064",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Shadow Claw",
+    "number": "TM065",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Dazzling Gleam",
+    "number": "TM066",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Psyshock",
+    "number": "TM072",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Gyro Ball",
+    "number": "TM074",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Rock Slide",
+    "number": "TM080",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Sleep Talk",
+    "number": "TM082",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Poison Jab",
+    "number": "TM084",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Dragon Tail",
+    "number": "TM093",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Scorching Sands",
+    "number": "TM102",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Ice Spinner",
+    "number": "TM108",
+    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+    "qualifier": "Middle woman"
+  },
+  {
+    "name": "Ice Beam",
+    "number": "TM013",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Clerk"
+  },
+  {
+    "name": "Hyper Voice",
+    "number": "TM020",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Clerk"
+  },
+  {
+    "name": "Thunderbolt",
+    "number": "TM024",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Clerk"
+  },
+  {
+    "name": "Flamethrower",
+    "number": "TM035",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Clerk"
+  },
+  {
+    "name": "Sludge Bomb",
+    "number": "TM036",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Clerk"
+  },
+  {
+    "name": "Energy Ball",
+    "number": "TM053",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Clerk"
+  },
+  {
+    "name": "Dark Pulse",
+    "number": "TM079",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Outdoor Clerk"
+  }
+]
