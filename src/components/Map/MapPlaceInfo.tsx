@@ -1,6 +1,6 @@
 import { animated, useSpring } from "react-spring";
 import { useMapStore } from "@/stores/useMapStore";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect,  useState } from "react";
 import EncounterMonsList from "./EncounterMonsList";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
 const MapPlaceInfo = () => {
