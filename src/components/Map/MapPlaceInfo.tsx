@@ -30,7 +30,7 @@ const MapPlaceInfo = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (dexNavIsOpen) {
       const toSize =
         screenWidth === "sm"
@@ -39,13 +39,14 @@ const MapPlaceInfo = () => {
             ? (clientWidth + 900) / 3
             : (clientWidth + 600) / 3;
 
-      api.start({
-        delay: (key) => (key === "opacity" ? 0 : 300),
-        opacity: 1,
+      api.set({
+        // delay: (key) => (key === "opacity" ? 0 : 300),
+
         translate: dexNavIsOpen
           ? clientWidth - toSize // Ensure it doesn't go too far left
           : clientWidth,
       });
+      api.start({ opacity: 1 });
     } else {
       // api.start({ translate: clientWidth });
     }
@@ -63,7 +64,7 @@ const MapPlaceInfo = () => {
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`z-99 content-visibility font-calamity cursor-touch absolute top-[7%] overflow-x-hidden`}
+      className={` content-visibility font-calamity cursor-touch absolute top-[7%] overflow-x-hidden`}
     >
       <div className="tabs map-place-info-textbox-gradient w-[150px] overflow-hidden rounded px-3 py-3 shadow-2xl">
         <div className="font-pkmnem tab-list block text-nowrap">
