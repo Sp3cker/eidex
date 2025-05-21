@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 
 const Header = () => (
-  <div className="flex items-center justify-between px-1 py-1 content-visibility">
+  <div className="absolute bg-gray-800 z-1 w-full flex items-center justify-between px-1 py-1 content-visibility">
     <img
       src="Pokemans_395-1200px.webp"
       alt="Imperium Pokedex"

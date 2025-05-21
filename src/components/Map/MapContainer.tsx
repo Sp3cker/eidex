@@ -63,7 +63,7 @@ const MapContainer = ({ children }: any) => {
   useDrag(
     ({ offset: [x, y], dragging }) => {
       if (dragging) {
-        api.update({ centerOffset: [x, y] });
+        api.start({ centerOffset: [x, y] });
       }
     },
     {
@@ -85,7 +85,8 @@ const MapContainer = ({ children }: any) => {
   return (
     <div
       ref={targetRef}
-      className="content-visibility font-calamity flex h-screen w-full touch-none flex-col overflow-auto bg-sky-700"
+
+      className="font-calamity flex h-screen w-full touch-none flex-col overflow-auto bg-sky-700"
     >
       <animated.div
         ref={mapRef}
@@ -99,7 +100,7 @@ const MapContainer = ({ children }: any) => {
           }),
           transformOrigin: "center",
         }}
-        className="h-[680px] w-[800px] will-transform"
+        className="will-transform h-[680px] w-[800px]"
       >
         {children}
       </animated.div>
