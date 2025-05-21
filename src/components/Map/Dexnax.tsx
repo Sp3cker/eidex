@@ -11,12 +11,15 @@ const Dexnav = memo(function Dexnav() {
   const selectedMap = useMapStore((state) => state.selectedMap);
   const items = useMapStore((state) => state.selectedMapItems);
   const dexNavIsOpen = useMapStore((state) => state.dexNavIsOpen);
-  const springs = useSpring({
-    // from: { opacity: 0, translateY: (window.innerHeight * 2) / 5 },
-    opacity: dexNavIsOpen ? 1 : 0,
-    translateY: dexNavIsOpen ? 0 : (window.innerHeight * 2) / 5,
-    // config: { duration: 500 },
-  });
+  const [springs] = useSpring(
+    {
+      // from: { opacity: 0, translateY: (window.innerHeight * 2) / 5 },
+      opacity: dexNavIsOpen ? 1 : 0,
+      translateY: dexNavIsOpen ? 0 : (window.innerHeight * 2) / 5,
+      // config: { duration: 500 },
+    },
+    [dexNavIsOpen],
+  );
   return (
     <animated.nav
       style={springs}

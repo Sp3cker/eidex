@@ -1,6 +1,6 @@
 import { animated, useSpring } from "react-spring";
 import { useMapStore } from "@/stores/useMapStore";
-import { useEffect,  useState } from "react";
+import { useEffect, useState } from "react";
 import EncounterMonsList from "./EncounterMonsList";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
 const MapPlaceInfo = () => {
@@ -12,9 +12,7 @@ const MapPlaceInfo = () => {
   const [spring, api] = useSpring(
     {
       opacity: 0,
-      // translateOrigin: "RIGHT RIGHT",
 
-      //   translateX: window.innerWidth + 100,
       translate: clientWidth, // Start off-screen, animate to 2/3rd position
       // Start off-screen, animate to 2/3rd position
     },
@@ -32,18 +30,18 @@ const MapPlaceInfo = () => {
   }, []);
   useEffect(() => {
     if (dexNavIsOpen) {
-      const toSize =
-        screenWidth === "sm"
-          ? 300
-          : screenWidth === "md"
-            ? (clientWidth + 900) / 3
-            : (clientWidth + 600) / 3;
+      // const toSize =
+      //   screenWidth === "sm"
+      //     ? 300
+      //     : screenWidth === "md"
+      //       ? (clientWidth + 900) / 3
+      //       : (clientWidth + 600) / 3;
 
-      api.set({
+      api.start({
         // delay: (key) => (key === "opacity" ? 0 : 300),
 
         translate: dexNavIsOpen
-          ? clientWidth - toSize // Ensure it doesn't go too far left
+          ? clientWidth - 200 // Ensure it doesn't go too far left
           : clientWidth,
       });
       api.start({ opacity: 1 });
@@ -64,7 +62,7 @@ const MapPlaceInfo = () => {
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={` content-visibility font-calamity cursor-touch absolute top-[7%] overflow-x-hidden`}
+      className={`content-visibility font-calamity cursor-touch absolute top-[7%] h-[256px] overflow-x-hidden`}
     >
       <div className="tabs map-place-info-textbox-gradient w-[150px] overflow-hidden rounded px-3 py-3 shadow-2xl">
         <div className="font-pkmnem tab-list block text-nowrap">

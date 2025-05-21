@@ -32,11 +32,11 @@ const MapContainer = ({ children }: any) => {
       const centerY = window.innerHeight / 2 - y;
       api.start({
         centerOffset: [centerX, centerY],
-        delay: 60,
-        config: { damping: 0.5 },
+        delay: 160,
+        config: { damping: 2.5, precision: 0.2 },
       });
     }
-  }, [selectedCoordinates, api, scale]);
+  }, [selectedCoordinates, scale]);
   usePinch(
     ({ offset: [s] }) => {
       const toScale = Math.min(Math.max(s, 0.5), 1.5);
@@ -63,7 +63,7 @@ const MapContainer = ({ children }: any) => {
   useDrag(
     ({ offset: [x, y], dragging }) => {
       if (dragging) {
-        api.start({ centerOffset: [x, y] });
+        api.update({ centerOffset: [x, y] });
       }
     },
     {
@@ -99,7 +99,7 @@ const MapContainer = ({ children }: any) => {
           }),
           transformOrigin: "center",
         }}
-        className="h-[680px] w-[800px] shadow-sm"
+        className="h-[680px] w-[800px] will-transform"
       >
         {children}
       </animated.div>

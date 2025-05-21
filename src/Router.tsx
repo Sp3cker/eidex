@@ -10,7 +10,7 @@ const AppRouter = () => {
   return (
     <div className="">
       <Header />
-      <div className="flex min-h-screen justify-center bg-zinc-800">
+      <div className="min-h-screen bg-zinc-800">
         <Router base={import.meta.env.BASE_PATH || "/"}>
           <Switch>
             <Route path="/" component={Map} />
