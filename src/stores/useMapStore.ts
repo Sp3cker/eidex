@@ -42,6 +42,7 @@ type MapStore = {
   setHoveredMap: (map: string) => void;
   setDexnavIsOpen: (isOpen: boolean) => void;
   setHoveredCoordinates: (coords: number[]) => void;
+  searchItemByName: (name: string) => Item[];
 };
 const UnderscoreRegex = new RegExp(/^[^_]*_/);
 
@@ -192,6 +193,9 @@ export const useMapStore = create<MapStore>((set) => ({
   setHoveredCoordinates: (coords: number[]) =>
     set({ hoveredCoordinates: coords }),
   setDexnavIsOpen: (isOpen) => set({ dexNavIsOpen: isOpen }),
+  searchItemByName: (name: string) => {
+    return ItemSearch.search(name);
+  },
 }));
 
 export default useMapStore;

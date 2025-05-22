@@ -113,27 +113,6 @@
   z-index: 3;
 }
 
-.my-input {
-  position: absolute;
-  top: 3rem;
-  /* border: 1px solid transparent; */
-
-
-  display: inline-flex;
-  box-shadow: 0 0 6px #111522;
-  max-width: 100%;
-  width: 75%;
-
-  height: 2rem;
-  border-radius: 0.375em;
-  justify-content: flex-start;
-
-  padding-bottom: calc(0.5em - 1px);
-  padding-left: calc(0.75em - 1px);
-  padding-top: calc(0.5em - 1px);
-  /* position: relative; */
-  vertical-align: top;
-}
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   height: 1em;
@@ -156,7 +135,43 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   opacity: 1;
   /* Firefox */
 }
-
+.name-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 1;
+  right: 22px;
+}
+.row-container {
+  cursor: pointer;
+  overflow: hidden;
+  /* transform-origin: bottom; */
+  /* transform-style: flat; */
+  /* background-image: linear-gradient(
+    to right,
+    ${(props: RowContainerProp) => rarityCalc(props.rarity).join(",")}
+  ); */
+  background-size: cover;
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: 18px;
+  box-sizing: border-box;
+  height: 60px;
+  width: 170px
+}
+/* @media ${DEVICE_SIZE_STYLES.mobileL} {
+  width: 270px;
+  height: 60px;
+}
+@media ${DEVICE_SIZE_STYLES.laptop} {
+  width: 400px;
+  height: 80px;
+} */
 @keyframes selected-place-animation {
   from {
     /* first frame */

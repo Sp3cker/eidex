@@ -10,10 +10,10 @@ document.addEventListener("gesturechange", (e) => e.preventDefault());
 const Map = () => {
   return (
     <>
-      <Search />
       <MapContainer>
         <NewMap />
       </MapContainer>
+      <Search />
 
       {/* <Floater /> */}
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
