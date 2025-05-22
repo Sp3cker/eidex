@@ -16,8 +16,10 @@ const MapPlace = ({ item }: MapPlaceProps) => {
   const setDexNavIsOpen = useMapStore((state) => state.setDexnavIsOpen);
 
   const handleClick = (state: SharedGestureState) => {
-    const element = state.event.currentTarget;
+    //@ts-ignore
+    const element = state.event?.currentTarget;
     const rect = element.getBoundingClientRect();
+    //@ts-ignore
     const mapRect = document.getElementById("map").getBoundingClientRect();
     const centerX = (rect.left + rect.width / 2 - mapRect.left) / mapScale;
     const centerY = (rect.top + rect.height / 2 - mapRect.top) / mapScale;
@@ -46,7 +48,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
       key={item.id}
       id={item.id}
       transform={item.transform}
-      className={`${isSelectedMap ? "selected-place ring" : "touch-none"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
+      className={`${isSelectedMap ? "selected-place " : "fill-yellow-900/10 hover:fill-yellow-300/50 touch-none"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
       {...bind()}
     >
       {item.type === "rect" && (
@@ -56,7 +58,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
           width={item.width}
           height={item.height}
           {...item.style}
-          className={`${isSelectedMap ? "fill-yellow-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-colors`}
+          className={`border-yellow ${isSelectedMap ? " fill-yellow-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50 touch-none"}`}
         />
       )}
       {item.type === "path" && <path d={item.d} {...item.style} />}

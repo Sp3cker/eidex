@@ -100,7 +100,7 @@ function PokemonModal() {
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-md"
+      className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-md z-9"
       onClick={closeModal}
     >
       <div

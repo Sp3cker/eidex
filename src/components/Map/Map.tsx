@@ -1,7 +1,7 @@
 import "./map.css";
 import { ErrorBoundary } from "react-error-boundary";
-import HoennMap from "./HoennMap";
-import NewMap from './svgviewer-react-output'
+import Search from "./Search";
+import NewMap from "./svgviewer-react-output";
 import Dexnav from "./Dexnax";
 import MapPlaceInfo from "./MapPlaceInfo";
 import MapContainer from "./MapContainer";
@@ -10,6 +10,7 @@ document.addEventListener("gesturechange", (e) => e.preventDefault());
 const Map = () => {
   return (
     <>
+      <Search />
       <MapContainer>
         <NewMap />
       </MapContainer>

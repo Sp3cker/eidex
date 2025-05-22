@@ -1,4 +1,4 @@
-import * as React from "react";
+
 import objects from "./output.json";
 import MapPlace from "./MapPlace";
 const SVGComponent = () => (
@@ -9,7 +9,7 @@ const SVGComponent = () => (
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     xmlSpace="preserve"
-    xmlns:serif="http://www.serif.com/"
+
     style={{
       fillRule: "evenodd",
       clipRule: "evenodd",

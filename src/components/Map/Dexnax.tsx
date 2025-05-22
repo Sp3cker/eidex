@@ -23,7 +23,7 @@ const Dexnav = memo(function Dexnav() {
   return (
     <animated.nav
       style={springs}
-      className="map-place-info-textbox-gradient w-70 fixed bottom-7 left-10 right-10 h-2/5 overflow-scroll rounded-sm py-2 pl-3 shadow-lg"
+      className="map-place-info-textbox-gradient dexnav-z-2 w-70 fixed bottom-7 left-5 right-10 h-2/5 overflow-scroll rounded-sm py-2 pl-3 shadow-lg"
     >
       <div className="flex justify-between text-white">
         <h1 className="cool-font pb-2 font-bold text-neutral-700">
