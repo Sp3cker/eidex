@@ -1,0 +1,960 @@
+    <g transform="matrix(0.666667,0,0,0.666667,0,0)">
+      <use xlinkHref="#_Image1" x={0} y={0} width="1920px" height="1080px" />
+    </g>
+    <use xlinkHref="#_Image2" x={1069} y={299} width="131px" height="46px" />
+    <use xlinkHref="#_Image3" x={624} y={247} width="91px" height="37px" />
+    <use xlinkHref="#_Image4" x={102} y={605} width="132px" height="47px" />
+    <use xlinkHref="#_Image5" x={655} y={64} width="120px" height="32px" />
+    <use
+      id="MAP_GRANITE_CAVE"
+      xlinkHref="#_Image6"
+      x={150.752}
+      y={566.641}
+      width="63px"
+      height="63px"
+    />
+    <g
+      id="MAP_GRANITE_CAVE1"
+      serif:id="MAP_GRANITE_CAVE"
+      transform="matrix(1,0,0,1,-2136.52,-905.933)"
+    >
+      <path
+        d="M2331.26,1494.91L2331.26,1509.35C2331.26,1513.33 2328.03,1516.57 2324.04,1516.57L2309.61,1516.57C2305.63,1516.57 2302.39,1513.33 2302.39,1509.35L2302.39,1494.91C2302.39,1490.93 2305.63,1487.69 2309.61,1487.69L2324.04,1487.69C2328.03,1487.69 2331.26,1490.93 2331.26,1494.91Z"
+        style={{
+          fill: "#ffa000",
+          fillOpacity: 0.86,
+          stroke: "#251814",
+          strokeWidth: 1,
+        }}
+      />
+    </g>
+    <use
+      id="MAP_MT_PYRE"
+      xlinkHref="#_Image6"
+      x={699.201}
+      y={223.81}
+      width="63px"
+      height="63px"
+    />
+    <g
+      id="MAP_MT_PYRE1"
+      serif:id="MAP_MT_PYRE"
+      transform="matrix(1,0,0,1,-1588.07,-1248.76)"
+    >
+      <path
+        d="M2331.26,1494.91L2331.26,1509.35C2331.26,1513.33 2328.03,1516.57 2324.04,1516.57L2309.61,1516.57C2305.63,1516.57 2302.39,1513.33 2302.39,1509.35L2302.39,1494.91C2302.39,1490.93 2305.63,1487.69 2309.61,1487.69L2324.04,1487.69C2328.03,1487.69 2331.26,1490.93 2331.26,1494.91Z"
+        style={{
+          fill: "#ffa000",
+          fillOpacity: 0.86,
+          stroke: "#251814",
+          strokeWidth: 1,
+        }}
+      />
+    </g>
+    <use
+      id="MAP_VICTORY_ROAD"
+      xlinkHref="#_Image6"
+      x={1095.01}
+      y={323.693}
+      width="63px"
+      height="63px"
+    />
+    <g
+      id="MAP_VICTORY_ROAD1"
+      serif:id="MAP_VICTORY_ROAD"
+      transform="matrix(1,0,0,1,-1192.26,-1148.88)"
+    >
+      <path
+        d="M2331.26,1494.91L2331.26,1509.35C2331.26,1513.33 2328.03,1516.57 2324.04,1516.57L2309.61,1516.57C2305.63,1516.57 2302.39,1513.33 2302.39,1509.35L2302.39,1494.91C2302.39,1490.93 2305.63,1487.69 2309.61,1487.69L2324.04,1487.69C2328.03,1487.69 2331.26,1490.93 2331.26,1494.91Z"
+        style={{
+          fill: "#ffa000",
+          fillOpacity: 0.86,
+          stroke: "#251814",
+          strokeWidth: 1,
+        }}
+      />
+    </g>
+    <use
+      id="MAP_SAFARI_ZONE_SOUTHWEST"
+      xlinkHref="#_Image6"
+      x={692.333}
+      y={133.473}
+      width="63px"
+      height="63px"
+    />
+    <g
+      id="MAP_SAFARI_ZONE_SOUTHWEST1"
+      serif:id="MAP_SAFARI_ZONE_SOUTHWEST"
+      transform="matrix(1,0,0,1,-1594.94,-1339.1)"
+    >
+      <path
+        d="M2331.26,1494.91L2331.26,1509.35C2331.26,1513.33 2328.03,1516.57 2324.04,1516.57L2309.61,1516.57C2305.63,1516.57 2302.39,1513.33 2302.39,1509.35L2302.39,1494.91C2302.39,1490.93 2305.63,1487.69 2309.61,1487.69L2324.04,1487.69C2328.03,1487.69 2331.26,1490.93 2331.26,1494.91Z"
+        style={{
+          fill: "#ffa000",
+          fillOpacity: 0.86,
+          stroke: "#251814",
+          strokeWidth: 1,
+        }}
+      />
+    </g>
+    <use
+      id="MAP_SAFARI_ZONE_SOUTH"
+      xlinkHref="#_Image6"
+      x={722.537}
+      y={115.284}
+      width="63px"
+      height="63px"
+    />
+    <g
+      id="MAP_SAFARI_ZONE_SOUTH1"
+      serif:id="MAP_SAFARI_ZONE_SOUTH"
+      transform="matrix(1,0,0,1,-1564.73,-1357.29)"
+    >
+      <path
+        d="M2331.26,1494.91L2331.26,1509.35C2331.26,1513.33 2328.03,1516.57 2324.04,1516.57L2309.61,1516.57C2305.63,1516.57 2302.39,1513.33 2302.39,1509.35L2302.39,1494.91C2302.39,1490.93 2305.63,1487.69 2309.61,1487.69L2324.04,1487.69C2328.03,1487.69 2331.26,1490.93 2331.26,1494.91Z"
+        style={{
+          fill: "#ffa000",
+          fillOpacity: 0.86,
+          stroke: "#251814",
+          strokeWidth: 1,
+        }}
+      />
+    </g>
+    <use
+      id="MAP_SAFARI_ZONE_NORTH"
+      xlinkHref="#_Image6"
+      x={703.935}
+      y={78.904}
+      width="63px"
+      height="63px"
+    />
+    <g
+      id="MAP_SAFARI_ZONE_NORTH1"
+      serif:id="MAP_SAFARI_ZONE_NORTH"
+      transform="matrix(1,0,0,1,-1583.34,-1393.67)"
+    >
+      <path
+        d="M2331.26,1494.91L2331.26,1509.35C2331.26,1513.33 2328.03,1516.57 2324.04,1516.57L2309.61,1516.57C2305.63,1516.57 2302.39,1513.33 2302.39,1509.35L2302.39,1494.91C2302.39,1490.93 2305.63,1487.69 2309.61,1487.69L2324.04,1487.69C2328.03,1487.69 2331.26,1490.93 2331.26,1494.91Z"
+        style={{
+          fill: "#ffa000",
+          fillOpacity: 0.86,
+          stroke: "#251814",
+          strokeWidth: 1,
+        }}
+      />
+    </g>
+    <use
+      id="MAP_SAFARI_ZONE_NORTHWEST"
+      xlinkHref="#_Image6"
+      x={672.731}
+      y={97.094}
+      width="63px"
+      height="63px"
+    />
+    <g
+      id="MAP_SAFARI_ZONE_NORTHWEST1"
+      serif:id="MAP_SAFARI_ZONE_NORTHWEST"
+      transform="matrix(1,0,0,1,-1614.54,-1375.48)"
+    >
+      <path
+        d="M2331.26,1494.91L2331.26,1509.35C2331.26,1513.33 2328.03,1516.57 2324.04,1516.57L2309.61,1516.57C2305.63,1516.57 2302.39,1513.33 2302.39,1509.35L2302.39,1494.91C2302.39,1490.93 2305.63,1487.69 2309.61,1487.69L2324.04,1487.69C2328.03,1487.69 2331.26,1490.93 2331.26,1494.91Z"
+        style={{
+          fill: "#ffa000",
+          fillOpacity: 0.86,
+          stroke: "#251814",
+          strokeWidth: 1,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE115"
+      transform="matrix(1.03325,0,0,1.12859,120.418,-18.4396)"
+    >
+      <rect
+        x={11.598}
+        y={142.143}
+        width={35.377}
+        height={97.36}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.38,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE113"
+      transform="matrix(1.03325,0,0,1.03325,119.4,-0.394282)"
+    >
+      <rect
+        x={158.303}
+        y={68.351}
+        width={135.006}
+        height={35.562}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.38,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE111"
+      transform="matrix(0.884715,0,0,1.06615,163.908,-4.63102)"
+    >
+      <rect
+        x={292.789}
+        y={69.736}
+        width={40.981}
+        height={204.635}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.38,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE112"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={337.927}
+        y={159.016}
+        width={74.963}
+        height={32.847}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.4,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE117"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={307.919}
+        y={264.396}
+        width={105.131}
+        height={34.274}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE102"
+      transform="matrix(0.928484,0,0,1.03325,22.3374,13.8458)"
+    >
+      <rect
+        x={197.256}
+        y={370.176}
+        width={78.56}
+        height={34.161}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE103"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={272.401}
+        y={334.303}
+        width={140.922}
+        height={34.316}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE110"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={411.759}
+        y={298.463}
+        width={36.975}
+        height={105.246}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE116"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={165.908}
+        y={227.627}
+        width={106.518}
+        height={36.001}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.4,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE101"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={272.437}
+        y={405.257}
+        width={35.846}
+        height={26.471}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE104"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={131.454}
+        y={297.935}
+        width={35.117}
+        height={78.163}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE105"
+      transform="matrix(1.03325,0,0,0.818072,-3.13262,95.9459)"
+    >
+      <rect
+        x={131.038}
+        y={376.069}
+        width={36.439}
+        height={168.348}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE106"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={131.948}
+        y={508.418}
+        width={104.158}
+        height={34.713}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE119"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={516.425}
+        y={52.257}
+        width={37.725}
+        height={210.977}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE118"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={481.36}
+        y={264.581}
+        width={73.471}
+        height={33.857}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE121"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={623.231}
+        y={157.434}
+        width={141.034}
+        height={35.59}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE120"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={586.759}
+        y={53.871}
+        width={36.747}
+        height={139.247}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE123"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={556.674}
+        y={263.104}
+        width={171.838}
+        height={34.823}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE122"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={690.179}
+        y={194.9}
+        width={38.925}
+        height={64.587}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE107"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={237.455}
+        y={543.752}
+        width={109.343}
+        height={34.889}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE108"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={347.027}
+        y={544.125}
+        width={65.192}
+        height={33.76}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE109"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={412.213}
+        y={474.429}
+        width={34.218}
+        height={104.3}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE134"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={449.558}
+        y={402.789}
+        width={104.709}
+        height={36.137}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE132"
+      transform="matrix(1.01206,0,0,0.971844,10.779,40.2563)"
+    >
+      <rect
+        x={652.284}
+        y={402.024}
+        width={77.027}
+        height={38.828}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE131"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={765.132}
+        y={402.118}
+        width={90.877}
+        height={37.286}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE130"
+      transform="matrix(1.03325,0,0,1.03325,-3.75243,18.0578)"
+    >
+      <rect
+        x={856.636}
+        y={400.877}
+        width={90.933}
+        height={35.003}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g id="MAP_ROUTE129" transform="matrix(1.028,0,0,0.73003,1.83489,147.678)">
+      <rect
+        x={946.69}
+        y={390.756}
+        width={97.6}
+        height={46.728}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE128"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={933.958}
+        y={368.48}
+        width={132.189}
+        height={35.166}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE125"
+      transform="matrix(0.969118,0,0,1.03325,63.7743,15.0244)"
+    >
+      <rect
+        x={928.546}
+        y={158.151}
+        width={114.749}
+        height={115.39}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE1281"
+      serif:id="MAP_ROUTE128"
+      transform="matrix(1.00738,0,0,1.03325,23.8692,15.0244)"
+    >
+      <rect
+        x={932.288}
+        y={272.822}
+        width={111.697}
+        height={96.418}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE124"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={831.874}
+        y={159.435}
+        width={104.554}
+        height={113.88}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE126"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={832.492}
+        y={273.948}
+        width={102.556}
+        height={94.756}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE133"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={554.081}
+        y={402.311}
+        width={98.248}
+        height={36.515}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_MOSSDEEP_CITY"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <path
+        d="M1041.72,237.762L1041.72,253.244C1041.72,257.516 1038.25,260.985 1033.98,260.985L983.057,260.985C978.784,260.985 975.316,257.516 975.316,253.244L975.316,237.762C975.316,233.489 978.784,230.021 983.057,230.021L1033.98,230.021C1038.25,230.021 1041.72,233.489 1041.72,237.762Z"
+        style={{
+          fill: "#fcbbb3",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_PACIFIDLOG_TOWN"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={727.089}
+        y={403.594}
+        width={38.119}
+        height={33.328}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_RUSTBORO_CITY"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={129.39}
+        y={229.171}
+        width={38.043}
+        height={69.439}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_JAGGED_PATH"
+      transform="matrix(0.795231,0,0,0.795231,186.876,9.24297)"
+    >
+      <rect
+        x={206.827}
+        y={135.208}
+        width={38.074}
+        height={35.164}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.38,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_FIERY_PATH"
+      transform="matrix(0.795231,0,0,0.795231,201.854,37.2303)"
+    >
+      <rect
+        x={206.827}
+        y={135.208}
+        width={38.074}
+        height={35.164}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.38,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_LAVARIDGE_TOWN"
+      transform="matrix(1.03325,0,0,1.03325,-5.42896,11.8711)"
+    >
+      <circle
+        cx={326.549}
+        cy={178.46}
+        r={17.718}
+        style={{
+          fill: "#fcbbb3",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_MAUVILLE_CITY"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,13.9911)"
+    >
+      <rect
+        x={413.368}
+        y={263.901}
+        width={68.568}
+        height={34.062}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.4,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_SLATEPORT_CITY"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={411.544}
+        y={404.367}
+        width={36.583}
+        height={70.156}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_RUSTURF_TUNNEL"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={272.822}
+        y={227.657}
+        width={34.208}
+        height={35.475}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_LILYCOVE_CITY"
+      transform="matrix(1.03325,0,0,1.03325,-220.772,-56.8953)"
+    >
+      <path
+        d="M1041.72,237.762L1041.72,253.244C1041.72,257.516 1038.25,260.985 1033.98,260.985L983.057,260.985C978.784,260.985 975.316,257.516 975.316,253.244L975.316,237.762C975.316,233.489 978.784,230.021 983.057,230.021L1033.98,230.021C1038.25,230.021 1041.72,233.489 1041.72,237.762Z"
+        style={{
+          fill: "#fcbbb3",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_SOOTOPOLIS_CITY"
+      transform="matrix(1.03325,0,0,1.03325,-5.16422,13.9419)"
+    >
+      <circle
+        cx={888.257}
+        cy={316.766}
+        r={17.081}
+        style={{
+          fill: "#fcbbb3",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_EVER_GRAND_CITY"
+      transform="matrix(1.03325,0,0,1.03325,-0.289172,15.1342)"
+    >
+      <path
+        d="M1108.3,346.062L1108.3,392.776C1108.3,396.849 1104.99,400.156 1100.92,400.156L1086.16,400.156C1082.09,400.156 1078.78,396.849 1078.78,392.776L1078.78,346.062C1078.78,341.988 1082.09,338.681 1086.16,338.681L1100.92,338.681C1104.99,338.681 1108.3,341.988 1108.3,346.062Z"
+        style={{
+          fill: "#fcbbb3",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_FORTREE_CITY"
+      transform="matrix(1.03325,0,0,1.03325,-11.2002,12.0986)"
+    >
+      <circle
+        cx={578.167}
+        cy={73.272}
+        r={17.239}
+        style={{
+          fill: "#fcbbb3",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_LITTLEROOT_TOWN"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={270.506}
+        y={430.278}
+        width={40.458}
+        height={45.516}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_PETALBURG_CITY"
+      transform="matrix(1.07513,0,0,1.07513,-10.4778,-1.69287)"
+    >
+      <circle
+        cx={183.944}
+        cy={386.697}
+        r={16.107}
+        style={{
+          fill: "#fcbbb3",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_FALLARBOR_TOWN"
+      transform="matrix(1.03325,0,0,1.03325,-77.9958,-96.2648)"
+    >
+      <circle
+        cx={326.549}
+        cy={178.46}
+        r={17.718}
+        style={{
+          fill: "#fcbbb3",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_VERDANTURF_TOWN"
+      transform="matrix(1.03325,0,0,1.03325,-41.7918,120.207)"
+    >
+      <circle
+        cx={326.549}
+        cy={178.46}
+        r={17.718}
+        style={{
+          fill: "#fcbbb3",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_DEWFORD_TOWN"
+      transform="matrix(1.03325,0,0,1.03325,-3.13262,15.0244)"
+    >
+      <rect
+        x={202.213}
+        y={543.518}
+        width={34.332}
+        height={34.525}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_METEOR_FALLS"
+      transform="matrix(1.02861,0,0,1.03325,122.438,-1.86883)"
+    >
+      <rect
+        x={28.118}
+        y={137.808}
+        width={39.323}
+        height={39.146}
+        style={{
+          fill: "#ebebeb",
+          fillOpacity: 0.38,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_OLDALE_TOWN"
+      transform="matrix(1.06516,0,0,1.06516,-52.126,223.534)"
+    >
+      <circle
+        cx={326.549}
+        cy={178.46}
+        r={17.718}
+        style={{
+          fill: "#fcbbb3",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>
+    <g
+      id="MAP_ROUTE114"
+      transform="matrix(1.72481,0,0,1.04642,-121.195,12.9342)"
+    >
+      <rect
+        x={170.716}
+        y={52.601}
+        width={39.185}
+        height={106.091}
+        style={{
+          fill: "#fcbbb3",
+          fillOpacity: 0.42,
+        }}
+      />
+    </g>

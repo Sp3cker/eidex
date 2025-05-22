@@ -1,89 +1,46 @@
 import useMapStore from "@/stores/useMapStore";
 import { SharedGestureState, useGesture } from "@use-gesture/react";
 import { useEffect, useState } from "react";
-// import { subscribeWithSelector } from "zustand/middleware";
 
 interface MapPlaceProps {
   item: Record<string, any>;
-  // map: string; //name of map "MAP_ROUTE111"
-  // type: string;
 }
+
 const MapPlace = ({ item }: MapPlaceProps) => {
-  // const setHoveredCoordinates = useMapStore(
-  //   (state) => state.setHoveredCoordinates,
-  // );
   const setSelectedCoordinates = useMapStore(
     (state) => state.setSelectedCoordinates,
   );
   const mapScale = useMapStore((state) => state.mapScale);
   const setSelectedMap = useMapStore((state) => state.setSelectedMap);
-  // const selectedMap = useMapStore((state) => state.selectedMap);
   const [isSelectedMap, setIsSelectedMap] = useState(false);
-  // const setHoveredMap = useMapStore((state) => state.setHoveredMap);
   const setDexNavIsOpen = useMapStore((state) => state.setDexnavIsOpen);
-  // const handleHover = useCallback(
-  //   (
-  //     state: Omit<FullGestureState<"hover">, "event"> & {
-  //       event: PointerEvent;
-  //     },
-  //   ) => {
-  // const { hovering } = state;
-  // // const e = state.event as unknown as React.PointerEvent;
-  // const element = state.event.currentTarget; // The clicked element
-  // //@ts-ignore
-  // const rect = element.getBoundingClientRect();
-  // //@ts-ignore
-  // const mapRect = document.getElementById("map").getBoundingClientRect(); // Adjust to your map's container
-  // // const scale = useMapStore.getState().scale || 1; // Get current scale from store or component
-  // const centerX = (rect.left + rect.width / 2 - mapRect.left) / mapScale;
-  // const centerY = (rect.top + rect.height / 2 - mapRect.top) / mapScale;
-  // if (hovering) {
-  //   setHoveredCoordinates([centerX, centerY + 100]);
-  //   setHoveredMap(item.id);
-  //   return;
-  // }
-  //   },
-  //   [item.id, mapScale],
-  // );
+
   const handleClick = (state: SharedGestureState) => {
-    //@ts-ignore
-    const element = state.event.currentTarget; // The clicked element
+    const element = state.event.currentTarget;
     const rect = element.getBoundingClientRect();
-    //@ts-ignore
-    const mapRect = document.getElementById("map").getBoundingClientRect(); // Adjust to your map's container
-    // const scale = useMapStore.getState().scale || 1; // Get current scale from store or component
+    const mapRect = document.getElementById("map").getBoundingClientRect();
     const centerX = (rect.left + rect.width / 2 - mapRect.left) / mapScale;
     const centerY = (rect.top + rect.height / 2 - mapRect.top) / mapScale;
 
-    // useMapStore.getState().setSelectedCoordinates([centerX, centerY]);
-    setSelectedCoordinates([centerX, centerY + 100]); // Adjust Y offset
+    setSelectedCoordinates([centerX, centerY + 100]);
     setSelectedMap(item.id);
     setDexNavIsOpen(true);
-    // if (state) {
-    //   // State isn't passed on desktop.
-    //   handleHover(state as any);
-    // }
   };
-  const bind = useGesture(
-    {
-      // onHover: (state) => handleHover(state),
-      onMouseDown: (state) => handleClick(state),
-      onTouchStart: (state) => handleClick(state),
-    },
-    // { hover: {} },
-  );
+
+  const bind = useGesture({
+    onMouseDown: (state) => handleClick(state),
+    onTouchStart: (state) => handleClick(state),
+  });
+
   useEffect(() => {
     const unsub = useMapStore.subscribe((state) => {
-      if (state.selectedMap === item.id) {
-        setIsSelectedMap(true);
-      } else {
-        setIsSelectedMap(false);
-      }
+      setIsSelectedMap(state.selectedMap === item.id);
     });
     return () => {
       unsub();
     };
-  }, []);
+  }, [item.id]);
+
   return (
     <g
       key={item.id}
@@ -98,14 +55,13 @@ const MapPlace = ({ item }: MapPlaceProps) => {
           y={item.y}
           width={item.width}
           height={item.height}
+          {...item.style}
           className={`${isSelectedMap ? "fill-yellow-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-colors`}
-
-          // style={item.style}
         />
       )}
-      {item.type === "path" && <path d={item.d} style={item.style} />}
+      {item.type === "path" && <path d={item.d} {...item.style} />}
       {item.type === "circle" && (
-        <circle cx={item.cx} cy={item.cy} r={item.r} style={item.style} />
+        <circle cx={item.cx} cy={item.cy} r={item.r} {...item.style} />
       )}
       {item.type === "use" && (
         <use
