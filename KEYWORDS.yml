@@ -1,0 +1,4 @@
+KEYWORDS:
+- giveitem ITEM_TM
+
+TM's are in `items.h`

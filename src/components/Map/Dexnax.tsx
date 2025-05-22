@@ -37,7 +37,7 @@ const Dexnav = memo(function Dexnav() {
           </p>
         )}
         {items.map((item) => (
-          <div key={item.name} className="h-10">
+          <div key={item.name + item.map} className="h-10">
             <p className="cool-font text-xs font-bold">{item.name}</p>
             <p className="leading-4">{item.qualifier}</p>
           </div>

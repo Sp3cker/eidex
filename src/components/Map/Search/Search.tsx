@@ -47,7 +47,7 @@ const Search = () => {
   });
 
   const handleClick = (index: number) => {
-    console.log(searchResults[index]);
+    setSelectedMap(searchResults[index].map);
   };
 
   // const handleMiddleClick = (index: number) => {
@@ -83,16 +83,16 @@ const Search = () => {
     config: { frequency: 0.21, damping: 1.2 },
     trail: 21,
   });
-  useEffect(() => {
-    if (searchResults.length === 1) {
-      setSelectedMap(searchResults[0].map);
-    }
-  }, [searchResults]);
+  // useEffect(() => {
+  //   if (searchResults.length === 1) {
+  //     setSelectedMap(searchResults[0].map);
+  //   }
+  // }, [searchResults]);
 
   return (
-    <div className="content-visible cool-font z-4 absolute left-5 top-12 h-60">
+    <div className="content-visible cool-font z-4 absolute left-5 top-12">
       <input
-        className="map-place-info-textbox-gradient mb-2 rounded-sm p-1 shadow-xl"
+        className="search-input .py-1\\.5 mb-2 rounded-sm p-1 pl-1 pr-2 text-sm/6 shadow-xl ring-2 ring-blue-500"
         type="search"
         onInput={(e) => setSearchName(e.currentTarget.value)}
         placeholder="Search (doesnt work :D)"
@@ -100,6 +100,7 @@ const Search = () => {
       <ul className="relative">
         {transitions((styles, item, _, index) => (
           <a.li
+            {...bind(index)}
             className="my-dib absolute w-full cursor-pointer rounded-sm bg-neutral-100 p-1"
             style={{
               // zIndex: results.length - index,
@@ -110,7 +111,7 @@ const Search = () => {
               ...styles,
             }}
           >
-            <span style={{ touchAction: "none" }} {...bind(index)}>
+            <span style={{ touchAction: "none" }}>
               <p>{item.name}</p>
               {/* <SearchResult {...item} key={item.name} /> */}
             </span>

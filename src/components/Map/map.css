@@ -162,7 +162,21 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   border-radius: 18px;
   box-sizing: border-box;
   height: 60px;
-  width: 170px
+  width: 170px;
+}
+.search-input {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.2);  
+  outline-color: var(--color-blue-500);  
+
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .search-input {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
 }
 /* @media ${DEVICE_SIZE_STYLES.mobileL} {
   width: 270px;

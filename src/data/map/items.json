@@ -1,1702 +1,2602 @@
 [
-  { "name": "Choice band", "map": "MAP_FORTREE_CITY", "qualifier": "Defeat X" },
   {
-    "name": "Choice scarf",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "Defeat Iriv"
+    "name": "Lansat Berry",
+    "map": "MAP_BATTLE_FRONTIER",
+    "qualifier": "Scotts House"
   },
   {
-    "name": "Choice specs",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "Defeat Cap"
+    "name": "Starf Berry",
+    "map": "MAP_BATTLE_FRONTIER",
+    "qualifier": "Scotts House"
   },
   {
-    "name": "Eviolite",
-    "map": "MAP_PETALBURG_WOODS",
-    "qualifier": "Defeat Gardenia"
+    "name": "Claw Fossil",
+    "map": "MAP_DESERT_UNDERPASS",
+    "qualifier": ""
   },
   {
-    "name": "Expert Belt",
-    "map": "MAP_JAGGED_PASS",
-    "qualifier": "Defeat Maylene"
+    "name": "Root Fossil",
+    "map": "MAP_DESERT_UNDERPASS",
+    "qualifier": ""
   },
   {
-    "name": "Focus sash",
-    "map": "MAP_ROUTE118",
-    "qualifier": "Defeat Crasher Wake"
+    "name": "TM78 - Low Sweep",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Gym"
   },
   {
-    "name": "Kicking shoes",
-    "map": "MAP_ROUTE111",
-    "qualifier": "Defeat Black Belt Daisuke"
+    "name": "TM78 - Low Sweep",
+    "map": "MAP_DEWFORD_TOWN",
+    "qualifier": "Gym"
   },
   {
-    "name": "Leaf stones",
-    "map": "MAP_PETALBURG_WOODS",
-    "qualifier": "Defeat Gardenia"
-  },
-  { "name": "Leftovers", "map": "MAP_ROUTE117", "qualifier": "Defeat Fantina" },
-  { "name": "Leftovers", "map": "MAP_ROUTE121", "qualifier": "Defeat Byron" },
-  {
-    "name": "Punching glove",
-    "map": "MAP_ROUTE111",
-    "qualifier": "Defeat Black Belt Daisuke"
+    "name": "TM155 - Draco Meteor",
+    "map": "MAP_EVER_GRANDE_CITY",
+    "qualifier": ""
   },
   {
-    "name": "Rocky helmet",
-    "map": "MAP_ROUTE121",
-    "qualifier": "Defeat Byron"
+    "name": "TM58 - Rising Voltage",
+    "map": "MAP_EVER_GRANDE_CITY",
+    "qualifier": ""
   },
   {
-    "name": "Assault vest",
-    "map": "MAP_LILYCOVE_CITY",
-    "qualifier": "Defeat Dawn"
+    "name": "TM163 - Supercell Slam",
+    "map": "MAP_EVER_GRANDE_CITY",
+    "qualifier": ""
   },
   {
     "name": "Eject Button",
-    "map": "MAP_EVERGRANDE_CITY",
-    "qualifier": "Defeat Volkner"
-  },
-  {
-    "name": "Protective Pads",
-    "map": "MAP_ROUTE111",
-    "qualifier": "Defeat Black Belt Daisuke"
-  },
-  { "name": "Metronome", "map": "MAP_ROUTE117", "qualifier": "Defeat Fantina" },
-  {
-    "name": "Loaded Dice",
-    "map": "MAP_ROUTE111",
-    "qualifier": "Defeat Black Belt Daisuke"
-  },
-
-  {
-    "name": "Pomeg Berry",
-    "map": "MAP_DEWFORD_TOWN",
-    "qualifier": "Outdoor Clerks"
-  },
-
-  {
-    "name": "Ability Capsule",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Ability Patch",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Blue Shard",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Red Shard",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Green Shard",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Yellow Shard",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Chople Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Colbur Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Wacan Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Charti Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Chilan Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Haban Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Roseli Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Shuca Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Babiri Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Kasib Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Coba Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Kebia Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Occa Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Pasho Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Payapa Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Rindo Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Yache Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  {
-    "name": "Tanga Berry",
-    "map": "MAP_SLATEPORT_CITY_MARKET",
-    "qualifier": "Various Vendors"
-  },
-  { "name": "Fire Stone", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-  {
-    "name": "Thunderstone",
-    "map": "MAP_VERDANTURF_TOWN_MART",
-    "qualifier": ""
-  },
-  { "name": "Leaf Stone", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-  { "name": "Water Stone", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-  { "name": "Sun Stone", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-  { "name": "Moon Stone", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-  { "name": "Prism Scale", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-  { "name": "Ice Stone", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-  { "name": "Link Cable", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-  { "name": "Dusk Stone", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-  { "name": "Dawn Stone", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-  { "name": "Shiny Stone", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-  { "name": "King's Rock", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-  { "name": "Metal Coat", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-  { "name": "Upgrade", "map": "MAP_VERDANTURF_TOWN_MART", "qualifier": "" },
-
-  {
-    "name": "Heal Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
+    "map": "MAP_EVER_GRANDE_CITY",
     "qualifier": ""
   },
   {
-    "name": "Net Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "Zygarde Cube",
+    "map": "MAP_EVER_GRANDE_CITY",
+    "qualifier": "Pokemon Center_1 F"
   },
   {
-    "name": "Nest Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM02 - Dragon Claw",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Dive Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM25 - Thunder",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Dusk Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM34 - Teleport",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Timer Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM38 - Fire Blast",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Quick Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM67 - Poltergeist",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Repeat Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM73 - Thunder Wave",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Luxury Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM119 - Iron Head",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Level Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM120 - Liquidation",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Lure Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM121 - Hydro Pump",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Moon Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM122 - Drill Run",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Friend Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM123 - Blaze Kick",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Love Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM125 - Zen Headbutt",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Fast Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM126 - Weather Ball",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Heavy Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM127 - Air Slash",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Dream Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM128 - Hex",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Cherish Ball",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM129 - Mystical Fire",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Fire Stone",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM130 - Seed Bomb",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Thunderstone",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM131 - Leaf Blade",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Leaf Stone",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM132 - Knock Off",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Water Stone",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM133 - Power Gem",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Sun Stone",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM134 - Rock Blast",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Moon Stone",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM135 - Pin Missile",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Prism Scale",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM136 - Icicle Spear",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Ice Stone",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM137 - Tail Slap",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Link Cable",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM138 - Arm Thrust",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Dusk Stone",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM139 - Foul Play",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Dawn Stone",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM140 - Iron Defense",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Shiny Stone",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM158 - Body Slam",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "King's Rock",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
+    "name": "TM159 - Play Rough",
+    "map": "MAP_FALLARBOR_TOWN",
+    "qualifier": "Move Relearners House"
   },
   {
-    "name": "Metal Coat",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
-  },
-  {
-    "name": "Upgrade",
-    "map": "MAP_LILYCOVE_DEPARTMENT_STORE_4TH_FLOOR",
-    "qualifier": ""
-  },
-  {
-    "name": "Venusaurite",
+    "name": "EmpoleoniteO",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "From creator Xavier after defeating him"
-  },
-  {
-    "name": "Charizardite X",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "From creator Justin after defeating him"
+    "qualifier": "Creator House"
   },
   {
     "name": "Blastoisinite",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "From creator Isaac after defeating him"
-  },
-  {
-    "name": "Sceptilite",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "From creator Xavier after defeating him"
-  },
-  {
-    "name": "Blazikenite",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "From creator Justin after defeating him"
+    "qualifier": "Creator House"
   },
   {
     "name": "Swampertite",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "From creator Isaac after defeating him"
+    "qualifier": "Creator House"
   },
   {
-    "name": "Lucarionite",
-    "map": "MAP_JAGGED_PASS",
-    "qualifier": "From Maylene after defeating her"
+    "name": "TM90 - Substitute",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Creator House"
   },
   {
-    "name": "Alakazite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
+    "name": "Choice Scarf",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Creator House"
   },
   {
-    "name": "Sablenite",
-    "map": "MAP_ROUTE117",
-    "qualifier": "From Fantina after defeating her"
+    "name": "CharizarditeX",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Creator House"
   },
   {
-    "name": "Kangaskhanite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
+    "name": "CharizarditeY",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Creator House"
   },
   {
-    "name": "Audinite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
+    "name": "Blazikenite",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Creator House"
   },
   {
-    "name": "Garbodorite",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing first puzzle"
+    "name": "TM41 - Dragon Dance",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Creator House"
   },
   {
-    "name": "Gardevoirite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
+    "name": "Choice Specs",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Creator House"
   },
   {
-    "name": "Absolite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
+    "name": "Torterrite",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Creator House"
   },
   {
-    "name": "Kinglerite",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing third puzzle"
+    "name": "Venusaurite",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Creator House"
+  },
+  {
+    "name": "Sceptilite",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Creator House"
+  },
+  {
+    "name": "TM26 - Earthquake",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Creator House"
+  },
+  {
+    "name": "Choice Band",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Creator House"
+  },
+  {
+    "name": "TM107 - Brave Bird",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "TM95 - Acrobatics",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "TM145 - Hurricane",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "TM153 - Tailwind",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Gym"
   },
   {
     "name": "Altarianite",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "From Winona after defeating her"
+    "qualifier": "Gym"
   },
   {
-    "name": "Drednawite",
-    "map": "MAP_ROUTE118",
-    "qualifier": "From Wake after defeating him"
-  },
-  {
-    "name": "Sharpedonite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Toxtricitite",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing first puzzle"
-  },
-  {
-    "name": "Heracronite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Lopunnite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Pidgeotite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Beedrilite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Glalitite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Abomasite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Laprasite",
-    "map": "MAP_ROUTE118",
-    "qualifier": "From Wake after defeating him"
-  },
-  {
-    "name": "Medichamite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Sandacondite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Applite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Aggronite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Steelixite",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing third puzzle"
-  },
-  {
-    "name": "Cameruptite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Charizardite Y",
+    "name": "TM107 - Brave Bird",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "From creator Justin after defeating him"
+    "qualifier": "Gym"
   },
   {
-    "name": "Tyranitarite",
-    "map": "MAP_VICTORY_ROAD",
-    "qualifier": "From Wally after defeating him"
+    "name": "TM95 - Acrobatics",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Gym"
   },
   {
-    "name": "Mawilite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
+    "name": "TM145 - Hurricane",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Gym"
   },
   {
-    "name": "Houndoominite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
+    "name": "TM153 - Tailwind",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Gym"
   },
   {
-    "name": "Banettite",
-    "map": "MAP_ROUTE117",
-    "qualifier": "From Fantina after defeating her"
+    "name": "Altarianite",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "Gym"
   },
   {
-    "name": "Pinsirite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
+    "name": "TM151 - Stored Power",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "House2"
   },
   {
-    "name": "Ampharosite",
-    "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "From Wattson after defeating him"
+    "name": "Mental Herb",
+    "map": "MAP_FORTREE_CITY",
+    "qualifier": "House4"
+  },
+  {
+    "name": "HM05 - Flash",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "1 F"
+  },
+  {
+    "name": "TM47 - Steel Wing",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "Sitrus Berry",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "Heal Ball",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "Berry Juice",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "Moon Stone",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "Throat Spray",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "PP Up",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "Iron Ball",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "Wide Lens",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "Heat Rock",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "Damp Rock",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "Smooth Rock",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "Icy Rock",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "Leek",
+    "map": "MAP_GRANITE_CAVE",
+    "qualifier": "Stevens Room"
+  },
+  {
+    "name": "TM01 - Focus Punch",
+    "map": "MAP_JAGGED_PASS",
+    "qualifier": ""
+  },
+  {
+    "name": "TM52 - Focus Blast",
+    "map": "MAP_JAGGED_PASS",
+    "qualifier": ""
+  },
+  {
+    "name": "TM60 - Drain Punch",
+    "map": "MAP_JAGGED_PASS",
+    "qualifier": ""
+  },
+  {
+    "name": "TM105 - Body Press",
+    "map": "MAP_JAGGED_PASS",
+    "qualifier": ""
+  },
+  {
+    "name": "TM143 - Aura Sphere",
+    "map": "MAP_JAGGED_PASS",
+    "qualifier": ""
+  },
+  {
+    "name": "Lucarionite",
+    "map": "MAP_JAGGED_PASS",
+    "qualifier": ""
   },
   {
     "name": "Machampite",
     "map": "MAP_JAGGED_PASS",
-    "qualifier": "From Maylene after defeating her"
+    "qualifier": ""
   },
   {
-    "name": "Coalossite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
+    "name": "Expert Belt",
+    "map": "MAP_JAGGED_PASS",
+    "qualifier": ""
+  },
+  {
+    "name": "Mega Ring",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": ""
+  },
+  {
+    "name": "Go-Goggles",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": ""
+  },
+  {
+    "name": "SafetyGoggles",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": ""
+  },
+  {
+    "name": "Mega Ring",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": ""
+  },
+  {
+    "name": "Go-Goggles",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": ""
+  },
+  {
+    "name": "SafetyGoggles",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": ""
+  },
+  {
+    "name": "TM50 - Overheat",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Gym_1 F"
+  },
+  {
+    "name": "TM61 - Will O Wisp",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Gym_1 F"
+  },
+  {
+    "name": "TM104 - Heat Crash",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Gym_1 F"
+  },
+  {
+    "name": "TM144 - Heat Wave",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Gym_1 F"
+  },
+  {
+    "name": "TM150 - Flare Blitz",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Gym_1 F"
+  },
+  {
+    "name": "Infernapite",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Gym_1 F"
+  },
+  {
+    "name": "TM50 - Overheat",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Gym_1 F"
+  },
+  {
+    "name": "TM61 - Will O Wisp",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Gym_1 F"
+  },
+  {
+    "name": "TM104 - Heat Crash",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Gym_1 F"
+  },
+  {
+    "name": "TM144 - Heat Wave",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Gym_1 F"
+  },
+  {
+    "name": "TM150 - Flare Blitz",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Gym_1 F"
+  },
+  {
+    "name": "Infernapite",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Gym_1 F"
+  },
+  {
+    "name": "Charcoal",
+    "map": "MAP_LAVARIDGE_TOWN",
+    "qualifier": "Herb Shop"
+  },
+  {
+    "name": "Assault Vest",
+    "map": "MAP_LILYCOVE_CITY",
+    "qualifier": ""
+  },
+  {
+    "name": "Dragon Memory",
+    "map": "MAP_LILYCOVE_CITY",
+    "qualifier": "House2"
+  },
+  {
+    "name": "InfiniteCandy",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": ""
+  },
+  {
+    "name": "Venusaurite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "CharizarditeX",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "CharizarditeY",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Blastoisinite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Beedrillite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Pidgeotite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Alakazite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
   },
   {
     "name": "Slowbronite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
   },
   {
-    "name": "Salamencite",
-    "map": "MAP_VICTORY_ROAD",
-    "qualifier": "From Wally after defeating him"
+    "name": "Gengarite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
   },
   {
-    "name": "Slakite",
-    "map": "MAP_VICTORY_ROAD",
-    "qualifier": "From Wally after defeating him"
+    "name": "Kangaskhanite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
   },
   {
-    "name": "Butterfrite",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing second puzzle"
-  },
-  {
-    "name": "Orbeetlite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Scizorite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Snorlaxite",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing second puzzle"
-  },
-  {
-    "name": "Garchompite",
-    "map": "MAP_VICTORY_ROAD",
-    "qualifier": "From Wally after defeating him"
-  },
-  {
-    "name": "Metagrossite",
-    "map": "MAP_VICTORY_ROAD",
-    "qualifier": "From Wally after defeating him"
-  },
-  {
-    "name": "Aerodactylite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
+    "name": "Pinsirite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
   },
   {
     "name": "Gyaradosite",
-    "map": "MAP_ROUTE118",
-    "qualifier": "From Wake after defeating him"
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Aerodactylite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Mewtwonite X",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Mewtwonite Y",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Ampharosite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Steelixite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Scizorite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Heracronite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Houndoominite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Tyranitarite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Sceptilite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Blazikenite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Swampertite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Gardevoirite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Sablenite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Mawilite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Aggronite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Medichamite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Manectite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Sharpedonite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Cameruptite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Altarianite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Banettite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Absolite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Glalitite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Salamencite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Metagrossite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Latiasite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Latiosite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Lopunnite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Garchompite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Lucarionite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Abomasite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Galladite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Audinite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Diancite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Luxrite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Torterrite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "EmpoleoniteO",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "EmpoleoniteD",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Infernapite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Kinglerite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Butterfrite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Machampite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Laprasite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Snorlaxite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Garbodorite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Orbeetlite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Drednawite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Coalossite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Applite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Sandacondite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Toxtricitite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Centiskite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Grimmite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Copperajite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Slakite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Roseradite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Dusknoirite",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Brendans House_2 F"
+  },
+  {
+    "name": "Aurora Ticket",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Quick Ball",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Poké Ball",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Oran Berry",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "AbilityCapsle",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Silk Scarf",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Mystic Water",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Miracle Seed",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Charcoal",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Never-MeltIce",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Fairy Feather",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Steel Feather",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Sharp Beak",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Silver Powder",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Soft Sand",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Hard Stone",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Spell Tag",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Twisted Spoon",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Magnet",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Poison Barb",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Black Belt",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Black Glasses",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Dragon Fang",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Blue Shard",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Red Shard",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Green Shard",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Yellow Shard",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Absorb Bulb",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Mental Herb",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Light Ball",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Shiny Charm",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Poké Ball",
+    "map": "MAP_LITTLEROOT_TOWN",
+    "qualifier": "Professor Birchs Lab"
+  },
+  {
+    "name": "Basement Key",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": ""
+  },
+  {
+    "name": "TM156 - Close Combat",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": ""
+  },
+  {
+    "name": "Mach Bike",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "Bike Shop"
+  },
+  {
+    "name": "Acro Bike",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "Bike Shop"
+  },
+  {
+    "name": "Mach Bike",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "Bike Shop"
+  },
+  {
+    "name": "Acro Bike",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "Bike Shop"
+  },
+  {
+    "name": "Mach Bike",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "Bike Shop"
+  },
+  {
+    "name": "Acro Bike",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "Bike Shop"
+  },
+  {
+    "name": "TM92 - Volt Switch",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "Luxrite",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "Gym"
   },
   {
     "name": "Manectite",
     "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "From Wattson after defeating him"
+    "qualifier": "Gym"
+  },
+  {
+    "name": "Ampharosite",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "TM92 - Volt Switch",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "Luxrite",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "Manectite",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "Ampharosite",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "HM06 - Rock Smash",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "House1"
+  },
+  {
+    "name": "Coin Case",
+    "map": "MAP_MAUVILLE_CITY",
+    "qualifier": "House2"
+  },
+  {
+    "name": "Root Fossil",
+    "map": "MAP_MIRAGE_TOWER",
+    "qualifier": "4 F"
+  },
+  {
+    "name": "Claw Fossil",
+    "map": "MAP_MIRAGE_TOWER",
+    "qualifier": "4 F"
+  },
+  {
+    "name": "King's Rock",
+    "map": "MAP_MOSSDEEP_CITY",
+    "qualifier": ""
+  },
+  {
+    "name": "TM55 - Expanding Force",
+    "map": "MAP_MOSSDEEP_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "TM106 - Trick Room",
+    "map": "MAP_MOSSDEEP_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "TM55 - Expanding Force",
+    "map": "MAP_MOSSDEEP_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "TM106 - Trick Room",
+    "map": "MAP_MOSSDEEP_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "Super Rod",
+    "map": "MAP_MOSSDEEP_CITY",
+    "qualifier": "House3"
+  },
+  {
+    "name": "Sun Stone",
+    "map": "MAP_MOSSDEEP_CITY",
+    "qualifier": "Space Center_1 F"
+  },
+  {
+    "name": "Sun Stone",
+    "map": "MAP_MOSSDEEP_CITY",
+    "qualifier": "Space Center_1 F"
+  },
+  {
+    "name": "Magma Emblem",
+    "map": "MAP_MOSSDEEP_CITY",
+    "qualifier": "Space Center_2 F"
+  },
+  {
+    "name": "HM08 - Dive",
+    "map": "MAP_MOSSDEEP_CITY",
+    "qualifier": "Stevens House"
+  },
+  {
+    "name": "Lava Cookie",
+    "map": "MAP_MT_CHIMNEY",
+    "qualifier": ""
+  },
+  {
+    "name": "Meteorite",
+    "map": "MAP_MT_CHIMNEY",
+    "qualifier": ""
+  },
+  {
+    "name": "Cleanse Tag",
+    "map": "MAP_MT_PYRE",
+    "qualifier": "1 F"
+  },
+  {
+    "name": "Red Orb",
+    "map": "MAP_MT_PYRE",
+    "qualifier": "Summit"
+  },
+  {
+    "name": "Blue Orb",
+    "map": "MAP_MT_PYRE",
+    "qualifier": "Summit"
+  },
+  {
+    "name": "Potion",
+    "map": "MAP_OLDALE_TOWN",
+    "qualifier": ""
+  },
+  {
+    "name": "Shiny Charm",
+    "map": "MAP_OLDALE_TOWN",
+    "qualifier": "House2"
+  },
+  {
+    "name": "Douse Drive",
+    "map": "MAP_PACIFIDLOG_TOWN",
+    "qualifier": "House1"
+  },
+  {
+    "name": "Exp. Share",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": ""
+  },
+  {
+    "name": "Hex Orb",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": ""
+  },
+  {
+    "name": "Old Rod",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": ""
+  },
+  {
+    "name": "Enigma Berry",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "TM27 - Return",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "TM42 - Facade",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "TM75 - Swords Dance",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "TM141 - Nasty Plot",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "TM48 - Meteor Beam",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "Wallys House"
+  },
+  {
+    "name": "TM59 - Dragon Pulse",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "Wallys House"
+  },
+  {
+    "name": "TM68 - Dual Chop",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "Wallys House"
+  },
+  {
+    "name": "TM85 - Future Sight",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "Wallys House"
+  },
+  {
+    "name": "TM100 - Dual Wingbeat",
+    "map": "MAP_PETALBURG_CITY",
+    "qualifier": "Wallys House"
+  },
+  {
+    "name": "Great Ball",
+    "map": "MAP_PETALBURG_WOODS",
+    "qualifier": ""
+  },
+  {
+    "name": "Miracle Seed",
+    "map": "MAP_PETALBURG_WOODS",
+    "qualifier": ""
+  },
+  {
+    "name": "TM89 - U Turn",
+    "map": "MAP_PETALBURG_WOODS",
+    "qualifier": ""
+  },
+  {
+    "name": "Eviolite",
+    "map": "MAP_PETALBURG_WOODS",
+    "qualifier": ""
+  },
+  {
+    "name": "Leaf Stone",
+    "map": "MAP_PETALBURG_WOODS",
+    "qualifier": ""
+  },
+  {
+    "name": "Chesto Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "White Herb",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Hex Orb",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "TM109 - Bug Bite",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Aspear Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Persim Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Pecha Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Rawst Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Cheri Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Chesto Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Chople Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Colbur Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Wacan Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Charti Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Chilan Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Haban Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Roseli Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Shuca Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Babiri Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Kasib Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Coba Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Kebia Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Occa Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Passho Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Payapa Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Rindo Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Yache Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Tanga Berry",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Harbor Mail",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Wise Glasses",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": ""
+  },
+  {
+    "name": "Wailmer Pail",
+    "map": "MAP_ROUTE_1_0_4",
+    "qualifier": "Pretty Petal Flower Shop"
+  },
+  {
+    "name": "Soft Sand",
+    "map": "MAP_ROUTE_1_0_9",
+    "qualifier": ""
+  },
+  {
+    "name": "HM02 - Fly",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Dowsing MCHN",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "TM111 - Fire Punch",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "TM112 - Ice Punch",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "TM113 - Thunder Punch",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "TM114 - Fire Fang",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "TM115 - Ice Fang",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "TM116 - Thunder Fang",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "TM117 - Psychic Fangs",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "TM118 - Poison Fang",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Great Ball",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Ultra Ball",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Dive Ball",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Dusk Ball",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Shiny Stone",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Ice Stone",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Black Sludge",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Toxic Orb",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Flame Orb",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Smoke Ball",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Thick Club",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "WeaknssPolicy",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Grassy Seed",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Electric Seed",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Psychic Seed",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Misty Seed",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Air Balloon",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "TerainExtendr",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "Light Clay",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": ""
+  },
+  {
+    "name": "TM152 - Gunk Shot",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "Garbodorite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "Toxtricitite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "TM22 - Solar Beam",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "TM32 - Solar Blade",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "TM54 - Grassy Glide",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "TM86 - Grass Knot",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "TM146 - Power Whip",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "TM148 - Bug Buzz",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "TM154 - Megahorn",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "Butterfrite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "Snorlaxite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "Roseradite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "TM71 - Stone Edge",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "Steelixite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "Kinglerite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "BoosterEnergy",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "Smoke Ball",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "TM12 - Taunt",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "Magnet",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "PP Max",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House End"
+  },
+  {
+    "name": "TM152 - Gunk Shot",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "Garbodorite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "Toxtricitite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "TM22 - Solar Beam",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "TM32 - Solar Blade",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "TM54 - Grassy Glide",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "TM86 - Grass Knot",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "TM146 - Power Whip",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "TM148 - Bug Buzz",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "TM154 - Megahorn",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "Butterfrite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "Snorlaxite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "Roseradite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "TM71 - Stone Edge",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "Steelixite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "Kinglerite",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "BoosterEnergy",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "Smoke Ball",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "TM12 - Taunt",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "Magnet",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "PP Max",
+    "map": "MAP_ROUTE_1_1_0",
+    "qualifier": "Trick House Entrance"
+  },
+  {
+    "name": "Razz Berry",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": ""
+  },
+  {
+    "name": "TM51 - Roost",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": ""
+  },
+  {
+    "name": "TM83 - Scald",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": ""
+  },
+  {
+    "name": "TM91 - Flash Cannon",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": ""
+  },
+  {
+    "name": "EmpoleoniteD",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": ""
+  },
+  {
+    "name": "AbilityPatch",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": ""
+  },
+  {
+    "name": "ProtectvePads",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": ""
+  },
+  {
+    "name": "PunchingGlove",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": ""
+  },
+  {
+    "name": "KickingShoes",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": ""
+  },
+  {
+    "name": "Loaded Dice",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": ""
+  },
+  {
+    "name": "Mystic Ticket",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Alakazite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Kangaskhanite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Audinite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Gardevoirite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Absolite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Sharpedonite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Heracronite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Lopunnite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Pidgeotite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Beedrillite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Glalitite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Abomasite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Medichamite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Aggronite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Cameruptite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Mawilite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Houndoominite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Pinsirite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Coalossite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Slowbronite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Orbeetlite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Scizorite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Aerodactylite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
   },
   {
     "name": "Galladite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
-  },
-  {
-    "name": "Gengarite",
-    "map": "MAP_ROUTE117",
-    "qualifier": "From Fantina after defeating her"
-  },
-  {
-    "name": "Copperajite",
-    "map": "MAP_ROUTE120",
-    "qualifier": "From Byron after defeating him"
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
   },
   {
     "name": "Centiskite",
-    "map": "MAP_ROUTE111",
-    "qualifier": "After defeating the Winstrate family"
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Sandacondite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Applite",
+    "map": "MAP_ROUTE_1_1_1",
+    "qualifier": "Winstrate Familys House"
+  },
+  {
+    "name": "Scope Lens",
+    "map": "MAP_ROUTE_1_1_3",
+    "qualifier": "Glass Workshop"
+  },
+  {
+    "name": "TM05 - Roar",
+    "map": "MAP_ROUTE_1_1_4",
+    "qualifier": ""
+  },
+  {
+    "name": "TM28 - Dig",
+    "map": "MAP_ROUTE_1_1_4",
+    "qualifier": "Fossil Maniacs House"
+  },
+  {
+    "name": "Repeat Ball",
+    "map": "MAP_ROUTE_1_1_6",
+    "qualifier": ""
+  },
+  {
+    "name": "TM39 - Rock Tomb",
+    "map": "MAP_ROUTE_1_1_6",
+    "qualifier": ""
+  },
+  {
+    "name": "Muscle Band",
+    "map": "MAP_ROUTE_1_1_6",
+    "qualifier": ""
+  },
+  {
+    "name": "TM10 - Hidden Power",
+    "map": "MAP_ROUTE_1_1_7",
+    "qualifier": ""
+  },
+  {
+    "name": "TM29 - Psychic",
+    "map": "MAP_ROUTE_1_1_7",
+    "qualifier": ""
+  },
+  {
+    "name": "TM30 - Shadow Ball",
+    "map": "MAP_ROUTE_1_1_7",
+    "qualifier": ""
+  },
+  {
+    "name": "TM31 - Brick Break",
+    "map": "MAP_ROUTE_1_1_7",
+    "qualifier": ""
+  },
+  {
+    "name": "Banettite",
+    "map": "MAP_ROUTE_1_1_7",
+    "qualifier": ""
+  },
+  {
+    "name": "Sablenite",
+    "map": "MAP_ROUTE_1_1_7",
+    "qualifier": ""
+  },
+  {
+    "name": "Gengarite",
+    "map": "MAP_ROUTE_1_1_7",
+    "qualifier": ""
+  },
+  {
+    "name": "Dusknoirite",
+    "map": "MAP_ROUTE_1_1_7",
+    "qualifier": ""
+  },
+  {
+    "name": "Metronome",
+    "map": "MAP_ROUTE_1_1_7",
+    "qualifier": ""
+  },
+  {
+    "name": "Leftovers",
+    "map": "MAP_ROUTE_1_1_7",
+    "qualifier": ""
+  },
+  {
+    "name": "Good Rod",
+    "map": "MAP_ROUTE_1_1_8",
+    "qualifier": ""
+  },
+  {
+    "name": "Laprasite",
+    "map": "MAP_ROUTE_1_1_8",
+    "qualifier": ""
+  },
+  {
+    "name": "Drednawite",
+    "map": "MAP_ROUTE_1_1_8",
+    "qualifier": ""
+  },
+  {
+    "name": "Gyaradosite",
+    "map": "MAP_ROUTE_1_1_8",
+    "qualifier": ""
+  },
+  {
+    "name": "Focus Sash",
+    "map": "MAP_ROUTE_1_1_8",
+    "qualifier": ""
+  },
+  {
+    "name": "Life Orb",
+    "map": "MAP_ROUTE_1_1_9",
+    "qualifier": ""
+  },
+  {
+    "name": "Heavy-DtyBts",
+    "map": "MAP_ROUTE_1_1_9",
+    "qualifier": ""
+  },
+  {
+    "name": "Leftovers",
+    "map": "MAP_ROUTE_1_1_9",
+    "qualifier": ""
+  },
+  {
+    "name": "PP Max",
+    "map": "MAP_ROUTE_1_1_9",
+    "qualifier": ""
+  },
+  {
+    "name": "Devon Scope",
+    "map": "MAP_ROUTE_1_2_0",
+    "qualifier": ""
+  },
+  {
+    "name": "TM76 - Stealth Rock",
+    "map": "MAP_ROUTE_1_2_1",
+    "qualifier": ""
+  },
+  {
+    "name": "TM147 - High Horsepower",
+    "map": "MAP_ROUTE_1_2_1",
+    "qualifier": ""
+  },
+  {
+    "name": "Copperajite",
+    "map": "MAP_ROUTE_1_2_1",
+    "qualifier": ""
+  },
+  {
+    "name": "Rocky Helmet",
+    "map": "MAP_ROUTE_1_2_1",
+    "qualifier": ""
+  },
+  {
+    "name": "Leftovers",
+    "map": "MAP_ROUTE_1_2_1",
+    "qualifier": ""
+  },
+  {
+    "name": "Spelon Berry",
+    "map": "MAP_ROUTE_1_2_3",
+    "qualifier": "Berry Masters House"
+  },
+  {
+    "name": "Pamtre Berry",
+    "map": "MAP_ROUTE_1_2_3",
+    "qualifier": "Berry Masters House"
+  },
+  {
+    "name": "Watmel Berry",
+    "map": "MAP_ROUTE_1_2_3",
+    "qualifier": "Berry Masters House"
+  },
+  {
+    "name": "Durin Berry",
+    "map": "MAP_ROUTE_1_2_3",
+    "qualifier": "Berry Masters House"
+  },
+  {
+    "name": "Belue Berry",
+    "map": "MAP_ROUTE_1_2_3",
+    "qualifier": "Berry Masters House"
+  },
+  {
+    "name": "RotomCatalog",
+    "map": "MAP_ROUTE_1_2_4",
+    "qualifier": "Diving Treasure Hunters House"
+  },
+  {
+    "name": "Reveal Glass",
+    "map": "MAP_ROUTE_1_2_4",
+    "qualifier": "Diving Treasure Hunters House"
+  },
+  {
+    "name": "Gracidea",
+    "map": "MAP_ROUTE_1_2_4",
+    "qualifier": "Diving Treasure Hunters House"
+  },
+  {
+    "name": "Prison Bottle",
+    "map": "MAP_ROUTE_1_2_4",
+    "qualifier": "Diving Treasure Hunters House"
+  },
+  {
+    "name": "TM14 - Blizzard",
+    "map": "MAP_ROUTE_1_2_5",
+    "qualifier": ""
+  },
+  {
+    "name": "TM70 - Triple Axel",
+    "map": "MAP_ROUTE_1_2_5",
+    "qualifier": ""
+  },
+  {
+    "name": "Great Ball",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": ""
+  },
+  {
+    "name": "HM01 - Cut",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": "Cutters House"
+  },
+  {
+    "name": "DNA Splicers",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": "Devon Corp_2 F"
+  },
+  {
+    "name": "ReinsOfUnity",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": "Devon Corp_2 F"
+  },
+  {
+    "name": "N-Solarizer",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": "Devon Corp_2 F"
+  },
+  {
+    "name": "N-Lunarizer",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": "Devon Corp_2 F"
+  },
+  {
+    "name": "Letter",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": "Devon Corp_3 F"
+  },
+  {
+    "name": "Water Stone",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": "Devon Corp_3 F"
+  },
+  {
+    "name": "Fire Stone",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": "Devon Corp_3 F"
+  },
+  {
+    "name": "Thunder Stone",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": "Devon Corp_3 F"
+  },
+  {
+    "name": "Sun Stone",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": "Devon Corp_3 F"
+  },
+  {
+    "name": "Premier Ball",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": "Flat2_2 F"
+  },
+  {
+    "name": "TM96 - Bulldoze",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": "Gym"
+  },
+  {
+    "name": "Quick Claw",
+    "map": "MAP_RUSTBORO_CITY",
+    "qualifier": "Pokemon School"
+  },
+  {
+    "name": "HM04 - Strength",
+    "map": "MAP_RUSTURF_TUNNEL",
+    "qualifier": ""
+  },
+  {
+    "name": "Devon Parts",
+    "map": "MAP_RUSTURF_TUNNEL",
+    "qualifier": ""
+  },
+  {
+    "name": "TM49 - Leech Life",
+    "map": "MAP_S_S_TIDAL_ROOMS",
+    "qualifier": ""
+  },
+  {
+    "name": "Shell Bell",
+    "map": "MAP_SHOAL_CAVE",
+    "qualifier": "Low Tide Entrance Room"
+  },
+  {
+    "name": "Shoal Shell",
+    "map": "MAP_SHOAL_CAVE",
+    "qualifier": "Low Tide Inner Room"
+  },
+  {
+    "name": "Shoal Shell",
+    "map": "MAP_SHOAL_CAVE",
+    "qualifier": "Low Tide Inner Room"
+  },
+  {
+    "name": "Shoal Shell",
+    "map": "MAP_SHOAL_CAVE",
+    "qualifier": "Low Tide Inner Room"
+  },
+  {
+    "name": "Shoal Shell",
+    "map": "MAP_SHOAL_CAVE",
+    "qualifier": "Low Tide Inner Room"
+  },
+  {
+    "name": "Shoal Salt",
+    "map": "MAP_SHOAL_CAVE",
+    "qualifier": "Low Tide Inner Room"
+  },
+  {
+    "name": "Shoal Salt",
+    "map": "MAP_SHOAL_CAVE",
+    "qualifier": "Low Tide Inner Room"
+  },
+  {
+    "name": "Shoal Salt",
+    "map": "MAP_SHOAL_CAVE",
+    "qualifier": "Low Tide Lower Room"
+  },
+  {
+    "name": "Focus Band",
+    "map": "MAP_SHOAL_CAVE",
+    "qualifier": "Low Tide Lower Room"
+  },
+  {
+    "name": "Shoal Salt",
+    "map": "MAP_SHOAL_CAVE",
+    "qualifier": "Low Tide Stairs Room"
+  },
+  {
+    "name": "Powder Jar",
+    "map": "MAP_SLATEPORT_CITY",
+    "qualifier": ""
+  },
+  {
+    "name": "TM46 - Thief",
+    "map": "MAP_SLATEPORT_CITY",
+    "qualifier": "Battle Tent Lobby"
+  },
+  {
+    "name": "DeepSeaTooth",
+    "map": "MAP_SLATEPORT_CITY",
+    "qualifier": "Harbor"
+  },
+  {
+    "name": "DeepSeaScale",
+    "map": "MAP_SLATEPORT_CITY",
+    "qualifier": "Harbor"
+  },
+  {
+    "name": "TM03 - Flip Turn",
+    "map": "MAP_SLATEPORT_CITY",
+    "qualifier": "Oceanic Museum_1 F"
+  },
+  {
+    "name": "Red Scarf",
+    "map": "MAP_SLATEPORT_CITY",
+    "qualifier": "Pokemon Fan Club"
+  },
+  {
+    "name": "Blue Scarf",
+    "map": "MAP_SLATEPORT_CITY",
+    "qualifier": "Pokemon Fan Club"
+  },
+  {
+    "name": "Pink Scarf",
+    "map": "MAP_SLATEPORT_CITY",
+    "qualifier": "Pokemon Fan Club"
+  },
+  {
+    "name": "Green Scarf",
+    "map": "MAP_SLATEPORT_CITY",
+    "qualifier": "Pokemon Fan Club"
+  },
+  {
+    "name": "Yellow Scarf",
+    "map": "MAP_SLATEPORT_CITY",
+    "qualifier": "Pokemon Fan Club"
+  },
+  {
+    "name": "Soothe Bell",
+    "map": "MAP_SLATEPORT_CITY",
+    "qualifier": "Pokemon Fan Club"
+  },
+  {
+    "name": "Figy Berry",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": ""
+  },
+  {
+    "name": "Iapapa Berry",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": ""
+  },
+  {
+    "name": "HM07 - Waterfall",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": ""
   },
   {
     "name": "Grimmite",
     "map": "MAP_SOOTOPOLIS_CITY",
-    "qualifier": "From Juan after defeating him"
+    "qualifier": "Gym_1 F"
   },
   {
-    "name": "Latiasite",
-    "map": "MAP_SOUTHERN_ISLAND",
-    "qualifier": "Post game"
-  },
-  {
-    "name": "Latiosite",
-    "map": "MAP_SOUTHERN_ISLAND",
-    "qualifier": "Post game"
-  },
-  { "name": "Diancite", "map": "MAP_NAVEL_ROCK", "qualifier": "Post game" },
-  {
-    "name": "Mewtwonite X",
-    "map": "MAP_METEOR_FALLS_STEVENS_CAVE",
-    "qualifier": "Post game"
-  },
-  {
-    "name": "Mewtwonite Y",
-    "map": "MAP_METEOR_FALLS_STEVENS_CAVE",
-    "qualifier": "Post game"
-  },
-  {
-    "number": "001",
-    "name": "TM001 - Focus Punch",
-    "map": "MAP_JAGGED_PASS",
-    "qualifier": "From Maylene after defeating her"
-  },
-  {
-    "number": "002",
-    "name": "TM002 - Dragon Claw",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "003",
-    "name": "TM003 - Flip Turn",
-    "map": "MAP_SLATEPORT_CITY",
-    "qualifier": "From the Aqua grunt nearest the entrace inside"
-  },
-  {
-    "number": "004",
-    "name": "TM004 - Calm Mind",
-    "map": "MAP_VERDANTURF_TOWN",
-    "qualifier": "From Ursula after defeating her in a \"dance battle\""
-  },
-  {
-    "number": "005",
-    "name": "TM005 - Roar",
-    "map": "MAP_ROUTE114",
-    "qualifier": "From the man next to his Poochyena"
-  },
-  {
-    "number": "006",
-    "name": "TM006 - Toxic",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "007",
-    "name": "TM007 - Snowscape",
-    "map": "MAP_ROUTE114",
-    "qualifier": "On the cliffs past a smashable rock"
-  },
-  {
-    "number": "008",
-    "name": "TM008 - Bulk Up",
-    "map": "MAP_VERDANTURF_TOWN",
-    "qualifier": "From Ursula after defeating her in a \"dance battle\""
-  },
-  {
-    "number": "009",
-    "name": "TM009 - Bullet Seed",
-    "map": "MAP_ROUTE103",
-    "qualifier": "West of the Trick House and past the trees that need to be Cut"
-  },
-  {
-    "number": "010",
-    "name": "TM010 - Hidden Power",
-    "map": "MAP_ROUTE117",
-    "qualifier": "From the Ninja Kid hidden below the flower field"
-  },
-  {
-    "number": "011",
-    "name": "TM011 - Sunny Day",
-    "map": "MAP_ROUTE124",
-    "qualifier": "On the ground, requires Surf"
-  },
-  {
-    "number": "012",
-    "name": "TM012 - Taunt",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "013",
-    "name": "TM013 - Ice Beam",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Outdoor Clerk"
-  },
-  {
-    "number": "014",
-    "name": "TM014 - Blizzard",
-    "map": "MAP_ROUTE125",
-    "qualifier": "From Candice after defeating her"
-  },
-  {
-    "number": "015",
-    "name": "TM015 - Electroweb",
-    "map": "MAP_DEWFORD_TOWN",
-    "qualifier": "Outdoor Clerks"
-  },
-  {
-    "number": "016",
-    "name": "TM016 - Light Screen",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "017",
-    "name": "TM017 - Protect",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "018",
-    "name": "TM018 - Rain Dance",
-    "map": "MAP_ROUTE121",
-    "qualifier": "On the ground South of the entrance to the Safari Zone"
-  },
-  {
-    "number": "019",
-    "name": "TM019 - Giga Drain",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "020",
-    "name": "TM020 - Hyper Voice",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Outdoor Clerk"
-  },
-  {
-    "number": "021",
-    "name": "TM021 - Icy Wind",
-    "map": "MAP_DEWFORD_TOWN",
-    "qualifier": "Outdoor Clerks"
-  },
-  {
-    "number": "022",
-    "name": "TM022 - Solar Beam",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing second puzzle"
-  },
-  {
-    "number": "023",
-    "name": "TM023 - Iron Tail",
-    "map": "MAP_METEOR_FALLS",
-    "qualifier": "On the ground near the Southern exit"
-  },
-  {
-    "number": "024",
-    "name": "TM024 - Thunderbolt",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Outdoor Clerk"
-  },
-  {
-    "number": "025",
-    "name": "TM025 - Thunder",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "026",
-    "name": "TM026 - Earthquake",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "From creator Xavier after defeating him"
-  },
-  {
-    "number": "027",
-    "name": "TM027 - Return",
-    "map": "MAP_PETALBURG_CITY",
-    "qualifier": "From Norman after defeating him"
-  },
-  {
-    "number": "028",
-    "name": "TM028 - Dig",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From kid brother of the Fossil Maniac"
-  },
-  {
-    "number": "029",
-    "name": "TM029 - Psychic",
-    "map": "MAP_ROUTE117",
-    "qualifier": "From Fantina after defeating her in the flower field"
-  },
-  {
-    "number": "030",
-    "name": "TM030 - Shadow Ball",
-    "map": "MAP_ROUTE117",
-    "qualifier": "From Fantina after defeating her in the flower field"
-  },
-  {
-    "number": "031",
-    "name": "TM031 - Brick Break",
-    "map": "MAP_ROUTE117",
-    "qualifier": "From Fantina after defeating her in the flower field"
-  },
-  {
-    "number": "032",
-    "name": "TM032 - Solar Blade",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing second puzzle"
-  },
-  {
-    "number": "033",
-    "name": "TM033 - Reflect",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "034",
-    "name": "TM034 - Teleport",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "035",
-    "name": "TM035 - Flamethrower",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Outdoor Clerk"
-  },
-  {
-    "number": "036",
-    "name": "TM036 - Sludge Bomb",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Outdoor Clerk"
-  },
-  {
-    "number": "037",
-    "name": "TM037 - Sandstorm",
-    "map": "MAP_ROUTE111",
-    "qualifier": "On the ground near the Southern entrance to the desert"
-  },
-  {
-    "number": "038",
-    "name": "TM038 - Fire Blast",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "039",
-    "name": "TM039 - Rock Tomb",
-    "map": "MAP_ROUTE116",
-    "qualifier": "From Roark after defeating him"
-  },
-  {
-    "number": "040",
-    "name": "TM040 - Aerial Ace",
-    "map": "MAP_DEWFORD_TOWN",
-    "qualifier": "Outdoor Clerks"
-  },
-  {
-    "number": "041",
-    "name": "TM041 - Dragon Dance",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "From creator Justin after defeating him"
-  },
-  {
-    "number": "042",
-    "name": "TM042 - Facade",
-    "map": "MAP_PETALBURG_CITY",
-    "qualifier": "From Norman after defeating him"
-  },
-  {
-    "number": "043",
-    "name": "TM043 - Defog",
-    "map": "MAP_ROUTE111",
-    "qualifier": "From the kid staring at a tree past Fiery Path"
-  },
-  {
-    "number": "044",
-    "name": "TM044 - Rest",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "045",
-    "name": "TM045 - Drain Kiss",
-    "map": "MAP_VERDANTURF_TOWN",
-    "qualifier": "In the lobby of the Battle Tent"
-  },
-  {
-    "number": "046",
-    "name": "TM046 - Thief",
-    "map": "MAP_SLATEPORT_CITY",
-    "qualifier": "In the lobby of the Battle Tent"
-  },
-  {
-    "number": "047",
-    "name": "TM047 - Steel Wing",
-    "map": "MAP_GRANITE_CAVE",
-    "qualifier": "From Steven after delivering the letter to him"
-  },
-  {
-    "number": "048",
-    "name": "TM048 - Meteor Beam",
-    "map": "MAP_PETALBURG_CITY",
-    "qualifier": "From Wally's dad after defeating Norman"
-  },
-  {
-    "number": "049",
-    "name": "TM049 - Leech Life",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "050",
-    "name": "TM050 - Overheat",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "From Flannery after defeating her"
-  },
-  {
-    "number": "051",
-    "name": "TM051 - Roost",
-    "map": "MAP_ROUTE111",
-    "qualifier": "From Dawn after defeating her"
-  },
-  {
-    "number": "052",
-    "name": "TM052 - Focus Blast",
-    "map": "MAP_JAGGED_PASS",
-    "qualifier": "From Maylene after defeating her"
-  },
-  {
-    "number": "053",
-    "name": "TM053 - Energy Ball",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Outdoor Clerk"
-  },
-  {
-    "number": "054",
-    "name": "TM054 - Grassy Glide",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing second puzzle"
-  },
-  {
-    "number": "055",
-    "name": "TM055 - Expanding Force",
-    "map": "MAP_MOSSDEEP_CITY",
-    "qualifier": "From Tate and Liza after defeating them"
-  },
-  {
-    "number": "056",
-    "name": "TM056 - Power up Punch",
-    "map": "MAP_VERDANTURF_TOWN",
-    "qualifier": "From Ursula after defeating her in a \"dance battle\""
-  },
-  {
-    "number": "057",
-    "name": "TM057 - Charge Beam",
-    "map": "MAP_VERDANTURF_TOWN",
-    "qualifier": "From Ursula after defeating her in a \"dance battle\""
-  },
-  {
-    "number": "058",
-    "name": "TM058 - Rising Voltage",
-    "map": "MAP_EVERGRANDE_CITY",
-    "qualifier": "From Volkner after defeating him"
-  },
-  {
-    "number": "059",
-    "name": "TM059 - Dragon Pulse",
-    "map": "MAP_PETALBURG_CITY",
-    "qualifier": "From Wally's dad after defeating Norman"
-  },
-  {
-    "number": "060",
-    "name": "TM060 - Drain Punch",
-    "map": "MAP_JAGGED_PASS",
-    "qualifier": "From Maylene after defeating her"
-  },
-  {
-    "number": "061",
-    "name": "TM061 - Will-O-Wisp",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "From Flannery after defeating her"
-  },
-  {
-    "number": "062",
-    "name": "TM062 - Silver Wind",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "063",
-    "name": "TM063 - Venoshock",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "064",
-    "name": "TM064 - Explosion",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "065",
-    "name": "TM065 - Shadow Claw",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "066",
-    "name": "TM066 - Dazzling Gleam",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "067",
-    "name": "TM067 - Poltergeist",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "068",
-    "name": "TM068 - Dual Chop",
-    "map": "MAP_PETALBURG_CITY",
-    "qualifier": "From Wally's dad after defeating Norman"
-  },
-  {
-    "number": "069",
-    "name": "TM069 - Rock Polish",
-    "map": "MAP_VERDANTURF_TOWN",
-    "qualifier": "From Ursula after defeating her in a \"dance battle\""
-  },
-  {
-    "number": "070",
-    "name": "TM070 - Triple Axel",
-    "map": "MAP_ROUTE125",
-    "qualifier": "From Candice after defeating her"
-  },
-  {
-    "number": "071",
-    "name": "TM071 - Stone Edge",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing third puzzle"
-  },
-  {
-    "number": "072",
-    "name": "TM072 - Psyshock",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "073",
-    "name": "TM073 - Thunder Wave",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "074",
-    "name": "TM074 - Gyro Ball",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "075",
-    "name": "TM075 - Swords Dance",
-    "map": "MAP_PETALBURG_CITY",
-    "qualifier": "From Norman after defeating him"
-  },
-  {
-    "number": "076",
-    "name": "TM076 - Stealth Rock",
-    "map": "MAP_ROUTE120",
-    "qualifier": "From Byron after defeating him"
-  },
-  {
-    "number": "077",
-    "name": "TM077 - Flame Charge",
-    "map": "MAP_VERDANTURF_TOWN",
-    "qualifier": "From Ursula after defeating her in a \"dance battle\""
-  },
-  {
-    "number": "078",
-    "name": "TM078 - Low Sweep",
-    "map": "MAP_DEWFORD_GYM",
-    "qualifier": "From Brawly after defeating him"
-  },
-  {
-    "number": "079",
-    "name": "TM079 - Dark Pulse",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Outdoor Clerk"
-  },
-  {
-    "number": "080",
-    "name": "TM080 - Rock Slide",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "081",
-    "name": "TM081 - X-Scissor",
-    "map": "MAP_ROUTE113",
-    "qualifier": "Northeast of the Twins"
-  },
-  {
-    "number": "082",
-    "name": "TM082 - Sleep Talk",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "083",
-    "name": "TM083 - Scald",
-    "map": "MAP_ROUTE111",
-    "qualifier": "From Dawn after defeating her"
-  },
-  {
-    "number": "084",
-    "name": "TM084 - Poison Jab",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "085",
-    "name": "TM085 - Future Sight",
-    "map": "MAP_PETALBURG_CITY",
-    "qualifier": "From Wally's dad after defeating Norman"
-  },
-  {
-    "number": "086",
-    "name": "TM086 - Grass Knot",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing second puzzle"
-  },
-  {
-    "number": "087",
-    "name": "TM087 - Low Kick",
-    "map": "MAP_DEWFORD_TOWN",
-    "qualifier": "Outdoor Clerks"
-  },
-  {
-    "number": "088",
-    "name": "TM088 - Pluck",
-    "map": "MAP_DEWFORD_TOWN",
-    "qualifier": "Outdoor Clerks"
-  },
-  {
-    "number": "089",
-    "name": "TM089 - U-Turn",
-    "map": "MAP_PETALBURG_WOODS",
-    "qualifier": "From Gardenia after defeating her"
-  },
-  {
-    "number": "090",
-    "name": "TM090 - Substitute",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "From creator Isaac after defeating him"
-  },
-  {
-    "number": "091",
-    "name": "TM091 - Flash Cannon",
-    "map": "MAP_ROUTE111",
-    "qualifier": "From Dawn after defeating her"
-  },
-  {
-    "number": "092",
-    "name": "TM092 - Volt Switch",
-    "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "From Wattson after defeating him"
-  },
-  {
-    "number": "093",
-    "name": "TM093 - Dragon Tail",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "094",
-    "name": "TM094 - Trailblaze",
-    "map": "MAP_VERDANTURF_TOWN",
-    "qualifier": "From Ursula after defeating her in a \"dance battle\""
-  },
-  {
-    "number": "095",
-    "name": "TM095 - Acrobatics",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "From Winona after defeating her"
-  },
-  {
-    "number": "096",
-    "name": "TM096 - Bulldoze",
-    "map": "MAP_RUSTBORO_GYM",
-    "qualifier": "From Roxanne after defeating him"
-  },
-  {
-    "number": "097",
-    "name": "TM097 - Snarl",
-    "map": "MAP_DEWFORD_TOWN",
-    "qualifier": "Outdoor Clerks"
-  },
-  {
-    "number": "098",
-    "name": "TM098 - Work Up",
-    "map": "MAP_VERDANTURF_TOWN",
-    "qualifier": "From Ursula after defeating her in a \"dance battle\""
-  },
-  {
-    "number": "099",
-    "name": "TM099 - Wild Charge",
-    "map": "MAP_NEW_MAUVILLE",
-    "qualifier": "On the ground"
-  },
-  {
-    "number": "100",
-    "name": "TM100 - Dual Wingbeat",
-    "map": "MAP_PETALBURG_CITY",
-    "qualifier": "From Wally's dad after defeating Norman"
-  },
-  {
-    "number": "101",
-    "name": "TM101 - Superpower",
-    "map": "MAP_NEW_MAUVILLE",
-    "qualifier": "On the ground"
-  },
-  {
-    "number": "102",
-    "name": "TM102 - Scorching Sands",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "103",
-    "name": "TM103 - Smack Down",
-    "map": "MAP_DEWFORD_TOWN",
-    "qualifier": "Outdoor Clerks"
-  },
-  {
-    "number": "104",
-    "name": "TM104 - Heat Crash",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "From Flannery after defeating her"
-  },
-  {
-    "number": "105",
-    "name": "TM105 - Body Press",
-    "map": "MAP_JAGGED_PASS",
-    "qualifier": "From Maylene after defeating her"
-  },
-  {
-    "number": "106",
-    "name": "TM106 - Trick Room",
-    "map": "MAP_MOSSDEEP_CITY",
-    "qualifier": "From Tate and Liza after defeating them"
-  },
-  {
-    "number": "107",
-    "name": "TM107 - Brave Bird",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "From Winona after defeating her"
-  },
-  {
-    "number": "108",
-    "name": "TM108 - Ice Spinner",
-    "map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-    "qualifier": "Middle woman"
-  },
-  {
-    "number": "109",
-    "name": "TM109 - Bug Bite",
-    "map": "MAP_ROUTE104",
-    "qualifier": "From the man close to the northern exit of Petalburg Woods"
-  },
-  {
-    "number": "110",
-    "name": "TM110 - Stomping Tantrum",
-    "map": "MAP_ROUTE104",
-    "qualifier": "Past the tree that needs Cut North of the Woods"
-  },
-  {
-    "number": "111",
-    "name": "TM111 - Fire Punch",
-    "map": "MAP_ROUTE110",
-    "qualifier": "From Rival after defeating them"
-  },
-  {
-    "number": "112",
-    "name": "TM112 - Ice Punch",
-    "map": "MAP_ROUTE110",
-    "qualifier": "From Rival after defeating them"
-  },
-  {
-    "number": "113",
-    "name": "TM113 - Thunder Punch",
-    "map": "MAP_ROUTE110",
-    "qualifier": "From Rival after defeating them"
-  },
-  {
-    "number": "114",
-    "name": "TM114 - Fire Fang",
-    "map": "MAP_ROUTE110",
-    "qualifier": "From Rival after defeating them"
-  },
-  {
-    "number": "115",
-    "name": "TM115 - Ice Fang",
-    "map": "MAP_ROUTE110",
-    "qualifier": "From Rival after defeating them"
-  },
-  {
-    "number": "116",
-    "name": "TM116 - Thunder Fang",
-    "map": "MAP_ROUTE110",
-    "qualifier": "From Rival after defeating them"
-  },
-  {
-    "number": "117",
-    "name": "TM117 - Psychic Fangs",
-    "map": "MAP_ROUTE110",
-    "qualifier": "From Rival after defeating them"
-  },
-  {
-    "number": "118",
-    "name": "TM118 - Poison Fang",
-    "map": "MAP_ROUTE110",
-    "qualifier": "From Rival after defeating them"
-  },
-  {
-    "number": "119",
-    "name": "TM119 - Iron Head",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "120",
-    "name": "TM120 - Liquidation",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "121",
-    "name": "TM121 - Hydro Pump",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "122",
-    "name": "TM122 - Drill Run",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "123",
-    "name": "TM123 - Blaze Kick",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "124",
-    "name": "TM124 - Pain Split",
-    "map": "MAP_ROUTE120",
-    "qualifier": "Central part of the route, requires Surf"
-  },
-  {
-    "number": "125",
-    "name": "TM125 - Zen Headbutt",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "126",
-    "name": "TM126 - Weather Ball",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "127",
-    "name": "TM127 - Air Slash",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "128",
-    "name": "TM128 - Hex",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "129",
-    "name": "TM129 - Mystical Fire",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "130",
-    "name": "TM130 - Seed Bomb",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "131",
-    "name": "TM131 - Leaf Blade",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "132",
-    "name": "TM132 - Knock Off",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "133",
-    "name": "TM133 - Power Gem",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "134",
-    "name": "TM134 - Rock Blast",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "135",
-    "name": "TM135 - Pin Missile",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "136",
-    "name": "TM136 - Icicle Spear",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "137",
-    "name": "TM137 - Tail Slap",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "138",
-    "name": "TM138 - Arm Thrust",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "139",
-    "name": "TM139 - Foul Play",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "140",
-    "name": "TM140 - Iron Defense",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
-  },
-  {
-    "number": "141",
-    "name": "TM141 - Nasty Plot",
-    "map": "MAP_PETALBURG_CITY",
-    "qualifier": "From Norman after defeating him"
-  },
-  {
-    "number": "142",
-    "name": "TM142 - Earth Power",
-    "map": "MAP_JAGGED_PASS",
-    "qualifier": "On the ground along the East side"
-  },
-  {
-    "number": "143",
-    "name": "TM143 - Aura Sphere",
-    "map": "MAP_JAGGED_PASS",
-    "qualifier": "From Maylene after defeating her"
-  },
-  {
-    "number": "144",
-    "name": "TM144 - Heat Wave",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "From Flannery after defeating her"
-  },
-  {
-    "number": "145",
-    "name": "TM145 - Hurricane",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "From Winona after defeating her"
-  },
-  {
-    "number": "146",
-    "name": "TM146 - Power Whip",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing second puzzle"
-  },
-  {
-    "number": "147",
-    "name": "TM147 - High Horsepower",
-    "map": "MAP_ROUTE120",
-    "qualifier": "From Byron after defeating him"
-  },
-  {
-    "number": "148",
-    "name": "TM148 - Bug Buzz",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing second puzzle"
-  },
-  {
-    "number": "149",
-    "name": "TM149 - Phantom Force",
-    "map": "MAP_ROUTE115",
-    "qualifier": "On the ground, requires Surf"
-  },
-  {
-    "number": "150",
-    "name": "TM150 - Flare Blitz",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "From Flannery after defeating her"
-  },
-  {
-    "number": "151",
-    "name": "TM151 - Stored Power",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "From the old woman after completing her puzzle"
-  },
-  {
-    "number": "152",
-    "name": "TM152 - Gunk Shot",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing first puzzle"
-  },
-  {
-    "number": "153",
-    "name": "TM153 - Tailwind",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "From Winona after defeating her"
-  },
-  {
-    "number": "154",
-    "name": "TM154 - Megahorn",
-    "map": "MAP_TRICK_HOUSE",
-    "qualifier": "Reward for completing second puzzle"
-  },
-  {
-    "number": "155",
-    "name": "TM155 - Draco Meteor",
-    "map": "MAP_EVERGRANDE_CITY",
-    "qualifier": "From Dawn after defeating her and Rival"
-  },
-  {
-    "number": "156",
-    "name": "TM156 - Close Combat",
-    "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "From Wattson after shutting down the generator in New Mauville"
-  },
-  {
-    "number": "157",
     "name": "TM157 - Moonblast",
     "map": "MAP_SOOTOPOLIS_CITY",
-    "qualifier": "From Juan after defeating him"
+    "qualifier": "Gym_1 F"
   },
   {
-    "number": "158",
-    "name": "TM158 - Body Slam",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
+    "name": "Grimmite",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": "Gym_1 F"
   },
   {
-    "number": "159",
-    "name": "TM159 - Play Rough",
-    "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "From the former Move Tutor after defeating Flannery"
+    "name": "TM157 - Moonblast",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": "Gym_1 F"
   },
   {
-    "number": "160",
-    "name": "TM160 - Water Pulse",
-    "map": "MAP_ROUTE118",
-    "qualifier": "On the ground, past two trainers"
+    "name": "Draco Plate",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": "House2"
   },
   {
-    "number": "161",
-    "name": "TM161 - Dark Hole",
-    "map": "MAP_METEOR_FALLS",
-    "qualifier": "Steven's Room on the ground"
+    "name": "Adamant Orb",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": "House4"
   },
   {
-    "number": "162",
-    "name": "TM162 - Sludge Wave",
-    "map": "MAP_MT_PYRE",
-    "qualifier": "Outside on a rocky ledge"
+    "name": "AdamantCrystl",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": "House4"
   },
   {
-    "number": "163",
-    "name": "TM163 - Supercell Slam",
-    "map": "MAP_EVERGRANDE_CITY",
-    "qualifier": "From Volkner after defeating him"
+    "name": "Lustrous Orb",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": "House4"
   },
   {
-    "number": "164",
-    "name": "TM164 - Temper Flare",
-    "map": "MAP_FIERY_PATH",
-    "qualifier": "On the ground in the northwest corner, requires Strength"
+    "name": "LustrousGlobe",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": "House4"
   },
   {
-    "number": "165",
-    "name": "TM165 - Scale Shot",
+    "name": "Griseous Orb",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": "House4"
+  },
+  {
+    "name": "RustedSword",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": "Lotad And Seedot House"
+  },
+  {
+    "name": "RustedShield",
+    "map": "MAP_SOOTOPOLIS_CITY",
+    "qualifier": "Lotad And Seedot House"
+  },
+  {
+    "name": "TM45 - Draining Kiss",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "Battle Tent Lobby"
+  },
+  {
+    "name": "TM04 - Calm Mind",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "House"
+  },
+  {
+    "name": "TM08 - Bulk Up",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "House"
+  },
+  {
+    "name": "TM56 - Power Up Punch",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "House"
+  },
+  {
+    "name": "TM57 - Charge Beam",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "House"
+  },
+  {
+    "name": "TM69 - Rock Polish",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "House"
+  },
+  {
+    "name": "TM77 - Flame Charge",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "House"
+  },
+  {
+    "name": "TM94 - Trailblaze",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "House"
+  },
+  {
+    "name": "TM98 - Work Up",
+    "map": "MAP_VERDANTURF_TOWN",
+    "qualifier": "House"
+  },
+  {
+    "name": "Slakite",
     "map": "MAP_VICTORY_ROAD",
-    "qualifier": "Floor B2F on the ground, must fight Expert to reach"
+    "qualifier": "1 F"
   },
   {
-    "number": "166",
-    "name": "TM166 - Psychic Noise",
-    "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Floor B2F on the ground, requires Mach Bike"
+    "name": "Tyranitarite",
+    "map": "MAP_VICTORY_ROAD",
+    "qualifier": "1 F"
   },
   {
-    "number": "167",
-    "name": "TM167 - Alluring Voice",
-    "map": "MAP_RUSTURF_TUNNEL",
-    "qualifier": "On the ground near the Verdanturf Town entrance"
+    "name": "Salamencite",
+    "map": "MAP_VICTORY_ROAD",
+    "qualifier": "1 F"
   },
   {
-    "number": "168",
-    "name": "TM168 - Vacuum Wave",
-    "map": "MAP_ROUTE110",
-    "qualifier": "On the ground below Cycling Road"
+    "name": "Garchompite",
+    "map": "MAP_VICTORY_ROAD",
+    "qualifier": "1 F"
+  },
+  {
+    "name": "Metagrossite",
+    "map": "MAP_VICTORY_ROAD",
+    "qualifier": "1 F"
   }
 ]

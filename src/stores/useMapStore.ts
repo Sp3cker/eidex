@@ -1,10 +1,12 @@
 import { create } from "zustand";
 import encounters from "@/data/map/cleanEncounters.json";
+import maps from "@/data/map/maps.json";
 import pokemon from "@/data/speciesData.json";
 import { Pokemon } from "@/types";
 import ItemSearch, { Item } from "@/utils/itemsData";
 
-const getMap = (map: string) => encounters.filter((m) => m.map === map);
+const getMap = (map: string) => maps.filter((m) => m.map === map);
+const Encounters = new Map(encounters.map((obj) => [obj.map, obj]));
 type EncounterMons = {
   min_level: number;
   max_level: number;
@@ -20,7 +22,6 @@ type EncounterMonsFromJSON = {
 };
 
 type MapStore = {
-  encounters: any[];
   selectedMap: string | null;
   selectedMapLandMons: EncounterMons[] | undefined;
   selectedMapWaterMons: EncounterMons[] | undefined;
@@ -115,7 +116,6 @@ export function formatMapString(mapNameFromJson: string) {
   );
 }
 export const useMapStore = create<MapStore>((set) => ({
-  encounters,
   selectedMap: null,
   selectedMapLandMons: undefined,
   selectedMapWaterMons: undefined,
@@ -133,40 +133,49 @@ export const useMapStore = create<MapStore>((set) => ({
       set({ selectedMap: null });
       return;
     }
-    const targetMapArr = getMap(map);
-    if (targetMapArr.length === 0) {
+    const targetMap = getMap(map);
+    if (targetMap.length === 0) {
       console.error("Error selecting map %s", map);
       return;
     }
-    /** Put ID on each mon so we can get their sprite andn info later
-     * Build a Map so we don't have to `map` through the `encounters` json for each lookup :3
-     */
-    const monsNameKeys = new Map<string, number>([]);
-    pokemon.forEach((p) => {
-      monsNameKeys.set(p.nameKey.toLowerCase().replace(/-/g, "_"), p.index);
-      // monsNameKeys.set(p.speciesName.replace("-", "_").toLowerCase(), p.index);
-    }); //nameKey cause it probly matches encounter Data
+    const targetMapEncounters = Encounters.get(targetMap[0].map);
     let landEncounters, waterEncounters, fishingEncounters;
-    if (targetMapArr[0].land_mons) {
-      putIdOnEncounter(targetMapArr[0].land_mons.mons, monsNameKeys);
-      landEncounters = putEncounterRate(targetMapArr[0].land_mons?.mons);
+    if (targetMapEncounters) {
+      
+      /** Put ID on each mon so we can get their sprite andn info later
+       * Build a Map so we don't have to `map` through the `encounters` json for each lookup :3
+      */
+     const monsNameKeys = new Map<string, number>([]);
+     pokemon.forEach((p) => {
+       monsNameKeys.set(p.nameKey.toLowerCase().replace(/-/g, "_"), p.index);
+       // monsNameKeys.set(p.speciesName.replace("-", "_").toLowerCase(), p.index);
+      }); //nameKey cause it probly matches encounter Data
+      if (targetMapEncounters && targetMapEncounters.land_mons) {
+        putIdOnEncounter(targetMapEncounters.land_mons.mons, monsNameKeys);
+        landEncounters = putEncounterRate(targetMapEncounters.land_mons?.mons);
+      }
+      if (targetMapEncounters && targetMapEncounters.water_mons) {
+        putIdOnEncounter(targetMapEncounters.water_mons.mons, monsNameKeys);
+        waterEncounters = putEncounterRate(
+          targetMapEncounters.water_mons?.mons,
+        );
+      }
+      if (targetMapEncounters && targetMapEncounters.fishing_mons) {
+        putIdOnEncounter(targetMapEncounters.fishing_mons.mons, monsNameKeys);
+        fishingEncounters = putEncounterRate(
+          targetMapEncounters.fishing_mons.mons,
+        );
+      }
     }
-    if (targetMapArr[0].water_mons) {
-      putIdOnEncounter(targetMapArr[0].water_mons.mons, monsNameKeys);
-      waterEncounters = putEncounterRate(targetMapArr[0].water_mons?.mons);
-    }
-    if (targetMapArr[0].fishing_mons) {
-      putIdOnEncounter(targetMapArr[0].fishing_mons.mons, monsNameKeys);
-      fishingEncounters = putEncounterRate(targetMapArr[0].fishing_mons.mons);
-    }
-
+    // console.error("Encounters not found for map %s", map);
+    
     /** Parse Out Items for Map */
     const selectedMapItems = ItemSearch.byMap(map);
     if (selectedMapItems.length === 0) {
-      console.error("Error selecting map %s", map);
+      console.error("Error selecting items for map %s", map);
     }
     set({
-      selectedMap: targetMapArr[0].map,
+      selectedMap: map,
       selectedMapLandMons: landEncounters,
       selectedMapWaterMons: waterEncounters,
       selectedMapFishingMons: fishingEncounters,
