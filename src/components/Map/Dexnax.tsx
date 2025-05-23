@@ -31,17 +31,17 @@ const Dexnav = memo(function Dexnav() {
         </h1>
       </div>
       <div className="font-pkmnem flex flex-col rounded-sm">
-        {items.length === 0 && (
+        {items.length === 0 ? (
           <p className="text-center text-xs font-bold text-neutral-700">
             No items found
           </p>
-        )}
-        {items.map((item) => (
+        ):(
+        items.map((item) => (
           <div key={item.name + item.map} className="h-10">
             <p className="cool-font text-xs font-bold">{item.name}</p>
             <p className="leading-4">{item.qualifier}</p>
           </div>
-        ))}
+        )))}
       </div>
     </animated.nav>
   );

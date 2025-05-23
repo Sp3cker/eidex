@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import encounters from "@/data/map/cleanEncounters.json";
-import maps from "@/data/map/maps.json";
+import maps from "@/data/map/mapsvgs.json";
 import pokemon from "@/data/speciesData.json";
 // import svgData from "@/data/map/mapsvgs.json";
 // import parseSvg from "@/utils/parseSvg";
@@ -8,7 +8,7 @@ import pokemon from "@/data/speciesData.json";
 import { Pokemon } from "@/types";
 import ItemSearch, { Item } from "@/utils/itemsData";
 
-const getMap = (map: string) => maps.filter((m) => m.map === map);
+const getMap = (map: string) => maps.filter((m) => m.id === map);
 const Encounters = new Map(encounters.map((obj) => [obj.map, obj]));
 type EncounterMons = {
   min_level: number;
@@ -159,7 +159,8 @@ export const useMapStore = create<MapStore>((set) => {
         console.error("Error selecting map %s", map);
         return;
       }
-      const targetMapEncounters = Encounters.get(targetMap[0].map);
+      const targetMapEncounters = Encounters.get(targetMap[0].id);
+
       let landEncounters, waterEncounters, fishingEncounters;
       if (targetMapEncounters) {
         /** Put ID on each mon so we can get their sprite andn info later
@@ -229,11 +230,11 @@ export const useMapStore = create<MapStore>((set) => {
       return ItemSearch.search(name);
     },
     // setStoredCoordinates: (map: string, coords: number[]) =>{}
-      // set(() => {
-        // const newCoords = new Map(state.coordinates);
-        // newCoords.set(map, coords);
-        //  { coordinates: newCoords };
-      // }),
+    // set(() => {
+    // const newCoords = new Map(state.coordinates);
+    // newCoords.set(map, coords);
+    //  { coordinates: newCoords };
+    // }),
   };
 });
 
