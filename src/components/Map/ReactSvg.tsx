@@ -1,4 +1,3 @@
-import * as React from "react";
 import MapPlace from "./MapPlace";
 import objects from "@/data/map/mapsvgs.json";
 const SVGComponent = () => (

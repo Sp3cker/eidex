@@ -2,9 +2,9 @@ import { create } from "zustand";
 import encounters from "@/data/map/cleanEncounters.json";
 import maps from "@/data/map/maps.json";
 import pokemon from "@/data/speciesData.json";
-import svgData from "@/data/map/mapsvgs.json";
+// import svgData from "@/data/map/mapsvgs.json";
 // import parseSvg from "@/utils/parseSvg";
-import parseSvg from "svg-path-parser";
+// import parseSvg from "svg-path-parser";
 import { Pokemon } from "@/types";
 import ItemSearch, { Item } from "@/utils/itemsData";
 
@@ -32,7 +32,7 @@ type MapStore = {
   selectedPokemon: Pokemon | null;
   selectedCoordinates: number[];
   storedCoordinates: Map<string, number[]>;
-  setStoredCoordinates: (map: string, coords: number[]) => void;
+  // setStoredCoordinates: (map: string, coords: number[]) => void;
   mapScale: number;
   mapOffset: number[];
   hoveredMap: string | null;
@@ -121,20 +121,20 @@ export function formatMapString(mapNameFromJson: string) {
   );
 }
 export const useMapStore = create<MapStore>((set) => {
-  const storedCoordinates = new Map<string, number[]>();
-  maps.forEach((map) => {
-    const mapName = map.map;
-    const mapCoords = svgData.find((m) => {
-      if (m.d) {
-        console.log(m.id);
-        console.log(parseSvg(m.d));
-      }
-      m.id === mapName;
-    });
-    if (mapCoords) {
-      const coords = [];
-    }
-  });
+  // const storedCoordinates = new Map<string, number[]>();
+  // maps.forEach((map) => {
+  //   const mapName = map.map;
+  //   const mapCoords = svgData.find((m) => {
+  //     if (m.d) {
+  //       console.log(m.id);
+  //       console.log(parseSvg(m.d));
+  //     }
+  //     m.id === mapName;
+  //   });
+  //   if (mapCoords) {
+  //     const coords = [];
+  //   }
+  // });
   return {
     selectedMap: null,
     selectedMapLandMons: undefined,
@@ -228,12 +228,12 @@ export const useMapStore = create<MapStore>((set) => {
     searchItemByName: (name: string) => {
       return ItemSearch.search(name);
     },
-    setStoredCoordinates: (map: string, coords: number[]) =>
-      set((state) => {
-        const newCoords = new Map(state.coordinates);
-        newCoords.set(map, coords);
+    // setStoredCoordinates: (map: string, coords: number[]) =>{}
+      // set(() => {
+        // const newCoords = new Map(state.coordinates);
+        // newCoords.set(map, coords);
         //  { coordinates: newCoords };
-      }),
+      // }),
   };
 });
 
