@@ -2,12 +2,12 @@
   {
     "name": "Lansat Berry",
     "map": "MAP_BATTLE_FRONTIER",
-    "qualifier": "Scotts House"
+    "qualifier": "ScottsHouse"
   },
   {
     "name": "Starf Berry",
     "map": "MAP_BATTLE_FRONTIER",
-    "qualifier": "Scotts House"
+    "qualifier": "ScottsHouse"
   },
   {
     "name": "Claw Fossil",
@@ -52,227 +52,227 @@
   {
     "name": "Zygarde Cube",
     "map": "MAP_EVER_GRANDE_CITY",
-    "qualifier": "Pokemon Center_1 F"
+    "qualifier": "PokemonCenter_1F"
   },
   {
     "name": "TM02 - Dragon Claw",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM25 - Thunder",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM34 - Teleport",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM38 - Fire Blast",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM67 - Poltergeist",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM73 - Thunder Wave",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM119 - Iron Head",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM120 - Liquidation",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM121 - Hydro Pump",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM122 - Drill Run",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM123 - Blaze Kick",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM125 - Zen Headbutt",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM126 - Weather Ball",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM127 - Air Slash",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM128 - Hex",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM129 - Mystical Fire",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM130 - Seed Bomb",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM131 - Leaf Blade",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM132 - Knock Off",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM133 - Power Gem",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM134 - Rock Blast",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM135 - Pin Missile",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM136 - Icicle Spear",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM137 - Tail Slap",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM138 - Arm Thrust",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM139 - Foul Play",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM140 - Iron Defense",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM158 - Body Slam",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "TM159 - Play Rough",
     "map": "MAP_FALLARBOR_TOWN",
-    "qualifier": "Move Relearners House"
+    "qualifier": "MoveRelearnersHouse"
   },
   {
     "name": "EmpoleoniteO",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "Blastoisinite",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "Swampertite",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "TM90 - Substitute",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "Choice Scarf",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "CharizarditeX",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "CharizarditeY",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "Blazikenite",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "TM41 - Dragon Dance",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "Choice Specs",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "Torterrite",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "Venusaurite",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "Sceptilite",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "TM26 - Earthquake",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "Choice Band",
     "map": "MAP_FORTREE_CITY",
-    "qualifier": "Creator House"
+    "qualifier": "CreatorHouse"
   },
   {
     "name": "TM107 - Brave Bird",
@@ -337,77 +337,77 @@
   {
     "name": "HM05 - Flash",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "1 F"
+    "qualifier": "1F"
   },
   {
     "name": "TM47 - Steel Wing",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "Sitrus Berry",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "Heal Ball",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "Berry Juice",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "Moon Stone",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "Throat Spray",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "PP Up",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "Iron Ball",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "Wide Lens",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "Heat Rock",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "Damp Rock",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "Smooth Rock",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "Icy Rock",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "Leek",
     "map": "MAP_GRANITE_CAVE",
-    "qualifier": "Stevens Room"
+    "qualifier": "StevensRoom"
   },
   {
     "name": "TM01 - Focus Punch",
@@ -482,67 +482,67 @@
   {
     "name": "TM50 - Overheat",
     "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "TM61 - Will O Wisp",
     "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "TM104 - Heat Crash",
     "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "TM144 - Heat Wave",
     "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "TM150 - Flare Blitz",
     "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "Infernapite",
     "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "TM50 - Overheat",
     "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "TM61 - Will O Wisp",
     "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "TM104 - Heat Crash",
     "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "TM144 - Heat Wave",
     "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "TM150 - Flare Blitz",
     "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "Infernapite",
     "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "Charcoal",
     "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Herb Shop"
+    "qualifier": "HerbShop"
   },
   {
     "name": "Assault Vest",
@@ -562,512 +562,512 @@
   {
     "name": "Venusaurite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "CharizarditeX",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "CharizarditeY",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Blastoisinite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Beedrillite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Pidgeotite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Alakazite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Slowbronite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Gengarite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Kangaskhanite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Pinsirite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Gyaradosite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Aerodactylite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Mewtwonite X",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Mewtwonite Y",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Ampharosite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Steelixite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Scizorite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Heracronite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Houndoominite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Tyranitarite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Sceptilite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Blazikenite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Swampertite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Gardevoirite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Sablenite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Mawilite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Aggronite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Medichamite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Manectite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Sharpedonite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Cameruptite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Altarianite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Banettite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Absolite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Glalitite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Salamencite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Metagrossite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Latiasite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Latiosite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Lopunnite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Garchompite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Lucarionite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Abomasite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Galladite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Audinite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Diancite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Luxrite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Torterrite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "EmpoleoniteO",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "EmpoleoniteD",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Infernapite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Kinglerite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Butterfrite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Machampite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Laprasite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Snorlaxite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Garbodorite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Orbeetlite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Drednawite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Coalossite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Applite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Sandacondite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Toxtricitite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Centiskite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Grimmite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Copperajite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Slakite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Roseradite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Dusknoirite",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Brendans House_2 F"
+    "qualifier": "BrendansHouse_2F"
   },
   {
     "name": "Aurora Ticket",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Quick Ball",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Poké Ball",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Oran Berry",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "AbilityCapsle",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Silk Scarf",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Mystic Water",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Miracle Seed",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Charcoal",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Never-MeltIce",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Fairy Feather",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Steel Feather",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Sharp Beak",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Silver Powder",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Soft Sand",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Hard Stone",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Spell Tag",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Twisted Spoon",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Magnet",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Poison Barb",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Black Belt",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Black Glasses",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Dragon Fang",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Blue Shard",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Red Shard",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Green Shard",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Yellow Shard",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Absorb Bulb",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Mental Herb",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Light Ball",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Shiny Charm",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Poké Ball",
     "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "Professor Birchs Lab"
+    "qualifier": "ProfessorBirchsLab"
   },
   {
     "name": "Basement Key",
@@ -1082,32 +1082,32 @@
   {
     "name": "Mach Bike",
     "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "Bike Shop"
+    "qualifier": "BikeShop"
   },
   {
     "name": "Acro Bike",
     "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "Bike Shop"
+    "qualifier": "BikeShop"
   },
   {
     "name": "Mach Bike",
     "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "Bike Shop"
+    "qualifier": "BikeShop"
   },
   {
     "name": "Acro Bike",
     "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "Bike Shop"
+    "qualifier": "BikeShop"
   },
   {
     "name": "Mach Bike",
     "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "Bike Shop"
+    "qualifier": "BikeShop"
   },
   {
     "name": "Acro Bike",
     "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "Bike Shop"
+    "qualifier": "BikeShop"
   },
   {
     "name": "TM92 - Volt Switch",
@@ -1162,12 +1162,12 @@
   {
     "name": "Root Fossil",
     "map": "MAP_MIRAGE_TOWER",
-    "qualifier": "4 F"
+    "qualifier": "4F"
   },
   {
     "name": "Claw Fossil",
     "map": "MAP_MIRAGE_TOWER",
-    "qualifier": "4 F"
+    "qualifier": "4F"
   },
   {
     "name": "King's Rock",
@@ -1202,22 +1202,22 @@
   {
     "name": "Sun Stone",
     "map": "MAP_MOSSDEEP_CITY",
-    "qualifier": "Space Center_1 F"
+    "qualifier": "SpaceCenter_1F"
   },
   {
     "name": "Sun Stone",
     "map": "MAP_MOSSDEEP_CITY",
-    "qualifier": "Space Center_1 F"
+    "qualifier": "SpaceCenter_1F"
   },
   {
     "name": "Magma Emblem",
     "map": "MAP_MOSSDEEP_CITY",
-    "qualifier": "Space Center_2 F"
+    "qualifier": "SpaceCenter_2F"
   },
   {
     "name": "HM08 - Dive",
     "map": "MAP_MOSSDEEP_CITY",
-    "qualifier": "Stevens House"
+    "qualifier": "StevensHouse"
   },
   {
     "name": "Lava Cookie",
@@ -1232,7 +1232,7 @@
   {
     "name": "Cleanse Tag",
     "map": "MAP_MT_PYRE",
-    "qualifier": "1 F"
+    "qualifier": "1F"
   },
   {
     "name": "Red Orb",
@@ -1302,27 +1302,27 @@
   {
     "name": "TM48 - Meteor Beam",
     "map": "MAP_PETALBURG_CITY",
-    "qualifier": "Wallys House"
+    "qualifier": "WallysHouse"
   },
   {
     "name": "TM59 - Dragon Pulse",
     "map": "MAP_PETALBURG_CITY",
-    "qualifier": "Wallys House"
+    "qualifier": "WallysHouse"
   },
   {
     "name": "TM68 - Dual Chop",
     "map": "MAP_PETALBURG_CITY",
-    "qualifier": "Wallys House"
+    "qualifier": "WallysHouse"
   },
   {
     "name": "TM85 - Future Sight",
     "map": "MAP_PETALBURG_CITY",
-    "qualifier": "Wallys House"
+    "qualifier": "WallysHouse"
   },
   {
     "name": "TM100 - Dual Wingbeat",
     "map": "MAP_PETALBURG_CITY",
-    "qualifier": "Wallys House"
+    "qualifier": "WallysHouse"
   },
   {
     "name": "Great Ball",
@@ -1351,917 +1351,917 @@
   },
   {
     "name": "Chesto Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "White Herb",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Hex Orb",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "TM109 - Bug Bite",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Aspear Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Persim Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Pecha Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Rawst Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Cheri Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Chesto Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Chople Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Colbur Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Wacan Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Charti Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Chilan Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Haban Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Roseli Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Shuca Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Babiri Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Kasib Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Coba Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Kebia Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Occa Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Passho Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Payapa Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Rindo Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Yache Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Tanga Berry",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Harbor Mail",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Wise Glasses",
-    "map": "MAP_ROUTE_1_0_4",
+    "map": "MAP_ROUTE104",
     "qualifier": ""
   },
   {
     "name": "Wailmer Pail",
-    "map": "MAP_ROUTE_1_0_4",
-    "qualifier": "Pretty Petal Flower Shop"
+    "map": "MAP_ROUTE104",
+    "qualifier": "PrettyPetalFlowerShop"
   },
   {
     "name": "Soft Sand",
-    "map": "MAP_ROUTE_1_0_9",
+    "map": "MAP_ROUTE109",
     "qualifier": ""
   },
   {
     "name": "HM02 - Fly",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Dowsing MCHN",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "TM111 - Fire Punch",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "TM112 - Ice Punch",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "TM113 - Thunder Punch",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "TM114 - Fire Fang",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "TM115 - Ice Fang",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "TM116 - Thunder Fang",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "TM117 - Psychic Fangs",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "TM118 - Poison Fang",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Great Ball",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Ultra Ball",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Dive Ball",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Dusk Ball",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Shiny Stone",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Ice Stone",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Black Sludge",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Toxic Orb",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Flame Orb",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Smoke Ball",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Thick Club",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "WeaknssPolicy",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Grassy Seed",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Electric Seed",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Psychic Seed",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Misty Seed",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Air Balloon",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "TerainExtendr",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "Light Clay",
-    "map": "MAP_ROUTE_1_1_0",
+    "map": "MAP_ROUTE110",
     "qualifier": ""
   },
   {
     "name": "TM152 - Gunk Shot",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "Garbodorite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "Toxtricitite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "TM22 - Solar Beam",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "TM32 - Solar Blade",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "TM54 - Grassy Glide",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "TM86 - Grass Knot",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "TM146 - Power Whip",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "TM148 - Bug Buzz",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "TM154 - Megahorn",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "Butterfrite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "Snorlaxite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "Roseradite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "TM71 - Stone Edge",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "Steelixite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "Kinglerite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "BoosterEnergy",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "Smoke Ball",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "TM12 - Taunt",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "Magnet",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "PP Max",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House End"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEnd"
   },
   {
     "name": "TM152 - Gunk Shot",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "Garbodorite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "Toxtricitite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "TM22 - Solar Beam",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "TM32 - Solar Blade",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "TM54 - Grassy Glide",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "TM86 - Grass Knot",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "TM146 - Power Whip",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "TM148 - Bug Buzz",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "TM154 - Megahorn",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "Butterfrite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "Snorlaxite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "Roseradite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "TM71 - Stone Edge",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "Steelixite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "Kinglerite",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "BoosterEnergy",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "Smoke Ball",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "TM12 - Taunt",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "Magnet",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "PP Max",
-    "map": "MAP_ROUTE_1_1_0",
-    "qualifier": "Trick House Entrance"
+    "map": "MAP_ROUTE110",
+    "qualifier": "TrickHouseEntrance"
   },
   {
     "name": "Razz Berry",
-    "map": "MAP_ROUTE_1_1_1",
+    "map": "MAP_ROUTE111",
     "qualifier": ""
   },
   {
     "name": "TM51 - Roost",
-    "map": "MAP_ROUTE_1_1_1",
+    "map": "MAP_ROUTE111",
     "qualifier": ""
   },
   {
     "name": "TM83 - Scald",
-    "map": "MAP_ROUTE_1_1_1",
+    "map": "MAP_ROUTE111",
     "qualifier": ""
   },
   {
     "name": "TM91 - Flash Cannon",
-    "map": "MAP_ROUTE_1_1_1",
+    "map": "MAP_ROUTE111",
     "qualifier": ""
   },
   {
     "name": "EmpoleoniteD",
-    "map": "MAP_ROUTE_1_1_1",
+    "map": "MAP_ROUTE111",
     "qualifier": ""
   },
   {
     "name": "AbilityPatch",
-    "map": "MAP_ROUTE_1_1_1",
+    "map": "MAP_ROUTE111",
     "qualifier": ""
   },
   {
     "name": "ProtectvePads",
-    "map": "MAP_ROUTE_1_1_1",
+    "map": "MAP_ROUTE111",
     "qualifier": ""
   },
   {
     "name": "PunchingGlove",
-    "map": "MAP_ROUTE_1_1_1",
+    "map": "MAP_ROUTE111",
     "qualifier": ""
   },
   {
     "name": "KickingShoes",
-    "map": "MAP_ROUTE_1_1_1",
+    "map": "MAP_ROUTE111",
     "qualifier": ""
   },
   {
     "name": "Loaded Dice",
-    "map": "MAP_ROUTE_1_1_1",
+    "map": "MAP_ROUTE111",
     "qualifier": ""
   },
   {
     "name": "Mystic Ticket",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Alakazite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Kangaskhanite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Audinite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Gardevoirite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Absolite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Sharpedonite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Heracronite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Lopunnite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Pidgeotite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Beedrillite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Glalitite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Abomasite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Medichamite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Aggronite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Cameruptite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Mawilite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Houndoominite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Pinsirite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Coalossite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Slowbronite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Orbeetlite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Scizorite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Aerodactylite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Galladite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Centiskite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Sandacondite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Applite",
-    "map": "MAP_ROUTE_1_1_1",
-    "qualifier": "Winstrate Familys House"
+    "map": "MAP_ROUTE111",
+    "qualifier": "WinstrateFamilysHouse"
   },
   {
     "name": "Scope Lens",
-    "map": "MAP_ROUTE_1_1_3",
-    "qualifier": "Glass Workshop"
+    "map": "MAP_ROUTE113",
+    "qualifier": "GlassWorkshop"
   },
   {
     "name": "TM05 - Roar",
-    "map": "MAP_ROUTE_1_1_4",
+    "map": "MAP_ROUTE114",
     "qualifier": ""
   },
   {
     "name": "TM28 - Dig",
-    "map": "MAP_ROUTE_1_1_4",
-    "qualifier": "Fossil Maniacs House"
+    "map": "MAP_ROUTE114",
+    "qualifier": "FossilManiacsHouse"
   },
   {
     "name": "Repeat Ball",
-    "map": "MAP_ROUTE_1_1_6",
+    "map": "MAP_ROUTE116",
     "qualifier": ""
   },
   {
     "name": "TM39 - Rock Tomb",
-    "map": "MAP_ROUTE_1_1_6",
+    "map": "MAP_ROUTE116",
     "qualifier": ""
   },
   {
     "name": "Muscle Band",
-    "map": "MAP_ROUTE_1_1_6",
+    "map": "MAP_ROUTE116",
     "qualifier": ""
   },
   {
     "name": "TM10 - Hidden Power",
-    "map": "MAP_ROUTE_1_1_7",
+    "map": "MAP_ROUTE117",
     "qualifier": ""
   },
   {
     "name": "TM29 - Psychic",
-    "map": "MAP_ROUTE_1_1_7",
+    "map": "MAP_ROUTE117",
     "qualifier": ""
   },
   {
     "name": "TM30 - Shadow Ball",
-    "map": "MAP_ROUTE_1_1_7",
+    "map": "MAP_ROUTE117",
     "qualifier": ""
   },
   {
     "name": "TM31 - Brick Break",
-    "map": "MAP_ROUTE_1_1_7",
+    "map": "MAP_ROUTE117",
     "qualifier": ""
   },
   {
     "name": "Banettite",
-    "map": "MAP_ROUTE_1_1_7",
+    "map": "MAP_ROUTE117",
     "qualifier": ""
   },
   {
     "name": "Sablenite",
-    "map": "MAP_ROUTE_1_1_7",
+    "map": "MAP_ROUTE117",
     "qualifier": ""
   },
   {
     "name": "Gengarite",
-    "map": "MAP_ROUTE_1_1_7",
+    "map": "MAP_ROUTE117",
     "qualifier": ""
   },
   {
     "name": "Dusknoirite",
-    "map": "MAP_ROUTE_1_1_7",
+    "map": "MAP_ROUTE117",
     "qualifier": ""
   },
   {
     "name": "Metronome",
-    "map": "MAP_ROUTE_1_1_7",
+    "map": "MAP_ROUTE117",
     "qualifier": ""
   },
   {
     "name": "Leftovers",
-    "map": "MAP_ROUTE_1_1_7",
+    "map": "MAP_ROUTE117",
     "qualifier": ""
   },
   {
     "name": "Good Rod",
-    "map": "MAP_ROUTE_1_1_8",
+    "map": "MAP_ROUTE118",
     "qualifier": ""
   },
   {
     "name": "Laprasite",
-    "map": "MAP_ROUTE_1_1_8",
+    "map": "MAP_ROUTE118",
     "qualifier": ""
   },
   {
     "name": "Drednawite",
-    "map": "MAP_ROUTE_1_1_8",
+    "map": "MAP_ROUTE118",
     "qualifier": ""
   },
   {
     "name": "Gyaradosite",
-    "map": "MAP_ROUTE_1_1_8",
+    "map": "MAP_ROUTE118",
     "qualifier": ""
   },
   {
     "name": "Focus Sash",
-    "map": "MAP_ROUTE_1_1_8",
+    "map": "MAP_ROUTE118",
     "qualifier": ""
   },
   {
     "name": "Life Orb",
-    "map": "MAP_ROUTE_1_1_9",
+    "map": "MAP_ROUTE119",
     "qualifier": ""
   },
   {
     "name": "Heavy-DtyBts",
-    "map": "MAP_ROUTE_1_1_9",
+    "map": "MAP_ROUTE119",
     "qualifier": ""
   },
   {
     "name": "Leftovers",
-    "map": "MAP_ROUTE_1_1_9",
+    "map": "MAP_ROUTE119",
     "qualifier": ""
   },
   {
     "name": "PP Max",
-    "map": "MAP_ROUTE_1_1_9",
+    "map": "MAP_ROUTE119",
     "qualifier": ""
   },
   {
     "name": "Devon Scope",
-    "map": "MAP_ROUTE_1_2_0",
+    "map": "MAP_ROUTE120",
     "qualifier": ""
   },
   {
     "name": "TM76 - Stealth Rock",
-    "map": "MAP_ROUTE_1_2_1",
+    "map": "MAP_ROUTE121",
     "qualifier": ""
   },
   {
     "name": "TM147 - High Horsepower",
-    "map": "MAP_ROUTE_1_2_1",
+    "map": "MAP_ROUTE121",
     "qualifier": ""
   },
   {
     "name": "Copperajite",
-    "map": "MAP_ROUTE_1_2_1",
+    "map": "MAP_ROUTE121",
     "qualifier": ""
   },
   {
     "name": "Rocky Helmet",
-    "map": "MAP_ROUTE_1_2_1",
+    "map": "MAP_ROUTE121",
     "qualifier": ""
   },
   {
     "name": "Leftovers",
-    "map": "MAP_ROUTE_1_2_1",
+    "map": "MAP_ROUTE121",
     "qualifier": ""
   },
   {
     "name": "Spelon Berry",
-    "map": "MAP_ROUTE_1_2_3",
-    "qualifier": "Berry Masters House"
+    "map": "MAP_ROUTE123",
+    "qualifier": "BerryMastersHouse"
   },
   {
     "name": "Pamtre Berry",
-    "map": "MAP_ROUTE_1_2_3",
-    "qualifier": "Berry Masters House"
+    "map": "MAP_ROUTE123",
+    "qualifier": "BerryMastersHouse"
   },
   {
     "name": "Watmel Berry",
-    "map": "MAP_ROUTE_1_2_3",
-    "qualifier": "Berry Masters House"
+    "map": "MAP_ROUTE123",
+    "qualifier": "BerryMastersHouse"
   },
   {
     "name": "Durin Berry",
-    "map": "MAP_ROUTE_1_2_3",
-    "qualifier": "Berry Masters House"
+    "map": "MAP_ROUTE123",
+    "qualifier": "BerryMastersHouse"
   },
   {
     "name": "Belue Berry",
-    "map": "MAP_ROUTE_1_2_3",
-    "qualifier": "Berry Masters House"
+    "map": "MAP_ROUTE123",
+    "qualifier": "BerryMastersHouse"
   },
   {
     "name": "RotomCatalog",
-    "map": "MAP_ROUTE_1_2_4",
-    "qualifier": "Diving Treasure Hunters House"
+    "map": "MAP_ROUTE124",
+    "qualifier": "DivingTreasureHuntersHouse"
   },
   {
     "name": "Reveal Glass",
-    "map": "MAP_ROUTE_1_2_4",
-    "qualifier": "Diving Treasure Hunters House"
+    "map": "MAP_ROUTE124",
+    "qualifier": "DivingTreasureHuntersHouse"
   },
   {
     "name": "Gracidea",
-    "map": "MAP_ROUTE_1_2_4",
-    "qualifier": "Diving Treasure Hunters House"
+    "map": "MAP_ROUTE124",
+    "qualifier": "DivingTreasureHuntersHouse"
   },
   {
     "name": "Prison Bottle",
-    "map": "MAP_ROUTE_1_2_4",
-    "qualifier": "Diving Treasure Hunters House"
+    "map": "MAP_ROUTE124",
+    "qualifier": "DivingTreasureHuntersHouse"
   },
   {
     "name": "TM14 - Blizzard",
-    "map": "MAP_ROUTE_1_2_5",
+    "map": "MAP_ROUTE125",
     "qualifier": ""
   },
   {
     "name": "TM70 - Triple Axel",
-    "map": "MAP_ROUTE_1_2_5",
+    "map": "MAP_ROUTE125",
     "qualifier": ""
   },
   {
@@ -2272,57 +2272,57 @@
   {
     "name": "HM01 - Cut",
     "map": "MAP_RUSTBORO_CITY",
-    "qualifier": "Cutters House"
+    "qualifier": "CuttersHouse"
   },
   {
     "name": "DNA Splicers",
     "map": "MAP_RUSTBORO_CITY",
-    "qualifier": "Devon Corp_2 F"
+    "qualifier": "DevonCorp_2F"
   },
   {
     "name": "ReinsOfUnity",
     "map": "MAP_RUSTBORO_CITY",
-    "qualifier": "Devon Corp_2 F"
+    "qualifier": "DevonCorp_2F"
   },
   {
     "name": "N-Solarizer",
     "map": "MAP_RUSTBORO_CITY",
-    "qualifier": "Devon Corp_2 F"
+    "qualifier": "DevonCorp_2F"
   },
   {
     "name": "N-Lunarizer",
     "map": "MAP_RUSTBORO_CITY",
-    "qualifier": "Devon Corp_2 F"
+    "qualifier": "DevonCorp_2F"
   },
   {
     "name": "Letter",
     "map": "MAP_RUSTBORO_CITY",
-    "qualifier": "Devon Corp_3 F"
+    "qualifier": "DevonCorp_3F"
   },
   {
     "name": "Water Stone",
     "map": "MAP_RUSTBORO_CITY",
-    "qualifier": "Devon Corp_3 F"
+    "qualifier": "DevonCorp_3F"
   },
   {
     "name": "Fire Stone",
     "map": "MAP_RUSTBORO_CITY",
-    "qualifier": "Devon Corp_3 F"
+    "qualifier": "DevonCorp_3F"
   },
   {
     "name": "Thunder Stone",
     "map": "MAP_RUSTBORO_CITY",
-    "qualifier": "Devon Corp_3 F"
+    "qualifier": "DevonCorp_3F"
   },
   {
     "name": "Sun Stone",
     "map": "MAP_RUSTBORO_CITY",
-    "qualifier": "Devon Corp_3 F"
+    "qualifier": "DevonCorp_3F"
   },
   {
     "name": "Premier Ball",
     "map": "MAP_RUSTBORO_CITY",
-    "qualifier": "Flat2_2 F"
+    "qualifier": "Flat2_2F"
   },
   {
     "name": "TM96 - Bulldoze",
@@ -2332,7 +2332,7 @@
   {
     "name": "Quick Claw",
     "map": "MAP_RUSTBORO_CITY",
-    "qualifier": "Pokemon School"
+    "qualifier": "PokemonSchool"
   },
   {
     "name": "HM04 - Strength",
@@ -2352,52 +2352,52 @@
   {
     "name": "Shell Bell",
     "map": "MAP_SHOAL_CAVE",
-    "qualifier": "Low Tide Entrance Room"
+    "qualifier": "LowTideEntranceRoom"
   },
   {
     "name": "Shoal Shell",
     "map": "MAP_SHOAL_CAVE",
-    "qualifier": "Low Tide Inner Room"
+    "qualifier": "LowTideInnerRoom"
   },
   {
     "name": "Shoal Shell",
     "map": "MAP_SHOAL_CAVE",
-    "qualifier": "Low Tide Inner Room"
+    "qualifier": "LowTideInnerRoom"
   },
   {
     "name": "Shoal Shell",
     "map": "MAP_SHOAL_CAVE",
-    "qualifier": "Low Tide Inner Room"
+    "qualifier": "LowTideInnerRoom"
   },
   {
     "name": "Shoal Shell",
     "map": "MAP_SHOAL_CAVE",
-    "qualifier": "Low Tide Inner Room"
+    "qualifier": "LowTideInnerRoom"
   },
   {
     "name": "Shoal Salt",
     "map": "MAP_SHOAL_CAVE",
-    "qualifier": "Low Tide Inner Room"
+    "qualifier": "LowTideInnerRoom"
   },
   {
     "name": "Shoal Salt",
     "map": "MAP_SHOAL_CAVE",
-    "qualifier": "Low Tide Inner Room"
+    "qualifier": "LowTideInnerRoom"
   },
   {
     "name": "Shoal Salt",
     "map": "MAP_SHOAL_CAVE",
-    "qualifier": "Low Tide Lower Room"
+    "qualifier": "LowTideLowerRoom"
   },
   {
     "name": "Focus Band",
     "map": "MAP_SHOAL_CAVE",
-    "qualifier": "Low Tide Lower Room"
+    "qualifier": "LowTideLowerRoom"
   },
   {
     "name": "Shoal Salt",
     "map": "MAP_SHOAL_CAVE",
-    "qualifier": "Low Tide Stairs Room"
+    "qualifier": "LowTideStairsRoom"
   },
   {
     "name": "Powder Jar",
@@ -2407,7 +2407,7 @@
   {
     "name": "TM46 - Thief",
     "map": "MAP_SLATEPORT_CITY",
-    "qualifier": "Battle Tent Lobby"
+    "qualifier": "BattleTentLobby"
   },
   {
     "name": "DeepSeaTooth",
@@ -2422,37 +2422,37 @@
   {
     "name": "TM03 - Flip Turn",
     "map": "MAP_SLATEPORT_CITY",
-    "qualifier": "Oceanic Museum_1 F"
+    "qualifier": "OceanicMuseum_1F"
   },
   {
     "name": "Red Scarf",
     "map": "MAP_SLATEPORT_CITY",
-    "qualifier": "Pokemon Fan Club"
+    "qualifier": "PokemonFanClub"
   },
   {
     "name": "Blue Scarf",
     "map": "MAP_SLATEPORT_CITY",
-    "qualifier": "Pokemon Fan Club"
+    "qualifier": "PokemonFanClub"
   },
   {
     "name": "Pink Scarf",
     "map": "MAP_SLATEPORT_CITY",
-    "qualifier": "Pokemon Fan Club"
+    "qualifier": "PokemonFanClub"
   },
   {
     "name": "Green Scarf",
     "map": "MAP_SLATEPORT_CITY",
-    "qualifier": "Pokemon Fan Club"
+    "qualifier": "PokemonFanClub"
   },
   {
     "name": "Yellow Scarf",
     "map": "MAP_SLATEPORT_CITY",
-    "qualifier": "Pokemon Fan Club"
+    "qualifier": "PokemonFanClub"
   },
   {
     "name": "Soothe Bell",
     "map": "MAP_SLATEPORT_CITY",
-    "qualifier": "Pokemon Fan Club"
+    "qualifier": "PokemonFanClub"
   },
   {
     "name": "Figy Berry",
@@ -2472,22 +2472,22 @@
   {
     "name": "Grimmite",
     "map": "MAP_SOOTOPOLIS_CITY",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "TM157 - Moonblast",
     "map": "MAP_SOOTOPOLIS_CITY",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "Grimmite",
     "map": "MAP_SOOTOPOLIS_CITY",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "TM157 - Moonblast",
     "map": "MAP_SOOTOPOLIS_CITY",
-    "qualifier": "Gym_1 F"
+    "qualifier": "Gym_1F"
   },
   {
     "name": "Draco Plate",
@@ -2522,17 +2522,17 @@
   {
     "name": "RustedSword",
     "map": "MAP_SOOTOPOLIS_CITY",
-    "qualifier": "Lotad And Seedot House"
+    "qualifier": "LotadAndSeedotHouse"
   },
   {
     "name": "RustedShield",
     "map": "MAP_SOOTOPOLIS_CITY",
-    "qualifier": "Lotad And Seedot House"
+    "qualifier": "LotadAndSeedotHouse"
   },
   {
     "name": "TM45 - Draining Kiss",
     "map": "MAP_VERDANTURF_TOWN",
-    "qualifier": "Battle Tent Lobby"
+    "qualifier": "BattleTentLobby"
   },
   {
     "name": "TM04 - Calm Mind",
@@ -2577,26 +2577,26 @@
   {
     "name": "Slakite",
     "map": "MAP_VICTORY_ROAD",
-    "qualifier": "1 F"
+    "qualifier": "1F"
   },
   {
     "name": "Tyranitarite",
     "map": "MAP_VICTORY_ROAD",
-    "qualifier": "1 F"
+    "qualifier": "1F"
   },
   {
     "name": "Salamencite",
     "map": "MAP_VICTORY_ROAD",
-    "qualifier": "1 F"
+    "qualifier": "1F"
   },
   {
     "name": "Garchompite",
     "map": "MAP_VICTORY_ROAD",
-    "qualifier": "1 F"
+    "qualifier": "1F"
   },
   {
     "name": "Metagrossite",
     "map": "MAP_VICTORY_ROAD",
-    "qualifier": "1 F"
+    "qualifier": "1F"
   }
 ]
