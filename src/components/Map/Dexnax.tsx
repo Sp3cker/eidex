@@ -16,6 +16,8 @@ const Dexnav = memo(function Dexnav() {
       // from: { opacity: 0, translateY: (window.innerHeight * 2) / 5 },
       opacity: dexNavIsOpen ? 1 : 0,
       translateY: dexNavIsOpen ? 0 : (window.innerHeight * 2) / 5,
+      config: {   mass: 1, damping: 0.2 },
+
       // config: { duration: 500 },
     },
     [dexNavIsOpen],
@@ -35,13 +37,14 @@ const Dexnav = memo(function Dexnav() {
           <p className="text-center text-xs font-bold text-neutral-700">
             No items found
           </p>
-        ):(
-        items.map((item) => (
-          <div key={item.name + item.map} className="h-10">
-            <p className="cool-font text-xs font-bold">{item.name}</p>
-            <p className="leading-4">{item.qualifier}</p>
-          </div>
-        )))}
+        ) : (
+          items.map((item) => (
+            <div key={item.name + item.map} className="h-10">
+              <p className="cool-font text-xs font-bold">{item.name}</p>
+              <p className="leading-4">{item.qualifier}</p>
+            </div>
+          ))
+        )}
       </div>
     </animated.nav>
   );

@@ -33,6 +33,7 @@ const MapPlaceInfo = () => {
       const toSize = screenWidth === "sm" ? 150 : 200;
       api.start({
         // delay: (key) => (key === "opacity" ? 0 : 300),
+      config: {   mass: 0.6, damping: 0.2 },
 
         translate: dexNavIsOpen
           ? clientWidth - toSize // Ensure it doesn't go too far left
