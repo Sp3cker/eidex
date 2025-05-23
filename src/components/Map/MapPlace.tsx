@@ -17,10 +17,10 @@ const MapPlace = ({ item }: MapPlaceProps) => {
 
   const handleClick = (state: SharedGestureState) => {
     //@ts-ignore
-    const element = state.event?.currentTarget;
+    const element = state.event.currentTarget;
     const rect = element.getBoundingClientRect();
-    //@ts-ignore
-    const mapRect = document.getElementById("map").getBoundingClientRect();
+    const mapRect = document.getElementById("map")?.getBoundingClientRect();
+    if (!mapRect) return;
     const centerX = (rect.left + rect.width / 2 - mapRect.left) / mapScale;
     const centerY = (rect.top + rect.height / 2 - mapRect.top) / mapScale;
 
@@ -43,39 +43,89 @@ const MapPlace = ({ item }: MapPlaceProps) => {
     };
   }, [item.id]);
 
-  return (
-    <g
-      key={item.id}
-      id={item.id}
-      transform={item.transform}
-      className={`${isSelectedMap ? "selected-place " : "fill-yellow-900/10 hover:fill-yellow-300/50 touch-none"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
-      {...bind()}
-    >
-      {item.type === "rect" && (
+  // Render function for individual elements
+  const renderElement = (elem: Record<string, any>) => {
+    if (elem.type === "g") {
+      return (
+        <g
+          key={elem.id || `g-${Math.random()}`}
+          id={elem.id}
+          transform={elem.transform}
+          className={`${isSelectedMap ? "selected-place ring" : "touch-none"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
+          {...bind()}
+        >
+          {elem.children?.map((child: Record<string, any>, index: number) =>
+            renderElement({
+              ...child,
+              id: child.id || `${elem.id}-child-${index}`,
+            }),
+          )}
+        </g>
+      );
+    }
+
+    if (elem.type === "rect") {
+      return (
         <rect
-          x={item.x}
-          y={item.y}
-          width={item.width}
-          height={item.height}
-          {...item.style}
-          className={`border-yellow ${isSelectedMap ? " fill-yellow-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50 touch-none"}`}
+          key={elem.id || `rect-${Math.random()}`}
+          id={elem.id}
+          x={elem.x}
+          y={elem.y}
+          width={elem.width}
+          height={elem.height}
+          {...elem.style}
+          className={`${isSelectedMap ? "fill-yellow-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-colors`}
+          {...bind()}
         />
-      )}
-      {item.type === "path" && <path d={item.d} {...item.style} />}
-      {item.type === "circle" && (
-        <circle cx={item.cx} cy={item.cy} r={item.r} {...item.style} />
-      )}
-      {item.type === "use" && (
+      );
+    }
+
+    if (elem.type === "path") {
+      return (
+        <path
+          key={elem.id || `path-${Math.random()}`}
+          id={elem.id}
+          d={elem.d}
+          {...elem.style}
+          {...bind()}
+        />
+      );
+    }
+
+    if (elem.type === "circle") {
+      return (
+        <circle
+          key={elem.id || `circle-${Math.random()}`}
+          id={elem.id}
+          cx={elem.cx}
+          cy={elem.cy}
+          r={elem.r}
+          {...elem.style}
+          {...bind()}
+        />
+      );
+    }
+
+    if (elem.type === "use") {
+      return (
         <use
-          xlinkHref={item.xlinkHref}
-          x={item.x}
-          y={item.y}
-          width={item.width}
-          height={item.height}
+          key={elem.id || `use-${Math.random()}`}
+          id={elem.id}
+          xlinkHref={elem["xlink:href"]}
+          x={elem.x}
+          y={elem.y}
+          width={elem.width}
+          height={elem.height}
+          transform={elem.transform}
+          {...bind()}
         />
-      )}
-    </g>
-  );
+      );
+    }
+
+    return null;
+  };
+
+  return renderElement(item);
 };
 
 export default MapPlace;

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useMapStore } from "@/stores/useMapStore";
 import { useItemSearch } from "@/utils/itemsData";
 import { useTransition, animated as a, useSprings } from "@react-spring/web";

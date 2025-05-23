@@ -1,7 +1,7 @@
 import "./map.css";
 import { ErrorBoundary } from "react-error-boundary";
 import Search from "./Search";
-import NewMap from "./svgviewer-react-output";
+import NewMap from "./ReactSvg"
 import Dexnav from "./Dexnax";
 import MapPlaceInfo from "./MapPlaceInfo";
 import MapContainer from "./MapContainer";

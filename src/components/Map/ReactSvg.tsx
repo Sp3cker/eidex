@@ -1,5 +1,6 @@
-import objects from "@/data/map/mapsvgs.json";
+import * as React from "react";
 import MapPlace from "./MapPlace";
+import objects from "@/data/map/mapsvgs.json";
 const SVGComponent = () => (
   <svg
     width="100%"
@@ -16,14 +17,16 @@ const SVGComponent = () => (
       strokeMiterlimit: 1.5,
     }}
   >
-    <g transform="matrix(0.666667,0,0,0.666667,0,0)">
-      <use xlinkHref="#_Image1" x={0} y={0} width="1920px" height="1080px" />
+    <g>
+      <use
+        xlinkHref="#_Image1"
+        x={0}
+        y={0}
+        width="1920px"
+        height="1080px"
+        transform="matrix(0.666667,0,0,0.666667,0,0)"
+      />
     </g>
-    <use xlinkHref="#_Image2" x={1069} y={299} width="131px" height="46px" />
-    <use xlinkHref="#_Image3" x={624} y={247} width="91px" height="37px" />
-    <use xlinkHref="#_Image4" x={102} y={605} width="132px" height="47px" />
-    <use xlinkHref="#_Image5" x={655} y={64} width="120px" height="32px" />
-
     {objects.map((ob) => (
       <MapPlace item={ob} key={ob.id} {...ob} />
     ))}

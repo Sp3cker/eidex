@@ -2,6 +2,9 @@ import { create } from "zustand";
 import encounters from "@/data/map/cleanEncounters.json";
 import maps from "@/data/map/maps.json";
 import pokemon from "@/data/speciesData.json";
+import svgData from "@/data/map/mapsvgs.json";
+// import parseSvg from "@/utils/parseSvg";
+import parseSvg from "svg-path-parser";
 import { Pokemon } from "@/types";
 import ItemSearch, { Item } from "@/utils/itemsData";
 
@@ -28,6 +31,8 @@ type MapStore = {
   selectedMapFishingMons: EncounterMons[] | undefined;
   selectedPokemon: Pokemon | null;
   selectedCoordinates: number[];
+  storedCoordinates: Map<string, number[]>;
+  setStoredCoordinates: (map: string, coords: number[]) => void;
   mapScale: number;
   mapOffset: number[];
   hoveredMap: string | null;
@@ -115,96 +120,121 @@ export function formatMapString(mapNameFromJson: string) {
       ) // Capitalize first letter and after underscores
   );
 }
-export const useMapStore = create<MapStore>((set) => ({
-  selectedMap: null,
-  selectedMapLandMons: undefined,
-  selectedMapWaterMons: undefined,
-  selectedMapFishingMons: undefined,
-  selectedCoordinates: [400, 340, 0, 0],
-  mapScale: 1,
-  mapOffset: [0, 0],
-  hoveredMap: null,
-  hoveredCoordinates: [0, 0],
-  dexNavIsOpen: false,
-  selectedMapItems: [],
-  deselectMap: () => set({ selectedMap: null }),
-  setSelectedMap: (map: string) => {
-    if (map === null) {
-      set({ selectedMap: null });
-      return;
-    }
-    const targetMap = getMap(map);
-    if (targetMap.length === 0) {
-      console.error("Error selecting map %s", map);
-      return;
-    }
-    const targetMapEncounters = Encounters.get(targetMap[0].map);
-    let landEncounters, waterEncounters, fishingEncounters;
-    if (targetMapEncounters) {
-      
-      /** Put ID on each mon so we can get their sprite andn info later
-       * Build a Map so we don't have to `map` through the `encounters` json for each lookup :3
-      */
-     const monsNameKeys = new Map<string, number>([]);
-     pokemon.forEach((p) => {
-       monsNameKeys.set(p.nameKey.toLowerCase().replace(/-/g, "_"), p.index);
-       // monsNameKeys.set(p.speciesName.replace("-", "_").toLowerCase(), p.index);
-      }); //nameKey cause it probly matches encounter Data
-      if (targetMapEncounters && targetMapEncounters.land_mons) {
-        putIdOnEncounter(targetMapEncounters.land_mons.mons, monsNameKeys);
-        landEncounters = putEncounterRate(targetMapEncounters.land_mons?.mons);
+export const useMapStore = create<MapStore>((set) => {
+  const storedCoordinates = new Map<string, number[]>();
+  maps.forEach((map) => {
+    const mapName = map.map;
+    const mapCoords = svgData.find((m) => {
+      if (m.d) {
+        console.log(m.id);
+        console.log(parseSvg(m.d));
       }
-      if (targetMapEncounters && targetMapEncounters.water_mons) {
-        putIdOnEncounter(targetMapEncounters.water_mons.mons, monsNameKeys);
-        waterEncounters = putEncounterRate(
-          targetMapEncounters.water_mons?.mons,
-        );
-      }
-      if (targetMapEncounters && targetMapEncounters.fishing_mons) {
-        putIdOnEncounter(targetMapEncounters.fishing_mons.mons, monsNameKeys);
-        fishingEncounters = putEncounterRate(
-          targetMapEncounters.fishing_mons.mons,
-        );
-      }
-    }
-    // console.error("Encounters not found for map %s", map);
-    
-    /** Parse Out Items for Map */
-    const selectedMapItems = ItemSearch.byMap(map);
-    if (selectedMapItems.length === 0) {
-      console.error("Error selecting items for map %s", map);
-    }
-    set({
-      selectedMap: map,
-      selectedMapLandMons: landEncounters,
-      selectedMapWaterMons: waterEncounters,
-      selectedMapFishingMons: fishingEncounters,
-      selectedMapItems,
+      m.id === mapName;
     });
-  },
-  setSelectedPokemon: (name: string) => {
-    const poke = pokemon.filter(
-      (p) => p.speciesName.toUpperCase() === name.replace(UnderscoreRegex, ""),
-    );
-    if (poke.length !== 1) {
-      console.error("Ambiguous findings for %s", name);
-      return;
+    if (mapCoords) {
+      const coords = [];
     }
-    set({ selectedPokemon: poke[0] });
-  },
-  selectedPokemon: null,
-  setSelectedCoordinates: (coords) => {
-    set({ selectedCoordinates: coords });
-  },
-  setMapScale: (n) => set({ mapScale: n }),
-  setMapOffset: (offset) => set({ mapOffset: offset }),
-  setHoveredMap: (map: string) => set({ hoveredMap: map }),
-  setHoveredCoordinates: (coords: number[]) =>
-    set({ hoveredCoordinates: coords }),
-  setDexnavIsOpen: (isOpen) => set({ dexNavIsOpen: isOpen }),
-  searchItemByName: (name: string) => {
-    return ItemSearch.search(name);
-  },
-}));
+  });
+  return {
+    selectedMap: null,
+    selectedMapLandMons: undefined,
+    selectedMapWaterMons: undefined,
+    selectedMapFishingMons: undefined,
+    selectedCoordinates: [400, 340],
+    storedCoordinates: new Map<string, number[]>(),
+    mapScale: 1,
+    mapOffset: [0, 0],
+    hoveredMap: null,
+    hoveredCoordinates: [0, 0],
+    dexNavIsOpen: false,
+    selectedMapItems: [],
+    deselectMap: () => set({ selectedMap: null }),
+    setSelectedMap: (map: string) => {
+      if (map === null) {
+        set({ selectedMap: null });
+        return;
+      }
+      const targetMap = getMap(map);
+      if (targetMap.length === 0) {
+        console.error("Error selecting map %s", map);
+        return;
+      }
+      const targetMapEncounters = Encounters.get(targetMap[0].map);
+      let landEncounters, waterEncounters, fishingEncounters;
+      if (targetMapEncounters) {
+        /** Put ID on each mon so we can get their sprite andn info later
+         * Build a Map so we don't have to `map` through the `encounters` json for each lookup :3
+         */
+        const monsNameKeys = new Map<string, number>([]);
+        pokemon.forEach((p) => {
+          monsNameKeys.set(p.nameKey.toLowerCase().replace(/-/g, "_"), p.index);
+          // monsNameKeys.set(p.speciesName.replace("-", "_").toLowerCase(), p.index);
+        }); //nameKey cause it probly matches encounter Data
+        if (targetMapEncounters && targetMapEncounters.land_mons) {
+          putIdOnEncounter(targetMapEncounters.land_mons.mons, monsNameKeys);
+          landEncounters = putEncounterRate(
+            targetMapEncounters.land_mons?.mons,
+          );
+        }
+        if (targetMapEncounters && targetMapEncounters.water_mons) {
+          putIdOnEncounter(targetMapEncounters.water_mons.mons, monsNameKeys);
+          waterEncounters = putEncounterRate(
+            targetMapEncounters.water_mons?.mons,
+          );
+        }
+        if (targetMapEncounters && targetMapEncounters.fishing_mons) {
+          putIdOnEncounter(targetMapEncounters.fishing_mons.mons, monsNameKeys);
+          fishingEncounters = putEncounterRate(
+            targetMapEncounters.fishing_mons.mons,
+          );
+        }
+      }
+      // console.error("Encounters not found for map %s", map);
+
+      /** Parse Out Items for Map */
+      const selectedMapItems = ItemSearch.byMap(map);
+      if (selectedMapItems.length === 0) {
+        console.error("Error selecting items for map %s", map);
+      }
+      set({
+        selectedMap: map,
+        selectedMapLandMons: landEncounters,
+        selectedMapWaterMons: waterEncounters,
+        selectedMapFishingMons: fishingEncounters,
+        selectedMapItems,
+      });
+    },
+    setSelectedPokemon: (name: string) => {
+      const poke = pokemon.filter(
+        (p) =>
+          p.speciesName.toUpperCase() === name.replace(UnderscoreRegex, ""),
+      );
+      if (poke.length !== 1) {
+        console.error("Ambiguous findings for %s", name);
+        return;
+      }
+      set({ selectedPokemon: poke[0] });
+    },
+    selectedPokemon: null,
+    setSelectedCoordinates: (coords) => {
+      set({ selectedCoordinates: coords });
+    },
+    setMapScale: (n) => set({ mapScale: n }),
+    setMapOffset: (offset) => set({ mapOffset: offset }),
+    setHoveredMap: (map: string) => set({ hoveredMap: map }),
+    setHoveredCoordinates: (coords: number[]) =>
+      set({ hoveredCoordinates: coords }),
+    setDexnavIsOpen: (isOpen) => set({ dexNavIsOpen: isOpen }),
+    searchItemByName: (name: string) => {
+      return ItemSearch.search(name);
+    },
+    setStoredCoordinates: (map: string, coords: number[]) =>
+      set((state) => {
+        const newCoords = new Map(state.coordinates);
+        newCoords.set(map, coords);
+        //  { coordinates: newCoords };
+      }),
+  };
+});
 
 export default useMapStore;

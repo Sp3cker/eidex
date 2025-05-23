@@ -1,4 +1,3 @@
-import svgData from "./output.json";
 
 import MapPlace from "./MapPlace";
 // import useMapStore from "@/stores/useMapStore";

@@ -1,10 +1,13 @@
-const fs = require("fs");
+const fs = require('fs');
+const cheerio = require('cheerio');
 
 function parseStyleObject(styleString) {
   const styleObj = {};
-  const pairs = styleString.split(",");
+  if (!styleString) return styleObj;
+  const pairs = styleString.split(',').map(s => s.trim());
   for (let pair of pairs) {
-    const [key, value] = pair.split(":").map((s) => s.trim());
+    const [key, value] = pair.split(':').map(s => s.trim());
+    if (!key || !value) continue;
     if (value.startsWith('"') && value.endsWith('"')) {
       styleObj[key] = value.slice(1, -1);
     } else if (!isNaN(value)) {
@@ -16,73 +19,81 @@ function parseStyleObject(styleString) {
   return styleObj;
 }
 
-function parseAttributes(attrString) {
+function preprocessJSX(content) {
+  content = content.replace(/style={{([^}]+)}}/g, (match, styleContent) => {
+    const styleObj = parseStyleObject(styleContent);
+    const styleString = Object.entries(styleObj)
+      .map(([k, v]) => `${k.replace(/([A-Z])/g, '-$1').toLowerCase()}:${v}`)
+      .join(';');
+    return `style="${styleString}"`;
+  });
+  content = content.replace(/(\w+)={([^}]+)}/g, '$1="$2"');
+  return content;
+}
+
+function parseElement($, el) {
+  const tagName = el.tagName.toLowerCase();
   const attrs = {};
-  const regex = /(\w+)\s*=\s*({[^}]+}|"[^"]*")/g;
-  let match;
-  while ((match = regex.exec(attrString)) !== null) {
-    const attrName = match[1];
-    let value = match[2];
-    if (value.startsWith("{") && value.endsWith("}")) {
-      value = value.slice(1, -1).trim();
-      if (attrName === "style") {
-        attrs[attrName] = parseStyleObject(value);
-      } else {
-        attrs[attrName] = Number(value);
-      }
-    } else if (value.startsWith('"') && value.endsWith('"')) {
-      attrs[attrName] = value.slice(1, -1);
+  for (let attr of Object.keys(el.attribs || {})) {
+    let value = el.attribs[attr];
+    if (attr === 'style') {
+      attrs[attr] = parseStyleObject(
+        value.split(';').map(s => {
+          const [k, v] = s.split(':').map(t => t.trim());
+          return `${k.replace(/-([a-z])/g, (_, c) => c.toUpperCase())}:${v}`;
+        }).join(',')
+      );
+    } else if (!isNaN(value)) {
+      attrs[attr] = Number(value);
+    } else {
+      attrs[attr] = value;
     }
   }
-  return attrs;
+
+  const element = { type: tagName, ...attrs };
+  const children = $(el).children().toArray()
+    .filter(child => ['g', 'rect', 'path', 'circle', 'use'].includes(child.tagName.toLowerCase()))
+    .map(child => parseElement($, child));
+
+  if (children.length > 0) {
+    element.children = children;
+  }
+
+  return element;
 }
 
 function main() {
   if (process.argv.length !== 3) {
-    console.error("Usage: node svg_to_json.js <svg_data_file>");
+    console.error('Usage: node svg_to_json.js <react_svg_file>');
     process.exit(1);
   }
+
   const filePath = process.argv[2];
   let data;
   try {
-    data = fs.readFileSync(filePath, "utf8");
+    data = fs.readFileSync(filePath, 'utf8');
   } catch (err) {
     console.error(`Error reading file: ${err.message}`);
     process.exit(1);
   }
 
-  const gElements = data.match(/<g\b[^>]*>[\s\S]*?<\/g>/g);
-  if (!gElements) {
-    console.error("No <g> elements found in the file");
+  const svgMatch = data.match(/<svg[^>]*>[\s\S]*<\/svg>/);
+  if (!svgMatch) {
+    console.error('No <svg> element found in the file');
     process.exit(1);
   }
+  let svgContent = svgMatch[0];
 
-  const elements = [];
-  for (let gMatch of gElements) {
-    const gTag = gMatch.match(/<g\b[^>]*>/)[0];
-    const gAttrString = gTag.slice(2, -1); // Remove <g and >
-    const gAttrs = parseAttributes(gAttrString);
-    const id = gAttrs.id;
-    const transform = gAttrs.transform;
+  svgContent = preprocessJSX(svgContent);
 
-    const shapeMatch = gMatch.match(/<(\w+)[^>]*\/>/);
-    if (shapeMatch) {
-      const shapeType = shapeMatch[1];
-      const shapeAttrString = shapeMatch[0].slice(shapeType.length + 2, -2); // Remove <shape and />
-      const shapeAttrs = parseAttributes(shapeAttrString);
-      const element = {
-        id,
-        transform,
-        type: shapeType,
-        ...shapeAttrs,
-      };
-      elements.push(element);
-    }
-  }
+  const $ = cheerio.load(svgContent, { xmlMode: true });
+  const elements = $('g, rect, path, circle, use')
+    .toArray()
+    .map(el => parseElement($, el));
 
   try {
-    fs.writeFileSync("output.json", JSON.stringify(elements, null, 2));
-    console.log("Successfully wrote output to output.json");
+    fs.writeFileSync('output.json', JSON.stringify(elements, null, 2));
+    console.log('Successfully wrote output to output.json');
   } catch (err) {
     console.error(`Error writing output file: ${err.message}`);
     process.exit(1);
