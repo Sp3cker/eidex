@@ -1,0 +1,925 @@
+[
+  {
+    "id": "MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS",
+    "mapBaseName": "MAP_ABANDONED_SHIP",
+    "levels": [
+      {
+        "id": "MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS"
+      },
+      {
+        "levelLabel": "B1F",
+        "id": "MAP_ABANDONED_SHIP_ROOMS_B1F"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ANCIENT_TOMB",
+    "mapBaseName": "MAP_ANCIENT_TOMB",
+    "levels": [
+      {
+        "id": "MAP_ANCIENT_TOMB"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ARTISAN_CAVE_1F",
+    "mapBaseName": "MAP_ARTISAN_CAVE",
+    "levels": [
+      {
+        "levelLabel": "1F",
+        "id": "MAP_ARTISAN_CAVE_1F"
+      },
+      {
+        "levelLabel": "B1F",
+        "id": "MAP_ARTISAN_CAVE_B1F"
+      }
+    ]
+  },
+  {
+    "id": "MAP_CAVE_OF_ORIGIN_1F",
+    "mapBaseName": "MAP_CAVE_OF_ORIGIN",
+    "levels": [
+      {
+        "levelLabel": "1F",
+        "id": "MAP_CAVE_OF_ORIGIN_1F"
+      },
+      {
+        "levelLabel": "ENTRANCE",
+        "id": "MAP_CAVE_OF_ORIGIN_ENTRANCE"
+      },
+      {
+        "levelLabel": "UNUSED_RUBY_SAPPHIRE_MAP1",
+        "id": "MAP_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP1"
+      },
+      {
+        "levelLabel": "UNUSED_RUBY_SAPPHIRE_MAP2",
+        "id": "MAP_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP2"
+      },
+      {
+        "levelLabel": "UNUSED_RUBY_SAPPHIRE_MAP3",
+        "id": "MAP_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP3"
+      }
+    ]
+  },
+  {
+    "id": "MAP_DESERT_RUINS",
+    "mapBaseName": "MAP_DESERT_RUINS",
+    "levels": [
+      {
+        "id": "MAP_DESERT_RUINS"
+      }
+    ]
+  },
+  {
+    "id": "MAP_DESERT_UNDERPASS",
+    "mapBaseName": "MAP_DESERT_UNDERPASS",
+    "levels": [
+      {
+        "id": "MAP_DESERT_UNDERPASS"
+      }
+    ]
+  },
+  {
+    "id": "MAP_DEWFORD_TOWN",
+    "mapBaseName": "MAP_DEWFORD_TOWN",
+    "levels": [
+      {
+        "id": "MAP_DEWFORD_TOWN"
+      }
+    ]
+  },
+  {
+    "id": "MAP_EVER_GRANDE_CITY",
+    "mapBaseName": "MAP_EVER_GRANDE",
+    "levels": [
+      {
+        "id": "MAP_EVER_GRANDE_CITY"
+      }
+    ]
+  },
+  {
+    "id": "MAP_FALLARBOR_TOWN",
+    "mapBaseName": "MAP_FALLARBOR_TOWN",
+    "levels": [
+      {
+        "id": "MAP_FALLARBOR_TOWN"
+      }
+    ]
+  },
+  {
+    "id": "MAP_FIERY_PATH",
+    "mapBaseName": "MAP_FIERY_PATH",
+    "levels": [
+      {
+        "id": "MAP_FIERY_PATH"
+      }
+    ]
+  },
+  {
+    "id": "MAP_FLOATING_SLAB",
+    "mapBaseName": "MAP_FLOATING_SLAB",
+    "levels": [
+      {
+        "id": "MAP_FLOATING_SLAB"
+      }
+    ]
+  },
+  {
+    "id": "MAP_FORTREE_CITY",
+    "mapBaseName": "MAP_FORTREE_CITY",
+    "levels": [
+      {
+        "id": "MAP_FORTREE_CITY"
+      }
+    ]
+  },
+  {
+    "id": "MAP_GRANITE_CAVE_1F",
+    "mapBaseName": "MAP_GRANITE_CAVE",
+    "levels": [
+      {
+        "levelLabel": "1F",
+        "id": "MAP_GRANITE_CAVE_1F"
+      },
+      {
+        "levelLabel": "B1F",
+        "id": "MAP_GRANITE_CAVE_B1F"
+      },
+      {
+        "levelLabel": "B2F",
+        "id": "MAP_GRANITE_CAVE_B2F"
+      },
+      {
+        "levelLabel": "STEVENS_ROOM",
+        "id": "MAP_GRANITE_CAVE_STEVENS_ROOM"
+      }
+    ]
+  },
+  {
+    "id": "MAP_GRASSY_SLAB",
+    "mapBaseName": "MAP_GRASSY_SLAB",
+    "levels": [
+      {
+        "id": "MAP_GRASSY_SLAB"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ISLAND_CAVE",
+    "mapBaseName": "MAP_ISLAND_CAVE",
+    "levels": [
+      {
+        "id": "MAP_ISLAND_CAVE"
+      }
+    ]
+  },
+  {
+    "id": "MAP_JAGGED_PASS",
+    "mapBaseName": "MAP_JAGGED_PASS",
+    "levels": [
+      {
+        "id": "MAP_JAGGED_PASS"
+      }
+    ]
+  },
+  {
+    "id": "MAP_LAVARIDGE_TOWN",
+    "mapBaseName": "MAP_LAVARIDGE_TOWN",
+    "levels": [
+      {
+        "id": "MAP_LAVARIDGE_TOWN"
+      }
+    ]
+  },
+  {
+    "id": "MAP_LILYCOVE_CITY",
+    "mapBaseName": "MAP_LILYCOVE_CITY",
+    "levels": [
+      {
+        "id": "MAP_LILYCOVE_CITY"
+      }
+    ]
+  },
+  {
+    "id": "MAP_LITTLEROOT_TOWN",
+    "mapBaseName": "MAP_LITTLEROOT_TOWN",
+    "levels": [
+      {
+        "id": "MAP_LITTLEROOT_TOWN"
+      }
+    ]
+  },
+  {
+    "id": "MAP_MAGMA_HIDEOUT_1F",
+    "mapBaseName": "MAP_MAGMA_HIDEOUT",
+    "levels": [
+      {
+        "levelLabel": "1F",
+        "id": "MAP_MAGMA_HIDEOUT_1F"
+      },
+      {
+        "levelLabel": "2F_1R",
+        "id": "MAP_MAGMA_HIDEOUT_2F_1R"
+      },
+      {
+        "levelLabel": "2F_2R",
+        "id": "MAP_MAGMA_HIDEOUT_2F_2R"
+      },
+      {
+        "levelLabel": "2F_3R",
+        "id": "MAP_MAGMA_HIDEOUT_2F_3R"
+      },
+      {
+        "levelLabel": "3F_1R",
+        "id": "MAP_MAGMA_HIDEOUT_3F_1R"
+      },
+      {
+        "levelLabel": "3F_2R",
+        "id": "MAP_MAGMA_HIDEOUT_3F_2R"
+      },
+      {
+        "levelLabel": "3F_3R",
+        "id": "MAP_MAGMA_HIDEOUT_3F_3R"
+      },
+      {
+        "levelLabel": "4F",
+        "id": "MAP_MAGMA_HIDEOUT_4F"
+      }
+    ]
+  },
+  {
+    "id": "MAP_MAUVILLE_CITY",
+    "mapBaseName": "MAP_MAUVILLE_CITY",
+    "levels": [
+      {
+        "id": "MAP_MAUVILLE_CITY"
+      }
+    ]
+  },
+  {
+    "id": "MAP_METEOR_FALLS_1F_1R",
+    "mapBaseName": "MAP_METEOR_FALLS",
+    "levels": [
+      {
+        "levelLabel": "1F_1R",
+        "id": "MAP_METEOR_FALLS_1F_1R"
+      },
+      {
+        "levelLabel": "1F_2R",
+        "id": "MAP_METEOR_FALLS_1F_2R"
+      },
+      {
+        "levelLabel": "B1F_1R",
+        "id": "MAP_METEOR_FALLS_B1F_1R"
+      },
+      {
+        "levelLabel": "B1F_2R",
+        "id": "MAP_METEOR_FALLS_B1F_2R"
+      },
+      {
+        "id": "MAP_METEOR_FALLS_STEVENS_CAVE"
+      }
+    ]
+  },
+  {
+    "id": "MAP_MIRAGE_TOWER_1F",
+    "mapBaseName": "MAP_MIRAGE_TOWER",
+    "levels": [
+      {
+        "levelLabel": "1F",
+        "id": "MAP_MIRAGE_TOWER_1F"
+      },
+      {
+        "levelLabel": "2F",
+        "id": "MAP_MIRAGE_TOWER_2F"
+      },
+      {
+        "levelLabel": "3F",
+        "id": "MAP_MIRAGE_TOWER_3F"
+      },
+      {
+        "levelLabel": "4F",
+        "id": "MAP_MIRAGE_TOWER_4F"
+      }
+    ]
+  },
+  {
+    "id": "MAP_MOSSDEEP_CITY",
+    "mapBaseName": "MAP_MOSSDEEP_CITY",
+    "levels": [
+      {
+        "id": "MAP_MOSSDEEP_CITY"
+      }
+    ]
+  },
+  {
+    "id": "MAP_MT_CHIMNEY",
+    "mapBaseName": "MAP_MT_CHIMNEY",
+    "levels": [
+      {
+        "id": "MAP_MT_CHIMNEY"
+      }
+    ]
+  },
+  {
+    "id": "MAP_MT_PYRE_1F",
+    "mapBaseName": "MAP_MT_PYRE",
+    "levels": [
+      {
+        "levelLabel": "1F",
+        "id": "MAP_MT_PYRE_1F"
+      },
+      {
+        "levelLabel": "2F",
+        "id": "MAP_MT_PYRE_2F"
+      },
+      {
+        "levelLabel": "3F",
+        "id": "MAP_MT_PYRE_3F"
+      },
+      {
+        "levelLabel": "4F",
+        "id": "MAP_MT_PYRE_4F"
+      },
+      {
+        "levelLabel": "5F",
+        "id": "MAP_MT_PYRE_5F"
+      },
+      {
+        "levelLabel": "6F",
+        "id": "MAP_MT_PYRE_6F"
+      },
+      {
+        "id": "MAP_MT_PYRE_EXTERIOR"
+      },
+      {
+        "id": "MAP_MT_PYRE_SUMMIT"
+      }
+    ]
+  },
+  {
+    "id": "MAP_NEW_MAUVILLE_ENTRANCE",
+    "mapBaseName": "MAP_NEW_MAUVILLE",
+    "levels": [
+      {
+        "levelLabel": "ENTRANCE",
+        "id": "MAP_NEW_MAUVILLE_ENTRANCE"
+      },
+      {
+        "levelLabel": "INSIDE",
+        "id": "MAP_NEW_MAUVILLE_INSIDE"
+      }
+    ]
+  },
+  {
+    "id": "MAP_OLDALE_TOWN",
+    "mapBaseName": "MAP_OLDALE_TOWN",
+    "levels": [
+      {
+        "id": "MAP_OLDALE_TOWN"
+      }
+    ]
+  },
+  {
+    "id": "MAP_PACIFIDLOG_TOWN",
+    "mapBaseName": "MAP_PACIFIDLOG_TOWN",
+    "levels": [
+      {
+        "id": "MAP_PACIFIDLOG_TOWN"
+      }
+    ]
+  },
+  {
+    "id": "MAP_PETALBURG_CITY",
+    "mapBaseName": "MAP_PETALBURG_CITY",
+    "levels": [
+      {
+        "id": "MAP_PETALBURG_CITY"
+      }
+    ]
+  },
+  {
+    "id": "MAP_PETALBURG_WOODS",
+    "mapBaseName": "MAP_PETALBURG_WOODS",
+    "levels": [
+      {
+        "id": "MAP_PETALBURG_WOODS"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROCKY_SLAB",
+    "mapBaseName": "MAP_ROCKY_SLAB",
+    "levels": [
+      {
+        "id": "MAP_ROCKY_SLAB"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE101",
+    "mapBaseName": "MAP_ROUTE101",
+    "levels": [
+      {
+        "id": "MAP_ROUTE101"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE102",
+    "mapBaseName": "MAP_ROUTE102",
+    "levels": [
+      {
+        "id": "MAP_ROUTE102"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE103",
+    "mapBaseName": "MAP_ROUTE103",
+    "levels": [
+      {
+        "id": "MAP_ROUTE103"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE104",
+    "mapBaseName": "MAP_ROUTE104",
+    "levels": [
+      {
+        "id": "MAP_ROUTE104"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE105",
+    "mapBaseName": "MAP_ROUTE105",
+    "levels": [
+      {
+        "id": "MAP_ROUTE105"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE106",
+    "mapBaseName": "MAP_ROUTE106",
+    "levels": [
+      {
+        "id": "MAP_ROUTE106"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE107",
+    "mapBaseName": "MAP_ROUTE107",
+    "levels": [
+      {
+        "id": "MAP_ROUTE107"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE108",
+    "mapBaseName": "MAP_ROUTE108",
+    "levels": [
+      {
+        "id": "MAP_ROUTE108"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE109",
+    "mapBaseName": "MAP_ROUTE109",
+    "levels": [
+      {
+        "id": "MAP_ROUTE109"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE110",
+    "mapBaseName": "MAP_ROUTE110",
+    "levels": [
+      {
+        "id": "MAP_ROUTE110"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE111",
+    "mapBaseName": "MAP_ROUTE111",
+    "levels": [
+      {
+        "id": "MAP_ROUTE111"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE112",
+    "mapBaseName": "MAP_ROUTE112",
+    "levels": [
+      {
+        "id": "MAP_ROUTE112"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE113",
+    "mapBaseName": "MAP_ROUTE113",
+    "levels": [
+      {
+        "id": "MAP_ROUTE113"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE114",
+    "mapBaseName": "MAP_ROUTE114",
+    "levels": [
+      {
+        "id": "MAP_ROUTE114"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE115",
+    "mapBaseName": "MAP_ROUTE115",
+    "levels": [
+      {
+        "id": "MAP_ROUTE115"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE116",
+    "mapBaseName": "MAP_ROUTE116",
+    "levels": [
+      {
+        "id": "MAP_ROUTE116"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE117",
+    "mapBaseName": "MAP_ROUTE117",
+    "levels": [
+      {
+        "id": "MAP_ROUTE117"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE118",
+    "mapBaseName": "MAP_ROUTE118",
+    "levels": [
+      {
+        "id": "MAP_ROUTE118"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE119",
+    "mapBaseName": "MAP_ROUTE119",
+    "levels": [
+      {
+        "id": "MAP_ROUTE119"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE120",
+    "mapBaseName": "MAP_ROUTE120",
+    "levels": [
+      {
+        "id": "MAP_ROUTE120"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE121",
+    "mapBaseName": "MAP_ROUTE121",
+    "levels": [
+      {
+        "id": "MAP_ROUTE121"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE122",
+    "mapBaseName": "MAP_ROUTE122",
+    "levels": [
+      {
+        "id": "MAP_ROUTE122"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE123",
+    "mapBaseName": "MAP_ROUTE123",
+    "levels": [
+      {
+        "id": "MAP_ROUTE123"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE124",
+    "mapBaseName": "MAP_ROUTE124",
+    "levels": [
+      {
+        "id": "MAP_ROUTE124"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE125",
+    "mapBaseName": "MAP_ROUTE125",
+    "levels": [
+      {
+        "id": "MAP_ROUTE125"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE126",
+    "mapBaseName": "MAP_ROUTE126",
+    "levels": [
+      {
+        "id": "MAP_ROUTE126"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE127",
+    "mapBaseName": "MAP_ROUTE127",
+    "levels": [
+      {
+        "id": "MAP_ROUTE127"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE128",
+    "mapBaseName": "MAP_ROUTE128",
+    "levels": [
+      {
+        "id": "MAP_ROUTE128"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE129",
+    "mapBaseName": "MAP_ROUTE129",
+    "levels": [
+      {
+        "id": "MAP_ROUTE129"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE130",
+    "mapBaseName": "MAP_ROUTE130",
+    "levels": [
+      {
+        "id": "MAP_ROUTE130"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE131",
+    "mapBaseName": "MAP_ROUTE131",
+    "levels": [
+      {
+        "id": "MAP_ROUTE131"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE132",
+    "mapBaseName": "MAP_ROUTE132",
+    "levels": [
+      {
+        "id": "MAP_ROUTE132"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE133",
+    "mapBaseName": "MAP_ROUTE133",
+    "levels": [
+      {
+        "id": "MAP_ROUTE133"
+      }
+    ]
+  },
+  {
+    "id": "MAP_ROUTE134",
+    "mapBaseName": "MAP_ROUTE134",
+    "levels": [
+      {
+        "id": "MAP_ROUTE134"
+      }
+    ]
+  },
+  {
+    "id": "MAP_RUSTBORO_CITY",
+    "mapBaseName": "MAP_RUSTBORO_CITY",
+    "levels": [
+      {
+        "id": "MAP_RUSTBORO_CITY"
+      }
+    ]
+  },
+  {
+    "id": "MAP_RUSTURF_TUNNEL",
+    "mapBaseName": "MAP_RUSTURF_TUNNEL",
+    "levels": [
+      {
+        "id": "MAP_RUSTURF_TUNNEL"
+      }
+    ]
+  },
+  {
+    "id": "MAP_SAFARI_ZONE_NORTH",
+    "mapBaseName": "MAP_SAFARI_ZONE",
+    "levels": [
+      {
+        "id": "MAP_SAFARI_ZONE_NORTH"
+      },
+      {
+        "id": "MAP_SAFARI_ZONE_NORTHEAST"
+      },
+      {
+        "id": "MAP_SAFARI_ZONE_NORTHWEST"
+      },
+      {
+        "id": "MAP_SAFARI_ZONE_SOUTH"
+      },
+      {
+        "id": "MAP_SAFARI_ZONE_SOUTHEAST"
+      },
+      {
+        "id": "MAP_SAFARI_ZONE_SOUTHWEST"
+      }
+    ]
+  },
+  {
+    "id": "MAP_SCORCHED_SLAB",
+    "mapBaseName": "MAP_SCORCHED_SLAB",
+    "levels": [
+      {
+        "id": "MAP_SCORCHED_SLAB"
+      }
+    ]
+  },
+  {
+    "id": "MAP_SEAFLOOR_CAVERN_ENTRANCE",
+    "mapBaseName": "MAP_SEAFLOOR_CAVERN",
+    "levels": [
+      {
+        "levelLabel": "ENTRANCE",
+        "id": "MAP_SEAFLOOR_CAVERN_ENTRANCE"
+      },
+      {
+        "levelLabel": "ROOM1",
+        "id": "MAP_SEAFLOOR_CAVERN_ROOM1"
+      },
+      {
+        "levelLabel": "ROOM2",
+        "id": "MAP_SEAFLOOR_CAVERN_ROOM2"
+      },
+      {
+        "levelLabel": "ROOM3",
+        "id": "MAP_SEAFLOOR_CAVERN_ROOM3"
+      },
+      {
+        "levelLabel": "ROOM4",
+        "id": "MAP_SEAFLOOR_CAVERN_ROOM4"
+      },
+      {
+        "levelLabel": "ROOM5",
+        "id": "MAP_SEAFLOOR_CAVERN_ROOM5"
+      },
+      {
+        "levelLabel": "ROOM6",
+        "id": "MAP_SEAFLOOR_CAVERN_ROOM6"
+      },
+      {
+        "levelLabel": "ROOM7",
+        "id": "MAP_SEAFLOOR_CAVERN_ROOM7"
+      },
+      {
+        "levelLabel": "ROOM8",
+        "id": "MAP_SEAFLOOR_CAVERN_ROOM8"
+      }
+    ]
+  },
+  {
+    "id": "MAP_SHOAL_CAVE_LOW_TIDE_ENTRANCE_ROOM",
+    "mapBaseName": "MAP_SHOAL_CAVE",
+    "levels": [
+      {
+        "levelLabel": "LOW_TIDE_ENTRANCE_ROOM",
+        "id": "MAP_SHOAL_CAVE_LOW_TIDE_ENTRANCE_ROOM"
+      },
+      {
+        "levelLabel": "LOW_TIDE_ICE_ROOM",
+        "id": "MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM"
+      },
+      {
+        "levelLabel": "LOW_TIDE_INNER_ROOM",
+        "id": "MAP_SHOAL_CAVE_LOW_TIDE_INNER_ROOM"
+      },
+      {
+        "levelLabel": "LOW_TIDE_LOWER_ROOM",
+        "id": "MAP_SHOAL_CAVE_LOW_TIDE_LOWER_ROOM"
+      },
+      {
+        "levelLabel": "LOW_TIDE_STAIRS_ROOM",
+        "id": "MAP_SHOAL_CAVE_LOW_TIDE_STAIRS_ROOM"
+      }
+    ]
+  },
+  {
+    "id": "MAP_SKY_PILLAR_1F",
+    "mapBaseName": "MAP_SKY_PILLAR",
+    "levels": [
+      {
+        "levelLabel": "1F",
+        "id": "MAP_SKY_PILLAR_1F"
+      },
+      {
+        "levelLabel": "3F",
+        "id": "MAP_SKY_PILLAR_3F"
+      },
+      {
+        "levelLabel": "5F",
+        "id": "MAP_SKY_PILLAR_5F"
+      }
+    ]
+  },
+  {
+    "id": "MAP_SLATEPORT_CITY",
+    "mapBaseName": "MAP_SLATEPORT_CITY",
+    "levels": [
+      {
+        "id": "MAP_SLATEPORT_CITY"
+      }
+    ]
+  },
+  {
+    "id": "MAP_SOOTOPOLIS_CITY",
+    "mapBaseName": "MAP_SOOTOPOLIS_CITY",
+    "levels": [
+      {
+        "id": "MAP_SOOTOPOLIS_CITY"
+      }
+    ]
+  },
+  {
+    "id": "MAP_UNDERWATER_ROUTE124",
+    "mapBaseName": "MAP_UNDERWATER_ROUTE124",
+    "levels": [
+      {
+        "id": "MAP_UNDERWATER_ROUTE124"
+      }
+    ]
+  },
+  {
+    "id": "MAP_UNDERWATER_ROUTE126",
+    "mapBaseName": "MAP_UNDERWATER_ROUTE126",
+    "levels": [
+      {
+        "id": "MAP_UNDERWATER_ROUTE126"
+      }
+    ]
+  },
+  {
+    "id": "MAP_VERDANTURF_TOWN",
+    "mapBaseName": "MAP_VERDANTURF_TOWN",
+    "levels": [
+      {
+        "id": "MAP_VERDANTURF_TOWN"
+      }
+    ]
+  },
+  {
+    "id": "MAP_VICTORY_ROAD_1F",
+    "mapBaseName": "MAP_VICTORY_ROAD",
+    "levels": [
+      {
+        "levelLabel": "1F",
+        "id": "MAP_VICTORY_ROAD_1F"
+      },
+      {
+        "levelLabel": "B1F",
+        "id": "MAP_VICTORY_ROAD_B1F"
+      },
+      {
+        "levelLabel": "B2F",
+        "id": "MAP_VICTORY_ROAD_B2F"
+      }
+    ]
+  }
+]

@@ -25,11 +25,6 @@
     "qualifier": "Gym"
   },
   {
-    "name": "TM78 - Low Sweep",
-    "map": "MAP_DEWFORD_TOWN",
-    "qualifier": "Gym"
-  },
-  {
     "name": "TM155 - Draco Meteor",
     "map": "MAP_EVER_GRANDE_CITY",
     "qualifier": ""
@@ -300,31 +295,6 @@
     "qualifier": "Gym"
   },
   {
-    "name": "TM107 - Brave Bird",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "Gym"
-  },
-  {
-    "name": "TM95 - Acrobatics",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "Gym"
-  },
-  {
-    "name": "TM145 - Hurricane",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "Gym"
-  },
-  {
-    "name": "TM153 - Tailwind",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "Gym"
-  },
-  {
-    "name": "Altarianite",
-    "map": "MAP_FORTREE_CITY",
-    "qualifier": "Gym"
-  },
-  {
     "name": "TM151 - Stored Power",
     "map": "MAP_FORTREE_CITY",
     "qualifier": "House2"
@@ -463,51 +433,6 @@
     "name": "SafetyGoggles",
     "map": "MAP_LAVARIDGE_TOWN",
     "qualifier": ""
-  },
-  {
-    "name": "Mega Ring",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": ""
-  },
-  {
-    "name": "Go-Goggles",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": ""
-  },
-  {
-    "name": "SafetyGoggles",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": ""
-  },
-  {
-    "name": "TM50 - Overheat",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1F"
-  },
-  {
-    "name": "TM61 - Will O Wisp",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1F"
-  },
-  {
-    "name": "TM104 - Heat Crash",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1F"
-  },
-  {
-    "name": "TM144 - Heat Wave",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1F"
-  },
-  {
-    "name": "TM150 - Flare Blitz",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1F"
-  },
-  {
-    "name": "Infernapite",
-    "map": "MAP_LAVARIDGE_TOWN",
-    "qualifier": "Gym_1F"
   },
   {
     "name": "TM50 - Overheat",
@@ -1065,11 +990,6 @@
     "qualifier": "ProfessorBirchsLab"
   },
   {
-    "name": "Poké Ball",
-    "map": "MAP_LITTLEROOT_TOWN",
-    "qualifier": "ProfessorBirchsLab"
-  },
-  {
     "name": "Basement Key",
     "map": "MAP_MAUVILLE_CITY",
     "qualifier": ""
@@ -1088,46 +1008,6 @@
     "name": "Acro Bike",
     "map": "MAP_MAUVILLE_CITY",
     "qualifier": "BikeShop"
-  },
-  {
-    "name": "Mach Bike",
-    "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "BikeShop"
-  },
-  {
-    "name": "Acro Bike",
-    "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "BikeShop"
-  },
-  {
-    "name": "Mach Bike",
-    "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "BikeShop"
-  },
-  {
-    "name": "Acro Bike",
-    "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "BikeShop"
-  },
-  {
-    "name": "TM92 - Volt Switch",
-    "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "Gym"
-  },
-  {
-    "name": "Luxrite",
-    "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "Gym"
-  },
-  {
-    "name": "Manectite",
-    "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "Gym"
-  },
-  {
-    "name": "Ampharosite",
-    "map": "MAP_MAUVILLE_CITY",
-    "qualifier": "Gym"
   },
   {
     "name": "TM92 - Volt Switch",
@@ -1185,24 +1065,9 @@
     "qualifier": "Gym"
   },
   {
-    "name": "TM55 - Expanding Force",
-    "map": "MAP_MOSSDEEP_CITY",
-    "qualifier": "Gym"
-  },
-  {
-    "name": "TM106 - Trick Room",
-    "map": "MAP_MOSSDEEP_CITY",
-    "qualifier": "Gym"
-  },
-  {
     "name": "Super Rod",
     "map": "MAP_MOSSDEEP_CITY",
     "qualifier": "House3"
-  },
-  {
-    "name": "Sun Stone",
-    "map": "MAP_MOSSDEEP_CITY",
-    "qualifier": "SpaceCenter_1F"
   },
   {
     "name": "Sun Stone",
@@ -1391,11 +1256,6 @@
   },
   {
     "name": "Cheri Berry",
-    "map": "MAP_ROUTE104",
-    "qualifier": ""
-  },
-  {
-    "name": "Chesto Berry",
     "map": "MAP_ROUTE104",
     "qualifier": ""
   },
@@ -2360,26 +2220,6 @@
     "qualifier": "LowTideInnerRoom"
   },
   {
-    "name": "Shoal Shell",
-    "map": "MAP_SHOAL_CAVE",
-    "qualifier": "LowTideInnerRoom"
-  },
-  {
-    "name": "Shoal Shell",
-    "map": "MAP_SHOAL_CAVE",
-    "qualifier": "LowTideInnerRoom"
-  },
-  {
-    "name": "Shoal Shell",
-    "map": "MAP_SHOAL_CAVE",
-    "qualifier": "LowTideInnerRoom"
-  },
-  {
-    "name": "Shoal Salt",
-    "map": "MAP_SHOAL_CAVE",
-    "qualifier": "LowTideInnerRoom"
-  },
-  {
     "name": "Shoal Salt",
     "map": "MAP_SHOAL_CAVE",
     "qualifier": "LowTideInnerRoom"
@@ -2468,16 +2308,6 @@
     "name": "HM07 - Waterfall",
     "map": "MAP_SOOTOPOLIS_CITY",
     "qualifier": ""
-  },
-  {
-    "name": "Grimmite",
-    "map": "MAP_SOOTOPOLIS_CITY",
-    "qualifier": "Gym_1F"
-  },
-  {
-    "name": "TM157 - Moonblast",
-    "map": "MAP_SOOTOPOLIS_CITY",
-    "qualifier": "Gym_1F"
   },
   {
     "name": "Grimmite",
