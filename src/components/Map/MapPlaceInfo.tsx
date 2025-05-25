@@ -2,13 +2,10 @@ import { animated, useSpring } from "react-spring";
 import { useMapStore } from "@/stores/useMapStore";
 import { useEffect, useState } from "react";
 import EncounterMonsList from "./EncounterMonsList";
-import { useScreenWidth } from "@/hooks/useScreenWidth";
 
 const MapPlaceInfo = () => {
   // const [clientWidth, setClientWidth] = useState(window.innerWidth);
   const [selectedTab, setSelectedTab] = useState("land");
-
-  const screenWidth = useScreenWidth();
 
   const [spring, api] = useSpring(
     {
@@ -40,10 +37,14 @@ const MapPlaceInfo = () => {
         api.start({
           // delay: (key) => (key === "opacity" ? 0 : 300),
           config: { mass: 0.6, damping: 0.2 },
-
+          opacity: 1,
           translate: 0, // Ensure it doesn't go too far left
         });
-        api.start({ opacity: 1 });
+        if (state.selectedMapLandMons?.length === 0) {
+          setSelectedTab("water");
+        } else {
+          setSelectedTab("land");
+        }
       } else {
         api.start({ translate: 0 });
       }
@@ -51,7 +52,7 @@ const MapPlaceInfo = () => {
     return () => {
       unsub();
     };
-  }, [screenWidth]);
+  }, []);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.currentTarget;
@@ -66,7 +67,7 @@ const MapPlaceInfo = () => {
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity h-[256px] md:h-full cursor-touch pb-1`}
+      className={`content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch h-[256px] pb-1 md:h-full`}
     >
       <div className="tabs map-place-info-textbox-gradient w-[150px] overflow-hidden rounded px-3 py-3 shadow-2xl">
         <div className="font-pkmnem tab-list block text-nowrap">
@@ -92,7 +93,7 @@ const MapPlaceInfo = () => {
             Fishing
           </button>
         </div>
-        <div className="overflow-scroll h-[200px] md:h-full mb-1">
+        <div className="mb-1 h-[200px] overflow-scroll md:h-full">
           {selectedTab === "land" ? (
             <EncounterMonsList zone="land" />
           ) : selectedTab === "water" ? (

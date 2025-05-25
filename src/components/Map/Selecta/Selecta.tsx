@@ -37,12 +37,10 @@ const Selecta = () => {
     }),
     [],
   );
-  console.log("selecrta?");
   useEffect(() => {
     const unsub = useMapStore.subscribe((state: MapStore) => {
       const numOfLevels = state.selectedMapsLevels;
       if (numOfLevels > 1) {
-        console.log("SELECTA");
         api.start({ opacity: 1, translateX: 70 });
       } else {
         api.set({ opacity: 0, translateX: 0 });

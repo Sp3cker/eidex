@@ -68,13 +68,13 @@ const MapContainer = ({ children }: any) => {
     },
     {
       target: targetRef,
-      rubberband: true,
+     
       filterTaps: true,
       bounds: {
         top: -200 ^ scale.toJSON(),
         bottom: 200 ^ scale.toJSON(),
-        left: -500 ^ scale.toJSON(),
-        right: 100 ^ scale.toJSON(),
+        left: -400 ^ scale.toJSON(),
+        right: 500 ^ scale.toJSON(),
       },
       from: () => {
         // console.log(centerOffset.get());
