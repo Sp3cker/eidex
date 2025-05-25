@@ -40,11 +40,11 @@ const MapPlaceInfo = () => {
           opacity: 1,
           translate: 0, // Ensure it doesn't go too far left
         });
-        if (state.selectedMapLandMons?.length === 0) {
-          setSelectedTab("water");
-        } else {
-          setSelectedTab("land");
-        }
+        // if (state.selectedMapLandMons?.length === 0) {
+        //   setSelectedTab("water");
+        // } else {
+        //   setSelectedTab("land");
+        // }
       } else {
         api.start({ translate: 0 });
       }
