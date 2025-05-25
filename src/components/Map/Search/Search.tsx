@@ -4,7 +4,7 @@ import { useItemSearch } from "@/utils/itemsData";
 import { useTransition, animated as a, useSprings } from "@react-spring/web";
 import { useGesture } from "@use-gesture/react";
 
-const SEARCH_RESULT_SPACING = window.innerWidth < 400 ? 50 : 40;
+const SEARCH_RESULT_SPACING = window.innerWidth < 400 ? 40 : 40;
 const animConfigs = {
   hover: { shadow: 15 },
   initial: { scale: 1, shadow: 1 },
@@ -48,6 +48,7 @@ const Search = () => {
 
   const handleClick = (index: number) => {
     setSelectedMap(searchResults[index].map);
+    setSearchName(searchResults[index].name)
   };
 
   // const handleMiddleClick = (index: number) => {
@@ -90,9 +91,9 @@ const Search = () => {
   // }, [searchResults]);
 
   return (
-    <div className="content-visible cool-font z-4 absolute left-5 top-12">
+    <div className="content-visible w-full cool-font search-bar-grid">
       <input
-        className="search-input .py-1\\.5 mb-2 rounded-sm p-1 pl-1 pr-2 text-sm/6 shadow-xl ring-2 ring-blue-500"
+        className="search-input w-full py-1 mb-2 rounded-sm p-1 pl-1 pr-2 text-sm/6 shadow-xl ring-2 ring-blue-500"
         type="search"
         onInput={(e) => setSearchName(e.currentTarget.value)}
         placeholder="Search (doesnt work :D)"
@@ -101,7 +102,7 @@ const Search = () => {
         {transitions((styles, item, _, index) => (
           <a.li
             {...bind(index)}
-            className="my-dib absolute w-full cursor-pointer rounded-sm bg-neutral-100 p-1"
+            className="my-dib absolute w-full cursor-pointer rounded-sm bg-neutral-100 p-2"
             style={{
               // zIndex: results.length - index,
               scale: springs[index]?.scale,
@@ -111,8 +112,8 @@ const Search = () => {
               ...styles,
             }}
           >
-            <span style={{ touchAction: "none" }}>
-              <p>{item.name}</p>
+            <span >
+              <p className="text-sm">{item.name}</p>
               {/* <SearchResult {...item} key={item.name} /> */}
             </span>
           </a.li>

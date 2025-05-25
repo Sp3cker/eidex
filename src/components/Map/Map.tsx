@@ -6,24 +6,24 @@ import Dexnav from "./Dexnax";
 import MapPlaceInfo from "./MapPlaceInfo";
 import MapContainer from "./MapContainer";
 import Selecta from "./Selecta";
+import "./grid.css";
 document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
 const Map = () => {
   return (
-    <>
+    <div className="parent">
       <MapContainer>
         <NewMap />
       </MapContainer>
-      <Search />
       <Selecta />
-      {/* <Floater /> */}
+      <Search />
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <MapPlaceInfo />
       </ErrorBoundary>
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <Dexnav />
       </ErrorBoundary>
-    </>
+    </div>
   );
 };
 

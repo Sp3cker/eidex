@@ -31,7 +31,7 @@ class ItemSearch {
 const itemSearch = new ItemSearch();
 const useItemSearch = (): [
   Item[],
-  React.Dispatch<React.SetStateAction<string>>,
+  React.Dispatch<React.SetStateAction<string>>
 ] => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState<Item[]>([]);

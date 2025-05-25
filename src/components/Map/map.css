@@ -9,9 +9,6 @@
 .cool-font {
   font-family: "Calamity";
 }
-.lil-font {
-  font-family: "Inter";
-}
 
 .water {
   fill: var(--color-blue-500);
@@ -106,10 +103,13 @@
 .selected-place {
   animation: selected-place-animation 1s infinite;
 }
-.dexnav-z-2 {
+.dexnav-z {
   z-index: 2;
 }
 .map-place-info-z-3 {
+  z-index: 4;
+}
+.selecta-z {
   z-index: 3;
 }
 
@@ -149,12 +149,6 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 .row-container {
   cursor: pointer;
   overflow: hidden;
-  /* transform-origin: bottom; */
-  /* transform-style: flat; */
-  /* background-image: linear-gradient(
-    to right,
-    ${(props: RowContainerProp) => rarityCalc(props.rarity).join(",")}
-  ); */
   background-size: cover;
   display: flex;
   position: relative;
@@ -167,9 +161,8 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 .search-input {
   backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.8);
-  background-color: rgba(255, 255, 255, 0.2);  
-  outline-color: var(--color-blue-500);  
-
+  background-color: rgba(255, 255, 255, 0.2);
+  outline-color: var(--color-blue-500);
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -178,14 +171,25 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     backdrop-filter: blur(10px);
   }
 }
-/* @media ${DEVICE_SIZE_STYLES.mobileL} {
-  width: 270px;
-  height: 60px;
+.selecta-button-animation:active {
+  animation: cssAnimation 0.5s linear forwards;
+  -webkit-animation-name: cssAnimation;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
 }
-@media ${DEVICE_SIZE_STYLES.laptop} {
-  width: 400px;
-  height: 80px;
-} */
+
+@-webkit-keyframes cssAnimation {
+  from {
+    transform: translateY(0rem);
+    -webkit-transform: translateY(0rem);
+  }
+  to {
+    transform: translateY(0.5rem);
+    -webkit-transform: translateY(0.5rem);
+  }
+}
 @keyframes selected-place-animation {
   from {
     /* first frame */

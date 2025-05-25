@@ -9,8 +9,8 @@ const Footer = () => {
         className: "text-baseline md:text-xl cursor-pointer hover:sepia  ",
       }}
     >
-      <div className="fixed bottom-0 left-0 z-10 flex w-full select-none items-center justify-between bg-gray-800 px-1 ring">
-        <div className="text-neutral-100 font-calamity pkmnem-face-shadow ">
+      <div className="z-10 flex w-full select-none items-center justify-between bg-gray-800 px-1 ring">
+        <div className="font-calamity pkmnem-face-shadow text-neutral-100">
           <h1 className="md:text-baseline text-xs">
             Dex by Kildemal{" – "}
             <a

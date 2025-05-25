@@ -4,7 +4,7 @@ const SearchResult = React.memo(function SearchResult(props: any) {
   return (
     <div className="row-container">
       <div className="name-container">
-        <p>{props.name}</p>
+        <p className="text-xs">{props.name}</p>
       </div>
     </div>
   );

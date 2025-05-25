@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { formatMapString, useMapStore } from "@/stores/useMapStore";
 import { useSpring, animated } from "react-spring";
+
 // const useMapAndItems = () =>
 //   useMapStore((state) => ({
 //     selectedMap: state.selectedMapItems,
@@ -9,27 +10,28 @@ import { useSpring, animated } from "react-spring";
 
 const Dexnav = memo(function Dexnav() {
   const selectedMap = useMapStore((state) => state.selectedMap);
+  const selectedMapLabel = useMapStore((state) => state.selectedLevelLabel);
   const items = useMapStore((state) => state.selectedMapItems);
-  const dexNavIsOpen = useMapStore((state) => state.dexNavIsOpen);
   const [springs] = useSpring(
     {
       // from: { opacity: 0, translateY: (window.innerHeight * 2) / 5 },
-      opacity: dexNavIsOpen ? 1 : 0,
-      translateY: dexNavIsOpen ? 0 : (window.innerHeight * 2) / 5,
-      config: {   mass: 1, damping: 0.2 },
+      opacity: selectedMap ? 1 : 0,
+      translateY: selectedMap ? 0 : (window.innerHeight * 2) / 5,
+      config: { mass: 1, damping: 0.2 },
 
       // config: { duration: 500 },
     },
-    [dexNavIsOpen],
+    [selectedMap],
   );
   return (
     <animated.nav
       style={springs}
-      className="map-place-info-textbox-gradient dexnav-z-2 w-70 fixed bottom-7 left-5 right-10 h-2/5 overflow-scroll rounded-sm py-2 pl-3 shadow-lg"
+      className="map-place-info-textbox-gradient dexnav-grid dexnav-z overflow-scroll rounded-sm py-2 pl-3 shadow-lg"
     >
       <div className="flex justify-between text-white">
-        <h1 className="cool-font pb-2 font-bold text-neutral-700">
+        <h1 className="cool-font md:text-md pb-2 text-sm font-bold text-neutral-700">
           {formatMapString(selectedMap || "")}
+          {selectedMapLabel && ` - ${selectedMapLabel}`}
         </h1>
       </div>
       <div className="font-pkmnem flex flex-col rounded-sm">
@@ -41,7 +43,7 @@ const Dexnav = memo(function Dexnav() {
           items.map((item) => (
             <div key={item.name + item.qualifier} className="h-10">
               <p className="cool-font text-xs font-bold">{item.name}</p>
-              <p className="leading-4">{item.qualifier}</p>
+              {item.qualifier && <p className="leading-4">{item.qualifier}</p>}
             </div>
           ))
         )}

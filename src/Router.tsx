@@ -8,9 +8,9 @@ import Footer from "./components/ui/Footer";
 
 const AppRouter = () => {
   return (
-    <div className="">
+    <div className="flex h-screen flex-col bg-zinc-800">
       <Header />
-      <div className="min-h-screen bg-zinc-800">
+      <div className="flex-2 overflow-auto">
         <Router base={import.meta.env.BASE_PATH || "/"}>
           <Switch>
             <Route path="/" component={Map} />
@@ -26,9 +26,10 @@ const AppRouter = () => {
             />
           </Switch>
         </Router>
-        <PokemonModal />
       </div>
+
       <Footer />
+      <PokemonModal />
     </div>
   );
 };

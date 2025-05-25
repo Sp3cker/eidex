@@ -13,7 +13,6 @@ const MapPlace = ({ item }: MapPlaceProps) => {
   const mapScale = useMapStore((state) => state.mapScale);
   const setSelectedMap = useMapStore((state) => state.setSelectedMap);
   const [isSelectedMap, setIsSelectedMap] = useState(false);
-  const setDexNavIsOpen = useMapStore((state) => state.setDexnavIsOpen);
 
   const handleClick = (state: SharedGestureState) => {
     //@ts-ignore
@@ -26,7 +25,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
 
     setSelectedCoordinates([centerX, centerY + 100]);
     setSelectedMap(item.id);
-    setDexNavIsOpen(true);
+
   };
 
   const bind = useGesture({

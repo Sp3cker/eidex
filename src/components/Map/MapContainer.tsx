@@ -86,7 +86,7 @@ const MapContainer = ({ children }: any) => {
     <div
       ref={targetRef}
 
-      className="font-calamity flex h-screen w-full touch-none flex-col overflow-auto bg-sky-700"
+      className="map-grid font-calamity z-0  w-full touch-none  overflow-auto bg-sky-700"
     >
       <animated.div
         ref={mapRef}
@@ -100,7 +100,7 @@ const MapContainer = ({ children }: any) => {
           }),
           transformOrigin: "center",
         }}
-        className="will-transform h-[680px] w-[800px]"
+        className="will-transform h-[667px] w-[800px]"
       >
         {children}
       </animated.div>
