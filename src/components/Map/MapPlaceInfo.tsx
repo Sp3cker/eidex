@@ -66,9 +66,9 @@ const MapPlaceInfo = () => {
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch pb-1`}
+      className={`content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity h-[256px] md:h-full cursor-touch pb-1`}
     >
-      <div className="tabs map-place-info-textbox-gradient w-[150px] overflow-auto rounded px-3 py-3 shadow-2xl">
+      <div className="tabs map-place-info-textbox-gradient w-[150px] overflow-hidden rounded px-3 py-3 shadow-2xl">
         <div className="font-pkmnem tab-list block text-nowrap">
           <button
             title="land"
@@ -92,7 +92,7 @@ const MapPlaceInfo = () => {
             Fishing
           </button>
         </div>
-        <div className="overflow-scroll mb-1">
+        <div className="overflow-scroll h-[200px] md:h-full mb-1">
           {selectedTab === "land" ? (
             <EncounterMonsList zone="land" />
           ) : selectedTab === "water" ? (
