@@ -96,7 +96,7 @@ const Search = () => {
         className="search-input w-full py-1 mb-2 rounded-sm p-1 pl-1 pr-2 text-sm/6 shadow-xl ring-2 ring-blue-500"
         type="search"
         onInput={(e) => setSearchName(e.currentTarget.value)}
-        placeholder="Search (doesnt work :D)"
+        placeholder="Items, TMs..."
       />
       <ul className="relative">
         {transitions((styles, item, _, index) => (

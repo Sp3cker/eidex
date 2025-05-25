@@ -13,7 +13,7 @@ const MapContainer = ({ children }: any) => {
 
   const [{ scale, centerOffset }, api] = useSpring(
     () => ({
-      scale: 1,
+      scale: 1.32,
       centerOffset: [400, 340],
       config: { mass: 5, tension: 800, friction: 200 },
       onRest: () => {

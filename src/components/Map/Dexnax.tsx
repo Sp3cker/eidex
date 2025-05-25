@@ -18,7 +18,6 @@ const Dexnav = memo(function Dexnav() {
       opacity: selectedMap ? 1 : 0,
       translateY: selectedMap ? 0 : (window.innerHeight * 2) / 5,
       config: { mass: 1, damping: 0.2 },
-
       // config: { duration: 500 },
     },
     [selectedMap],
@@ -43,7 +42,7 @@ const Dexnav = memo(function Dexnav() {
           items.map((item) => (
             <div key={item.name + item.qualifier} className="h-10">
               <p className="cool-font text-xs font-bold">{item.name}</p>
-              {item.qualifier && <p className="leading-4">{item.qualifier}</p>}
+              <p className="leading-4">{item.qualifier ? item.qualifier : 'Received from quest'}</p>
             </div>
           ))
         )}
