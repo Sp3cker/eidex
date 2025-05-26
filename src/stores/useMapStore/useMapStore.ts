@@ -37,6 +37,7 @@ export const useMapStore = create<MapStore>((set, get) => {
     selectedCoordinates: [400, 340],
     storedCoordinates: new Map<string, number[]>(),
     mapScale: 1,
+
     mapOffset: [0, 0],
     hoveredMap: null,
     hoveredCoordinates: [0, 0],
@@ -99,6 +100,11 @@ export const useMapStore = create<MapStore>((set, get) => {
     searchItemByName: (name: string) => {
       return ItemSearch.search(name);
     },
+    setStoredCoordinates: (mapCoords: Map<string, number[]>) => {
+      set({
+        storedCoordinates: mapCoords
+      });
+    }
   };
 });
 

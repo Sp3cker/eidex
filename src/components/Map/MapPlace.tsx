@@ -1,19 +1,25 @@
 import useMapStore from "@/stores/useMapStore";
-import { SharedGestureState, useGesture } from "@use-gesture/react";
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useGesture } from "@use-gesture/react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+  memo,
+} from "react";
 
 interface MapPlaceProps {
   item: Record<string, any>;
 }
 
-const MapPlace = ({ item }: MapPlaceProps) => {
-
+const MapPlace = memo(function MapPlace({ item }: MapPlaceProps) {
   const mapScale = useMapStore((state) => state.mapScale);
   const setSelectedMap = useMapStore((state) => state.setSelectedMap);
   const [isSelectedMap, setIsSelectedMap] = useState(false);
   const ref = useRef<any>(null);
 
-  const handleClick = (state: SharedGestureState) => {
+  const handleClick = useCallback(() => {
     const stored = useMapStore.getState().storedCoordinates;
     const myCoords = stored.get(item.id);
     if (myCoords === undefined) {
@@ -23,12 +29,12 @@ const MapPlace = ({ item }: MapPlaceProps) => {
 
     // setSelectedCoordinates([myCoords[0], myCoords[1] + 100]);
     setSelectedMap(item.id);
-  };
+  }, []);
 
   useGesture(
     {
-      onMouseDown: (state) => handleClick(state),
-      onTouchStart: (state) => handleClick(state),
+      onMouseDown: () => handleClick(),
+      onTouchStart: () => handleClick(),
     },
     { target: ref },
   );
@@ -134,6 +140,6 @@ const MapPlace = ({ item }: MapPlaceProps) => {
   };
 
   return renderElement(item);
-};
+});
 
 export default MapPlace;
