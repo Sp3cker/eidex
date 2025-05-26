@@ -91,7 +91,7 @@
   },
   {
     "id": "MAP_EVER_GRANDE_CITY",
-    "mapBaseName": "MAP_EVER_GRANDE",
+    "mapBaseName": "MAP_EVER_GRANDE_CITY",
     "levels": [
       {
         "id": "MAP_EVER_GRANDE_CITY"

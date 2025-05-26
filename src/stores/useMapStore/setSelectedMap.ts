@@ -130,7 +130,7 @@ const getSelectedMapInfo = (id: string) => {
 const getSelectedLevel = (map: string, level: number) => {
   const targetMap = getMap(map);
   if (targetMap.length === 0) {
-    console.error("Error selecting map level %s", level);
+    console.error("Error selecting map level %s, %s", level, map);
   }
 
   const { levels, mapBaseName } = targetMap[0];

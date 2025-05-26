@@ -22,7 +22,7 @@ export function formatMapString(mapNameFromJson: string) {
   );
 }
 export const useMapStore = create<MapStore>((set, get) => {
-  return {
+  const initialState = {
     selectedMap: null,
     selectedMapLevel: 0,
     selectedMapsLevels: 0,
@@ -30,6 +30,10 @@ export const useMapStore = create<MapStore>((set, get) => {
     selectedMapLandMons: undefined,
     selectedMapWaterMons: undefined,
     selectedMapFishingMons: undefined,
+    selectedMapItems: undefined,
+  };
+  return {
+    ...initialState,
     selectedCoordinates: [400, 340],
     storedCoordinates: new Map<string, number[]>(),
     mapScale: 1,
@@ -37,8 +41,7 @@ export const useMapStore = create<MapStore>((set, get) => {
     hoveredMap: null,
     hoveredCoordinates: [0, 0],
     dexNavIsOpen: false,
-    selectedMapItems: undefined,
-    deselectMap: () => set({ selectedMap: null }),
+    deselectMap: () => set({ ...initialState }),
     setSelectedMap: (map: string) => {
       const targetLevel = getSelectedLevel(map, 0);
       set({

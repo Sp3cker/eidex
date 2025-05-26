@@ -21,6 +21,7 @@ const fn = (active: boolean) =>
 
 const Search = () => {
   const setSelectedMap = useMapStore((state) => state.setSelectedMap);
+  const deSelectMap = useMapStore((state) => state.deselectMap);
   const [itemMaps, setItemMaps] = useState<string[]>([]);
   const [
     searchTerm,
@@ -96,7 +97,7 @@ const Search = () => {
     trail: 21,
   });
   const handleChange = useCallback((e: React.FormEvent<HTMLInputElement>) => {
-    setSelectedMap();
+    deSelectMap();
     setItemMaps([]);
     setSearchName(e.currentTarget.value);
   }, []);
