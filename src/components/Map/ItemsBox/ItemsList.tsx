@@ -1,9 +1,9 @@
 import useMapStore from "@/stores/useMapStore";
-import { useState, useMemo } from "react";
+import { useState, useMemo, memo } from "react";
 import Tabs from "./Tabs";
 import { Item } from "@/utils/itemsData";
 
-const ItemsList = () => {
+const ItemsList = memo(function ItemsList() {
   const [selectedTab, setSelectedTab] = useState("EventScript");
   const items = useMapStore((state) => state.selectedMapItems);
   const [places, martItems] = useMemo(() => {
@@ -36,27 +36,40 @@ const ItemsList = () => {
           No items in this area
         </p>
       ) : selectedTab !== "marts" ? (
-        places.map((place) => (
-          <PlacesList key={place.place} place={place} />
-        ))
+        places.map((place) => <PlacesList key={place.place} place={place} />)
       ) : (
-        martItems.map((m) => <p key={m.id}>{m.name}</p>)
+        martItems.map((m) => (
+          <p
+            className="my-1 cursor-pointer rounded border border-sky-200 bg-emerald-50 px-3 py-2 text-xl font-bold text-sky-700 shadow-sm transition-colors hover:bg-emerald-100"
+            key={m.id}
+          >
+            {m.name}
+          </p>
+        ))
       )}
     </>
   );
-};
+});
 const PlacesList = ({ place }: { place: { place: string; items: Item[] } }) => (
   <>
-    <p key={place.place} className="cool-font text-sm font-bold">
+    <p
+      key={place.place}
+      className="cool-font mb-2 mt-4 border-b-2 border-emerald-400 pb-1 font-bold tracking-wide"
+    >
       {place.place}
     </p>
     <PlaceItems items={place.items} />
   </>
 );
 const PlaceItems = ({ items }: { items: Item[] }) => (
-  <div>
+  <div className="shadow-inner">
     {items.map((i) => (
-      <p key={i.name}>{i.name}</p>
+      <p
+        key={i.name}
+        className="my-1 cursor-pointer rounded border border-emerald-200 bg-emerald-50 px-3 py-2 text-xl font-bold text-emerald-700 shadow-sm transition-colors hover:bg-emerald-100"
+      >
+        {i.name}
+      </p>
     ))}
   </div>
 );
