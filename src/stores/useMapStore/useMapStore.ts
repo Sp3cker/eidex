@@ -44,6 +44,7 @@ export const useMapStore = create<MapStore>((set, get) => {
     deselectMap: () => set({ ...initialState }),
     setSelectedMap: (map: string) => {
       const targetLevel = getSelectedLevel(map, 0);
+      const storedCoords = get().storedCoordinates.get(map);
       set({
         selectedMap: map,
         selectedMapLevel: 0,
@@ -53,6 +54,7 @@ export const useMapStore = create<MapStore>((set, get) => {
         selectedMapWaterMons: targetLevel.waterEncounters,
         selectedMapFishingMons: targetLevel.fishingEncounters,
         selectedMapItems: targetLevel.selectedMapItems,
+        selectedCoordinates: storedCoords || [400, 340],
       });
     },
     setSelectedMapLevel: (level: number) => {

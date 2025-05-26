@@ -1,37 +1,37 @@
 import useMapStore from "@/stores/useMapStore";
 import { SharedGestureState, useGesture } from "@use-gesture/react";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 interface MapPlaceProps {
   item: Record<string, any>;
 }
 
 const MapPlace = ({ item }: MapPlaceProps) => {
-  const setSelectedCoordinates = useMapStore(
-    (state) => state.setSelectedCoordinates,
-  );
+
   const mapScale = useMapStore((state) => state.mapScale);
   const setSelectedMap = useMapStore((state) => state.setSelectedMap);
   const [isSelectedMap, setIsSelectedMap] = useState(false);
+  const ref = useRef<any>(null);
 
   const handleClick = (state: SharedGestureState) => {
-    //@ts-ignore
-    const element = state.event.currentTarget;
-    const rect = element.getBoundingClientRect();
-    const mapRect = document.getElementById("map")?.getBoundingClientRect();
-    if (!mapRect) return;
-    const centerX = (rect.left + rect.width / 2 - mapRect.left) / mapScale;
-    const centerY = (rect.top + rect.height / 2 - mapRect.top) / mapScale;
+    const stored = useMapStore.getState().storedCoordinates;
+    const myCoords = stored.get(item.id);
+    if (myCoords === undefined) {
+      console.error("Error getting coords for MapPlace $s", item.id);
+      return;
+    }
 
-    setSelectedCoordinates([centerX, centerY + 100]);
+    // setSelectedCoordinates([myCoords[0], myCoords[1] + 100]);
     setSelectedMap(item.id);
-
   };
 
-  const bind = useGesture({
-    onMouseDown: (state) => handleClick(state),
-    onTouchStart: (state) => handleClick(state),
-  });
+  useGesture(
+    {
+      onMouseDown: (state) => handleClick(state),
+      onTouchStart: (state) => handleClick(state),
+    },
+    { target: ref },
+  );
 
   useEffect(() => {
     const unsub = useMapStore.subscribe((state) => {
@@ -41,7 +41,16 @@ const MapPlace = ({ item }: MapPlaceProps) => {
       unsub();
     };
   }, [item.id]);
-
+  useLayoutEffect(() => {
+    if (!ref.current) return;
+    const rect = ref.current.getBoundingClientRect();
+    const mapRect = document.getElementById("map")?.getBoundingClientRect();
+    if (!mapRect) return;
+    const centerX = (rect.left + rect.width / 2 - mapRect.left) / mapScale;
+    const centerY = (rect.top + rect.height / 2 - mapRect.top) / mapScale;
+    // Register coordinates in your global store here
+    useMapStore.getState().storedCoordinates.set(item.id, [centerX, centerY]);
+  }, [mapScale, item.id]);
   // Render function for individual elements
   const renderElement = (elem: Record<string, any>) => {
     if (elem.type === "g") {
@@ -51,7 +60,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
           id={elem.id}
           transform={elem.transform}
           className={`${isSelectedMap ? "selected-place ring" : "touch-none"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
-          {...bind()}
+          ref={ref}
         >
           {elem.children?.map((child: Record<string, any>, index: number) =>
             renderElement({
@@ -74,7 +83,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
           height={elem.height}
           {...elem.style}
           className={`${isSelectedMap ? "fill-yellow-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-colors`}
-          {...bind()}
+          ref={ref}
         />
       );
     }
@@ -86,7 +95,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
           id={elem.id}
           d={elem.d}
           {...elem.style}
-          {...bind()}
+          ref={ref}
         />
       );
     }
@@ -100,7 +109,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
           cy={elem.cy}
           r={elem.r}
           {...elem.style}
-          {...bind()}
+          ref={ref}
         />
       );
     }
@@ -116,7 +125,7 @@ const MapPlace = ({ item }: MapPlaceProps) => {
           width={elem.width}
           height={elem.height}
           transform={elem.transform}
-          {...bind()}
+          ref={ref}
         />
       );
     }

@@ -17,8 +17,8 @@ type EncounterMonsFromJSON = {
 type Level = {
   /**What the levels indexable by in `cleanEncounters.json */
   id: string;
-  levelLabel?: string
-}
+  levelLabel?: string;
+};
 type MapStore = {
   selectedMap: string | null;
   selectedMapLandMons: EncounterMons[] | undefined;
@@ -30,13 +30,13 @@ type MapStore = {
   selectedMapLevel: number;
   selectedMapsLevels: number;
   selectedLevelLabel: string;
-  // setStoredCoordinates: (map: string, coords: number[]) => void;
+  storedCoordinatesByMap: Map<string, number[]>;
   mapScale: number;
   mapOffset: number[];
   hoveredMap: string | null;
   hoveredCoordinates: number[];
   dexNavIsOpen: boolean;
-  selectedMapItems: {[location: string]: Item[]} | undefined;
+  selectedMapItems: { [location: string]: Item[] } | undefined;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
   setSelectedPokemon: (name_no_prefix: string) => void;
@@ -48,6 +48,7 @@ type MapStore = {
   setHoveredCoordinates: (coords: number[]) => void;
   searchItemByName: (name: string) => Item[];
   setSelectedMapLevel: (level: number) => void;
+  setStoredCoordinates: (mapCoords: Map<string, number[]>) => void;
 };
 
 export type { EncounterMons, EncounterMonsFromJSON, MapStore, Level };
