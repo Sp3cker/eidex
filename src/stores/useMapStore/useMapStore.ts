@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import pokemon from "@/data/speciesData.json";
 import ItemSearch from "@/utils/itemsData";
-import {  getSelectedLevel } from "./setSelectedMap";
+import { getSelectedLevel } from "./setSelectedMap";
 import { MapStore } from "./types";
 
 const UnderscoreRegex = new RegExp(/^[^_]*_/);
@@ -22,7 +22,6 @@ export function formatMapString(mapNameFromJson: string) {
   );
 }
 export const useMapStore = create<MapStore>((set, get) => {
-
   return {
     selectedMap: null,
     selectedMapLevel: 0,
@@ -38,11 +37,10 @@ export const useMapStore = create<MapStore>((set, get) => {
     hoveredMap: null,
     hoveredCoordinates: [0, 0],
     dexNavIsOpen: false,
-    selectedMapItems: [],
+    selectedMapItems: undefined,
     deselectMap: () => set({ selectedMap: null }),
     setSelectedMap: (map: string) => {
       const targetLevel = getSelectedLevel(map, 0);
-
       set({
         selectedMap: map,
         selectedMapLevel: 0,
@@ -61,7 +59,7 @@ export const useMapStore = create<MapStore>((set, get) => {
         return;
       }
       const targetMap = getSelectedLevel(currMap, level);
-      
+
       set({
         selectedMapLevel: level,
         selectedMapsLevels: targetMap.selectedMapsLevels,

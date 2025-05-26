@@ -1,6 +1,6 @@
 import { animated, useSpring } from "react-spring";
 import { useMapStore } from "@/stores/useMapStore";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import EncounterMonsList from "./EncounterMonsList";
 
 const MapPlaceInfo = () => {
@@ -29,9 +29,10 @@ const MapPlaceInfo = () => {
   useEffect(() => {
     const unsub = useMapStore.subscribe((state) => {
       const show =
-        state.selectedMapLandMons !== undefined ||
-        state.selectedMapFishingMons !== undefined ||
-        state.selectedMapWaterMons != undefined;
+        (state.selectedMapLandMons && state.selectedMapLandMons.length !== 0) ||
+        (state.selectedMapFishingMons &&
+          state.selectedMapFishingMons.length !== 0) ||
+        (state.selectedMapWaterMons && state.selectedMapWaterMons.length !== 0);
       if (show !== null && show) {
         // const toSize = screenWidth === "sm" ? 150 : 200;
         api.start({
@@ -46,7 +47,7 @@ const MapPlaceInfo = () => {
         //   setSelectedTab("land");
         // }
       } else {
-        api.start({ translate: 0 });
+        api.start({ translate: 200 });
       }
     });
     return () => {
@@ -54,13 +55,13 @@ const MapPlaceInfo = () => {
     };
   }, []);
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.currentTarget;
     const title = target.getAttribute("title");
     if (title) {
       setSelectedTab(title);
     }
-  };
+  }, []);
   return (
     <animated.div
       style={{
@@ -73,21 +74,21 @@ const MapPlaceInfo = () => {
         <div className="font-pkmnem tab-list block text-nowrap">
           <button
             title="land"
-            className={`tab w-[36px] text-lg font-bold ${selectedTab === "land" && "land-tab"}`}
+            className={`tab-label w-[36px] text-lg font-bold ${selectedTab === "land" && "land-tab"}`}
             onClick={handleClick}
           >
             Land
           </button>
           <button
             title="water"
-            className={`tab w-[44px] text-lg font-bold ${selectedTab === "water" && "water-tab"}`}
+            className={`tab-label w-[44px] text-lg font-bold ${selectedTab === "water" && "water-tab"}`}
             onClick={handleClick}
           >
             Water
           </button>
           <button
             title="fishing"
-            className={`tab w-[46px] text-lg font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
+            className={`tab-label w-[46px] text-lg font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
             onClick={handleClick}
           >
             Fishing

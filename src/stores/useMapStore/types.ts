@@ -36,7 +36,7 @@ type MapStore = {
   hoveredMap: string | null;
   hoveredCoordinates: number[];
   dexNavIsOpen: boolean;
-  selectedMapItems: Item[];
+  selectedMapItems: {[location: string]: Item[]} | undefined;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
   setSelectedPokemon: (name_no_prefix: string) => void;

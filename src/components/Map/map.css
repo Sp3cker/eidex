@@ -82,8 +82,45 @@
   /* flex-wrap: nowrap; Ensures tabs stay in one line */
   border-bottom: 1px solid #ccc;
 }
+.tab-label {
+  /* padding: 0.5rem 1rem; */
+  /* font-size: 0.875rem; */
+  font-weight: bold;
+  color: var(--color-gray-700);
+  background-color: var(--color-white);
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+  cursor: pointer;
+}
+/* .tab-label:hover {
+  border-color: var(--color-blue-500);
+  color: var(--color-blue-600);
+} */
+
 .land-tab {
   color: var(--color-emerald-500);
+}
+.tab-label[title="land"]:hover {
+  border-color: var(--color-emerald-700);
+  color: var(--color-emerald-700);
+}
+.tab-label[title="water"]:hover {
+  border-color: var(--color-sky-700);
+  color: var(--color-sky-700);
+}
+.tab-label[title="fishing"]:hover {
+  border-color: var(--color-amber-700);
+  color: var(--color-amber-700);
+}
+.tab-label[title="mart"]:hover {
+  border-color: var(--color-sky-400);
+  color: var(--color-sky-300);
+}
+.tab-label[title="story"]:hover {
+  border-color: var(--color-red-400);
+  color: var(--color-red-300);
 }
 .water-tab {
   color: var(--color-sky-500);
@@ -91,7 +128,18 @@
 .fishing-tab {
   color: var(--color-amber-500);
 }
-
+.story-tab {
+  color: var(--color-rose-400);
+  border-color: var(--color-red-400);
+}
+.pokemart-tab {
+  color: var(--color-sky-400);
+  border-color: var(--color-sky-400);
+}
+.active {
+  border-color: var(--color-blue-500);
+  color: var(--color-blue-600);
+}
 .content-visibility {
   content-visibility: auto;
   /* contain-intrinsic-size: auto auto; */
@@ -143,7 +191,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   align-content: center;
   align-items: center;
   justify-content: flex-end;
-  z-index: 1;
+
   right: 22px;
 }
 .row-container {
@@ -163,6 +211,10 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   background: rgba(0, 0, 0, 0.8);
   background-color: rgba(255, 255, 255, 0.2);
   outline-color: var(--color-blue-500);
+  z-index: 6;
+}
+.search-selecta {
+  z-index: 5;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {

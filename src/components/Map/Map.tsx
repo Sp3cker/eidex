@@ -2,7 +2,7 @@ import "./map.css";
 import { ErrorBoundary } from "react-error-boundary";
 import Search from "./Search";
 import NewMap from "./ReactSvg";
-import Dexnav from "./Dexnax";
+import Dexnav from "./ItemsBox";
 import MapPlaceInfo from "./MapPlaceInfo";
 import MapContainer from "./MapContainer";
 import Selecta from "./Selecta";

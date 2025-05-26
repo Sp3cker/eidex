@@ -141,6 +141,7 @@ const getSelectedLevel = (map: string, level: number) => {
   }
   const thisLevelEncounter = getSelectedMapInfo(targetLevel.id);
   const thisLevelsItems = ItemSearch.byMap(mapBaseName);
+  
   return {
     ...thisLevelEncounter,
     selectedMapsLevels: levels.length,

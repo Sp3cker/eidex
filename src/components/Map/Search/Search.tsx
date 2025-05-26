@@ -3,6 +3,8 @@ import { useMapStore } from "@/stores/useMapStore";
 import { useItemSearch } from "@/utils/itemsData";
 import { useTransition, animated as a, useSprings } from "@react-spring/web";
 import { useGesture } from "@use-gesture/react";
+import { useCallback, useState } from "react";
+import SearchSelecta from "./SearchSelecta";
 
 const SEARCH_RESULT_SPACING = window.innerWidth < 400 ? 40 : 40;
 const animConfigs = {
@@ -19,7 +21,14 @@ const fn = (active: boolean) =>
 
 const Search = () => {
   const setSelectedMap = useMapStore((state) => state.setSelectedMap);
-  const [searchResults, setSearchName] = useItemSearch();
+  const [itemMaps, setItemMaps] = useState<string[]>([]);
+  const [
+    searchTerm,
+    searchResults,
+    setSearchName,
+    clearSearch,
+    getMapsForItem,
+  ] = useItemSearch();
 
   const [springs, api] = useSprings(
     searchResults.length,
@@ -47,17 +56,19 @@ const Search = () => {
   });
 
   const handleClick = (index: number) => {
-    setSelectedMap(searchResults[index].map);
-    setSearchName(searchResults[index].name)
+    const { name, id } = searchResults[index];
+    setSearchName(name);
+
+    // setSearchName(searchResults[index].name)
+    const maps = getMapsForItem(id);
+    if (maps) {
+      console.log(maps);
+      setItemMaps(maps);
+      clearSearch();
+      setSelectedMap(maps[0]);
+    }
   };
 
-  // const handleMiddleClick = (index: number) => {
-  //   window.open(`/?ship=${results[index].name}`, "_blank");
-  // };
-  // const transFunction = searchResults.map((items, ind) => ({
-  //   ...items,
-  //   y: ind * SEARCH_RESULT_SPACING,
-  // }));
   const transitions = useTransition(searchResults, {
     key: (item: any) => item.name,
     from: (_, index) => ({
@@ -84,18 +95,21 @@ const Search = () => {
     config: { frequency: 0.21, damping: 1.2 },
     trail: 21,
   });
-  // useEffect(() => {
-  //   if (searchResults.length === 1) {
-  //     setSelectedMap(searchResults[0].map);
-  //   }
-  // }, [searchResults]);
+  const handleChange = useCallback((e: React.FormEvent<HTMLInputElement>) => {
+    if (e.currentTarget.value.length === 0) {
 
+      setItemMaps([]);
+    }
+    setSearchName(e.currentTarget.value);
+  }, []);
   return (
-    <div className="content-visible w-full cool-font search-bar-grid">
+    <div className="content-visible cool-font search-bar-grid w-full">
       <input
-        className="search-input w-full py-1 mb-2 rounded-sm p-1 pl-1 pr-2 text-sm/6 shadow-xl ring-2 ring-blue-500"
+        value={searchTerm}
+
+        className="search-input mb-2 w-full rounded-sm p-1 py-1 pl-1 pr-2 text-sm/6 shadow-xl ring-2 ring-blue-500"
         type="search"
-        onInput={(e) => setSearchName(e.currentTarget.value)}
+        onInput={handleChange}
         placeholder="Items, TMs..."
       />
       <ul className="relative">
@@ -112,13 +126,14 @@ const Search = () => {
               ...styles,
             }}
           >
-            <span >
+            <span>
               <p className="text-sm">{item.name}</p>
               {/* <SearchResult {...item} key={item.name} /> */}
             </span>
           </a.li>
         ))}
       </ul>
+      <SearchSelecta maps={itemMaps} />
     </div>
   );
 };
