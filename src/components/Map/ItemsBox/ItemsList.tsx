@@ -32,7 +32,7 @@ const ItemsList = memo(function ItemsList() {
         isMarts={martItems !== null && martItems.length > 0}
       />
       {places === null ? (
-        <p className="text-center text-xs font-bold text-neutral-700">
+        <p className="text-center cool-font text-sm text-gray-500 py-2">
           No items in this area
         </p>
       ) : selectedTab !== "marts" ? (

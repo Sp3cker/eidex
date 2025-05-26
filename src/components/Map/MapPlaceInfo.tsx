@@ -68,41 +68,59 @@ const MapPlaceInfo = () => {
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch h-[256px] pb-1 md:h-full`}
+      className={`w-full h-full flex flex-col rounded-lg content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch pb-1`}
     >
-      <div className="tabs map-place-info-textbox-gradient w-[150px] overflow-hidden rounded px-3 py-3 shadow-2xl">
-        <div className="font-pkmnem tab-list block text-nowrap">
+      <div className="tabs w-full overflow-hidden px-3 py-3">
+        <div className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap" role="tablist" aria-label="Encounter type tabs">
           <button
             title="land"
-            className={`tab-label w-[36px] text-lg font-bold ${selectedTab === "land" && "land-tab"}`}
+            className={`tab-label w-[36px] text-lg md:text-xl font-bold ${selectedTab === "land" && "land-tab"}`}
             onClick={handleClick}
+            role="tab"
+            aria-selected={selectedTab === "land"}
+            aria-controls="land-panel"
+            tabIndex={selectedTab === "land" ? 0 : -1}
+            id="land-tab"
+            type="button"
           >
             Land
           </button>
           <button
             title="water"
-            className={`tab-label w-[44px] text-lg font-bold ${selectedTab === "water" && "water-tab"}`}
+            className={`tab-label w-[44px] text-lg md:text-xl font-bold ${selectedTab === "water" && "water-tab"}`}
             onClick={handleClick}
+            role="tab"
+            aria-selected={selectedTab === "water"}
+            aria-controls="water-panel"
+            tabIndex={selectedTab === "water" ? 0 : -1}
+            id="water-tab"
+            type="button"
           >
             Water
           </button>
           <button
             title="fishing"
-            className={`tab-label w-[46px] text-lg font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
+            className={`tab-label w-[46px] text-lg md:text-xl font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
             onClick={handleClick}
+            role="tab"
+            aria-selected={selectedTab === "fishing"}
+            aria-controls="fishing-panel"
+            tabIndex={selectedTab === "fishing" ? 0 : -1}
+            id="fishing-tab"
+            type="button"
           >
             Fishing
           </button>
         </div>
-        <div className="mb-1 h-[200px] overflow-scroll md:h-full">
-          {selectedTab === "land" ? (
-            <EncounterMonsList zone="land" />
-          ) : selectedTab === "water" ? (
-            <EncounterMonsList zone="water" />
-          ) : selectedTab === "fishing" ? (
-            <EncounterMonsList zone="fishing" />
-          ) : null}
-        </div>
+      </div>
+      <div className="flex-1 overflow-y-auto mb-1">
+        {selectedTab === "land" ? (
+          <EncounterMonsList zone="land" />
+        ) : selectedTab === "water" ? (
+          <EncounterMonsList zone="water" />
+        ) : selectedTab === "fishing" ? (
+          <EncounterMonsList zone="fishing" />
+        ) : null}
       </div>
     </animated.div>
   );

@@ -16,27 +16,43 @@ const EncounterMonsList = React.memo(function EncounterList({
     if (zone === "fishing") return state.selectedMapFishingMons;
     return [];
   });
-  return (encounter || []).map((mon, index) => (
-    <div
-      key={`${mon.index}${index}`}
-      className="relative px-1 h-8 w-1"
-      onMouseDown={() => {
-        setSelectedPokemon(mon.index);
-      }}
-    >
-      <div className="icon-sprite-box">
-        <img
-          className="pokemon-icon-sprite"
-          style={{
-            filter: "drop-shadow(1px 0px 3px #2b2b2b50)",
-          }}
-          src={`icon/${mon.index}/icon.webp`}
-        />
+
+  if (!encounter || encounter.length === 0) {
+    return (
+      <div className="text-center text-sm text-gray-500 py-2">
+        No Pokémon found in this area.
       </div>
-      <p className="absolute top-[7px] left-[42px] text-xs font-bold">{formatMapString(mon.species)}</p>
-      <p className="absolute font-pkmnem top-[21px] left-[42px] font-bold text-sm/4">{mon.rate}%</p>
+    );
+  }
+
+  return (
+    <div className="flex flex-col gap-1">
+      {encounter.map((mon, index) => (
+        <div
+          key={`${mon.index}${index}`}
+          className="flex items-center gap-2 p-1 bg-emerald-50 rounded hover:bg-emerald-100 transition-colors cursor-pointer"
+          onMouseDown={() => setSelectedPokemon(mon.index)}
+        >
+          <div className="icon-sprite-box ">
+            <img
+              className="pokemon-icon-sprite"
+              style={{ filter: "drop-shadow(1px 0px 3px #2b2b2b50)" }}
+              src={`icon/${mon.index}/icon.webp`}
+              alt={formatMapString(mon.species)}
+            />
+          </div>
+          <div>
+            <p className="font-bold text-emerald-900 text-sm leading-tight">
+              {formatMapString(mon.species)}
+            </p>
+            <p className="font-pkmnem text-emerald-700 text-xs leading-tight">
+              {mon.rate}%
+            </p>
+          </div>
+        </div>
+      ))}
     </div>
-  ));
+  );
 });
 
 export default EncounterMonsList;

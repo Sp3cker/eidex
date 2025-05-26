@@ -87,7 +87,7 @@
   /* font-size: 0.875rem; */
   font-weight: bold;
   color: var(--color-gray-700);
-  background-color: var(--color-white);
+
   border-bottom: 2px solid transparent;
   transition:
     color 0.2s,
