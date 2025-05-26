@@ -96,17 +96,14 @@ const Search = () => {
     trail: 21,
   });
   const handleChange = useCallback((e: React.FormEvent<HTMLInputElement>) => {
-    if (e.currentTarget.value.length === 0) {
-
-      setItemMaps([]);
-    }
+    setSelectedMap();
+    setItemMaps([]);
     setSearchName(e.currentTarget.value);
   }, []);
   return (
     <div className="content-visible cool-font search-bar-grid w-full">
       <input
         value={searchTerm}
-
         className="search-input mb-2 w-full rounded-sm p-1 py-1 pl-1 pr-2 text-sm/6 shadow-xl ring-2 ring-blue-500"
         type="search"
         onInput={handleChange}
