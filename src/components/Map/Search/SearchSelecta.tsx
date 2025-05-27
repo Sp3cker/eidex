@@ -47,14 +47,14 @@ const SearchSelecta = React.memo(function SSelecta({
   };
   const [spring, api] = useSpring(() => ({
     opacity: 0,
-    translateY: 0,
+    translateY: -50,
     // config: (key) => (key === "translateY" ? {} : {}),
   }));
   useEffect(() => {
     if (maps && maps.length > 1) {
       api.start({ translateY: 10, opacity: 1 });
     } else if (maps.length === 0) {
-      api.start({ translateY: 0, opacity: 0 });
+      api.start({ translateY: -50, opacity: 0 });
     }
     // const unsub = useMapStore.subscribe((state: MapStore) => {
     //   const numOfLevels = state.selectedMapsLevels;

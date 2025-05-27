@@ -30,22 +30,22 @@ const EncounterMonsList = React.memo(function EncounterList({
       {encounter.map((mon, index) => (
         <div
           key={`${mon.index}${index}`}
-          className="flex items-center gap-2 p-1 bg-emerald-50 rounded hover:bg-emerald-100 transition-colors cursor-pointer"
+          className="flex items-center gap-2 pl-2 p-1 rounded hover:bg-emerald-100 transition-colors cursor-pointer"
           onMouseDown={() => setSelectedPokemon(mon.index)}
         >
           <div className="icon-sprite-box ">
             <img
               className="pokemon-icon-sprite"
-              style={{ filter: "drop-shadow(1px 0px 3px #2b2b2b50)" }}
+              // style={{ filter: "drop-shadow(1px 0px 3px #2b2b2b50)" }}
               src={`icon/${mon.index}/icon.webp`}
               alt={formatMapString(mon.species)}
             />
           </div>
           <div>
-            <p className="font-bold text-emerald-900 text-sm leading-tight">
+            <p className="font-bold text-emerald-900 text-xs md:text-sm leading-tight">
               {formatMapString(mon.species)}
             </p>
-            <p className="font-pkmnem text-emerald-700 text-xs leading-tight">
+            <p className="font-pkmnem text-emerald-900 font-bold  leading-tight">
               {mon.rate}%
             </p>
           </div>

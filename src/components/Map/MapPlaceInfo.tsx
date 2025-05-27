@@ -68,7 +68,7 @@ const MapPlaceInfo = () => {
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`w-full h-full flex flex-col rounded-lg content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch pb-1`}
+      className={`h-full flex flex-col w-[150px] md:w-full rounded-lg content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch pb-1`}
     >
       <div className="tabs w-full overflow-hidden px-3 py-3">
         <div className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap" role="tablist" aria-label="Encounter type tabs">

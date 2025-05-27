@@ -179,7 +179,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 }
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: darkgrey;
+  color: var(--color-gray-300);
   opacity: 1;
   /* Firefox */
 }
@@ -207,6 +207,8 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   width: 170px;
 }
 .search-input {
+margin-top: 0.5rem;
+  border: 1px solid var(--color-neutral-300);
   backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.8);
   background-color: rgba(255, 255, 255, 0.2);

@@ -105,10 +105,10 @@ const Search = () => {
     <div className="content-visible cool-font search-bar-grid w-full">
       <input
         value={searchTerm}
-        className="search-input mb-2 w-full rounded-sm p-1 py-1 pl-1 pr-2 text-sm/6 shadow-xl ring-2 ring-blue-500"
+        className="search-input shadow-inner mb-2 border border-neutral-100 w-full rounded-sm p-1 py-1 pl-1 pr-2 text-sm/6 shadow-xl"
         type="search"
         onInput={handleChange}
-        placeholder="Items, TMs..."
+        placeholder="Find items, TMs..."
       />
       <ul className="relative">
         {transitions((styles, item, _, index) => (
