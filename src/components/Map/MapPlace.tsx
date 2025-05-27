@@ -65,7 +65,7 @@ const MapPlace = memo(function MapPlace({ item }: MapPlaceProps) {
           key={elem.id || `g-${Math.random()}`}
           id={elem.id}
           transform={elem.transform}
-          className={`${isSelectedMap ? "selected-place ring" : "touch-none"} border-yellow stroke-yellow-900 stroke-1 transition-all md:stroke-0`}
+          className={`${isSelectedMap ? "selected-place" : "touch-none"} stroke-1 transition-all md:stroke-0`}
           ref={ref}
         >
           {elem.children?.map((child: Record<string, any>, index: number) =>
@@ -88,7 +88,7 @@ const MapPlace = memo(function MapPlace({ item }: MapPlaceProps) {
           width={elem.width}
           height={elem.height}
           {...elem.style}
-          className={`${isSelectedMap ? "fill-yellow-800/50" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-colors`}
+          className={`${isSelectedMap ? "selected-place fill-emerald-800 stroke-amber-600" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-colors`}
           ref={ref}
         />
       );
@@ -97,6 +97,7 @@ const MapPlace = memo(function MapPlace({ item }: MapPlaceProps) {
     if (elem.type === "path") {
       return (
         <path
+          className={`${isSelectedMap ? " fill-emerald-600" : ""} transition-colors`}
           key={elem.id || `path-${Math.random()}`}
           id={elem.id}
           d={elem.d}
