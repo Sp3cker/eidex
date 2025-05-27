@@ -1,0 +1,7 @@
+User-agent: *
+
+
+User-agent: *
+Allow: /
+
+Sitemap: https://eimap.specker.workers.dev/sitemap.xml
