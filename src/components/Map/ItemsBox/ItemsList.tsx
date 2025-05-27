@@ -3,6 +3,31 @@ import { useState, useMemo, memo } from "react";
 import Tabs from "./Tabs";
 import { Item } from "@/utils/itemsData";
 
+const placeLabeltoHuman = (place: string) => {
+  const key: Record<string, string> = {
+    EventScript: "Story/Quest",
+    PrettyPetalFlowerShop: "Pretty Petal Flower Shop",
+    WallysHouse: "Wally's House",
+    ScottsHouse: "Scott's House",
+    PokemonCenter: "Pokémon® Center",
+    MoveRelearnersHouse: "Move Relearner's House",
+    CreatorHouse: "Creator's House",
+    House4: "House 4",
+    House2: "House 2",
+    StevensRoom: "Steven's Room",
+    HerbShop: "Herb Shop",
+    BattleTentLobby: "Battle Tent",
+    CuttersHouse: "Cutter's House",
+    DevonCorp:"Devon Corp®",
+    Flat2: "Flat 2",
+    PokemonSchool: "Pokemon School",
+    OceanicMuseum:"Oceanic Museam",
+    PokemonFanClub: "Pokémon® Fan Club",
+    SpaceCenter:"Space Center",
+    StevensHouse:"Steven's House"
+  };
+  return key[place] || place;
+};
 const ItemsList = memo(function ItemsList() {
   const [selectedTab, setSelectedTab] = useState("EventScript");
   const items = useMapStore((state) => state.selectedMapItems);
@@ -32,7 +57,7 @@ const ItemsList = memo(function ItemsList() {
         isMarts={martItems !== null && martItems.length > 0}
       />
       {places === null ? (
-        <p className="text-center cool-font text-sm text-gray-500 py-2">
+        <p className="cool-font py-2 text-center text-sm text-gray-500">
           No items in this area
         </p>
       ) : selectedTab !== "marts" ? (
@@ -56,7 +81,7 @@ const PlacesList = ({ place }: { place: { place: string; items: Item[] } }) => (
       key={place.place}
       className="cool-font mb-2 mt-4 border-b-2 border-emerald-400 pb-1 font-bold tracking-wide"
     >
-      {place.place}
+      {placeLabeltoHuman(place.place)}
     </p>
     <PlaceItems items={place.items} />
   </>

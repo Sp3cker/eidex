@@ -4,35 +4,21 @@ import { useCallback, useEffect, useState } from "react";
 import EncounterMonsList from "./EncounterMonsList";
 
 const MapPlaceInfo = () => {
-  // const [clientWidth, setClientWidth] = useState(window.innerWidth);
   const [selectedTab, setSelectedTab] = useState("land");
-
   const [spring, api] = useSpring(
     {
       opacity: 0,
-
       translate: 200, // Start off-screen, animate to 2/3rd position
-      // Start off-screen, animate to 2/3rd position
     },
     [],
   );
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setClientWidth(window.innerWidth);
-  //   };
 
-  //   window.addEventListener("resize", handleResize);
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
   useEffect(() => {
     const unsub = useMapStore.subscribe((state) => {
       const show =
-        (state.selectedMapLandMons && state.selectedMapLandMons.length !== 0) ||
-        (state.selectedMapFishingMons &&
-          state.selectedMapFishingMons.length !== 0) ||
-        (state.selectedMapWaterMons && state.selectedMapWaterMons.length !== 0);
+        state.selectedMapLandMons ||
+        state.selectedMapFishingMons ||
+        state.selectedMapWaterMons;
       if (show !== null && show) {
         // const toSize = screenWidth === "sm" ? 150 : 200;
         api.start({
@@ -41,13 +27,8 @@ const MapPlaceInfo = () => {
           opacity: 1,
           translate: 0, // Ensure it doesn't go too far left
         });
-        // if (state.selectedMapLandMons?.length === 0) {
-        //   setSelectedTab("water");
-        // } else {
-        //   setSelectedTab("land");
-        // }
       } else {
-        api.start({ translate: 200 });
+        api.start({ translate: 200, opacity: 0 });
       }
     });
     return () => {
@@ -68,13 +49,17 @@ const MapPlaceInfo = () => {
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`h-full flex flex-col w-[150px] md:w-full rounded-lg content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch pb-1`}
+      className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex h-full w-[150px] flex-col rounded-lg pb-1 md:w-full`}
     >
       <div className="tabs w-full overflow-hidden px-3 py-3">
-        <div className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap" role="tablist" aria-label="Encounter type tabs">
+        <div
+          className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap"
+          role="tablist"
+          aria-label="Encounter type tabs"
+        >
           <button
             title="land"
-            className={`tab-label w-[36px] text-lg md:text-xl font-bold ${selectedTab === "land" && "land-tab"}`}
+            className={`tab-label w-[36px] text-lg font-bold md:text-xl ${selectedTab === "land" && "land-tab"}`}
             onClick={handleClick}
             role="tab"
             aria-selected={selectedTab === "land"}
@@ -87,7 +72,7 @@ const MapPlaceInfo = () => {
           </button>
           <button
             title="water"
-            className={`tab-label w-[44px] text-lg md:text-xl font-bold ${selectedTab === "water" && "water-tab"}`}
+            className={`tab-label w-[44px] text-lg font-bold md:text-xl ${selectedTab === "water" && "water-tab"}`}
             onClick={handleClick}
             role="tab"
             aria-selected={selectedTab === "water"}
@@ -100,7 +85,7 @@ const MapPlaceInfo = () => {
           </button>
           <button
             title="fishing"
-            className={`tab-label w-[46px] text-lg md:text-xl font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
+            className={`tab-label w-[46px] text-lg font-bold md:text-xl ${selectedTab === "fishing" && "fishing-tab"}`}
             onClick={handleClick}
             role="tab"
             aria-selected={selectedTab === "fishing"}
@@ -113,7 +98,7 @@ const MapPlaceInfo = () => {
           </button>
         </div>
       </div>
-      <div className="flex-1 overflow-y-auto mb-1">
+      <div className="mb-1 flex-1 overflow-y-auto">
         {selectedTab === "land" ? (
           <EncounterMonsList zone="land" />
         ) : selectedTab === "water" ? (

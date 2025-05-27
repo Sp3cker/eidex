@@ -1,9 +1,6 @@
 {
   "MAP_BATTLE_FRONTIER": {
-    "ScottsHouse": [
-      "ITEM_LANSAT_BERRY",
-      "ITEM_STARF_BERRY"
-    ],
+    "ScottsHouse": ["ITEM_LANSAT_BERRY", "ITEM_STARF_BERRY"],
     "marts": [
       "ITEM_ULTRA_BALL",
       "ITEM_HYPER_POTION",
@@ -21,16 +18,11 @@
     ]
   },
   "MAP_DESERT_UNDERPASS": {
-    "EventScript": [
-      "ITEM_CLAW_FOSSIL",
-      "ITEM_ROOT_FOSSIL"
-    ],
+    "EventScript": ["ITEM_CLAW_FOSSIL", "ITEM_ROOT_FOSSIL"],
     "marts": []
   },
   "MAP_DEWFORD_TOWN": {
-    "Gym": [
-      "ITEM_TM_LOW_SWEEP"
-    ],
+    "Gym": ["ITEM_TM_LOW_SWEEP"],
     "marts": [
       "ITEM_POMEG_BERRY",
       "ITEM_TM_ELECTROWEB",
@@ -49,9 +41,7 @@
       "ITEM_TM_SUPERCELL_SLAM",
       "ITEM_EJECT_BUTTON"
     ],
-    "PokemonCenter": [
-      "ITEM_ZYGARDE_CUBE"
-    ],
+    "PokemonCenter": ["ITEM_ZYGARDE_CUBE"],
     "marts": [
       "ITEM_ULTRA_BALL",
       "ITEM_HYPER_POTION",
@@ -134,12 +124,8 @@
       "ITEM_TM_TAILWIND",
       "ITEM_ALTARIANITE"
     ],
-    "House2": [
-      "ITEM_TM_STORED_POWER"
-    ],
-    "House4": [
-      "ITEM_MENTAL_HERB"
-    ],
+    "House2": ["ITEM_TM_STORED_POWER"],
+    "House4": ["ITEM_MENTAL_HERB"],
     "marts": [
       "ITEM_POKE_BALL",
       "ITEM_GREAT_BALL",
@@ -155,9 +141,7 @@
     ]
   },
   "MAP_GRANITE_CAVE": {
-    "1F": [
-      "ITEM_HM_FLASH"
-    ],
+    "1F": ["ITEM_HM_FLASH"],
     "StevensRoom": [
       "ITEM_TM_STEEL_WING",
       "ITEM_SITRUS_BERRY",
@@ -190,11 +174,7 @@
     "marts": []
   },
   "MAP_LAVARIDGE_TOWN": {
-    "EventScript": [
-      "ITEM_MEGA_RING",
-      "ITEM_GO_GOGGLES",
-      "ITEM_SAFETY_GOGGLES"
-    ],
+    "EventScript": ["ITEM_MEGA_RING", "ITEM_GO_GOGGLES", "ITEM_SAFETY_GOGGLES"],
     "Gym": [
       "ITEM_TM_OVERHEAT",
       "ITEM_TM_WILL_O_WISP",
@@ -203,9 +183,7 @@
       "ITEM_TM_FLARE_BLITZ",
       "ITEM_INFERNAPITE"
     ],
-    "HerbShop": [
-      "ITEM_CHARCOAL"
-    ],
+    "HerbShop": ["ITEM_CHARCOAL"],
     "marts": [
       "ITEM_TM_ICE_BEAM",
       "ITEM_TM_HYPER_VOICE",
@@ -236,18 +214,9 @@
     ]
   },
   "MAP_LILYCOVE_CITY": {
-    "EventScript": [
-      "VAR_RESULT",
-      "ITEM_ASSAULT_VEST"
-    ],
-    "DepartmentStore": [
-      "VAR_0x8005",
-      "VAR_POKELOT_PRIZE_ITEM"
-    ],
-    "House2": [
-      "ITEM_DRAGON_MEMORY",
-      "VAR_0x8005"
-    ],
+    "EventScript": ["ITEM_ASSAULT_VEST"],
+    "DepartmentStore": ["VAR_POKELOT_PRIZE_ITEM"],
+    "House2": ["ITEM_DRAGON_MEMORY"],
     "marts": [
       "ITEM_POKE_BALL",
       "ITEM_GREAT_BALL",
@@ -321,9 +290,7 @@
     ]
   },
   "MAP_LITTLEROOT_TOWN": {
-    "EventScript": [
-      "ITEM_INFINITE_CANDY"
-    ],
+    "EventScript": ["ITEM_INFINITE_CANDY"],
     "ProfessorBirchsLab": [
       "ITEM_AURORA_TICKET",
       "ITEM_QUICK_BALL",
@@ -360,26 +327,16 @@
     "marts": []
   },
   "MAP_MAUVILLE_CITY": {
-    "EventScript": [
-      "ITEM_BASEMENT_KEY",
-      "ITEM_TM_CLOSE_COMBAT"
-    ],
-    "BikeShop": [
-      "ITEM_MACH_BIKE",
-      "ITEM_ACRO_BIKE"
-    ],
+    "EventScript": ["ITEM_BASEMENT_KEY", "ITEM_TM_CLOSE_COMBAT"],
+    "BikeShop": ["ITEM_MACH_BIKE", "ITEM_ACRO_BIKE"],
     "Gym": [
       "ITEM_TM_VOLT_SWITCH",
       "ITEM_LUXRITE",
       "ITEM_MANECTITE",
       "ITEM_AMPHAROSITE"
     ],
-    "House1": [
-      "ITEM_HM_ROCK_SMASH"
-    ],
-    "House2": [
-      "ITEM_COIN_CASE"
-    ],
+    "House1": ["ITEM_HM_ROCK_SMASH"],
+    "House2": ["ITEM_COIN_CASE"],
     "marts": [
       "ITEM_TM_TOXIC",
       "ITEM_TM_TAUNT",
@@ -418,30 +375,15 @@
     ]
   },
   "MAP_MIRAGE_TOWER": {
-    "4F": [
-      "ITEM_ROOT_FOSSIL",
-      "ITEM_CLAW_FOSSIL"
-    ],
+    "4F": ["ITEM_ROOT_FOSSIL", "ITEM_CLAW_FOSSIL"],
     "marts": []
   },
   "MAP_MOSSDEEP_CITY": {
-    "EventScript": [
-      "ITEM_KINGS_ROCK"
-    ],
-    "Gym": [
-      "ITEM_TM_EXPANDING_FORCE",
-      "ITEM_TM_TRICK_ROOM"
-    ],
-    "House3": [
-      "ITEM_SUPER_ROD"
-    ],
-    "SpaceCenter": [
-      "ITEM_SUN_STONE",
-      "ITEM_MAGMA_EMBLEM"
-    ],
-    "StevensHouse": [
-      "ITEM_HM_DIVE"
-    ],
+    "EventScript": ["ITEM_KINGS_ROCK"],
+    "Gym": ["ITEM_TM_EXPANDING_FORCE", "ITEM_TM_TRICK_ROOM"],
+    "House3": ["ITEM_SUPER_ROD"],
+    "SpaceCenter": ["ITEM_SUN_STONE", "ITEM_MAGMA_EMBLEM"],
+    "StevensHouse": ["ITEM_HM_DIVE"],
     "marts": [
       "ITEM_ULTRA_BALL",
       "ITEM_NET_BALL",
@@ -455,29 +397,17 @@
     ]
   },
   "MAP_MT_CHIMNEY": {
-    "EventScript": [
-      "ITEM_LAVA_COOKIE",
-      "ITEM_METEORITE"
-    ],
+    "EventScript": ["ITEM_LAVA_COOKIE", "ITEM_METEORITE"],
     "marts": []
   },
   "MAP_MT_PYRE": {
-    "1F": [
-      "ITEM_CLEANSE_TAG"
-    ],
-    "Summit": [
-      "ITEM_RED_ORB",
-      "ITEM_BLUE_ORB"
-    ],
+    "1F": ["ITEM_CLEANSE_TAG"],
+    "Summit": ["ITEM_RED_ORB", "ITEM_BLUE_ORB"],
     "marts": []
   },
   "MAP_OLDALE_TOWN": {
-    "EventScript": [
-      "ITEM_POTION"
-    ],
-    "House2": [
-      "ITEM_SHINY_CHARM"
-    ],
+    "EventScript": ["ITEM_POTION"],
+    "House2": ["ITEM_SHINY_CHARM"],
     "marts": [
       "ITEM_POTION",
       "ITEM_ANTIDOTE",
@@ -486,18 +416,11 @@
     ]
   },
   "MAP_PACIFIDLOG_TOWN": {
-    "House1": [
-      "ITEM_DOUSE_DRIVE",
-      "VAR_0x8005"
-    ],
+    "House1": ["ITEM_DOUSE_DRIVE"],
     "marts": []
   },
   "MAP_PETALBURG_CITY": {
-    "EventScript": [
-      "ITEM_EXP_SHARE",
-      "ITEM_HEX_ORB",
-      "ITEM_OLD_ROD"
-    ],
+    "EventScript": ["ITEM_EXP_SHARE", "ITEM_HEX_ORB", "ITEM_OLD_ROD"],
     "Gym": [
       "ITEM_ENIGMA_BERRY_E_READER",
       "ITEM_TM_RETURN",
@@ -547,7 +470,6 @@
       "ITEM_PECHA_BERRY",
       "ITEM_RAWST_BERRY",
       "ITEM_CHERI_BERRY",
-
       "ITEM_CHOPLE_BERRY",
       "ITEM_COLBUR_BERRY",
       "ITEM_WACAN_BERRY",
@@ -569,16 +491,11 @@
       "ITEM_HARBOR_MAIL",
       "ITEM_WISE_GLASSES"
     ],
-    "PrettyPetalFlowerShop": [
-      "ITEM_WAILMER_PAIL",
-      "VAR_RESULT"
-    ],
+    "PrettyPetalFlowerShop": ["ITEM_WAILMER_PAIL"],
     "marts": []
   },
   "MAP_ROUTE109": {
-    "EventScript": [
-      "ITEM_SOFT_SAND"
-    ],
+    "EventScript": ["ITEM_SOFT_SAND"],
     "marts": []
   },
   "MAP_ROUTE110": {
@@ -613,10 +530,7 @@
       "ITEM_TERRAIN_EXTENDER",
       "ITEM_LIGHT_CLAY"
     ],
-    "TrickHouseEnd": [
-      "ITEM_TM_TAUNT",
-      "ITEM_PP_MAX"
-    ],
+    "TrickHouseEnd": ["ITEM_TM_TAUNT", "ITEM_PP_MAX"],
     "TrickHouseEntrance": [
       "ITEM_TM_GUNK_SHOT",
       "ITEM_GARBODORITE",
@@ -688,19 +602,12 @@
     "marts": []
   },
   "MAP_ROUTE113": {
-    "GlassWorkshop": [
-      "ITEM_SCOPE_LENS"
-    ],
+    "GlassWorkshop": ["ITEM_SCOPE_LENS"],
     "marts": []
   },
   "MAP_ROUTE114": {
-    "EventScript": [
-      "VAR_RESULT",
-      "ITEM_TM_ROAR"
-    ],
-    "FossilManiacsHouse": [
-      "ITEM_TM_DIG"
-    ],
+    "EventScript": ["ITEM_TM_ROAR"],
+    "FossilManiacsHouse": ["ITEM_TM_DIG"],
     "marts": []
   },
   "MAP_ROUTE116": {
@@ -746,10 +653,7 @@
     "marts": []
   },
   "MAP_ROUTE120": {
-    "EventScript": [
-      "VAR_0x8004",
-      "ITEM_DEVON_SCOPE"
-    ],
+    "EventScript": ["ITEM_DEVON_SCOPE"],
     "marts": []
   },
   "MAP_ROUTE121": {
@@ -764,8 +668,6 @@
   },
   "MAP_ROUTE123": {
     "BerryMastersHouse": [
-      "VAR_RESULT",
-      "VAR_RESULT",
       "ITEM_SPELON_BERRY",
       "ITEM_PAMTRE_BERRY",
       "ITEM_WATMEL_BERRY",
@@ -776,7 +678,6 @@
   },
   "MAP_ROUTE124": {
     "DivingTreasureHuntersHouse": [
-      "VAR_0x8009",
       "ITEM_ROTOM_CATALOG",
       "ITEM_REVEAL_GLASS",
       "ITEM_GRACIDEA",
@@ -785,19 +686,12 @@
     "marts": []
   },
   "MAP_ROUTE125": {
-    "EventScript": [
-      "ITEM_TM_BLIZZARD",
-      "ITEM_TM_TRIPLE_AXEL"
-    ],
+    "EventScript": ["ITEM_TM_BLIZZARD", "ITEM_TM_TRIPLE_AXEL"],
     "marts": []
   },
   "MAP_RUSTBORO_CITY": {
-    "EventScript": [
-      "ITEM_GREAT_BALL"
-    ],
-    "CuttersHouse": [
-      "ITEM_HM_CUT"
-    ],
+    "EventScript": ["ITEM_GREAT_BALL"],
+    "CuttersHouse": ["ITEM_HM_CUT"],
     "DevonCorp": [
       "ITEM_DNA_SPLICERS",
       "ITEM_REINS_OF_UNITY",
@@ -809,15 +703,9 @@
       "ITEM_THUNDER_STONE",
       "ITEM_SUN_STONE"
     ],
-    "Flat2": [
-      "ITEM_PREMIER_BALL"
-    ],
-    "Gym": [
-      "ITEM_TM_BULLDOZE"
-    ],
-    "PokemonSchool": [
-      "ITEM_QUICK_CLAW"
-    ],
+    "Flat2": ["ITEM_PREMIER_BALL"],
+    "Gym": ["ITEM_TM_BULLDOZE"],
+    "PokemonSchool": ["ITEM_QUICK_CLAW"],
     "marts": [
       "ITEM_POKE_BALL",
       "ITEM_POTION",
@@ -832,22 +720,15 @@
     ]
   },
   "MAP_RUSTURF_TUNNEL": {
-    "EventScript": [
-      "ITEM_HM_STRENGTH",
-      "ITEM_DEVON_PARTS"
-    ],
+    "EventScript": ["ITEM_HM_STRENGTH", "ITEM_DEVON_PARTS"],
     "marts": []
   },
   "MAP_SSTIDAL_ROOMS": {
-    "EventScript": [
-      "ITEM_TM_LEECH_LIFE"
-    ],
+    "EventScript": ["ITEM_TM_LEECH_LIFE"],
     "marts": []
   },
   "MAP_SHOAL_CAVE": {
-    "LowTideEntranceRoom": [
-      "ITEM_SHELL_BELL"
-    ],
+    "LowTideEntranceRoom": ["ITEM_SHELL_BELL"],
     "LowTideInnerRoom": [
       "ITEM_SHOAL_SHELL",
       "ITEM_SHOAL_SHELL",
@@ -856,30 +737,15 @@
       "ITEM_SHOAL_SALT",
       "ITEM_SHOAL_SALT"
     ],
-    "LowTideLowerRoom": [
-      "ITEM_SHOAL_SALT",
-      "ITEM_FOCUS_BAND"
-    ],
-    "LowTideStairsRoom": [
-      "ITEM_SHOAL_SALT"
-    ],
+    "LowTideLowerRoom": ["ITEM_SHOAL_SALT", "ITEM_FOCUS_BAND"],
+    "LowTideStairsRoom": ["ITEM_SHOAL_SALT"],
     "marts": []
   },
   "MAP_SLATEPORT_CITY": {
-    "EventScript": [
-      "ITEM_POWDER_JAR",
-      "VAR_0x8008"
-    ],
-    "BattleTentLobby": [
-      "ITEM_TM_THIEF"
-    ],
-    "Harbor": [
-      "ITEM_DEEP_SEA_TOOTH",
-      "ITEM_DEEP_SEA_SCALE"
-    ],
-    "OceanicMuseum": [
-      "ITEM_TM_FLIP_TURN"
-    ],
+    "EventScript": ["ITEM_POWDER_JAR"],
+    "BattleTentLobby": ["ITEM_TM_THIEF"],
+    "Harbor": ["ITEM_DEEP_SEA_TOOTH", "ITEM_DEEP_SEA_SCALE"],
+    "OceanicMuseum": ["ITEM_TM_FLIP_TURN"],
     "PokemonFanClub": [
       "ITEM_RED_SCARF",
       "ITEM_BLUE_SCARF",
@@ -929,19 +795,12 @@
   },
   "MAP_SOOTOPOLIS_CITY": {
     "EventScript": [
-      "VAR_RESULT",
       "ITEM_FIGY_BERRY",
       "ITEM_IAPAPA_BERRY",
       "ITEM_HM_WATERFALL"
     ],
-    "Gym": [
-      "ITEM_GRIMMITE",
-      "ITEM_TM_MOONBLAST"
-    ],
-    "House2": [
-      "ITEM_DRACO_PLATE",
-      "VAR_0x8005"
-    ],
+    "Gym": ["ITEM_GRIMMITE", "ITEM_TM_MOONBLAST"],
+    "House2": ["ITEM_DRACO_PLATE"],
     "House4": [
       "ITEM_ADAMANT_ORB",
       "ITEM_ADAMANT_CRYSTAL",
@@ -949,10 +808,7 @@
       "ITEM_LUSTROUS_GLOBE",
       "ITEM_GRISEOUS_ORB"
     ],
-    "LotadAndSeedotHouse": [
-      "ITEM_RUSTED_SWORD",
-      "ITEM_RUSTED_SHIELD"
-    ],
+    "LotadAndSeedotHouse": ["ITEM_RUSTED_SWORD", "ITEM_RUSTED_SHIELD"],
     "marts": [
       "ITEM_ULTRA_BALL",
       "ITEM_HYPER_POTION",
@@ -966,9 +822,7 @@
     ]
   },
   "MAP_VERDANTURF_TOWN": {
-    "BattleTentLobby": [
-      "ITEM_TM_DRAINING_KISS"
-    ],
+    "BattleTentLobby": ["ITEM_TM_DRAINING_KISS"],
     "EventScript": [
       "ITEM_TM_CALM_MIND",
       "ITEM_TM_BULK_UP",

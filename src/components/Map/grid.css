@@ -1,28 +1,4 @@
-/* .parent {
-  display: grid;
-  position: relative;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
 
-.search-bar-grid {
-  grid-area: 1 / 1 / 2 / 5;
-}
-.dexnav-grid {
-  grid-area: 5 / 1 / 9 / 5;
-}
-.map-info-grid {
-  grid-area: 1 / 6 / 5 / 9;
-}
-.selecta-grid {
-  grid-area: 2 / 5 / 4 / 6;
-}
-.map-grid {
-
-  grid-area: 1 / 1 / 9 / 9;
-} */
 .parent {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
