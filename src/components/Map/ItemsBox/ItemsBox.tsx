@@ -19,7 +19,7 @@ const Dexnav = memo(function Dexnav() {
       style={springs}
       className="dexnav-grid dexnav-z max-h-[70vh] w-full overflow-y-auto rounded-lg border border-gray-200 bg-gradient-to-br from-emerald-50 via-white to-gray-100 p-4 shadow-xl md:w-96"
     >
-      <div className="sticky top-0 z-10 flex justify-between pb-2">
+      <div className="sticky top-0 z-10 flex justify-between">
         <h1 className="cool-font md:text-md pb-2 text-sm font-bold text-neutral-700">
           {formatMapString(selectedMap || "")}
           {selectedMapLabel && ` - ${selectedMapLabel}`}

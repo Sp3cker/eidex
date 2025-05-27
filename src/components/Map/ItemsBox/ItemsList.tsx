@@ -79,7 +79,7 @@ const PlacesList = ({ place }: { place: { place: string; items: Item[] } }) => (
   <>
     <p
       key={place.place}
-      className="cool-font mb-2 mt-4 border-b-2 border-emerald-400 pb-1 font-bold tracking-wide"
+      className="cool-font mb-2 mt-4 border-b-2 border-stone-400 pb-1 font-bold "
     >
       {placeLabeltoHuman(place.place)}
     </p>
@@ -91,7 +91,7 @@ const PlaceItems = ({ items }: { items: Item[] }) => (
     {items.map((i) => (
       <p
         key={i.name}
-        className="my-1 cursor-pointer rounded border border-emerald-200 bg-emerald-50 px-3 py-2 text-xl font-bold text-emerald-700 shadow-sm transition-colors hover:bg-emerald-100"
+        className="my-1 cursor-pointer rounded border border-slate-200 bg-slate-50 px-3 py-2 text-xl font-bold text-slate-700 shadow-sm transition-colors hover:bg-slate-100"
       >
         {i.name}
       </p>

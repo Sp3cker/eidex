@@ -73,7 +73,7 @@ const Search = () => {
   const transitions = useTransition(searchResults, {
     key: (item: any) => item.name,
     from: (_, index) => ({
-      opacity: 0,
+      // opacity: 0,
       translateX: 100,
       translateY: index * SEARCH_RESULT_SPACING + 10,
     }),
@@ -82,14 +82,14 @@ const Search = () => {
       return {
         translateY: index * SEARCH_RESULT_SPACING,
         translateX: 0,
-        opacity: 1,
+        // opacity: 1,
       };
     },
     update: (_, index) => {
       return {
         translateY: index * SEARCH_RESULT_SPACING,
         translateX: 0,
-        opacity: 1,
+        // opacity: 1,
       };
     },
     // exitBeforeEnter: true,
@@ -105,7 +105,7 @@ const Search = () => {
     <div className="content-visible cool-font search-bar-grid w-full">
       <input
         value={searchTerm}
-        className="search-input shadow-inner mb-2 border border-neutral-100 w-full rounded-sm p-1 py-1 pl-1 pr-2 text-sm/6 shadow-xl"
+        className="search-input text-neutral-50 shadow-inner mb-2 border border-neutral-100 w-full rounded-sm p-1 py-1 pl-1 pr-2 text-sm/6 shadow-xl"
         type="search"
         onInput={handleChange}
         placeholder="Find items, TMs..."
@@ -114,7 +114,7 @@ const Search = () => {
         {transitions((styles, item, _, index) => (
           <a.li
             {...bind(index)}
-            className="my-dib absolute w-full cursor-pointer rounded-sm bg-neutral-100 p-2"
+            className="search-result my-dib absolute w-full cursor-pointer rounded-sm bg-neutral-100 p-2"
             style={{
               // zIndex: results.length - index,
               scale: springs[index]?.scale,

@@ -2,6 +2,22 @@ import { useUIStore } from "@/stores/uiStore";
 import useMapStore, { formatMapString } from "@/stores/useMapStore";
 import React from "react";
 
+const zoneToTextColor = (zone: string) => {
+  const obj: Record<string, string> = {
+    land: "text-emerald-800",
+    water: "text-cyan-900",
+    fishing: "text-orange-800",
+  };
+  return obj[zone];
+};
+const zoneToBgColor = (zone: string) => {
+  const obj: Record<string, string> = {
+    land: "hover:bg-emerald-100",
+    water: "hover:bg-cyan-100",
+    fishing: "hover:bg-orange-100",
+  };
+  return obj[zone];
+};
 const EncounterMonsList = React.memo(function EncounterList({
   zone,
 }: {
@@ -19,7 +35,7 @@ const EncounterMonsList = React.memo(function EncounterList({
 
   if (!encounter || encounter.length === 0) {
     return (
-      <div className="text-center text-sm text-gray-500 py-2">
+      <div className="py-2 text-center text-sm text-gray-500">
         No Pokémon found in this area.
       </div>
     );
@@ -30,10 +46,10 @@ const EncounterMonsList = React.memo(function EncounterList({
       {encounter.map((mon, index) => (
         <div
           key={`${mon.index}${index}`}
-          className="flex items-center gap-2 pl-2 p-1 rounded hover:bg-emerald-100 transition-colors cursor-pointer"
+          className={`flex cursor-pointer items-center gap-2 rounded p-1 pl-2 transition-colors ${zoneToBgColor(zone)}`}
           onMouseDown={() => setSelectedPokemon(mon.index)}
         >
-          <div className="icon-sprite-box ">
+          <div className="icon-sprite-box">
             <img
               className="pokemon-icon-sprite"
               // style={{ filter: "drop-shadow(1px 0px 3px #2b2b2b50)" }}
@@ -42,10 +58,12 @@ const EncounterMonsList = React.memo(function EncounterList({
             />
           </div>
           <div>
-            <p className="font-bold text-emerald-900 text-xs md:text-sm leading-tight">
+            <p
+              className={`font-bold ${zoneToTextColor(zone)} text-xs leading-tight md:text-sm`}
+            >
               {formatMapString(mon.species)}
             </p>
-            <p className="font-pkmnem text-emerald-900 font-bold  leading-tight">
+            <p className={`font-pkmnem ${zoneToTextColor(zone)} font-bold leading-tight`}>
               {mon.rate}%
             </p>
           </div>
