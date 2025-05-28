@@ -36,16 +36,18 @@ const ItemsList = memo(function ItemsList() {
       return [null, null];
     }
     const places: { place: string; items: Item[] }[] = [];
-    const keys = Object.keys(items).filter((p) => p !== "marts");
+    const martItems: Item[] = items["marts"] || [];
+    const keys = Object.keys(items); //.filter((p) => p !== "marts");
 
     keys.forEach((k) => {
       const obj = {
         place: k,
         items: items[k],
       };
+
       places.push(obj);
     });
-    return [places, items["marts"] || null];
+    return [places, martItems];
   }, [items, selectedTab]);
 
   // const itemsToShow = martItems && martItems.length > 0 && selectedTab === "marts" ? martItems : places;
@@ -63,14 +65,7 @@ const ItemsList = memo(function ItemsList() {
       ) : selectedTab !== "marts" ? (
         places.map((place) => <PlacesList key={place.place} place={place} />)
       ) : (
-        martItems.map((m) => (
-          <p
-            className="my-1 cursor-pointer rounded border border-sky-200 bg-emerald-50 px-3 py-2 text-xl font-bold text-sky-700 shadow-sm transition-colors hover:bg-emerald-100"
-            key={m.id}
-          >
-            {m.name}
-          </p>
-        ))
+        <PlaceItems items={martItems} />
       )}
     </>
   );

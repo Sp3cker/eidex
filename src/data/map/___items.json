@@ -1149,28 +1149,28 @@
         "id": "ITEM_RED_SHARD",
         "name": "Red Shard",
         "price": 100,
-        "description": "A shard from an ancient item. Can be sold cheaply.",
+        "description": "sShardsDesc",
         "flingPower": 30
     },
     {
         "id": "ITEM_BLUE_SHARD",
         "name": "Blue Shard",
         "price": 100,
-        "description": "A shard from an ancient item. Can be sold cheaply.",
+        "description": "sShardsDesc",
         "flingPower": 30
     },
     {
         "id": "ITEM_YELLOW_SHARD",
         "name": "Yellow Shard",
         "price": 100,
-        "description": "A shard from an ancient item. Can be sold cheaply.",
+        "description": "sShardsDesc",
         "flingPower": 30
     },
     {
         "id": "ITEM_GREEN_SHARD",
         "name": "Green Shard",
         "price": 100,
-        "description": "A shard from an ancient item. Can be sold cheaply.",
+        "description": "sShardsDesc",
         "flingPower": 30
     },
     {
@@ -1381,7 +1381,7 @@
         "name": "Growth Mulch",
         "pluralName": "Growth Mulch",
         "price": 200,
-        "description": "A fertilizer that is unsuitable for local soil.",
+        "description": "sGenericMulchDesc",
         "flingPower": 30
     },
     {
@@ -1389,7 +1389,7 @@
         "name": "Damp Mulch",
         "pluralName": "Damp Mulch",
         "price": 200,
-        "description": "A fertilizer that is unsuitable for local soil.",
+        "description": "sGenericMulchDesc",
         "flingPower": 30
     },
     {
@@ -1397,7 +1397,7 @@
         "name": "Stable Mulch",
         "pluralName": "Stable Mulch",
         "price": 200,
-        "description": "A fertilizer that is unsuitable for local soil.",
+        "description": "sGenericMulchDesc",
         "flingPower": 30
     },
     {
@@ -1405,7 +1405,7 @@
         "name": "Gooey Mulch",
         "pluralName": "Gooey Mulch",
         "price": 200,
-        "description": "A fertilizer that is unsuitable for local soil.",
+        "description": "sGenericMulchDesc",
         "flingPower": 30
     },
     {
@@ -1413,7 +1413,7 @@
         "name": "Rich Mulch",
         "pluralName": "Rich Mulch",
         "price": 200,
-        "description": "A fertilizer that is unsuitable for local soil.",
+        "description": "sGenericMulchDesc",
         "flingPower": 30
     },
     {
@@ -1421,7 +1421,7 @@
         "name": "SurprseMulch",
         "pluralName": "SurprseMulch",
         "price": 200,
-        "description": "A fertilizer that is unsuitable for local soil.",
+        "description": "sGenericMulchDesc",
         "flingPower": 30
     },
     {
@@ -1429,7 +1429,7 @@
         "name": "Boost Mulch",
         "pluralName": "Boost Mulch",
         "price": 200,
-        "description": "A fertilizer that is unsuitable for local soil.",
+        "description": "sGenericMulchDesc",
         "flingPower": 30
     },
     {
@@ -1437,7 +1437,7 @@
         "name": "Amaze Mulch",
         "pluralName": "Amaze Mulch",
         "price": 200,
-        "description": "A fertilizer that is unsuitable for local soil.",
+        "description": "sGenericMulchDesc",
         "flingPower": 30
     },
     {
@@ -1600,7 +1600,7 @@
         "id": "ITEM_FIRE_STONE",
         "name": "Fire Stone",
         "price": 500,
-        "description": "Makes certain species of Pokémon evolve.",
+        "description": "sEvolutionStoneDesc",
         "effect": "gItemEffect_EvoItem",
         "flingPower": 30
     },
@@ -1608,7 +1608,7 @@
         "id": "ITEM_WATER_STONE",
         "name": "Water Stone",
         "price": 500,
-        "description": "Makes certain species of Pokémon evolve.",
+        "description": "sEvolutionStoneDesc",
         "effect": "gItemEffect_EvoItem",
         "flingPower": 30
     },
@@ -1616,7 +1616,7 @@
         "id": "ITEM_THUNDER_STONE",
         "name": "Thunder Stone",
         "price": 500,
-        "description": "Makes certain species of Pokémon evolve.",
+        "description": "sEvolutionStoneDesc",
         "effect": "gItemEffect_EvoItem",
         "flingPower": 30
     },
@@ -1624,7 +1624,7 @@
         "id": "ITEM_LEAF_STONE",
         "name": "Leaf Stone",
         "price": 500,
-        "description": "Makes certain species of Pokémon evolve.",
+        "description": "sEvolutionStoneDesc",
         "effect": "gItemEffect_EvoItem",
         "flingPower": 30
     },
@@ -1632,7 +1632,7 @@
         "id": "ITEM_ICE_STONE",
         "name": "Ice Stone",
         "price": 500,
-        "description": "Makes certain species of Pokémon evolve.",
+        "description": "sEvolutionStoneDesc",
         "effect": "gItemEffect_EvoItem",
         "flingPower": 30
     },
@@ -1640,7 +1640,7 @@
         "id": "ITEM_SUN_STONE",
         "name": "Sun Stone",
         "price": 500,
-        "description": "Makes certain species of Pokémon evolve.",
+        "description": "sEvolutionStoneDesc",
         "effect": "gItemEffect_EvoItem",
         "flingPower": 30
     },
@@ -1648,7 +1648,7 @@
         "id": "ITEM_MOON_STONE",
         "name": "Moon Stone",
         "price": 500,
-        "description": "Makes certain species of Pokémon evolve.",
+        "description": "sEvolutionStoneDesc",
         "effect": "gItemEffect_EvoItem",
         "flingPower": 30
     },
@@ -1656,7 +1656,7 @@
         "id": "ITEM_SHINY_STONE",
         "name": "Shiny Stone",
         "price": 500,
-        "description": "Makes certain species of Pokémon evolve.",
+        "description": "sEvolutionStoneDesc",
         "effect": "gItemEffect_EvoItem",
         "flingPower": 30
     },
@@ -1664,7 +1664,7 @@
         "id": "ITEM_DUSK_STONE",
         "name": "Dusk Stone",
         "price": 500,
-        "description": "Makes certain species of Pokémon evolve.",
+        "description": "sEvolutionStoneDesc",
         "effect": "gItemEffect_EvoItem",
         "flingPower": 80
     },
@@ -1672,7 +1672,7 @@
         "id": "ITEM_DAWN_STONE",
         "name": "Dawn Stone",
         "price": 500,
-        "description": "Makes certain species of Pokémon evolve.",
+        "description": "sEvolutionStoneDesc",
         "effect": "gItemEffect_EvoItem",
         "flingPower": 80
     },
@@ -1880,7 +1880,7 @@
         "name": "Red Nectar",
         "price": 300,
         "holdEffectParam": 0,
-        "description": "Flower nectar that changes the form of certain Pokémon.",
+        "description": "sNectarDesc",
         "flingPower": 10
     },
     {
@@ -1888,7 +1888,7 @@
         "name": "Yellow Nectar",
         "price": 300,
         "holdEffectParam": 0,
-        "description": "Flower nectar that changes the form of certain Pokémon.",
+        "description": "sNectarDesc",
         "flingPower": 10
     },
     {
@@ -1896,7 +1896,7 @@
         "name": "Pink Nectar",
         "price": 300,
         "holdEffectParam": 0,
-        "description": "Flower nectar that changes the form of certain Pokémon.",
+        "description": "sNectarDesc",
         "flingPower": 10
     },
     {
@@ -1904,7 +1904,7 @@
         "name": "Purple Nectar",
         "price": 300,
         "holdEffectParam": 0,
-        "description": "Flower nectar that changes the form of certain Pokémon.",
+        "description": "sNectarDesc",
         "flingPower": 10
     },
     {
@@ -6877,7 +6877,7 @@
         "name": "Key to Room 1",
         "pluralName": "Keys to Room 1",
         "price": 0,
-        "description": "A key that opens a door inside the Abandoned Ship.",
+        "description": "sKeyToRoomDesc",
         "importance": 1
     },
     {
@@ -6885,7 +6885,7 @@
         "name": "Key to Room 2",
         "pluralName": "Keys to Room 2",
         "price": 0,
-        "description": "A key that opens a door inside the Abandoned Ship.",
+        "description": "sKeyToRoomDesc",
         "importance": 1
     },
     {
@@ -6893,7 +6893,7 @@
         "name": "Key to Room 4",
         "pluralName": "Keys to Room 4",
         "price": 0,
-        "description": "A key that opens a door inside the Abandoned Ship.",
+        "description": "sKeyToRoomDesc",
         "importance": 1
     },
     {
@@ -6901,7 +6901,7 @@
         "name": "Key to Room 6",
         "pluralName": "Keys to Room 6",
         "price": 0,
-        "description": "A key that opens a door inside the Abandoned Ship.",
+        "description": "sKeyToRoomDesc",
         "importance": 1
     },
     {
