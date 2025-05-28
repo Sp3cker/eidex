@@ -114,7 +114,7 @@ const Search = () => {
         {transitions((styles, item, _, index) => (
           <a.li
             {...bind(index)}
-            className="search-result my-dib absolute w-full cursor-pointer rounded-sm bg-neutral-100 p-2"
+            className="search-result will-translate my-dib absolute w-full cursor-pointer rounded-sm bg-neutral-100 p-2"
             style={{
               // zIndex: results.length - index,
               scale: springs[index]?.scale,

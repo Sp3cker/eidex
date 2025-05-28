@@ -35,7 +35,7 @@ const EncounterMonsList = React.memo(function EncounterList({
 
   if (!encounter || encounter.length === 0) {
     return (
-      <div className="py-2 text-center text-sm text-gray-500">
+      <div className="py-2 font-pkmnem text-center font-bold text-sm text-gray-500">
         No Pokémon found in this area.
       </div>
     );

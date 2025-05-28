@@ -51,53 +51,7 @@ const MapPlaceInfo = () => {
       }}
       className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex h-full w-[150px] flex-col rounded-lg pb-1 md:w-full`}
     >
-      <div className="tabs w-full overflow-hidden px-3 py-3">
-        <div
-          className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap"
-          role="tablist"
-          aria-label="Encounter type tabs"
-        >
-          <button
-            title="land"
-            className={`tab-label w-[36px] text-lg font-bold md:text-xl ${selectedTab === "land" && "land-tab"}`}
-            onClick={handleClick}
-            role="tab"
-            aria-selected={selectedTab === "land"}
-            aria-controls="land-panel"
-            tabIndex={selectedTab === "land" ? 0 : -1}
-            id="land-tab"
-            type="button"
-          >
-            Land
-          </button>
-          <button
-            title="water"
-            className={`tab-label w-[44px] text-lg font-bold md:text-xl ${selectedTab === "water" && "water-tab"}`}
-            onClick={handleClick}
-            role="tab"
-            aria-selected={selectedTab === "water"}
-            aria-controls="water-panel"
-            tabIndex={selectedTab === "water" ? 0 : -1}
-            id="water-tab"
-            type="button"
-          >
-            Water
-          </button>
-          <button
-            title="fishing"
-            className={`tab-label w-[46px] text-lg font-bold md:text-xl ${selectedTab === "fishing" && "fishing-tab"}`}
-            onClick={handleClick}
-            role="tab"
-            aria-selected={selectedTab === "fishing"}
-            aria-controls="fishing-panel"
-            tabIndex={selectedTab === "fishing" ? 0 : -1}
-            id="fishing-tab"
-            type="button"
-          >
-            Fishing
-          </button>
-        </div>
-      </div>
+      <div className="tabs w-full overflow-hidden px-3 py-3"></div>
       <div className="mb-1 flex-1 overflow-y-auto">
         {selectedTab === "land" ? (
           <EncounterMonsList zone="land" />
@@ -106,6 +60,51 @@ const MapPlaceInfo = () => {
         ) : selectedTab === "fishing" ? (
           <EncounterMonsList zone="fishing" />
         ) : null}
+      </div>
+      <div
+        className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap"
+        role="tablist"
+        aria-label="Encounter type tabs"
+      >
+        <button
+          title="land"
+          className={`tab-label w-[36px] text-lg font-bold md:text-xl ${selectedTab === "land" && "land-tab"}`}
+          onClick={handleClick}
+          role="tab"
+          aria-selected={selectedTab === "land"}
+          aria-controls="land-panel"
+          tabIndex={selectedTab === "land" ? 0 : -1}
+          id="land-tab"
+          type="button"
+        >
+          Land
+        </button>
+        <button
+          title="water"
+          className={`tab-label w-[44px] text-lg font-bold md:text-xl ${selectedTab === "water" && "water-tab"}`}
+          onClick={handleClick}
+          role="tab"
+          aria-selected={selectedTab === "water"}
+          aria-controls="water-panel"
+          tabIndex={selectedTab === "water" ? 0 : -1}
+          id="water-tab"
+          type="button"
+        >
+          Water
+        </button>
+        <button
+          title="fishing"
+          className={`tab-label w-[46px] text-lg font-bold md:text-xl ${selectedTab === "fishing" && "fishing-tab"}`}
+          onClick={handleClick}
+          role="tab"
+          aria-selected={selectedTab === "fishing"}
+          aria-controls="fishing-panel"
+          tabIndex={selectedTab === "fishing" ? 0 : -1}
+          id="fishing-tab"
+          type="button"
+        >
+          Fishing
+        </button>
       </div>
     </animated.div>
   );
