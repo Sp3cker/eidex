@@ -4,7 +4,7 @@ const Header = () => (
   <div className="content-visibility relative flex w-full items-center justify-between bg-gray-800 px-1 py-1">
     <img
       src="Pokemans_395-1200px.webp"
-      alt="Imperium Pokedex"
+      alt="Emerald Imperium Pokedex"
       className="h-9"
     />
     <div>

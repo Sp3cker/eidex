@@ -1,0 +1,14 @@
+.folder-tab {
+  background: linear-gradient(180deg, #e0f7ef 0%, #c8e6c9 100%);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.06);
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+.folder-tab-active {
+  background: #fff;
+  box-shadow:
+    0 4px 12px 0 rgba(0, 0, 0, 0.1),
+    0 1.5px 0 0 #fff inset;
+  border-color: #34d399;
+  z-index: 10;
+}

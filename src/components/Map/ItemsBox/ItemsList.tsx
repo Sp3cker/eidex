@@ -18,13 +18,13 @@ const placeLabeltoHuman = (place: string) => {
     HerbShop: "Herb Shop",
     BattleTentLobby: "Battle Tent",
     CuttersHouse: "Cutter's House",
-    DevonCorp:"Devon Corp®",
+    DevonCorp: "Devon Corp®",
     Flat2: "Flat 2",
     PokemonSchool: "Pokemon School",
-    OceanicMuseum:"Oceanic Museam",
+    OceanicMuseum: "Oceanic Museam",
     PokemonFanClub: "Pokémon® Fan Club",
-    SpaceCenter:"Space Center",
-    StevensHouse:"Steven's House"
+    SpaceCenter: "Space Center",
+    StevensHouse: "Steven's House",
   };
   return key[place] || place;
 };
@@ -79,7 +79,7 @@ const PlacesList = ({ place }: { place: { place: string; items: Item[] } }) => (
   <>
     <p
       key={place.place}
-      className="cool-font text-sm md:text-md mb-2 mt-4 border-b-2 border-stone-400 pb-1 font-bold "
+      className="cool-font md:text-md mb-2 mt-4 border-b-2 border-stone-400 pb-1 text-xs font-bold"
     >
       {placeLabeltoHuman(place.place)}
     </p>
@@ -87,14 +87,14 @@ const PlacesList = ({ place }: { place: { place: string; items: Item[] } }) => (
   </>
 );
 const PlaceItems = ({ items }: { items: Item[] }) => (
-  <div >
+  <div>
     {items.map((i) => (
-      <p
-        key={i.name}
-        className="my-1 cursor-pointer rounded border border-slate-200 bg-slate-50 px-3 py-0 md:py-2 text-lg md:text-xl font-bold text-slate-700 shadow-sm transition-colors hover:bg-slate-100"
-      >
-        {i.name}
-      </p>
+      <div key={i.name} className="flex flex-col">
+        <p className="my-1 cursor-pointer rounded border border-slate-200 bg-slate-50 px-3 py-0 text-lg font-bold text-slate-700 shadow-sm transition-colors hover:bg-slate-100 md:py-2 md:text-xl">
+          {i.name}
+        </p>
+        <p>{i.description}</p>
+      </div>
     ))}
   </div>
 );
