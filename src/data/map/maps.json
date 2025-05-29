@@ -1,11 +1,7 @@
 [
   { "map": "MAP_ROUTE101", "type": "route" },
   { "map": "MAP_ROUTE102", "type": "route" },
-  {
-    "map": "MAP_ROUTE103",
-    "type": "route",
-    "items": [{ "name": "Bullet Seed" }]
-  },
+  { "map": "MAP_ROUTE103",    "type": "route",    "items": [{ "name": "Bullet Seed" }]},
   { "map": "MAP_ROUTE106", "type": "route" },
   { "map": "MAP_ROUTE107", "type": "route" },
   { "map": "MAP_ROUTE108", "type": "route" },
