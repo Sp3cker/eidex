@@ -11,7 +11,7 @@ const Footer = () => {
     >
       <div className="z-10 flex w-full select-none items-center justify-between bg-gray-800 px-1 ring">
         <div className="font-calamity pkmnem-face-shadow text-neutral-100">
-          <h1 className="md:text-baseline text-xs">
+          <h3 className="md:text-baseline text-xs">
             Dex by Kildemal{" – "}
             <a
               href="https://www.youtube.com/watch?v=Vhh_GeBPOhs"
@@ -20,7 +20,7 @@ const Footer = () => {
             >
               Map by Specker
             </a>
-          </h1>
+          </h3>
         </div>
         <div className="flex justify-end gap-5 pr-5">
           <FaDiscord />

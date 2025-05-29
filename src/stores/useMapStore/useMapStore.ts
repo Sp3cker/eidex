@@ -51,7 +51,7 @@ export const useMapStore = create<MapStore>((set, get) => {
     setSelectedMap: (map: string) => {
       const targetLevel = getSelectedLevel(map, 0);
       const storedCoords = get().storedCoordinates.get(map);
-      // window.history.pushState({}, "", `/map/${map}`);
+      window.history.pushState({}, "", `/map/${map}`);
 
       set({
         selectedMap: map,
@@ -114,18 +114,18 @@ export const useMapStore = create<MapStore>((set, get) => {
     },
     setStateFromURL: (route: string, routeParam: string) => {
       if (route === "map") {
-       get().setSelectedMap(routeParam);
+        get().setSelectedMap(routeParam);
       }
     },
   };
 });
 
 export default useMapStore;
-// window.addEventListener("popstate", () => {
-//   const path = window.location.pathname;
-//   const match = path.match(/^\/map\/(.+)$/);
-//   if (match) {
-//     console.log("mappp");
-//     useMapStore.getState().setSelectedMap(match[1]);
-//   }
-// });
+window.addEventListener("popstate", () => {
+  const path = window.location.pathname;
+  const match = path.match(/^\/map\/(.+)$/);
+  if (match) {
+    console.log("mappp");
+    useMapStore.getState().setSelectedMap(match[1]);
+  }
+});
