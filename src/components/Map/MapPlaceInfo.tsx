@@ -5,6 +5,7 @@ import EncounterMonsList from "./EncounterMonsList";
 
 const MapPlaceInfo = () => {
   const [selectedTab, setSelectedTab] = useState("land");
+  const show = useMapStore((state) => state.selectedMap !== null);
   const [spring, api] = useSpring(
     {
       opacity: 0,
@@ -14,27 +15,18 @@ const MapPlaceInfo = () => {
   );
 
   useEffect(() => {
-    const unsub = useMapStore.subscribe((state) => {
-      const show =
-        state.selectedMapLandMons ||
-        state.selectedMapFishingMons ||
-        state.selectedMapWaterMons;
-      if (show !== null && show) {
-        // const toSize = screenWidth === "sm" ? 150 : 200;
-        api.start({
-          // delay: (key) => (key === "opacity" ? 0 : 300),
-          config: { mass: 0.6, damping: 0.2 },
-          opacity: 1,
-          translate: 0, // Ensure it doesn't go too far left
-        });
-      } else {
-        api.start({ translate: 200, opacity: 0 });
-      }
-    });
-    return () => {
-      unsub();
-    };
-  }, []);
+    if (show) {
+      // const toSize = screenWidth === "sm" ? 150 : 200;
+      api.start({
+        // delay: (key) => (key === "opacity" ? 0 : 300),
+        config: { mass: 0.6, damping: 0.2 },
+        opacity: 1,
+        translate: 0, // Ensure it doesn't go too far left
+      });
+    } else {
+      api.start({ translate: 200, opacity: 0 });
+    }
+  }, [show]);
 
   const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.currentTarget;

@@ -8,7 +8,7 @@ import Footer from "./components/ui/Footer";
 
 const AppRouter = () => {
   const basePath = import.meta.env.BASE_PATH || "/";
-  console.log(basePath)
+
   return (
     <div className="flex h-screen flex-col bg-zinc-800">
       <Header />

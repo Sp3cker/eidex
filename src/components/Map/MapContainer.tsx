@@ -4,7 +4,7 @@ import { useDrag, usePinch } from "@use-gesture/react";
 import { useEffect, useRef } from "react";
 
 const MapContainer = ({ children }: any) => {
-  const setMapOffset = useMapStore((state) => state.setMapOffset);
+  // const setMapOffset = useMapStore((state) => state.setMapOffset);
   const selectedCoordinates = useMapStore((state) => state.selectedCoordinates);
   const mapRef = useRef<HTMLDivElement>(null);
   const setMapScale = useMapStore((state) => state.setMapScale);
@@ -16,9 +16,9 @@ const MapContainer = ({ children }: any) => {
       scale: 1.32,
       centerOffset: [400, 340],
       config: { mass: 5, tension: 800, friction: 200 },
-      onRest: () => {
-        setMapOffset(centerOffset.toJSON());
-      },
+      // onRest: () => {
+      //   setMapOffset(centerOffset.toJSON());
+      // },
     }),
     [],
   );

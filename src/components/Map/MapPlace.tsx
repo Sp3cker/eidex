@@ -16,7 +16,7 @@ interface MapPlaceProps {
 const MapPlace = memo(function MapPlace({ item }: MapPlaceProps) {
   const mapScale = useMapStore((state) => state.mapScale);
   const setSelectedMap = useMapStore((state) => state.setSelectedMap);
-  const [isSelectedMap, setIsSelectedMap] = useState(false);
+  const isSelectedMap = useMapStore((state) => state.selectedMap === item.id);
   const ref = useRef<any>(null);
 
   const handleClick = useCallback(() => {
@@ -39,16 +39,17 @@ const MapPlace = memo(function MapPlace({ item }: MapPlaceProps) {
     { target: ref },
   );
 
+  // useEffect(() => {
+  //   const unsub = useMapStore.subscribe((state) => {
+  //     setIsSelectedMap(state.selectedMap === item.id);
+  //   });
+  //   return () => {
+  //     unsub();
+  //   };
+  // }, [item.id]);
   useEffect(() => {
-    const unsub = useMapStore.subscribe((state) => {
-      setIsSelectedMap(state.selectedMap === item.id);
-    });
-    return () => {
-      unsub();
-    };
-  }, [item.id]);
-  useLayoutEffect(() => {
     if (!ref.current) return;
+    if (item.id.slice(0, 4).includes("MAP_") === false) return;
     const rect = ref.current.getBoundingClientRect();
     const mapRect = document.getElementById("map")?.getBoundingClientRect();
     if (!mapRect) return;
@@ -97,7 +98,7 @@ const MapPlace = memo(function MapPlace({ item }: MapPlaceProps) {
     if (elem.type === "path") {
       return (
         <path
-          className={`${isSelectedMap ? " fill-emerald-600" : ""} transition-colors`}
+          className={`${isSelectedMap ? "fill-emerald-600" : ""} transition-colors`}
           key={elem.id || `path-${Math.random()}`}
           id={elem.id}
           d={elem.d}
