@@ -53,7 +53,7 @@ const EncounterMonsList = React.memo(function EncounterList({
             <img
               className="pokemon-icon-sprite"
               // style={{ filter: "drop-shadow(1px 0px 3px #2b2b2b50)" }}
-              src={`icon/${mon.index}/icon.webp`}
+              src={`/icon/${mon.index}/icon.webp`}
               alt={formatMapString(mon.species)}
             />
           </div>

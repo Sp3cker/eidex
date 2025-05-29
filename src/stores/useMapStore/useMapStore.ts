@@ -23,6 +23,7 @@ export function formatMapString(mapNameFromJson: string) {
 }
 export const useMapStore = create<MapStore>((set, get) => {
   const initialState = {
+    currentRoute: window.location.href,
     selectedMap: null,
     selectedMapLevel: 0,
     selectedMapsLevels: 0,
@@ -46,6 +47,8 @@ export const useMapStore = create<MapStore>((set, get) => {
     setSelectedMap: (map: string) => {
       const targetLevel = getSelectedLevel(map, 0);
       const storedCoords = get().storedCoordinates.get(map);
+      window.history.pushState({}, "", `/map/${map}`);
+
       set({
         selectedMap: map,
         selectedMapLevel: 0,
@@ -102,10 +105,18 @@ export const useMapStore = create<MapStore>((set, get) => {
     },
     setStoredCoordinates: (mapCoords: Map<string, number[]>) => {
       set({
-        storedCoordinates: mapCoords
+        storedCoordinates: mapCoords,
       });
-    }
+    },
   };
 });
 
 export default useMapStore;
+window.addEventListener("popstate", () => {
+  const path = window.location.pathname;
+  const match = path.match(/^\/map\/(.+)$/);
+  if (match) {
+    console.log("mappp")
+    useMapStore.getState().setSelectedMap(match[1]);
+  }
+});
