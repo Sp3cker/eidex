@@ -3,9 +3,7 @@ import { useGesture } from "@use-gesture/react";
 import {
   useCallback,
   useEffect,
-  useLayoutEffect,
   useRef,
-  useState,
   memo,
 } from "react";
 
