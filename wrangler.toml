@@ -2,3 +2,6 @@ name = "eidex"
 
 compatibility_date = "2025-05-18"
 
+[assets]
+directory = "./dist/"
+not_found_handling = "single-page-application"
