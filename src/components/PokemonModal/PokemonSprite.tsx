@@ -13,7 +13,7 @@ const PokemonSprite = ({
   isOpen: boolean;
 }) => {
   const isShiny = useUIStore((state) => state.isShiny);
-  const imgDir = `sprites/${isShiny ? "anim_shiny" : "anim"}/${spriteIndex}/anim_front.webp`;
+  const imgDir = `/sprites/${isShiny ? "anim_shiny" : "anim"}/${spriteIndex}/anim_front.webp`;
   const [displaySprite, setDisplaySprite] = useState(imgDir);
   const [frame, setFrame] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
