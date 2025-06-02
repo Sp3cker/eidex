@@ -21,7 +21,7 @@
  grid-area: 8 / 6 / 10 / 8; 
 }
 .dexnav-grid {
-  grid-area: 6 / 2 / 13 / 6;
+  grid-area: 6 / 2 / 13 / 8;
 }
 
 @media (max-width: 768px) {
@@ -42,6 +42,6 @@
    grid-area: 8 / 6 / 10 / 8; 
   }
   .dexnav-grid {
-    grid-area: 7 / 1 / 13 / 6;
+    grid-area: 7 / 1 / 13 / 7;
   }
 }

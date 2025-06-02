@@ -1,20 +1,30 @@
 import ItemSearch from "@/utils/itemsData";
 import encounters from "@/data/map/cleanEncounters.json";
 import pokemon from "@/data/speciesData.json";
-import mapLevels from "@/data/map/mapBreakdown.json";
+import mapLevels from "@/data/map/groupedData.json";
 
 import {
   EncounterMons,
   EncounterMonsFromJSON,
-
 } from "@/stores/useMapStore/types";
 /** Works off of `mapBreakDown`, pass it `MAP_SIMPLE_NAME `
  * IT WILl return the baseName, the `id` of the map, and levels
  */
 const getMap = (map: string) => {
-  return mapLevels.filter(
-    (m: { id: string; mapBaseName: string }) => m.mapBaseName === map,
-  );
+  //@ts-ignore
+  const targetMap = mapLevels[map];
+  if (targetMap === undefined) {
+    console.error("Error selecting map %s", map);
+    return undefined;
+  }
+
+  return {
+    mapBaseName: map,
+    levels: targetMap,
+  };
+  // return mapLevels.filter(
+  //   (m: { id: string; mapBaseName: string }) => m.mapBaseName === map,
+  // );
 };
 const Encounters = new Map(encounters.map((obj) => [obj.map, obj]));
 
@@ -74,15 +84,6 @@ const putEncounterRate = (mons: EncounterMons[]) => {
 };
 
 const getSelectedMapInfo = (id: string) => {
-  //   if (map === null) {
-  //     return null;
-  //   }
-
-  //   if (targetMap.length === 0) {
-  //     console.error("Error selecting map element %s", map);
-  //     return;
-  //   }
-  //   const { id } = targetMap[0];
   const targetMapEncounters = Encounters.get(id);
 
   let landEncounters, waterEncounters, fishingEncounters;
@@ -111,9 +112,6 @@ const getSelectedMapInfo = (id: string) => {
     }
   }
   // console.error("Encounters not found for map %s", map);
-
-  /** Parse Out Items for Map */
-
   return {
     landEncounters,
     waterEncounters,
@@ -129,11 +127,12 @@ const getSelectedMapInfo = (id: string) => {
  */
 const getSelectedLevel = (map: string, level: number) => {
   const targetMap = getMap(map);
-  if (targetMap.length === 0) {
+  if (targetMap === undefined) {
     console.error("Error selecting map level %s, %s", level, map);
+    return;
   }
 
-  const { levels, mapBaseName } = targetMap[0];
+  const { levels } = targetMap;
 
   const targetLevel = levels[level]; // Use ID to get map information from Encounters
   if (!targetLevel) {
@@ -141,11 +140,12 @@ const getSelectedLevel = (map: string, level: number) => {
   }
   const thisLevelEncounter = getSelectedMapInfo(targetLevel.id);
   const thisLevelsItems = ItemSearch.byMap(mapBaseName);
-  
   return {
     ...thisLevelEncounter,
     selectedMapsLevels: levels.length,
-    selectedMapItems: thisLevelsItems,
+    selectedMapScriptedGives: targetLevel.scriptedGives,
+    selectedMapShopItems: targetLevel.shopItems,
+    selectedMapTrainers: targetLevel.trainers,
     mapLabel: targetLevel.levelLabel,
   };
 };

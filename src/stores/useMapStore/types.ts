@@ -30,12 +30,16 @@ type MapStore = {
   selectedMapLevel: number;
   selectedMapsLevels: number;
   selectedLevelLabel: string;
+  selectedMapScriptedGives: {scriptName: string, items: string[], pokemon: string}[];
+  selectedMapShopItems: {label: string, items: string[], levelLabel: string}[];
+  selectedMapTrainers: {coords: number[], type: string, script: string}[];
   mapScale: number;
   mapOffset: number[];
   hoveredMap: string | null;
   hoveredCoordinates: number[];
   dexNavIsOpen: boolean;
   selectedMapItems: { [location: string]: Item[] } | undefined;
+  selectedImage: string | null;
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
@@ -49,6 +53,7 @@ type MapStore = {
   searchItemByName: (name: string) => Item[];
   setSelectedMapLevel: (level: number) => void;
   setStoredCoordinates: (mapCoords: Map<string, number[]>) => void;
+  setSelectedImage: (image: string | null) => void;
 };
 
 export type { EncounterMons, EncounterMonsFromJSON, MapStore, Level };

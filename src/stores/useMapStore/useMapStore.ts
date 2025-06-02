@@ -31,7 +31,10 @@ export const useMapStore = create<MapStore>((set, get) => {
     selectedMapLandMons: undefined,
     selectedMapWaterMons: undefined,
     selectedMapFishingMons: undefined,
-    selectedMapItems: undefined,
+    selectedMapScriptedGives: [],
+    selectedMapShopItems: [],
+    selectedMapTrainers: [],
+    selectedImage: null,
   };
   return {
     ...initialState,
@@ -116,6 +119,9 @@ export const useMapStore = create<MapStore>((set, get) => {
       if (route === "map") {
         get().setSelectedMap(routeParam);
       }
+    },
+    setSelectedImage: (imageName: string | null) => {
+      set({ selectedImage: imageName });
     },
   };
 });

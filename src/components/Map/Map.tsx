@@ -8,9 +8,10 @@ import MapContainer from "./MapContainer";
 import Selecta from "./Selecta";
 import "./grid.css";
 import useMapStore from "@/stores/useMapStore";
-import {  useLayoutEffect } from "react";
+import { lazy, Suspense, useLayoutEffect } from "react";
 document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
+const ImageViewer = lazy(() => import("./ImageViewer"));
 const Map = () => {
   const setStateFromURL = useMapStore((state) => state.setStateFromURL);
 
@@ -34,6 +35,11 @@ const Map = () => {
       </ErrorBoundary>
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <Dexnav />
+      </ErrorBoundary>
+      <ErrorBoundary fallback={<div>Something went wrong</div>}>
+        <Suspense fallback={<p>Loading...</p>}>
+          <ImageViewer />
+        </Suspense>
       </ErrorBoundary>
     </div>
   );

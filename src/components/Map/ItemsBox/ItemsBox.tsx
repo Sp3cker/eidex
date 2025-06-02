@@ -6,6 +6,7 @@ import ItemsList from "./ItemsList";
 const Dexnav = memo(function Dexnav() {
   const selectedMap = useMapStore((state) => state.selectedMap);
   const selectedMapLabel = useMapStore((state) => state.selectedLevelLabel);
+  const setSelectedImage = useMapStore((state) => state.setSelectedImage);
   const [springs] = useSpring(
     {
       opacity: selectedMap ? 1 : 0,
@@ -14,6 +15,9 @@ const Dexnav = memo(function Dexnav() {
     },
     [selectedMap],
   );
+  const handleClick = () => {
+    setSelectedImage(selectedMap);
+  };
   return (
     <animated.nav
       style={springs}
@@ -25,6 +29,7 @@ const Dexnav = memo(function Dexnav() {
           {selectedMapLabel && ` - ${selectedMapLabel}`}
         </h3>
       </div>
+      <button onClick={handleClick}>Image</button>
       <div className="font-pkmnem flex flex-col rounded-sm">
         <ItemsList />
       </div>

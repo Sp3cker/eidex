@@ -1,4 +1,4 @@
-import itemsByMap from "@/data/map/givedItemsResults.json";
+import itemsByMap from "@/data/map/groupedData.json";
 import itemsData from "@/data/map/items.json";
 
 import { useCallback, useEffect, useState } from "react";
@@ -36,9 +36,11 @@ class ItemSearch {
     this.itemsToMap = new Map();
     // We gotta get all the items and write down
     // where all you can get it, so item: name, places: [...]
-    for (const map in itemsByMap) {
+    for (const map of Object.values(itemsByMap)) {
       //@ts-ignore
-      const itemsInThisMap = Object.values(itemsByMap[map]).flat() as string[];
+      debugger
+      // const itemsInThisMap = Object.values(itemsByMap[map]).flat() as string[];
+      const itemsInThisMap = 
       itemsInThisMap.forEach((item) => {
         if (this.itemsToMap.has(item)) {
           const currPlacesToGetItem = this.itemsToMap.get(item);
@@ -66,7 +68,7 @@ class ItemSearch {
       }
     | undefined {
     //@ts-ignore
-    const items = itemsByMap[map] as { [location: string]: string[] };
+    const items = itemsByMap[map]
     if (items === undefined) {
       return undefined;
     }
@@ -98,12 +100,12 @@ const useItemSearch = (): [
   const [searchResults, setSearchResults] = useState<Item[]>([]);
 
   useEffect(() => {
-    const results = itemSearch.search(searchTerm)
+    const results = itemSearch.search(searchTerm);
     if (results.length === 1 && searchTerm === results[0].name) {
       setSearchResults([]);
-      return
+      return;
     }
-    setSearchResults(results)
+    setSearchResults(results);
   }, [searchTerm]);
 
   const getMapsForItem = useCallback((itemId: string) => {
