@@ -11,7 +11,16 @@ export type Item = {
   price?: number;
   [key: string]: any;
 };
-// type SelectedItemSearchResult = {
+type ScriptedGive = {
+  scriptName: string;
+  items: string[];
+  pokemon: string[];
+};
+export type ItemsByMap = {
+  scriptedGives: { items: Item[]; pokemon: string[] };
+  shopItems: Item[];
+  pickupItems: Item[];
+}; // type SelectedItemSearchResult = {
 //   name: string;
 //   maps: string[];
 // };
@@ -21,7 +30,7 @@ class ItemSearch {
    */
   trie: TrieSearch<Item>;
   /**
-   * Get an array of places to find item via
+   * Array of places to find items.
    */
   itemsToMap: Map<string, string[]>;
   constructor() {
@@ -34,22 +43,62 @@ class ItemSearch {
     //@ts-ignore
     this.trie.addAll(itemsData);
     this.itemsToMap = new Map();
+
     // We gotta get all the items and write down
     // where all you can get it, so item: name, places: [...]
-    for (const map of Object.values(itemsByMap)) {
+
+    for (const mapLevels of Object.values(itemsByMap)) {
       //@ts-ignore
-      debugger
       // const itemsInThisMap = Object.values(itemsByMap[map]).flat() as string[];
-      const itemsInThisMap = 
-      itemsInThisMap.forEach((item) => {
-        if (this.itemsToMap.has(item)) {
-          const currPlacesToGetItem = this.itemsToMap.get(item);
-          currPlacesToGetItem?.push(map); // so item: 'apple', places: ['tree', 'ground',....]
-          return;
-        }
-        this.itemsToMap.set(item, [map]);
+      mapLevels.forEach((map: any) => {
+        /** Go through each level, putting all the items available
+         * there into the itemsToMap map, with the levelID added to that
+         * item's array of places to get it.
+         */
+        map.items.forEach((item: { coords: string[]; item: string }) => {
+          this.throwOnPile(item.item, map.baseMap);
+        });
+        /** Scripted Items are nested pretty deep... */
+        map.scriptedGives.forEach(
+          (script: { scriptName: string; items: string[]; pokemon: [] }) => {
+            script.items.forEach((item: string) =>
+              this.throwOnPile(item, map.baseMap),
+            );
+            script.pokemon.forEach((pokemon: string) =>
+              this.throwOnPile(pokemon, map.baseMap),
+            );
+          },
+        );
+
+        map.shopItems.forEach(
+          (shop: {
+            label: string;
+            mart: string;
+            items: string[];
+            levelLabel: string;
+            scriptname: string;
+          }) => {
+            shop.items.forEach((item: string) =>
+              this.throwOnPile(item, map.baseMap),
+            );
+          },
+        );
       });
     }
+  }
+  /**
+   *
+   * @param item item ID "ITEM_DEEZ"
+   * @param mapBaseName "MAP_SOOTOPOLIS_CITY"
+   * @returns
+   */
+  private throwOnPile(item: string, mapBaseName: string) {
+    if (this.itemsToMap.has(item)) {
+      const currPlacesToGetItem = this.itemsToMap.get(item);
+      currPlacesToGetItem?.push(mapBaseName); // so item: 'apple', places: ['tree', 'ground',....]
+      return;
+    }
+    this.itemsToMap.set(item, [mapBaseName]);
   }
   /**returns the map IDs this item is gettable on */
   getMapsForItem(itemId: string): string[] | null {
@@ -62,30 +111,49 @@ class ItemSearch {
   search(query: string) {
     return this.trie.search(query).slice(0, 5);
   }
-  byMap(map: string):
-    | {
-        [location: string]: Item[];
-      }
-    | undefined {
+  /**
+   *
+   * @param map map Base Name "MAP_SOOTOPOLIS_CITY"
+   */
+  byMap(mapBaseName: string): ItemsByMap | undefined {
     //@ts-ignore
-    const items = itemsByMap[map]
-    if (items === undefined) {
+    const levels = itemsByMap[mapBaseName];
+    if (levels === undefined || levels.length === 0) {
       return undefined;
     }
-    const keys = Object.keys(items);
-    const returnObj = new Map<string, Item[]>();
 
-    keys.forEach((k) => {
-      const startingArray = items[k];
-      const itemsWithData = startingArray.flatMap((itm) => {
-        return itemsData
-          .filter((i) => i.id === itm)
+    const returnObj: ItemsByMap = {
+      scriptedGives: { items: [], pokemon: [] },
+      shopItems: [] as Item[],
+      pickupItems: [],
+    };
+
+    for (const level of levels) {
+      level.scriptedGives.forEach((itm: ScriptedGive) => {
+        returnObj.scriptedGives.pokemon = itm.pokemon as string[];
+        returnObj.scriptedGives.items = itm.items
+          .flatMap((i) => itemsData.filter((item) => item.id === i))
           .map((i) => (i.price === null ? { ...i, price: undefined } : i));
       });
 
-      returnObj.set(k, itemsWithData);
-    });
-    return Object.fromEntries(returnObj);
+      level.shopItems.forEach((shop: { items: string[] }) => {
+        returnObj.shopItems = shop.items
+          .flatMap((i) => itemsData.filter((item) => item.id === i))
+          .map((i) => (i.price === null ? { ...i, price: undefined } : i));
+      });
+      level.items.forEach((item: { coords: string[]; item: string }) => {
+        const itemData = itemsData.find((i) => i.id === item.item);
+        if (itemData) {
+          returnObj.pickupItems.push(
+            itemData.price === null
+              ? { ...itemData, price: undefined }
+              : itemData,
+          );
+        }
+      });
+    }
+    debugger;
+    return returnObj;
   }
 }
 const itemSearch = new ItemSearch();

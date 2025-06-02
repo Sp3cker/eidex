@@ -53,6 +53,10 @@ export const useMapStore = create<MapStore>((set, get) => {
     },
     setSelectedMap: (map: string) => {
       const targetLevel = getSelectedLevel(map, 0);
+      if (targetLevel === undefined) {
+        console.error("Error selecting map %s", map);
+        return;
+      }
       const storedCoords = get().storedCoordinates.get(map);
       window.history.pushState({}, "", `/map/${map}`);
 
@@ -61,9 +65,9 @@ export const useMapStore = create<MapStore>((set, get) => {
         selectedMapLevel: 0,
         selectedLevelLabel: targetLevel.mapLabel,
         selectedMapsLevels: targetLevel.selectedMapsLevels,
-        selectedMapLandMons: targetLevel.landEncounters,
-        selectedMapWaterMons: targetLevel.waterEncounters,
-        selectedMapFishingMons: targetLevel.fishingEncounters,
+        selectedLevelLandMons: targetLevel.landEncounters,
+        selectedLevelWaterMons: targetLevel.waterEncounters,
+        selectedLevelFishingMons: targetLevel.fishingEncounters,
         selectedMapItems: targetLevel.selectedMapItems,
         selectedCoordinates: storedCoords || [400, 340],
       });
@@ -75,14 +79,17 @@ export const useMapStore = create<MapStore>((set, get) => {
         return;
       }
       const targetMap = getSelectedLevel(currMap, level);
-
+      if (targetMap === undefined) {
+        console.error("Error selecting map level %s, %s", level, currMap);
+        return;
+      }
       set({
         selectedMapLevel: level,
         selectedMapsLevels: targetMap.selectedMapsLevels,
         selectedLevelLabel: targetMap.mapLabel,
-        selectedMapLandMons: targetMap.landEncounters,
-        selectedMapWaterMons: targetMap.waterEncounters,
-        selectedMapFishingMons: targetMap.fishingEncounters,
+        selectedLevelLandMons: targetMap.landEncounters,
+        selectedLevelWaterMons: targetMap.waterEncounters,
+        selectedLevelFishingMons: targetMap.fishingEncounters,
         selectedMapItems: targetMap.selectedMapItems,
       });
     },

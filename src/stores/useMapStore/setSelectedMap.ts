@@ -1,5 +1,5 @@
 import ItemSearch from "@/utils/itemsData";
-import encounters from "@/data/map/cleanEncounters.json";
+import { Encounters } from "@/data/map";
 import pokemon from "@/data/speciesData.json";
 import mapLevels from "@/data/map/groupedData.json";
 
@@ -26,7 +26,6 @@ const getMap = (map: string) => {
   //   (m: { id: string; mapBaseName: string }) => m.mapBaseName === map,
   // );
 };
-const Encounters = new Map(encounters.map((obj) => [obj.map, obj]));
 
 const putIdOnEncounter: (
   enc: EncounterMonsFromJSON[],
@@ -84,8 +83,14 @@ const putEncounterRate = (mons: EncounterMons[]) => {
 };
 
 const getSelectedMapInfo = (id: string) => {
-  const targetMapEncounters = Encounters.get(id);
-
+  const targetMapEncounterGroup = Encounters[id];
+  if (targetMapEncounterGroup === undefined) {
+    console.error("Error selecting map encounters %s", id);
+    return;
+  }
+  const targetMapEncounters = targetMapEncounterGroup.filter(
+    (level) => level.map === id,
+  )[0];
   let landEncounters, waterEncounters, fishingEncounters;
   if (targetMapEncounters) {
     /** Put ID on each mon so we can get their sprite andn info later
@@ -132,20 +137,19 @@ const getSelectedLevel = (map: string, level: number) => {
     return;
   }
 
-  const { levels } = targetMap;
+  const { levels, mapBaseName } = targetMap;
 
   const targetLevel = levels[level]; // Use ID to get map information from Encounters
   if (!targetLevel) {
     throw new Error(`Error selecting map level ${level}`);
   }
+  debugger
   const thisLevelEncounter = getSelectedMapInfo(targetLevel.id);
   const thisLevelsItems = ItemSearch.byMap(mapBaseName);
   return {
     ...thisLevelEncounter,
     selectedMapsLevels: levels.length,
-    selectedMapScriptedGives: targetLevel.scriptedGives,
-    selectedMapShopItems: targetLevel.shopItems,
-    selectedMapTrainers: targetLevel.trainers,
+    selectedMapItems: thisLevelsItems,
     mapLabel: targetLevel.levelLabel,
   };
 };

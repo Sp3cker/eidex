@@ -1,4 +1,4 @@
-import { Item } from "@/utils/itemsData";
+import { Item, ItemsByMap } from "@/utils/itemsData";
 import { Pokemon } from "@/types";
 type EncounterMons = {
   min_level: number;
@@ -21,24 +21,21 @@ type Level = {
 };
 type MapStore = {
   selectedMap: string | null;
-  selectedMapLandMons: EncounterMons[] | undefined;
-  selectedMapWaterMons: EncounterMons[] | undefined;
-  selectedMapFishingMons: EncounterMons[] | undefined;
+  selectedLevelLandMons: EncounterMons[] | undefined;
+  selectedLevelWaterMons: EncounterMons[] | undefined;
+  selectedLevelFishingMons: EncounterMons[] | undefined;
   selectedPokemon: Pokemon | null;
   selectedCoordinates: number[];
   storedCoordinates: Map<string, number[]>;
   selectedMapLevel: number;
   selectedMapsLevels: number;
   selectedLevelLabel: string;
-  selectedMapScriptedGives: {scriptName: string, items: string[], pokemon: string}[];
-  selectedMapShopItems: {label: string, items: string[], levelLabel: string}[];
-  selectedMapTrainers: {coords: number[], type: string, script: string}[];
+  selectedMapItems: ItemsByMap | undefined;
   mapScale: number;
   mapOffset: number[];
   hoveredMap: string | null;
   hoveredCoordinates: number[];
   dexNavIsOpen: boolean;
-  selectedMapItems: { [location: string]: Item[] } | undefined;
   selectedImage: string | null;
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
