@@ -1,3 +1,4 @@
-import ItemBox from "./ItemsBox";
+// eidex/src/components/Map/ItemsBox/index.ts
+import ItemsBox from "./ItemsBox";
 
-export default ItemBox;
+export default ItemsBox;

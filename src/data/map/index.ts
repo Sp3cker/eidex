@@ -1,5 +1,23 @@
 import encounters from "./encounterGroup.json";
 import levels from "./groupedData.json";
+import items from "./items.json";
+
+export type EncounterGroup = {
+  map: string;
+  base_label: string;
+  land_mons?: {
+    encounter_rate: number;
+    mons: { min_level: number; max_level: number; species: string }[];
+  };
+  water_mons?: {
+    encounter_rate: number;
+    mons: { min_level: number; max_level: number; species: string }[];
+  };
+  fishing_mons?: {
+    encounter_rate: number;
+    mons: { min_level: number; max_level: number; species: string }[];
+  };
+};
 
 type Level = {
   baseMap: string;
@@ -30,22 +48,15 @@ type Level = {
   image: string;
 };
 
-
-export type EncounterGroup = {
-  map: string;
-  base_label: string;
-  land_mons?: {
-    encounter_rate: number;
-    mons: { min_level: number; max_level: number; species: string }[];
-  };
-  water_mons?: {
-    encounter_rate: number;
-    mons: { min_level: number; max_level: number; species: string }[];
-  };
-  fishing_mons?: {
-    encounter_rate: number;
-    mons: { min_level: number; max_level: number; species: string }[];
-  };
+export type Item = {
+  id: string;
+  name: string;
+  description: string;
+  price: number | null;
+  [key: string]: any;
 };
 export const LevelsInfo = levels as Record<string, Level[]>;
 export const Encounters = encounters as Record<string, EncounterGroup[]>;
+export const Items = new Map<string, Item>(
+  items.map((item) => [item.id, item]),
+);

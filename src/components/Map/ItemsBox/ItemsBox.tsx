@@ -1,12 +1,14 @@
+// eidex/src/components/Map/ItemsBox/ItemsBox.tsx
 import { memo } from "react";
 import { formatMapString, useMapStore } from "@/stores/useMapStore";
 import { useSpring, animated } from "react-spring";
 import ItemsList from "./ItemsList";
 
-const Dexnav = memo(function Dexnav() {
+const ItemsBox = memo(function ItemsBox() {
   const selectedMap = useMapStore((state) => state.selectedMap);
   const selectedMapLabel = useMapStore((state) => state.selectedLevelLabel);
   const setSelectedImage = useMapStore((state) => state.setSelectedImage);
+
   const [springs] = useSpring(
     {
       opacity: selectedMap ? 1 : 0,
@@ -15,9 +17,11 @@ const Dexnav = memo(function Dexnav() {
     },
     [selectedMap],
   );
-  const handleClick = () => {
+
+  const handleImageClick = () => {
     setSelectedImage(selectedMap);
   };
+
   return (
     <animated.nav
       style={springs}
@@ -29,11 +33,12 @@ const Dexnav = memo(function Dexnav() {
           {selectedMapLabel && ` - ${selectedMapLabel}`}
         </h3>
       </div>
-      <button onClick={handleClick}>Image</button>
+      <button onClick={handleImageClick}>Image</button>
       <div className="font-pkmnem flex flex-col rounded-sm">
         <ItemsList />
       </div>
     </animated.nav>
   );
 });
-export default Dexnav;
+
+export default ItemsBox;

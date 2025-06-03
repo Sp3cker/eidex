@@ -1,16 +1,8 @@
-import { LevelsInfo } from "@/data/map";
-import itemsData from "@/data/map/items.json";
+import { LevelsInfo, Item, Items } from "@/data/map";
 
 import { useCallback, useEffect, useState } from "react";
 import TrieSearch from "trie-search";
 
-export type Item = {
-  id: string;
-  name: string;
-  description: string;
-  price?: number;
-  [key: string]: any;
-};
 type ScriptedGive = {
   scriptName: string;
   items: string[];
@@ -18,7 +10,7 @@ type ScriptedGive = {
 };
 
 export type ItemsByMap = {
-  scriptedGives: { items: Item[]; pokemon: string[] };
+  scriptedGives: { scriptName: string; items: Item[]; pokemon: string[] }[];
   shopItems: Item[];
   pickupItems: Item[];
 }; // type SelectedItemSearchResult = {
@@ -41,8 +33,8 @@ class ItemSearch {
 
       idFieldOrFunction: "name",
     });
-    //@ts-ignore
-    this.trie.addAll(itemsData);
+
+    this.trie.addAll(Object.values(Items));
     this.itemsToMap = new Map();
 
     // We gotta get all the items and write down
@@ -115,45 +107,42 @@ class ItemSearch {
    * @param map map Base Name "MAP_SOOTOPOLIS_CITY"
    */
   byMap(mapBaseName: string): ItemsByMap | undefined {
-    const levels = LevelsInfo[mapBaseName];
-    if (levels === undefined || levels.length === 0) {
+    const levelsInThisMap = LevelsInfo[mapBaseName];
+    if (levelsInThisMap === undefined || levelsInThisMap.length === 0) {
       return undefined;
     }
 
     const returnObj: ItemsByMap = {
-      scriptedGives: { items: [], pokemon: [] },
+      scriptedGives: [],
       shopItems: [] as Item[],
       pickupItems: [],
     };
 
-    for (const level of levels) {
+    for (const level of levelsInThisMap) {
       level.scriptedGives.forEach((itm: ScriptedGive) => {
-        returnObj.scriptedGives.pokemon = itm.pokemon as string[];
-        returnObj.scriptedGives.items = itm.items
-          .flatMap((i) => itemsData.filter((item) => item.id === i))
-          .map((i) => (i.price === null ? { ...i, price: undefined } : i));
-      });
 
+        returnObj.scriptedGives.push({
+          scriptName: itm.scriptName,
+          items: itm.items
+            .map((i) => Items.get(i))
+            .filter((i) => i !== undefined) as Item[],
+          pokemon: itm.pokemon,
+        });
+      });
       level.shopItems.forEach((shop: { items: string[] }) => {
         returnObj.shopItems = shop.items
-          .flatMap((i) => itemsData.filter((item) => item.id === i))
-          .map((i) => (i.price === null ? { ...i, price: undefined } : i));
+          .map((i) => Items.get(i))
+          .filter((i) => i !== undefined) as Item[];
       });
       level.pickupItems.forEach((item) => {
-        const itemData = itemsData.find((i) => i.id === item.item);
-        if (itemData) {
-          returnObj.pickupItems.push(
-            itemData.price === null
-              ? { ...itemData, price: undefined }
-              : itemData,
-          );
-        }
+        returnObj.pickupItems.push(Items.get(item.item) as Item);
       });
     }
 
     return returnObj;
   }
 }
+
 const itemSearch = new ItemSearch();
 const useItemSearch = (): [
   string,

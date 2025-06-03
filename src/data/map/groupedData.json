@@ -1962,17 +1962,6 @@
       "ITEM_ALTARIANITE"
      ],
      "pokemon": []
-    },
-    {
-     "scriptName": "Gym",
-     "items": [
-      "ITEM_TM_BRAVE_BIRD",
-      "ITEM_TM_ACROBATICS",
-      "ITEM_TM_HURRICANE",
-      "ITEM_TM_TAILWIND",
-      "ITEM_ALTARIANITE"
-     ],
-     "pokemon": []
     }
    ],
    "shopItems": [],
@@ -2396,15 +2385,6 @@
       "ITEM_SAFETY_GOGGLES"
      ],
      "pokemon": []
-    },
-    {
-     "scriptName": "Event Script",
-     "items": [
-      "ITEM_MEGA_RING",
-      "ITEM_GO_GOGGLES",
-      "ITEM_SAFETY_GOGGLES"
-     ],
-     "pokemon": []
     }
    ],
    "shopItems": [
@@ -2442,18 +2422,6 @@
    "levelLabel": "Gym1 F",
    "thisLevelsId": "MAP_LAVARIDGE_TOWN_GYM_1F",
    "scriptedGives": [
-    {
-     "scriptName": "Gym",
-     "items": [
-      "ITEM_TM_OVERHEAT",
-      "ITEM_TM_WILL_O_WISP",
-      "ITEM_TM_HEAT_CRASH",
-      "ITEM_TM_HEAT_WAVE",
-      "ITEM_TM_FLARE_BLITZ",
-      "ITEM_INFERNAPITE"
-     ],
-     "pokemon": []
-    },
     {
      "scriptName": "Gym",
      "items": [
@@ -3120,84 +3088,7 @@
    "baseMap": "MAP_LITTLEROOT_TOWN",
    "levelLabel": "Brendans House2 F",
    "thisLevelsId": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
-   "scriptedGives": [
-    {
-     "scriptName": "CheatCodeMegaStone's::",
-     "items": [
-      "ITEM_VENUSAURITE",
-      "ITEM_CHARIZARDITE_X",
-      "ITEM_CHARIZARDITE_Y",
-      "ITEM_BLASTOISINITE",
-      "ITEM_BEEDRILLITE",
-      "ITEM_PIDGEOTITE",
-      "ITEM_ALAKAZITE",
-      "ITEM_SLOWBRONITE",
-      "ITEM_GENGARITE",
-      "ITEM_KANGASKHANITE",
-      "ITEM_PINSIRITE",
-      "ITEM_GYARADOSITE",
-      "ITEM_AERODACTYLITE",
-      "ITEM_MEWTWONITE_X",
-      "ITEM_MEWTWONITE_Y",
-      "ITEM_AMPHAROSITE",
-      "ITEM_STEELIXITE",
-      "ITEM_SCIZORITE",
-      "ITEM_HERACRONITE",
-      "ITEM_HOUNDOOMINITE",
-      "ITEM_TYRANITARITE",
-      "ITEM_SCEPTILITE",
-      "ITEM_BLAZIKENITE",
-      "ITEM_SWAMPERTITE",
-      "ITEM_GARDEVOIRITE",
-      "ITEM_SABLENITE",
-      "ITEM_MAWILITE",
-      "ITEM_AGGRONITE",
-      "ITEM_MEDICHAMITE",
-      "ITEM_MANECTITE",
-      "ITEM_SHARPEDONITE",
-      "ITEM_CAMERUPTITE",
-      "ITEM_ALTARIANITE",
-      "ITEM_BANETTITE",
-      "ITEM_ABSOLITE",
-      "ITEM_GLALITITE",
-      "ITEM_SALAMENCITE",
-      "ITEM_METAGROSSITE",
-      "ITEM_LATIASITE",
-      "ITEM_LATIOSITE",
-      "ITEM_LOPUNNITE",
-      "ITEM_GARCHOMPITE",
-      "ITEM_LUCARIONITE",
-      "ITEM_ABOMASITE",
-      "ITEM_GALLADITE",
-      "ITEM_AUDINITE",
-      "ITEM_DIANCITE",
-      "ITEM_LUXRITE",
-      "ITEM_TORTERRITE",
-      "ITEM_EMPOLEONITE_O",
-      "ITEM_EMPOLEONITE_D",
-      "ITEM_INFERNAPITE",
-      "ITEM_KINGLERITE",
-      "ITEM_BUTTERFRITE",
-      "ITEM_MACHAMPITE",
-      "ITEM_LAPRASITE",
-      "ITEM_SNORLAXITE",
-      "ITEM_GARBODORITE",
-      "ITEM_ORBEETLITE",
-      "ITEM_DREDNAWITE",
-      "ITEM_COALOSSITE",
-      "ITEM_APPLITE",
-      "ITEM_SANDACONDITE",
-      "ITEM_TOXTRICITITE",
-      "ITEM_CENTISKITE",
-      "ITEM_GRIMMITE",
-      "ITEM_COPPERAJITE",
-      "ITEM_SLAKITE",
-      "ITEM_ROSERADITE",
-      "ITEM_DUSKNOIRITE"
-     ],
-     "pokemon": []
-    }
-   ],
+   "scriptedGives": [],
    "shopItems": [],
    "trainers": [],
    "pickupItems": [],
@@ -3289,13 +3180,6 @@
       "ITEM_MENTAL_HERB",
       "ITEM_LIGHT_BALL",
       "ITEM_SHINY_CHARM"
-     ],
-     "pokemon": []
-    },
-    {
-     "scriptName": "Professor Birchs Lab",
-     "items": [
-      "ITEM_POKE_BALL"
      ],
      "pokemon": []
     }
@@ -3628,34 +3512,6 @@
       "ITEM_ACRO_BIKE"
      ],
      "pokemon": []
-    },
-    {
-     "scriptName": "Bike Shop",
-     "items": [
-      "ITEM_MACH_BIKE"
-     ],
-     "pokemon": []
-    },
-    {
-     "scriptName": "Bike Shop",
-     "items": [
-      "ITEM_ACRO_BIKE"
-     ],
-     "pokemon": []
-    },
-    {
-     "scriptName": "Bike Shop",
-     "items": [
-      "ITEM_MACH_BIKE"
-     ],
-     "pokemon": []
-    },
-    {
-     "scriptName": "Bike Shop",
-     "items": [
-      "ITEM_ACRO_BIKE"
-     ],
-     "pokemon": []
     }
    ],
    "shopItems": [],
@@ -3708,16 +3564,6 @@
    "levelLabel": "Gym",
    "thisLevelsId": "MAP_MAUVILLE_CITY_GYM",
    "scriptedGives": [
-    {
-     "scriptName": "Gym",
-     "items": [
-      "ITEM_TM_VOLT_SWITCH",
-      "ITEM_LUXRITE",
-      "ITEM_MANECTITE",
-      "ITEM_AMPHAROSITE"
-     ],
-     "pokemon": []
-    },
     {
      "scriptName": "Gym",
      "items": [
@@ -3852,7 +3698,14 @@
      "scriptName": "Pokemon Center",
      "items": [],
      "pokemon": [
-      "VAR_0x8005"
+      "SPECIES_PIKACHU_COSPLAY",
+      "SPECIES_PIKACHU_ROCK_STAR",
+      "SPECIES_PIKACHU_BELLE",
+      "SPECIES_PIKACHU_POP_STAR",
+      "SPECIES_PIKACHU_PHD",
+      "SPECIES_PIKACHU_LIBRE",
+      "SPECIES_PIKACHU_SURFING",
+      "SPECIES_PIKACHU_FLYING"
      ]
     }
    ],
@@ -4140,14 +3993,6 @@
       "ITEM_TM_TRICK_ROOM"
      ],
      "pokemon": []
-    },
-    {
-     "scriptName": "Gym",
-     "items": [
-      "ITEM_TM_EXPANDING_FORCE",
-      "ITEM_TM_TRICK_ROOM"
-     ],
-     "pokemon": []
     }
    ],
    "shopItems": [],
@@ -4353,13 +4198,6 @@
    "levelLabel": "Space Center1 F",
    "thisLevelsId": "MAP_MOSSDEEP_CITY_SPACE_CENTER_1F",
    "scriptedGives": [
-    {
-     "scriptName": "Space Center",
-     "items": [
-      "ITEM_SUN_STONE"
-     ],
-     "pokemon": []
-    },
     {
      "scriptName": "Space Center",
      "items": [
@@ -7103,56 +6941,7 @@
     {
      "scriptName": "Trick House End",
      "items": [
-      "ITEM_TM_GUNK_SHOT",
-      "ITEM_GARBODORITE",
-      "ITEM_TOXTRICITITE"
-     ],
-     "pokemon": []
-    },
-    {
-     "scriptName": "Trick House End",
-     "items": [
-      "ITEM_TM_SOLAR_BEAM",
-      "ITEM_TM_SOLAR_BLADE",
-      "ITEM_TM_GRASSY_GLIDE",
-      "ITEM_TM_GRASS_KNOT",
-      "ITEM_TM_POWER_WHIP",
-      "ITEM_TM_BUG_BUZZ",
-      "ITEM_TM_MEGAHORN",
-      "ITEM_BUTTERFRITE",
-      "ITEM_SNORLAXITE",
-      "ITEM_ROSERADITE"
-     ],
-     "pokemon": []
-    },
-    {
-     "scriptName": "Trick House End",
-     "items": [
-      "ITEM_TM_STONE_EDGE",
-      "ITEM_STEELIXITE",
-      "ITEM_KINGLERITE",
-      "ITEM_BOOSTER_ENERGY"
-     ],
-     "pokemon": []
-    },
-    {
-     "scriptName": "Trick House End",
-     "items": [
-      "ITEM_SMOKE_BALL"
-     ],
-     "pokemon": []
-    },
-    {
-     "scriptName": "Trick House End",
-     "items": [
       "ITEM_TM_TAUNT"
-     ],
-     "pokemon": []
-    },
-    {
-     "scriptName": "Trick House End",
-     "items": [
-      "ITEM_MAGNET"
      ],
      "pokemon": []
     },
@@ -12362,14 +12151,6 @@
    "levelLabel": "Gym1 F",
    "thisLevelsId": "MAP_SOOTOPOLIS_CITY_GYM_1F",
    "scriptedGives": [
-    {
-     "scriptName": "Gym",
-     "items": [
-      "ITEM_GRIMMITE",
-      "ITEM_TM_MOONBLAST"
-     ],
-     "pokemon": []
-    },
     {
      "scriptName": "Gym",
      "items": [

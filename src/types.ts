@@ -6,7 +6,7 @@ export interface PokemonChanges {
 
 export type SortBy = "dexId" | "name" | "stat" | "index";
 
-export type StatArray = [number, number, number, number, number, number]
+export type StatArray = [number, number, number, number, number, number];
 
 export type Ability = number;
 export type Abilities = Ability[];
@@ -83,12 +83,3 @@ export interface TypeData {
   colorEnd: string;
   matchup: number[];
 }
-
-export interface Item {
-  ID: number;
-  name: string;
-  description?: string;
-}
-
-export type ItemData = Record<string, Item>;
-export type ItemMap = Record<string, number>;
