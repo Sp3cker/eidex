@@ -31,9 +31,7 @@ export const useMapStore = create<MapStore>((set, get) => {
     selectedMapLandMons: undefined,
     selectedMapWaterMons: undefined,
     selectedMapFishingMons: undefined,
-    selectedMapScriptedGives: [],
-    selectedMapShopItems: [],
-    selectedMapTrainers: [],
+    selectedMapItems: null,
     selectedImage: null,
   };
   return {

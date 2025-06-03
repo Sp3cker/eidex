@@ -30,7 +30,7 @@ type MapStore = {
   selectedMapLevel: number;
   selectedMapsLevels: number;
   selectedLevelLabel: string;
-  selectedMapItems: ItemsByMap | undefined;
+  selectedMapItems: ItemsByMap | null;
   mapScale: number;
   mapOffset: number[];
   hoveredMap: string | null;

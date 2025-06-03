@@ -1,7 +1,6 @@
 import ItemSearch from "@/utils/itemsData";
-import { Encounters } from "@/data/map";
+import { Encounters, LevelsInfo } from "@/data/map";
 import pokemon from "@/data/speciesData.json";
-import mapLevels from "@/data/map/groupedData.json";
 
 import {
   EncounterMons,
@@ -12,7 +11,7 @@ import {
  */
 const getMap = (map: string) => {
   //@ts-ignore
-  const targetMap = mapLevels[map];
+  const targetMap = LevelsInfo[map];
   if (targetMap === undefined) {
     console.error("Error selecting map %s", map);
     return undefined;
@@ -143,7 +142,7 @@ const getSelectedLevel = (map: string, level: number) => {
   if (!targetLevel) {
     throw new Error(`Error selecting map level ${level}`);
   }
-  debugger
+
   const thisLevelEncounter = getSelectedMapInfo(targetLevel.id);
   const thisLevelsItems = ItemSearch.byMap(mapBaseName);
   return {

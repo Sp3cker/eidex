@@ -52,7 +52,7 @@ class ItemSearch {
       // const itemsInThisMap = Object.values(itemsByMap[map]).flat() as string[];
       mapLevels.forEach((map: any) => {
         /** Go through each level, putting all the items available
-         * there into the itemsToMap map, with the levelID added to that
+         * there into the itemsToMap map, with the mapBaseName added to that
          * item's array of places to get it.
          */
         map.items.forEach((item: { coords: string[]; item: string }) => {
@@ -152,7 +152,7 @@ class ItemSearch {
         }
       });
     }
-    debugger;
+
     return returnObj;
   }
 }

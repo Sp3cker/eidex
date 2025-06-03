@@ -31,41 +31,30 @@ const placeLabeltoHuman = (place: string) => {
 const ItemsList = memo(function ItemsList() {
   const [selectedTab, setSelectedTab] = useState("EventScript");
   const items = useMapStore((state) => state.selectedMapItems);
-  const [places, martItems] = useMemo(() => {
-    if (items === undefined) {
-      return [null, null];
-    }
-    const places: { place: string; items: Item[] }[] = [];
-    const martItems: Item[] = items["marts"] || [];
-    const keys = Object.keys(items); //.filter((p) => p !== "marts");
-
-    keys.forEach((k) => {
-      const obj = {
-        place: k,
-        items: items[k],
-      };
-
-      places.push(obj);
-    });
-    return [places, martItems];
-  }, [items, selectedTab]);
-
+  const isAnyItems =
+    items !== null &&
+    (items.pickupItems.length > 0 ||
+      items.scriptedGives.items.length > 0 ||
+      items.scriptedGives.pokemon.length > 0);
   // const itemsToShow = martItems && martItems.length > 0 && selectedTab === "marts" ? martItems : places;
+  if (!isAnyItems) {
+    return (
+      <p className="cool-font py-2 text-center text-sm text-gray-500">
+        No items in this area
+      </p>
+    );
+  }
   return (
     <>
       <Tabs
         setSelectedTab={setSelectedTab}
         selectedTab={selectedTab}
-        isMarts={martItems !== null && martItems.length > 0}
+        isMarts={items.shopItems !== undefined}
       />
-      {places === null ? (
-        <p className="cool-font py-2 text-center text-sm text-gray-500">
-          No items in this area
-        </p>
-      ) : selectedTab !== "marts" ? (
-        places.map((place) => <PlacesList key={place.place} place={place} />)
+      {selectedTab !== "marts" ? (
+        <PlaceItems items={items.shopItems} />
       ) : (
-        <PlaceItems items={martItems} />
+        <p>IDK</p>
       )}
     </>
   );
@@ -86,7 +75,7 @@ const PlaceItems = ({ items }: { items: Item[] }) => (
     {items.map((i) => (
       <div
         key={i.name}
-        className="cool-font items-list-item p-2 mb-1 flex cursor-pointer flex-col rounded border border-slate-200 text-slate-700 shadow-sm transition-colors hover:bg-slate-100 md:py-2"
+        className="cool-font items-list-item mb-1 flex cursor-pointer flex-col rounded border border-slate-200 p-2 text-slate-700 shadow-sm transition-colors hover:bg-slate-100 md:py-2"
       >
         <p className="text-xs/4 font-bold md:text-sm">{i.name}</p>
         <p className="font-pkmnem text-shadow-2xs leading-4">{i.description}</p>
