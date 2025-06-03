@@ -1,7 +1,9 @@
 import useMapStore from "@/stores/useMapStore";
 import { useState, useMemo, memo } from "react";
+import { useShallow } from "zustand/shallow";
 import Tabs from "./Tabs";
 import { Item } from "@/utils/itemsData";
+import SelectedItems from "./SelectedItems";
 
 const placeLabeltoHuman = (place: string) => {
   const key: Record<string, string> = {
@@ -29,7 +31,9 @@ const placeLabeltoHuman = (place: string) => {
   return key[place] || place;
 };
 const ItemsList = memo(function ItemsList() {
-  const [selectedTab, setSelectedTab] = useState("EventScript");
+  const [selectedTab, setSelectedTab] = useState<"story" | "marts" | "pickup">(
+    "story",
+  );
   const items = useMapStore((state) => state.selectedMapItems);
   const isAnyItems =
     items !== null &&
@@ -51,42 +55,8 @@ const ItemsList = memo(function ItemsList() {
         selectedTab={selectedTab}
         isMarts={items.shopItems !== undefined}
       />
-      {selectedTab !== "marts" ? (
-        <PlaceItems items={items.shopItems} />
-      ) : (
-        <p>IDK</p>
-      )}
+      <SelectedItems items={items} selectedTab={selectedTab} />
     </>
   );
 });
-const PlacesList = ({ place }: { place: { place: string; items: Item[] } }) => (
-  <>
-    <p
-      key={place.place}
-      className="cool-font md:text-md mb-2 mt-2 border-b-2 border-stone-400 pb-1 text-xs font-bold"
-    >
-      {placeLabeltoHuman(place.place)}
-    </p>
-    <PlaceItems items={place.items} />
-  </>
-);
-const PlaceItems = ({ items }: { items: Item[] }) => (
-  <div>
-    {items.map((i) => (
-      <div
-        key={i.name}
-        className="cool-font items-list-item mb-1 flex cursor-pointer flex-col rounded border border-slate-200 p-2 text-slate-700 shadow-sm transition-colors hover:bg-slate-100 md:py-2"
-      >
-        <p className="text-xs/4 font-bold md:text-sm">{i.name}</p>
-        <p className="font-pkmnem text-shadow-2xs leading-4">{i.description}</p>
-      </div>
-    ))}
-  </div>
-);
 export default ItemsList;
-// <div key={theirData} className="h-10">
-//           <p className="cool-font text-xs font-bold">{item.name}</p>
-//           <p className="leading-4">
-//             {item.qualifier ? item.qualifier : "Received from quest"}
-//           </p>
-//         </div>

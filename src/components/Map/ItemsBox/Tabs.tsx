@@ -1,12 +1,13 @@
 import React, { useCallback } from "react";
-
+type TabType = "story" | "marts" | "pickup";
+const [STORY, MARTS, PICKUP] = ["story", "marts", "pickup"];
 const Tabs = React.memo(function Tabs({
   selectedTab,
   setSelectedTab,
   isMarts,
 }: {
-  selectedTab: string;
-  setSelectedTab: (str: string) => void;
+  selectedTab: TabType;
+  setSelectedTab: (str: TabType) => void;
   isMarts: boolean;
 }) {
   //   const [selectedTab, setSelectedTab] = useState("story");
@@ -14,22 +15,29 @@ const Tabs = React.memo(function Tabs({
     const target = e.currentTarget;
     const title = target.getAttribute("title");
     if (title) {
-      setSelectedTab(title);
+      setSelectedTab(title as TabType);
     }
   }, []);
   return (
     <div className="font-pkmnem tab-list block text-nowrap">
       <button
-        title="EventScript"
-        className={`tab-label px-2 text-lg font-bold ${selectedTab === "EventScript" && "story-tab"}`}
+        title={STORY}
+        className={`tab-label px-2 text-lg font-bold ${selectedTab === STORY && "story-tab"}`}
+        onClick={handleClick}
+      >
+        Story Items
+      </button>
+      <button
+        title={PICKUP}
+        className={`tab-label px-2 text-lg font-bold ${selectedTab === PICKUP && "story-tab"}`}
         onClick={handleClick}
       >
         Story Items
       </button>
       {isMarts && (
         <button
-          title="marts"
-          className={`tab-label px-2 text-lg font-bold ${selectedTab === "marts" && "pokemart-tab"}`}
+          title={MARTS}
+          className={`tab-label px-2 text-lg font-bold ${selectedTab === MARTS && "pokemart-tab"}`}
           onClick={handleClick}
         >
           PokéMart
