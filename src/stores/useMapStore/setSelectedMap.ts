@@ -91,6 +91,7 @@ const getSelectedMapInfo = (id: string) => {
   const targetMapEncounters = targetMapEncounterGroup.filter(
     (level) => level.map === id,
   )[0];
+  
   let landEncounters, waterEncounters, fishingEncounters;
   if (targetMapEncounters) {
     /** Put ID on each mon so we can get their sprite andn info later
@@ -117,7 +118,7 @@ const getSelectedMapInfo = (id: string) => {
     }
   }
   // console.error("Encounters not found for map %s", map);
-  debugger;
+
   return {
     landEncounters,
     waterEncounters,
@@ -146,7 +147,7 @@ const getSelectedLevel = (map: string, level: number) => {
   }
   const numOfLevels = Encounters[mapBaseName]?.length || 0;
   const thisLevelEncounter = getSelectedMapInfo(targetLevel.baseMap);
-  debugger
+
   const thisLevelsItems = ItemSearch.byMap(mapBaseName);
 
   return {

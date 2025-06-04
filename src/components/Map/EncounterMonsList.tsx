@@ -27,15 +27,15 @@ const EncounterMonsList = React.memo(function EncounterList({
     (state) => state.setSelectedPokemonByIndex,
   );
   const encounter = useMapStore((state) => {
-    if (zone === "water") return state.selectedMapWaterMons;
-    if (zone === "land") return state.selectedMapLandMons;
-    if (zone === "fishing") return state.selectedMapFishingMons;
+    if (zone === "water") return state.selectedLevelWaterMons;
+    if (zone === "land") return state.selectedLevelLandMons;
+    if (zone === "fishing") return state.selectedLevelFishingMons;
     return [];
   });
 
   if (!encounter || encounter.length === 0) {
     return (
-      <div className="py-2 font-pkmnem text-center font-bold text-sm text-gray-500">
+      <div className="font-pkmnem py-2 text-center text-sm font-bold text-gray-500">
         No Pokémon found in this area.
       </div>
     );
@@ -46,7 +46,7 @@ const EncounterMonsList = React.memo(function EncounterList({
       {encounter.map((mon, index) => (
         <div
           key={`${mon.index}${index}`}
-          className={`flex cursor-pointer items-center align-center gap-2 rounded p-0 md:p-1 pl-2 transition-colors ${zoneToBgColor(zone)}`}
+          className={`align-center flex cursor-pointer items-center gap-2 rounded p-0 pl-2 transition-colors md:p-1 ${zoneToBgColor(zone)}`}
           onMouseDown={() => setSelectedPokemon(mon.index)}
         >
           <div className="icon-sprite-box">
@@ -63,7 +63,9 @@ const EncounterMonsList = React.memo(function EncounterList({
             >
               {formatMapString(mon.species)}
             </p>
-            <p className={`font-pkmnem ${zoneToTextColor(zone)} font-bold leading-tight`}>
+            <p
+              className={`font-pkmnem ${zoneToTextColor(zone)} font-bold leading-tight`}
+            >
               {mon.rate}%
             </p>
           </div>
