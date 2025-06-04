@@ -81,17 +81,16 @@ const putEncounterRate = (mons: EncounterMons[]) => {
   return Array.from(monsterProps.values()) as EncounterMons[];
 };
 
-const getSelectedMapInfo = (id: string) => {
+const getSelectedMapInfo = (id: string, index: number) => {
   const targetMapEncounterGroup = Encounters[id];
 
   if (targetMapEncounterGroup === undefined) {
     console.error("Error selecting map encounters %s", id);
     return;
   }
-  const targetMapEncounters = targetMapEncounterGroup.filter(
-    (level) => level.map === id,
-  )[0];
+  const targetMapEncounters = targetMapEncounterGroup[index];
   
+
   let landEncounters, waterEncounters, fishingEncounters;
   if (targetMapEncounters) {
     /** Put ID on each mon so we can get their sprite andn info later
@@ -146,7 +145,7 @@ const getSelectedLevel = (map: string, level: number) => {
     throw new Error(`Error selecting map level ${level}`);
   }
   const numOfLevels = Encounters[mapBaseName]?.length || 0;
-  const thisLevelEncounter = getSelectedMapInfo(targetLevel.baseMap);
+  const thisLevelEncounter = getSelectedMapInfo(targetLevel.baseMap, level);
 
   const thisLevelsItems = ItemSearch.byMap(mapBaseName);
 
