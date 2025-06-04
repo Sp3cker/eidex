@@ -3,6 +3,9 @@ import { memo } from "react";
 import { formatMapString, useMapStore } from "@/stores/useMapStore";
 import { useSpring, animated } from "react-spring";
 import ItemsList from "./ItemsList";
+import ItemsListContent from "./ItemListContent";
+import { groupByScriptName } from "./utils";
+import { ScriptedGive } from "@/stores/useMapStore/types";
 
 const ItemsBox = memo(function ItemsBox() {
   const selectedMap = useMapStore((state) => state.selectedMap);
@@ -19,8 +22,13 @@ const ItemsBox = memo(function ItemsBox() {
   );
 
   const handleImageClick = () => {
-    setSelectedImage(selectedMap);
+    if (typeof selectedMap === "string" || selectedMap === null) {
+      setSelectedImage(selectedMap);
+    }
   };
+
+  const mapLabel =
+    typeof selectedMap === "string" ? formatMapString(selectedMap) : "";
 
   return (
     <animated.nav
@@ -29,7 +37,7 @@ const ItemsBox = memo(function ItemsBox() {
     >
       <div className="sticky top-0 z-10 flex justify-between">
         <h3 className="cool-font md:text-md pb-2 text-sm font-bold text-neutral-700">
-          {formatMapString(selectedMap || "")}
+          {mapLabel}
           {selectedMapLabel && ` - ${selectedMapLabel}`}
         </h3>
       </div>

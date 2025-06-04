@@ -3,7 +3,7 @@ import { LevelsInfo, Item, Items } from "@/data/map";
 import { useCallback, useEffect, useState } from "react";
 import TrieSearch from "trie-search";
 
-type ScriptedGive = {
+export type ScriptedGive = {
   scriptName: string;
   items: string[];
   pokemon: string[];

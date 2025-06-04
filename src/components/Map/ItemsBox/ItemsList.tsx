@@ -1,8 +1,9 @@
 // eidex/src/components/Map/ItemsBox/ItemsList.tsx
 import { useState, memo } from "react";
 import TabNavigation from "./Tabs";
-import SelectedItems, { EmptyState } from "./SelectedItems";
-import { TabType, useItemsData } from "./useItemsData";
+import ItemListContent from "./ItemListContent";
+import { isStoryItems, TabType, useItemsData } from "./useItemsData";
+import StoryItems from "./StoryItems";
 
 const getEmptyMessage = (tab: TabType): string => {
   switch (tab) {
@@ -19,10 +20,10 @@ const getEmptyMessage = (tab: TabType): string => {
 const ItemsList = memo(function ItemsList() {
   const [selectedTab, setSelectedTab] = useState<TabType>("story");
 
-  const filteredItems = useItemsData(selectedTab);
+  const items = useItemsData(selectedTab);
 
-  if (!filteredItems?.hasItems) {
-    return <EmptyState message="No items in this area" />;
+  if (!items) {
+    return <p>{getEmptyMessage(selectedTab)}</p>;
   }
 
   return (
@@ -30,13 +31,13 @@ const ItemsList = memo(function ItemsList() {
       <TabNavigation
         setSelectedTab={setSelectedTab}
         selectedTab={selectedTab}
-        isMarts={filteredItems.hasMarts}
+        isMarts={selectedTab === "marts" && items.items.length > 0}
       />
-      <ItemsListContent
-        selectedTab={selectedTab}
-        items={filteredItems.items}
-        emptyMessage={getEmptyMessage(selectedTab)}
-      />
+      {isStoryItems(items) ? (
+        <StoryItems scriptedGives={items.items} />
+      ) : (
+        <ItemListContent items={items.items} />
+      )}
     </>
   );
 });

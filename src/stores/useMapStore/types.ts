@@ -1,5 +1,6 @@
-import { Item, ItemsByMap } from "@/utils/itemsData";
+import { ItemsByMap } from "@/utils/itemsData";
 import { Pokemon } from "@/types";
+import { Item } from "@/data/map";
 type EncounterMons = {
   min_level: number;
   max_level: number;
@@ -47,7 +48,7 @@ type MapStore = {
   setHoveredMap: (map: string) => void;
   setDexnavIsOpen: (isOpen: boolean) => void;
   setHoveredCoordinates: (coords: number[]) => void;
-  searchItemByName: (name: string) => Item[];
+  searchItemByName: (name: string) => Item];
   setSelectedMapLevel: (level: number) => void;
   setStoredCoordinates: (mapCoords: Map<string, number[]>) => void;
   setSelectedImage: (image: string | null) => void;

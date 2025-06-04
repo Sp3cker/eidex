@@ -7,7 +7,13 @@ export interface ItemWithAmount extends Item {
   amount: number;
 }
 export type TabType = "story" | "marts" | "pickup";
-
+export type ItemsToReturn =
+  | {
+      type: "story";
+      items: { scriptName: string; items: Item[]; pokemon: string[] }[];
+    }
+  | { type: "marts"; items: Item[] }
+  | { type: "pickup"; items: Item[] };
 
 export const hasAnyItems = (items: ItemsByMap | null): boolean => {
   return (
@@ -16,29 +22,47 @@ export const hasAnyItems = (items: ItemsByMap | null): boolean => {
   );
 };
 
-export const useItemsData = (selectedTab: TabType) => {
+export const useItemsData = (selectedTab: TabType): ItemsToReturn => {
   const items = useMapStore((state) => state.selectedMapItems);
 
   const processedData = useMemo(() => {
     if (!items) {
-      return {
-        items: null,
-        hasItems: false,
-        hasMarts: false,
-        filteredItems: [],
-      };
+      if (selectedTab === "story") {
+        return { type: "story" as const, items: [] };
+      } else if (selectedTab === "marts") {
+        return { type: "marts" as const, items: [] };
+      } else {
+        return { type: "pickup" as const, items: [] };
+      }
     }
-
-    const hasItems = hasAnyItems(items);
-    const hasMarts =
-      items.shopItems !== undefined && items.shopItems.length > 0;
-
-    return {
-      items,
-      hasItems,
-      hasMarts,
-    };
+    if (selectedTab === "story") {
+      return { type: "story" as const, items: items.scriptedGives };
+    } else if (selectedTab === "marts") {
+      return { type: "marts" as const, items: items.shopItems };
+    } else {
+      return { type: "pickup" as const, items: items.pickupItems };
+    }
   }, [items, selectedTab]);
 
   return processedData;
 };
+
+function isStoryItems(
+  data: ItemsToReturn
+): data is Extract<ItemsToReturn, { type: "story" }> {
+  return data.type === "story";
+}
+
+function isMartsItems(
+  data: ItemsToReturn
+): data is Extract<ItemsToReturn, { type: "marts" }> {
+  return data.type === "marts";
+}
+
+function isPickupItems(
+  data: ItemsToReturn
+): data is Extract<ItemsToReturn, { type: "pickup" }> {
+  return data.type === "pickup";
+}
+
+export { isStoryItems, isMartsItems, isPickupItems };

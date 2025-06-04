@@ -82,8 +82,8 @@ const putEncounterRate = (mons: EncounterMons[]) => {
 };
 
 const getSelectedMapInfo = (id: string) => {
-
   const targetMapEncounterGroup = Encounters[id];
+
   if (targetMapEncounterGroup === undefined) {
     console.error("Error selecting map encounters %s", id);
     return;
@@ -117,6 +117,7 @@ const getSelectedMapInfo = (id: string) => {
     }
   }
   // console.error("Encounters not found for map %s", map);
+  debugger;
   return {
     landEncounters,
     waterEncounters,
@@ -143,13 +144,14 @@ const getSelectedLevel = (map: string, level: number) => {
   if (!targetLevel) {
     throw new Error(`Error selecting map level ${level}`);
   }
-
+  const numOfLevels = Encounters[mapBaseName]?.length || 0;
   const thisLevelEncounter = getSelectedMapInfo(targetLevel.baseMap);
+  debugger
   const thisLevelsItems = ItemSearch.byMap(mapBaseName);
-  
+
   return {
     ...thisLevelEncounter,
-    selectedMapsLevels: levels.length,
+    selectedMapsLevels: numOfLevels,
     selectedMapItems: thisLevelsItems,
     mapLabel: targetLevel.levelLabel,
   };
