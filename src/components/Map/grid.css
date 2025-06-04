@@ -18,7 +18,7 @@
   grid-area: 1 / 9 / 6 / 13;
 }
 .selecta-grid {
- grid-area: 8 / 6 / 10 / 8; 
+ grid-area: 5 / 9 / 6 / 12; 
 }
 .dexnav-grid {
   grid-area: 6 / 2 / 13 / 8;
@@ -39,7 +39,7 @@
     grid-area: 1 / 8 / 6 / 13;
   }
   .selecta-grid {
-   grid-area: 8 / 6 / 10 / 8; 
+   grid-area: 5 / 8 / 6 / 13 
   }
   .dexnav-grid {
     grid-area: 7 / 1 / 13 / 7;

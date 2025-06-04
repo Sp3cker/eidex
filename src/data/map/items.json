@@ -7763,5 +7763,445 @@
         "price": 0,
         "description": "A purple orb said to contain a cursed power.",
         "effect": "gItemEffect_Hexorb"
+    },
+    {
+        "id": "ITEM_ENERGYPOWDER",
+        "name": "Energy Powder",
+        "pluralName": "Energy Powder",
+        "price": 500,
+        "description": "A bitter powder that restores HP by 60 points.",
+        "effect": "gItemEffect_EnergyPowder",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_PARLYZ_HEAL",
+        "name": "Paralyze Heal",
+        "price": 200,
+        "description": "Heals a paralyzed Pokémon.",
+        "effect": "gItemEffect_ParalyzeHeal",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_ELIXER",
+        "name": "Elixir",
+        "price": 1,
+        "holdEffectParam": 10,
+        "description": "Restores the PP of all moves by 10.",
+        "effect": "gItemEffect_Elixir",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_MAX_ELIXER",
+        "name": "Max Elixir",
+        "price": 1,
+        "holdEffectParam": 255,
+        "description": "Fully restores the PP of a Pokémon's moves.",
+        "effect": "gItemEffect_MaxElixir",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_RAGECANDYBAR",
+        "name": "RageCandyBar",
+        "price": 300,
+        "description": "Heals all the status problems of one Pokémon.",
+        "effect": "gItemEffect_FullHeal",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_HEALTH_WING",
+        "name": "HealthFeather",
+        "price": 3000,
+        "description": "An item that raises the base HP of a Pokémon.",
+        "effect": "gItemEffect_HpFeather",
+        "flingPower": 20
+    },
+    {
+        "id": "ITEM_MUSCLE_WING",
+        "name": "MuscleFeather",
+        "price": 3000,
+        "description": "An item that raises the base Attack of a Pokémon.",
+        "effect": "gItemEffect_AtkFeather",
+        "flingPower": 20
+    },
+    {
+        "id": "ITEM_RESIST_WING",
+        "name": "ResistFeather",
+        "price": 3000,
+        "description": "An item that raises the base Defense of a Pokémon.",
+        "effect": "gItemEffect_DefFeather",
+        "flingPower": 20
+    },
+    {
+        "id": "ITEM_GENIUS_WING",
+        "name": "GeniusFeather",
+        "price": 3000,
+        "description": "An item that raises the base Sp. Atk. of a Pokémon.",
+        "effect": "gItemEffect_SpatkFeather",
+        "flingPower": 20
+    },
+    {
+        "id": "ITEM_CLEVER_WING",
+        "name": "CleverFeather",
+        "price": 3000,
+        "description": "An item that raises the base Sp. Def. of a Pokémon.",
+        "effect": "gItemEffect_SpdefFeather",
+        "flingPower": 20
+    },
+    {
+        "id": "ITEM_SWIFT_WING",
+        "name": "SwiftFeather",
+        "price": 3000,
+        "description": "An item that raises the base Speed of a Pokémon.",
+        "effect": "gItemEffect_SpeedFeather",
+        "flingPower": 20
+    },
+    {
+        "id": "ITEM_X_DEFEND",
+        "name": "X Defense",
+        "price": 550,
+        "holdEffectParam": 1,
+        "description": "Sharply raises stat Defense during one battle.",
+        "effect": "gItemEffect_XDefense",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_X_SPECIAL",
+        "name": "X Sp. Atk",
+        "price": 350,
+        "holdEffectParam": 1,
+        "description": "Sharply raises stat Sp. Atk during one battle.",
+        "effect": "gItemEffect_XSpecialAttack",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_TINYMUSHROOM",
+        "name": "Tiny Mushroom",
+        "price": 500,
+        "description": "A plain mushroom that would sell at a cheap price.",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_BALMMUSHROOM",
+        "name": "Balm Mushroom",
+        "price": 12500,
+        "description": "A rare mushroom that would sell at a high price.",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_PRETTY_WING",
+        "name": "PrettyFeather",
+        "price": 200,
+        "description": "A beautiful yet plain feather that does nothing.",
+        "flingPower": 20
+    },
+    {
+        "id": "ITEM_BLU_APRICORN",
+        "name": "Blue Apricorn",
+        "price": null,
+        "description": "A blue apricorn. It smells a bit like grass."
+    },
+    {
+        "id": "ITEM_YLW_APRICORN",
+        "name": "YellwApricorn",
+        "price": null,
+        "description": "A yellow apricorn. It has an invigor- ating scent."
+    },
+    {
+        "id": "ITEM_GRN_APRICORN",
+        "name": "GreenApricorn",
+        "price": null,
+        "description": "A green apricorn."
+    },
+    {
+        "id": "ITEM_PNK_APRICORN",
+        "name": "Pink Apricorn",
+        "price": null,
+        "description": "A pink apricorn."
+    },
+    {
+        "id": "ITEM_WHT_APRICORN",
+        "name": "WhiteApricorn",
+        "price": null,
+        "description": "A white apricorn. It doesn't smell like anything."
+    },
+    {
+        "id": "ITEM_BLK_APRICORN",
+        "name": "BlackApricorn",
+        "price": null,
+        "description": "A black apricorn. It has an inde- scribable scent."
+    },
+    {
+        "id": "FIRST_MAIL_INDEX",
+        "name": "Orange Mail",
+        "pluralName": "Orange Mail",
+        "price": 50,
+        "description": "A Zigzagoon-print Mail to be held by a Pokémon."
+    },
+    {
+        "id": "ITEM_THUNDERSTONE",
+        "name": "Thunder Stone",
+        "price": 500,
+        "description": "Makes certain species of Pokémon evolve.",
+        "effect": "gItemEffect_EvoItem",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_UP_GRADE",
+        "name": "Upgrade",
+        "price": 500,
+        "holdEffect": "HOLD_EFFECT_UPGRADE",
+        "description": "A peculiar box made by Silph Co.",
+        "effect": "gItemEffect_EvoItem",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_STICK",
+        "name": "Leek",
+        "price": 200,
+        "holdEffect": "HOLD_EFFECT_LEEK",
+        "description": "A hold item that raises Farfetch'd's critical-hit ratio.",
+        "flingPower": 60
+    },
+    {
+        "id": "ITEM_DEEPSEASCALE",
+        "name": "DeepSeaScale",
+        "price": 200,
+        "holdEffect": "HOLD_EFFECT_DEEP_SEA_SCALE",
+        "description": "A hold item that raises the Sp. Def of Clamperl.",
+        "effect": "gItemEffect_EvoItem",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_DEEPSEATOOTH",
+        "name": "DeepSeaTooth",
+        "pluralName": "DeepSeaTeeth",
+        "price": 200,
+        "holdEffect": "HOLD_EFFECT_DEEP_SEA_TOOTH",
+        "description": "A hold item that raises the Sp. Atk of Clamperl.",
+        "effect": "gItemEffect_EvoItem",
+        "flingPower": 90
+    },
+    {
+        "id": "ITEM_NEVERMELTICE",
+        "name": "Never-MeltIce",
+        "pluralName": "Never-MeltIce",
+        "price": null,
+        "holdEffect": "HOLD_EFFECT_ICE_POWER",
+        "holdEffectParam": 10,
+        "description": "A hold item that raises the power of Ice-type moves.",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_BLACKBELT",
+        "name": "Black Belt",
+        "price": null,
+        "holdEffect": "HOLD_EFFECT_FIGHTING_POWER",
+        "holdEffectParam": 10,
+        "description": "A hold item that boosts Fighting- type moves.",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_TWISTEDSPOON",
+        "name": "Twisted Spoon",
+        "price": null,
+        "holdEffect": "HOLD_EFFECT_PSYCHIC_POWER",
+        "holdEffectParam": 10,
+        "description": "A hold item that boosts Psychic- type moves.",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_SILVERPOWDER",
+        "name": "Silver Powder",
+        "pluralName": "Silver Powder",
+        "price": null,
+        "holdEffect": "HOLD_EFFECT_BUG_POWER",
+        "holdEffectParam": 10,
+        "description": "A hold item that raises the power of Bug-type moves.",
+        "flingPower": 10
+    },
+    {
+        "id": "ITEM_BLACKGLASSES",
+        "name": "Black Glasses",
+        "pluralName": "Black Glasses",
+        "price": null,
+        "holdEffect": "HOLD_EFFECT_DARK_POWER",
+        "holdEffectParam": 10,
+        "description": "A hold item that raises the power of Dark-type moves.",
+        "flingPower": 30
+    },
+    {
+        "id": "ITEM_BRIGHTPOWDER",
+        "name": "Bright Powder",
+        "pluralName": "Bright Powder",
+        "price": null,
+        "holdEffect": "HOLD_EFFECT_EVASION_UP",
+        "holdEffectParam": 10,
+        "description": "A hold item that casts a glare to reduce accuracy.",
+        "flingPower": 10
+    },
+    {
+        "id": "ITEM_EXP_ALL",
+        "name": "Exp. Share",
+        "holdEffect": "HOLD_EFFECT_EXP_SHARE",
+        "price": 3000,
+        "description": "This device gives exp. to other party members.",
+        "flingPower": 30
+    },
+    {
+        "id": "FIRST_BERRY_INDEX",
+        "name": "Cheri Berry",
+        "pluralName": "Cheri Berries",
+        "price": 0,
+        "holdEffect": "HOLD_EFFECT_CURE_PAR",
+        "description": "A hold item that heals paralysis in battle.",
+        "effect": "gItemEffect_ParalyzeHeal",
+        "flingPower": 10
+    },
+    {
+        "id": "LAST_BERRY_INDEX",
+        "name": "Enigma Berry",
+        "pluralName": "Enigma Berries",
+        "price": 0,
+        "description": "",
+        "flingPower": 10
+    },
+    {
+        "id": "ITEM_ITEMFINDER",
+        "name": "Dowsing MCHN",
+        "price": 0,
+        "description": "A device that signals an invisible item by sound.",
+        "importance": 1
+    },
+    {
+        "id": "ITEM_DOWSING_MCHN",
+        "name": "Dowsing MCHN",
+        "price": 0,
+        "description": "A device that signals an invisible item by sound.",
+        "importance": 1
+    },
+    {
+        "id": "ITEM_POKEMON_BOX",
+        "name": "_(\"{PKMN",
+        "price": 0,
+        "description": "This device grants",
+        "importance": 1
+    },
+    {
+        "id": "ITEM_DEVON_GOODS",
+        "name": "Devon Parts",
+        "pluralName": "Devon Parts",
+        "price": 0,
+        "description": "A package that contains Devon's machine parts.",
+        "importance": 2
+    },
+    {
+        "id": "ITEM_RM_1_KEY",
+        "name": "Key to Room 1",
+        "pluralName": "Keys to Room 1",
+        "price": 0,
+        "description": "A key that opens a door inside the Abandoned Ship.",
+        "importance": 1
+    },
+    {
+        "id": "ITEM_RM_2_KEY",
+        "name": "Key to Room 2",
+        "pluralName": "Keys to Room 2",
+        "price": 0,
+        "description": "A key that opens a door inside the Abandoned Ship.",
+        "importance": 1
+    },
+    {
+        "id": "ITEM_RM_4_KEY",
+        "name": "Key to Room 4",
+        "pluralName": "Keys to Room 4",
+        "price": 0,
+        "description": "A key that opens a door inside the Abandoned Ship.",
+        "importance": 1
+    },
+    {
+        "id": "ITEM_RM_6_KEY",
+        "name": "Key to Room 6",
+        "pluralName": "Keys to Room 6",
+        "price": 0,
+        "description": "A key that opens a door inside the Abandoned Ship.",
+        "importance": 1
+    },
+    {
+        "id": "ITEM_OAKS_PARCEL",
+        "name": "Parcel",
+        "price": 0,
+        "description": "A parcel for Prof. Oak from a Pokémon Mart's clerk.",
+        "importance": 2
+    },
+    {
+        "id": "FIRST_BERRY_MASTER_BERRY",
+        "name": "Pomeg Berry",
+        "pluralName": "Pomeg Berries",
+        "price": 0,
+        "description": "Makes a Pokémon friendly but lowers base HP.",
+        "effect": "gItemEffect_PomegBerry",
+        "flingPower": 10
+    },
+    {
+        "id": "LAST_BERRY_MASTER_BERRY",
+        "name": "Nomel Berry",
+        "pluralName": "Nomel Berries",
+        "price": 0,
+        "description": "",
+        "flingPower": 10
+    },
+    {
+        "id": "FIRST_BERRY_MASTER_WIFE_BERRY",
+        "name": "Cheri Berry",
+        "pluralName": "Cheri Berries",
+        "price": 0,
+        "holdEffect": "HOLD_EFFECT_CURE_PAR",
+        "description": "A hold item that heals paralysis in battle.",
+        "effect": "gItemEffect_ParalyzeHeal",
+        "flingPower": 10
+    },
+    {
+        "id": "LAST_BERRY_MASTER_WIFE_BERRY",
+        "name": "Sitrus Berry",
+        "pluralName": "Sitrus Berries",
+        "price": 0,
+        "holdEffect": "HOLD_EFFECT_RESTORE_HP",
+        "holdEffectParam": 30,
+        "description": "A hold item that restores the user's HP a little.",
+        "effect": "gItemEffect_SitrusBerry",
+        "flingPower": 10
+    },
+    {
+        "id": "FIRST_KIRI_BERRY",
+        "name": "Pomeg Berry",
+        "pluralName": "Pomeg Berries",
+        "price": 0,
+        "description": "Makes a Pokémon friendly but lowers base HP.",
+        "effect": "gItemEffect_PomegBerry",
+        "flingPower": 10
+    },
+    {
+        "id": "LAST_KIRI_BERRY",
+        "name": "Nomel Berry",
+        "pluralName": "Nomel Berries",
+        "price": 0,
+        "description": "",
+        "flingPower": 10
+    },
+    {
+        "id": "FIRST_ROUTE_114_MAN_BERRY",
+        "name": "Razz Berry",
+        "pluralName": "Razz Berries",
+        "price": 0,
+        "description": "",
+        "flingPower": 10
+    },
+    {
+        "id": "LAST_ROUTE_114_MAN_BERRY",
+        "name": "Pinap Berry",
+        "pluralName": "Pinap Berries",
+        "price": 0,
+        "description": "",
+        "flingPower": 10
     }
 ]

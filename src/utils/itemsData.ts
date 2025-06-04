@@ -30,11 +30,11 @@ class ItemSearch {
     this.trie = new TrieSearch<Item>("name", {
       min: 2,
       cache: true,
-
       idFieldOrFunction: "name",
     });
 
-    this.trie.addAll(Object.values(Items));
+    this.trie.addAll(Array.from(Items.values()));
+
     this.itemsToMap = new Map();
 
     // We gotta get all the items and write down
@@ -120,7 +120,6 @@ class ItemSearch {
 
     for (const level of levelsInThisMap) {
       level.scriptedGives.forEach((itm: ScriptedGive) => {
-
         returnObj.scriptedGives.push({
           scriptName: itm.scriptName,
           items: itm.items
@@ -155,7 +154,9 @@ const useItemSearch = (): [
   const [searchResults, setSearchResults] = useState<Item[]>([]);
 
   useEffect(() => {
+    if (searchTerm === "") return;
     const results = itemSearch.search(searchTerm);
+
     if (results.length === 1 && searchTerm === results[0].name) {
       setSearchResults([]);
       return;

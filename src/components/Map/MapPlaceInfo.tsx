@@ -2,7 +2,10 @@ import { animated, useSpring } from "react-spring";
 import { useMapStore } from "@/stores/useMapStore";
 import { useCallback, useEffect, useState } from "react";
 import EncounterMonsList from "./EncounterMonsList";
-
+const SelectedLevel = () => {
+  const selectedMapLabel = useMapStore((state) => state.selectedLevelLabel);
+  return <h3>{selectedMapLabel}</h3>;
+};
 const MapPlaceInfo = () => {
   const [selectedTab, setSelectedTab] = useState("land");
   const show = useMapStore((state) => state.selectedMap !== null);
@@ -43,7 +46,9 @@ const MapPlaceInfo = () => {
       }}
       className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex h-full w-[150px] flex-col rounded-lg pb-1 md:w-full`}
     >
-      <div className="tabs w-full overflow-hidden px-3 py-3"></div>
+      <div className="tabs w-full overflow-hidden px-3 py-3">
+        <SelectedLevel />
+      </div>
       <div className="mb-1 flex-1 overflow-y-auto">
         {selectedTab === "land" ? (
           <EncounterMonsList zone="land" />

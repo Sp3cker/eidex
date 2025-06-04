@@ -3,6 +3,7 @@ import pokemon from "@/data/speciesData.json";
 import ItemSearch from "@/utils/itemsData";
 import { getSelectedLevel } from "./setSelectedMap";
 import { MapStore } from "./types";
+import { subscribeWithSelector } from "zustand/middleware";
 
 const UnderscoreRegex = new RegExp(/^[^_]*_/);
 
@@ -21,16 +22,16 @@ export function formatMapString(mapNameFromJson: string) {
       ) // Capitalize first letter and after underscores
   );
 }
-export const useMapStore = create<MapStore>((set, get) => {
+export const useMapStore = create<MapStore>()(subscribeWithSelector((set, get) => {
   const initialState = {
     currentRoute: window.location.href,
     selectedMap: null,
     selectedMapLevel: 0,
     selectedMapsLevels: 0,
     selectedLevelLabel: "", // Added missing property
-    selectedMapLandMons: undefined,
-    selectedMapWaterMons: undefined,
-    selectedMapFishingMons: undefined,
+    selectedLevelLandMons: undefined,
+    selectedLevelWaterMons: undefined,
+    selectedLevelFishingMons: undefined,
     selectedMapItems: null,
     selectedImage: null,
   };
@@ -129,7 +130,7 @@ export const useMapStore = create<MapStore>((set, get) => {
       set({ selectedImage: imageName });
     },
   };
-});
+}));
 
 export default useMapStore;
 window.addEventListener("popstate", () => {

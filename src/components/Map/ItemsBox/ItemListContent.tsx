@@ -1,5 +1,4 @@
 import React from "react";
-import { Item } from "@/data/map";
 
 export const EmptyState = React.memo(function EmptyState({
   message,
@@ -16,6 +15,10 @@ export const EmptyState = React.memo(function EmptyState({
 export const ItemListContent = React.memo(function ItemsGrid<
   T extends { name: string; description: string },
 >({ items }: { items: T[] }) {
+  if (items.length === 0) {
+    return <EmptyState message={"No items here"} />;
+  }
+
   return (
     <div>
       {items.map((item) => (

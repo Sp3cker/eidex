@@ -3,14 +3,10 @@ import { memo } from "react";
 import { formatMapString, useMapStore } from "@/stores/useMapStore";
 import { useSpring, animated } from "react-spring";
 import ItemsList from "./ItemsList";
-import ItemsListContent from "./ItemListContent";
-import { groupByScriptName } from "./utils";
-import { ScriptedGive } from "@/stores/useMapStore/types";
 
 const ItemsBox = memo(function ItemsBox() {
   const selectedMap = useMapStore((state) => state.selectedMap);
-  const selectedMapLabel = useMapStore((state) => state.selectedLevelLabel);
-  const setSelectedImage = useMapStore((state) => state.setSelectedImage);
+  // const setSelectedImage = useMapStore((state) => state.setSelectedImage);
 
   const [springs] = useSpring(
     {
@@ -21,11 +17,11 @@ const ItemsBox = memo(function ItemsBox() {
     [selectedMap],
   );
 
-  const handleImageClick = () => {
-    if (typeof selectedMap === "string" || selectedMap === null) {
-      setSelectedImage(selectedMap);
-    }
-  };
+  // const handleImageClick = () => {
+  //   if (typeof selectedMap === "string" || selectedMap === null) {
+  //     setSelectedImage(selectedMap);
+  //   }
+  // };
 
   const mapLabel =
     typeof selectedMap === "string" ? formatMapString(selectedMap) : "";
@@ -38,10 +34,10 @@ const ItemsBox = memo(function ItemsBox() {
       <div className="sticky top-0 z-10 flex justify-between">
         <h3 className="cool-font md:text-md pb-2 text-sm font-bold text-neutral-700">
           {mapLabel}
-          {selectedMapLabel && ` - ${selectedMapLabel}`}
+   
         </h3>
       </div>
-      <button onClick={handleImageClick}>Image</button>
+      {/* <button onClick={handleImageClick}>Image</button> */}
       <div className="font-pkmnem flex flex-col rounded-sm">
         <ItemsList />
       </div>

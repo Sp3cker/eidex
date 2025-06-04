@@ -91,6 +91,16 @@ input[type="number"] {
   .rendering-pixelated {
     image-rendering: pixelated;
   }
+  
+  /* Disabled state utility for elements with the disabled attribute */
+  [disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+    filter: grayscale(0.7);
+    background-color: #d1d5db !important; /* Tailwind gray-300 */
+    color: #6b7280 !important; /* Tailwind gray-500 */
+    cursor: not-allowed !important;
+  }
 }
 @keyframes pokemon-icon-animation {
   from {

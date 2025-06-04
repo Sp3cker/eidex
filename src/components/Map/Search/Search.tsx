@@ -3,7 +3,7 @@ import { useMapStore } from "@/stores/useMapStore";
 import { useItemSearch } from "@/utils/itemsData";
 import { useTransition, animated as a, useSprings } from "@react-spring/web";
 import { useGesture } from "@use-gesture/react";
-import { useCallback, useState } from "react";
+import { useCallback,  useState } from "react";
 import SearchSelecta from "./SearchSelecta";
 
 const SEARCH_RESULT_SPACING = window.innerWidth < 400 ? 40 : 40;
@@ -19,6 +19,25 @@ const fn = (active: boolean) =>
   active ? animConfigs.hover : animConfigs.initial;
 // const clickTo = (down: boolean) => down ? {scale}
 
+const ErrorBanner = ({ show }: { show: boolean }) => {
+  const transitions = useTransition(show, {
+    from: { opacity: 0, translateY: -40 },
+    enter: { opacity: 1, translateY: 0 },
+    leave: { opacity: 0, translateY: -40 },
+    config: { tension: 300, friction: 30 },
+  });
+  return transitions((style, item) =>
+    item ? (
+      <a.div
+        style={style}
+        className="absolute left-0 right-0 z-50 mx-auto mt-2 w-fit rounded border-2 border-red-500 bg-neutral-100/80 px-4 py-2 text-center font-bold text-red-800 shadow-lg backdrop-blur-md"
+      >
+        Item Not Available in-game
+      </a.div>
+    ) : null,
+  );
+};
+
 const Search = () => {
   const setSelectedMap = useMapStore((state) => state.setSelectedMap);
   const deSelectMap = useMapStore((state) => state.deselectMap);
@@ -30,6 +49,7 @@ const Search = () => {
     clearSearch,
     getMapsForItem,
   ] = useItemSearch();
+  const [showError, setShowError] = useState(false);
 
   const [springs, api] = useSprings(
     searchResults.length,
@@ -60,14 +80,17 @@ const Search = () => {
     const { name, id } = searchResults[index];
     setSearchName(name);
 
-    // setSearchName(searchResults[index].name)
     const maps = getMapsForItem(id);
-    if (maps) {
-      console.log(maps);
+    if (maps && maps.length > 0) {
       setItemMaps(maps);
       clearSearch();
       setSelectedMap(maps[0]);
+      setShowError(false);
+    } else {
+      setShowError(true);
+      setTimeout(() => setShowError(false), 2000);
     }
+    // Do NOT clear the search term here!
   };
 
   const transitions = useTransition(searchResults, {
@@ -101,35 +124,37 @@ const Search = () => {
     setItemMaps([]);
     setSearchName(e.currentTarget.value);
   }, []);
+
   return (
-    <div className="content-visible cool-font search-bar-grid w-full">
+    <div className="content-visible cool-font search-bar-grid relative w-full">
+      <ErrorBanner show={showError} />
       <input
         value={searchTerm}
-        className="search-input text-neutral-50 shadow-inner mb-2 border border-neutral-100 w-full rounded-sm p-1 py-1 pl-1 pr-2 text-sm/6 shadow-xl"
+        className="search-input mb-2 w-full rounded-sm border border-neutral-100 p-1 py-1 pl-1 pr-2 text-sm/6 text-neutral-50 shadow-inner shadow-xl"
         type="search"
         onInput={handleChange}
         placeholder="Find items, TMs..."
       />
       <ul className="relative">
-        {transitions((styles, item, _, index) => (
-          <a.li
-            {...bind(index)}
-            className="search-result will-translate my-dib absolute w-full cursor-pointer rounded-sm bg-neutral-100 p-2"
-            style={{
-              // zIndex: results.length - index,
-              scale: springs[index]?.scale,
-              boxShadow: springs[index]?.shadow.to(
-                (s) => `rgba(0, 0, 0, 0.15) 0px ${s}px ${2 * s}px 0px`,
-              ),
-              ...styles,
-            }}
-          >
-            <span>
-              <p className="text-sm">{item.name}</p>
-              {/* <SearchResult {...item} key={item.name} /> */}
-            </span>
-          </a.li>
-        ))}
+        {itemMaps.length == 0 && transitions((styles, item, _, index) => (
+            <a.li
+              {...bind(index)}
+              className="search-result will-translate my-dib absolute w-full cursor-pointer rounded-sm bg-neutral-100 p-2"
+              style={{
+                // zIndex: results.length - index,
+                scale: springs[index]?.scale,
+                boxShadow: springs[index]?.shadow.to(
+                  (s) => `rgba(0, 0, 0, 0.15) 0px ${s}px ${2 * s}px 0px`,
+                ),
+                ...styles,
+              }}
+            >
+              <span>
+                <p className="text-sm">{item.name}</p>
+                {/* <SearchResult {...item} key={item.name} /> */}
+              </span>
+            </a.li>
+          ))}
       </ul>
       <SearchSelecta maps={itemMaps} />
     </div>

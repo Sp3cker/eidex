@@ -32,19 +32,25 @@ const Selecta = () => {
   const [spring, api] = useSpring(
     () => ({
       opacity: 0,
-      translateX: 0,
+      translateY: 0,
       // config: (key) => (key === "translateY" ? {} : {}),
     }),
     [],
   );
   useEffect(() => {
+    let numOfLevels = useMapStore.getState().selectedMapsLevels;
+    console.log("numOfLevels", numOfLevels);
+    if (numOfLevels > 1) {
+      api.start({ opacity: 1, translateY: 70 });
+    } else {
+      api.start({ opacity: 0, translateY: 0 });
+    }
     const unsub = useMapStore.subscribe((state: MapStore) => {
-
-      const numOfLevels = state.selectedMapsLevels;
+      numOfLevels = state.selectedMapsLevels;
       if (numOfLevels > 1) {
-        api.start({ opacity: 1, translateX: 70 });
+        api.start({ opacity: 1, translateY: 70 });
       } else {
-        api.start({ opacity: 0, translateX: 0 });
+        api.start({ opacity: 0, translateY: 0 });
       }
     });
     return () => {
@@ -52,16 +58,13 @@ const Selecta = () => {
     };
   }, []);
   return (
-    <animated.aside
-      style={{ translateX: spring.translateX, opacity: spring.opacity }}
-      className="selecta-grid selecta-z flex w-7"
-    >
-      <div className={`flex flex-col`}>
+    <animated.aside style={spring} className="selecta-grid selecta-z flex w-8">
+      <div className={`flex flex-row`}>
         <animated.button
           className="selecta-button-animation font-pkmnem m-auto rounded-sm bg-neutral-300 px-2 text-xl shadow-lg"
           onClick={handleDownClick}
         >
-          ↓
+          ←
         </animated.button>
         <p className="font-pkmnem pl-0.25 text-shadow-sm text-xl font-bold text-neutral-50">
           Level
@@ -70,7 +73,7 @@ const Selecta = () => {
           className="selecta-button-animation font-pkmnem m-auto rounded-sm bg-neutral-300 px-2 text-xl shadow-lg"
           onClick={handleUpClick}
         >
-          ↑
+          →
         </animated.button>
       </div>
     </animated.aside>
