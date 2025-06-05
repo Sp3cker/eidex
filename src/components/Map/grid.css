@@ -72,6 +72,6 @@
 }
 @media (max-height: 1000px) {
   .dexnav-grid {
-    grid-area: 4 / 1 / 13 / 7;
+    grid-area: 6 / 1 / 13 / 7;
   }
 }
