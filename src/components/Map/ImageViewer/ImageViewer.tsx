@@ -15,7 +15,7 @@ const ImageViewer = () => {
 
   const pickupItems = useMemo(() => {
     if (!items) return [];
-    debugger
+
     return items?.pickupItems;
   }, [items?.pickupItems]);
   if (selectedImageName === null) {
@@ -25,18 +25,18 @@ const ImageViewer = () => {
   return (
     <div>
       {showImage && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/80">
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/80 p-2 sm:p-4">
           <button
-            className="absolute right-4 top-4 rounded-full bg-white/80 p-2 text-xl font-bold shadow-lg hover:bg-white"
+            className="absolute right-2 top-2 sm:right-4 sm:top-4 rounded-full bg-white/80 p-1 sm:p-2 text-lg sm:text-xl font-bold shadow-lg hover:bg-white"
             onClick={() => setViewingImage(false)}
             aria-label="Close full screen image"
           >
             ×
           </button>
-          <div className="relative">
+          <div className="relative max-w-[90vw] max-h-[85vh] sm:max-w-[95vw] sm:max-h-[90vh]">
             <img
               src={`/Archive/${selectedImageName}.webp`}
-              className="max-h-full max-w-full rounded shadow-lg"
+              className="max-h-full max-w-full rounded shadow-lg object-contain"
               alt={`${selectedImageName}`}
               onLoad={e => {
                 const img = e.currentTarget;
@@ -74,10 +74,10 @@ const ImageViewer = () => {
           </div>
           {/* Example: show dimensions for debugging */}
           {imgDimensions && (
-            <div className="text-white text-xs mt-2">Image size: {imgDimensions.width} x {imgDimensions.height}</div>
+            <div className="text-white text-xs sm:text-sm mt-2">Image size: {imgDimensions.width} x {imgDimensions.height}</div>
           )}
-          <p className="cool-font text-white"> Image viewer isn't done yet, ok...</p>
-          <p className="cool-font text-white"> Some things are not where they should be.</p>
+          <p className="cool-font text-white text-sm sm:text-base"> Image viewer isn&apos;t done yet, ok...</p>
+          <p className="cool-font text-white text-sm sm:text-base"> Some things are not where they should be.</p>
         </div>
       )}
     </div>
