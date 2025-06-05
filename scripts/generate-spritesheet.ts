@@ -28,8 +28,8 @@ interface SpritesheetConfig {
 }
 
 const config: SpritesheetConfig = {
-  spriteWidth: 32,
-  spriteHeight: 32,
+  spriteWidth: 64,  // 2x upscale from original 32px images for better quality
+  spriteHeight: 64, // 2x upscale from original 32px images for better quality
   padding: 2,
   spritesPerRow: 16, // 16x16 grid should handle 256 items comfortably
   outputImagePath: './public/spritesheet-items.png',
@@ -180,8 +180,10 @@ function generateSpritesheet(inputDir: string, config: SpritesheetConfig): void 
     const filePath = join(inputDir, file);
     const coord = coordinates[index];
     
-    // Resize image to sprite size and composite it onto the canvas
-    magickCmd += ` \\( "${filePath}" -resize ${config.spriteWidth}x${config.spriteHeight}! \\)`;
+    // Resize image to sprite size using point filter for crisp pixel art
+    // Options: point (nearest-neighbor, crisp), lanczos (smooth), cubic (smooth)
+    // For pixel art, use 'point' to avoid blurring/anti-aliasing
+    magickCmd += ` \\( "${filePath}" -filter point -resize ${config.spriteWidth}x${config.spriteHeight}! \\)`;
     magickCmd += ` -geometry +${coord.coords[0]}+${coord.coords[1]} -composite`;
   });
   
@@ -236,7 +238,32 @@ function main() {
     process.exit(1);
   }
   
+  // Check if cwebp is available
+  try {
+    execSync('cwebp -version', { stdio: 'pipe' });
+  } catch (error) {
+    console.error('❌ cwebp not found! Please install WebP tools first.');
+    console.error('   macOS: brew install webp');
+    console.error('   Ubuntu: sudo apt-get install webp');
+    process.exit(1);
+  }
+  
   generateSpritesheet(inputDirectory, config);
+  
+  // Convert PNG to WebP
+  console.log('📸 Converting spritesheet to WebP format...');
+  const webpOutputPath = './public/spritesheet-items.webp';
+  
+  try {
+    // Use cwebp with quality 100 and lossless compression for pixel art
+    const cwebpCommand = `cwebp -lossless -q 100 "${config.outputImagePath}" -o "${webpOutputPath}"`;
+    execSync(cwebpCommand, { stdio: 'inherit' });
+    console.log(`✅ WebP spritesheet saved to: ${webpOutputPath}`);
+  } catch (error) {
+    console.error('❌ Failed to convert to WebP:', error);
+    console.log('⚠️  PNG version is still available at:', config.outputImagePath);
+  }
+  
   console.log('🎉 Spritesheet generation complete!');
 }
 

@@ -28,30 +28,50 @@ export function getItemSpriteCoords(itemId: string): [number, number] | null {
 /**
  * Get CSS background-position for an item sprite
  * @param itemId - The item ID in ITEM_ format
- * @param spriteSize - Size of each sprite (default: 32px)
+ * @param spriteSize - Size of each sprite (default: 64px)
  * @returns CSS background-position string or null if not found
  */
 export function getItemSpriteStyle(
   itemId: string, 
-  spriteSize: number = 32
+  spriteSize: number = 64
 ): React.CSSProperties | null {
   const coords = getItemSpriteCoords(itemId);
   
   if (!coords) return null;
 
   const [x, y] = coords;
+  
+  // Spritesheet dimensions (from generation script)
+  const sourceSize = 64; // Individual sprite size in spritesheet
+  const scale = spriteSize / sourceSize;
+  
+  // Calculate the scaled spritesheet dimensions
+  // Original spritesheet: 1054x2506px (from the generation output)
+  const originalSheetWidth = 1054;
+  const originalSheetHeight = 2506;
+  const scaledSheetWidth = originalSheetWidth * scale;
+  const scaledSheetHeight = originalSheetHeight * scale;
+  
   const style: React.CSSProperties = {
-    backgroundImage: 'url(/spritesheet-items.png)',
-    backgroundPosition: `-${x}px -${y}px`,
-    backgroundSize: 'auto', // Keep original size since sprites are already 32px
+    backgroundImage: 'url(/spritesheet-items.webp)',
+    backgroundPosition: `-${x * scale}px -${y * scale}px`,
+    backgroundSize: `${scaledSheetWidth}px ${scaledSheetHeight}px`,
     width: `${spriteSize}px`,
     height: `${spriteSize}px`,
     display: 'inline-block',
-    imageRendering: 'crisp-edges', // Ensure pixel art looks crisp
+    imageRendering: 'pixelated',
+    overflow: 'hidden',
   };
   
   return style;
 }
+
+/**
+ * Convenience functions for common sprite sizes
+ */
+export const getItemSpriteStyle32 = (itemId: string) => getItemSpriteStyle(itemId, 32);
+export const getItemSpriteStyle48 = (itemId: string) => getItemSpriteStyle(itemId, 48);
+export const getItemSpriteStyle64 = (itemId: string) => getItemSpriteStyle(itemId, 64);
 
 /**
  * Get a simple img src for a single item sprite
@@ -66,9 +86,9 @@ export function getItemImgProps(itemId: string): { src: string, width: number, h
   // Note: In a production app, we might want to extract each sprite to its own file
   // or use a canvas to extract just this sprite
   return {
-    src: '/spritesheet-items.png',
-    width: 32,
-    height: 32,
+    src: '/spritesheet-items.webp',
+    width: 64,
+    height: 64,
     // We'll need to handle the sprite cropping in CSS
   };
 }
@@ -105,7 +125,7 @@ export function getItemImgStyle(
  * 
  * {imgStyle ? (
  *   <div style={{ width: '32px', height: '32px', overflow: 'hidden', position: 'relative' }}>
- *     <img src="/spritesheet-items.png" alt="sprite" style={imgStyle} />
+ *     <img src="/spritesheet-items.webp" alt="sprite" style={imgStyle} />
  *   </div>
  * ) : (
  *   <div>No sprite</div>
@@ -126,4 +146,30 @@ export function hasItemSprite(itemId: string): boolean {
  */
 export function getAvailableItemIds(): string[] {
   return Array.from(coordsMap.keys()).sort();
+}
+
+/**
+ * Debug function to log sprite information
+ * @param itemId - The item ID to debug
+ */
+export function debugSprite(itemId: string): void {
+  const coords = getItemSpriteCoords(itemId);
+  const style32 = getItemSpriteStyle32(itemId);
+  const style64 = getItemSpriteStyle64(itemId);
+  
+  console.log(`Debug sprite for ${itemId}:`, {
+    coords,
+    style32: style32 ? {
+      backgroundPosition: style32.backgroundPosition,
+      backgroundSize: style32.backgroundSize,
+      width: style32.width,
+      height: style32.height
+    } : null,
+    style64: style64 ? {
+      backgroundPosition: style64.backgroundPosition,
+      backgroundSize: style64.backgroundSize,
+      width: style64.width,
+      height: style64.height
+    } : null
+  });
 }
