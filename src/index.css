@@ -91,7 +91,9 @@ input[type="number"] {
   .rendering-pixelated {
     image-rendering: pixelated;
   }
-  
+  .rendering-crisp-edges {
+    image-rendering: crisp-edges;
+  }
   /* Disabled state utility for elements with the disabled attribute */
   [disabled] {
     opacity: 0.5;
