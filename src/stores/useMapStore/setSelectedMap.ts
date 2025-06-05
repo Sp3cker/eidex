@@ -115,8 +115,6 @@ const getSelectedMapInfo = (id: string, index: number) => {
       );
     }
   }
-  // console.error("Encounters not found for map %s", map);
-
   return {
     landEncounters,
     waterEncounters,

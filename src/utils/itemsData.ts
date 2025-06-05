@@ -134,12 +134,14 @@ class ItemSearch {
           .filter((i) => i !== undefined) as Item[];
       });
       level.pickupItems.forEach((item) => {
-        returnObj.pickupItems.push(Items.get(item.item) as Item);
+        const toPush = Items.get(item.item);
+        returnObj.pickupItems.push({...toPush as Item, coords: item.coords} as Item);
       });
     }
 
     return returnObj;
   }
+
 }
 
 const itemSearch = new ItemSearch();

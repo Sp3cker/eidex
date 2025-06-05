@@ -59,6 +59,7 @@ const ItemsBox = memo(function ItemsBox() {
                   output: [0, -4, 4, 2, 0],
                 })
                 .to((r) => `rotate(${r}deg)`),
+                filter: `drop-shadow(0 0 2px rgba(0, 0, 0, 0.3))`,
             }}
           />
         </button>
