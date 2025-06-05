@@ -169,6 +169,7 @@
 }
 .selecta-z {
   z-index: 3;
+
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -290,4 +291,20 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     /* last frame */
     opacity: 1;
   }
+}
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+}
+
+.wiggle-on-hover:hover {
+  animation: wiggle 0.5s ease-out forwards; /* Changed ease-in-out to ease-out */
 }

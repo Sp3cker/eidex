@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { createWithEqualityFn as create } from "zustand/traditional";
 import pokemon from "@/data/speciesData.json";
 import ItemSearch from "@/utils/itemsData";
 import { getSelectedLevel } from "./setSelectedMap";
@@ -22,122 +22,128 @@ export function formatMapString(mapNameFromJson: string) {
       ) // Capitalize first letter and after underscores
   );
 }
-export const useMapStore = create<MapStore>()(subscribeWithSelector((set, get) => {
-  const initialState = {
-    currentRoute: window.location.href,
-    selectedMap: null,
-    selectedMapLevel: 0,
-    selectedMapsLevels: 0,
-    selectedLevelLabel: "", // Added missing property
-    selectedLevelLandMons: undefined,
-    selectedLevelWaterMons: undefined,
-    selectedLevelFishingMons: undefined,
-    selectedMapItems: null,
-    selectedImage: null,
-  };
-  return {
-    ...initialState,
-    selectedCoordinates: [400, 340],
-    storedCoordinates: new Map<string, number[]>(),
-    mapScale: 1,
+export const useMapStore = create<MapStore>()(
+  subscribeWithSelector((set, get) => {
+    const initialState = {
+      currentRoute: window.location.href,
+      selectedMap: null,
+      selectedMapLevel: 0,
+      selectedMapsLevels: 0,
+      selectedLevelLabel: "", // Added missing property
+      selectedLevelLandMons: undefined,
+      selectedLevelWaterMons: undefined,
+      selectedLevelFishingMons: undefined,
+      selectedMapItems: null,
+      selectedImageName: null,
+      viewingImage: false,
+    };
+    return {
+      ...initialState,
+      selectedCoordinates: [400, 340],
+      storedCoordinates: new Map<string, number[]>(),
+      mapScale: 1,
 
-    mapOffset: [0, 0],
-    hoveredMap: null,
-    hoveredCoordinates: [0, 0],
-    dexNavIsOpen: false,
-    deselectMap: () => {
-      window.history.pushState({}, "", "");
-      window.location.hash = "";
-      set({ ...initialState });
-    },
-    setSelectedMap: (map: string) => {
-      const targetLevel = getSelectedLevel(map, 0);
-      if (targetLevel === undefined) {
-        console.error("Error selecting map %s", map);
-        return;
-      }
-      const storedCoords = get().storedCoordinates.get(map);
-      window.history.pushState({}, "", `/map/${map}`);
+      mapOffset: [0, 0],
+      hoveredMap: null,
+      hoveredCoordinates: [0, 0],
 
-      set({
-        selectedMap: map,
-        selectedMapLevel: 0,
-        selectedLevelLabel: targetLevel.mapLabel,
-        selectedMapsLevels: targetLevel.selectedMapsLevels,
-        selectedLevelLandMons: targetLevel.landEncounters,
-        selectedLevelWaterMons: targetLevel.waterEncounters,
-        selectedLevelFishingMons: targetLevel.fishingEncounters,
-        selectedMapItems: targetLevel.selectedMapItems,
-        selectedCoordinates: storedCoords || [400, 340],
-      });
-    },
-    setSelectedMapLevel: (level: number) => {
-      const currMap = get().selectedMap;
-      if (!currMap) {
-        console.error("No map selected");
-        return;
-      }
-      const targetMap = getSelectedLevel(currMap, level);
-      if (targetMap === undefined) {
-        console.error("Error selecting map level %s, %s", level, currMap);
-        return;
-      }
-      set({
-        selectedMapLevel: level,
-        selectedMapsLevels: targetMap.selectedMapsLevels,
-        selectedLevelLabel: targetMap.mapLabel,
-        selectedLevelLandMons: targetMap.landEncounters,
-        selectedLevelWaterMons: targetMap.waterEncounters,
-        selectedLevelFishingMons: targetMap.fishingEncounters,
-        selectedMapItems: targetMap.selectedMapItems,
-      });
-    },
-    setSelectedPokemon: (name: string) => {
-      const poke = pokemon.filter(
-        (p) =>
-          p.speciesName.toUpperCase() === name.replace(UnderscoreRegex, ""),
-      );
-      if (poke.length !== 1) {
-        console.error("Ambiguous findings for %s", name);
-        return;
-      }
-      set({ selectedPokemon: poke[0] });
-    },
-    selectedPokemon: null,
-    setSelectedCoordinates: (coords) => {
-      set({ selectedCoordinates: coords });
-    },
-    setMapScale: (n) => set({ mapScale: n }),
-    setMapOffset: (offset) => set({ mapOffset: offset }),
-    setHoveredMap: (map: string) => set({ hoveredMap: map }),
-    setHoveredCoordinates: (coords: number[]) =>
-      set({ hoveredCoordinates: coords }),
-    setDexnavIsOpen: (isOpen) => set({ dexNavIsOpen: isOpen }),
-    searchItemByName: (name: string) => {
-      return ItemSearch.search(name);
-    },
-    setStoredCoordinates: (mapCoords: Map<string, number[]>) => {
-      set({
-        storedCoordinates: mapCoords,
-      });
-    },
-    setStateFromURL: (route: string, routeParam: string) => {
-      if (route === "map") {
-        get().setSelectedMap(routeParam);
-      }
-    },
-    setSelectedImage: (imageName: string | null) => {
-      set({ selectedImage: imageName });
-    },
-  };
-}));
+      deselectMap: () => {
+        window.history.pushState({}, "", "");
+        window.location.hash = "";
+        set({ ...initialState });
+      },
+      setSelectedMap: (map: string) => {
+        const targetLevel = getSelectedLevel(map, 0);
+        if (targetLevel === undefined) {
+          console.error("Error selecting map %s", map);
+          return;
+        }
+        const storedCoords = get().storedCoordinates.get(map);
+        window.history.pushState({}, "", `/map/${map}`);
+
+        set({
+          selectedMap: map,
+          selectedMapLevel: 0,
+          selectedLevelLabel: targetLevel.mapLabel,
+          selectedMapsLevels: targetLevel.selectedMapsLevels,
+          selectedLevelLandMons: targetLevel.landEncounters,
+          selectedLevelWaterMons: targetLevel.waterEncounters,
+          selectedLevelFishingMons: targetLevel.fishingEncounters,
+          selectedMapItems: targetLevel.selectedMapItems,
+          selectedCoordinates: storedCoords || [400, 340],
+          selectedImageName: targetLevel.selectedImageName,
+        });
+      },
+      setSelectedMapLevel: (level: number) => {
+        const currMap = get().selectedMap;
+        if (!currMap) {
+          console.error("No map selected");
+          return;
+        }
+        const targetMap = getSelectedLevel(currMap, level);
+        if (targetMap === undefined) {
+          console.error("Error selecting map level %s, %s", level, currMap);
+          return;
+        }
+        debugger;
+        set({
+          selectedMapLevel: level,
+          selectedMapsLevels: targetMap.selectedMapsLevels,
+          selectedLevelLabel: targetMap.mapLabel,
+          selectedLevelLandMons: targetMap.landEncounters,
+          selectedLevelWaterMons: targetMap.waterEncounters,
+          selectedLevelFishingMons: targetMap.fishingEncounters,
+          selectedMapItems: targetMap.selectedMapItems,
+          selectedImageName: targetMap.selectedImageName,
+        });
+      },
+      setSelectedPokemon: (name: string) => {
+        const poke = pokemon.filter(
+          (p) =>
+            p.speciesName.toUpperCase() === name.replace(UnderscoreRegex, ""),
+        );
+        if (poke.length !== 1) {
+          console.error("Ambiguous findings for %s", name);
+          return;
+        }
+        set({ selectedPokemon: poke[0] });
+      },
+      selectedPokemon: null,
+      setSelectedCoordinates: (coords) => {
+        set({ selectedCoordinates: coords });
+      },
+      setMapScale: (n) => set({ mapScale: n }),
+      setMapOffset: (offset) => set({ mapOffset: offset }),
+      setHoveredMap: (map: string) => set({ hoveredMap: map }),
+      setHoveredCoordinates: (coords: number[]) =>
+        set({ hoveredCoordinates: coords }),
+
+      searchItemByName: (name: string) => {
+        return ItemSearch.search(name);
+      },
+      setStoredCoordinates: (mapCoords: Map<string, number[]>) => {
+        set({
+          storedCoordinates: mapCoords,
+        });
+      },
+      setStateFromURL: (route: string, routeParam: string) => {
+        if (route === "map") {
+          get().setSelectedMap(routeParam);
+        }
+      },
+
+      setViewingImage: (viewing: boolean) => {
+        set({ viewingImage: viewing });
+      },
+    };
+  }),
+);
 
 export default useMapStore;
 window.addEventListener("popstate", () => {
   const path = window.location.pathname;
   const match = path.match(/^\/map\/(.+)$/);
   if (match) {
-    console.log("mappp");
     useMapStore.getState().setSelectedMap(match[1]);
   }
 });

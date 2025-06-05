@@ -36,8 +36,9 @@ type MapStore = {
   mapOffset: number[];
   hoveredMap: string | null;
   hoveredCoordinates: number[];
-  dexNavIsOpen: boolean;
-  selectedImage: string | null;
+
+  viewingImage: boolean;
+  selectedImageName: string | null;
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
@@ -46,12 +47,12 @@ type MapStore = {
   setMapScale: (n: number) => void;
   setMapOffset: (offset: number[]) => void;
   setHoveredMap: (map: string) => void;
-  setDexnavIsOpen: (isOpen: boolean) => void;
+
   setHoveredCoordinates: (coords: number[]) => void;
   searchItemByName: (name: string) => Item[];
   setSelectedMapLevel: (level: number) => void;
   setStoredCoordinates: (mapCoords: Map<string, number[]>) => void;
-  setSelectedImage: (image: string | null) => void;
+  setViewingImage: (viewing: boolean) => void;
 };
 
 export type { EncounterMons, EncounterMonsFromJSON, MapStore, Level };

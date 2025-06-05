@@ -89,7 +89,6 @@ const getSelectedMapInfo = (id: string, index: number) => {
     return;
   }
   const targetMapEncounters = targetMapEncounterGroup[index];
-  
 
   let landEncounters, waterEncounters, fishingEncounters;
   if (targetMapEncounters) {
@@ -154,6 +153,7 @@ const getSelectedLevel = (map: string, level: number) => {
     selectedMapsLevels: numOfLevels,
     selectedMapItems: thisLevelsItems,
     mapLabel: targetLevel.levelLabel,
+    selectedImageName: targetLevel.image,
   };
 };
 export { getSelectedMapInfo, getSelectedLevel };

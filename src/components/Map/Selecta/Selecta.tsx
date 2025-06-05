@@ -39,7 +39,6 @@ const Selecta = () => {
   );
   useEffect(() => {
     let numOfLevels = useMapStore.getState().selectedMapsLevels;
-    console.log("numOfLevels", numOfLevels);
     if (numOfLevels > 1) {
       api.start({ opacity: 1, translateY: 70 });
     } else {

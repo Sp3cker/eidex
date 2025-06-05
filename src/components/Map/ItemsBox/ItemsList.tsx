@@ -21,7 +21,6 @@ const ItemsList = memo(function ItemsList() {
   const [selectedTab, setSelectedTab] = useState<TabType>("story");
 
   const { whatToShow, items } = useItemsData(selectedTab);
-console.log("whatToShow", whatToShow);
   useEffect(() => {
 
     if (whatToShow.story === false && whatToShow.marts === false) {

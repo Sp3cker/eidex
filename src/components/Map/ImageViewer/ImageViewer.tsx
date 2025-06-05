@@ -1,9 +1,15 @@
-import { useState } from "react";
 import useMapStore from "@/stores/useMapStore";
+
 const ImageViewer = () => {
-  const [showFull, setShowFull] = useState(true);
-  const selectedImage = useMapStore((state) => state.selectedImage);
-  if (selectedImage === null) {
+  const { selectedImageName, setViewingImage, showImage } = useMapStore(
+    (state) => ({
+      showImage: state.viewingImage,
+      selectedImageName: state.selectedImageName,
+      setViewingImage: state.setViewingImage,
+    }),
+  );
+
+  if (selectedImageName === null) {
     return null;
   }
   return (
@@ -14,17 +20,17 @@ const ImageViewer = () => {
         onClick={() => setShowFull(true)}
         alt="Desert Underpass"
       /> */}
-      {showFull && (
+      {showImage && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
           <button
             className="absolute right-4 top-4 rounded-full bg-white/80 p-2 text-xl font-bold shadow-lg hover:bg-white"
-            onClick={() => setShowFull(false)}
+            onClick={() => setViewingImage(false)}
             aria-label="Close full screen image"
           >
             ×
           </button>
           <img
-            src="/Archive/DesertUnderpass.webp"
+            src={`/Archive/${selectedImageName}.webp`}
             className="max-h-full max-w-full rounded shadow-lg"
             alt="Desert Underpass Fullscreen"
           />
