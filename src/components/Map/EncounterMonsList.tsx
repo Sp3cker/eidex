@@ -59,11 +59,11 @@ const EncounterMonsList = React.memo(function EncounterList({
             />
           </div>
           <div>
-            <p
+            <h3
               className={`font-bold ${zoneToTextColor(zone)} text-xs leading-tight md:text-sm`}
             >
               {formatMapString(mon.species)}
-            </p>
+            </h3>
             <p
               className={`font-pkmnem ${zoneToTextColor(zone)} font-bold leading-tight`}
             >
