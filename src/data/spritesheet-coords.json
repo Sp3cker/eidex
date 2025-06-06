@@ -3962,297 +3962,1473 @@
     ]
   },
   {
-    "item": "ITEM_TM_CASE",
+    "item": "ITEM_TM_ACROBATICS",
     "coords": [
       396,
       2310
+    ]
+  },
+  {
+    "item": "ITEM_TM_AERIAL_ACE",
+    "coords": [
+      462,
+      2310
+    ]
+  },
+  {
+    "item": "ITEM_TM_AIR_SLASH",
+    "coords": [
+      528,
+      2310
+    ]
+  },
+  {
+    "item": "ITEM_TM_ALLURING_VOICE",
+    "coords": [
+      594,
+      2310
+    ]
+  },
+  {
+    "item": "ITEM_TM_ARM_THRUST",
+    "coords": [
+      660,
+      2310
+    ]
+  },
+  {
+    "item": "ITEM_TM_AURA_SPHERE",
+    "coords": [
+      726,
+      2310
+    ]
+  },
+  {
+    "item": "ITEM_TM_BLAZE_KICK",
+    "coords": [
+      792,
+      2310
+    ]
+  },
+  {
+    "item": "ITEM_TM_BLIZZARD",
+    "coords": [
+      858,
+      2310
+    ]
+  },
+  {
+    "item": "ITEM_TM_BODY_PRESS",
+    "coords": [
+      924,
+      2310
+    ]
+  },
+  {
+    "item": "ITEM_TM_BODY_SLAM",
+    "coords": [
+      990,
+      2310
+    ]
+  },
+  {
+    "item": "ITEM_TM_BRAVE_BIRD",
+    "coords": [
+      0,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_BRICK_BREAK",
+    "coords": [
+      66,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_BUG_BITE",
+    "coords": [
+      132,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_BUG_BUZZ",
+    "coords": [
+      198,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_BULK_UP",
+    "coords": [
+      264,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_BULLDOZE",
+    "coords": [
+      330,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_BULLET_SEED",
+    "coords": [
+      396,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_CALM_MIND",
+    "coords": [
+      462,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_CASE",
+    "coords": [
+      528,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_CHARGE_BEAM",
+    "coords": [
+      594,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_CLOSE_COMBAT",
+    "coords": [
+      660,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_DARK_HOLE",
+    "coords": [
+      726,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_DARK_PULSE",
+    "coords": [
+      792,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_DAZZLING_GLEAM",
+    "coords": [
+      858,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_DEFOG",
+    "coords": [
+      924,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_DIG",
+    "coords": [
+      990,
+      2376
+    ]
+  },
+  {
+    "item": "ITEM_TM_DRACO_METEOR",
+    "coords": [
+      0,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_DRAGON_CLAW",
+    "coords": [
+      66,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_DRAGON_DANCE",
+    "coords": [
+      132,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_DRAGON_PULSE",
+    "coords": [
+      198,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_DRAGON_TAIL",
+    "coords": [
+      264,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_DRAIN_PUNCH",
+    "coords": [
+      330,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_DRAINING_KISS",
+    "coords": [
+      396,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_DRILL_RUN",
+    "coords": [
+      462,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_DUAL_CHOP",
+    "coords": [
+      528,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_DUAL_WINGBEAT",
+    "coords": [
+      594,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_EARTH_POWER",
+    "coords": [
+      660,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_EARTHQUAKE",
+    "coords": [
+      726,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_ELECTROWEB",
+    "coords": [
+      792,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_ENERGY_BALL",
+    "coords": [
+      858,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_EXPANDING_FORCE",
+    "coords": [
+      924,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_EXPLOSION",
+    "coords": [
+      990,
+      2442
+    ]
+  },
+  {
+    "item": "ITEM_TM_FACADE",
+    "coords": [
+      0,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_FIRE_BLAST",
+    "coords": [
+      66,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_FIRE_FANG",
+    "coords": [
+      132,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_FIRE_PUNCH",
+    "coords": [
+      198,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_FLAME_CHARGE",
+    "coords": [
+      264,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_FLAMETHROWER",
+    "coords": [
+      330,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_FLARE_BLITZ",
+    "coords": [
+      396,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_FLASH_CANNON",
+    "coords": [
+      462,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_FLIP_TURN",
+    "coords": [
+      528,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_FOCUS_BLAST",
+    "coords": [
+      594,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_FOCUS_PUNCH",
+    "coords": [
+      660,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_FOUL_PLAY",
+    "coords": [
+      726,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_FUTURE_SIGHT",
+    "coords": [
+      792,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_GIGA_DRAIN",
+    "coords": [
+      858,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_GRASS_KNOT",
+    "coords": [
+      924,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_GRASSY_GLIDE",
+    "coords": [
+      990,
+      2508
+    ]
+  },
+  {
+    "item": "ITEM_TM_GUNK_SHOT",
+    "coords": [
+      0,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_GYRO_BALL",
+    "coords": [
+      66,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_HEAT_CRASH",
+    "coords": [
+      132,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_HEAT_WAVE",
+    "coords": [
+      198,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_HEX",
+    "coords": [
+      264,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_HIDDEN_POWER",
+    "coords": [
+      330,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_HIGH_HORSEPOWER",
+    "coords": [
+      396,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_HURRICANE",
+    "coords": [
+      462,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_HYDRO_PUMP",
+    "coords": [
+      528,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_HYPER_VOICE",
+    "coords": [
+      594,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_ICE_BEAM",
+    "coords": [
+      660,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_ICE_FANG",
+    "coords": [
+      726,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_ICE_PUNCH",
+    "coords": [
+      792,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_ICE_SPINNER",
+    "coords": [
+      858,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_ICICLE_SPEAR",
+    "coords": [
+      924,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_ICY_WIND",
+    "coords": [
+      990,
+      2574
+    ]
+  },
+  {
+    "item": "ITEM_TM_IRON_DEFENSE",
+    "coords": [
+      0,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_IRON_HEAD",
+    "coords": [
+      66,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_IRON_TAIL",
+    "coords": [
+      132,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_KNOCK_OFF",
+    "coords": [
+      198,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_LEAF_BLADE",
+    "coords": [
+      264,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_LEECH_LIFE",
+    "coords": [
+      330,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_LIGHT_SCREEN",
+    "coords": [
+      396,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_LIQUIDATION",
+    "coords": [
+      462,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_LOW_KICK",
+    "coords": [
+      528,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_LOW_SWEEP",
+    "coords": [
+      594,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_MEGAHORN",
+    "coords": [
+      660,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_METEOR_BEAM",
+    "coords": [
+      726,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_MOONBLAST",
+    "coords": [
+      792,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_MYSTICAL_FIRE",
+    "coords": [
+      858,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_NASTY_PLOT",
+    "coords": [
+      924,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_OVERHEAT",
+    "coords": [
+      990,
+      2640
+    ]
+  },
+  {
+    "item": "ITEM_TM_PAIN_SPLIT",
+    "coords": [
+      0,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_PHANTOM_FORCE",
+    "coords": [
+      66,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_PIN_MISSILE",
+    "coords": [
+      132,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_PLAY_ROUGH",
+    "coords": [
+      198,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_PLUCK",
+    "coords": [
+      264,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_POISON_FANG",
+    "coords": [
+      330,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_POISON_JAB",
+    "coords": [
+      396,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_POLTERGEIST",
+    "coords": [
+      462,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_POWER_GEM",
+    "coords": [
+      528,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_POWER_UP_PUNCH",
+    "coords": [
+      594,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_POWER_WHIP",
+    "coords": [
+      660,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_PROTECT",
+    "coords": [
+      726,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_PSYCHIC",
+    "coords": [
+      792,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_PSYCHIC_FANGS",
+    "coords": [
+      858,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_PSYCHIC_NOISE",
+    "coords": [
+      924,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_PSYSHOCK",
+    "coords": [
+      990,
+      2706
+    ]
+  },
+  {
+    "item": "ITEM_TM_RAIN_DANCE",
+    "coords": [
+      0,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_REFLECT",
+    "coords": [
+      66,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_REST",
+    "coords": [
+      132,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_RETURN",
+    "coords": [
+      198,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_RISING_VOLTAGE",
+    "coords": [
+      264,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_ROAR",
+    "coords": [
+      330,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_ROCK_BLAST",
+    "coords": [
+      396,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_ROCK_POLISH",
+    "coords": [
+      462,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_ROCK_SLIDE",
+    "coords": [
+      528,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_ROCK_TOMB",
+    "coords": [
+      594,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_ROOST",
+    "coords": [
+      660,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_SANDSTORM",
+    "coords": [
+      726,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_SCALD",
+    "coords": [
+      792,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_SCALE_SHOT",
+    "coords": [
+      858,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_SCORCHING_SANDS",
+    "coords": [
+      924,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_SEED_BOMB",
+    "coords": [
+      990,
+      2772
+    ]
+  },
+  {
+    "item": "ITEM_TM_SHADOW_BALL",
+    "coords": [
+      0,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_SHADOW_CLAW",
+    "coords": [
+      66,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_SILVER_WIND",
+    "coords": [
+      132,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_SLEEP_TALK",
+    "coords": [
+      198,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_SLUDGE_BOMB",
+    "coords": [
+      264,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_SLUDGE_WAVE",
+    "coords": [
+      330,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_SMACK_DOWN",
+    "coords": [
+      396,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_SNARL",
+    "coords": [
+      462,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_SNOWSCAPE",
+    "coords": [
+      528,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_SOLAR_BEAM",
+    "coords": [
+      594,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_SOLAR_BLADE",
+    "coords": [
+      660,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_STEALTH_ROCK",
+    "coords": [
+      726,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_STEEL_WING",
+    "coords": [
+      792,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_STOMPING_TANTRUM",
+    "coords": [
+      858,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_STONE_EDGE",
+    "coords": [
+      924,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_STORED_POWER",
+    "coords": [
+      990,
+      2838
+    ]
+  },
+  {
+    "item": "ITEM_TM_SUBSTITUTE",
+    "coords": [
+      0,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_SUNNY_DAY",
+    "coords": [
+      66,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_SUPERCELL_SLAM",
+    "coords": [
+      132,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_SUPERPOWER",
+    "coords": [
+      198,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_SWORDS_DANCE",
+    "coords": [
+      264,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_TAIL_SLAP",
+    "coords": [
+      330,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_TAILWIND",
+    "coords": [
+      396,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_TAUNT",
+    "coords": [
+      462,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_TELEPORT",
+    "coords": [
+      528,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_TEMPER_FLARE",
+    "coords": [
+      594,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_THIEF",
+    "coords": [
+      660,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_THUNDER",
+    "coords": [
+      726,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_THUNDER_FANG",
+    "coords": [
+      792,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_THUNDER_PUNCH",
+    "coords": [
+      858,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_THUNDER_WAVE",
+    "coords": [
+      924,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_THUNDERBOLT",
+    "coords": [
+      990,
+      2904
+    ]
+  },
+  {
+    "item": "ITEM_TM_TOXIC",
+    "coords": [
+      0,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_TRAILBLAZE",
+    "coords": [
+      66,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_TRICK_ROOM",
+    "coords": [
+      132,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_TRIPLE_AXEL",
+    "coords": [
+      198,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_U_TURN",
+    "coords": [
+      264,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_VACUUM_WAVE",
+    "coords": [
+      330,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_VENOSHOCK",
+    "coords": [
+      396,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_VOLT_SWITCH",
+    "coords": [
+      462,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_WATER_PULSE",
+    "coords": [
+      528,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_WEATHER_BALL",
+    "coords": [
+      594,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_WILD_CHARGE",
+    "coords": [
+      660,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_WILL_O_WISP",
+    "coords": [
+      726,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_WORK_UP",
+    "coords": [
+      792,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_X_SCISSOR",
+    "coords": [
+      858,
+      2970
+    ]
+  },
+  {
+    "item": "ITEM_TM_ZEN_HEADBUTT",
+    "coords": [
+      924,
+      2970
     ]
   },
   {
     "item": "ITEM_TOWN_MAP",
     "coords": [
-      462,
-      2310
+      990,
+      2970
     ]
   },
   {
     "item": "ITEM_TOXIC_ORB",
     "coords": [
-      528,
-      2310
+      0,
+      3036
     ]
   },
   {
     "item": "ITEM_TOXIC_PLATE",
     "coords": [
-      594,
-      2310
+      66,
+      3036
     ]
   },
   {
     "item": "ITEM_TRI_PASS",
     "coords": [
-      660,
-      2310
+      132,
+      3036
     ]
   },
   {
     "item": "ITEM_TROPIC_MAIL",
     "coords": [
-      726,
-      2310
+      198,
+      3036
     ]
   },
   {
     "item": "ITEM_TWICE_SPICED_RADISH",
     "coords": [
-      792,
-      2310
+      264,
+      3036
     ]
   },
   {
     "item": "ITEM_TWISTED_SPOON",
     "coords": [
-      858,
-      2310
+      330,
+      3036
     ]
   },
   {
     "item": "ITEM_TYRANITARITE",
     "coords": [
-      924,
-      2310
+      396,
+      3036
     ]
   },
   {
     "item": "ITEM_ULTRA_BALL",
     "coords": [
-      990,
-      2310
+      462,
+      3036
     ]
   },
   {
     "item": "ITEM_ULTRANECROZIUM_Z",
     "coords": [
-      0,
-      2376
+      528,
+      3036
     ]
   },
   {
     "item": "ITEM_UNREMARKABLE_TEACUP",
     "coords": [
-      66,
-      2376
+      594,
+      3036
     ]
   },
   {
     "item": "ITEM_UPGRADE",
     "coords": [
-      132,
-      2376
+      660,
+      3036
     ]
   },
   {
     "item": "ITEM_UTILITY_UMBRELLA",
     "coords": [
-      198,
-      2376
+      726,
+      3036
     ]
   },
   {
     "item": "ITEM_VENUSAURITE",
     "coords": [
-      264,
-      2376
+      792,
+      3036
     ]
   },
   {
     "item": "ITEM_VS_SEEKER",
     "coords": [
-      330,
-      2376
+      858,
+      3036
     ]
   },
   {
     "item": "ITEM_WACAN_BERRY",
     "coords": [
-      396,
-      2376
+      924,
+      3036
     ]
   },
   {
     "item": "ITEM_WAILMER_PAIL",
     "coords": [
-      462,
-      2376
+      990,
+      3036
     ]
   },
   {
     "item": "ITEM_WATER_GEM",
     "coords": [
-      528,
-      2376
+      0,
+      3102
     ]
   },
   {
     "item": "ITEM_WATER_MEMORY",
     "coords": [
-      594,
-      2376
+      66,
+      3102
     ]
   },
   {
     "item": "ITEM_WATER_STONE",
     "coords": [
-      660,
-      2376
+      132,
+      3102
     ]
   },
   {
     "item": "ITEM_WATERIUM_Z",
     "coords": [
-      726,
-      2376
+      198,
+      3102
     ]
   },
   {
     "item": "ITEM_WATMEL_BERRY",
     "coords": [
-      792,
-      2376
+      264,
+      3102
     ]
   },
   {
     "item": "ITEM_WAVE_INCENSE",
     "coords": [
-      858,
-      2376
+      330,
+      3102
     ]
   },
   {
     "item": "ITEM_WAVE_MAIL",
     "coords": [
-      924,
-      2376
+      396,
+      3102
     ]
   },
   {
     "item": "ITEM_WEAKNESS_POLICY",
     "coords": [
-      990,
-      2376
+      462,
+      3102
     ]
   },
   {
     "item": "ITEM_WELLSPRING_MASK",
     "coords": [
-      0,
-      2442
+      528,
+      3102
     ]
   },
   {
     "item": "ITEM_WEPEAR_BERRY",
     "coords": [
-      66,
-      2442
+      594,
+      3102
     ]
   },
   {
     "item": "ITEM_WHIPPED_DREAM",
     "coords": [
-      132,
-      2442
+      660,
+      3102
     ]
   },
   {
     "item": "ITEM_WHITE_APRICORN",
     "coords": [
-      198,
-      2442
+      726,
+      3102
     ]
   },
   {
     "item": "ITEM_WIDE_LENS",
     "coords": [
-      264,
-      2442
+      792,
+      3102
     ]
   },
   {
     "item": "ITEM_WIKI_BERRY",
     "coords": [
-      330,
-      2442
+      858,
+      3102
     ]
   },
   {
     "item": "ITEM_WISE_GLASSES",
     "coords": [
-      396,
-      2442
+      924,
+      3102
     ]
   },
   {
     "item": "ITEM_WISHING_PIECE",
     "coords": [
-      462,
-      2442
+      990,
+      3102
     ]
   },
   {
     "item": "ITEM_WOOD_MAIL",
     "coords": [
-      528,
-      2442
+      0,
+      3168
     ]
   },
   {
     "item": "ITEM_YACHE_BERRY",
     "coords": [
-      594,
-      2442
+      66,
+      3168
     ]
   },
   {
     "item": "ITEM_YELLOW_APRICORN",
     "coords": [
-      660,
-      2442
+      132,
+      3168
     ]
   },
   {
     "item": "ITEM_YELLOW_NECTAR",
     "coords": [
-      726,
-      2442
+      198,
+      3168
     ]
   },
   {
     "item": "ITEM_Z_POWER_RING",
     "coords": [
-      792,
-      2442
+      264,
+      3168
     ]
   },
   {
     "item": "ITEM_ZAP_PLATE",
     "coords": [
-      858,
-      2442
+      330,
+      3168
     ]
   },
   {
     "item": "ITEM_ZOOM_LENS",
     "coords": [
-      924,
-      2442
+      396,
+      3168
     ]
   },
   {
     "item": "ITEM_ZYGARDE_CUBE",
     "coords": [
-      990,
-      2442
+      462,
+      3168
     ]
   }
 ]

@@ -48,7 +48,7 @@ export function getItemSpriteStyle(
   // Calculate the scaled spritesheet dimensions
   // Original spritesheet: 1054x2506px (from the generation output)
   const originalSheetWidth = 1054;
-  const originalSheetHeight = 2506;
+  const originalSheetHeight = 3232;
   const scaledSheetWidth = originalSheetWidth * scale;
   const scaledSheetHeight = originalSheetHeight * scale;
   
