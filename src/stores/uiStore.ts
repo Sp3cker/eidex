@@ -1,7 +1,8 @@
 import { create } from "zustand";
 import { Pokemon } from "@/types";
-import { persist } from "zustand/middleware";
+import { persist, subscribeWithSelector } from "zustand/middleware";
 import pokemons from "@/data/speciesData.json";
+import { updatePokemonHelmet } from "./pokemonHelmetUpdater";
 
 interface UIState {
   isShiny: boolean;
@@ -16,30 +17,53 @@ interface UIState {
 }
 
 export const useUIStore = create<UIState>()(
-  persist(
-    (set) => ({
-      //Properties
-      isShiny: false,
-      selectedPokemon: null,
-      isModalOpen: false,
+  subscribeWithSelector(
+    persist(
+      (set) => ({
+        //Properties
+        isShiny: false,
+        selectedPokemon: null,
+        isModalOpen: false,
 
-      //Actions
-      toggleShiny: () => set((state) => ({ isShiny: !state.isShiny })),
-      setSelectedPokemon: (pokemon) => set({ selectedPokemon: pokemon }),
-      setSelectedPokemonByIndex: (index: number) => {
-        const pokemon = pokemons.find((p) => p.index === index);
-        if (pokemon) {
-          set({ selectedPokemon: pokemon });
-        }
+        //Actions
+        toggleShiny: () => set((state) => ({ isShiny: !state.isShiny })),
+        setSelectedPokemon: (pokemon) => set({ selectedPokemon: pokemon }),
+        setSelectedPokemonByIndex: (index: number) => {
+          const pokemon = pokemons.find((p) => p.index === index);
+          if (pokemon) {
+            set({ selectedPokemon: pokemon });
+          }
+        },
+        openModal: (pokemon) =>
+          set({ selectedPokemon: pokemon, isModalOpen: true }),
+        closeModal: () => set({ isModalOpen: false, selectedPokemon: null }),
+      }),
+      {
+        name: "eidex-ui-storage",
+        // Only persist the shiny state
+        partialize: (state) => ({ isShiny: state.isShiny }),
       },
-      openModal: (pokemon) =>
-        set({ selectedPokemon: pokemon, isModalOpen: true }),
-      closeModal: () => set({ isModalOpen: false, selectedPokemon: null }),
-    }),
-    {
-      name: "eidex-ui-storage",
-      // Only persist the shiny state
-      partialize: (state) => ({ isShiny: state.isShiny }),
-    },
+    ),
   ),
+);
+
+// Subscribe to Pokemon modal changes and update head tags only when modal is open
+useUIStore.subscribe(
+  (state) => ({ 
+    selectedPokemon: state.selectedPokemon, 
+    isShiny: state.isShiny,
+    isModalOpen: state.isModalOpen 
+  }),
+  ({ selectedPokemon, isShiny, isModalOpen }) => {
+    // Only update head when modal is open and pokemon is selected
+    if (isModalOpen && selectedPokemon) {
+      updatePokemonHelmet(selectedPokemon, isShiny);
+    }
+  },
+  { 
+    equalityFn: (a, b) => 
+      a.selectedPokemon?.index === b.selectedPokemon?.index && 
+      a.isShiny === b.isShiny && 
+      a.isModalOpen === b.isModalOpen 
+  }
 );

@@ -1,6 +1,7 @@
 import { useUIStore } from "@/stores/uiStore";
-import useMapStore, { formatMapString } from "@/stores/useMapStore";
+import { useMapStore } from "@/stores/useMapStore";
 import React from "react";
+import { formatMapString } from "@/utils/formatMapString";
 
 const zoneToTextColor = (zone: string) => {
   const obj: Record<string, string> = {

@@ -4,24 +4,11 @@ import ItemSearch from "@/utils/itemsData";
 import { getSelectedLevel } from "./setSelectedMap";
 import { MapStore } from "./types";
 import { subscribeWithSelector } from "zustand/middleware";
+import { updateMapHelmet } from "./helmetUpdater";
 
 const UnderscoreRegex = new RegExp(/^[^_]*_/);
 
-export function formatMapString(mapNameFromJson: string) {
-  return (
-    mapNameFromJson
-      .replace(/^MAP_/, "") // Remove 'MAP_' prefix
-      // .toLowerCase() // Convert to lowercase
-      .replace(
-        /([A-Z]+)_?/g,
-        (_, p1) => p1.charAt(0).toUpperCase() + p1.slice(1).toLowerCase() + " ",
-      )
-      .trim()
-      .replace(/(^|_)([a-z])/g, (_: any, __: any, letter: string) =>
-        letter.toUpperCase(),
-      ) // Capitalize first letter and after underscores
-  );
-}
+
 export const useMapStore = create<MapStore>()(
   subscribeWithSelector((set, get) => {
     const initialState = {
@@ -140,6 +127,16 @@ export const useMapStore = create<MapStore>()(
 );
 
 export default useMapStore;
+
+// Subscribe to map changes and update head tags
+useMapStore.subscribe(
+  (state) => ({ selectedMap: state.selectedMap, selectedLevelLabel: state.selectedLevelLabel }),
+  ({ selectedMap, selectedLevelLabel }) => {
+    updateMapHelmet(selectedMap, selectedLevelLabel);
+  },
+  { equalityFn: (a, b) => a.selectedMap === b.selectedMap && a.selectedLevelLabel === b.selectedLevelLabel }
+);
+
 window.addEventListener("popstate", () => {
   const path = window.location.pathname;
   const match = path.match(/^\/map\/(.+)$/);

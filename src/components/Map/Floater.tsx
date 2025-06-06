@@ -1,6 +1,7 @@
-import { useMapStore, formatMapString } from "@/stores/useMapStore";
+import { useMapStore } from "@/stores/useMapStore";
 import { memo, useLayoutEffect, useRef } from "react";
 import { animated, to, useSpring } from "@react-spring/web";
+import { formatMapString } from "@/utils/formatMapString";
 
 const Floater = memo(function Floater() {
   const hoveredCoordinates = useMapStore((state) => state.hoveredCoordinates);

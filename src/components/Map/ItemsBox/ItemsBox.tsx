@@ -1,6 +1,7 @@
 // eidex/src/components/Map/ItemsBox/ItemsBox.tsx
 import { memo } from "react";
-import { formatMapString, useMapStore } from "@/stores/useMapStore";
+import { useMapStore } from "@/stores/useMapStore";
+import { formatMapString } from "@/utils/formatMapString";
 import { useSpring, animated } from "react-spring";
 import ItemsList from "./ItemsList";
 import CameraIcon from "./CameraIcon";

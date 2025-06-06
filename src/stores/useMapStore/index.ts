@@ -1,4 +1,4 @@
-import { useMapStore, formatMapString } from "./useMapStore";
+import { useMapStore } from "./useMapStore";
 
-export { useMapStore, formatMapString };
+export { useMapStore };
 export default useMapStore;
