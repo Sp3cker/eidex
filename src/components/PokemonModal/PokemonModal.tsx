@@ -22,11 +22,10 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
   const setSelectedPokemon = useUIStore((state) => state.setSelectedPokemon);
   const isShiny = useUIStore((state) => state.isShiny);
   const screenWidth = useScreenWidth();
-  const [selectedAbility, setSelectedAbility] = useState<Ability | null>(null);
   const [tabsRef, tabsInView] = useInView();
   const evoFamily = getEvolutionaryFamily(pokemon.index);
   const tabsData = buildPokemonMoveTabs(pokemon);
-
+  console.log("PokemonView", pokemon);
   const handleSelectPokemon = (pokemonId: number) => {
     const pokemon: Pokemon = getSpeciesData(pokemonId);
     setSelectedPokemon(pokemon);
@@ -60,10 +59,7 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
       <div className="my-2 mt-6 flex w-full flex-col">
         <AbilityBox key={pokemon.index} abilities={pokemon.abilities} />
         <div className="w-full">
-          <AbilityDescription
-            selectedAbility={selectedAbility}
-            onClose={() => setSelectedAbility(null)}
-          />
+          {/* <AbilityDescription /> */}
         </div>
         <div className="my-3">
           <EvolutionView
@@ -100,7 +96,7 @@ function PokemonModal() {
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-md z-9"
+      className="z-9 fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-md"
       onClick={closeModal}
     >
       <div

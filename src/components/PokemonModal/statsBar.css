@@ -1,0 +1,41 @@
+.stat-bar {
+  position: absolute;
+}
+.cover {
+  position: absolute;
+}
+.stats-red {
+  background-image: linear-gradient(
+    64deg,
+    var(--color-red-500),
+    var(--color-red-400)
+  );
+}
+.stats-orange {
+  background-image: linear-gradient(
+    64deg,
+    var(--color-orange-500),
+    var(--color-orange-400)
+  );
+}
+.stats-yellow {
+  background-image: linear-gradient(
+    64deg,
+    var(--color-amber-400),
+    var(--color-yellow-400)
+  );
+}
+.stats-green {
+  background-image: linear-gradient(
+    64deg,
+    var(--color-green-500),
+    var(--color-emerald-400)
+  );
+}
+.stats-teal {
+  background-image: linear-gradient(
+    64deg,
+    var(--color-blue-500),
+    var(--color-sky-400)
+  );
+}
