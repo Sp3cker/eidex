@@ -1,5 +1,5 @@
 import React from "react";
-import { getItemSpriteStyle32 } from "@/utils/itemSprites";
+import { getItemSpriteStyle } from "@/utils/itemSprites";
 
 export const EmptyState = React.memo(function EmptyState({
   message,
@@ -24,7 +24,7 @@ export const ItemListContent = React.memo(function ItemsGrid<
     <div>
       {items.map((item) => {
         // Use 32px display size for better layout, but keep 64px source for crisp quality
-        const spriteStyle = getItemSpriteStyle32(item.id);
+        const spriteStyle = getItemSpriteStyle(item.id, 32);
         
         return (
           <div

@@ -69,7 +69,7 @@ export function getItemSpriteStyle(
 /**
  * Convenience functions for common sprite sizes
  */
-export const getItemSpriteStyle32 = (itemId: string) => getItemSpriteStyle(itemId, 32);
+export const getItemSpriteStyle32 = (itemId: string) => getItemSpriteStyle(itemId, 16);
 export const getItemSpriteStyle48 = (itemId: string) => getItemSpriteStyle(itemId, 48);
 export const getItemSpriteStyle64 = (itemId: string) => getItemSpriteStyle(itemId, 64);
 

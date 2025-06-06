@@ -142,6 +142,15 @@ class ItemSearch {
     return returnObj;
   }
 
+  byLevel(levelName: string): ItemsByMap | undefined {
+    for (const mapLevels of Object.values(LevelsInfo)) {
+      const level = mapLevels.find((lvl) => lvl.baseMap === levelName);
+      if (level) {
+        return this.byMap(level.baseMap);
+      }
+    }
+    return undefined;
+  }
 }
 
 const itemSearch = new ItemSearch();

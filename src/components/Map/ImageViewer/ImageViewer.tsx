@@ -1,6 +1,8 @@
 import useMapStore from "@/stores/useMapStore";
-import { useMemo, useState } from "react";
-
+import { useMemo, useState, useRef, useEffect } from "react";
+import { animated, config, useSprings } from "react-spring";
+import { getItemSpriteStyle } from "@/utils/itemSprites";
+import "./imageViewer.css";
 const ImageViewer = () => {
   const { selectedImageName, setViewingImage, showImage, items } = useMapStore(
     (state) => ({
@@ -10,14 +12,46 @@ const ImageViewer = () => {
       items: state.selectedMapItems,
     }),
   );
-
-  const [imgDimensions, setImgDimensions] = useState<{ width: number; height: number } | null>(null);
+  const [imgDimensions, setImgDimensions] = useState<{
+    width: number;
+    height: number;
+  } | null>(null);
+  const [displayedSize, setDisplayedSize] = useState<{
+    width: number;
+    height: number;
+  } | null>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   const pickupItems = useMemo(() => {
     if (!items) return [];
 
     return items?.pickupItems;
   }, [items?.pickupItems]);
+
+  const [springs] = useSprings(
+    pickupItems.length,
+    (index) => ({
+      opacity: showImage ? 1 : 0,
+      // transform: showImage ? "translateY(0px)" : "translateY(0px)",
+      config: config.gentle,
+      delay: 21 * index, 
+    }),
+    [pickupItems.length, showImage],
+  );
+
+  // Update displayed size on window resize
+  useEffect(() => {
+    const updateDisplayedSize = () => {
+      if (imgRef.current) {
+        const rect = imgRef.current.getBoundingClientRect();
+        setDisplayedSize({ width: rect.width, height: rect.height });
+      }
+    };
+
+    window.addEventListener("resize", updateDisplayedSize);
+    return () => window.removeEventListener("resize", updateDisplayedSize);
+  }, []);
+
   if (selectedImageName === null) {
     return null;
   }
@@ -25,59 +59,88 @@ const ImageViewer = () => {
   return (
     <div>
       {showImage && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/80 p-2 sm:p-4">
+        <div className="image-viewer-overlay">
           <button
-            className="absolute right-2 top-2 sm:right-4 sm:top-4 rounded-full bg-white/80 p-1 sm:p-2 text-lg sm:text-xl font-bold shadow-lg hover:bg-white"
+            className="image-viewer-close-button"
             onClick={() => setViewingImage(false)}
             aria-label="Close full screen image"
           >
             ×
           </button>
-          <div className="relative max-w-[90vw] max-h-[85vh] sm:max-w-[95vw] sm:max-h-[90vh]">
+          <div className="image-viewer-container">
             <img
+              ref={imgRef}
               src={`/Archive/${selectedImageName}.webp`}
-              className="max-h-full max-w-full rounded shadow-lg object-contain"
+              className="image-viewer-img"
               alt={`${selectedImageName}`}
-              onLoad={e => {
+              onLoad={(e) => {
                 const img = e.currentTarget;
-                setImgDimensions({ width: img.naturalWidth, height: img.naturalHeight });
+                setImgDimensions({
+                  width: img.naturalWidth,
+                  height: img.naturalHeight,
+                });
+                // Get displayed dimensions
+                const rect = img.getBoundingClientRect();
+                setDisplayedSize({ width: rect.width, height: rect.height });
               }}
             />
             {/* Render pickup item markers */}
-            {pickupItems && pickupItems.map((item, idx: number) => (
-              <div
-                key={idx}
-                className="absolute z-10 flex flex-col items-center"
-                style={{
-                  left: item.coords[0] * 16 + 6, // shift right by 6px
-                  top: item.coords[1] * 16,
-                  transform: 'translate(-50%, -100%)',
-                  pointerEvents: 'auto',
-                }}
-              >
-                <div className="bg-yellow-400 cool-font font-bold text-black text-xs px-2 py-1 rounded shadow-lg relative">
-                  {item.name || 'Item'}
-                </div>
-                {/* Pointer triangle */}
-                <div
-                  style={{
-                    width: 0,
-                    height: 0,
-                    borderLeft: '6px solid transparent',
-                    borderRight: '6px solid transparent',
-                    borderTop: '8px solid var(--color-yellow-400)', // Tailwind yellow-400
-                    marginTop: '-2px',
-                  }}
-                />
-              </div>
-            ))}
+            {pickupItems &&
+              imgDimensions &&
+              displayedSize &&
+              springs.map((spring, idx: number) => {
+                // Calculate scale factors
+                const scaleX = displayedSize.width / imgDimensions.width;
+                const scaleY = displayedSize.height / imgDimensions.height;
+                const item = pickupItems[idx];
+
+                return (
+                  <animated.div
+                    key={idx}
+                    className="pickup-item-marker"
+                    style={{
+                      ...spring,
+                      left: (item.coords[0] * 16 + 8) * scaleX, // Apply scale to X coordinate, +8 for center of 16px tile
+                      top: (item.coords[1] * 16 + 8) * scaleY, // Apply scale to Y coordinate, +8 for center of 16px tile
+                    }}
+                  >
+                    <div className="pickup-item-tooltip cool-font">
+                      <div 
+                        className=" rendering-pixelated"
+                        style={getItemSpriteStyle(item.id, 16) || {}}
+                      />
+                      <span className="item-name">{item.name || "Item"}</span>
+                    </div>
+                    {/* Pointer triangle */}
+                    <div className="pickup-item-arrow" />
+                  </animated.div>
+                );
+              })}
           </div>
           {/* Example: show dimensions for debugging */}
-          {imgDimensions && (
-            <div className="text-white text-xs sm:text-sm mt-2">Image size: {imgDimensions.width} x {imgDimensions.height}</div>
+          {imgDimensions && displayedSize && (
+            <div className="debug-info">
+              <div>
+                Original: {imgDimensions.width} x {imgDimensions.height}
+              </div>
+              <div>
+                Displayed: {Math.round(displayedSize.width)} x{" "}
+                {Math.round(displayedSize.height)}
+              </div>
+              <div>
+                Scale: {(displayedSize.width / imgDimensions.width).toFixed(3)}{" "}
+                x {(displayedSize.height / imgDimensions.height).toFixed(3)}
+              </div>
+            </div>
           )}
-          <p className="cool-font text-white text-sm sm:text-base"> Image viewer isn&apos;t done yet, ok...</p>
-          <p className="cool-font text-white text-sm sm:text-base"> Some things are not where they should be.</p>
+          <p className="status-text cool-font">
+            {" "}
+            Image viewer isn&apos;t done yet, ok...
+          </p>
+          <p className="status-text cool-font">
+            {" "}
+            Some things are not where they should be.
+          </p>
         </div>
       )}
     </div>

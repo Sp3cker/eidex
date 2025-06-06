@@ -1,10 +1,8 @@
-import { useState } from "react";
-import { Ability, Pokemon, StatArray } from "../../types";
+import { Pokemon, StatArray } from "../../types";
 import CloseButton from "../CloseButton";
 import EvolutionView from "../EvolutionView/EvolutionView";
 import AbilityBox from "./AbilityBox";
 import { getEvolutionaryFamily } from "@/utils/evoFamily";
-import AbilityDescription from "./AbilityDescription";
 import TabbedInterface from "./TabbedInterface";
 import TypeMatchup from "./TypeMatchup";
 import { buildPokemonMoveTabs } from "./Learnset/learnsetTabs";
@@ -58,9 +56,7 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
       </div>
       <div className="my-2 mt-6 flex w-full flex-col">
         <AbilityBox key={pokemon.index} abilities={pokemon.abilities} />
-        <div className="w-full">
-          {/* <AbilityDescription /> */}
-        </div>
+        <div className="w-full">{/* <AbilityDescription /> */}</div>
         <div className="my-3">
           <EvolutionView
             pokemon={pokemon}
