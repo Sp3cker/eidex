@@ -9,11 +9,14 @@ const Header = () => (
       height="36"
     />
     <div>
-      <Link to="/dex">
-        <button className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 rounded-sm px-5 py-1 text-sm text-gray-200">
-          Dex
-        </button>
-      </Link>
+      <a 
+        href="https://dex.emeraldimperium.net/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 rounded-sm px-5 py-1 text-sm text-gray-200 inline-block"
+      >
+        Dex
+      </a>
 
       <Link to="/">
         <button className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 rounded-sm px-5 py-1 text-sm text-gray-200">
