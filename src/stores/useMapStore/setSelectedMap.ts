@@ -81,14 +81,20 @@ const putEncounterRate = (mons: EncounterMons[]) => {
   return Array.from(monsterProps.values()) as EncounterMons[];
 };
 
-const getSelectedMapInfo = (id: string, index: number) => {
+const getSelectedMapInfo = (id: string, levelId: string) => {
   const targetMapEncounterGroup = Encounters[id];
 
   if (targetMapEncounterGroup === undefined) {
     console.error("Error selecting map encounters %s", id);
     return;
   }
-  const targetMapEncounters = targetMapEncounterGroup[index];
+  const targetMapEncounters = targetMapEncounterGroup.find(
+    (enc) => enc.map === levelId,
+  );
+  if (targetMapEncounters === undefined) {
+    console.error("Error selecting map encounters %s, level %s", id, levelId);
+    return;
+  }
 
   let landEncounters, waterEncounters, fishingEncounters;
   if (targetMapEncounters) {
@@ -142,7 +148,10 @@ const getSelectedLevel = (map: string, level: number) => {
     throw new Error(`Error selecting map level ${level}`);
   }
   const numOfLevels = Encounters[mapBaseName]?.length || 0;
-  const thisLevelEncounter = getSelectedMapInfo(targetLevel.baseMap, level);
+  const thisLevelEncounter = getSelectedMapInfo(
+    targetLevel.baseMap,
+    targetLevel.thisLevelsId,
+  );
 
   const thisLevelsItems = ItemSearch.byMap(mapBaseName);
 
@@ -152,6 +161,7 @@ const getSelectedLevel = (map: string, level: number) => {
     selectedMapItems: thisLevelsItems,
     mapLabel: targetLevel.levelLabel,
     selectedImageName: targetLevel.image,
+    selectedLevelId: targetLevel.thisLevelsId, // Used in ImageViewer to find it's pickup items
   };
 };
 export { getSelectedMapInfo, getSelectedLevel };

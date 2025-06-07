@@ -1,4 +1,10 @@
-import { LevelsInfo, Item, Items } from "@/data/map";
+import {
+  LevelsInfo,
+  Item,
+  Items,
+  PickupItem,
+  ItemWithCoords,
+} from "@/data/map";
 
 import { useCallback, useEffect, useState } from "react";
 import TrieSearch from "trie-search";
@@ -108,6 +114,7 @@ class ItemSearch {
    */
   byMap(mapBaseName: string): ItemsByMap | undefined {
     const levelsInThisMap = LevelsInfo[mapBaseName];
+
     if (levelsInThisMap === undefined || levelsInThisMap.length === 0) {
       return undefined;
     }
@@ -129,24 +136,40 @@ class ItemSearch {
         });
       });
       level.shopItems.forEach((shop: { items: string[] }) => {
-        returnObj.shopItems = shop.items
+
+        const toPush = shop.items
           .map((i) => Items.get(i))
           .filter((i) => i !== undefined) as Item[];
+        returnObj.shopItems.push(...toPush);
       });
       level.pickupItems.forEach((item) => {
         const toPush = Items.get(item.item);
-        returnObj.pickupItems.push({...toPush as Item, coords: item.coords} as Item);
+        returnObj.pickupItems.push({
+          ...(toPush as Item),
+          coords: item.coords,
+        } as Item);
       });
     }
 
     return returnObj;
   }
 
-  byLevel(levelName: string): ItemsByMap | undefined {
+  byLevel(levelName: string): ItemWithCoords[] | undefined {
     for (const mapLevels of Object.values(LevelsInfo)) {
-      const level = mapLevels.find((lvl) => lvl.baseMap === levelName);
+      const level = mapLevels.find((lvl) => lvl.thisLevelsId === levelName);
       if (level) {
-        return this.byMap(level.baseMap);
+        return level.pickupItems
+          .map((item) => {
+            const itemData = Items.get(item.item);
+            if (itemData) {
+              return {
+                ...itemData,
+                coords: item.coords,
+              };
+            }
+            return undefined;
+          })
+          .filter((item): item is ItemWithCoords => item !== undefined);
       }
     }
     return undefined;

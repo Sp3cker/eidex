@@ -8,7 +8,6 @@ import { updateMapHelmet } from "./helmetUpdater";
 
 const UnderscoreRegex = new RegExp(/^[^_]*_/);
 
-
 export const useMapStore = create<MapStore>()(
   subscribeWithSelector((set, get) => {
     const initialState = {
@@ -23,6 +22,7 @@ export const useMapStore = create<MapStore>()(
       selectedMapItems: null,
       selectedImageName: null,
       viewingImage: false,
+      selectedLevelId: null,
     };
     return {
       ...initialState,
@@ -59,6 +59,7 @@ export const useMapStore = create<MapStore>()(
           selectedMapItems: targetLevel.selectedMapItems,
           selectedCoordinates: storedCoords || [400, 340],
           selectedImageName: targetLevel.selectedImageName,
+          selectedLevelId: targetLevel.selectedLevelId,
         });
       },
       setSelectedMapLevel: (level: number) => {
@@ -72,7 +73,7 @@ export const useMapStore = create<MapStore>()(
           console.error("Error selecting map level %s, %s", level, currMap);
           return;
         }
-        debugger;
+
         set({
           selectedMapLevel: level,
           selectedMapsLevels: targetMap.selectedMapsLevels,
@@ -82,6 +83,7 @@ export const useMapStore = create<MapStore>()(
           selectedLevelFishingMons: targetMap.fishingEncounters,
           selectedMapItems: targetMap.selectedMapItems,
           selectedImageName: targetMap.selectedImageName,
+          selectedLevelId: targetMap.selectedLevelId,
         });
       },
       setSelectedPokemon: (name: string) => {
@@ -130,11 +132,18 @@ export default useMapStore;
 
 // Subscribe to map changes and update head tags
 useMapStore.subscribe(
-  (state) => ({ selectedMap: state.selectedMap, selectedLevelLabel: state.selectedLevelLabel }),
+  (state) => ({
+    selectedMap: state.selectedMap,
+    selectedLevelLabel: state.selectedLevelLabel,
+  }),
   ({ selectedMap, selectedLevelLabel }) => {
     updateMapHelmet(selectedMap, selectedLevelLabel);
   },
-  { equalityFn: (a, b) => a.selectedMap === b.selectedMap && a.selectedLevelLabel === b.selectedLevelLabel }
+  {
+    equalityFn: (a, b) =>
+      a.selectedMap === b.selectedMap &&
+      a.selectedLevelLabel === b.selectedLevelLabel,
+  },
 );
 
 window.addEventListener("popstate", () => {

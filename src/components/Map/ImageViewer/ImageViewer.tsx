@@ -2,17 +2,18 @@ import useMapStore from "@/stores/useMapStore";
 import { useMemo, useState, useRef, useEffect } from "react";
 import { animated, config, useSprings } from "react-spring";
 import { getItemSpriteStyle } from "@/utils/itemSprites";
+import itemSearch from "@/utils/itemsData";
 import "./imageViewer.css";
 const ImageViewer = () => {
-  const { selectedImageName, setViewingImage, showImage, items } = useMapStore(
-    (state) => ({
+  const { selectedImageName, setViewingImage, showImage, items, level } =
+    useMapStore((state) => ({
       showImage: state.viewingImage,
       selectedImageName: state.selectedImageName,
       setViewingImage: state.setViewingImage,
       items: state.selectedMapItems,
-    }),
-  );
-  console.log(selectedImageName)
+      level: state.selectedLevelId,
+    }));
+
   const [imgDimensions, setImgDimensions] = useState<{
     width: number;
     height: number;
@@ -24,9 +25,13 @@ const ImageViewer = () => {
   const imgRef = useRef<HTMLImageElement>(null);
 
   const pickupItems = useMemo(() => {
-    if (!items) return [];
+    if (!level) return [];
+    const items = itemSearch.byLevel(level);
 
-    return items?.pickupItems;
+    if (items) {
+      return items;
+    }
+    return []; // items?.pickupItems;
   }, [items?.pickupItems]);
 
   const [springs] = useSprings(
@@ -35,7 +40,7 @@ const ImageViewer = () => {
       opacity: showImage ? 1 : 0,
       // transform: showImage ? "translateY(0px)" : "translateY(0px)",
       config: config.gentle,
-      delay: 21 * index, 
+      delay: 21 * index,
     }),
     [pickupItems.length, showImage],
   );
@@ -106,8 +111,8 @@ const ImageViewer = () => {
                     }}
                   >
                     <div className="pickup-item-tooltip cool-font">
-                      <div 
-                        className=" rendering-pixelated"
+                      <div
+                        className="rendering-pixelated"
                         style={getItemSpriteStyle(item.id, 16) || {}}
                       />
                       <span className="item-name">{item.name || "Item"}</span>

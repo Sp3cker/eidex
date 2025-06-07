@@ -55,6 +55,13 @@ export type Item = {
   price: number | null;
   [key: string]: any;
 };
+
+export type ItemWithCoords = Item & {
+  coords: number[];
+};
+
+export type PickupItem = Level['pickupItems'][number];
+
 export const LevelsInfo = levels as Record<string, Level[]>;
 export const Encounters = encounters as Record<string, EncounterGroup[]>;
 export const Items = new Map<string, Item>(

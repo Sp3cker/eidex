@@ -23,6 +23,7 @@ const Footer = () => {
           </h3>
         </div>
         <div className="flex justify-end gap-5 pr-5">
+          <h5 className="font-pkmnem text-white">Not officially endorsed by Iriv24</h5>
           <FaDiscord />
           <a href="https://github.com/izrofid/eidex" target="__blank">
             <FaGithubAlt />

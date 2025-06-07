@@ -39,6 +39,7 @@ type MapStore = {
 
   viewingImage: boolean;
   selectedImageName: string | null;
+  selectedLevelId: string | null;
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;

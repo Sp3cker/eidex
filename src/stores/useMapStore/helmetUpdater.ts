@@ -6,10 +6,10 @@ export const updateMapHelmet = (
   selectedMap: string | null,
   selectedLevelLabel: string,
 ) => {
-  console.log("[updateMapHelmet] Called with:", {
-    selectedMap,
-    selectedLevelLabel,
-  });
+  // console.log("[updateMapHelmet] Called with:", {
+  //   selectedMap,
+  //   selectedLevelLabel,
+  // });
 
   const pageTitle = selectedMap
     ? `${formatMapString(selectedMap)} - Pokémon Emerald Imperium Dex Nav`
@@ -29,12 +29,12 @@ export const updateMapHelmet = (
 
   // Update document head directly
   document.title = pageTitle;
-  console.log("[updateMapHelmet] Set title:", document.title);
-  console.log(
-    "[updateMapHelmet] Using description:",
-    pageDescription.substring(0, 100) + "...",
-  );
-  console.log("[updateMapHelmet] Set canonical URL:", canonicalUrl);
+  // console.log("[updateMapHelmet] Set title:", document.title);
+  // console.log(
+  //   "[updateMapHelmet] Using description:",
+  //   pageDescription.substring(0, 100) + "...",
+  // );
+  // console.log("[updateMapHelmet] Set canonical URL:", canonicalUrl);
 
   // Update existing meta tags/links or create them if they don't exist
   const updateHeadElement = (
@@ -73,5 +73,5 @@ export const updateMapHelmet = (
   updateHeadElement('meta', 'meta[name="twitter:description"]', { name: 'twitter:description', content: pageDescription });
   updateHeadElement('link', 'link[rel="canonical"]', { rel: 'canonical', href: canonicalUrl });
 
-  console.log("[updateMapHelmet] Meta tags and canonical link updated");
+  // console.log("[updateMapHelmet] Meta tags and canonical link updated");
 };
