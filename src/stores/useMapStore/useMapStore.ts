@@ -136,11 +136,14 @@ useMapStore.subscribe(
     selectedMap: state.selectedMap,
     selectedLevelLabel: state.selectedLevelLabel,
   }),
-  ({ selectedMap }) => {
-    updateMapHelmet(selectedMap);
+  ({ selectedMap, selectedLevelLabel }) => {
+    if (!selectedMap) return;
+    updateMapHelmet(selectedMap, selectedLevelLabel);
   },
   {
-    equalityFn: (a, b) => a.selectedMap === b.selectedMap,
+    equalityFn: (a, b) =>
+      a.selectedMap === b.selectedMap &&
+      a.selectedLevelLabel === b.selectedLevelLabel,
   },
 );
 

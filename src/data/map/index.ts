@@ -53,7 +53,7 @@ export type Item = {
   name: string;
   description: string;
   price: number | null;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 export type ItemWithCoords = Item & {

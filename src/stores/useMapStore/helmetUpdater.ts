@@ -1,15 +1,11 @@
 // Direct DOM manipulation for head updates with rich descriptions (SEO-friendly)
 import { formatMapString } from "@/utils/formatMapString";
-// import { syncDescriptionService } from "../../services/syncDescriptionService";
+import { syncDescriptionService } from "../../services/syncDescriptionService";
 
 export const updateMapHelmet = (
   selectedMap: string | null,
+  selectedLevelLabel: string
 ) => {
-  // console.log("[updateMapHelmet] Called with:", {
-  //   selectedMap,
-  //   selectedLevelLabel,
-  // });
-
   const pageTitle = selectedMap
     ? `${formatMapString(selectedMap)} - Pokémon Emerald Imperium Dex Nav`
     : "Pokémon Emerald Imperium Dex Nav • Interactive Map Explorer";
@@ -19,21 +15,12 @@ export const updateMapHelmet = (
     : window.location.origin;
 
   // Get rich description synchronously (SEO-friendly)
-  // const pageDescription = selectedMap
-  //   ? syncDescriptionService.getMapDescriptionSync(selectedMap, selectedLevelLabel)
-  //   : "Interactive Dexnav for Pokemon Emerald Imperium. Discover Pokémon encounters, items, and locations across all regions.";
   const pageDescription = selectedMap
-    ? `View ${formatMapString(selectedMap)} from Pokémon Emerald Imperium. Explore Pokémon encounters, items, and locations.`
-    : "Interactive Dexnav for Pokémon Emerald Imperium. Discover Pokémon encounters, items, and locations across all regions.";
+    ? syncDescriptionService.getMapDescriptionSync(selectedMap, selectedLevelLabel)
+    : "Interactive Dexnav for Pokemon Emerald Imperium. Discover Pokémon encounters, items, and locations across all regions.";
 
   // Update document head directly
   document.title = pageTitle;
-  // console.log("[updateMapHelmet] Set title:", document.title);
-  // console.log(
-  //   "[updateMapHelmet] Using description:",
-  //   pageDescription.substring(0, 100) + "...",
-  // );
-  // console.log("[updateMapHelmet] Set canonical URL:", canonicalUrl);
 
   // Update existing meta tags/links or create them if they don't exist
   const updateHeadElement = (

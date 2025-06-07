@@ -1,189 +1,119 @@
 // Synchronous description generator for SEO-friendly head updates
-// Loads and processes groupedData.json directly for immediate descriptions
-
-interface MapLevel {
-  baseMap: string;
-  levelLabel: string;
-  thisLevelsId: string;
-  scriptedGives: any[];
-  shopItems: any[];
-  trainers: any[];
-  pickupItems: { item: string; type: string; coords: number[] }[];
-  image: string;
-}
-
-interface GroupedData {
-  [mapId: string]: MapLevel[];
-}
+// Uses ItemSearch to get map data instead of loading groupedData directly
+import itemSearch from "@/utils/itemsData";
 
 class SyncDescriptionService {
-  private groupedData: GroupedData | null = null;
-  private isLoaded = false;
-  private loadPromise: Promise<void> | null = null;
-
   constructor() {
-    // Start loading immediately but don't block
-    this.loadData();
-  }
-
-  private async loadData(): Promise<void> {
-    if (this.loadPromise) {
-      return this.loadPromise;
-    }
-
-    this.loadPromise = (async () => {
-      try {
-        const response = await fetch('/groupedData.json');
-        if (!response.ok) {
-          throw new Error(`Failed to fetch data: ${response.status}`);
-        }
-        this.groupedData = await response.json();
-        this.isLoaded = true;
-        console.log('[SyncDescriptionService] Data loaded successfully');
-      } catch (error) {
-        console.error('[SyncDescriptionService] Failed to load data:', error);
-        this.groupedData = null;
-      }
-    })();
-
-    return this.loadPromise;
-  }
-
-  private cleanItemName(itemName: string): string {
-    return itemName
-      .replace(/^ITEM_/, '')
-      .split('_')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(' ');
+    // ItemSearch is already initialized, no need to load data
   }
 
   private formatMapName(mapId: string): string {
     return mapId
-      .replace(/^MAP_/, '')
-      .split('_')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(' ');
+      .replace(/^MAP_/, "")
+      .split("_")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(" ");
   }
 
   private generateDescription(mapId: string, levelLabel?: string): string {
-    if (!this.groupedData || !Array.isArray(this.groupedData[mapId])) {
+    // Use ItemSearch to get map data
+    const mapData = itemSearch.byMap(mapId);
+    
+    if (!mapData) {
       return `Explore this location in Pokémon Emerald Imperium.`;
     }
 
-    const mapData = this.groupedData[mapId];
-    const levelData = levelLabel 
-      ? mapData.find(level => level.levelLabel === levelLabel)
-      : mapData[0];
-
-    if (!levelData) {
-      const mapName = this.formatMapName(mapId);
-      return `Explore ${mapName} in Pokémon Emerald Imperium.`;
-    }
-
     const mapName = this.formatMapName(mapId);
+    const locationName = levelLabel ? `${mapName} - ${levelLabel}` : mapName;
+
     const items: string[] = [];
 
-    // Collect all items
-    if (levelData.pickupItems && levelData.pickupItems.length > 0) {
-      levelData.pickupItems.forEach(pickup => {
-        if (pickup.item && typeof pickup.item === 'string') {
-          const cleanName = this.cleanItemName(pickup.item);
-          if (!items.includes(cleanName)) {
-            items.push(cleanName);
-          }
+    // Collect pickup items
+    if (mapData.pickupItems && mapData.pickupItems.length > 0) {
+      mapData.pickupItems.forEach((item) => {
+        if (item.name && !items.includes(item.name)) {
+          items.push(item.name);
         }
       });
     }
 
-    if (levelData.shopItems && levelData.shopItems.length > 0) {
-      levelData.shopItems.forEach(shop => {
-        if (shop.item && typeof shop.item === 'string') {
-          const cleanName = this.cleanItemName(shop.item);
-          if (!items.includes(cleanName)) {
-            items.push(cleanName);
-          }
+    // Collect shop items
+    if (mapData.shopItems && mapData.shopItems.length > 0) {
+      mapData.shopItems.forEach((item) => {
+        if (item.name && !items.includes(item.name)) {
+          items.push(item.name);
         }
       });
     }
 
-    if (levelData.scriptedGives && levelData.scriptedGives.length > 0) {
-      levelData.scriptedGives.forEach(give => {
-        if (give.item && typeof give.item === 'string') {
-          const cleanName = this.cleanItemName(give.item);
-          if (!items.includes(cleanName)) {
-            items.push(cleanName);
-          }
+    // Collect scripted items
+    if (mapData.scriptedGives && mapData.scriptedGives.length > 0) {
+      mapData.scriptedGives.forEach((scriptedGive) => {
+        if (scriptedGive.items && scriptedGive.items.length > 0) {
+          scriptedGive.items.forEach((item) => {
+            if (item.name && !items.includes(item.name)) {
+              items.push(item.name);
+            }
+          });
         }
       });
     }
 
-    const locationName = levelLabel ? `${mapName} - ${levelLabel}` : mapName;
-    
     if (items.length === 0) {
-      return `Explore ${locationName} in Pokémon Emerald Imperium. Discover Pokémon encounters and hidden secrets.`;
+      return `Explore ${locationName} in Pokémon Emerald Imperium. Pokémon locations and hidden items.`;
     }
 
     // Create rich description
-    const itemList = items.slice(0, 8).join(', '); // Limit to 8 items to keep description reasonable
-    const trainerCount = levelData.trainers?.length || 0;
-    
+    const itemList = items.slice(0, 8).join(", "); // Limit to 8 items to keep description reasonable
     let description = `${locationName} contains ${itemList}`;
-    
-    if (trainerCount > 0) {
-      description += ` and ${trainerCount} trainer${trainerCount > 1 ? 's' : ''}`;
-    }
-    
+
     description += ` in Pokémon Emerald Imperium. `;
-    
+
     if (items.length > 8) {
       description += `Plus ${items.length - 8} more items to discover. `;
     }
-    
-    description += `Interactive map with detailed encounter data and item locations.`;
-    
+
     return description;
   }
 
   /**
-   * Get description synchronously - returns fallback immediately if data not loaded,
+   * Get description synchronously - returns fallback immediately if data not available,
    * or rich description if data is available
    */
   public getMapDescriptionSync(mapId: string, levelLabel?: string): string {
-    if (!this.isLoaded || !this.groupedData) {
-      // Return fallback immediately - data will load in background
-      const fallback = levelLabel 
-        ? `Explore ${mapId} - ${levelLabel} in Pokémon Emerald Imperium.`
-        : `Explore ${mapId} in Pokémon Emerald Imperium.`;
-      
-      console.log('[SyncDescriptionService] Data not loaded, using fallback');
-      return fallback;
-    }
-
     try {
       const richDescription = this.generateDescription(mapId, levelLabel);
-      console.log('[SyncDescriptionService] Generated rich description:', richDescription.substring(0, 100) + '...');
+      console.log(
+        "[SyncDescriptionService] Generated rich description:",
+        richDescription.substring(0, 100) + "...",
+      );
       return richDescription;
     } catch (error) {
-      console.error('[SyncDescriptionService] Error generating description:', error);
-      return levelLabel 
-        ? `Explore ${mapId} - ${levelLabel} in Pokémon Emerald Imperium.`
-        : `Explore ${mapId} in Pokémon Emerald Imperium.`;
+      console.error(
+        "[SyncDescriptionService] Error generating description:",
+        error,
+      );
+      return levelLabel
+        ? `Explore ${this.formatMapName(mapId)} - ${levelLabel} in Pokémon Emerald Imperium.`
+        : `Explore ${this.formatMapName(mapId)} in Pokémon Emerald Imperium.`;
     }
   }
 
   /**
    * Get description with async enhancement - for progressive enhancement
    */
-  public async getMapDescriptionAsync(mapId: string, levelLabel?: string): Promise<string> {
-    await this.loadData();
+  public async getMapDescriptionAsync(
+    mapId: string,
+    levelLabel?: string,
+  ): Promise<string> {
     return this.getMapDescriptionSync(mapId, levelLabel);
   }
 
   /**
-   * Check if data is loaded
+   * Check if data is ready - ItemSearch is always ready
    */
   public get isReady(): boolean {
-    return this.isLoaded;
+    return true;
   }
 }
 

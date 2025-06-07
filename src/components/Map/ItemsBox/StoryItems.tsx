@@ -8,7 +8,7 @@ const StoryItems = ({ scriptedGives }: { scriptedGives: CoolItem[] }) => {
   return (
     <div>
       {scriptedGives.map(({ scriptName, items }) => (
-        <div key={scriptName}>
+        <div key={scriptName} itemScope itemType="https://schema.org/gameItem">
           <h3 className="cool-font md:text-md mb-2 mt-2 border-b-2 border-stone-400 pb-1 text-xs font-bold">
             {scriptName}
           </h3>
