@@ -1,5 +1,6 @@
 import { FaDiscord, FaGithubAlt } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import DisclaimerModal from "./DisclaimerModal";
 
 const Footer = () => {
   return (
@@ -9,10 +10,9 @@ const Footer = () => {
         className: "text-baseline md:text-xl cursor-pointer hover:sepia  ",
       }}
     >
-      <div className="z-10 flex w-full select-none items-center justify-between bg-gray-800 px-1 ring">
-        <div className="font-calamity pkmnem-face-shadow text-neutral-100">
-          <h3 className="md:text-baseline text-xs">
-            Dex by Kildemal{" – "}
+      <div className="z-10 flex w-full select-none items-center justify-between bg-gray-800 px-2 ring">
+        <div className="font-pkmnem text-sm/3 pkmnem-face-shadow text-neutral-100">
+           <h3> Dex by Kildemal{" – "}
             <a
               href="https://www.youtube.com/watch?v=Vhh_GeBPOhs"
               target="__blank"
@@ -22,8 +22,10 @@ const Footer = () => {
             </a>
           </h3>
         </div>
-        <div className="flex justify-end gap-5 pr-5">
-          <h5 className="font-pkmnem text-white">Not officially endorsed by Iriv24</h5>
+        <div className="flex justify-end items-center gap-5">
+          <p className="font-pkmnem text-white text-sm/3 leading-xs">
+            Not officially endorsed by devs of Emerald Imperium. <DisclaimerModal /> for more details.
+          </p>
           <FaDiscord />
           <a href="https://github.com/izrofid/eidex" target="__blank">
             <FaGithubAlt />
