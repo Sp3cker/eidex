@@ -2,7 +2,7 @@ import {
   LevelsInfo,
   Item,
   Items,
-  PickupItem,
+
   ItemWithCoords,
 } from "@/data/map";
 

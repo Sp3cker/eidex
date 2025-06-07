@@ -4,7 +4,6 @@ import { formatMapString } from "@/utils/formatMapString";
 
 export const updateMapHelmet = (
   selectedMap: string | null,
-  selectedLevelLabel: string,
 ) => {
   // console.log("[updateMapHelmet] Called with:", {
   //   selectedMap,
