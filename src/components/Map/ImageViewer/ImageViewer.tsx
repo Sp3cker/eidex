@@ -12,6 +12,7 @@ const ImageViewer = () => {
       items: state.selectedMapItems,
     }),
   );
+  console.log(selectedImageName)
   const [imgDimensions, setImgDimensions] = useState<{
     width: number;
     height: number;
