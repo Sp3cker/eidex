@@ -1,7 +1,7 @@
 // Synchronous description generator for SEO-friendly head updates
 // Uses ItemSearch to get map data instead of loading groupedData directly
 import itemSearch from "@/utils/itemsData";
-
+import { logEvent } from "./analytics";
 class SyncDescriptionService {
   constructor() {
     // ItemSearch is already initialized, no need to load data
@@ -18,7 +18,7 @@ class SyncDescriptionService {
   private generateDescription(mapId: string, levelLabel?: string): string {
     // Use ItemSearch to get map data
     const mapData = itemSearch.byMap(mapId);
-    
+
     if (!mapData) {
       return `Explore this location in Pokémon Emerald Imperium.`;
     }
@@ -87,6 +87,12 @@ class SyncDescriptionService {
         "[SyncDescriptionService] Generated rich description:",
         richDescription.substring(0, 100) + "...",
       );
+      logEvent("map_description_generated", {
+        mapId,
+        levelLabel,
+        description: richDescription,
+      });
+      // Return rich description
       return richDescription;
     } catch (error) {
       console.error(
