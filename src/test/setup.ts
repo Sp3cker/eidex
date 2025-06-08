@@ -1,4 +1,5 @@
 import "@testing-library/jest-dom";
+import { vi, beforeEach } from "vitest";
 
 // Mock window.location and history API for testing
 const mockLocation = {
@@ -13,8 +14,10 @@ const mockHistory = {
   replaceState: vi.fn(),
 };
 
-// @ts-ignore
-global.window = Object.create(window);
+Object.defineProperty(globalThis, "window", {
+  value: Object.create(window),
+  writable: true,
+});
 Object.defineProperty(window, "location", {
   value: mockLocation,
   writable: true,

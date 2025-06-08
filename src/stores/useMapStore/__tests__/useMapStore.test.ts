@@ -321,7 +321,7 @@ describe("useMapStore", () => {
   describe("Item Search", () => {
     it("should search items by name", () => {
       const { result } = renderHook(() => useMapStore());
-      const mockItems = [{ name: "Potion", id: 1 }];
+      const mockItems = [{ name: "Potion", id: 1 }] as any;
       
       // Mock the return value using the imported mock
       vi.mocked(ItemSearch.search).mockReturnValue(mockItems);
