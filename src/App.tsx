@@ -1,10 +1,20 @@
+import { lazy, Suspense } from "react";
 import "./App.css";
-import FilterBar from "./components/Filter/FilterBar";
-import PokemonList from "./components/PokemonList/PokemonList";
-import PokemonModal from "./components/PokemonModal/PokemonModal";
-import CreditsButton from "./components/CreditsButton";
 
-import ShinySwitch from "./components/ui/ShinySwitch";
+// Lazy load components
+const FilterBar = lazy(() => import("./components/Filter/FilterBar"));
+const PokemonList = lazy(() => import("./components/PokemonList/PokemonList"));
+const PokemonModal = lazy(() => import("./components/PokemonModal/PokemonModal"));
+const CreditsButton = lazy(() => import("./components/CreditsButton"));
+const ShinySwitch = lazy(() => import("./components/ui/ShinySwitch"));
+
+// Loading fallback component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center p-4">
+    <div className="h-6 w-6 animate-spin rounded-full border-2 border-blue-500 border-t-transparent"></div>
+    <span className="ml-2 text-gray-400">Loading...</span>
+  </div>
+);
 
 function App() {
   // Get filter state from Zustand store
@@ -22,7 +32,9 @@ function App() {
   return (
     <div className="flex min-h-screen justify-center bg-zinc-800">
       <div className="border-1 shadow-2xl/60 flex w-full max-w-3xl flex-col rounded-lg border-neutral-900/50">
-        <FilterBar />
+        <Suspense fallback={<LoadingSpinner />}>
+          <FilterBar />
+        </Suspense>
 
         {/* Shiny toggle UI */}
         <div className="flex select-none items-center justify-between gap-2 bg-neutral-800/30 px-3 py-2">
@@ -32,14 +44,22 @@ function App() {
               className="h-7 w-7 object-contain"
               alt="Shiny charm"
             />
-            <ShinySwitch />
+            <Suspense fallback={<LoadingSpinner />}>
+              <ShinySwitch />
+            </Suspense>
           </span>
-          <CreditsButton />
+          <Suspense fallback={<LoadingSpinner />}>
+            <CreditsButton />
+          </Suspense>
         </div>
 
-        <PokemonList />
+        <Suspense fallback={<LoadingSpinner />}>
+          <PokemonList />
+        </Suspense>
 
-        <PokemonModal />
+        <Suspense fallback={<LoadingSpinner />}>
+          <PokemonModal />
+        </Suspense>
       </div>
     </div>
   );

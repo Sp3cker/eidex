@@ -34,7 +34,7 @@ describe("DisclaimerModal", () => {
     await user.click(triggerButton);
     
     expect(screen.getByText("Disclaimer")).toBeInTheDocument();
-    expect(screen.getByText(/I made this map because Gen 3 is best gen/)).toBeInTheDocument();
+    expect(screen.getByText(/I made this map because Gen-3 is best gen/)).toBeInTheDocument();
   });
 
   it("should call deselectMap when modal is opened", async () => {
@@ -70,7 +70,7 @@ describe("DisclaimerModal", () => {
     await user.click(triggerButton);
     
     // Check for key sections
-    expect(screen.getByText(/I made this map because Gen 3 is best gen/)).toBeInTheDocument();
+    expect(screen.getByText(/I made this map because Gen-3 is best gen/)).toBeInTheDocument();
     expect(screen.getByText(/Pokémon and all related characters/)).toBeInTheDocument();
     expect(screen.getByText(/Nintendo Co., Ltd./)).toBeInTheDocument();
     expect(screen.getByText(/Game Freak Inc./)).toBeInTheDocument();

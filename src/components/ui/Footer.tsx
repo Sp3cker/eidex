@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
         <div className="flex justify-end items-center gap-5">
           <p className="font-pkmnem text-white text-sm/3 leading-xs">
-            Not officially endorsed by devs of Emerald Imperium. <DisclaimerModal /> for more details.
+            Not an official project of Emerald Imperium. <DisclaimerModal /> for more details.
           </p>
           <FaDiscord />
           <a href="https://github.com/izrofid/eidex" target="__blank">

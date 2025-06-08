@@ -32,29 +32,53 @@ const DisclaimerModal = () => {
                 Disclaimer
               </DialogTitle>
 
-              <div className="cool-font space-y-4 text-sm text-gray-300">
-                <p className="">
-                  I made this map because Gen 3 is best gen and Radical Red is
-                  best rom-hack, therefore Emerald Imperium is best gen-3
+              <div className="cool-font space-y-2.5 text-sm/5 text-gray-300">
+                <p>
+                  This project is not officially endorsed by the devs of Emerald
+                  Imperium.
+                </p>
+                <p>
+                  I made this map because Gen-3 is best gen and Radical Red is
+                  best rom-hack, therefore Emerald Imperium is best Gen-3
                   rom-hack. It&#39;s not the &quot;official&quot; map or site or
                   anything.{" "}
                 </p>
-
                 <p>
-                  In fact, there&#39;s no &quot;official&quot; site! Anyone
-                  claiming to be the official site is a peepee-poopoo head! They&quot;re trying to make money
-                  on ads! They give fans like us bad names!
+                  In fact, there&#39;s no &quot;official&quot; site – as of this
+                  writing of June 2025, anyone claiming to be the official site
+                  is <strong>lying</strong>.
                 </p>
                 <p>
-                  Further, them making a profit from ads could bring unwanted
-                  attention from Nintendo. All-around, harmful actions from
-                  malicous, leechful actors.
+                  They&#39;re trying to make money on ads and as a result, give
+                  fans like us bad names!
+                </p>
+                <p>
+                  Further, their profits from ads could bring unwanted attention
+                  to our community from Nintendo. These are malicous, leechful,
+                  and explotative actors putting the community they prey on at
+                  risk.
                 </p>
                 <p className="cool-font text-sm">
                   The source of truth is the Discord and the Pokecommunity post.
                   Stay sharp.
                 </p>
-
+                <hr />
+                <p>
+                  For projects <em>I'd</em> endorse, checkout Kildemal&#39;s{" "}
+                  <a
+                    href="https://dex.emeraldimperium.net"
+                    className="underline hover:text-blue-200"
+                  >
+                    Official Pokédex
+                  </a>{" "}
+                  and iamguitar&#39;s{" "}
+                  <a
+                    href="https://emeraldimperium.info/"
+                    className="underline hover:text-blue-200"
+                  >
+                    Pokémon Emerald Imperium Homepage
+                  </a>
+                </p>
                 <div className="font-pkmnem leading-tight">
                   <h3>
                     <strong>
