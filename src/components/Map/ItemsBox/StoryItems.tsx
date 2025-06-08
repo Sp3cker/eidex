@@ -1,4 +1,5 @@
 import ItemsListContent from "./ItemListContent";
+import PokemonListContent from "./PokemonListContent";
 import { Item } from "@/data/map";
 type CoolItem = { scriptName: string; items: Item[]; pokemon: string[] };
 
@@ -7,12 +8,17 @@ const StoryItems = ({ scriptedGives }: { scriptedGives: CoolItem[] }) => {
 
   return (
     <div>
-      {scriptedGives.map(({ scriptName, items }) => (
+      {scriptedGives.map(({ scriptName, items, pokemon }) => (
         <div key={scriptName} itemScope itemType="https://schema.org/gameItem">
           <h3 className="cool-font md:text-md mb-2 mt-2 border-b-2 border-stone-400 pb-1 text-xs font-bold">
             {scriptName}
           </h3>
-          {items.length > 0 && <ItemsListContent items={items} />}
+          {items.length > 0 && (
+            <ItemsListContent items={items} />
+          )}
+          {pokemon.length > 0 && (
+            <PokemonListContent pokemon={pokemon} />
+          )}
         </div>
       ))}
     </div>

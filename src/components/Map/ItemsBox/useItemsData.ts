@@ -81,13 +81,11 @@ export const useItemsData = (selectedTab: TabType): ItemsToReturn => {
   );
 
   useEffect(() => {
-    // Immediately sync with current state
     const currentItems = useMapStore.getState().selectedMapItems;
     if (!itemsArrayEqual(currentItems, items)) {
       setItems(currentItems);
     }
 
-    // Subscribe to future changes with custom equality
     const unsubscribe = useMapStore.subscribe(
       (state) => state.selectedMapItems,
       (newItems) => setItems(newItems ?? null),
