@@ -75,7 +75,7 @@ input[type="number"] {
   }
   .icon-sprite-box {
     width: 32px;
-    height:32px;
+    height: 32px;
     overflow: hidden;
     position: relative;
   }
@@ -228,4 +228,37 @@ input[type="number"] {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* @keyframes fadeInBackground {
+  from {
+    opacity: 0;
+    filter: blur(0px);
+    background-color: rgba(0, 0, 0, 0.2); /* Optional: Add a background color */
+/* } */
+/* to {
+    opacity: 1;
+    filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Add a background color */
+
+/* .fade-in-background {
+  animation: fadeInBackground 0.3s ease-out forwards;
+} */
+
+@keyframes fadeInFrostedGlass {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px) saturate(100%);
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(12px) saturate(120%);
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.fade-in-background {
+  animation: fadeInFrostedGlass 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
