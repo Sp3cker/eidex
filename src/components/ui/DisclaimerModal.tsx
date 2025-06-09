@@ -50,7 +50,16 @@ const paragraphs = (index: number, springAnim: any) => {
           href="https://emeraldimperium.info/"
           className="underline hover:text-blue-200"
         >
-          Pokémon Emerald Imperium Homepage
+          Pokémon Emerald Imperium Homepage.
+        </a>
+      </p>
+      <p>
+        I got the map image from{" "}
+        <a
+          href="https://www.deviantart.com/jaime07/art/Hoenn-Map-HD-464622982"
+          className="underline hover:text-blue-200"
+        >
+          Jamie07's DeviantArt
         </a>
       </p>
     </animated.div>,

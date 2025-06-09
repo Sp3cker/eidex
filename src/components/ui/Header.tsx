@@ -8,13 +8,13 @@ const Header = () => (
       className="h-9"
       height="36"
     />
-    <div>
+    {/* <div>
       <Link to="/legendaries">
         <button className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 rounded-sm px-5 py-1 text-sm text-gray-200 mr-2">
           Legendaries
         </button>
       </Link>
-    </div>
+    </div> */}
     <div>
       <a 
         href="https://dex.emeraldimperium.net/" 

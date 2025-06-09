@@ -9,7 +9,7 @@ import Selecta from "./Selecta";
 import "./grid.css";
 import useMapStore from "@/stores/useMapStore";
 import { lazy, Suspense, useLayoutEffect } from "react";
-import Roamers from "./Roamers";
+// import Roamers from "./Roamers";
 document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
 const ImageViewer = lazy(() => import("./ImageViewer"));
@@ -42,7 +42,7 @@ const Map = () => {
           <ImageViewer />
         </Suspense>
       </ErrorBoundary>
-      <Roamers />
+      {/* <Roamers /> */}
     </div>
   );
 };
