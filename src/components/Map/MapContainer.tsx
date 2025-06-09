@@ -86,7 +86,7 @@ const MapContainer = ({ children }: any) => {
     <div
       ref={targetRef}
 
-      className="map-grid font-calamity z-0  w-full touch-none  overflow-auto bg-sky-700"
+      className="map-grid font-calamity z-0  w-full touch-none  overflow-auto bg-[#0082CA]"
     >
       <animated.div
         ref={mapRef}

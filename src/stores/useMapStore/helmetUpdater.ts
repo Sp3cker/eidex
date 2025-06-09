@@ -7,7 +7,7 @@ export const updateMapHelmet = (
   selectedLevelLabel: string
 ) => {
   const pageTitle = selectedMap
-    ? `${formatMapString(selectedMap)} - Pokémon Emerald Imperium Dex Nav`
+    ? `${formatMapString(selectedMap)}`
     : "Pokémon Emerald Imperium Dex Nav • Interactive Map Explorer";
 
   const canonicalUrl = selectedMap
