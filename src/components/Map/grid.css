@@ -22,7 +22,9 @@
 .dexnav-grid {
   grid-area: 6 / 1 / 13 / 8;
 }
-
+.roamers-grid {
+  grid-area: 2 / 12 / 11 / 13;
+}
 @media (max-width: 768px) {
   .parent {
     grid-template-columns: repeat(6, 1fr);

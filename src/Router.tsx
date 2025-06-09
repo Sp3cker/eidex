@@ -3,8 +3,10 @@ import { Route, Router, Switch } from "wouter";
 import PokemonModal from "./components/PokemonModal/PokemonModal";
 const Map = lazy(() => import("./components/Map/Map"));
 const App = lazy(() => import("./App"));
+// const Legendaries = lazy(() => import("./components/Legendaries/Legendaries"));
 import Header from "./components/ui/Header";
 import Footer from "./components/ui/Footer";
+
 const MapComponent = () => (
   <Suspense
     fallback={
@@ -16,17 +18,18 @@ const MapComponent = () => (
     <Map />
   </Suspense>
 );
-const AppRouter = () => {
-  const basePath = import.meta.env.BASE_PATH || "/";
 
+const AppRouter = () => {
   return (
     <div className="flex h-screen flex-col bg-zinc-800">
       <Header />
       <div className="flex-2 overflow-auto">
-        <Router base={basePath}>
+        <Router>
           <Switch>
             <Route path="/" component={MapComponent} />
+            <Route path="/map" component={MapComponent} />
             <Route path="/map/*" component={MapComponent} />
+            <Route path="/legendaries" component={MapComponent} />
 
             <Route
               path="/dex"
@@ -36,6 +39,7 @@ const AppRouter = () => {
                 </Suspense>
               )}
             />
+
           </Switch>
         </Router>
       </div>

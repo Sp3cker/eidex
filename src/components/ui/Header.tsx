@@ -9,6 +9,13 @@ const Header = () => (
       height="36"
     />
     <div>
+      <Link to="/legendaries">
+        <button className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 rounded-sm px-5 py-1 text-sm text-gray-200 mr-2">
+          Legendaries
+        </button>
+      </Link>
+    </div>
+    <div>
       <a 
         href="https://dex.emeraldimperium.net/" 
         target="_blank" 
@@ -18,7 +25,7 @@ const Header = () => (
         Dex
       </a>
 
-      <Link to="/">
+      <Link to="/map">
         <button className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 rounded-sm px-5 py-1 text-sm text-gray-200">
           Map
         </button>
