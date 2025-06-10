@@ -24,6 +24,7 @@ export const useMapStore = create<MapStore>()(
       viewingImage: false,
       selectedLevelId: null,
       selectedRoamer: null,
+      dragging: false,
     };
     return {
       ...initialState,
@@ -127,6 +128,9 @@ export const useMapStore = create<MapStore>()(
       },
       setSelectedRoamer: (nameKey: string) => set({ selectedRoamer: nameKey }),
       deselectRoamer: () => set({ selectedRoamer: null }),
+      setDragging: (dragging: boolean) => {
+        set({ dragging });
+      },
     };
   }),
 );

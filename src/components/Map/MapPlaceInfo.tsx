@@ -8,7 +8,9 @@ const SelectedLevel = () => {
 };
 const MapPlaceInfo = () => {
   const [selectedTab, setSelectedTab] = useState("land");
-  const show = useMapStore((state) => state.selectedMap !== null);
+  const show = useMapStore((state) => {
+    return state.selectedMap !== null && state.dragging === false;
+  });
   const [spring, api] = useSpring(
     {
       opacity: 0,
@@ -44,7 +46,7 @@ const MapPlaceInfo = () => {
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex h-full w-[150px] flex-col rounded-lg pb-1 `}
+      className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex h-full w-[150px] flex-col rounded-lg pb-1`}
     >
       <div className="tabs w-full overflow-hidden px-3 py-3">
         <SelectedLevel />

@@ -41,6 +41,7 @@ type MapStore = {
   selectedImageName: string | null;
   selectedLevelId: string | null;
   selectedRoamer: string | null;
+  dragging: boolean;
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
@@ -57,6 +58,7 @@ type MapStore = {
   setViewingImage: (viewing: boolean) => void;
   setSelectedRoamer: (nameKey: string) => void;
   deselectRoamer: () => void;
+  setDragging: (dragging: boolean) => void;
 };
 
 export type { EncounterMons, EncounterMonsFromJSON, MapStore, Level };

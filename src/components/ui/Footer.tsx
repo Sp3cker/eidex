@@ -21,12 +21,12 @@ const Footer = () => {
             </a>
           </p>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col sm:w-80">
 
-        <p className="font-pkmnem leading-xs text-sm/3 text-white sm:w-8">
+        <p className="font-pkmnem leading-xs text-sm/3 text-white ">
           Data&nbsp;for E.I.&nbsp;1.3
         </p>
-        <p className="font-pkmnem leading-xs text-sm/3 text-white sm:w-8">
+        <p className="font-pkmnem leading-xs text-sm/3 text-white ">
           Send me ideas on Discord!{" "}
         </p>
         </div>

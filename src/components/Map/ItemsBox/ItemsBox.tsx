@@ -8,14 +8,16 @@ import CameraIcon from "./CameraIcon";
 const ItemsBox = memo(function ItemsBox() {
   const selectedMap = useMapStore((state) => state.selectedMap);
   const setViewingImage = useMapStore((state) => state.setViewingImage);
-
+  const show = useMapStore((state) => {
+    return state.selectedMap !== null && state.dragging === false;
+  });
   const [springs] = useSpring(
     {
       opacity: selectedMap ? 1 : 0,
-      translateY: selectedMap ? 0 : (window.innerHeight * 2) / 5,
+      translateY: show ? 0 : (window.innerHeight * 2) / 5,
       config: { mass: 1, damping: 0.2 },
     },
-    [selectedMap],
+    [show, selectedMap],
   );
 
   const mapLabel =

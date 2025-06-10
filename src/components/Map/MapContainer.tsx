@@ -4,20 +4,20 @@ import { useDrag, usePinch } from "@use-gesture/react";
 import { useEffect, useRef } from "react";
 
 const MapContainer = ({ children }: any) => {
-  // const setMapOffset = useMapStore((state) => state.setMapOffset);
   const selectedCoordinates = useMapStore((state) => state.selectedCoordinates);
   const mapRef = useRef<HTMLDivElement>(null);
   const setMapScale = useMapStore((state) => state.setMapScale);
-  // const setMapScale = useMapStore((state) => state.setMapScale);
-  // const { zoomingState } = usePinchZoom(mapRef);
-
+  const setDragging = useMapStore((state) => state.setDragging);
   const [{ scale, centerOffset }, api] = useSpring(
     () => ({
       scale: 1.32,
       centerOffset: [400, 340],
       config: { mass: 5, tension: 800, friction: 200 },
+      // onStart: () => {
+      //   setDragging(true);
+      // },
       // onRest: () => {
-      //   setMapOffset(centerOffset.toJSON());
+      //   setDragging(false);
       // },
     }),
     [],
@@ -63,12 +63,15 @@ const MapContainer = ({ children }: any) => {
   useDrag(
     ({ offset: [x, y], dragging }) => {
       if (dragging) {
+        setDragging(true);
         api.start({ centerOffset: [x, y] });
+      } else if (!dragging) {
+        setDragging(false);
       }
     },
     {
       target: targetRef,
-     
+
       filterTaps: true,
       bounds: {
         top: -200 ^ scale.toJSON(),
@@ -85,7 +88,7 @@ const MapContainer = ({ children }: any) => {
   return (
     <div
       ref={targetRef}
-      className="map-grid font-calamity z-0  w-full touch-none  overflow-auto bg-[#0082CA]"
+      className="map-grid font-calamity z-0 w-full touch-none overflow-auto bg-[#0082CA]"
     >
       <animated.div
         ref={mapRef}

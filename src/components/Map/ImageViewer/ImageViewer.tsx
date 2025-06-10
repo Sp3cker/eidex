@@ -3,16 +3,20 @@ import { useMemo, useState, useRef, useEffect } from "react";
 import { animated, config, useSprings } from "react-spring";
 import { getItemSpriteStyle } from "@/utils/itemSprites";
 import itemSearch from "@/utils/itemsData";
+import { shallow } from "zustand/shallow";
 import "./imageViewer.css";
 const ImageViewer = () => {
   const { selectedImageName, setViewingImage, showImage, items, level } =
-    useMapStore((state) => ({
-      showImage: state.viewingImage,
-      selectedImageName: state.selectedImageName,
-      setViewingImage: state.setViewingImage,
-      items: state.selectedMapItems,
-      level: state.selectedLevelId,
-    }));
+    useMapStore(
+      (state) => ({
+        showImage: state.viewingImage,
+        selectedImageName: state.selectedImageName,
+        setViewingImage: state.setViewingImage,
+        items: state.selectedMapItems,
+        level: state.selectedLevelId,
+      }),
+      shallow
+    );
 
   const [imgDimensions, setImgDimensions] = useState<{
     width: number;
