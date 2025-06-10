@@ -16,9 +16,9 @@ const MapContainer = ({ children }: any) => {
       // onStart: () => {
       //   setDragging(true);
       // },
-      // onRest: () => {
-      //   setDragging(false);
-      // },
+      onRest: () => {
+        setDragging(false);
+      },
     }),
     [],
   );
@@ -66,7 +66,7 @@ const MapContainer = ({ children }: any) => {
         setDragging(true);
         api.start({ centerOffset: [x, y] });
       } else if (!dragging) {
-        setDragging(false);
+        // setDragging(false);
       }
     },
     {
