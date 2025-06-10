@@ -23,6 +23,9 @@ const RouteLogger = () => {
   
   useEffect(() => {
     console.log('Route changed to:', location);
+    console.log('Current URL:', window.location.href);
+    console.log('Base URL:', window.location.origin);
+    console.log('Pathname:', window.location.pathname);
   }, [location]);
   
   return null;
@@ -54,8 +57,8 @@ const AppRouter = () => {
         </Router>
       </div>
 
-      <PokemonModal />
       <Footer />
+      <PokemonModal />
     </div>
   );
 };
