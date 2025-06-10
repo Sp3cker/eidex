@@ -1,6 +1,10 @@
-import { lazy, Suspense, useEffect } from "react";
-import { Route, Router, Switch, useLocation } from "wouter";
-import PokemonModal from "./components/PokemonModal/PokemonModal";
+import { lazy, Suspense } from "react";
+import { Route, Router, Switch } from "wouter";
+import LoadingSpinner from "@/components/ui/LoadingSpinner";
+
+const PokemonModal = lazy(
+  () => import("./components/PokemonModal/PokemonModal"),
+);
 const Map = lazy(() => import("./components/Map/Map"));
 const App = lazy(() => import("./App"));
 import Header from "./components/ui/Header";
@@ -18,27 +22,13 @@ const MapComponent = () => (
   </Suspense>
 );
 
-const RouteLogger = () => {
-  const [location] = useLocation();
-  
-  useEffect(() => {
-    console.log('Route changed to:', location);
-    console.log('Current URL:', window.location.href);
-    console.log('Base URL:', window.location.origin);
-    console.log('Pathname:', window.location.pathname);
-  }, [location]);
-  
-  return null;
-};
-
 const AppRouter = () => {
   return (
     <div className="flex h-screen flex-col bg-zinc-800">
       <Header />
       <div className="flex-2 overflow-auto">
         <Router>
-          <RouteLogger />
-          <Switch >
+          <Switch>
             <Route path="/" component={MapComponent} />
             <Route path="/map" component={MapComponent} />
             <Route path="/map/*" component={MapComponent} />
@@ -52,13 +42,14 @@ const AppRouter = () => {
                 </Suspense>
               )}
             />
-
           </Switch>
         </Router>
       </div>
 
       <Footer />
-      <PokemonModal />
+      <Suspense fallback={<LoadingSpinner />}>
+        <PokemonModal />
+      </Suspense>
     </div>
   );
 };
