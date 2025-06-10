@@ -1,0 +1,10726 @@
+[
+  {
+    "spriteName": "1",
+    "coords": [
+      0,
+      0
+    ]
+  },
+  {
+    "spriteName": "2",
+    "coords": [
+      66,
+      0
+    ]
+  },
+  {
+    "spriteName": "3",
+    "coords": [
+      132,
+      0
+    ]
+  },
+  {
+    "spriteName": "4",
+    "coords": [
+      198,
+      0
+    ]
+  },
+  {
+    "spriteName": "5",
+    "coords": [
+      264,
+      0
+    ]
+  },
+  {
+    "spriteName": "6",
+    "coords": [
+      330,
+      0
+    ]
+  },
+  {
+    "spriteName": "7",
+    "coords": [
+      396,
+      0
+    ]
+  },
+  {
+    "spriteName": "8",
+    "coords": [
+      462,
+      0
+    ]
+  },
+  {
+    "spriteName": "9",
+    "coords": [
+      528,
+      0
+    ]
+  },
+  {
+    "spriteName": "10",
+    "coords": [
+      594,
+      0
+    ]
+  },
+  {
+    "spriteName": "11",
+    "coords": [
+      660,
+      0
+    ]
+  },
+  {
+    "spriteName": "12",
+    "coords": [
+      726,
+      0
+    ]
+  },
+  {
+    "spriteName": "13",
+    "coords": [
+      792,
+      0
+    ]
+  },
+  {
+    "spriteName": "14",
+    "coords": [
+      858,
+      0
+    ]
+  },
+  {
+    "spriteName": "15",
+    "coords": [
+      924,
+      0
+    ]
+  },
+  {
+    "spriteName": "16",
+    "coords": [
+      990,
+      0
+    ]
+  },
+  {
+    "spriteName": "17",
+    "coords": [
+      0,
+      66
+    ]
+  },
+  {
+    "spriteName": "18",
+    "coords": [
+      66,
+      66
+    ]
+  },
+  {
+    "spriteName": "19",
+    "coords": [
+      132,
+      66
+    ]
+  },
+  {
+    "spriteName": "20",
+    "coords": [
+      198,
+      66
+    ]
+  },
+  {
+    "spriteName": "21",
+    "coords": [
+      264,
+      66
+    ]
+  },
+  {
+    "spriteName": "22",
+    "coords": [
+      330,
+      66
+    ]
+  },
+  {
+    "spriteName": "23",
+    "coords": [
+      396,
+      66
+    ]
+  },
+  {
+    "spriteName": "24",
+    "coords": [
+      462,
+      66
+    ]
+  },
+  {
+    "spriteName": "25",
+    "coords": [
+      528,
+      66
+    ]
+  },
+  {
+    "spriteName": "26",
+    "coords": [
+      594,
+      66
+    ]
+  },
+  {
+    "spriteName": "27",
+    "coords": [
+      660,
+      66
+    ]
+  },
+  {
+    "spriteName": "28",
+    "coords": [
+      726,
+      66
+    ]
+  },
+  {
+    "spriteName": "29",
+    "coords": [
+      792,
+      66
+    ]
+  },
+  {
+    "spriteName": "30",
+    "coords": [
+      858,
+      66
+    ]
+  },
+  {
+    "spriteName": "31",
+    "coords": [
+      924,
+      66
+    ]
+  },
+  {
+    "spriteName": "32",
+    "coords": [
+      990,
+      66
+    ]
+  },
+  {
+    "spriteName": "33",
+    "coords": [
+      0,
+      132
+    ]
+  },
+  {
+    "spriteName": "34",
+    "coords": [
+      66,
+      132
+    ]
+  },
+  {
+    "spriteName": "35",
+    "coords": [
+      132,
+      132
+    ]
+  },
+  {
+    "spriteName": "36",
+    "coords": [
+      198,
+      132
+    ]
+  },
+  {
+    "spriteName": "37",
+    "coords": [
+      264,
+      132
+    ]
+  },
+  {
+    "spriteName": "38",
+    "coords": [
+      330,
+      132
+    ]
+  },
+  {
+    "spriteName": "39",
+    "coords": [
+      396,
+      132
+    ]
+  },
+  {
+    "spriteName": "40",
+    "coords": [
+      462,
+      132
+    ]
+  },
+  {
+    "spriteName": "41",
+    "coords": [
+      528,
+      132
+    ]
+  },
+  {
+    "spriteName": "42",
+    "coords": [
+      594,
+      132
+    ]
+  },
+  {
+    "spriteName": "43",
+    "coords": [
+      660,
+      132
+    ]
+  },
+  {
+    "spriteName": "44",
+    "coords": [
+      726,
+      132
+    ]
+  },
+  {
+    "spriteName": "45",
+    "coords": [
+      792,
+      132
+    ]
+  },
+  {
+    "spriteName": "46",
+    "coords": [
+      858,
+      132
+    ]
+  },
+  {
+    "spriteName": "47",
+    "coords": [
+      924,
+      132
+    ]
+  },
+  {
+    "spriteName": "48",
+    "coords": [
+      990,
+      132
+    ]
+  },
+  {
+    "spriteName": "49",
+    "coords": [
+      0,
+      198
+    ]
+  },
+  {
+    "spriteName": "50",
+    "coords": [
+      66,
+      198
+    ]
+  },
+  {
+    "spriteName": "51",
+    "coords": [
+      132,
+      198
+    ]
+  },
+  {
+    "spriteName": "52",
+    "coords": [
+      198,
+      198
+    ]
+  },
+  {
+    "spriteName": "53",
+    "coords": [
+      264,
+      198
+    ]
+  },
+  {
+    "spriteName": "54",
+    "coords": [
+      330,
+      198
+    ]
+  },
+  {
+    "spriteName": "55",
+    "coords": [
+      396,
+      198
+    ]
+  },
+  {
+    "spriteName": "56",
+    "coords": [
+      462,
+      198
+    ]
+  },
+  {
+    "spriteName": "57",
+    "coords": [
+      528,
+      198
+    ]
+  },
+  {
+    "spriteName": "58",
+    "coords": [
+      594,
+      198
+    ]
+  },
+  {
+    "spriteName": "59",
+    "coords": [
+      660,
+      198
+    ]
+  },
+  {
+    "spriteName": "60",
+    "coords": [
+      726,
+      198
+    ]
+  },
+  {
+    "spriteName": "61",
+    "coords": [
+      792,
+      198
+    ]
+  },
+  {
+    "spriteName": "62",
+    "coords": [
+      858,
+      198
+    ]
+  },
+  {
+    "spriteName": "63",
+    "coords": [
+      924,
+      198
+    ]
+  },
+  {
+    "spriteName": "64",
+    "coords": [
+      990,
+      198
+    ]
+  },
+  {
+    "spriteName": "65",
+    "coords": [
+      0,
+      264
+    ]
+  },
+  {
+    "spriteName": "66",
+    "coords": [
+      66,
+      264
+    ]
+  },
+  {
+    "spriteName": "67",
+    "coords": [
+      132,
+      264
+    ]
+  },
+  {
+    "spriteName": "68",
+    "coords": [
+      198,
+      264
+    ]
+  },
+  {
+    "spriteName": "69",
+    "coords": [
+      264,
+      264
+    ]
+  },
+  {
+    "spriteName": "70",
+    "coords": [
+      330,
+      264
+    ]
+  },
+  {
+    "spriteName": "71",
+    "coords": [
+      396,
+      264
+    ]
+  },
+  {
+    "spriteName": "72",
+    "coords": [
+      462,
+      264
+    ]
+  },
+  {
+    "spriteName": "73",
+    "coords": [
+      528,
+      264
+    ]
+  },
+  {
+    "spriteName": "74",
+    "coords": [
+      594,
+      264
+    ]
+  },
+  {
+    "spriteName": "75",
+    "coords": [
+      660,
+      264
+    ]
+  },
+  {
+    "spriteName": "76",
+    "coords": [
+      726,
+      264
+    ]
+  },
+  {
+    "spriteName": "77",
+    "coords": [
+      792,
+      264
+    ]
+  },
+  {
+    "spriteName": "78",
+    "coords": [
+      858,
+      264
+    ]
+  },
+  {
+    "spriteName": "79",
+    "coords": [
+      924,
+      264
+    ]
+  },
+  {
+    "spriteName": "80",
+    "coords": [
+      990,
+      264
+    ]
+  },
+  {
+    "spriteName": "81",
+    "coords": [
+      0,
+      330
+    ]
+  },
+  {
+    "spriteName": "82",
+    "coords": [
+      66,
+      330
+    ]
+  },
+  {
+    "spriteName": "83",
+    "coords": [
+      132,
+      330
+    ]
+  },
+  {
+    "spriteName": "84",
+    "coords": [
+      198,
+      330
+    ]
+  },
+  {
+    "spriteName": "85",
+    "coords": [
+      264,
+      330
+    ]
+  },
+  {
+    "spriteName": "86",
+    "coords": [
+      330,
+      330
+    ]
+  },
+  {
+    "spriteName": "87",
+    "coords": [
+      396,
+      330
+    ]
+  },
+  {
+    "spriteName": "88",
+    "coords": [
+      462,
+      330
+    ]
+  },
+  {
+    "spriteName": "89",
+    "coords": [
+      528,
+      330
+    ]
+  },
+  {
+    "spriteName": "90",
+    "coords": [
+      594,
+      330
+    ]
+  },
+  {
+    "spriteName": "91",
+    "coords": [
+      660,
+      330
+    ]
+  },
+  {
+    "spriteName": "92",
+    "coords": [
+      726,
+      330
+    ]
+  },
+  {
+    "spriteName": "93",
+    "coords": [
+      792,
+      330
+    ]
+  },
+  {
+    "spriteName": "94",
+    "coords": [
+      858,
+      330
+    ]
+  },
+  {
+    "spriteName": "95",
+    "coords": [
+      924,
+      330
+    ]
+  },
+  {
+    "spriteName": "96",
+    "coords": [
+      990,
+      330
+    ]
+  },
+  {
+    "spriteName": "97",
+    "coords": [
+      0,
+      396
+    ]
+  },
+  {
+    "spriteName": "98",
+    "coords": [
+      66,
+      396
+    ]
+  },
+  {
+    "spriteName": "99",
+    "coords": [
+      132,
+      396
+    ]
+  },
+  {
+    "spriteName": "100",
+    "coords": [
+      198,
+      396
+    ]
+  },
+  {
+    "spriteName": "101",
+    "coords": [
+      264,
+      396
+    ]
+  },
+  {
+    "spriteName": "102",
+    "coords": [
+      330,
+      396
+    ]
+  },
+  {
+    "spriteName": "103",
+    "coords": [
+      396,
+      396
+    ]
+  },
+  {
+    "spriteName": "104",
+    "coords": [
+      462,
+      396
+    ]
+  },
+  {
+    "spriteName": "105",
+    "coords": [
+      528,
+      396
+    ]
+  },
+  {
+    "spriteName": "106",
+    "coords": [
+      594,
+      396
+    ]
+  },
+  {
+    "spriteName": "107",
+    "coords": [
+      660,
+      396
+    ]
+  },
+  {
+    "spriteName": "108",
+    "coords": [
+      726,
+      396
+    ]
+  },
+  {
+    "spriteName": "109",
+    "coords": [
+      792,
+      396
+    ]
+  },
+  {
+    "spriteName": "110",
+    "coords": [
+      858,
+      396
+    ]
+  },
+  {
+    "spriteName": "111",
+    "coords": [
+      924,
+      396
+    ]
+  },
+  {
+    "spriteName": "112",
+    "coords": [
+      990,
+      396
+    ]
+  },
+  {
+    "spriteName": "113",
+    "coords": [
+      0,
+      462
+    ]
+  },
+  {
+    "spriteName": "114",
+    "coords": [
+      66,
+      462
+    ]
+  },
+  {
+    "spriteName": "115",
+    "coords": [
+      132,
+      462
+    ]
+  },
+  {
+    "spriteName": "116",
+    "coords": [
+      198,
+      462
+    ]
+  },
+  {
+    "spriteName": "117",
+    "coords": [
+      264,
+      462
+    ]
+  },
+  {
+    "spriteName": "118",
+    "coords": [
+      330,
+      462
+    ]
+  },
+  {
+    "spriteName": "119",
+    "coords": [
+      396,
+      462
+    ]
+  },
+  {
+    "spriteName": "120",
+    "coords": [
+      462,
+      462
+    ]
+  },
+  {
+    "spriteName": "121",
+    "coords": [
+      528,
+      462
+    ]
+  },
+  {
+    "spriteName": "122",
+    "coords": [
+      594,
+      462
+    ]
+  },
+  {
+    "spriteName": "123",
+    "coords": [
+      660,
+      462
+    ]
+  },
+  {
+    "spriteName": "124",
+    "coords": [
+      726,
+      462
+    ]
+  },
+  {
+    "spriteName": "125",
+    "coords": [
+      792,
+      462
+    ]
+  },
+  {
+    "spriteName": "126",
+    "coords": [
+      858,
+      462
+    ]
+  },
+  {
+    "spriteName": "127",
+    "coords": [
+      924,
+      462
+    ]
+  },
+  {
+    "spriteName": "128",
+    "coords": [
+      990,
+      462
+    ]
+  },
+  {
+    "spriteName": "129",
+    "coords": [
+      0,
+      528
+    ]
+  },
+  {
+    "spriteName": "130",
+    "coords": [
+      66,
+      528
+    ]
+  },
+  {
+    "spriteName": "131",
+    "coords": [
+      132,
+      528
+    ]
+  },
+  {
+    "spriteName": "132",
+    "coords": [
+      198,
+      528
+    ]
+  },
+  {
+    "spriteName": "133",
+    "coords": [
+      264,
+      528
+    ]
+  },
+  {
+    "spriteName": "134",
+    "coords": [
+      330,
+      528
+    ]
+  },
+  {
+    "spriteName": "135",
+    "coords": [
+      396,
+      528
+    ]
+  },
+  {
+    "spriteName": "136",
+    "coords": [
+      462,
+      528
+    ]
+  },
+  {
+    "spriteName": "137",
+    "coords": [
+      528,
+      528
+    ]
+  },
+  {
+    "spriteName": "138",
+    "coords": [
+      594,
+      528
+    ]
+  },
+  {
+    "spriteName": "139",
+    "coords": [
+      660,
+      528
+    ]
+  },
+  {
+    "spriteName": "140",
+    "coords": [
+      726,
+      528
+    ]
+  },
+  {
+    "spriteName": "141",
+    "coords": [
+      792,
+      528
+    ]
+  },
+  {
+    "spriteName": "142",
+    "coords": [
+      858,
+      528
+    ]
+  },
+  {
+    "spriteName": "143",
+    "coords": [
+      924,
+      528
+    ]
+  },
+  {
+    "spriteName": "144",
+    "coords": [
+      990,
+      528
+    ]
+  },
+  {
+    "spriteName": "145",
+    "coords": [
+      0,
+      594
+    ]
+  },
+  {
+    "spriteName": "146",
+    "coords": [
+      66,
+      594
+    ]
+  },
+  {
+    "spriteName": "147",
+    "coords": [
+      132,
+      594
+    ]
+  },
+  {
+    "spriteName": "148",
+    "coords": [
+      198,
+      594
+    ]
+  },
+  {
+    "spriteName": "149",
+    "coords": [
+      264,
+      594
+    ]
+  },
+  {
+    "spriteName": "150",
+    "coords": [
+      330,
+      594
+    ]
+  },
+  {
+    "spriteName": "151",
+    "coords": [
+      396,
+      594
+    ]
+  },
+  {
+    "spriteName": "152",
+    "coords": [
+      462,
+      594
+    ]
+  },
+  {
+    "spriteName": "153",
+    "coords": [
+      528,
+      594
+    ]
+  },
+  {
+    "spriteName": "154",
+    "coords": [
+      594,
+      594
+    ]
+  },
+  {
+    "spriteName": "155",
+    "coords": [
+      660,
+      594
+    ]
+  },
+  {
+    "spriteName": "156",
+    "coords": [
+      726,
+      594
+    ]
+  },
+  {
+    "spriteName": "157",
+    "coords": [
+      792,
+      594
+    ]
+  },
+  {
+    "spriteName": "158",
+    "coords": [
+      858,
+      594
+    ]
+  },
+  {
+    "spriteName": "159",
+    "coords": [
+      924,
+      594
+    ]
+  },
+  {
+    "spriteName": "160",
+    "coords": [
+      990,
+      594
+    ]
+  },
+  {
+    "spriteName": "161",
+    "coords": [
+      0,
+      660
+    ]
+  },
+  {
+    "spriteName": "162",
+    "coords": [
+      66,
+      660
+    ]
+  },
+  {
+    "spriteName": "163",
+    "coords": [
+      132,
+      660
+    ]
+  },
+  {
+    "spriteName": "164",
+    "coords": [
+      198,
+      660
+    ]
+  },
+  {
+    "spriteName": "165",
+    "coords": [
+      264,
+      660
+    ]
+  },
+  {
+    "spriteName": "166",
+    "coords": [
+      330,
+      660
+    ]
+  },
+  {
+    "spriteName": "167",
+    "coords": [
+      396,
+      660
+    ]
+  },
+  {
+    "spriteName": "168",
+    "coords": [
+      462,
+      660
+    ]
+  },
+  {
+    "spriteName": "169",
+    "coords": [
+      528,
+      660
+    ]
+  },
+  {
+    "spriteName": "170",
+    "coords": [
+      594,
+      660
+    ]
+  },
+  {
+    "spriteName": "171",
+    "coords": [
+      660,
+      660
+    ]
+  },
+  {
+    "spriteName": "172",
+    "coords": [
+      726,
+      660
+    ]
+  },
+  {
+    "spriteName": "173",
+    "coords": [
+      792,
+      660
+    ]
+  },
+  {
+    "spriteName": "174",
+    "coords": [
+      858,
+      660
+    ]
+  },
+  {
+    "spriteName": "175",
+    "coords": [
+      924,
+      660
+    ]
+  },
+  {
+    "spriteName": "176",
+    "coords": [
+      990,
+      660
+    ]
+  },
+  {
+    "spriteName": "177",
+    "coords": [
+      0,
+      726
+    ]
+  },
+  {
+    "spriteName": "178",
+    "coords": [
+      66,
+      726
+    ]
+  },
+  {
+    "spriteName": "179",
+    "coords": [
+      132,
+      726
+    ]
+  },
+  {
+    "spriteName": "180",
+    "coords": [
+      198,
+      726
+    ]
+  },
+  {
+    "spriteName": "181",
+    "coords": [
+      264,
+      726
+    ]
+  },
+  {
+    "spriteName": "182",
+    "coords": [
+      330,
+      726
+    ]
+  },
+  {
+    "spriteName": "183",
+    "coords": [
+      396,
+      726
+    ]
+  },
+  {
+    "spriteName": "184",
+    "coords": [
+      462,
+      726
+    ]
+  },
+  {
+    "spriteName": "185",
+    "coords": [
+      528,
+      726
+    ]
+  },
+  {
+    "spriteName": "186",
+    "coords": [
+      594,
+      726
+    ]
+  },
+  {
+    "spriteName": "187",
+    "coords": [
+      660,
+      726
+    ]
+  },
+  {
+    "spriteName": "188",
+    "coords": [
+      726,
+      726
+    ]
+  },
+  {
+    "spriteName": "189",
+    "coords": [
+      792,
+      726
+    ]
+  },
+  {
+    "spriteName": "190",
+    "coords": [
+      858,
+      726
+    ]
+  },
+  {
+    "spriteName": "191",
+    "coords": [
+      924,
+      726
+    ]
+  },
+  {
+    "spriteName": "192",
+    "coords": [
+      990,
+      726
+    ]
+  },
+  {
+    "spriteName": "193",
+    "coords": [
+      0,
+      792
+    ]
+  },
+  {
+    "spriteName": "194",
+    "coords": [
+      66,
+      792
+    ]
+  },
+  {
+    "spriteName": "195",
+    "coords": [
+      132,
+      792
+    ]
+  },
+  {
+    "spriteName": "196",
+    "coords": [
+      198,
+      792
+    ]
+  },
+  {
+    "spriteName": "197",
+    "coords": [
+      264,
+      792
+    ]
+  },
+  {
+    "spriteName": "198",
+    "coords": [
+      330,
+      792
+    ]
+  },
+  {
+    "spriteName": "199",
+    "coords": [
+      396,
+      792
+    ]
+  },
+  {
+    "spriteName": "200",
+    "coords": [
+      462,
+      792
+    ]
+  },
+  {
+    "spriteName": "201",
+    "coords": [
+      528,
+      792
+    ]
+  },
+  {
+    "spriteName": "202",
+    "coords": [
+      594,
+      792
+    ]
+  },
+  {
+    "spriteName": "203",
+    "coords": [
+      660,
+      792
+    ]
+  },
+  {
+    "spriteName": "204",
+    "coords": [
+      726,
+      792
+    ]
+  },
+  {
+    "spriteName": "205",
+    "coords": [
+      792,
+      792
+    ]
+  },
+  {
+    "spriteName": "206",
+    "coords": [
+      858,
+      792
+    ]
+  },
+  {
+    "spriteName": "207",
+    "coords": [
+      924,
+      792
+    ]
+  },
+  {
+    "spriteName": "208",
+    "coords": [
+      990,
+      792
+    ]
+  },
+  {
+    "spriteName": "209",
+    "coords": [
+      0,
+      858
+    ]
+  },
+  {
+    "spriteName": "210",
+    "coords": [
+      66,
+      858
+    ]
+  },
+  {
+    "spriteName": "211",
+    "coords": [
+      132,
+      858
+    ]
+  },
+  {
+    "spriteName": "212",
+    "coords": [
+      198,
+      858
+    ]
+  },
+  {
+    "spriteName": "213",
+    "coords": [
+      264,
+      858
+    ]
+  },
+  {
+    "spriteName": "214",
+    "coords": [
+      330,
+      858
+    ]
+  },
+  {
+    "spriteName": "215",
+    "coords": [
+      396,
+      858
+    ]
+  },
+  {
+    "spriteName": "216",
+    "coords": [
+      462,
+      858
+    ]
+  },
+  {
+    "spriteName": "217",
+    "coords": [
+      528,
+      858
+    ]
+  },
+  {
+    "spriteName": "218",
+    "coords": [
+      594,
+      858
+    ]
+  },
+  {
+    "spriteName": "219",
+    "coords": [
+      660,
+      858
+    ]
+  },
+  {
+    "spriteName": "220",
+    "coords": [
+      726,
+      858
+    ]
+  },
+  {
+    "spriteName": "221",
+    "coords": [
+      792,
+      858
+    ]
+  },
+  {
+    "spriteName": "222",
+    "coords": [
+      858,
+      858
+    ]
+  },
+  {
+    "spriteName": "223",
+    "coords": [
+      924,
+      858
+    ]
+  },
+  {
+    "spriteName": "224",
+    "coords": [
+      990,
+      858
+    ]
+  },
+  {
+    "spriteName": "225",
+    "coords": [
+      0,
+      924
+    ]
+  },
+  {
+    "spriteName": "226",
+    "coords": [
+      66,
+      924
+    ]
+  },
+  {
+    "spriteName": "227",
+    "coords": [
+      132,
+      924
+    ]
+  },
+  {
+    "spriteName": "228",
+    "coords": [
+      198,
+      924
+    ]
+  },
+  {
+    "spriteName": "229",
+    "coords": [
+      264,
+      924
+    ]
+  },
+  {
+    "spriteName": "230",
+    "coords": [
+      330,
+      924
+    ]
+  },
+  {
+    "spriteName": "231",
+    "coords": [
+      396,
+      924
+    ]
+  },
+  {
+    "spriteName": "232",
+    "coords": [
+      462,
+      924
+    ]
+  },
+  {
+    "spriteName": "233",
+    "coords": [
+      528,
+      924
+    ]
+  },
+  {
+    "spriteName": "234",
+    "coords": [
+      594,
+      924
+    ]
+  },
+  {
+    "spriteName": "235",
+    "coords": [
+      660,
+      924
+    ]
+  },
+  {
+    "spriteName": "236",
+    "coords": [
+      726,
+      924
+    ]
+  },
+  {
+    "spriteName": "237",
+    "coords": [
+      792,
+      924
+    ]
+  },
+  {
+    "spriteName": "238",
+    "coords": [
+      858,
+      924
+    ]
+  },
+  {
+    "spriteName": "239",
+    "coords": [
+      924,
+      924
+    ]
+  },
+  {
+    "spriteName": "240",
+    "coords": [
+      990,
+      924
+    ]
+  },
+  {
+    "spriteName": "241",
+    "coords": [
+      0,
+      990
+    ]
+  },
+  {
+    "spriteName": "242",
+    "coords": [
+      66,
+      990
+    ]
+  },
+  {
+    "spriteName": "243",
+    "coords": [
+      132,
+      990
+    ]
+  },
+  {
+    "spriteName": "244",
+    "coords": [
+      198,
+      990
+    ]
+  },
+  {
+    "spriteName": "245",
+    "coords": [
+      264,
+      990
+    ]
+  },
+  {
+    "spriteName": "246",
+    "coords": [
+      330,
+      990
+    ]
+  },
+  {
+    "spriteName": "247",
+    "coords": [
+      396,
+      990
+    ]
+  },
+  {
+    "spriteName": "248",
+    "coords": [
+      462,
+      990
+    ]
+  },
+  {
+    "spriteName": "249",
+    "coords": [
+      528,
+      990
+    ]
+  },
+  {
+    "spriteName": "250",
+    "coords": [
+      594,
+      990
+    ]
+  },
+  {
+    "spriteName": "251",
+    "coords": [
+      660,
+      990
+    ]
+  },
+  {
+    "spriteName": "252",
+    "coords": [
+      726,
+      990
+    ]
+  },
+  {
+    "spriteName": "253",
+    "coords": [
+      792,
+      990
+    ]
+  },
+  {
+    "spriteName": "254",
+    "coords": [
+      858,
+      990
+    ]
+  },
+  {
+    "spriteName": "255",
+    "coords": [
+      924,
+      990
+    ]
+  },
+  {
+    "spriteName": "256",
+    "coords": [
+      990,
+      990
+    ]
+  },
+  {
+    "spriteName": "257",
+    "coords": [
+      0,
+      1056
+    ]
+  },
+  {
+    "spriteName": "258",
+    "coords": [
+      66,
+      1056
+    ]
+  },
+  {
+    "spriteName": "259",
+    "coords": [
+      132,
+      1056
+    ]
+  },
+  {
+    "spriteName": "260",
+    "coords": [
+      198,
+      1056
+    ]
+  },
+  {
+    "spriteName": "261",
+    "coords": [
+      264,
+      1056
+    ]
+  },
+  {
+    "spriteName": "262",
+    "coords": [
+      330,
+      1056
+    ]
+  },
+  {
+    "spriteName": "263",
+    "coords": [
+      396,
+      1056
+    ]
+  },
+  {
+    "spriteName": "264",
+    "coords": [
+      462,
+      1056
+    ]
+  },
+  {
+    "spriteName": "265",
+    "coords": [
+      528,
+      1056
+    ]
+  },
+  {
+    "spriteName": "266",
+    "coords": [
+      594,
+      1056
+    ]
+  },
+  {
+    "spriteName": "267",
+    "coords": [
+      660,
+      1056
+    ]
+  },
+  {
+    "spriteName": "268",
+    "coords": [
+      726,
+      1056
+    ]
+  },
+  {
+    "spriteName": "269",
+    "coords": [
+      792,
+      1056
+    ]
+  },
+  {
+    "spriteName": "270",
+    "coords": [
+      858,
+      1056
+    ]
+  },
+  {
+    "spriteName": "271",
+    "coords": [
+      924,
+      1056
+    ]
+  },
+  {
+    "spriteName": "272",
+    "coords": [
+      990,
+      1056
+    ]
+  },
+  {
+    "spriteName": "273",
+    "coords": [
+      0,
+      1122
+    ]
+  },
+  {
+    "spriteName": "274",
+    "coords": [
+      66,
+      1122
+    ]
+  },
+  {
+    "spriteName": "275",
+    "coords": [
+      132,
+      1122
+    ]
+  },
+  {
+    "spriteName": "276",
+    "coords": [
+      198,
+      1122
+    ]
+  },
+  {
+    "spriteName": "277",
+    "coords": [
+      264,
+      1122
+    ]
+  },
+  {
+    "spriteName": "278",
+    "coords": [
+      330,
+      1122
+    ]
+  },
+  {
+    "spriteName": "279",
+    "coords": [
+      396,
+      1122
+    ]
+  },
+  {
+    "spriteName": "280",
+    "coords": [
+      462,
+      1122
+    ]
+  },
+  {
+    "spriteName": "281",
+    "coords": [
+      528,
+      1122
+    ]
+  },
+  {
+    "spriteName": "282",
+    "coords": [
+      594,
+      1122
+    ]
+  },
+  {
+    "spriteName": "283",
+    "coords": [
+      660,
+      1122
+    ]
+  },
+  {
+    "spriteName": "284",
+    "coords": [
+      726,
+      1122
+    ]
+  },
+  {
+    "spriteName": "285",
+    "coords": [
+      792,
+      1122
+    ]
+  },
+  {
+    "spriteName": "286",
+    "coords": [
+      858,
+      1122
+    ]
+  },
+  {
+    "spriteName": "287",
+    "coords": [
+      924,
+      1122
+    ]
+  },
+  {
+    "spriteName": "288",
+    "coords": [
+      990,
+      1122
+    ]
+  },
+  {
+    "spriteName": "289",
+    "coords": [
+      0,
+      1188
+    ]
+  },
+  {
+    "spriteName": "290",
+    "coords": [
+      66,
+      1188
+    ]
+  },
+  {
+    "spriteName": "291",
+    "coords": [
+      132,
+      1188
+    ]
+  },
+  {
+    "spriteName": "292",
+    "coords": [
+      198,
+      1188
+    ]
+  },
+  {
+    "spriteName": "293",
+    "coords": [
+      264,
+      1188
+    ]
+  },
+  {
+    "spriteName": "294",
+    "coords": [
+      330,
+      1188
+    ]
+  },
+  {
+    "spriteName": "295",
+    "coords": [
+      396,
+      1188
+    ]
+  },
+  {
+    "spriteName": "296",
+    "coords": [
+      462,
+      1188
+    ]
+  },
+  {
+    "spriteName": "297",
+    "coords": [
+      528,
+      1188
+    ]
+  },
+  {
+    "spriteName": "298",
+    "coords": [
+      594,
+      1188
+    ]
+  },
+  {
+    "spriteName": "299",
+    "coords": [
+      660,
+      1188
+    ]
+  },
+  {
+    "spriteName": "300",
+    "coords": [
+      726,
+      1188
+    ]
+  },
+  {
+    "spriteName": "301",
+    "coords": [
+      792,
+      1188
+    ]
+  },
+  {
+    "spriteName": "302",
+    "coords": [
+      858,
+      1188
+    ]
+  },
+  {
+    "spriteName": "303",
+    "coords": [
+      924,
+      1188
+    ]
+  },
+  {
+    "spriteName": "304",
+    "coords": [
+      990,
+      1188
+    ]
+  },
+  {
+    "spriteName": "305",
+    "coords": [
+      0,
+      1254
+    ]
+  },
+  {
+    "spriteName": "306",
+    "coords": [
+      66,
+      1254
+    ]
+  },
+  {
+    "spriteName": "307",
+    "coords": [
+      132,
+      1254
+    ]
+  },
+  {
+    "spriteName": "308",
+    "coords": [
+      198,
+      1254
+    ]
+  },
+  {
+    "spriteName": "309",
+    "coords": [
+      264,
+      1254
+    ]
+  },
+  {
+    "spriteName": "310",
+    "coords": [
+      330,
+      1254
+    ]
+  },
+  {
+    "spriteName": "311",
+    "coords": [
+      396,
+      1254
+    ]
+  },
+  {
+    "spriteName": "312",
+    "coords": [
+      462,
+      1254
+    ]
+  },
+  {
+    "spriteName": "313",
+    "coords": [
+      528,
+      1254
+    ]
+  },
+  {
+    "spriteName": "314",
+    "coords": [
+      594,
+      1254
+    ]
+  },
+  {
+    "spriteName": "315",
+    "coords": [
+      660,
+      1254
+    ]
+  },
+  {
+    "spriteName": "316",
+    "coords": [
+      726,
+      1254
+    ]
+  },
+  {
+    "spriteName": "317",
+    "coords": [
+      792,
+      1254
+    ]
+  },
+  {
+    "spriteName": "318",
+    "coords": [
+      858,
+      1254
+    ]
+  },
+  {
+    "spriteName": "319",
+    "coords": [
+      924,
+      1254
+    ]
+  },
+  {
+    "spriteName": "320",
+    "coords": [
+      990,
+      1254
+    ]
+  },
+  {
+    "spriteName": "321",
+    "coords": [
+      0,
+      1320
+    ]
+  },
+  {
+    "spriteName": "322",
+    "coords": [
+      66,
+      1320
+    ]
+  },
+  {
+    "spriteName": "323",
+    "coords": [
+      132,
+      1320
+    ]
+  },
+  {
+    "spriteName": "324",
+    "coords": [
+      198,
+      1320
+    ]
+  },
+  {
+    "spriteName": "325",
+    "coords": [
+      264,
+      1320
+    ]
+  },
+  {
+    "spriteName": "326",
+    "coords": [
+      330,
+      1320
+    ]
+  },
+  {
+    "spriteName": "327",
+    "coords": [
+      396,
+      1320
+    ]
+  },
+  {
+    "spriteName": "328",
+    "coords": [
+      462,
+      1320
+    ]
+  },
+  {
+    "spriteName": "329",
+    "coords": [
+      528,
+      1320
+    ]
+  },
+  {
+    "spriteName": "330",
+    "coords": [
+      594,
+      1320
+    ]
+  },
+  {
+    "spriteName": "331",
+    "coords": [
+      660,
+      1320
+    ]
+  },
+  {
+    "spriteName": "332",
+    "coords": [
+      726,
+      1320
+    ]
+  },
+  {
+    "spriteName": "333",
+    "coords": [
+      792,
+      1320
+    ]
+  },
+  {
+    "spriteName": "334",
+    "coords": [
+      858,
+      1320
+    ]
+  },
+  {
+    "spriteName": "335",
+    "coords": [
+      924,
+      1320
+    ]
+  },
+  {
+    "spriteName": "336",
+    "coords": [
+      990,
+      1320
+    ]
+  },
+  {
+    "spriteName": "337",
+    "coords": [
+      0,
+      1386
+    ]
+  },
+  {
+    "spriteName": "338",
+    "coords": [
+      66,
+      1386
+    ]
+  },
+  {
+    "spriteName": "339",
+    "coords": [
+      132,
+      1386
+    ]
+  },
+  {
+    "spriteName": "340",
+    "coords": [
+      198,
+      1386
+    ]
+  },
+  {
+    "spriteName": "341",
+    "coords": [
+      264,
+      1386
+    ]
+  },
+  {
+    "spriteName": "342",
+    "coords": [
+      330,
+      1386
+    ]
+  },
+  {
+    "spriteName": "343",
+    "coords": [
+      396,
+      1386
+    ]
+  },
+  {
+    "spriteName": "344",
+    "coords": [
+      462,
+      1386
+    ]
+  },
+  {
+    "spriteName": "345",
+    "coords": [
+      528,
+      1386
+    ]
+  },
+  {
+    "spriteName": "346",
+    "coords": [
+      594,
+      1386
+    ]
+  },
+  {
+    "spriteName": "347",
+    "coords": [
+      660,
+      1386
+    ]
+  },
+  {
+    "spriteName": "348",
+    "coords": [
+      726,
+      1386
+    ]
+  },
+  {
+    "spriteName": "349",
+    "coords": [
+      792,
+      1386
+    ]
+  },
+  {
+    "spriteName": "350",
+    "coords": [
+      858,
+      1386
+    ]
+  },
+  {
+    "spriteName": "351",
+    "coords": [
+      924,
+      1386
+    ]
+  },
+  {
+    "spriteName": "352",
+    "coords": [
+      990,
+      1386
+    ]
+  },
+  {
+    "spriteName": "353",
+    "coords": [
+      0,
+      1452
+    ]
+  },
+  {
+    "spriteName": "354",
+    "coords": [
+      66,
+      1452
+    ]
+  },
+  {
+    "spriteName": "355",
+    "coords": [
+      132,
+      1452
+    ]
+  },
+  {
+    "spriteName": "356",
+    "coords": [
+      198,
+      1452
+    ]
+  },
+  {
+    "spriteName": "357",
+    "coords": [
+      264,
+      1452
+    ]
+  },
+  {
+    "spriteName": "358",
+    "coords": [
+      330,
+      1452
+    ]
+  },
+  {
+    "spriteName": "359",
+    "coords": [
+      396,
+      1452
+    ]
+  },
+  {
+    "spriteName": "360",
+    "coords": [
+      462,
+      1452
+    ]
+  },
+  {
+    "spriteName": "361",
+    "coords": [
+      528,
+      1452
+    ]
+  },
+  {
+    "spriteName": "362",
+    "coords": [
+      594,
+      1452
+    ]
+  },
+  {
+    "spriteName": "363",
+    "coords": [
+      660,
+      1452
+    ]
+  },
+  {
+    "spriteName": "364",
+    "coords": [
+      726,
+      1452
+    ]
+  },
+  {
+    "spriteName": "365",
+    "coords": [
+      792,
+      1452
+    ]
+  },
+  {
+    "spriteName": "366",
+    "coords": [
+      858,
+      1452
+    ]
+  },
+  {
+    "spriteName": "367",
+    "coords": [
+      924,
+      1452
+    ]
+  },
+  {
+    "spriteName": "368",
+    "coords": [
+      990,
+      1452
+    ]
+  },
+  {
+    "spriteName": "369",
+    "coords": [
+      0,
+      1518
+    ]
+  },
+  {
+    "spriteName": "370",
+    "coords": [
+      66,
+      1518
+    ]
+  },
+  {
+    "spriteName": "371",
+    "coords": [
+      132,
+      1518
+    ]
+  },
+  {
+    "spriteName": "372",
+    "coords": [
+      198,
+      1518
+    ]
+  },
+  {
+    "spriteName": "373",
+    "coords": [
+      264,
+      1518
+    ]
+  },
+  {
+    "spriteName": "374",
+    "coords": [
+      330,
+      1518
+    ]
+  },
+  {
+    "spriteName": "375",
+    "coords": [
+      396,
+      1518
+    ]
+  },
+  {
+    "spriteName": "376",
+    "coords": [
+      462,
+      1518
+    ]
+  },
+  {
+    "spriteName": "377",
+    "coords": [
+      528,
+      1518
+    ]
+  },
+  {
+    "spriteName": "378",
+    "coords": [
+      594,
+      1518
+    ]
+  },
+  {
+    "spriteName": "379",
+    "coords": [
+      660,
+      1518
+    ]
+  },
+  {
+    "spriteName": "380",
+    "coords": [
+      726,
+      1518
+    ]
+  },
+  {
+    "spriteName": "381",
+    "coords": [
+      792,
+      1518
+    ]
+  },
+  {
+    "spriteName": "382",
+    "coords": [
+      858,
+      1518
+    ]
+  },
+  {
+    "spriteName": "383",
+    "coords": [
+      924,
+      1518
+    ]
+  },
+  {
+    "spriteName": "384",
+    "coords": [
+      990,
+      1518
+    ]
+  },
+  {
+    "spriteName": "385",
+    "coords": [
+      0,
+      1584
+    ]
+  },
+  {
+    "spriteName": "386",
+    "coords": [
+      66,
+      1584
+    ]
+  },
+  {
+    "spriteName": "387",
+    "coords": [
+      132,
+      1584
+    ]
+  },
+  {
+    "spriteName": "388",
+    "coords": [
+      198,
+      1584
+    ]
+  },
+  {
+    "spriteName": "389",
+    "coords": [
+      264,
+      1584
+    ]
+  },
+  {
+    "spriteName": "390",
+    "coords": [
+      330,
+      1584
+    ]
+  },
+  {
+    "spriteName": "391",
+    "coords": [
+      396,
+      1584
+    ]
+  },
+  {
+    "spriteName": "392",
+    "coords": [
+      462,
+      1584
+    ]
+  },
+  {
+    "spriteName": "393",
+    "coords": [
+      528,
+      1584
+    ]
+  },
+  {
+    "spriteName": "394",
+    "coords": [
+      594,
+      1584
+    ]
+  },
+  {
+    "spriteName": "395",
+    "coords": [
+      660,
+      1584
+    ]
+  },
+  {
+    "spriteName": "396",
+    "coords": [
+      726,
+      1584
+    ]
+  },
+  {
+    "spriteName": "397",
+    "coords": [
+      792,
+      1584
+    ]
+  },
+  {
+    "spriteName": "398",
+    "coords": [
+      858,
+      1584
+    ]
+  },
+  {
+    "spriteName": "399",
+    "coords": [
+      924,
+      1584
+    ]
+  },
+  {
+    "spriteName": "400",
+    "coords": [
+      990,
+      1584
+    ]
+  },
+  {
+    "spriteName": "401",
+    "coords": [
+      0,
+      1650
+    ]
+  },
+  {
+    "spriteName": "402",
+    "coords": [
+      66,
+      1650
+    ]
+  },
+  {
+    "spriteName": "403",
+    "coords": [
+      132,
+      1650
+    ]
+  },
+  {
+    "spriteName": "404",
+    "coords": [
+      198,
+      1650
+    ]
+  },
+  {
+    "spriteName": "405",
+    "coords": [
+      264,
+      1650
+    ]
+  },
+  {
+    "spriteName": "406",
+    "coords": [
+      330,
+      1650
+    ]
+  },
+  {
+    "spriteName": "407",
+    "coords": [
+      396,
+      1650
+    ]
+  },
+  {
+    "spriteName": "408",
+    "coords": [
+      462,
+      1650
+    ]
+  },
+  {
+    "spriteName": "409",
+    "coords": [
+      528,
+      1650
+    ]
+  },
+  {
+    "spriteName": "410",
+    "coords": [
+      594,
+      1650
+    ]
+  },
+  {
+    "spriteName": "411",
+    "coords": [
+      660,
+      1650
+    ]
+  },
+  {
+    "spriteName": "412",
+    "coords": [
+      726,
+      1650
+    ]
+  },
+  {
+    "spriteName": "413",
+    "coords": [
+      792,
+      1650
+    ]
+  },
+  {
+    "spriteName": "414",
+    "coords": [
+      858,
+      1650
+    ]
+  },
+  {
+    "spriteName": "415",
+    "coords": [
+      924,
+      1650
+    ]
+  },
+  {
+    "spriteName": "416",
+    "coords": [
+      990,
+      1650
+    ]
+  },
+  {
+    "spriteName": "417",
+    "coords": [
+      0,
+      1716
+    ]
+  },
+  {
+    "spriteName": "418",
+    "coords": [
+      66,
+      1716
+    ]
+  },
+  {
+    "spriteName": "419",
+    "coords": [
+      132,
+      1716
+    ]
+  },
+  {
+    "spriteName": "420",
+    "coords": [
+      198,
+      1716
+    ]
+  },
+  {
+    "spriteName": "421",
+    "coords": [
+      264,
+      1716
+    ]
+  },
+  {
+    "spriteName": "422",
+    "coords": [
+      330,
+      1716
+    ]
+  },
+  {
+    "spriteName": "423",
+    "coords": [
+      396,
+      1716
+    ]
+  },
+  {
+    "spriteName": "424",
+    "coords": [
+      462,
+      1716
+    ]
+  },
+  {
+    "spriteName": "425",
+    "coords": [
+      528,
+      1716
+    ]
+  },
+  {
+    "spriteName": "426",
+    "coords": [
+      594,
+      1716
+    ]
+  },
+  {
+    "spriteName": "427",
+    "coords": [
+      660,
+      1716
+    ]
+  },
+  {
+    "spriteName": "428",
+    "coords": [
+      726,
+      1716
+    ]
+  },
+  {
+    "spriteName": "429",
+    "coords": [
+      792,
+      1716
+    ]
+  },
+  {
+    "spriteName": "430",
+    "coords": [
+      858,
+      1716
+    ]
+  },
+  {
+    "spriteName": "431",
+    "coords": [
+      924,
+      1716
+    ]
+  },
+  {
+    "spriteName": "432",
+    "coords": [
+      990,
+      1716
+    ]
+  },
+  {
+    "spriteName": "433",
+    "coords": [
+      0,
+      1782
+    ]
+  },
+  {
+    "spriteName": "434",
+    "coords": [
+      66,
+      1782
+    ]
+  },
+  {
+    "spriteName": "435",
+    "coords": [
+      132,
+      1782
+    ]
+  },
+  {
+    "spriteName": "436",
+    "coords": [
+      198,
+      1782
+    ]
+  },
+  {
+    "spriteName": "437",
+    "coords": [
+      264,
+      1782
+    ]
+  },
+  {
+    "spriteName": "438",
+    "coords": [
+      330,
+      1782
+    ]
+  },
+  {
+    "spriteName": "439",
+    "coords": [
+      396,
+      1782
+    ]
+  },
+  {
+    "spriteName": "440",
+    "coords": [
+      462,
+      1782
+    ]
+  },
+  {
+    "spriteName": "441",
+    "coords": [
+      528,
+      1782
+    ]
+  },
+  {
+    "spriteName": "442",
+    "coords": [
+      594,
+      1782
+    ]
+  },
+  {
+    "spriteName": "443",
+    "coords": [
+      660,
+      1782
+    ]
+  },
+  {
+    "spriteName": "444",
+    "coords": [
+      726,
+      1782
+    ]
+  },
+  {
+    "spriteName": "445",
+    "coords": [
+      792,
+      1782
+    ]
+  },
+  {
+    "spriteName": "446",
+    "coords": [
+      858,
+      1782
+    ]
+  },
+  {
+    "spriteName": "447",
+    "coords": [
+      924,
+      1782
+    ]
+  },
+  {
+    "spriteName": "448",
+    "coords": [
+      990,
+      1782
+    ]
+  },
+  {
+    "spriteName": "449",
+    "coords": [
+      0,
+      1848
+    ]
+  },
+  {
+    "spriteName": "450",
+    "coords": [
+      66,
+      1848
+    ]
+  },
+  {
+    "spriteName": "451",
+    "coords": [
+      132,
+      1848
+    ]
+  },
+  {
+    "spriteName": "452",
+    "coords": [
+      198,
+      1848
+    ]
+  },
+  {
+    "spriteName": "453",
+    "coords": [
+      264,
+      1848
+    ]
+  },
+  {
+    "spriteName": "454",
+    "coords": [
+      330,
+      1848
+    ]
+  },
+  {
+    "spriteName": "455",
+    "coords": [
+      396,
+      1848
+    ]
+  },
+  {
+    "spriteName": "456",
+    "coords": [
+      462,
+      1848
+    ]
+  },
+  {
+    "spriteName": "457",
+    "coords": [
+      528,
+      1848
+    ]
+  },
+  {
+    "spriteName": "458",
+    "coords": [
+      594,
+      1848
+    ]
+  },
+  {
+    "spriteName": "459",
+    "coords": [
+      660,
+      1848
+    ]
+  },
+  {
+    "spriteName": "460",
+    "coords": [
+      726,
+      1848
+    ]
+  },
+  {
+    "spriteName": "461",
+    "coords": [
+      792,
+      1848
+    ]
+  },
+  {
+    "spriteName": "462",
+    "coords": [
+      858,
+      1848
+    ]
+  },
+  {
+    "spriteName": "463",
+    "coords": [
+      924,
+      1848
+    ]
+  },
+  {
+    "spriteName": "464",
+    "coords": [
+      990,
+      1848
+    ]
+  },
+  {
+    "spriteName": "465",
+    "coords": [
+      0,
+      1914
+    ]
+  },
+  {
+    "spriteName": "466",
+    "coords": [
+      66,
+      1914
+    ]
+  },
+  {
+    "spriteName": "467",
+    "coords": [
+      132,
+      1914
+    ]
+  },
+  {
+    "spriteName": "468",
+    "coords": [
+      198,
+      1914
+    ]
+  },
+  {
+    "spriteName": "469",
+    "coords": [
+      264,
+      1914
+    ]
+  },
+  {
+    "spriteName": "470",
+    "coords": [
+      330,
+      1914
+    ]
+  },
+  {
+    "spriteName": "471",
+    "coords": [
+      396,
+      1914
+    ]
+  },
+  {
+    "spriteName": "472",
+    "coords": [
+      462,
+      1914
+    ]
+  },
+  {
+    "spriteName": "473",
+    "coords": [
+      528,
+      1914
+    ]
+  },
+  {
+    "spriteName": "474",
+    "coords": [
+      594,
+      1914
+    ]
+  },
+  {
+    "spriteName": "475",
+    "coords": [
+      660,
+      1914
+    ]
+  },
+  {
+    "spriteName": "476",
+    "coords": [
+      726,
+      1914
+    ]
+  },
+  {
+    "spriteName": "477",
+    "coords": [
+      792,
+      1914
+    ]
+  },
+  {
+    "spriteName": "478",
+    "coords": [
+      858,
+      1914
+    ]
+  },
+  {
+    "spriteName": "479",
+    "coords": [
+      924,
+      1914
+    ]
+  },
+  {
+    "spriteName": "480",
+    "coords": [
+      990,
+      1914
+    ]
+  },
+  {
+    "spriteName": "481",
+    "coords": [
+      0,
+      1980
+    ]
+  },
+  {
+    "spriteName": "482",
+    "coords": [
+      66,
+      1980
+    ]
+  },
+  {
+    "spriteName": "483",
+    "coords": [
+      132,
+      1980
+    ]
+  },
+  {
+    "spriteName": "484",
+    "coords": [
+      198,
+      1980
+    ]
+  },
+  {
+    "spriteName": "485",
+    "coords": [
+      264,
+      1980
+    ]
+  },
+  {
+    "spriteName": "486",
+    "coords": [
+      330,
+      1980
+    ]
+  },
+  {
+    "spriteName": "487",
+    "coords": [
+      396,
+      1980
+    ]
+  },
+  {
+    "spriteName": "488",
+    "coords": [
+      462,
+      1980
+    ]
+  },
+  {
+    "spriteName": "489",
+    "coords": [
+      528,
+      1980
+    ]
+  },
+  {
+    "spriteName": "490",
+    "coords": [
+      594,
+      1980
+    ]
+  },
+  {
+    "spriteName": "491",
+    "coords": [
+      660,
+      1980
+    ]
+  },
+  {
+    "spriteName": "492",
+    "coords": [
+      726,
+      1980
+    ]
+  },
+  {
+    "spriteName": "493",
+    "coords": [
+      792,
+      1980
+    ]
+  },
+  {
+    "spriteName": "494",
+    "coords": [
+      858,
+      1980
+    ]
+  },
+  {
+    "spriteName": "495",
+    "coords": [
+      924,
+      1980
+    ]
+  },
+  {
+    "spriteName": "496",
+    "coords": [
+      990,
+      1980
+    ]
+  },
+  {
+    "spriteName": "497",
+    "coords": [
+      0,
+      2046
+    ]
+  },
+  {
+    "spriteName": "498",
+    "coords": [
+      66,
+      2046
+    ]
+  },
+  {
+    "spriteName": "499",
+    "coords": [
+      132,
+      2046
+    ]
+  },
+  {
+    "spriteName": "500",
+    "coords": [
+      198,
+      2046
+    ]
+  },
+  {
+    "spriteName": "501",
+    "coords": [
+      264,
+      2046
+    ]
+  },
+  {
+    "spriteName": "502",
+    "coords": [
+      330,
+      2046
+    ]
+  },
+  {
+    "spriteName": "503",
+    "coords": [
+      396,
+      2046
+    ]
+  },
+  {
+    "spriteName": "504",
+    "coords": [
+      462,
+      2046
+    ]
+  },
+  {
+    "spriteName": "505",
+    "coords": [
+      528,
+      2046
+    ]
+  },
+  {
+    "spriteName": "506",
+    "coords": [
+      594,
+      2046
+    ]
+  },
+  {
+    "spriteName": "507",
+    "coords": [
+      660,
+      2046
+    ]
+  },
+  {
+    "spriteName": "508",
+    "coords": [
+      726,
+      2046
+    ]
+  },
+  {
+    "spriteName": "509",
+    "coords": [
+      792,
+      2046
+    ]
+  },
+  {
+    "spriteName": "510",
+    "coords": [
+      858,
+      2046
+    ]
+  },
+  {
+    "spriteName": "511",
+    "coords": [
+      924,
+      2046
+    ]
+  },
+  {
+    "spriteName": "512",
+    "coords": [
+      990,
+      2046
+    ]
+  },
+  {
+    "spriteName": "513",
+    "coords": [
+      0,
+      2112
+    ]
+  },
+  {
+    "spriteName": "514",
+    "coords": [
+      66,
+      2112
+    ]
+  },
+  {
+    "spriteName": "515",
+    "coords": [
+      132,
+      2112
+    ]
+  },
+  {
+    "spriteName": "516",
+    "coords": [
+      198,
+      2112
+    ]
+  },
+  {
+    "spriteName": "517",
+    "coords": [
+      264,
+      2112
+    ]
+  },
+  {
+    "spriteName": "518",
+    "coords": [
+      330,
+      2112
+    ]
+  },
+  {
+    "spriteName": "519",
+    "coords": [
+      396,
+      2112
+    ]
+  },
+  {
+    "spriteName": "520",
+    "coords": [
+      462,
+      2112
+    ]
+  },
+  {
+    "spriteName": "521",
+    "coords": [
+      528,
+      2112
+    ]
+  },
+  {
+    "spriteName": "522",
+    "coords": [
+      594,
+      2112
+    ]
+  },
+  {
+    "spriteName": "523",
+    "coords": [
+      660,
+      2112
+    ]
+  },
+  {
+    "spriteName": "524",
+    "coords": [
+      726,
+      2112
+    ]
+  },
+  {
+    "spriteName": "525",
+    "coords": [
+      792,
+      2112
+    ]
+  },
+  {
+    "spriteName": "526",
+    "coords": [
+      858,
+      2112
+    ]
+  },
+  {
+    "spriteName": "527",
+    "coords": [
+      924,
+      2112
+    ]
+  },
+  {
+    "spriteName": "528",
+    "coords": [
+      990,
+      2112
+    ]
+  },
+  {
+    "spriteName": "529",
+    "coords": [
+      0,
+      2178
+    ]
+  },
+  {
+    "spriteName": "530",
+    "coords": [
+      66,
+      2178
+    ]
+  },
+  {
+    "spriteName": "531",
+    "coords": [
+      132,
+      2178
+    ]
+  },
+  {
+    "spriteName": "532",
+    "coords": [
+      198,
+      2178
+    ]
+  },
+  {
+    "spriteName": "533",
+    "coords": [
+      264,
+      2178
+    ]
+  },
+  {
+    "spriteName": "534",
+    "coords": [
+      330,
+      2178
+    ]
+  },
+  {
+    "spriteName": "535",
+    "coords": [
+      396,
+      2178
+    ]
+  },
+  {
+    "spriteName": "536",
+    "coords": [
+      462,
+      2178
+    ]
+  },
+  {
+    "spriteName": "537",
+    "coords": [
+      528,
+      2178
+    ]
+  },
+  {
+    "spriteName": "538",
+    "coords": [
+      594,
+      2178
+    ]
+  },
+  {
+    "spriteName": "539",
+    "coords": [
+      660,
+      2178
+    ]
+  },
+  {
+    "spriteName": "540",
+    "coords": [
+      726,
+      2178
+    ]
+  },
+  {
+    "spriteName": "541",
+    "coords": [
+      792,
+      2178
+    ]
+  },
+  {
+    "spriteName": "542",
+    "coords": [
+      858,
+      2178
+    ]
+  },
+  {
+    "spriteName": "543",
+    "coords": [
+      924,
+      2178
+    ]
+  },
+  {
+    "spriteName": "544",
+    "coords": [
+      990,
+      2178
+    ]
+  },
+  {
+    "spriteName": "545",
+    "coords": [
+      0,
+      2244
+    ]
+  },
+  {
+    "spriteName": "546",
+    "coords": [
+      66,
+      2244
+    ]
+  },
+  {
+    "spriteName": "547",
+    "coords": [
+      132,
+      2244
+    ]
+  },
+  {
+    "spriteName": "548",
+    "coords": [
+      198,
+      2244
+    ]
+  },
+  {
+    "spriteName": "549",
+    "coords": [
+      264,
+      2244
+    ]
+  },
+  {
+    "spriteName": "550",
+    "coords": [
+      330,
+      2244
+    ]
+  },
+  {
+    "spriteName": "551",
+    "coords": [
+      396,
+      2244
+    ]
+  },
+  {
+    "spriteName": "552",
+    "coords": [
+      462,
+      2244
+    ]
+  },
+  {
+    "spriteName": "553",
+    "coords": [
+      528,
+      2244
+    ]
+  },
+  {
+    "spriteName": "554",
+    "coords": [
+      594,
+      2244
+    ]
+  },
+  {
+    "spriteName": "555",
+    "coords": [
+      660,
+      2244
+    ]
+  },
+  {
+    "spriteName": "556",
+    "coords": [
+      726,
+      2244
+    ]
+  },
+  {
+    "spriteName": "557",
+    "coords": [
+      792,
+      2244
+    ]
+  },
+  {
+    "spriteName": "558",
+    "coords": [
+      858,
+      2244
+    ]
+  },
+  {
+    "spriteName": "559",
+    "coords": [
+      924,
+      2244
+    ]
+  },
+  {
+    "spriteName": "560",
+    "coords": [
+      990,
+      2244
+    ]
+  },
+  {
+    "spriteName": "561",
+    "coords": [
+      0,
+      2310
+    ]
+  },
+  {
+    "spriteName": "562",
+    "coords": [
+      66,
+      2310
+    ]
+  },
+  {
+    "spriteName": "563",
+    "coords": [
+      132,
+      2310
+    ]
+  },
+  {
+    "spriteName": "564",
+    "coords": [
+      198,
+      2310
+    ]
+  },
+  {
+    "spriteName": "565",
+    "coords": [
+      264,
+      2310
+    ]
+  },
+  {
+    "spriteName": "566",
+    "coords": [
+      330,
+      2310
+    ]
+  },
+  {
+    "spriteName": "567",
+    "coords": [
+      396,
+      2310
+    ]
+  },
+  {
+    "spriteName": "568",
+    "coords": [
+      462,
+      2310
+    ]
+  },
+  {
+    "spriteName": "569",
+    "coords": [
+      528,
+      2310
+    ]
+  },
+  {
+    "spriteName": "570",
+    "coords": [
+      594,
+      2310
+    ]
+  },
+  {
+    "spriteName": "571",
+    "coords": [
+      660,
+      2310
+    ]
+  },
+  {
+    "spriteName": "572",
+    "coords": [
+      726,
+      2310
+    ]
+  },
+  {
+    "spriteName": "573",
+    "coords": [
+      792,
+      2310
+    ]
+  },
+  {
+    "spriteName": "574",
+    "coords": [
+      858,
+      2310
+    ]
+  },
+  {
+    "spriteName": "575",
+    "coords": [
+      924,
+      2310
+    ]
+  },
+  {
+    "spriteName": "576",
+    "coords": [
+      990,
+      2310
+    ]
+  },
+  {
+    "spriteName": "577",
+    "coords": [
+      0,
+      2376
+    ]
+  },
+  {
+    "spriteName": "578",
+    "coords": [
+      66,
+      2376
+    ]
+  },
+  {
+    "spriteName": "579",
+    "coords": [
+      132,
+      2376
+    ]
+  },
+  {
+    "spriteName": "580",
+    "coords": [
+      198,
+      2376
+    ]
+  },
+  {
+    "spriteName": "581",
+    "coords": [
+      264,
+      2376
+    ]
+  },
+  {
+    "spriteName": "582",
+    "coords": [
+      330,
+      2376
+    ]
+  },
+  {
+    "spriteName": "583",
+    "coords": [
+      396,
+      2376
+    ]
+  },
+  {
+    "spriteName": "584",
+    "coords": [
+      462,
+      2376
+    ]
+  },
+  {
+    "spriteName": "585",
+    "coords": [
+      528,
+      2376
+    ]
+  },
+  {
+    "spriteName": "586",
+    "coords": [
+      594,
+      2376
+    ]
+  },
+  {
+    "spriteName": "587",
+    "coords": [
+      660,
+      2376
+    ]
+  },
+  {
+    "spriteName": "588",
+    "coords": [
+      726,
+      2376
+    ]
+  },
+  {
+    "spriteName": "589",
+    "coords": [
+      792,
+      2376
+    ]
+  },
+  {
+    "spriteName": "590",
+    "coords": [
+      858,
+      2376
+    ]
+  },
+  {
+    "spriteName": "591",
+    "coords": [
+      924,
+      2376
+    ]
+  },
+  {
+    "spriteName": "592",
+    "coords": [
+      990,
+      2376
+    ]
+  },
+  {
+    "spriteName": "593",
+    "coords": [
+      0,
+      2442
+    ]
+  },
+  {
+    "spriteName": "594",
+    "coords": [
+      66,
+      2442
+    ]
+  },
+  {
+    "spriteName": "595",
+    "coords": [
+      132,
+      2442
+    ]
+  },
+  {
+    "spriteName": "596",
+    "coords": [
+      198,
+      2442
+    ]
+  },
+  {
+    "spriteName": "597",
+    "coords": [
+      264,
+      2442
+    ]
+  },
+  {
+    "spriteName": "598",
+    "coords": [
+      330,
+      2442
+    ]
+  },
+  {
+    "spriteName": "599",
+    "coords": [
+      396,
+      2442
+    ]
+  },
+  {
+    "spriteName": "600",
+    "coords": [
+      462,
+      2442
+    ]
+  },
+  {
+    "spriteName": "601",
+    "coords": [
+      528,
+      2442
+    ]
+  },
+  {
+    "spriteName": "602",
+    "coords": [
+      594,
+      2442
+    ]
+  },
+  {
+    "spriteName": "603",
+    "coords": [
+      660,
+      2442
+    ]
+  },
+  {
+    "spriteName": "604",
+    "coords": [
+      726,
+      2442
+    ]
+  },
+  {
+    "spriteName": "605",
+    "coords": [
+      792,
+      2442
+    ]
+  },
+  {
+    "spriteName": "606",
+    "coords": [
+      858,
+      2442
+    ]
+  },
+  {
+    "spriteName": "607",
+    "coords": [
+      924,
+      2442
+    ]
+  },
+  {
+    "spriteName": "608",
+    "coords": [
+      990,
+      2442
+    ]
+  },
+  {
+    "spriteName": "609",
+    "coords": [
+      0,
+      2508
+    ]
+  },
+  {
+    "spriteName": "610",
+    "coords": [
+      66,
+      2508
+    ]
+  },
+  {
+    "spriteName": "611",
+    "coords": [
+      132,
+      2508
+    ]
+  },
+  {
+    "spriteName": "612",
+    "coords": [
+      198,
+      2508
+    ]
+  },
+  {
+    "spriteName": "613",
+    "coords": [
+      264,
+      2508
+    ]
+  },
+  {
+    "spriteName": "614",
+    "coords": [
+      330,
+      2508
+    ]
+  },
+  {
+    "spriteName": "615",
+    "coords": [
+      396,
+      2508
+    ]
+  },
+  {
+    "spriteName": "616",
+    "coords": [
+      462,
+      2508
+    ]
+  },
+  {
+    "spriteName": "617",
+    "coords": [
+      528,
+      2508
+    ]
+  },
+  {
+    "spriteName": "618",
+    "coords": [
+      594,
+      2508
+    ]
+  },
+  {
+    "spriteName": "619",
+    "coords": [
+      660,
+      2508
+    ]
+  },
+  {
+    "spriteName": "620",
+    "coords": [
+      726,
+      2508
+    ]
+  },
+  {
+    "spriteName": "621",
+    "coords": [
+      792,
+      2508
+    ]
+  },
+  {
+    "spriteName": "622",
+    "coords": [
+      858,
+      2508
+    ]
+  },
+  {
+    "spriteName": "623",
+    "coords": [
+      924,
+      2508
+    ]
+  },
+  {
+    "spriteName": "624",
+    "coords": [
+      990,
+      2508
+    ]
+  },
+  {
+    "spriteName": "625",
+    "coords": [
+      0,
+      2574
+    ]
+  },
+  {
+    "spriteName": "626",
+    "coords": [
+      66,
+      2574
+    ]
+  },
+  {
+    "spriteName": "627",
+    "coords": [
+      132,
+      2574
+    ]
+  },
+  {
+    "spriteName": "628",
+    "coords": [
+      198,
+      2574
+    ]
+  },
+  {
+    "spriteName": "629",
+    "coords": [
+      264,
+      2574
+    ]
+  },
+  {
+    "spriteName": "630",
+    "coords": [
+      330,
+      2574
+    ]
+  },
+  {
+    "spriteName": "631",
+    "coords": [
+      396,
+      2574
+    ]
+  },
+  {
+    "spriteName": "632",
+    "coords": [
+      462,
+      2574
+    ]
+  },
+  {
+    "spriteName": "633",
+    "coords": [
+      528,
+      2574
+    ]
+  },
+  {
+    "spriteName": "634",
+    "coords": [
+      594,
+      2574
+    ]
+  },
+  {
+    "spriteName": "635",
+    "coords": [
+      660,
+      2574
+    ]
+  },
+  {
+    "spriteName": "636",
+    "coords": [
+      726,
+      2574
+    ]
+  },
+  {
+    "spriteName": "637",
+    "coords": [
+      792,
+      2574
+    ]
+  },
+  {
+    "spriteName": "638",
+    "coords": [
+      858,
+      2574
+    ]
+  },
+  {
+    "spriteName": "639",
+    "coords": [
+      924,
+      2574
+    ]
+  },
+  {
+    "spriteName": "640",
+    "coords": [
+      990,
+      2574
+    ]
+  },
+  {
+    "spriteName": "641",
+    "coords": [
+      0,
+      2640
+    ]
+  },
+  {
+    "spriteName": "642",
+    "coords": [
+      66,
+      2640
+    ]
+  },
+  {
+    "spriteName": "643",
+    "coords": [
+      132,
+      2640
+    ]
+  },
+  {
+    "spriteName": "644",
+    "coords": [
+      198,
+      2640
+    ]
+  },
+  {
+    "spriteName": "645",
+    "coords": [
+      264,
+      2640
+    ]
+  },
+  {
+    "spriteName": "646",
+    "coords": [
+      330,
+      2640
+    ]
+  },
+  {
+    "spriteName": "647",
+    "coords": [
+      396,
+      2640
+    ]
+  },
+  {
+    "spriteName": "648",
+    "coords": [
+      462,
+      2640
+    ]
+  },
+  {
+    "spriteName": "649",
+    "coords": [
+      528,
+      2640
+    ]
+  },
+  {
+    "spriteName": "650",
+    "coords": [
+      594,
+      2640
+    ]
+  },
+  {
+    "spriteName": "651",
+    "coords": [
+      660,
+      2640
+    ]
+  },
+  {
+    "spriteName": "652",
+    "coords": [
+      726,
+      2640
+    ]
+  },
+  {
+    "spriteName": "653",
+    "coords": [
+      792,
+      2640
+    ]
+  },
+  {
+    "spriteName": "654",
+    "coords": [
+      858,
+      2640
+    ]
+  },
+  {
+    "spriteName": "655",
+    "coords": [
+      924,
+      2640
+    ]
+  },
+  {
+    "spriteName": "656",
+    "coords": [
+      990,
+      2640
+    ]
+  },
+  {
+    "spriteName": "657",
+    "coords": [
+      0,
+      2706
+    ]
+  },
+  {
+    "spriteName": "658",
+    "coords": [
+      66,
+      2706
+    ]
+  },
+  {
+    "spriteName": "659",
+    "coords": [
+      132,
+      2706
+    ]
+  },
+  {
+    "spriteName": "660",
+    "coords": [
+      198,
+      2706
+    ]
+  },
+  {
+    "spriteName": "661",
+    "coords": [
+      264,
+      2706
+    ]
+  },
+  {
+    "spriteName": "662",
+    "coords": [
+      330,
+      2706
+    ]
+  },
+  {
+    "spriteName": "663",
+    "coords": [
+      396,
+      2706
+    ]
+  },
+  {
+    "spriteName": "664",
+    "coords": [
+      462,
+      2706
+    ]
+  },
+  {
+    "spriteName": "665",
+    "coords": [
+      528,
+      2706
+    ]
+  },
+  {
+    "spriteName": "666",
+    "coords": [
+      594,
+      2706
+    ]
+  },
+  {
+    "spriteName": "667",
+    "coords": [
+      660,
+      2706
+    ]
+  },
+  {
+    "spriteName": "668",
+    "coords": [
+      726,
+      2706
+    ]
+  },
+  {
+    "spriteName": "669",
+    "coords": [
+      792,
+      2706
+    ]
+  },
+  {
+    "spriteName": "670",
+    "coords": [
+      858,
+      2706
+    ]
+  },
+  {
+    "spriteName": "671",
+    "coords": [
+      924,
+      2706
+    ]
+  },
+  {
+    "spriteName": "672",
+    "coords": [
+      990,
+      2706
+    ]
+  },
+  {
+    "spriteName": "673",
+    "coords": [
+      0,
+      2772
+    ]
+  },
+  {
+    "spriteName": "674",
+    "coords": [
+      66,
+      2772
+    ]
+  },
+  {
+    "spriteName": "675",
+    "coords": [
+      132,
+      2772
+    ]
+  },
+  {
+    "spriteName": "676",
+    "coords": [
+      198,
+      2772
+    ]
+  },
+  {
+    "spriteName": "677",
+    "coords": [
+      264,
+      2772
+    ]
+  },
+  {
+    "spriteName": "678",
+    "coords": [
+      330,
+      2772
+    ]
+  },
+  {
+    "spriteName": "679",
+    "coords": [
+      396,
+      2772
+    ]
+  },
+  {
+    "spriteName": "680",
+    "coords": [
+      462,
+      2772
+    ]
+  },
+  {
+    "spriteName": "681",
+    "coords": [
+      528,
+      2772
+    ]
+  },
+  {
+    "spriteName": "682",
+    "coords": [
+      594,
+      2772
+    ]
+  },
+  {
+    "spriteName": "683",
+    "coords": [
+      660,
+      2772
+    ]
+  },
+  {
+    "spriteName": "684",
+    "coords": [
+      726,
+      2772
+    ]
+  },
+  {
+    "spriteName": "685",
+    "coords": [
+      792,
+      2772
+    ]
+  },
+  {
+    "spriteName": "686",
+    "coords": [
+      858,
+      2772
+    ]
+  },
+  {
+    "spriteName": "687",
+    "coords": [
+      924,
+      2772
+    ]
+  },
+  {
+    "spriteName": "688",
+    "coords": [
+      990,
+      2772
+    ]
+  },
+  {
+    "spriteName": "689",
+    "coords": [
+      0,
+      2838
+    ]
+  },
+  {
+    "spriteName": "690",
+    "coords": [
+      66,
+      2838
+    ]
+  },
+  {
+    "spriteName": "691",
+    "coords": [
+      132,
+      2838
+    ]
+  },
+  {
+    "spriteName": "692",
+    "coords": [
+      198,
+      2838
+    ]
+  },
+  {
+    "spriteName": "693",
+    "coords": [
+      264,
+      2838
+    ]
+  },
+  {
+    "spriteName": "694",
+    "coords": [
+      330,
+      2838
+    ]
+  },
+  {
+    "spriteName": "695",
+    "coords": [
+      396,
+      2838
+    ]
+  },
+  {
+    "spriteName": "696",
+    "coords": [
+      462,
+      2838
+    ]
+  },
+  {
+    "spriteName": "697",
+    "coords": [
+      528,
+      2838
+    ]
+  },
+  {
+    "spriteName": "698",
+    "coords": [
+      594,
+      2838
+    ]
+  },
+  {
+    "spriteName": "699",
+    "coords": [
+      660,
+      2838
+    ]
+  },
+  {
+    "spriteName": "700",
+    "coords": [
+      726,
+      2838
+    ]
+  },
+  {
+    "spriteName": "701",
+    "coords": [
+      792,
+      2838
+    ]
+  },
+  {
+    "spriteName": "702",
+    "coords": [
+      858,
+      2838
+    ]
+  },
+  {
+    "spriteName": "703",
+    "coords": [
+      924,
+      2838
+    ]
+  },
+  {
+    "spriteName": "704",
+    "coords": [
+      990,
+      2838
+    ]
+  },
+  {
+    "spriteName": "705",
+    "coords": [
+      0,
+      2904
+    ]
+  },
+  {
+    "spriteName": "706",
+    "coords": [
+      66,
+      2904
+    ]
+  },
+  {
+    "spriteName": "707",
+    "coords": [
+      132,
+      2904
+    ]
+  },
+  {
+    "spriteName": "708",
+    "coords": [
+      198,
+      2904
+    ]
+  },
+  {
+    "spriteName": "709",
+    "coords": [
+      264,
+      2904
+    ]
+  },
+  {
+    "spriteName": "710",
+    "coords": [
+      330,
+      2904
+    ]
+  },
+  {
+    "spriteName": "711",
+    "coords": [
+      396,
+      2904
+    ]
+  },
+  {
+    "spriteName": "712",
+    "coords": [
+      462,
+      2904
+    ]
+  },
+  {
+    "spriteName": "713",
+    "coords": [
+      528,
+      2904
+    ]
+  },
+  {
+    "spriteName": "714",
+    "coords": [
+      594,
+      2904
+    ]
+  },
+  {
+    "spriteName": "715",
+    "coords": [
+      660,
+      2904
+    ]
+  },
+  {
+    "spriteName": "716",
+    "coords": [
+      726,
+      2904
+    ]
+  },
+  {
+    "spriteName": "717",
+    "coords": [
+      792,
+      2904
+    ]
+  },
+  {
+    "spriteName": "718",
+    "coords": [
+      858,
+      2904
+    ]
+  },
+  {
+    "spriteName": "719",
+    "coords": [
+      924,
+      2904
+    ]
+  },
+  {
+    "spriteName": "720",
+    "coords": [
+      990,
+      2904
+    ]
+  },
+  {
+    "spriteName": "721",
+    "coords": [
+      0,
+      2970
+    ]
+  },
+  {
+    "spriteName": "722",
+    "coords": [
+      66,
+      2970
+    ]
+  },
+  {
+    "spriteName": "723",
+    "coords": [
+      132,
+      2970
+    ]
+  },
+  {
+    "spriteName": "724",
+    "coords": [
+      198,
+      2970
+    ]
+  },
+  {
+    "spriteName": "725",
+    "coords": [
+      264,
+      2970
+    ]
+  },
+  {
+    "spriteName": "726",
+    "coords": [
+      330,
+      2970
+    ]
+  },
+  {
+    "spriteName": "727",
+    "coords": [
+      396,
+      2970
+    ]
+  },
+  {
+    "spriteName": "728",
+    "coords": [
+      462,
+      2970
+    ]
+  },
+  {
+    "spriteName": "729",
+    "coords": [
+      528,
+      2970
+    ]
+  },
+  {
+    "spriteName": "730",
+    "coords": [
+      594,
+      2970
+    ]
+  },
+  {
+    "spriteName": "731",
+    "coords": [
+      660,
+      2970
+    ]
+  },
+  {
+    "spriteName": "732",
+    "coords": [
+      726,
+      2970
+    ]
+  },
+  {
+    "spriteName": "733",
+    "coords": [
+      792,
+      2970
+    ]
+  },
+  {
+    "spriteName": "734",
+    "coords": [
+      858,
+      2970
+    ]
+  },
+  {
+    "spriteName": "735",
+    "coords": [
+      924,
+      2970
+    ]
+  },
+  {
+    "spriteName": "736",
+    "coords": [
+      990,
+      2970
+    ]
+  },
+  {
+    "spriteName": "737",
+    "coords": [
+      0,
+      3036
+    ]
+  },
+  {
+    "spriteName": "738",
+    "coords": [
+      66,
+      3036
+    ]
+  },
+  {
+    "spriteName": "739",
+    "coords": [
+      132,
+      3036
+    ]
+  },
+  {
+    "spriteName": "740",
+    "coords": [
+      198,
+      3036
+    ]
+  },
+  {
+    "spriteName": "741",
+    "coords": [
+      264,
+      3036
+    ]
+  },
+  {
+    "spriteName": "742",
+    "coords": [
+      330,
+      3036
+    ]
+  },
+  {
+    "spriteName": "743",
+    "coords": [
+      396,
+      3036
+    ]
+  },
+  {
+    "spriteName": "744",
+    "coords": [
+      462,
+      3036
+    ]
+  },
+  {
+    "spriteName": "745",
+    "coords": [
+      528,
+      3036
+    ]
+  },
+  {
+    "spriteName": "746",
+    "coords": [
+      594,
+      3036
+    ]
+  },
+  {
+    "spriteName": "747",
+    "coords": [
+      660,
+      3036
+    ]
+  },
+  {
+    "spriteName": "748",
+    "coords": [
+      726,
+      3036
+    ]
+  },
+  {
+    "spriteName": "749",
+    "coords": [
+      792,
+      3036
+    ]
+  },
+  {
+    "spriteName": "750",
+    "coords": [
+      858,
+      3036
+    ]
+  },
+  {
+    "spriteName": "751",
+    "coords": [
+      924,
+      3036
+    ]
+  },
+  {
+    "spriteName": "752",
+    "coords": [
+      990,
+      3036
+    ]
+  },
+  {
+    "spriteName": "753",
+    "coords": [
+      0,
+      3102
+    ]
+  },
+  {
+    "spriteName": "754",
+    "coords": [
+      66,
+      3102
+    ]
+  },
+  {
+    "spriteName": "755",
+    "coords": [
+      132,
+      3102
+    ]
+  },
+  {
+    "spriteName": "756",
+    "coords": [
+      198,
+      3102
+    ]
+  },
+  {
+    "spriteName": "757",
+    "coords": [
+      264,
+      3102
+    ]
+  },
+  {
+    "spriteName": "758",
+    "coords": [
+      330,
+      3102
+    ]
+  },
+  {
+    "spriteName": "759",
+    "coords": [
+      396,
+      3102
+    ]
+  },
+  {
+    "spriteName": "760",
+    "coords": [
+      462,
+      3102
+    ]
+  },
+  {
+    "spriteName": "761",
+    "coords": [
+      528,
+      3102
+    ]
+  },
+  {
+    "spriteName": "762",
+    "coords": [
+      594,
+      3102
+    ]
+  },
+  {
+    "spriteName": "763",
+    "coords": [
+      660,
+      3102
+    ]
+  },
+  {
+    "spriteName": "764",
+    "coords": [
+      726,
+      3102
+    ]
+  },
+  {
+    "spriteName": "765",
+    "coords": [
+      792,
+      3102
+    ]
+  },
+  {
+    "spriteName": "766",
+    "coords": [
+      858,
+      3102
+    ]
+  },
+  {
+    "spriteName": "767",
+    "coords": [
+      924,
+      3102
+    ]
+  },
+  {
+    "spriteName": "768",
+    "coords": [
+      990,
+      3102
+    ]
+  },
+  {
+    "spriteName": "769",
+    "coords": [
+      0,
+      3168
+    ]
+  },
+  {
+    "spriteName": "770",
+    "coords": [
+      66,
+      3168
+    ]
+  },
+  {
+    "spriteName": "771",
+    "coords": [
+      132,
+      3168
+    ]
+  },
+  {
+    "spriteName": "772",
+    "coords": [
+      198,
+      3168
+    ]
+  },
+  {
+    "spriteName": "773",
+    "coords": [
+      264,
+      3168
+    ]
+  },
+  {
+    "spriteName": "774",
+    "coords": [
+      330,
+      3168
+    ]
+  },
+  {
+    "spriteName": "775",
+    "coords": [
+      396,
+      3168
+    ]
+  },
+  {
+    "spriteName": "776",
+    "coords": [
+      462,
+      3168
+    ]
+  },
+  {
+    "spriteName": "777",
+    "coords": [
+      528,
+      3168
+    ]
+  },
+  {
+    "spriteName": "778",
+    "coords": [
+      594,
+      3168
+    ]
+  },
+  {
+    "spriteName": "779",
+    "coords": [
+      660,
+      3168
+    ]
+  },
+  {
+    "spriteName": "780",
+    "coords": [
+      726,
+      3168
+    ]
+  },
+  {
+    "spriteName": "781",
+    "coords": [
+      792,
+      3168
+    ]
+  },
+  {
+    "spriteName": "782",
+    "coords": [
+      858,
+      3168
+    ]
+  },
+  {
+    "spriteName": "783",
+    "coords": [
+      924,
+      3168
+    ]
+  },
+  {
+    "spriteName": "784",
+    "coords": [
+      990,
+      3168
+    ]
+  },
+  {
+    "spriteName": "785",
+    "coords": [
+      0,
+      3234
+    ]
+  },
+  {
+    "spriteName": "786",
+    "coords": [
+      66,
+      3234
+    ]
+  },
+  {
+    "spriteName": "787",
+    "coords": [
+      132,
+      3234
+    ]
+  },
+  {
+    "spriteName": "788",
+    "coords": [
+      198,
+      3234
+    ]
+  },
+  {
+    "spriteName": "789",
+    "coords": [
+      264,
+      3234
+    ]
+  },
+  {
+    "spriteName": "790",
+    "coords": [
+      330,
+      3234
+    ]
+  },
+  {
+    "spriteName": "791",
+    "coords": [
+      396,
+      3234
+    ]
+  },
+  {
+    "spriteName": "792",
+    "coords": [
+      462,
+      3234
+    ]
+  },
+  {
+    "spriteName": "793",
+    "coords": [
+      528,
+      3234
+    ]
+  },
+  {
+    "spriteName": "794",
+    "coords": [
+      594,
+      3234
+    ]
+  },
+  {
+    "spriteName": "795",
+    "coords": [
+      660,
+      3234
+    ]
+  },
+  {
+    "spriteName": "796",
+    "coords": [
+      726,
+      3234
+    ]
+  },
+  {
+    "spriteName": "797",
+    "coords": [
+      792,
+      3234
+    ]
+  },
+  {
+    "spriteName": "798",
+    "coords": [
+      858,
+      3234
+    ]
+  },
+  {
+    "spriteName": "799",
+    "coords": [
+      924,
+      3234
+    ]
+  },
+  {
+    "spriteName": "800",
+    "coords": [
+      990,
+      3234
+    ]
+  },
+  {
+    "spriteName": "801",
+    "coords": [
+      0,
+      3300
+    ]
+  },
+  {
+    "spriteName": "802",
+    "coords": [
+      66,
+      3300
+    ]
+  },
+  {
+    "spriteName": "803",
+    "coords": [
+      132,
+      3300
+    ]
+  },
+  {
+    "spriteName": "804",
+    "coords": [
+      198,
+      3300
+    ]
+  },
+  {
+    "spriteName": "805",
+    "coords": [
+      264,
+      3300
+    ]
+  },
+  {
+    "spriteName": "806",
+    "coords": [
+      330,
+      3300
+    ]
+  },
+  {
+    "spriteName": "807",
+    "coords": [
+      396,
+      3300
+    ]
+  },
+  {
+    "spriteName": "808",
+    "coords": [
+      462,
+      3300
+    ]
+  },
+  {
+    "spriteName": "809",
+    "coords": [
+      528,
+      3300
+    ]
+  },
+  {
+    "spriteName": "810",
+    "coords": [
+      594,
+      3300
+    ]
+  },
+  {
+    "spriteName": "811",
+    "coords": [
+      660,
+      3300
+    ]
+  },
+  {
+    "spriteName": "812",
+    "coords": [
+      726,
+      3300
+    ]
+  },
+  {
+    "spriteName": "813",
+    "coords": [
+      792,
+      3300
+    ]
+  },
+  {
+    "spriteName": "814",
+    "coords": [
+      858,
+      3300
+    ]
+  },
+  {
+    "spriteName": "815",
+    "coords": [
+      924,
+      3300
+    ]
+  },
+  {
+    "spriteName": "816",
+    "coords": [
+      990,
+      3300
+    ]
+  },
+  {
+    "spriteName": "817",
+    "coords": [
+      0,
+      3366
+    ]
+  },
+  {
+    "spriteName": "818",
+    "coords": [
+      66,
+      3366
+    ]
+  },
+  {
+    "spriteName": "819",
+    "coords": [
+      132,
+      3366
+    ]
+  },
+  {
+    "spriteName": "820",
+    "coords": [
+      198,
+      3366
+    ]
+  },
+  {
+    "spriteName": "821",
+    "coords": [
+      264,
+      3366
+    ]
+  },
+  {
+    "spriteName": "822",
+    "coords": [
+      330,
+      3366
+    ]
+  },
+  {
+    "spriteName": "823",
+    "coords": [
+      396,
+      3366
+    ]
+  },
+  {
+    "spriteName": "824",
+    "coords": [
+      462,
+      3366
+    ]
+  },
+  {
+    "spriteName": "825",
+    "coords": [
+      528,
+      3366
+    ]
+  },
+  {
+    "spriteName": "826",
+    "coords": [
+      594,
+      3366
+    ]
+  },
+  {
+    "spriteName": "827",
+    "coords": [
+      660,
+      3366
+    ]
+  },
+  {
+    "spriteName": "828",
+    "coords": [
+      726,
+      3366
+    ]
+  },
+  {
+    "spriteName": "829",
+    "coords": [
+      792,
+      3366
+    ]
+  },
+  {
+    "spriteName": "830",
+    "coords": [
+      858,
+      3366
+    ]
+  },
+  {
+    "spriteName": "831",
+    "coords": [
+      924,
+      3366
+    ]
+  },
+  {
+    "spriteName": "832",
+    "coords": [
+      990,
+      3366
+    ]
+  },
+  {
+    "spriteName": "833",
+    "coords": [
+      0,
+      3432
+    ]
+  },
+  {
+    "spriteName": "834",
+    "coords": [
+      66,
+      3432
+    ]
+  },
+  {
+    "spriteName": "835",
+    "coords": [
+      132,
+      3432
+    ]
+  },
+  {
+    "spriteName": "836",
+    "coords": [
+      198,
+      3432
+    ]
+  },
+  {
+    "spriteName": "837",
+    "coords": [
+      264,
+      3432
+    ]
+  },
+  {
+    "spriteName": "838",
+    "coords": [
+      330,
+      3432
+    ]
+  },
+  {
+    "spriteName": "839",
+    "coords": [
+      396,
+      3432
+    ]
+  },
+  {
+    "spriteName": "840",
+    "coords": [
+      462,
+      3432
+    ]
+  },
+  {
+    "spriteName": "841",
+    "coords": [
+      528,
+      3432
+    ]
+  },
+  {
+    "spriteName": "842",
+    "coords": [
+      594,
+      3432
+    ]
+  },
+  {
+    "spriteName": "843",
+    "coords": [
+      660,
+      3432
+    ]
+  },
+  {
+    "spriteName": "844",
+    "coords": [
+      726,
+      3432
+    ]
+  },
+  {
+    "spriteName": "845",
+    "coords": [
+      792,
+      3432
+    ]
+  },
+  {
+    "spriteName": "846",
+    "coords": [
+      858,
+      3432
+    ]
+  },
+  {
+    "spriteName": "847",
+    "coords": [
+      924,
+      3432
+    ]
+  },
+  {
+    "spriteName": "848",
+    "coords": [
+      990,
+      3432
+    ]
+  },
+  {
+    "spriteName": "849",
+    "coords": [
+      0,
+      3498
+    ]
+  },
+  {
+    "spriteName": "850",
+    "coords": [
+      66,
+      3498
+    ]
+  },
+  {
+    "spriteName": "851",
+    "coords": [
+      132,
+      3498
+    ]
+  },
+  {
+    "spriteName": "852",
+    "coords": [
+      198,
+      3498
+    ]
+  },
+  {
+    "spriteName": "853",
+    "coords": [
+      264,
+      3498
+    ]
+  },
+  {
+    "spriteName": "854",
+    "coords": [
+      330,
+      3498
+    ]
+  },
+  {
+    "spriteName": "855",
+    "coords": [
+      396,
+      3498
+    ]
+  },
+  {
+    "spriteName": "856",
+    "coords": [
+      462,
+      3498
+    ]
+  },
+  {
+    "spriteName": "857",
+    "coords": [
+      528,
+      3498
+    ]
+  },
+  {
+    "spriteName": "858",
+    "coords": [
+      594,
+      3498
+    ]
+  },
+  {
+    "spriteName": "859",
+    "coords": [
+      660,
+      3498
+    ]
+  },
+  {
+    "spriteName": "860",
+    "coords": [
+      726,
+      3498
+    ]
+  },
+  {
+    "spriteName": "861",
+    "coords": [
+      792,
+      3498
+    ]
+  },
+  {
+    "spriteName": "862",
+    "coords": [
+      858,
+      3498
+    ]
+  },
+  {
+    "spriteName": "863",
+    "coords": [
+      924,
+      3498
+    ]
+  },
+  {
+    "spriteName": "864",
+    "coords": [
+      990,
+      3498
+    ]
+  },
+  {
+    "spriteName": "865",
+    "coords": [
+      0,
+      3564
+    ]
+  },
+  {
+    "spriteName": "866",
+    "coords": [
+      66,
+      3564
+    ]
+  },
+  {
+    "spriteName": "867",
+    "coords": [
+      132,
+      3564
+    ]
+  },
+  {
+    "spriteName": "868",
+    "coords": [
+      198,
+      3564
+    ]
+  },
+  {
+    "spriteName": "869",
+    "coords": [
+      264,
+      3564
+    ]
+  },
+  {
+    "spriteName": "870",
+    "coords": [
+      330,
+      3564
+    ]
+  },
+  {
+    "spriteName": "871",
+    "coords": [
+      396,
+      3564
+    ]
+  },
+  {
+    "spriteName": "872",
+    "coords": [
+      462,
+      3564
+    ]
+  },
+  {
+    "spriteName": "873",
+    "coords": [
+      528,
+      3564
+    ]
+  },
+  {
+    "spriteName": "874",
+    "coords": [
+      594,
+      3564
+    ]
+  },
+  {
+    "spriteName": "875",
+    "coords": [
+      660,
+      3564
+    ]
+  },
+  {
+    "spriteName": "876",
+    "coords": [
+      726,
+      3564
+    ]
+  },
+  {
+    "spriteName": "877",
+    "coords": [
+      792,
+      3564
+    ]
+  },
+  {
+    "spriteName": "878",
+    "coords": [
+      858,
+      3564
+    ]
+  },
+  {
+    "spriteName": "879",
+    "coords": [
+      924,
+      3564
+    ]
+  },
+  {
+    "spriteName": "880",
+    "coords": [
+      990,
+      3564
+    ]
+  },
+  {
+    "spriteName": "881",
+    "coords": [
+      0,
+      3630
+    ]
+  },
+  {
+    "spriteName": "882",
+    "coords": [
+      66,
+      3630
+    ]
+  },
+  {
+    "spriteName": "883",
+    "coords": [
+      132,
+      3630
+    ]
+  },
+  {
+    "spriteName": "884",
+    "coords": [
+      198,
+      3630
+    ]
+  },
+  {
+    "spriteName": "885",
+    "coords": [
+      264,
+      3630
+    ]
+  },
+  {
+    "spriteName": "886",
+    "coords": [
+      330,
+      3630
+    ]
+  },
+  {
+    "spriteName": "887",
+    "coords": [
+      396,
+      3630
+    ]
+  },
+  {
+    "spriteName": "888",
+    "coords": [
+      462,
+      3630
+    ]
+  },
+  {
+    "spriteName": "889",
+    "coords": [
+      528,
+      3630
+    ]
+  },
+  {
+    "spriteName": "890",
+    "coords": [
+      594,
+      3630
+    ]
+  },
+  {
+    "spriteName": "891",
+    "coords": [
+      660,
+      3630
+    ]
+  },
+  {
+    "spriteName": "892",
+    "coords": [
+      726,
+      3630
+    ]
+  },
+  {
+    "spriteName": "893",
+    "coords": [
+      792,
+      3630
+    ]
+  },
+  {
+    "spriteName": "894",
+    "coords": [
+      858,
+      3630
+    ]
+  },
+  {
+    "spriteName": "895",
+    "coords": [
+      924,
+      3630
+    ]
+  },
+  {
+    "spriteName": "896",
+    "coords": [
+      990,
+      3630
+    ]
+  },
+  {
+    "spriteName": "897",
+    "coords": [
+      0,
+      3696
+    ]
+  },
+  {
+    "spriteName": "898",
+    "coords": [
+      66,
+      3696
+    ]
+  },
+  {
+    "spriteName": "899",
+    "coords": [
+      132,
+      3696
+    ]
+  },
+  {
+    "spriteName": "900",
+    "coords": [
+      198,
+      3696
+    ]
+  },
+  {
+    "spriteName": "901",
+    "coords": [
+      264,
+      3696
+    ]
+  },
+  {
+    "spriteName": "902",
+    "coords": [
+      330,
+      3696
+    ]
+  },
+  {
+    "spriteName": "903",
+    "coords": [
+      396,
+      3696
+    ]
+  },
+  {
+    "spriteName": "904",
+    "coords": [
+      462,
+      3696
+    ]
+  },
+  {
+    "spriteName": "905",
+    "coords": [
+      528,
+      3696
+    ]
+  },
+  {
+    "spriteName": "906",
+    "coords": [
+      594,
+      3696
+    ]
+  },
+  {
+    "spriteName": "907",
+    "coords": [
+      660,
+      3696
+    ]
+  },
+  {
+    "spriteName": "908",
+    "coords": [
+      726,
+      3696
+    ]
+  },
+  {
+    "spriteName": "909",
+    "coords": [
+      792,
+      3696
+    ]
+  },
+  {
+    "spriteName": "910",
+    "coords": [
+      858,
+      3696
+    ]
+  },
+  {
+    "spriteName": "911",
+    "coords": [
+      924,
+      3696
+    ]
+  },
+  {
+    "spriteName": "912",
+    "coords": [
+      990,
+      3696
+    ]
+  },
+  {
+    "spriteName": "913",
+    "coords": [
+      0,
+      3762
+    ]
+  },
+  {
+    "spriteName": "914",
+    "coords": [
+      66,
+      3762
+    ]
+  },
+  {
+    "spriteName": "915",
+    "coords": [
+      132,
+      3762
+    ]
+  },
+  {
+    "spriteName": "916",
+    "coords": [
+      198,
+      3762
+    ]
+  },
+  {
+    "spriteName": "917",
+    "coords": [
+      264,
+      3762
+    ]
+  },
+  {
+    "spriteName": "918",
+    "coords": [
+      330,
+      3762
+    ]
+  },
+  {
+    "spriteName": "919",
+    "coords": [
+      396,
+      3762
+    ]
+  },
+  {
+    "spriteName": "920",
+    "coords": [
+      462,
+      3762
+    ]
+  },
+  {
+    "spriteName": "921",
+    "coords": [
+      528,
+      3762
+    ]
+  },
+  {
+    "spriteName": "922",
+    "coords": [
+      594,
+      3762
+    ]
+  },
+  {
+    "spriteName": "923",
+    "coords": [
+      660,
+      3762
+    ]
+  },
+  {
+    "spriteName": "924",
+    "coords": [
+      726,
+      3762
+    ]
+  },
+  {
+    "spriteName": "925",
+    "coords": [
+      792,
+      3762
+    ]
+  },
+  {
+    "spriteName": "926",
+    "coords": [
+      858,
+      3762
+    ]
+  },
+  {
+    "spriteName": "927",
+    "coords": [
+      924,
+      3762
+    ]
+  },
+  {
+    "spriteName": "928",
+    "coords": [
+      990,
+      3762
+    ]
+  },
+  {
+    "spriteName": "929",
+    "coords": [
+      0,
+      3828
+    ]
+  },
+  {
+    "spriteName": "930",
+    "coords": [
+      66,
+      3828
+    ]
+  },
+  {
+    "spriteName": "931",
+    "coords": [
+      132,
+      3828
+    ]
+  },
+  {
+    "spriteName": "932",
+    "coords": [
+      198,
+      3828
+    ]
+  },
+  {
+    "spriteName": "933",
+    "coords": [
+      264,
+      3828
+    ]
+  },
+  {
+    "spriteName": "934",
+    "coords": [
+      330,
+      3828
+    ]
+  },
+  {
+    "spriteName": "935",
+    "coords": [
+      396,
+      3828
+    ]
+  },
+  {
+    "spriteName": "936",
+    "coords": [
+      462,
+      3828
+    ]
+  },
+  {
+    "spriteName": "937",
+    "coords": [
+      528,
+      3828
+    ]
+  },
+  {
+    "spriteName": "938",
+    "coords": [
+      594,
+      3828
+    ]
+  },
+  {
+    "spriteName": "939",
+    "coords": [
+      660,
+      3828
+    ]
+  },
+  {
+    "spriteName": "940",
+    "coords": [
+      726,
+      3828
+    ]
+  },
+  {
+    "spriteName": "941",
+    "coords": [
+      792,
+      3828
+    ]
+  },
+  {
+    "spriteName": "942",
+    "coords": [
+      858,
+      3828
+    ]
+  },
+  {
+    "spriteName": "943",
+    "coords": [
+      924,
+      3828
+    ]
+  },
+  {
+    "spriteName": "944",
+    "coords": [
+      990,
+      3828
+    ]
+  },
+  {
+    "spriteName": "945",
+    "coords": [
+      0,
+      3894
+    ]
+  },
+  {
+    "spriteName": "946",
+    "coords": [
+      66,
+      3894
+    ]
+  },
+  {
+    "spriteName": "947",
+    "coords": [
+      132,
+      3894
+    ]
+  },
+  {
+    "spriteName": "948",
+    "coords": [
+      198,
+      3894
+    ]
+  },
+  {
+    "spriteName": "949",
+    "coords": [
+      264,
+      3894
+    ]
+  },
+  {
+    "spriteName": "950",
+    "coords": [
+      330,
+      3894
+    ]
+  },
+  {
+    "spriteName": "951",
+    "coords": [
+      396,
+      3894
+    ]
+  },
+  {
+    "spriteName": "952",
+    "coords": [
+      462,
+      3894
+    ]
+  },
+  {
+    "spriteName": "953",
+    "coords": [
+      528,
+      3894
+    ]
+  },
+  {
+    "spriteName": "954",
+    "coords": [
+      594,
+      3894
+    ]
+  },
+  {
+    "spriteName": "955",
+    "coords": [
+      660,
+      3894
+    ]
+  },
+  {
+    "spriteName": "956",
+    "coords": [
+      726,
+      3894
+    ]
+  },
+  {
+    "spriteName": "957",
+    "coords": [
+      792,
+      3894
+    ]
+  },
+  {
+    "spriteName": "958",
+    "coords": [
+      858,
+      3894
+    ]
+  },
+  {
+    "spriteName": "959",
+    "coords": [
+      924,
+      3894
+    ]
+  },
+  {
+    "spriteName": "960",
+    "coords": [
+      990,
+      3894
+    ]
+  },
+  {
+    "spriteName": "961",
+    "coords": [
+      0,
+      3960
+    ]
+  },
+  {
+    "spriteName": "962",
+    "coords": [
+      66,
+      3960
+    ]
+  },
+  {
+    "spriteName": "963",
+    "coords": [
+      132,
+      3960
+    ]
+  },
+  {
+    "spriteName": "964",
+    "coords": [
+      198,
+      3960
+    ]
+  },
+  {
+    "spriteName": "965",
+    "coords": [
+      264,
+      3960
+    ]
+  },
+  {
+    "spriteName": "966",
+    "coords": [
+      330,
+      3960
+    ]
+  },
+  {
+    "spriteName": "967",
+    "coords": [
+      396,
+      3960
+    ]
+  },
+  {
+    "spriteName": "968",
+    "coords": [
+      462,
+      3960
+    ]
+  },
+  {
+    "spriteName": "969",
+    "coords": [
+      528,
+      3960
+    ]
+  },
+  {
+    "spriteName": "970",
+    "coords": [
+      594,
+      3960
+    ]
+  },
+  {
+    "spriteName": "971",
+    "coords": [
+      660,
+      3960
+    ]
+  },
+  {
+    "spriteName": "972",
+    "coords": [
+      726,
+      3960
+    ]
+  },
+  {
+    "spriteName": "973",
+    "coords": [
+      792,
+      3960
+    ]
+  },
+  {
+    "spriteName": "974",
+    "coords": [
+      858,
+      3960
+    ]
+  },
+  {
+    "spriteName": "975",
+    "coords": [
+      924,
+      3960
+    ]
+  },
+  {
+    "spriteName": "976",
+    "coords": [
+      990,
+      3960
+    ]
+  },
+  {
+    "spriteName": "977",
+    "coords": [
+      0,
+      4026
+    ]
+  },
+  {
+    "spriteName": "978",
+    "coords": [
+      66,
+      4026
+    ]
+  },
+  {
+    "spriteName": "979",
+    "coords": [
+      132,
+      4026
+    ]
+  },
+  {
+    "spriteName": "980",
+    "coords": [
+      198,
+      4026
+    ]
+  },
+  {
+    "spriteName": "981",
+    "coords": [
+      264,
+      4026
+    ]
+  },
+  {
+    "spriteName": "982",
+    "coords": [
+      330,
+      4026
+    ]
+  },
+  {
+    "spriteName": "983",
+    "coords": [
+      396,
+      4026
+    ]
+  },
+  {
+    "spriteName": "984",
+    "coords": [
+      462,
+      4026
+    ]
+  },
+  {
+    "spriteName": "985",
+    "coords": [
+      528,
+      4026
+    ]
+  },
+  {
+    "spriteName": "986",
+    "coords": [
+      594,
+      4026
+    ]
+  },
+  {
+    "spriteName": "987",
+    "coords": [
+      660,
+      4026
+    ]
+  },
+  {
+    "spriteName": "988",
+    "coords": [
+      726,
+      4026
+    ]
+  },
+  {
+    "spriteName": "989",
+    "coords": [
+      792,
+      4026
+    ]
+  },
+  {
+    "spriteName": "990",
+    "coords": [
+      858,
+      4026
+    ]
+  },
+  {
+    "spriteName": "991",
+    "coords": [
+      924,
+      4026
+    ]
+  },
+  {
+    "spriteName": "992",
+    "coords": [
+      990,
+      4026
+    ]
+  },
+  {
+    "spriteName": "993",
+    "coords": [
+      0,
+      4092
+    ]
+  },
+  {
+    "spriteName": "994",
+    "coords": [
+      66,
+      4092
+    ]
+  },
+  {
+    "spriteName": "995",
+    "coords": [
+      132,
+      4092
+    ]
+  },
+  {
+    "spriteName": "996",
+    "coords": [
+      198,
+      4092
+    ]
+  },
+  {
+    "spriteName": "997",
+    "coords": [
+      264,
+      4092
+    ]
+  },
+  {
+    "spriteName": "998",
+    "coords": [
+      330,
+      4092
+    ]
+  },
+  {
+    "spriteName": "999",
+    "coords": [
+      396,
+      4092
+    ]
+  },
+  {
+    "spriteName": "1000",
+    "coords": [
+      462,
+      4092
+    ]
+  },
+  {
+    "spriteName": "1001",
+    "coords": [
+      528,
+      4092
+    ]
+  },
+  {
+    "spriteName": "1002",
+    "coords": [
+      594,
+      4092
+    ]
+  },
+  {
+    "spriteName": "1003",
+    "coords": [
+      660,
+      4092
+    ]
+  },
+  {
+    "spriteName": "1004",
+    "coords": [
+      726,
+      4092
+    ]
+  },
+  {
+    "spriteName": "1005",
+    "coords": [
+      792,
+      4092
+    ]
+  },
+  {
+    "spriteName": "1006",
+    "coords": [
+      858,
+      4092
+    ]
+  },
+  {
+    "spriteName": "1007",
+    "coords": [
+      924,
+      4092
+    ]
+  },
+  {
+    "spriteName": "1008",
+    "coords": [
+      990,
+      4092
+    ]
+  },
+  {
+    "spriteName": "1009",
+    "coords": [
+      0,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1010",
+    "coords": [
+      66,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1011",
+    "coords": [
+      132,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1012",
+    "coords": [
+      198,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1013",
+    "coords": [
+      264,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1014",
+    "coords": [
+      330,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1015",
+    "coords": [
+      396,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1016",
+    "coords": [
+      462,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1017",
+    "coords": [
+      528,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1018",
+    "coords": [
+      594,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1019",
+    "coords": [
+      660,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1020",
+    "coords": [
+      726,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1021",
+    "coords": [
+      792,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1022",
+    "coords": [
+      858,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1023",
+    "coords": [
+      924,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1024",
+    "coords": [
+      990,
+      4158
+    ]
+  },
+  {
+    "spriteName": "1025",
+    "coords": [
+      0,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1026",
+    "coords": [
+      66,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1027",
+    "coords": [
+      132,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1028",
+    "coords": [
+      198,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1029",
+    "coords": [
+      264,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1030",
+    "coords": [
+      330,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1031",
+    "coords": [
+      396,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1032",
+    "coords": [
+      462,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1033",
+    "coords": [
+      528,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1034",
+    "coords": [
+      594,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1035",
+    "coords": [
+      660,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1036",
+    "coords": [
+      726,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1037",
+    "coords": [
+      792,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1038",
+    "coords": [
+      858,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1039",
+    "coords": [
+      924,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1040",
+    "coords": [
+      990,
+      4224
+    ]
+  },
+  {
+    "spriteName": "1041",
+    "coords": [
+      0,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1042",
+    "coords": [
+      66,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1043",
+    "coords": [
+      132,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1044",
+    "coords": [
+      198,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1045",
+    "coords": [
+      264,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1046",
+    "coords": [
+      330,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1047",
+    "coords": [
+      396,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1048",
+    "coords": [
+      462,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1049",
+    "coords": [
+      528,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1050",
+    "coords": [
+      594,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1051",
+    "coords": [
+      660,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1052",
+    "coords": [
+      726,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1053",
+    "coords": [
+      792,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1054",
+    "coords": [
+      858,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1055",
+    "coords": [
+      924,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1056",
+    "coords": [
+      990,
+      4290
+    ]
+  },
+  {
+    "spriteName": "1057",
+    "coords": [
+      0,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1058",
+    "coords": [
+      66,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1059",
+    "coords": [
+      132,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1060",
+    "coords": [
+      198,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1061",
+    "coords": [
+      264,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1062",
+    "coords": [
+      330,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1063",
+    "coords": [
+      396,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1064",
+    "coords": [
+      462,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1065",
+    "coords": [
+      528,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1066",
+    "coords": [
+      594,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1067",
+    "coords": [
+      660,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1068",
+    "coords": [
+      726,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1069",
+    "coords": [
+      792,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1070",
+    "coords": [
+      858,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1071",
+    "coords": [
+      924,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1072",
+    "coords": [
+      990,
+      4356
+    ]
+  },
+  {
+    "spriteName": "1073",
+    "coords": [
+      0,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1074",
+    "coords": [
+      66,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1075",
+    "coords": [
+      132,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1076",
+    "coords": [
+      198,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1077",
+    "coords": [
+      264,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1078",
+    "coords": [
+      330,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1079",
+    "coords": [
+      396,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1080",
+    "coords": [
+      462,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1081",
+    "coords": [
+      528,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1082",
+    "coords": [
+      594,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1083",
+    "coords": [
+      660,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1084",
+    "coords": [
+      726,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1085",
+    "coords": [
+      792,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1086",
+    "coords": [
+      858,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1087",
+    "coords": [
+      924,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1088",
+    "coords": [
+      990,
+      4422
+    ]
+  },
+  {
+    "spriteName": "1089",
+    "coords": [
+      0,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1090",
+    "coords": [
+      66,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1091",
+    "coords": [
+      132,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1092",
+    "coords": [
+      198,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1093",
+    "coords": [
+      264,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1094",
+    "coords": [
+      330,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1095",
+    "coords": [
+      396,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1096",
+    "coords": [
+      462,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1097",
+    "coords": [
+      528,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1098",
+    "coords": [
+      594,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1099",
+    "coords": [
+      660,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1100",
+    "coords": [
+      726,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1101",
+    "coords": [
+      792,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1102",
+    "coords": [
+      858,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1103",
+    "coords": [
+      924,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1104",
+    "coords": [
+      990,
+      4488
+    ]
+  },
+  {
+    "spriteName": "1105",
+    "coords": [
+      0,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1106",
+    "coords": [
+      66,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1107",
+    "coords": [
+      132,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1108",
+    "coords": [
+      198,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1109",
+    "coords": [
+      264,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1110",
+    "coords": [
+      330,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1111",
+    "coords": [
+      396,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1112",
+    "coords": [
+      462,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1113",
+    "coords": [
+      528,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1114",
+    "coords": [
+      594,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1115",
+    "coords": [
+      660,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1116",
+    "coords": [
+      726,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1117",
+    "coords": [
+      792,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1118",
+    "coords": [
+      858,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1119",
+    "coords": [
+      924,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1120",
+    "coords": [
+      990,
+      4554
+    ]
+  },
+  {
+    "spriteName": "1121",
+    "coords": [
+      0,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1122",
+    "coords": [
+      66,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1123",
+    "coords": [
+      132,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1124",
+    "coords": [
+      198,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1125",
+    "coords": [
+      264,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1126",
+    "coords": [
+      330,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1127",
+    "coords": [
+      396,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1128",
+    "coords": [
+      462,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1129",
+    "coords": [
+      528,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1130",
+    "coords": [
+      594,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1131",
+    "coords": [
+      660,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1132",
+    "coords": [
+      726,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1133",
+    "coords": [
+      792,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1134",
+    "coords": [
+      858,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1135",
+    "coords": [
+      924,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1136",
+    "coords": [
+      990,
+      4620
+    ]
+  },
+  {
+    "spriteName": "1137",
+    "coords": [
+      0,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1138",
+    "coords": [
+      66,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1139",
+    "coords": [
+      132,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1140",
+    "coords": [
+      198,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1141",
+    "coords": [
+      264,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1142",
+    "coords": [
+      330,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1143",
+    "coords": [
+      396,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1144",
+    "coords": [
+      462,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1145",
+    "coords": [
+      528,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1146",
+    "coords": [
+      594,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1147",
+    "coords": [
+      660,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1148",
+    "coords": [
+      726,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1149",
+    "coords": [
+      792,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1150",
+    "coords": [
+      858,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1151",
+    "coords": [
+      924,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1152",
+    "coords": [
+      990,
+      4686
+    ]
+  },
+  {
+    "spriteName": "1153",
+    "coords": [
+      0,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1154",
+    "coords": [
+      66,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1155",
+    "coords": [
+      132,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1156",
+    "coords": [
+      198,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1157",
+    "coords": [
+      264,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1158",
+    "coords": [
+      330,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1159",
+    "coords": [
+      396,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1160",
+    "coords": [
+      462,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1161",
+    "coords": [
+      528,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1162",
+    "coords": [
+      594,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1163",
+    "coords": [
+      660,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1164",
+    "coords": [
+      726,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1165",
+    "coords": [
+      792,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1166",
+    "coords": [
+      858,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1167",
+    "coords": [
+      924,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1168",
+    "coords": [
+      990,
+      4752
+    ]
+  },
+  {
+    "spriteName": "1169",
+    "coords": [
+      0,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1170",
+    "coords": [
+      66,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1171",
+    "coords": [
+      132,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1172",
+    "coords": [
+      198,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1173",
+    "coords": [
+      264,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1174",
+    "coords": [
+      330,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1175",
+    "coords": [
+      396,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1176",
+    "coords": [
+      462,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1177",
+    "coords": [
+      528,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1178",
+    "coords": [
+      594,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1179",
+    "coords": [
+      660,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1180",
+    "coords": [
+      726,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1181",
+    "coords": [
+      792,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1182",
+    "coords": [
+      858,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1183",
+    "coords": [
+      924,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1184",
+    "coords": [
+      990,
+      4818
+    ]
+  },
+  {
+    "spriteName": "1185",
+    "coords": [
+      0,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1186",
+    "coords": [
+      66,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1187",
+    "coords": [
+      132,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1188",
+    "coords": [
+      198,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1189",
+    "coords": [
+      264,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1190",
+    "coords": [
+      330,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1191",
+    "coords": [
+      396,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1192",
+    "coords": [
+      462,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1193",
+    "coords": [
+      528,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1194",
+    "coords": [
+      594,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1195",
+    "coords": [
+      660,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1196",
+    "coords": [
+      726,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1197",
+    "coords": [
+      792,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1198",
+    "coords": [
+      858,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1199",
+    "coords": [
+      924,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1200",
+    "coords": [
+      990,
+      4884
+    ]
+  },
+  {
+    "spriteName": "1201",
+    "coords": [
+      0,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1202",
+    "coords": [
+      66,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1203",
+    "coords": [
+      132,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1204",
+    "coords": [
+      198,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1205",
+    "coords": [
+      264,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1206",
+    "coords": [
+      330,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1207",
+    "coords": [
+      396,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1208",
+    "coords": [
+      462,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1209",
+    "coords": [
+      528,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1210",
+    "coords": [
+      594,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1211",
+    "coords": [
+      660,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1212",
+    "coords": [
+      726,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1213",
+    "coords": [
+      792,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1214",
+    "coords": [
+      858,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1215",
+    "coords": [
+      924,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1216",
+    "coords": [
+      990,
+      4950
+    ]
+  },
+  {
+    "spriteName": "1217",
+    "coords": [
+      0,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1218",
+    "coords": [
+      66,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1219",
+    "coords": [
+      132,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1220",
+    "coords": [
+      198,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1221",
+    "coords": [
+      264,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1222",
+    "coords": [
+      330,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1223",
+    "coords": [
+      396,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1224",
+    "coords": [
+      462,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1225",
+    "coords": [
+      528,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1226",
+    "coords": [
+      594,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1227",
+    "coords": [
+      660,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1228",
+    "coords": [
+      726,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1229",
+    "coords": [
+      792,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1230",
+    "coords": [
+      858,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1231",
+    "coords": [
+      924,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1232",
+    "coords": [
+      990,
+      5016
+    ]
+  },
+  {
+    "spriteName": "1233",
+    "coords": [
+      0,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1234",
+    "coords": [
+      66,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1235",
+    "coords": [
+      132,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1236",
+    "coords": [
+      198,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1237",
+    "coords": [
+      264,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1238",
+    "coords": [
+      330,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1239",
+    "coords": [
+      396,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1240",
+    "coords": [
+      462,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1241",
+    "coords": [
+      528,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1242",
+    "coords": [
+      594,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1243",
+    "coords": [
+      660,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1244",
+    "coords": [
+      726,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1245",
+    "coords": [
+      792,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1246",
+    "coords": [
+      858,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1247",
+    "coords": [
+      924,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1248",
+    "coords": [
+      990,
+      5082
+    ]
+  },
+  {
+    "spriteName": "1249",
+    "coords": [
+      0,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1250",
+    "coords": [
+      66,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1251",
+    "coords": [
+      132,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1252",
+    "coords": [
+      198,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1253",
+    "coords": [
+      264,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1254",
+    "coords": [
+      330,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1255",
+    "coords": [
+      396,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1256",
+    "coords": [
+      462,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1257",
+    "coords": [
+      528,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1258",
+    "coords": [
+      594,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1259",
+    "coords": [
+      660,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1260",
+    "coords": [
+      726,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1261",
+    "coords": [
+      792,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1262",
+    "coords": [
+      858,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1263",
+    "coords": [
+      924,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1264",
+    "coords": [
+      990,
+      5148
+    ]
+  },
+  {
+    "spriteName": "1265",
+    "coords": [
+      0,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1266",
+    "coords": [
+      66,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1267",
+    "coords": [
+      132,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1268",
+    "coords": [
+      198,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1269",
+    "coords": [
+      264,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1270",
+    "coords": [
+      330,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1271",
+    "coords": [
+      396,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1272",
+    "coords": [
+      462,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1273",
+    "coords": [
+      528,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1274",
+    "coords": [
+      594,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1275",
+    "coords": [
+      660,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1276",
+    "coords": [
+      726,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1277",
+    "coords": [
+      792,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1278",
+    "coords": [
+      858,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1279",
+    "coords": [
+      924,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1280",
+    "coords": [
+      990,
+      5214
+    ]
+  },
+  {
+    "spriteName": "1281",
+    "coords": [
+      0,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1282",
+    "coords": [
+      66,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1283",
+    "coords": [
+      132,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1284",
+    "coords": [
+      198,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1285",
+    "coords": [
+      264,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1286",
+    "coords": [
+      330,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1287",
+    "coords": [
+      396,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1288",
+    "coords": [
+      462,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1289",
+    "coords": [
+      528,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1290",
+    "coords": [
+      594,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1291",
+    "coords": [
+      660,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1292",
+    "coords": [
+      726,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1293",
+    "coords": [
+      792,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1294",
+    "coords": [
+      858,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1295",
+    "coords": [
+      924,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1296",
+    "coords": [
+      990,
+      5280
+    ]
+  },
+  {
+    "spriteName": "1297",
+    "coords": [
+      0,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1298",
+    "coords": [
+      66,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1299",
+    "coords": [
+      132,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1300",
+    "coords": [
+      198,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1301",
+    "coords": [
+      264,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1302",
+    "coords": [
+      330,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1303",
+    "coords": [
+      396,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1304",
+    "coords": [
+      462,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1305",
+    "coords": [
+      528,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1306",
+    "coords": [
+      594,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1307",
+    "coords": [
+      660,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1308",
+    "coords": [
+      726,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1309",
+    "coords": [
+      792,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1310",
+    "coords": [
+      858,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1311",
+    "coords": [
+      924,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1312",
+    "coords": [
+      990,
+      5346
+    ]
+  },
+  {
+    "spriteName": "1313",
+    "coords": [
+      0,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1314",
+    "coords": [
+      66,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1315",
+    "coords": [
+      132,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1316",
+    "coords": [
+      198,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1317",
+    "coords": [
+      264,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1318",
+    "coords": [
+      330,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1319",
+    "coords": [
+      396,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1320",
+    "coords": [
+      462,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1321",
+    "coords": [
+      528,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1322",
+    "coords": [
+      594,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1323",
+    "coords": [
+      660,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1324",
+    "coords": [
+      726,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1325",
+    "coords": [
+      792,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1326",
+    "coords": [
+      858,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1327",
+    "coords": [
+      924,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1328",
+    "coords": [
+      990,
+      5412
+    ]
+  },
+  {
+    "spriteName": "1329",
+    "coords": [
+      0,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1330",
+    "coords": [
+      66,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1331",
+    "coords": [
+      132,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1332",
+    "coords": [
+      198,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1333",
+    "coords": [
+      264,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1334",
+    "coords": [
+      330,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1335",
+    "coords": [
+      396,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1336",
+    "coords": [
+      462,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1337",
+    "coords": [
+      528,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1338",
+    "coords": [
+      594,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1339",
+    "coords": [
+      660,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1340",
+    "coords": [
+      726,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1341",
+    "coords": [
+      792,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1342",
+    "coords": [
+      858,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1343",
+    "coords": [
+      924,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1344",
+    "coords": [
+      990,
+      5478
+    ]
+  },
+  {
+    "spriteName": "1345",
+    "coords": [
+      0,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1346",
+    "coords": [
+      66,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1347",
+    "coords": [
+      132,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1348",
+    "coords": [
+      198,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1349",
+    "coords": [
+      264,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1350",
+    "coords": [
+      330,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1351",
+    "coords": [
+      396,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1352",
+    "coords": [
+      462,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1353",
+    "coords": [
+      528,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1354",
+    "coords": [
+      594,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1355",
+    "coords": [
+      660,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1356",
+    "coords": [
+      726,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1357",
+    "coords": [
+      792,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1358",
+    "coords": [
+      858,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1359",
+    "coords": [
+      924,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1360",
+    "coords": [
+      990,
+      5544
+    ]
+  },
+  {
+    "spriteName": "1361",
+    "coords": [
+      0,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1362",
+    "coords": [
+      66,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1363",
+    "coords": [
+      132,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1364",
+    "coords": [
+      198,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1365",
+    "coords": [
+      264,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1366",
+    "coords": [
+      330,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1367",
+    "coords": [
+      396,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1368",
+    "coords": [
+      462,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1369",
+    "coords": [
+      528,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1370",
+    "coords": [
+      594,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1371",
+    "coords": [
+      660,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1372",
+    "coords": [
+      726,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1373",
+    "coords": [
+      792,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1374",
+    "coords": [
+      858,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1375",
+    "coords": [
+      924,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1376",
+    "coords": [
+      990,
+      5610
+    ]
+  },
+  {
+    "spriteName": "1377",
+    "coords": [
+      0,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1378",
+    "coords": [
+      66,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1379",
+    "coords": [
+      132,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1380",
+    "coords": [
+      198,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1381",
+    "coords": [
+      264,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1382",
+    "coords": [
+      330,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1383",
+    "coords": [
+      396,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1384",
+    "coords": [
+      462,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1385",
+    "coords": [
+      528,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1386",
+    "coords": [
+      594,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1387",
+    "coords": [
+      660,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1388",
+    "coords": [
+      726,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1389",
+    "coords": [
+      792,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1390",
+    "coords": [
+      858,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1391",
+    "coords": [
+      924,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1392",
+    "coords": [
+      990,
+      5676
+    ]
+  },
+  {
+    "spriteName": "1393",
+    "coords": [
+      0,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1394",
+    "coords": [
+      66,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1395",
+    "coords": [
+      132,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1396",
+    "coords": [
+      198,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1397",
+    "coords": [
+      264,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1398",
+    "coords": [
+      330,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1399",
+    "coords": [
+      396,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1400",
+    "coords": [
+      462,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1401",
+    "coords": [
+      528,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1402",
+    "coords": [
+      594,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1403",
+    "coords": [
+      660,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1404",
+    "coords": [
+      726,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1405",
+    "coords": [
+      792,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1406",
+    "coords": [
+      858,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1407",
+    "coords": [
+      924,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1408",
+    "coords": [
+      990,
+      5742
+    ]
+  },
+  {
+    "spriteName": "1409",
+    "coords": [
+      0,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1410",
+    "coords": [
+      66,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1411",
+    "coords": [
+      132,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1412",
+    "coords": [
+      198,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1413",
+    "coords": [
+      264,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1414",
+    "coords": [
+      330,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1415",
+    "coords": [
+      396,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1416",
+    "coords": [
+      462,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1417",
+    "coords": [
+      528,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1418",
+    "coords": [
+      594,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1419",
+    "coords": [
+      660,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1420",
+    "coords": [
+      726,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1421",
+    "coords": [
+      792,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1422",
+    "coords": [
+      858,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1423",
+    "coords": [
+      924,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1424",
+    "coords": [
+      990,
+      5808
+    ]
+  },
+  {
+    "spriteName": "1425",
+    "coords": [
+      0,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1426",
+    "coords": [
+      66,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1427",
+    "coords": [
+      132,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1428",
+    "coords": [
+      198,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1429",
+    "coords": [
+      264,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1430",
+    "coords": [
+      330,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1431",
+    "coords": [
+      396,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1432",
+    "coords": [
+      462,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1433",
+    "coords": [
+      528,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1434",
+    "coords": [
+      594,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1436",
+    "coords": [
+      660,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1437",
+    "coords": [
+      726,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1438",
+    "coords": [
+      792,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1439",
+    "coords": [
+      858,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1440",
+    "coords": [
+      924,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1441",
+    "coords": [
+      990,
+      5874
+    ]
+  },
+  {
+    "spriteName": "1442",
+    "coords": [
+      0,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1443",
+    "coords": [
+      66,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1444",
+    "coords": [
+      132,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1445",
+    "coords": [
+      198,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1446",
+    "coords": [
+      264,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1447",
+    "coords": [
+      330,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1448",
+    "coords": [
+      396,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1449",
+    "coords": [
+      462,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1450",
+    "coords": [
+      528,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1451",
+    "coords": [
+      594,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1452",
+    "coords": [
+      660,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1453",
+    "coords": [
+      726,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1454",
+    "coords": [
+      792,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1455",
+    "coords": [
+      858,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1456",
+    "coords": [
+      924,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1457",
+    "coords": [
+      990,
+      5940
+    ]
+  },
+  {
+    "spriteName": "1458",
+    "coords": [
+      0,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1459",
+    "coords": [
+      66,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1460",
+    "coords": [
+      132,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1461",
+    "coords": [
+      198,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1462",
+    "coords": [
+      264,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1463",
+    "coords": [
+      330,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1464",
+    "coords": [
+      396,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1465",
+    "coords": [
+      462,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1466",
+    "coords": [
+      528,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1467",
+    "coords": [
+      594,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1468",
+    "coords": [
+      660,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1469",
+    "coords": [
+      726,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1470",
+    "coords": [
+      792,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1471",
+    "coords": [
+      858,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1472",
+    "coords": [
+      924,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1473",
+    "coords": [
+      990,
+      6006
+    ]
+  },
+  {
+    "spriteName": "1474",
+    "coords": [
+      0,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1475",
+    "coords": [
+      66,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1476",
+    "coords": [
+      132,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1477",
+    "coords": [
+      198,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1478",
+    "coords": [
+      264,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1479",
+    "coords": [
+      330,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1480",
+    "coords": [
+      396,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1481",
+    "coords": [
+      462,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1482",
+    "coords": [
+      528,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1483",
+    "coords": [
+      594,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1484",
+    "coords": [
+      660,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1485",
+    "coords": [
+      726,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1486",
+    "coords": [
+      792,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1487",
+    "coords": [
+      858,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1488",
+    "coords": [
+      924,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1489",
+    "coords": [
+      990,
+      6072
+    ]
+  },
+  {
+    "spriteName": "1490",
+    "coords": [
+      0,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1491",
+    "coords": [
+      66,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1492",
+    "coords": [
+      132,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1493",
+    "coords": [
+      198,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1494",
+    "coords": [
+      264,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1495",
+    "coords": [
+      330,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1496",
+    "coords": [
+      396,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1497",
+    "coords": [
+      462,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1498",
+    "coords": [
+      528,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1499",
+    "coords": [
+      594,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1500",
+    "coords": [
+      660,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1501",
+    "coords": [
+      726,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1502",
+    "coords": [
+      792,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1503",
+    "coords": [
+      858,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1504",
+    "coords": [
+      924,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1505",
+    "coords": [
+      990,
+      6138
+    ]
+  },
+  {
+    "spriteName": "1506",
+    "coords": [
+      0,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1507",
+    "coords": [
+      66,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1508",
+    "coords": [
+      132,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1509",
+    "coords": [
+      198,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1510",
+    "coords": [
+      264,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1511",
+    "coords": [
+      330,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1512",
+    "coords": [
+      396,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1513",
+    "coords": [
+      462,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1514",
+    "coords": [
+      528,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1515",
+    "coords": [
+      594,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1516",
+    "coords": [
+      660,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1517",
+    "coords": [
+      726,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1518",
+    "coords": [
+      792,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1519",
+    "coords": [
+      858,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1520",
+    "coords": [
+      924,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1521",
+    "coords": [
+      990,
+      6204
+    ]
+  },
+  {
+    "spriteName": "1522",
+    "coords": [
+      0,
+      6270
+    ]
+  },
+  {
+    "spriteName": "1523",
+    "coords": [
+      66,
+      6270
+    ]
+  },
+  {
+    "spriteName": "1524",
+    "coords": [
+      132,
+      6270
+    ]
+  },
+  {
+    "spriteName": "1525",
+    "coords": [
+      198,
+      6270
+    ]
+  },
+  {
+    "spriteName": "1526",
+    "coords": [
+      264,
+      6270
+    ]
+  },
+  {
+    "spriteName": "1527",
+    "coords": [
+      330,
+      6270
+    ]
+  },
+  {
+    "spriteName": "1528",
+    "coords": [
+      396,
+      6270
+    ]
+  },
+  {
+    "spriteName": "1529",
+    "coords": [
+      462,
+      6270
+    ]
+  },
+  {
+    "spriteName": "1530",
+    "coords": [
+      528,
+      6270
+    ]
+  },
+  {
+    "spriteName": "1531",
+    "coords": [
+      594,
+      6270
+    ]
+  },
+  {
+    "spriteName": "1532",
+    "coords": [
+      660,
+      6270
+    ]
+  },
+  {
+    "spriteName": "1533",
+    "coords": [
+      726,
+      6270
+    ]
+  }
+]

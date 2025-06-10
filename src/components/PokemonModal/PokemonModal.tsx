@@ -11,7 +11,6 @@ import StatBars from "./StatBars";
 import { FormeView } from "../FormeView/FormeView";
 import PokemonSprite from "./PokemonSprite";
 import { getSpeciesData, hasForms } from "@/utils/speciesData";
-import { Switch } from "@headlessui/react";
 import { useUIStore } from "@/stores/uiStore";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
 import { useInView } from "@react-spring/web";
@@ -23,7 +22,7 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
   const [tabsRef, tabsInView] = useInView();
   const evoFamily = getEvolutionaryFamily(pokemon.index);
   const tabsData = buildPokemonMoveTabs(pokemon);
-  console.log("PokemonView", pokemon);
+
   const handleSelectPokemon = (pokemonId: number) => {
     const pokemon: Pokemon = getSpeciesData(pokemonId);
     setSelectedPokemon(pokemon);
@@ -86,8 +85,8 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
 }
 
 function PokemonModal() {
-  const { selectedPokemon, isShiny, toggleShiny, closeModal } = useUIStore();
-
+  const closeModal = useUIStore((state) => state.closeModal);
+  const selectedPokemon = useUIStore((state) => state.selectedPokemon);
   if (!selectedPokemon) return null;
 
   return (
@@ -99,21 +98,6 @@ function PokemonModal() {
         className="w-xl no-scrollbar relative my-0 h-[95dvh] max-h-screen justify-normal overflow-y-auto rounded-lg border border-gray-100 bg-zinc-800 px-6 py-3"
         onClick={(e) => e.stopPropagation()}
       >
-        <span className="absolute left-3 flex flex-row items-center gap-1 self-center">
-          {" "}
-          <img
-            src="shinycharm.png"
-            className="h-7 w-7 object-contain"
-            alt="Shiny charm"
-          />
-          <Switch
-            checked={isShiny}
-            onChange={toggleShiny}
-            className="data-checked:bg-emerald-500 group inline-flex h-5 w-10 cursor-pointer items-center rounded-full bg-gray-500 transition"
-          >
-            <span className="group-data-checked:translate-x-6 size-3 translate-x-1 rounded-full bg-white transition" />
-          </Switch>
-        </span>
         <span className="absolute right-3 flex flex-row items-center gap-1 self-center">
           <CloseButton onClick={closeModal} />
         </span>

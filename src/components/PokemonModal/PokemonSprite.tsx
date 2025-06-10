@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { animated } from "react-spring";
 import { useAnimConfig } from "@/utils/animConfigs";
-import getSprite from "@/utils/getSprite";
+
 import { useUIStore } from "@/stores/uiStore";
 
 const PokemonSprite = React.memo(function PSprite({
@@ -13,7 +13,7 @@ const PokemonSprite = React.memo(function PSprite({
   isOpen: boolean;
 }) {
   const isShiny = useUIStore((state) => state.isShiny);
-  const imgDir = `/sprites/${isShiny ? "anim_shiny" : "anim"}/${spriteIndex}/anim_front.webp`;
+  const imgDir = `/sprites/anim/${spriteIndex}/anim_front.webp`;
   const [displaySprite, setDisplaySprite] = useState(imgDir);
   const [frame, setFrame] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
@@ -31,9 +31,11 @@ const PokemonSprite = React.memo(function PSprite({
   }: React.SyntheticEvent<HTMLImageElement, Event>) => {
     currentTarget.onerror = null; // prevents looping
     setIsRunning(false);
-    getSprite(spriteIndex, isShiny).then((sprite) => {
-      setDisplaySprite(sprite);
-    });
+    setDisplaySprite(`/sprites/front/${spriteIndex}.png`);
+    // getSprite(spriteIndex, isShiny).then((sprite) => {
+    //   debugger
+    //   setDisplaySprite(sprite);
+    // });
   };
   /**
    * Need this incase user clicks Evo form so `displaySprite` changes

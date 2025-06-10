@@ -1,5 +1,5 @@
-import NameCombobox from "./NameCombobox";
-import { ComboBoxEntry } from "./GenericComboBox";
+import NameCombobox from "./FilterParts/NameCombobox";
+import { ComboBoxEntry } from "./FilterParts/GenericComboBox";
 import FilterModal from "./FilterModal";
 import CurrentFilters from "./CurrentFilters";
 import { useFilterStore } from "@/stores/filterStore";

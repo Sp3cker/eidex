@@ -5,8 +5,7 @@ import "./App.css";
 const FilterBar = lazy(() => import("./components/Filter/FilterBar"));
 const PokemonList = lazy(() => import("./components/PokemonList/PokemonList"));
 const PokemonModal = lazy(() => import("./components/PokemonModal/PokemonModal"));
-const CreditsButton = lazy(() => import("./components/CreditsButton"));
-const ShinySwitch = lazy(() => import("./components/ui/ShinySwitch"));
+// const CreditsButton = lazy(() => import("./components/CreditsButton"));
 
 // Loading fallback component
 const LoadingSpinner = () => (
@@ -17,17 +16,6 @@ const LoadingSpinner = () => (
 );
 
 function App() {
-  // Get filter state from Zustand store
-  // const { filters } = useFilterStore();
-
-  // // Get UI state from Zustand store
-  // const { isShiny, toggleShiny, selectedPokemon, isModalOpen } =
-  //   useUIStore();
-
-  // // Memoized filtered Pokémon list (only updates when filters change)
-  // const filteredPokemon = useMemo(() => {
-  //   return filterPokemon(pokemonData as Pokemon[], filters);
-  // }, [filters]);
 
   return (
     <div className="flex min-h-screen justify-center bg-zinc-800">
@@ -38,19 +26,10 @@ function App() {
 
         {/* Shiny toggle UI */}
         <div className="flex select-none items-center justify-between gap-2 bg-neutral-800/30 px-3 py-2">
-          <span className="flex flex-row items-center gap-1">
-            <img
-              src="shinycharm.png"
-              className="h-7 w-7 object-contain"
-              alt="Shiny charm"
-            />
-            <Suspense fallback={<LoadingSpinner />}>
-              <ShinySwitch />
-            </Suspense>
-          </span>
-          <Suspense fallback={<LoadingSpinner />}>
+
+          {/* <Suspense fallback={<LoadingSpinner />}>
             <CreditsButton />
-          </Suspense>
+          </Suspense> */}
         </div>
 
         <Suspense fallback={<LoadingSpinner />}>

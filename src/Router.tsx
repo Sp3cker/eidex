@@ -44,8 +44,8 @@ const AppRouter = () => {
         </Router>
       </div>
 
-      <Footer />
       <PokemonModal />
+      <Footer />
     </div>
   );
 };
