@@ -23,6 +23,7 @@ export const useMapStore = create<MapStore>()(
       selectedImageName: null,
       viewingImage: false,
       selectedLevelId: null,
+      selectedRoamer: null,
     };
     return {
       ...initialState,
@@ -124,6 +125,8 @@ export const useMapStore = create<MapStore>()(
       setViewingImage: (viewing: boolean) => {
         set({ viewingImage: viewing });
       },
+      setSelectedRoamer: (nameKey: string) => set({ selectedRoamer: nameKey }),
+      deselectRoamer: () => set({ selectedRoamer: null }),
     };
   }),
 );

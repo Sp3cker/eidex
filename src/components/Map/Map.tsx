@@ -9,7 +9,7 @@ import Selecta from "./Selecta";
 import "./grid.css";
 import useMapStore from "@/stores/useMapStore";
 import { lazy, Suspense, useLayoutEffect } from "react";
-// import Roamers from "./Roamers";
+import Roamers from "./Roamers";
 document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
 const ImageViewer = lazy(() => import("./ImageViewer"));
@@ -18,9 +18,8 @@ const Map = () => {
 
   useLayoutEffect(() => {
     const segments = window.location.pathname.split("/");
-    const [_, route, param] = segments;
+    const [, route, param] = segments;
     if (route && param) {
-      // const secondPath = segments.length > 2 ? segments[2] : null;
       setStateFromURL(route, param);
     }
   }, []);
@@ -42,7 +41,7 @@ const Map = () => {
           <ImageViewer />
         </Suspense>
       </ErrorBoundary>
-      {/* <Roamers /> */}
+      <Roamers />
     </div>
   );
 };

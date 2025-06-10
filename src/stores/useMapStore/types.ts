@@ -40,6 +40,7 @@ type MapStore = {
   viewingImage: boolean;
   selectedImageName: string | null;
   selectedLevelId: string | null;
+  selectedRoamer: string | null;
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
@@ -54,6 +55,8 @@ type MapStore = {
   setSelectedMapLevel: (level: number) => void;
   setStoredCoordinates: (mapCoords: Map<string, number[]>) => void;
   setViewingImage: (viewing: boolean) => void;
+  setSelectedRoamer: (nameKey: string) => void;
+  deselectRoamer: () => void;
 };
 
 export type { EncounterMons, EncounterMonsFromJSON, MapStore, Level };

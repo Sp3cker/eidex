@@ -12,11 +12,22 @@ Object.entries(typeData).forEach(([id, data]) => {
 });
 
 const validTypes = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18,19
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19,
 ];
 
 export function getTypeName(typeID: number): string {
   return typeDataArray[typeID]?.typeName || "Normal"; //Normal in case of fallback
+}
+export function getTypeNamesArr(typeIDsArr: number[]): string[] {
+  const types: string[] = [];
+  if (typeIDsArr.length === 0) return ["Normal"];
+  if (typeof typeIDsArr[0] === "number") {
+    types.push(typeDataArray[typeIDsArr[0]]?.typeName || "Normal");
+  }
+  if (typeof typeIDsArr[1] === "number") {
+    types.push(typeDataArray[typeIDsArr[1]]?.typeName || "Normal");
+  }
+  return types;
 }
 
 export function getTypeColor(typeID: number): [string, string] {
@@ -27,6 +38,15 @@ export function getTypeColor(typeID: number): [string, string] {
 
   return typeColor as [string, string];
 }
+// export function getTypeColorsArr(typeIDs: number[]): [string, string] {
+//   let [type1, type2] = typeIDs;
+//   const typeColor = [
+//     typeDataArray[typeID]?.color || "#A8A77A",
+//     typeDataArray[typeID]?.colorEnd || "#A8A878",
+//   ];
+
+  // return typeColor as [string, string];
+// }
 
 function codeToMult(code: number): number {
   switch (code) {
@@ -76,27 +96,26 @@ export const adjustColor = (color: string, amount: number): string => {
 };
 
 const typeColors: Record<number, string> = {
-  1: '#cecac5',
-  2: '#d69e9c',
-  3: '#adc6ef',
-  4: '#bd8ec5',
-  5: '#debe8c',
-  6: '#ce966b',
-  7: '#bdd25a',
-  8: '#a5aade',
-  9: '#adc2bd',
-  11: '#ef8263',
-  12: '#7bcee6',
-  13: '#84c28c',
-  14: '#efe363',
-  15: '#f792ad',
-  16: '#9cdfd6',
-  17: '#7bb2e6',
-  18: '#a5aaad',
-  19: '#f7b6ef',
+  1: "#cecac5",
+  2: "#d69e9c",
+  3: "#adc6ef",
+  4: "#bd8ec5",
+  5: "#debe8c",
+  6: "#ce966b",
+  7: "#bdd25a",
+  8: "#a5aade",
+  9: "#adc2bd",
+  11: "#ef8263",
+  12: "#7bcee6",
+  13: "#84c28c",
+  14: "#efe363",
+  15: "#f792ad",
+  16: "#9cdfd6",
+  17: "#7bb2e6",
+  18: "#a5aaad",
+  19: "#f7b6ef",
 };
 
 export function getTypeSnapColor(typeID: number): string {
-  return typeColors[typeID] || '#cecac5'; // Default to Normal color if not found
+  return typeColors[typeID] || "#cecac5"; // Default to Normal color if not found
 }
-

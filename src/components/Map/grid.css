@@ -23,7 +23,10 @@
   grid-area: 6 / 1 / 13 / 8;
 }
 .roamers-grid {
-  grid-area: 2 / 12 / 11 / 13;
+  grid-area: 2 / 1 / 11 / 2;
+}
+.roamers-info-grid {
+  grid-area: 10 / 3 / 13 / 7;
 }
 @media (max-width: 768px) {
   .parent {
@@ -45,6 +48,9 @@
   .dexnav-grid {
     grid-area: 7 / 1 / 13 / 7;
   }
+  .roamers-info-grid {
+  grid-area: 10 / 3 / 13 / 13;
+}
 }
 @media (max-height: 1200px) {
   .parent {

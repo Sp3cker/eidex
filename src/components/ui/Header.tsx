@@ -1,3 +1,4 @@
+import { GiSparkles } from "react-icons/gi";
 import { Link } from "wouter";
 
 const Header = () => (
@@ -8,22 +9,26 @@ const Header = () => (
       className="h-9"
       height="36"
     />
-    {/* <div>
-      <Link to="/legendaries">
-        <button className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 rounded-sm px-5 py-1 text-sm text-gray-200 mr-2">
-          Legendaries
+    <div>
+      <Link to="/roamers">
+        <button
+          role="button"
+          title="Roamers"
+          className="cursor-pointer pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 mr-2 rounded-sm px-5 py-1 text-sm text-gray-200"
+        >
+          <GiSparkles size={20}/>
         </button>
       </Link>
-    </div> */}
+    </div>
     <div>
-      <a 
-        href="https://dex.emeraldimperium.net/" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 rounded-sm px-5 py-1 text-sm text-gray-200 inline-block"
-      >
-        Dex
-      </a>
+      <Link to="/dex">
+        <button
+          rel="noopener noreferrer"
+          className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 inline-block rounded-sm px-5 py-1 text-sm text-gray-200"
+        >
+          Dex
+        </button>
+      </Link>
 
       <Link to="/map">
         <button className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 rounded-sm px-5 py-1 text-sm text-gray-200">

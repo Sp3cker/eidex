@@ -29,7 +29,7 @@ const AppRouter = () => {
             <Route path="/" component={MapComponent} />
             <Route path="/map" component={MapComponent} />
             <Route path="/map/*" component={MapComponent} />
-            <Route path="/legendaries" component={MapComponent} />
+            <Route path="/roamers" component={MapComponent} />
 
             <Route
               path="/dex"
