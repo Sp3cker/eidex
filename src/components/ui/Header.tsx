@@ -10,7 +10,7 @@ const Header = () => (
       height="36"
     />
     <div>
-      <Link to="/roamers">
+      <Link href="/roamers">
         <button
           role="button"
           title="Roamers"
@@ -21,7 +21,7 @@ const Header = () => (
       </Link>
     </div>
     <div>
-      <Link to="/dex">
+      <Link href="/dex">
         <button
           rel="noopener noreferrer"
           className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 inline-block rounded-sm px-5 py-1 text-sm text-gray-200"
@@ -30,7 +30,7 @@ const Header = () => (
         </button>
       </Link>
 
-      <Link to="/map">
+      <Link href="/map">
         <button className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 rounded-sm px-5 py-1 text-sm text-gray-200">
           Map
         </button>

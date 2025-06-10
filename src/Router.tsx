@@ -38,7 +38,7 @@ const AppRouter = () => {
       <div className="flex-2 overflow-auto">
         <Router>
           <RouteLogger />
-          <Switch>
+          <Switch >
             <Route path="/" component={MapComponent} />
             <Route path="/map" component={MapComponent} />
             <Route path="/map/*" component={MapComponent} />
