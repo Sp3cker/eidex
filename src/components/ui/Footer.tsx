@@ -1,4 +1,3 @@
-
 import { IconContext } from "react-icons";
 import DisclaimerModal from "./DisclaimerModal";
 
@@ -22,15 +21,21 @@ const Footer = () => {
             </a>
           </p>
         </div>
+        <div className="flex flex-col">
+
         <p className="font-pkmnem leading-xs text-sm/3 text-white sm:w-8">
-          Data&nbsp;for version:&nbsp;1.3
+          Data&nbsp;for E.I.&nbsp;1.3
         </p>
+        <p className="font-pkmnem leading-xs text-sm/3 text-white sm:w-8">
+          Send me ideas on Discord!{" "}
+        </p>
+        </div>
         <div className="flex items-center justify-end gap-5">
           <div className="md:w-full">
-            <p className="font-pkmnem leading-xs text-sm/3 text-white ">
+            <p className="font-pkmnem leading-xs text-sm/3 text-white">
               Not an official project of Emerald Imperium.
             </p>
-            <p className="font-pkmnem leading-xs text-sm/3 text-white ">
+            <p className="font-pkmnem leading-xs text-sm/3 text-white">
               <DisclaimerModal /> for more details.
             </p>
           </div>
