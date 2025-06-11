@@ -26,7 +26,7 @@ const SearchSelecta = React.memo(function SSelecta({
       return;
     }
     const currMapInd = maps.indexOf(selectedMap);
-    if (maps[currMapInd + 1]) {
+    if (maps[currMapInd + 1]) { // if map next in arr
       setSelectedMap(maps[currMapInd + 1]);
     } else {
       setSelectedMap(maps[0]);

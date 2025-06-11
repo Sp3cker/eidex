@@ -12,8 +12,6 @@
 }
 .search-bar-grid {
   grid-area: 0 / 2 / 1 / 6;
-  pointer-events: none;
-
 }
 .map-place-info-grid {
   grid-area: 1 / 9 / 6 / 13;
@@ -64,7 +62,7 @@
   }
   .search-bar-grid {
 
-    grid-area: 1 / 1 / auto / 6;
+    grid-area: 1 / 1 / 2 / 6;
   }
   .map-place-info-grid {
     grid-area: 1 / 8 / 6 / 13;

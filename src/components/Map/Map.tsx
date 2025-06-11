@@ -28,8 +28,8 @@ const Map = () => {
       <MapContainer>
         <NewMap />
       </MapContainer>
-      <Selecta />
       <Search />
+      <Selecta />
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <MapPlaceInfo />
       </ErrorBoundary>
