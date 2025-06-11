@@ -9,7 +9,7 @@ const Footer = () => {
         className: "text-baseline md:text-xl cursor-pointer hover:sepia  ",
       }}
     >
-      <div className=" z-10 flex w-full select-none items-center justify-between bg-gray-800 px-2 ring">
+      <div className="z-10 flex w-full select-none items-center justify-between bg-gray-800 px-2 ring md:relative md:bottom-auto">
         <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">
           <p> Dex by Kildemal{" – "}</p>
           <p>
