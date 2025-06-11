@@ -11,7 +11,9 @@
   grid-area: 1 / 1 / 13 / 13;
 }
 .search-bar-grid {
-  grid-area: 1 / 2 / 2 / 6;
+  grid-area: 0 / 2 / 1 / 6;
+  pointer-events: none;
+
 }
 .map-place-info-grid {
   grid-area: 1 / 9 / 6 / 13;
@@ -37,13 +39,13 @@
     grid-area: 1 / 1 / 13 / 13;
   }
   .search-bar-grid {
-    grid-area: 1 / 1 / 2 / 6;
+    grid-area: 1 / 1 / 1 / 6;
   }
   .map-place-info-grid {
     grid-area: 1 / 8 / 6 / 13;
   }
   .selecta-grid {
-   grid-area: 5 / 8 / 6 / 13 
+   grid-area: 5 / 8 / 6 / 13;
   }
   .dexnav-grid {
     grid-area: 7 / 1 / 13 / 7;
@@ -61,13 +63,14 @@
     grid-area: 1 / 1 / 13 / 13;
   }
   .search-bar-grid {
-    grid-area: 1 / 1 / 2 / 6;
+
+    grid-area: 1 / 1 / auto / 6;
   }
   .map-place-info-grid {
     grid-area: 1 / 8 / 6 / 13;
   }
   .selecta-grid {
-   grid-area: 5 / 8 / 6 / 13 
+   grid-area: 5 / 8 / 6 / 13;
   }
   .dexnav-grid {
     grid-area: 7 / 1 / 13 / 7;

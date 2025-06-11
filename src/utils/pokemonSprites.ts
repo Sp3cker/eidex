@@ -32,25 +32,10 @@ export function getItemSpriteCoords(itemId: number): [number, number] | null {
  * @returns CSS background-position string or null if not found
  */
 export function getPokemonSpriteStyle(
-  itemId: number,
   spriteSize: number = 64,
 ): React.CSSProperties | null {
-  const coords = getItemSpriteCoords(itemId);
-
-  if (!coords) return null;
-
-  const [x, y] = coords;
-
-  // Spritesheet dimensions (from generation script)
-  const sourceSize = 64; // Individual sprite size in spritesheet
-  const scale = spriteSize / sourceSize;
-
   // Calculate the scaled spritesheet dimensions
   // Original spritesheet: 1054x2506px (from the generation output)
-  const originalSheetWidth = 1054;
-  const originalSheetHeight = 6334;
-  const scaledSheetWidth = originalSheetWidth * scale;
-  const scaledSheetHeight = originalSheetHeight * scale;
 
   const style: React.CSSProperties = {
     width: `${spriteSize}px`,
@@ -73,8 +58,8 @@ export function getPokemonSpriteStyle(
  * @returns CSS properties for img element or null if not found
  */
 export function getPokemonImgStyle(
-  itemId: number, 
-  spriteSize: number = 64
+  itemId: number,
+  spriteSize: number = 64,
 ): React.CSSProperties | null {
   const coords = getItemSpriteCoords(itemId);
 
@@ -107,12 +92,10 @@ export function getPokemonImgStyle(
   };
 }
 
-
-
 /**
  * Alternative approach using img elements with transform3d and overflow:hidden container
  * This method provides better Safari compatibility and hardware acceleration
- * 
+ *
  * Usage example:
  *
  * const imgStyle = getPokemonImgStyle(pokemon.index, 64);
