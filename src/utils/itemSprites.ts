@@ -56,6 +56,8 @@ export function getItemSpriteStyle(
     backgroundImage: "url(/spritesheet-items.webp)",
     backgroundPosition: `-${x * scale}px -${y * scale}px`,
     backgroundSize: `${scaledSheetWidth}px ${scaledSheetHeight}px`,
+    WebkitBackgroundSize: `${scaledSheetWidth}px ${scaledSheetHeight}px`,
+
     width: `${spriteSize}px`,
     height: `${spriteSize}px`,
     display: "inline-block",

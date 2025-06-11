@@ -10,7 +10,8 @@ type SpriteImageProps = {
 
 export default function SpriteImage({ pokemon }: SpriteImageProps) {
   return (
-    <div
+    <img
+      src={`/sprites/front/${pokemon.index}.png`}
       className="rendering-crisp-edges flex-shrink-0"
       style={getPokemonSpriteStyle(pokemon.index, 64) || {}}
     />

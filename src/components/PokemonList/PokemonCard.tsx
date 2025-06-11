@@ -57,9 +57,9 @@ export const PokemonCard = React.memo(function Card({ pokemon }: PokemonCardProp
 
   return (
     <div onClick={() => openModal(pokemon)} className="w-full cursor-pointer">
-      <div className="flex w-full flex-col text-white">
+      <div className="flex w-full flex-col text-neutral-50">
         {/* Header */}
-        <div className="flex justify-between bg-neutral-900/20 py-1 pl-2">
+        <div className="flex justify-between bg-neutral-700/20 py-1 pl-2">
           <div className="flex items-center gap-1">
             {/* Sprite and name  */}
             <SpriteImage pokemon={pokemon} />

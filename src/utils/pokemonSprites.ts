@@ -53,52 +53,74 @@ export function getPokemonSpriteStyle(
   const scaledSheetHeight = originalSheetHeight * scale;
 
   const style: React.CSSProperties = {
-    backgroundImage: "url(/spritesheet-pokemon-front.webp)",
-    backgroundPosition: `-${x * scale}px -${y * scale}px`,
-    backgroundSize: `${scaledSheetWidth}px ${scaledSheetHeight}px`,
     width: `${spriteSize}px`,
     height: `${spriteSize}px`,
-    display: "inline-block",
-    imageRendering: "pixelated",
     overflow: "hidden",
     filter: `drop-shadow(0 0 2px rgba(0, 0, 0, 0.3))`,
+    imageRendering: "crisp-edges",
+    // Safari/WebKit-specific fixes for background-image rendering
+    WebkitBackfaceVisibility: "hidden",
   };
 
   return style;
 }
 
-
 /**
  * Get CSS properties for rendering a sprite using an img element with proper positioning
  * This approach uses transform and overflow:hidden to crop the sprite from the spritesheet
  * @param itemId - The item ID in ITEM_ format
+ * @param spriteSize - Size of each sprite (default: 64px)
  * @returns CSS properties for img element or null if not found
  */
-export function getItemImgStyle(itemId: number): React.CSSProperties | null {
+export function getPokemonImgStyle(
+  itemId: number, 
+  spriteSize: number = 64
+): React.CSSProperties | null {
   const coords = getItemSpriteCoords(itemId);
 
   if (!coords) return null;
 
   const [x, y] = coords;
 
+  // Spritesheet dimensions
+  const sourceSize = 64; // Individual sprite size in spritesheet
+  const scale = spriteSize / sourceSize;
+
+  // Original spritesheet: 1054x6334px (from the generation output)
+  const originalSheetWidth = 1054;
+  const originalSheetHeight = 6334;
+  const scaledSheetWidth = originalSheetWidth * scale;
+  const scaledSheetHeight = originalSheetHeight * scale;
+
   return {
-    transform: `translate(-${x}px, -${y}px)`,
-    imageRendering: "crisp-edges" as const,
-    width: "auto",
-    height: "auto",
+    // Use translate3d for hardware acceleration and better Safari support
+    transform: `translate3d(-${x * scale}px, -${y * scale}px, 0)`,
+    imageRendering: "crisp-edges",
+    width: `${scaledSheetWidth}px`,
+    height: `${scaledSheetHeight}px`,
     display: "block",
+    // Additional properties for smoother rendering
+    backfaceVisibility: "hidden",
+    WebkitBackfaceVisibility: "hidden",
+    transformStyle: "preserve-3d",
+    WebkitTransformStyle: "preserve-3d",
   };
 }
 
+
+
 /**
- * Alternative approach using img elements with transform and overflow:hidden container
+ * Alternative approach using img elements with transform3d and overflow:hidden container
+ * This method provides better Safari compatibility and hardware acceleration
+ * 
  * Usage example:
  *
- * const imgStyle = getItemImgStyle(item.id);
+ * const imgStyle = getPokemonImgStyle(pokemon.index, 64);
+ * const containerStyle = getSpriteContainerStyle(64);
  *
  * {imgStyle ? (
- *   <div style={{ width: '32px', height: '32px', overflow: 'hidden', position: 'relative' }}>
- *     <img src="/spritesheet-items.webp" alt="sprite" style={imgStyle} />
+ *   <div style={containerStyle}>
+ *     <img src="/spritesheet-pokemon-front.webp" alt="sprite" style={imgStyle} />
  *   </div>
  * ) : (
  *   <div>No sprite</div>

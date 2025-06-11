@@ -1,5 +1,5 @@
-import { lazy, Suspense } from "react";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
+import { lazy, Suspense, useEffect } from "react";
 import "./App.css";
 
 // Lazy load components
@@ -13,6 +13,9 @@ const PokemonModal = lazy(
 // Loading fallback component
 
 function App() {
+  useEffect(() => {
+    document.title = 'Emerald Imperium Pokédex'
+  })
   return (
     <div className="flex min-h-screen justify-center bg-zinc-800">
       <div className="border-1 shadow-2xl/60 flex w-full max-w-3xl flex-col rounded-lg border-neutral-900/50">
