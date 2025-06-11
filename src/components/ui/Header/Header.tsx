@@ -14,7 +14,6 @@ const Header = () => (
       <div className="flex gap-1">
         <Link href="/dex">
           <button
-            rel="noopener noreferrer"
             className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 inline-block rounded-sm px-5 py-1 text-sm text-gray-200"
           >
             Dex

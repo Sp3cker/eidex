@@ -34,11 +34,6 @@ const AppRouter = () => {
       <main className={`flex-1 ${scrollClase}`}>
         <Router>
           <Switch>
-            <Route path="/" component={MapComponent} />
-            <Route path="/map" component={MapComponent} />
-            <Route path="/map/*" component={MapComponent} />
-            <Route path="/roamers" component={MapComponent} />
-
             <Route
               path="/dex"
               component={() => (
@@ -47,6 +42,11 @@ const AppRouter = () => {
                 </Suspense>
               )}
             />
+            <Route path="/map/*" component={MapComponent} />
+            <Route path="/map" component={MapComponent} />
+            <Route path="/roamers" component={MapComponent} />
+
+            <Route path="/" component={MapComponent} />
           </Switch>
         </Router>
       </main>
