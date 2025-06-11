@@ -1,6 +1,7 @@
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import { lazy, Suspense, useEffect } from "react";
 import "./App.css";
+import DrawerContainer from "./components/Filter/Drawer";
 
 // Lazy load components
 const FilterBar = lazy(() => import("./components/Filter/FilterBar"));
@@ -14,25 +15,20 @@ const PokemonModal = lazy(
 
 function App() {
   useEffect(() => {
-    document.title = 'Emerald Imperium Pokédex'
-  })
+    document.title = "Emerald Imperium Pokédex";
+  });
   return (
     <div className="flex min-h-screen justify-center bg-zinc-800">
       <div className="border-1 shadow-2xl/60 flex w-full max-w-3xl flex-col rounded-lg border-neutral-900/50">
-        <Suspense fallback={<LoadingSpinner />}>
-          <FilterBar />
-        </Suspense>
-
         {/* Shiny toggle UI */}
-        <div className="flex select-none items-center justify-between gap-2 bg-neutral-800/30 px-3 py-2">
-          {/* <Suspense fallback={<LoadingSpinner />}>
-            <CreditsButton />
-          </Suspense> */}
+        <div className="border-1 shadow-2xl/60 order-2 flex w-full flex-col rounded-lg border-neutral-900/50 md:order-1 md:w-3/4">
+          <Suspense fallback={<LoadingSpinner />}>
+            <PokemonList />
+          </Suspense>
         </div>
-
-        <Suspense fallback={<LoadingSpinner />}>
-          <PokemonList />
-        </Suspense>
+        <div className="order-1 w-full md:order-2 md:w-auto md:pl-1">
+          <DrawerContainer />
+        </div>
 
         <Suspense fallback={<LoadingSpinner />}>
           <PokemonModal />

@@ -2,11 +2,13 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import FilterBar from "./FilterBar";
 import { useScreenWidth } from "../../hooks/useScreenWidth";
 import { useSpring, animated } from "react-spring";
+import { useUIStore } from "@/stores/uiStore";
+import { shallow } from "zustand/shallow";
 
 const Drawer = ({ currOpen, toggleOpen, currTailwindSize, ...props }: any) => {
   const desktopDisplayStyles = "flex";
-  const mobileDisplayStyles = "";
-  // "fixed w-3/4 h-screen right-0 inset-y-0 bg-black/30 backdrop-blur-md";
+  const mobileDisplayStyles =
+    "fixed w-3/4 h-screen right-0 inset-y-0 bg-black/30 backdrop-blur-md";
 
   const [currDisplayString, setCurrDisplayString] =
     useState(desktopDisplayStyles);
@@ -53,12 +55,15 @@ const Drawer = ({ currOpen, toggleOpen, currTailwindSize, ...props }: any) => {
 };
 
 const DrawerContainer = (props: any) => {
-  const [currOpen, toggleOpen] = useState(false);
+  const [currOpen, closeDrawer] = useUIStore((state) => [
+    state.drawer,
+    state.closeDrawer,
+  ]);
   const currBreakpoint = useScreenWidth();
   const containerRef = useRef(null);
   useEffect(() => {
     if (props.closeDrawer) {
-      toggleOpen(false);
+      closeDrawer();
     }
   }, [props.closeDrawer]);
   return (

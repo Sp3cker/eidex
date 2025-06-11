@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { createWithEqualityFn as create } from "zustand/traditional";
 import { Pokemon } from "@/types";
 import { persist, subscribeWithSelector } from "zustand/middleware";
 import pokemons from "@/data/speciesData.json";
@@ -7,8 +7,10 @@ import { updatePokemonHelmet } from "./pokemonHelmetUpdater";
 interface UIState {
   isShiny: boolean;
   selectedPokemon: Pokemon | null;
-
+  drawer: boolean;
   isModalOpen: boolean;
+  openDrawer: () => void;
+  closeDrawer: () => void;
   toggleShiny: () => void;
   setSelectedPokemon: (pokemon: Pokemon | null) => void;
   setSelectedPokemonByIndex: (index: number) => void;
@@ -24,7 +26,9 @@ export const useUIStore = create<UIState>()(
         isShiny: false,
         selectedPokemon: null,
         isModalOpen: false,
-
+        drawer: false,
+        openDrawer: () => set({ drawer: true }),
+        closeDrawer: () => set({ drawer: false }),
         //Actions
         toggleShiny: () => set((state) => ({ isShiny: !state.isShiny })),
         setSelectedPokemon: (pokemon) => set({ selectedPokemon: pokemon }),
@@ -49,10 +53,10 @@ export const useUIStore = create<UIState>()(
 
 // Subscribe to Pokemon modal changes and update head tags only when modal is open
 useUIStore.subscribe(
-  (state) => ({ 
-    selectedPokemon: state.selectedPokemon, 
+  (state) => ({
+    selectedPokemon: state.selectedPokemon,
     isShiny: state.isShiny,
-    isModalOpen: state.isModalOpen 
+    isModalOpen: state.isModalOpen,
   }),
   ({ selectedPokemon, isShiny, isModalOpen }) => {
     // Only update head when modal is open and pokemon is selected
@@ -60,10 +64,10 @@ useUIStore.subscribe(
       updatePokemonHelmet(selectedPokemon, isShiny);
     }
   },
-  { 
-    equalityFn: (a, b) => 
-      a.selectedPokemon?.index === b.selectedPokemon?.index && 
-      a.isShiny === b.isShiny && 
-      a.isModalOpen === b.isModalOpen 
-  }
+  {
+    equalityFn: (a, b) =>
+      a.selectedPokemon?.index === b.selectedPokemon?.index &&
+      a.isShiny === b.isShiny &&
+      a.isModalOpen === b.isModalOpen,
+  },
 );
