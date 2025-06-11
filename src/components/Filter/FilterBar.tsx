@@ -6,9 +6,7 @@ import { useFilterStore } from "@/stores/filterStore";
 
 function FilterBar() {
   // Use the filter store directly
-  const {
-    setNameValue,
-  } = useFilterStore();
+  const setNameValue = useFilterStore((state) => state.setNameValue);
 
   // State to force remount of NameCombobox for clearing
 
@@ -16,10 +14,8 @@ function FilterBar() {
     setNameValue(entry ? entry.name : "");
   };
 
-
-
   return (
-    <div className="flex flex-col select-none">
+    <div className="flex select-none flex-col">
       <div className="flex flex-col items-center justify-between gap-3 rounded-t-lg bg-neutral-900/90 px-3 py-2 shadow-lg">
         <NameCombobox onSelect={handleNameSelect} />
         <FilterModal />
@@ -29,6 +25,6 @@ function FilterBar() {
       </div>
     </div>
   );
-};
+}
 
 export default FilterBar;

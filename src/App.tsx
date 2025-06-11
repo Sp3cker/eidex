@@ -25,7 +25,7 @@ function App() {
             <PokemonList />
           </Suspense>
         </div>
-        <div className="order-1 w-full md:order-2 md:w-auto md:pl-1">
+        <div className="order-1 md:order-2 md:w-auto md:pl-1">
           <DrawerContainer />
           
         </div>

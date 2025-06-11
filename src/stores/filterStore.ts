@@ -1,23 +1,23 @@
-import { create } from "zustand";
+import { createWithEqualityFn as create } from "zustand/traditional";
 import { FilterOptions, MoveSource, SortBy } from "@/types";
 import { ComboBoxEntry } from "@/components/Filter/FilterParts/GenericComboBox";
 import { typeDataArray } from "@/utils/typeInfo";
+import { combine } from "zustand/middleware";
 
 interface FilterState {
   // Core filter values
-  filters: FilterOptions;
 
   // Stat filter specific state
-  chosenStat: number | undefined;
-  statType: string | undefined;
-  isStatMax: boolean;
+  // chosenStat: number | undefined;
+  // statType: string | undefined;
+  // isStatMax: boolean;
 
   // Move filter state
   moveSource: MoveSource;
   moveValue: ComboBoxEntry | null;
 
   // Type
-  typeValue: number | undefined;
+  typeValue: [number, number] | undefined;
   typeOptions: { typeID: number | undefined; typeName: string }[];
 
   //Ability filter
@@ -25,165 +25,106 @@ interface FilterState {
 
   // Sort state
   sortBy: SortBy;
-  sortStat: string | undefined;
+  // sortStat: string | undefined;
   descending: boolean;
 
   // Name filter
   nameValue: string;
 
   // Actions
-  setChosenStat: (stat: number | undefined) => void;
-  setStatType: (type: string | undefined) => void;
-  toggleStatMax: () => void;
+  // setChosenStat: (stat: number | undefined) => void;
+  // setStatType: (type: string | undefined) => void;
+  // toggleStatMax: () => void;
   setMoveSource: (source: MoveSource) => void;
   setMoveValue: (value: ComboBoxEntry | null) => void;
-  setTypeValue: (typeId: number | undefined) => void;
-  getSelectedType: () => { typeID: number | undefined; typeName: string };
+  setTypeValue: (typeIds: [number, number] | undefined) => void;
+  getSelectedTypes: () => [number, number] | undefined;
   setAbilityValue: (ability: ComboBoxEntry | null) => void;
   setSortBy: (sortBy: SortBy) => void;
   setSortStat: (stat: string | undefined) => void;
   toggleSortDirection: () => void;
   setNameValue: (name: string) => void;
   resetFilters: () => void;
+
+  setFilter: ({ key, value }: { key: string; value: any }) => void;
 }
 
-export const useFilterStore = create<FilterState>((set, get) => ({
-  // Initial state
-  filters: {
-    name: "",
-    typeId: undefined,
-    chosenStat: undefined,
-    statType: undefined,
-    isStatMax: false,
-    sortBy: "dexId",
-    sortStat: undefined,
-    descending: false,
-    moveSource: "all",
-  },
-
-  // Type options
-  typeOptions: [
-    { typeID: undefined, typeName: "All" },
-    ...typeDataArray.filter(Boolean),
-  ],
-
-  // Individual state slices
-  chosenStat: undefined,
-  statType: undefined,
-  isStatMax: false,
-  moveSource: "all",
-  moveValue: null,
-  typeValue: undefined,
-  abilityValue: null,
-  sortBy: "dexId",
-  sortStat: undefined,
-  descending: false,
-  nameValue: "",
-
-  // Actions
-  setChosenStat: (stat) =>
-    set((state) => ({
-      chosenStat: stat,
-      filters: { ...state.filters, chosenStat: stat },
-    })),
-
-  setStatType: (type) =>
-    set((state) => ({
-      statType: type,
-      filters: { ...state.filters, statType: type },
-    })),
-
-  toggleStatMax: () =>
-    set((state) => ({
-      isStatMax: !state.isStatMax,
-      filters: { ...state.filters, isStatMax: !state.isStatMax },
-    })),
-
-  setMoveSource: (source) =>
-    set((state) => ({
-      moveSource: source,
-      filters: { ...state.filters, moveSource: source },
-    })),
-
-  setMoveValue: (value) =>
-    set((state) => ({
-      moveValue: value,
-      filters: {
-        ...state.filters,
-        moveId: value?.id,
-        moveName: value?.name,
-      },
-    })),
-
-  setTypeValue: (typeId) =>
-    set((state) => ({
-      typeValue: typeId,
-      filters: { ...state.filters, typeId },
-    })),
-
-  setAbilityValue: (ability) =>
-    set((state) => ({
-      abilityValue: ability,
-      filters: {
-        ...state.filters,
-        abilityId: ability?.id,
-        ability: ability?.name,
-      },
-    })),
-
-  setSortBy: (sortBy) =>
-    set((state) => ({
-      sortBy,
-      filters: { ...state.filters, sortBy },
-    })),
-
-  setSortStat: (stat) =>
-    set((state) => ({
-      sortStat: stat,
-      filters: { ...state.filters, sortStat: stat },
-    })),
-
-  toggleSortDirection: () =>
-    set((state) => ({
-      descending: !state.descending,
-      filters: { ...state.filters, descending: !state.descending },
-    })),
-
-  setNameValue: (name) =>
-    set((state) => ({
-      nameValue: name,
-      filters: { ...state.filters, name },
-    })),
-
-  resetFilters: () =>
-    set({
-      filters: {
-        name: "",
-        typeId: undefined,
-        chosenStat: undefined,
-        statType: undefined,
-        isStatMax: false,
-        sortBy: "dexId",
-        sortStat: undefined,
-        descending: false,
-        moveSource: "all",
-      },
+export const useFilterStore = create(
+  combine(
+    {
+      name: "",
+      typeId: undefined,
       chosenStat: undefined,
       statType: undefined,
       isStatMax: false,
+      sortBy: "dexId",
+      sortStat: undefined,
+      descending: false,
       moveSource: "all",
+
+      // Type options
+      typeOptions: [
+        { typeID: undefined, typeName: "All" },
+        ...typeDataArray.filter(Boolean),
+      ],
+
+      // Individual state slices
+
       moveValue: null,
       typeValue: undefined,
       abilityValue: null,
-      nameValue: "",
-    }),
 
-  // Selector function for getting selected type
-  getSelectedType: () => {
-    const state = get();
-    return (
-      state.typeOptions.find((t) => t.typeID === state.typeValue) ||
-      state.typeOptions[0]
-    );
-  },
-}));
+      nameValue: "",
+    },
+    (set, get) => ({
+      setFilter: ({ key, value }: { key: string; value: any }) => {
+        set((state) => {
+          const updates: Partial<FilterState> = {
+            [key]: value,
+          };
+
+          // Update the filters object if the key exists there or has a mapping
+          if (key === "typeValue") {
+            // Map typeValue to typeId in filters
+            updates.filters = {
+              ...state.filters,
+              typeId: value as [number, number] | undefined,
+            };
+          } else if (key in state.filters) {
+            updates.filters = { ...state.filters, [key]: value };
+          }
+
+          return updates;
+        });
+      },
+      resetFilters: () =>
+        set({
+          filters: {
+            name: "",
+            typeId: undefined,
+            chosenStat: undefined,
+            statType: undefined,
+            isStatMax: false,
+            sortBy: "dexId",
+            sortStat: undefined,
+            descending: false,
+            moveSource: "all",
+          },
+          // chosenStat: undefined,
+          // statType: undefined,
+          // isStatMax: false,
+          moveSource: "all",
+          moveValue: null,
+          typeValue: undefined,
+          abilityValue: null,
+          nameValue: "",
+        }),
+
+      // Selector function for getting selected types
+      getSelectedTypes: () => {
+        const state = get();
+        return state.typeValue;
+      },
+    }),
+  ),
+);

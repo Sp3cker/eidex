@@ -29,9 +29,14 @@ function FilterPill({ pill, onRemove }: FilterPillProps) {
       case "name":
         return `Name: ${pill.value.value}`;
       case "type":
-        return `Type: ${
-          pill.value.value !== undefined ? getTypeName(pill.value.value) : "All"
-        }`;
+        if (pill.value.value === undefined) {
+          return "Type: All";
+        }
+        if (Array.isArray(pill.value.value)) {
+          const [type1, type2] = pill.value.value;
+          return `Type: ${getTypeName(type1)}/${getTypeName(type2)}`;
+        }
+        return `Type: ${getTypeName(pill.value.value as number)}`;
       case "ability":
         return `Ability: ${pill.value.value.name}`;
       case "stat": {

@@ -11,7 +11,7 @@ Object.entries(typeData).forEach(([id, data]) => {
   typeDataArray[Number(id)] = data;
 });
 
-const validTypes = [
+export const validTypes = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19,
 ];
 
@@ -38,15 +38,6 @@ export function getTypeColor(typeID: number): [string, string] {
 
   return typeColor as [string, string];
 }
-// export function getTypeColorsArr(typeIDs: number[]): [string, string] {
-//   let [type1, type2] = typeIDs;
-//   const typeColor = [
-//     typeDataArray[typeID]?.color || "#A8A77A",
-//     typeDataArray[typeID]?.colorEnd || "#A8A878",
-//   ];
-
-  // return typeColor as [string, string];
-// }
 
 function codeToMult(code: number): number {
   switch (code) {

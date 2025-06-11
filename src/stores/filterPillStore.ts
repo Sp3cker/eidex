@@ -7,7 +7,7 @@ export type FilterType = "name" | "type" | "move" | "ability" | "stat" | "sort";
 
 export type FilterPillValue =
   | { type: "name"; value: string }
-  | { type: "type"; value: number | undefined }
+  | { type: "type"; value: [number, number] | undefined }
   | { type: "ability"; value: { id: number; name: string } }
   | {
       type: "stat";
@@ -95,11 +95,9 @@ export const useFilterPillStore = create<FilterPillsState>((set, get) => ({
 
       case "stat":
         // Only reset the stat values, not other filter values
-        filterStore.setChosenStat(undefined);
-        filterStore.setStatType(undefined);
-        if (pillToRemove.value.value.isMax) {
-          filterStore.toggleStatMax(); // Only toggle if it was true
-        }
+        filterStore.setFilter({ key: 'chosenStat', value: undefined });
+        filterStore.setFilter({ key: 'statType', value: undefined });
+        filterStore.setFilter({ key: 'isStatMax', value: false });
         break;
 
       case "move":
