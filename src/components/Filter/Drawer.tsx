@@ -1,9 +1,15 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import FilterBar from "./FilterBar";
 import { useScreenWidth } from "../../hooks/useScreenWidth";
 import { useSpring, animated } from "react-spring";
 import { useUIStore } from "@/stores/uiStore";
-import { shallow } from "zustand/shallow";
+
 
 const Drawer = ({ currOpen, toggleOpen, currTailwindSize, ...props }: any) => {
   const desktopDisplayStyles = "flex";
@@ -55,12 +61,20 @@ const Drawer = ({ currOpen, toggleOpen, currTailwindSize, ...props }: any) => {
 };
 
 const DrawerContainer = (props: any) => {
-  const [currOpen, closeDrawer] = useUIStore((state) => [
+  const [currOpen, closeDrawer, openDrawer] = useUIStore((state) => [
     state.drawer,
     state.closeDrawer,
+    state.openDrawer,
   ]);
   const currBreakpoint = useScreenWidth();
   const containerRef = useRef(null);
+  const toggleOpen = useCallback(() => {
+    if (currOpen) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  }, [currOpen]);
   useEffect(() => {
     if (props.closeDrawer) {
       closeDrawer();
@@ -71,14 +85,21 @@ const DrawerContainer = (props: any) => {
       {currBreakpoint === "md" ? (
         <FilterBar />
       ) : (
-        <Drawer
-          currOpen={currOpen}
-          toggleOpen={toggleOpen}
-          currTailwindSize={currBreakpoint}
-          parentRef={containerRef}
-        >
-          <FilterBar />
-        </Drawer>
+        <>
+          <div
+            onClick={toggleOpen}
+            className={`${currOpen ? "block" : "hidden"} fade-in-background fixed inset-0 bg-black/80`}
+            aria-hidden="true"
+          />
+          <Drawer
+            currOpen={currOpen}
+            toggleOpen={toggleOpen}
+            currTailwindSize={currBreakpoint}
+            parentRef={containerRef}
+          >
+            <FilterBar />
+          </Drawer>
+        </>
       )}
     </div>
   );

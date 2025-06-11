@@ -257,8 +257,23 @@ input[type="number"] {
     background: rgba(0, 0, 0, 0.4);
   }
 }
+@keyframes fadeOutFrostedGlass {
+  from {
+    opacity: 1;
+    backdrop-filter: blur(12px) saturate(120%);
+    background: rgba(0, 0, 0, 0.4);
+  }
+  to {
+    opacity: 0;
+    backdrop-filter: blur(0px) saturate(100%);
+    background: rgba(0, 0, 0, 0);
+  }
+}
 
 .fade-in-background {
   animation: fadeInFrostedGlass 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.fade-out-background {
+  animation: fadeOutFrostedGlass 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }

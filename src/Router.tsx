@@ -7,7 +7,7 @@ const PokemonModal = lazy(
 );
 const Map = lazy(() => import("./components/Map/Map"));
 const App = lazy(() => import("./App"));
-import Header from "./components/ui/Header";
+import Header from "@/components/ui/Header";
 import Footer from "./components/ui/Footer";
 
 const MapComponent = () => (

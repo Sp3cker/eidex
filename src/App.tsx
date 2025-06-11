@@ -4,7 +4,7 @@ import "./App.css";
 import DrawerContainer from "./components/Filter/Drawer";
 
 // Lazy load components
-const FilterBar = lazy(() => import("./components/Filter/FilterBar"));
+
 const PokemonList = lazy(() => import("./components/PokemonList/PokemonList"));
 const PokemonModal = lazy(
   () => import("./components/PokemonModal/PokemonModal"),
@@ -18,7 +18,7 @@ function App() {
     document.title = "Emerald Imperium Pokédex";
   });
   return (
-    <div className="flex min-h-screen justify-center bg-zinc-800">
+    <div className="flex min-h-screen justify-center md:flex-row bg-zinc-800">
       <div className="border-1 shadow-2xl/60 flex w-full max-w-3xl flex-col rounded-lg border-neutral-900/50">
         {/* Shiny toggle UI */}
         <div className="border-1 shadow-2xl/60 order-2 flex w-full flex-col rounded-lg border-neutral-900/50 md:order-1 md:w-3/4">
@@ -28,6 +28,7 @@ function App() {
         </div>
         <div className="order-1 w-full md:order-2 md:w-auto md:pl-1">
           <DrawerContainer />
+          
         </div>
 
         <Suspense fallback={<LoadingSpinner />}>
