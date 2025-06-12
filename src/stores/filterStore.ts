@@ -13,9 +13,9 @@ export const useFilterStore = create(
       chosenStat: undefined as number | undefined,
       statType: undefined as string | undefined,
       isStatMax: false,
-      sortBy: "dexId" as SortBy,
+      sortBy: "dexId",
       sortStat: undefined as string | undefined,
-      descending: false,
+      sortDirection: "down",
       moveSource: "all" as MoveSource,
 
       // Type options
@@ -54,7 +54,7 @@ export const useFilterStore = create(
           isStatMax: false,
           sortBy: "dexId" as SortBy,
           sortStat: undefined,
-          descending: false,
+          sortDirection: "down",
           moveSource: "all" as MoveSource,
           moveValue: null,
           typeValue: undefined,
@@ -66,6 +66,9 @@ export const useFilterStore = create(
       getSelectedTypes: () => {
         const state = get();
         return state.typeValue;
+      },
+      setSort: (by: string, direction: "up" | "down") => {
+        set({ sortBy: by, sortDirection: direction ?? "down" });
       },
     }),
   ),

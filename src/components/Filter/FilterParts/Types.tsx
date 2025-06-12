@@ -46,10 +46,10 @@ const Types = () => {
     }
     // Check if this type is selected (either as first or second type in tuple)
     const typeId = validTypes[i];
-    const isSelected = Array.isArray(selectedFilter) 
+    const isSelected = Array.isArray(selectedFilter)
       ? selectedFilter.includes(typeId)
       : selectedFilter === typeId;
-    
+
     if (isSelected) {
       return { ...selectedStlyes, immediate: true };
     }
@@ -88,9 +88,6 @@ const Types = () => {
         return normal;
       });
     }
-    return () => {
-      console.log("demounted");
-    };
   }, [selectedFilter, api]);
 
   return <div>Hello</div>;

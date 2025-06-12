@@ -1,6 +1,6 @@
 import ItemSearch from "@/utils/itemsData";
 import { Encounters, LevelsInfo } from "@/data/map";
-import pokemon from "@/data/speciesData.json";
+import { pokemonData as pokemon } from "@/data/pokemon";
 
 import {
   EncounterMons,
@@ -49,7 +49,7 @@ const putIdOnEncounter: (
           );
           return;
         }
-        specieIndex = pokemon[monInJson].index;
+        specieIndex = pokemon[monInJson].dexId;
       }
     }
     return (enc[index].index = specieIndex);
@@ -103,8 +103,8 @@ const getSelectedMapInfo = (id: string, levelId: string) => {
      */
     const monsNameKeys = new Map<string, number>([]);
     pokemon.forEach((p) => {
-      monsNameKeys.set(p.nameKey.toLowerCase().replace(/-/g, "_"), p.index);
-      // monsNameKeys.set(p.speciesName.replace("-", "_").toLowerCase(), p.index);
+      monsNameKeys.set(p.nameKey.toLowerCase().replace(/-/g, "_"), p.dexId);
+      // monsNameKeys.set(p.speciesName.replace("-", "_").toLowerCase(), p.dexId);
     }); //nameKey cause it probly matches encounter Data
     if (targetMapEncounters && targetMapEncounters.land_mons) {
       putIdOnEncounter(targetMapEncounters.land_mons.mons, monsNameKeys);

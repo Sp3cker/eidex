@@ -20,7 +20,7 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
   const isShiny = useUIStore((state) => state.isShiny);
   const screenWidth = useScreenWidth();
   const [tabsRef, tabsInView] = useInView();
-  const evoFamily = getEvolutionaryFamily(pokemon.index);
+  const evoFamily = getEvolutionaryFamily(pokemon.speciesId);
   const tabsData = buildPokemonMoveTabs(pokemon);
 
   const handleSelectPokemon = (pokemonId: number) => {
@@ -32,7 +32,7 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
     <div className="flex w-full flex-col items-center">
       <PokemonSprite
         isOpen={pokemon !== null}
-        spriteIndex={pokemon.index}
+        spriteIndex={pokemon.speciesId}
         alt={pokemon.speciesName}
       />
 
@@ -48,13 +48,13 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
         <div className="font-pixel text-xl font-bold text-gray-200">
           {pokemon.nameKey}
         </div>
-        <div className="text-md font-pixel text-gray-400">#{pokemon.index}</div>
+        <div className="text-md font-pixel text-gray-400">#{pokemon.dexId}</div>
       </div>
       <div className="mt-2 flex w-full">
         <StatBars stats={pokemon.stats as StatArray} />
       </div>
       <div className="my-2 mt-6 flex w-full flex-col">
-        <AbilityBox key={pokemon.index} abilities={pokemon.abilities} />
+        <AbilityBox key={pokemon.speciesId} abilities={pokemon.abilities} />
         <div className="w-full">{/* <AbilityDescription /> */}</div>
         <div className="my-3">
           <EvolutionView

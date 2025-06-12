@@ -6,7 +6,7 @@ export const updatePokemonHelmet = (selectedPokemon: Pokemon | null, isShiny: bo
     return;
   }
 
-  const pokemonTitle = `${selectedPokemon.nameKey} (#${selectedPokemon.index}) - Pokédex`;
+  const pokemonTitle = `${selectedPokemon.nameKey} (#${selectedPokemon.dexId}) - Pokédex`;
   const pokemonDescription = `View detailed information for ${selectedPokemon.nameKey}, including stats, abilities, type matchups, and move learnsets. ${isShiny ? 'Viewing shiny form.' : ''}`;
 
   // Update document head directly

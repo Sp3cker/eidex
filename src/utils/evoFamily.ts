@@ -1,4 +1,4 @@
-import speciesData from "../data/speciesData.json";
+import { pokemonData as speciesData } from "../data/pokemon";
 import { parseEvolutions, parseShortEvolutions } from "./parseEvo";
 
 type EvolutionNode = {
@@ -30,7 +30,7 @@ function findRootSpecies(speciesId: number): number {
     );
 
     if (!parent) break;
-    current = parent.index;
+    current = parent.dexId;
   }
 
   return current;
@@ -65,7 +65,7 @@ function getEvolutionaryFamily(speciesId: number): EvolutionFamily {
     const node: EvolutionNode = existing ?? { id, children: [] };
     nodeMap[id] = node;
 
-    const pokemon = speciesData.find((p) => p.index === id);
+    const pokemon = speciesData.find((p) => p.dexId === id);
     if (!pokemon) {
       console.warn(`Missing Pokémon with index ${id}`);
       return node;

@@ -43,7 +43,6 @@ class DescriptionWorkerService {
       // Load data when worker is created
       this.worker.postMessage({ type: 'LOAD_DATA', payload: {} });
 
-      console.log('[DescriptionWorkerService] Worker initialized');
     } catch (error) {
       console.error('[DescriptionWorkerService] Failed to initialize worker:', error);
       this.worker = null;

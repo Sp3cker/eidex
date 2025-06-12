@@ -83,10 +83,6 @@ class SyncDescriptionService {
   public getMapDescriptionSync(mapId: string, levelLabel?: string): string {
     try {
       const richDescription = this.generateDescription(mapId, levelLabel);
-      console.log(
-        "[SyncDescriptionService] Generated rich description:",
-        richDescription.substring(0, 100) + "...",
-      );
       return richDescription;
     } catch (error) {
       console.error(

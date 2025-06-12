@@ -1,20 +1,20 @@
-import speciesData from "../data/speciesData.json";
+import { pokemonData as speciesData } from "../data/pokemon";
 import {Pokemon} from "@/types"
 
 export function getSpeciesName(speciesId: number): string {
-  const species = speciesData.find((species) => species.index === speciesId);
+  const species = speciesData.find((species) => species.dexId === speciesId);
   if (!species) return "None";
   return species.speciesName || "None";
 }
 
 export function getNameKey(speciesId: number): string {
-  const species = speciesData.find((species) => species.index === speciesId);
+  const species = speciesData.find((species) => species.dexId === speciesId);
   if (!species) return "None";
   return species.nameKey || "None";
 }
 
 export function getSpeciesData(speciesId: number): Pokemon {
-  const species = speciesData.find((species)=> species.index === speciesId)
+  const species = speciesData.find((species)=> species.dexId === speciesId)
   if (!species) throw new Error(`Species ${speciesId} not found`);
   return species
 }

@@ -1,5 +1,5 @@
 import { createWithEqualityFn as create } from "zustand/traditional";
-import pokemon from "@/data/speciesData.json";
+import { pokemonData as pokemon } from "@/data/pokemon";
 import ItemSearch from "@/utils/itemsData";
 import { getSelectedLevel } from "./setSelectedMap";
 import { MapStore } from "./types";

@@ -14,11 +14,12 @@ export type Abilities = Ability[];
 export type MoveSource = "all" | "levelup" | "tm" | "egg";
 
 export interface Pokemon {
-  index: number;
+  speciesId: number;
   speciesName: string;
   types: number[];
   stats: number[];
-  abilities: Abilities;
+  abilities: number[];
+  heldItems?: number[];
   levelUpMoves: number[][];
   tmMoves?: number[];
   eggMoves?: number[] | null;
@@ -27,12 +28,17 @@ export interface Pokemon {
   forms?: string[] | null;
   formId?: number;
   nameKey: string;
-  eggGroup?: number[];
-  items?: number[];
+  siblings?: number[];
+  baseForm?: number;
   tutorMoves?: number[];
+  items?: number[];
+  eggGroup?: number[];
   ancestor?: number;
   order?: number;
   changes?: PokemonChanges | string;
+
+  // Legacy properties for compatibility
+  index?: number;
 }
 
 export interface SpeciesData {
@@ -43,12 +49,12 @@ export interface FilterOptions {
   name?: string;
   typeId?: [number, number] | undefined;
   chosenStat?: number;
-  sortBy?: SortBy;
+  sortBy?: string;
   statType?: string;
   isStatMax?: boolean;
   sortStat?: string;
   ability?: string;
-  abilityId?: number;
+  abilityId: number | null;
   levelupMove?: string;
   tmMove?: string;
   descending?: boolean;

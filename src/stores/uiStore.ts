@@ -1,7 +1,7 @@
 import { createWithEqualityFn as create } from "zustand/traditional";
 import { Pokemon } from "@/types";
 import { persist, subscribeWithSelector } from "zustand/middleware";
-import pokemons from "@/data/speciesData.json";
+import { pokemonData as pokemons } from "@/data/pokemon";
 import { updatePokemonHelmet } from "./pokemonHelmetUpdater";
 
 interface UIState {
@@ -33,7 +33,7 @@ export const useUIStore = create<UIState>()(
         toggleShiny: () => set((state) => ({ isShiny: !state.isShiny })),
         setSelectedPokemon: (pokemon) => set({ selectedPokemon: pokemon }),
         setSelectedPokemonByIndex: (index: number) => {
-          const pokemon = pokemons.find((p) => p.index === index);
+          const pokemon = pokemons.find((p) => p.dexId === index);
           if (pokemon) {
             set({ selectedPokemon: pokemon });
           }
@@ -66,7 +66,7 @@ useUIStore.subscribe(
   },
   {
     equalityFn: (a, b) =>
-      a.selectedPokemon?.index === b.selectedPokemon?.index &&
+      a.selectedPokemon?.dexId === b.selectedPokemon?.dexId &&
       a.isShiny === b.isShiny &&
       a.isModalOpen === b.isModalOpen,
   },

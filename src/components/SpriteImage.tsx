@@ -10,7 +10,7 @@ type SpriteImageProps = {
 export default function SpriteImage({ pokemon }: SpriteImageProps) {
   return (
     <img
-      src={`/sprites/front/${pokemon.index}.png`}
+      src={`/sprites/front/${pokemon.speciesId}.png`}
       className="rendering-crisp-edges flex-shrink-0"
     />
   );

@@ -52,7 +52,7 @@ const AppRouter = () => {
       </main>
 
       <Footer />
-      <Suspense fallback={<LoadingSpinner />}>
+      <Suspense fallback={<span/>}>
         <PokemonModal />
       </Suspense>
     </div>
