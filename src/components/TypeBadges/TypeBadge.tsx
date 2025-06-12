@@ -21,7 +21,7 @@ const TypeBadge = React.memo(function TypeBadge({
 
   return (
     <span
-      className="relative inline-flex h-[22px] w-[64px] select-none items-center overflow-hidden rounded-full md:h-[24px] md:w-[86px]"
+      className="relative inline-flex h-[2rem] w-[5rem] select-none items-center overflow-hidden rounded-full md:h-[24px]"
       style={{ background: spriteBackground }}
     >
       <span className="flex h-full w-full flex-row items-center">

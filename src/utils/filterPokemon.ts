@@ -1,4 +1,4 @@
-import { FilterOptions, Pokemon, SortBy } from "../types";
+import { FilterOptions, Pokemon } from "../types";
 // import { getMoveData, getTMMove, getTutorMove } from "./moveData";
 
 function matchesNameFilter(pokemon: Pokemon, name?: string): boolean {

@@ -39,8 +39,36 @@ export const useFilterStore = create(
 
         // Handle special mappings
         if (key === "typeValue") {
-          // Map typeValue to typeId in state
-          updates.typeId = props as [number, number] | undefined;
+          const curr = get().typeValue; // Current selection (may be undefined)
+          const newValue = props; // Get the first value to toggle
+
+          debugger
+          // Case 1: No current selection - add the new value
+          if (!curr) {
+            updates.typeValue = [newValue];
+            updates.typeId = [newValue];
+          }
+          // Case 2: Current selection includes the new value - remove it
+          else if (curr.includes(newValue)) {
+            const remaining = curr.filter((id) => id !== newValue);
+            if (remaining.length === 0) {
+              updates.typeValue = undefined;
+              updates.typeId = undefined;
+            } else {
+              updates.typeValue = [remaining[0]];
+              updates.typeId = [remaining[0]];
+            }
+          }
+          // Case 3: Already have two values - replace the first with the new one
+          else if (curr.length === 2) {
+            updates.typeValue = [curr[1], newValue] as [number, number];
+            updates.typeId = [curr[1], newValue] as [number, number];
+          }
+          // Case 4: Have one value - add the new value as second
+          else {
+            updates.typeValue = [curr[0], newValue] as [number, number];
+            updates.typeId = [curr[0], newValue] as [number, number];
+          }
         }
 
         set({ ...updates });

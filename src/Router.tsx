@@ -37,7 +37,7 @@ const AppRouter = () => {
             <Route
               path="/dex"
               component={() => (
-                <Suspense fallback={<p>Loading...</p>}>
+                <Suspense fallback={<LoadingSpinner/>}>
                   <App />
                 </Suspense>
               )}

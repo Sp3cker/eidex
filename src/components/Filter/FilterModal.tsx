@@ -14,16 +14,15 @@ function FilterModal() {
     <>
       <div className="flex select-none flex-col justify-center">
         <div className="flex flex-wrap gap-2">
-         
           <div className="min-w-max flex-1">
             <AbilityCombobox />
           </div>
           <div className="min-w-max flex-1">
             <MoveFilterGroup />
           </div>
-          <div className="min-w-max flex-1">
-            <Types />
-          </div>
+        </div>
+        <div >
+          <Types />
         </div>
       </div>
     </>

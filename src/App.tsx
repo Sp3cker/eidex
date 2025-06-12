@@ -4,9 +4,7 @@ import "./App.css";
 // Lazy load components
 
 const PokemonList = lazy(() => import("./components/PokemonList/PokemonList"));
-const PokemonModal = lazy(
-  () => import("./components/PokemonModal/PokemonModal"),
-);
+
 const DrawerContainer = lazy(() => import("./components/Filter/Drawer"));
 // const CreditsButton = lazy(() => import("./components/CreditsButton"));
 
@@ -18,7 +16,6 @@ function App() {
   });
   return (
     <div className="flex min-h-screen justify-center bg-zinc-800 md:flex-row">
-      {/* Shiny toggle UI */}
       <div className="shadow-2xl/60 order-2 flex w-full flex-col rounded-lg border-neutral-900/50 md:order-1 md:w-3/4">
         <Suspense fallback={<LoadingSpinner />}>
           <PokemonList />
