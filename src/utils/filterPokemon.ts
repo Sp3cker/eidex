@@ -149,6 +149,7 @@ export function filterPokemon(
   pokemons: Pokemon[],
   filters: FilterOptions = {},
 ): Pokemon[] {
+
   const filtered = pokemons.filter(
     (pokemon) =>
       matchesNameFilter(pokemon, filters.name) &&

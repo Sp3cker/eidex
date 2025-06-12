@@ -1,47 +1,25 @@
 import { create } from "zustand";
 import { useFilterStore } from "./filterStore";
-import { MoveSource, SortBy } from "@/types";
+import { MoveSource } from "@/types";
 
 // Define FilterType directly in this file
 export type FilterType = "name" | "type" | "move" | "ability" | "stat" | "sort";
 
-export type FilterPillValue =
-  | { type: "name"; value: string }
-  | { type: "type"; value: [number, number] | undefined }
-  | { type: "ability"; value: { id: number; name: string } }
-  | {
-      type: "stat";
-      value: {
-        stat: number | undefined;
-        type: string | undefined;
-        isMax: boolean;
-      };
-    }
-  | { type: "move"; value: { id: number; name: string; source: MoveSource } }
-  | {
-      type: "sort";
-      value: { by: SortBy; stat: string | undefined; descending: boolean };
-    };
+export type FilterPillValue = { type: string; label: string };
 
 // Define types for our FilterPills
-export type FilterPill = {
-  id: string;
-  type: FilterType;
-  label: string;
-  value: FilterPillValue;
-};
+
 
 interface FilterPillsState {
   // Track currently active filter pills
-  activePills: FilterPill[];
+  activePills: FilterPillValue[];
 
   // Utility methods
-  addPill: (pill: FilterPill) => void;
-  removePill: (pillId: string) => void;
+  addPill: (pill: FilterPillValue) => void;
+  removePill: (pillType: string) => void;
   clearAllPills: () => void;
 
   // Sync pills with filter store
-  syncWithFilters: () => void;
 }
 
 export const useFilterPillStore = create<FilterPillsState>((set, get) => ({
@@ -95,9 +73,9 @@ export const useFilterPillStore = create<FilterPillsState>((set, get) => ({
 
       case "stat":
         // Only reset the stat values, not other filter values
-        filterStore.setFilter({ key: 'chosenStat', value: undefined });
-        filterStore.setFilter({ key: 'statType', value: undefined });
-        filterStore.setFilter({ key: 'isStatMax', value: false });
+        filterStore.setFilter({ key: "chosenStat", value: undefined });
+        filterStore.setFilter({ key: "statType", value: undefined });
+        filterStore.setFilter({ key: "isStatMax", value: false });
         break;
 
       case "move":

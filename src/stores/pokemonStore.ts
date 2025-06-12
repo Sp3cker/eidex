@@ -20,7 +20,8 @@ export const getPokemonBySpecies = (species: string): any => {
   };
 };
 const usePokemonStore = (visibleCount = 10) => {
-  const filters = useFilterStore((state) => state.filters);
+  const filters = useFilterStore();
+  
   const [visible, setVisibleCount] = useState(visibleCount);
   // // Memoized filtered Pokémon list (only updates when filters change)
   const ignoreList: number[] = [1435];

@@ -1,11 +1,11 @@
-import { IoCloseCircle } from "react-icons/io5";
-import { FilterPill as FilterPillType } from "@/stores/filterPillStore";
+// import { IoCloseCircle } from "react-icons/io5";
+import { FilterPill  } from "@/stores/filterPillStore";
 import { getTypeName } from "@/utils/typeInfo";
 import { capitalize } from "@/utils/miscUtils";
 
 interface FilterPillProps {
-  pill: FilterPillType;
-  onRemove: (id: string) => void;
+  pill: FilterPill;
+  // onRemove: (id: string) => void;
 }
 
 // Map of pill types to background colors
@@ -18,7 +18,7 @@ const bgColorMap: Record<string, string> = {
   sort: "bg-pink-700",
 };
 
-function FilterPill({ pill, onRemove }: FilterPillProps) {
+function FilterPill({ pill }: FilterPillProps) {
   // Get the appropriate background color for this pill type
   const bgColor = bgColorMap[pill.type] || "bg-neutral-700";
 
@@ -46,7 +46,7 @@ function FilterPill({ pill, onRemove }: FilterPillProps) {
         return `${statType} ${operator} ${stat}`;
       }
       case "move": {
-        const { name, source } = pill.value.value;
+        const { name, source } = pill.value;
         const sourceMap: Record<string, string> = {
           tm: "TM",
           levelup: "Lvl",
@@ -66,11 +66,11 @@ function FilterPill({ pill, onRemove }: FilterPillProps) {
       className={`flex items-center justify-between gap-1 rounded-full ${bgColor} px-2 py-1 text-xs text-white`}
     >
       <span>{getDisplayValue()}</span>
-      <IoCloseCircle
+      {/* <IoCloseCircle
         className="cursor-pointer text-white hover:animate-pulse"
-        onClick={() => onRemove(pill.id)}
+        // onClick={() => onRemove(pill.id)}
         size={16}
-      />
+      /> */}
     </div>
   );
 }

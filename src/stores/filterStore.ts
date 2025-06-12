@@ -1,66 +1,22 @@
 import { createWithEqualityFn as create } from "zustand/traditional";
-import { FilterOptions, MoveSource, SortBy } from "@/types";
+import { MoveSource, SortBy } from "@/types";
 import { ComboBoxEntry } from "@/components/Filter/FilterParts/GenericComboBox";
 import { typeDataArray } from "@/utils/typeInfo";
 import { combine } from "zustand/middleware";
-
-interface FilterState {
-  // Core filter values
-
-  // Stat filter specific state
-  // chosenStat: number | undefined;
-  // statType: string | undefined;
-  // isStatMax: boolean;
-
-  // Move filter state
-  moveSource: MoveSource;
-  moveValue: ComboBoxEntry | null;
-
-  // Type
-  typeValue: [number, number] | undefined;
-  typeOptions: { typeID: number | undefined; typeName: string }[];
-
-  //Ability filter
-  abilityValue: ComboBoxEntry | null;
-
-  // Sort state
-  sortBy: SortBy;
-  // sortStat: string | undefined;
-  descending: boolean;
-
-  // Name filter
-  nameValue: string;
-
-  // Actions
-  // setChosenStat: (stat: number | undefined) => void;
-  // setStatType: (type: string | undefined) => void;
-  // toggleStatMax: () => void;
-  setMoveSource: (source: MoveSource) => void;
-  setMoveValue: (value: ComboBoxEntry | null) => void;
-  setTypeValue: (typeIds: [number, number] | undefined) => void;
-  getSelectedTypes: () => [number, number] | undefined;
-  setAbilityValue: (ability: ComboBoxEntry | null) => void;
-  setSortBy: (sortBy: SortBy) => void;
-  setSortStat: (stat: string | undefined) => void;
-  toggleSortDirection: () => void;
-  setNameValue: (name: string) => void;
-  resetFilters: () => void;
-
-  setFilter: ({ key, value }: { key: string; value: any }) => void;
-}
 
 export const useFilterStore = create(
   combine(
     {
       name: "",
-      typeId: undefined,
-      chosenStat: undefined,
-      statType: undefined,
+      id: null,
+      typeId: undefined as [number, number] | undefined,
+      chosenStat: undefined as number | undefined,
+      statType: undefined as string | undefined,
       isStatMax: false,
-      sortBy: "dexId",
-      sortStat: undefined,
+      sortBy: "dexId" as SortBy,
+      sortStat: undefined as string | undefined,
       descending: false,
-      moveSource: "all",
+      moveSource: "all" as MoveSource,
 
       // Type options
       typeOptions: [
@@ -69,54 +25,40 @@ export const useFilterStore = create(
       ],
 
       // Individual state slices
-
-      moveValue: null,
-      typeValue: undefined,
-      abilityValue: null,
+      moveValue: null as ComboBoxEntry | null,
+      typeValue: undefined as [number, number] | undefined,
+      abilityId: null,
 
       nameValue: "",
     },
     (set, get) => ({
-      setFilter: ({ key, value }: { key: string; value: any }) => {
-        set((state) => {
-          const updates: Partial<FilterState> = {
-            [key]: value,
-          };
+      setFilter: (key: string, props: any) => {
+        const updates: Record<string, unknown> = {
+          [key]: props,
+        };
 
-          // Update the filters object if the key exists there or has a mapping
-          if (key === "typeValue") {
-            // Map typeValue to typeId in filters
-            updates.filters = {
-              ...state.filters,
-              typeId: value as [number, number] | undefined,
-            };
-          } else if (key in state.filters) {
-            updates.filters = { ...state.filters, [key]: value };
-          }
+        // Handle special mappings
+        if (key === "typeValue") {
+          // Map typeValue to typeId in state
+          updates.typeId = props as [number, number] | undefined;
+        }
 
-          return updates;
-        });
+        set({ ...updates });
       },
       resetFilters: () =>
         set({
-          filters: {
-            name: "",
-            typeId: undefined,
-            chosenStat: undefined,
-            statType: undefined,
-            isStatMax: false,
-            sortBy: "dexId",
-            sortStat: undefined,
-            descending: false,
-            moveSource: "all",
-          },
-          // chosenStat: undefined,
-          // statType: undefined,
-          // isStatMax: false,
-          moveSource: "all",
+          name: "",
+          typeId: undefined,
+          chosenStat: undefined,
+          statType: undefined,
+          isStatMax: false,
+          sortBy: "dexId" as SortBy,
+          sortStat: undefined,
+          descending: false,
+          moveSource: "all" as MoveSource,
           moveValue: null,
           typeValue: undefined,
-          abilityValue: null,
+          abilityId: null,
           nameValue: "",
         }),
 
