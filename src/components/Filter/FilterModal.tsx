@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TypeDropdown from "./FilterParts/TypeDropdown";
+
 import AbilityCombobox from "./FilterParts/AbilityCombobox";
 import MoveFilterGroup from "./FilterParts/MoveFilterGroup";
 import Types from "./FilterParts/Types";

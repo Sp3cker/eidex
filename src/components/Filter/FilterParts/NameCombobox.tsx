@@ -12,10 +12,9 @@ const speciesIDMap: ComboBoxEntry[] = pokemonData
     name: (p as Pokemon).nameKey,
   }));
 
-const setNameValueSelector =
-  (state: any) => (name: string) => {
-    state.setFilter("name", name);
-  };
+const setNameValueSelector = (state: any) => (name: string | null) => {
+  state.setFilter("name", name);
+};
 function NameCombobox() {
   const nameValue = useFilterStore(setNameValueSelector);
   const [selectedEntry, setSelectedEntry] = useState<ComboBoxEntry | null>(
@@ -35,7 +34,10 @@ function NameCombobox() {
     if (entry) {
       setSelectedEntry(entry);
       nameValue(entry.name);
+      return;
     }
+    nameValue(null);
+    setSelectedEntry(null);
   };
 
   return (

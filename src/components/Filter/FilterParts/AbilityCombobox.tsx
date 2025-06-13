@@ -18,8 +18,8 @@ function AbilityCombobox() {
 
   const handleSelect = useCallback((entry: ComboBoxEntry | null) => {
     if (entry) {
-      setAbilityValue("", entry.id);
-    }
+      setAbilityValue("abilityId", entry.id);
+    } else setAbilityValue("abilityId", null);
   }, []);
   return (
     <div className="w-full">

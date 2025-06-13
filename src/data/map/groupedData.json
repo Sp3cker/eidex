@@ -1799,6 +1799,36 @@
       "ITEM_TM_PLAY_ROUGH"
      ],
      "pokemon": []
+    },
+    {
+     "scriptName": "Move Relearners House",
+     "items": [
+      "ITEM_RED_SHARD",
+      "ITEM_BLUE_SHARD",
+      "ITEM_GREEN_SHARD"
+     ],
+     "pokemon": []
+    },
+    {
+     "scriptName": "Move Relearners House",
+     "items": [],
+     "pokemon": [
+      "SPECIES_CHARMANDER"
+     ]
+    },
+    {
+     "scriptName": "Move Relearners House",
+     "items": [],
+     "pokemon": [
+      "SPECIES_SQUIRTLE"
+     ]
+    },
+    {
+     "scriptName": "Move Relearners House",
+     "items": [],
+     "pokemon": [
+      "SPECIES_BULBASAUR"
+     ]
     }
    ],
    "shopItems": [],
@@ -1858,14 +1888,6 @@
    "shopItems": [],
    "trainers": [],
    "pickupItems": [
-    {
-     "coords": [
-      8,
-      3
-     ],
-     "item": "ITEM_TM_TEMPER_FLARE",
-     "type": "object_event"
-    },
     {
      "coords": [
       7,
@@ -2208,14 +2230,6 @@
     },
     {
      "coords": [
-      18,
-      2
-     ],
-     "item": "ITEM_TM_PSYCHIC_NOISE",
-     "type": "object_event"
-    },
-    {
-     "coords": [
       28,
       6
      ],
@@ -2369,14 +2383,6 @@
    "pickupItems": [
     {
      "coords": [
-      23,
-      24
-     ],
-     "item": "ITEM_TM_EARTH_POWER",
-     "type": "object_event"
-    },
-    {
-     "coords": [
       8,
       10
      ],
@@ -2409,6 +2415,13 @@
       "ITEM_SAFETY_GOGGLES"
      ],
      "pokemon": []
+    },
+    {
+     "scriptName": "Event Script",
+     "items": [],
+     "pokemon": [
+      "SPECIES_KLAWF"
+     ]
     }
    ],
    "shopItems": [
@@ -2978,6 +2991,22 @@
      "scriptName": "House2",
      "items": [
       "ITEM_DRAGON_MEMORY",
+      "ITEM_FIGHTING_MEMORY",
+      "ITEM_FLYING_MEMORY",
+      "ITEM_POISON_MEMORY",
+      "ITEM_GROUND_MEMORY",
+      "ITEM_ROCK_MEMORY",
+      "ITEM_BUG_MEMORY",
+      "ITEM_GHOST_MEMORY",
+      "ITEM_STEEL_MEMORY",
+      "ITEM_FIRE_MEMORY",
+      "ITEM_WATER_MEMORY",
+      "ITEM_GRASS_MEMORY",
+      "ITEM_ELECTRIC_MEMORY",
+      "ITEM_PSYCHIC_MEMORY",
+      "ITEM_ICE_MEMORY",
+      "ITEM_DARK_MEMORY",
+      "ITEM_FAIRY_MEMORY",
       "VAR_0x8005"
      ],
      "pokemon": []
@@ -3760,14 +3789,6 @@
    "pickupItems": [
     {
      "coords": [
-      3,
-      39
-     ],
-     "item": "ITEM_TM_IRON_TAIL",
-     "type": "object_event"
-    },
-    {
-     "coords": [
       2,
       14
      ],
@@ -3870,14 +3891,6 @@
       15
      ],
      "item": "ITEM_MEWTWONITE_Y",
-     "type": "object_event"
-    },
-    {
-     "coords": [
-      14,
-      21
-     ],
-     "item": "ITEM_TM_DARK_HOLE",
      "type": "object_event"
     }
    ],
@@ -4663,14 +4676,6 @@
     },
     {
      "coords": [
-      19,
-      40
-     ],
-     "item": "ITEM_TM_SLUDGE_WAVE",
-     "type": "object_event"
-    },
-    {
-     "coords": [
       9,
       8
      ],
@@ -5188,26 +5193,10 @@
    "pickupItems": [
     {
      "coords": [
-      32,
-      25
-     ],
-     "item": "ITEM_TM_SUPERPOWER",
-     "type": "object_event"
-    },
-    {
-     "coords": [
       16,
       22
      ],
      "item": "ITEM_ESCAPE_ROPE",
-     "type": "object_event"
-    },
-    {
-     "coords": [
-      39,
-      4
-     ],
-     "item": "ITEM_TM_WILD_CHARGE",
      "type": "object_event"
     },
     {
@@ -5304,7 +5293,15 @@
    "baseMap": "MAP_OLDALE_TOWN",
    "levelLabel": "Pokemon Center1 F",
    "thisLevelsId": "MAP_OLDALE_TOWN_POKEMON_CENTER_1F",
-   "scriptedGives": [],
+   "scriptedGives": [
+    {
+     "scriptName": "Pokemon Center",
+     "items": [],
+     "pokemon": [
+      "SPECIES_SENTRET"
+     ]
+    }
+   ],
    "shopItems": [],
    "trainers": [],
    "pickupItems": [],
@@ -5341,6 +5338,9 @@
      "scriptName": "House1",
      "items": [
       "ITEM_DOUSE_DRIVE",
+      "ITEM_SHOCK_DRIVE",
+      "ITEM_BURN_DRIVE",
+      "ITEM_CHILL_DRIVE",
       "VAR_0x8005"
      ],
      "pokemon": []
@@ -5395,7 +5395,15 @@
    "baseMap": "MAP_PACIFIDLOG_TOWN",
    "levelLabel": "Pokemon Center1 F",
    "thisLevelsId": "MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_1F",
-   "scriptedGives": [],
+   "scriptedGives": [
+    {
+     "scriptName": "Pokemon Center",
+     "items": [],
+     "pokemon": [
+      "SPECIES_DRATINI"
+     ]
+    }
+   ],
    "shopItems": [],
    "trainers": [],
    "pickupItems": [],
@@ -5926,14 +5934,6 @@
    "pickupItems": [
     {
      "coords": [
-      50,
-      5
-     ],
-     "item": "ITEM_TM_BULLET_SEED",
-     "type": "object_event"
-    },
-    {
-     "coords": [
       64,
       7
      ],
@@ -6101,14 +6101,6 @@
       53
      ],
      "item": "ITEM_POKE_BALL",
-     "type": "object_event"
-    },
-    {
-     "coords": [
-      37,
-      22
-     ],
-     "item": "ITEM_TM_STOMPING_TANTRUM",
      "type": "object_event"
     },
     {
@@ -6950,14 +6942,6 @@
     },
     {
      "coords": [
-      6,
-      38
-     ],
-     "item": "ITEM_TM_VACUUM_WAVE",
-     "type": "object_event"
-    },
-    {
-     "coords": [
       35,
       39
      ],
@@ -7657,22 +7641,6 @@
    "pickupItems": [
     {
      "coords": [
-      33,
-      104
-     ],
-     "item": "ITEM_HM_SURF",
-     "type": "object_event"
-    },
-    {
-     "coords": [
-      12,
-      54
-     ],
-     "item": "ITEM_TM_SANDSTORM",
-     "type": "object_event"
-    },
-    {
-     "coords": [
       3,
       114
      ],
@@ -7932,14 +7900,6 @@
    "pickupItems": [
     {
      "coords": [
-      53,
-      7
-     ],
-     "item": "ITEM_TM_X_SCISSOR",
-     "type": "object_event"
-    },
-    {
-     "coords": [
       79,
       5
      ],
@@ -8131,14 +8091,6 @@
     },
     {
      "coords": [
-      11,
-      37
-     ],
-     "item": "ITEM_TM_SNOWSCAPE",
-     "type": "object_event"
-    },
-    {
-     "coords": [
       31,
       19
      ],
@@ -8299,14 +8251,6 @@
       60
      ],
      "item": "ITEM_SUPER_POTION",
-     "type": "object_event"
-    },
-    {
-     "coords": [
-      18,
-      7
-     ],
-     "item": "ITEM_TM_PHANTOM_FORCE",
      "type": "object_event"
     },
     {
@@ -8754,14 +8698,6 @@
       7
      ],
      "item": "ITEM_HYPER_POTION",
-     "type": "object_event"
-    },
-    {
-     "coords": [
-      9,
-      7
-     ],
-     "item": "ITEM_TM_WATER_PULSE",
      "type": "object_event"
     },
     {
@@ -9300,14 +9236,6 @@
     },
     {
      "coords": [
-      25,
-      63
-     ],
-     "item": "ITEM_TM_PAIN_SPLIT",
-     "type": "object_event"
-    },
-    {
-     "coords": [
       9,
       1
      ],
@@ -9473,14 +9401,6 @@
       10
      ],
      "item": "ITEM_REVIVE",
-     "type": "object_event"
-    },
-    {
-     "coords": [
-      38,
-      13
-     ],
-     "item": "ITEM_TM_RAIN_DANCE",
      "type": "object_event"
     },
     {
@@ -9919,14 +9839,6 @@
       53
      ],
      "item": "ITEM_BLUE_SHARD",
-     "type": "object_event"
-    },
-    {
-     "coords": [
-      37,
-      12
-     ],
-     "item": "ITEM_TM_SUNNY_DAY",
      "type": "object_event"
     }
    ],
@@ -11163,14 +11075,6 @@
       1
      ],
      "item": "ITEM_POKE_BALL",
-     "type": "object_event"
-    },
-    {
-     "coords": [
-      30,
-      2
-     ],
-     "item": "ITEM_TM_ALLURING_VOICE",
      "type": "object_event"
     }
    ],
@@ -12443,6 +12347,22 @@
      "scriptName": "House2",
      "items": [
       "ITEM_DRACO_PLATE",
+      "ITEM_FIST_PLATE",
+      "ITEM_SKY_PLATE",
+      "ITEM_TOXIC_PLATE",
+      "ITEM_EARTH_PLATE",
+      "ITEM_STONE_PLATE",
+      "ITEM_INSECT_PLATE",
+      "ITEM_SPOOKY_PLATE",
+      "ITEM_IRON_PLATE",
+      "ITEM_FLAME_PLATE",
+      "ITEM_SPLASH_PLATE",
+      "ITEM_MEADOW_PLATE",
+      "ITEM_ZAP_PLATE",
+      "ITEM_MIND_PLATE",
+      "ITEM_ICICLE_PLATE",
+      "ITEM_DREAD_PLATE",
+      "ITEM_PIXIE_PLATE",
       "VAR_0x8005"
      ],
      "pokemon": []
@@ -13465,14 +13385,6 @@
     }
    ],
    "pickupItems": [
-    {
-     "coords": [
-      13,
-      8
-     ],
-     "item": "ITEM_TM_SCALE_SHOT",
-     "type": "object_event"
-    },
     {
      "coords": [
       28,

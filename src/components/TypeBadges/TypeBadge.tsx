@@ -1,6 +1,6 @@
-import { getTypeName, getTypeSnapColor } from "../../utils/typeInfo";
-import { typeIcons } from "../../utils/typeIcons";
-import adjustTypeForDevice from "../../utils/adjustType";
+import { getTypeName, getTypeSnapColor } from "@/utils/typeInfo";
+import { typeIcons } from "@/utils/typeIcons";
+import adjustTypeForDevice from "@/utils/adjustType";
 import React from "react";
 
 const makeBackgroundStyle = (typeColor: string, screenWidth: string) =>

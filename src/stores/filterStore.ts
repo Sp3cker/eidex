@@ -41,8 +41,6 @@ export const useFilterStore = create(
         if (key === "typeValue") {
           const curr = get().typeValue; // Current selection (may be undefined)
           const newValue = props; // Get the first value to toggle
-
-          debugger
           // Case 1: No current selection - add the new value
           if (!curr) {
             updates.typeValue = [newValue];

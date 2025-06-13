@@ -16,9 +16,11 @@ function matchesTypeFilter(
   // If it's a tuple, check if Pokemon has both types
   if (Array.isArray(typeId)) {
     const [type1, type2] = typeId;
+    if (type2 === undefined) {
+      return pokemon.types.includes(type1);
+    }
     return pokemon.types.includes(type1) && pokemon.types.includes(type2);
   }
-
   return true;
 }
 

@@ -1,6 +1,6 @@
 import GenericComboBox, { ComboBoxEntry } from "./GenericComboBox";
 import moveData from "@/data/moveData.json";
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import { LuSword } from "react-icons/lu";
 import { Move } from "@/types";
 import { useFilterStore } from "@/stores/filterStore";
@@ -15,12 +15,16 @@ const moveIDMap: ComboBoxEntry[] = Object.values(moveData)
 function MoveCombobox() {
   const moveEntries: ComboBoxEntry[] = useMemo(() => moveIDMap, []);
   const moveValue = useFilterStore((state) => state.moveValue);
-  const setMoveValue = useFilterStore((state) => state.setMoveValue);
-
+  const setFilter = useFilterStore((state) => state.setFilter);
+  const handleChange = useCallback((entry: ComboBoxEntry | null) => {
+    if (entry) {
+      setFilter("moveId", entry ? entry.id : null);
+    } else setFilter("moveId", null);
+  }, []);
   return (
     <GenericComboBox
       entries={moveEntries}
-      onSelect={setMoveValue}
+      onSelect={handleChange}
       value={moveValue}
       placeholder="Pick a move..."
       icon={<LuSword />}

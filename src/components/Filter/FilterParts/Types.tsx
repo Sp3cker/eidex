@@ -1,18 +1,9 @@
-import { CSSProperties, useEffect } from "react";
 import { useSprings, animated as a } from "react-spring";
 import { useGesture } from "@use-gesture/react";
 import { useFilterStore } from "@/stores/filterStore";
-import { getTypeName, validTypes } from "@/utils/typeInfo";
-import { TypeBadge } from "@/components/TypeBadges/TypeBadge";
-
-// const StyledMenuItem = a(styled.div`
-//   display: flex;
-//   align-items: center;
-//   padding: 0.25rem 0.5rem;
-//   transform-origin: left;
-//   cursor: pointer;
-//   border-radius: 8px;
-// `);
+import { getTypeColor, getTypeName, validTypes } from "@/utils/typeInfo";
+import adjustTypeForDevice from "@/utils/adjustType";
+import { useCallback } from "react";
 
 const normal = {
   x: 0,
@@ -20,7 +11,6 @@ const normal = {
   backgroundColor: "var(--color-gray-500)",
   config: {
     tension: 300,
-
   },
 };
 const selectedStlyes = {
@@ -81,23 +71,16 @@ const Types = () => {
     },
 
     onClick: ({ args: [index] }) => {
-      debugger;
       handleSelect(index);
     },
   });
-  const handleSelect = (index: number) => {
+  const handleSelect = useCallback((index: number) => {
     const selectedTypeId = validTypes[index];
     setFilter("typeValue", selectedTypeId);
-  };
-
-  // useEffect(() => {
-  //   if (!selectedFilter) {
-  //     api.start(() => normal);
-  //   }
-  // }, [selectedFilter, api]);
+  }, []);
 
   return (
-    <div className="grid grid-cols-4 grid-rows-4 w-full items-center justify-center gap-2 px-2 py-2 text-neutral-50">
+    <div className="grid w-full grid-cols-4 grid-rows-4 items-center justify-center gap-2 px-2 py-2 text-neutral-50">
       {validTypes.map((typeId, index) => (
         <a.div
           key={typeId}
@@ -109,7 +92,13 @@ const Types = () => {
           className="cursor-pointer rounded-lg border-2 border-gray-300 p-2 hover:border-blue-400"
         >
           {/* Your type display content here */}
-          <TypeBadge typeId={typeId} screenWidth="sm"/>
+          <p
+            style={{}}
+            className={`font-pkmnem font-bold tracking-wider text-[${getTypeColor(typeId)}]`}
+          >
+            {adjustTypeForDevice(getTypeName(typeId), "sm")}
+          </p>
+          {/* <TypeBadge typeId={typeId} screenWidth="sm" /> */}
         </a.div>
       ))}
     </div>

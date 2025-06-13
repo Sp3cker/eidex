@@ -16,11 +16,14 @@ const paragraphs = (index: number, springAnim: any) => {
       the &quot;official&quot; map or site or anything.{" "}
     </animated.p>,
     <animated.p style={springAnim} key="par3">
-      In fact, there&#39;s no &quot;official&quot; site – as of this writing of
-      June 2025, anyone claiming to be the official site is{" "}
-      <strong>lying</strong>.
+      The only official site is{" "}
+      <a href="https://emeraldimperium.info" className="underline hover:text-blue-200">
+        emeraldimperium.info
+      </a>
+      .
     </animated.p>,
     <animated.p style={springAnim} key="par4">
+      Anyone else claiming to be the official site is <strong>lying</strong>.
       They&#39;re trying to make money on ads and as a result, give fans like us
       bad names!
     </animated.p>,
@@ -59,7 +62,7 @@ const paragraphs = (index: number, springAnim: any) => {
           href="https://www.deviantart.com/jaime07/art/Hoenn-Map-HD-464622982"
           className="underline hover:text-blue-200"
         >
-          Jamie07's DeviantArt
+          Jamie07&#39;s DeviantArt
         </a>
       </p>
     </animated.div>,

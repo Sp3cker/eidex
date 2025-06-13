@@ -1,6 +1,6 @@
 import NameCombobox from "./FilterParts/NameCombobox";
 import FilterModal from "./FilterModal";
-import CurrentFilters from "./CurrentFilters";
+
 
 function FilterBar() {
 
@@ -10,9 +10,7 @@ function FilterBar() {
         <NameCombobox  />
         <FilterModal />
       </div>
-      <div className="px-3">
-        <CurrentFilters />
-      </div>
+  
     </div>
   );
 }

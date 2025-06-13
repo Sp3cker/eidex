@@ -1,11 +1,19 @@
 import { useFilterStore } from "@/stores/filterStore";
-import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react';
-import { MdOutlineKeyboardArrowDown} from "react-icons/md";
+import {
+  Listbox,
+  ListboxButton,
+  ListboxOption,
+  ListboxOptions,
+} from "@headlessui/react";
+import { useCallback } from "react";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 function MoveSourceDropdown() {
-  const moveSource = useFilterStore(state => state.moveSource);
-  const setMoveSource = useFilterStore(state => state.setMoveSource);
-
+  const moveSource = useFilterStore((state) => state.moveSource);
+  const setMoveSource = useFilterStore((state) => state.setFilter);
+  const handleChange = useCallback((e: string) => {
+    setMoveSource("moveSource", e);
+  }, []);
   const options = [
     { id: "all", label: "All" },
     { id: "levelup", label: "Lvl" },
@@ -14,11 +22,11 @@ function MoveSourceDropdown() {
   ];
 
   return (
-    <Listbox value={moveSource} onChange={setMoveSource}>
+    <Listbox value={moveSource} onChange={handleChange}>
       <div className="relative">
-        <ListboxButton className="flex h-9 w-12 pl-2 items-center justify-between rounded-md bg-neutral-800 text-sm text-white">
-          {options.find(opt => opt.id === moveSource)?.label || "All"}
-          <MdOutlineKeyboardArrowDown/>
+        <ListboxButton className="flex h-9 w-12 items-center justify-between rounded-md bg-neutral-800 pl-2 text-sm text-white">
+          {options.find((opt) => opt.id === moveSource)?.label || "All"}
+          <MdOutlineKeyboardArrowDown />
         </ListboxButton>
         <ListboxOptions
           anchor="bottom start"
