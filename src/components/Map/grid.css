@@ -29,7 +29,7 @@
   grid-area: 10 / 3 / 13 / 7;
 }
 @media (max-width: 768px) {
-  .parent {
+ .parent {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(12, 1fr);
   }
@@ -37,7 +37,7 @@
     grid-area: 1 / 1 / 13 / 13;
   }
   .search-bar-grid {
-    grid-area: 1 / 1 / 1 / 6;
+    grid-area: 1 / 1 / 2 / 6;
   }
   .map-place-info-grid {
     grid-area: 1 / 8 / 6 / 13;

@@ -119,7 +119,7 @@ const ImageViewer = () => {
                         className="rendering-pixelated"
                         style={getItemSpriteStyle(item.id, 16) || {}}
                       />
-                      <span className="item-name">{item.name || "Item"}</span>
+                      <p className="item-name pkmnem-face-shadow">{item.name || "Item"}</p>
                     </div>
                     {/* Pointer triangle */}
                     <div className="pickup-item-arrow" />
