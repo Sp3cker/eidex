@@ -86,17 +86,17 @@ const Types = () => {
           key={typeId}
           {...bind(index)}
           style={{
+            borderColor: getTypeColor(typeId)[0],
             backgroundColor: springs[index].backgroundColor,
             transform: springs[index].x.to((x) => `translateX(${x}rem)`),
           }}
-          className="cursor-pointer rounded-lg border-2 border-gray-300 p-2 hover:border-blue-400"
+          className="cursor-pointer rounded-lg border-2 p-1 text-center"
         >
           {/* Your type display content here */}
           <p
-            style={{}}
             className={`font-pkmnem font-bold tracking-wider text-[${getTypeColor(typeId)}]`}
           >
-            {adjustTypeForDevice(getTypeName(typeId), "sm")}
+            {adjustTypeForDevice(getTypeName(typeId), "md")}
           </p>
           {/* <TypeBadge typeId={typeId} screenWidth="sm" /> */}
         </a.div>

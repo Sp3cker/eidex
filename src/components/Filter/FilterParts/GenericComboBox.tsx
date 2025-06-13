@@ -85,7 +85,7 @@ function GenericComboBox({
           displayValue={(entry: ComboBoxEntry) => entry?.name}
           onChange={(event) => setQuery(event.target.value)}
           placeholder={placeholder || "Select an entry..."}
-          className="h-9 w-full rounded-md border-0 bg-neutral-800 pl-8 text-sm text-white placeholder-gray-500 focus:ring-1 focus:ring-blue-400"
+          className="h-9 font-pkmnem text-xl w-full rounded-md border-0 bg-neutral-800 pl-8 text-sm text-white placeholder-gray-500 focus:ring-1 focus:ring-blue-400"
         />
         <span
           className="ml-2 inline-flex cursor-pointer select-none items-center text-gray-100 transition-colors hover:text-red-400 active:text-fuchsia-600"
@@ -99,7 +99,7 @@ function GenericComboBox({
         </span>
         <ComboboxOptions
           anchor="bottom start"
-          className="w-(--input-width) no-scrollbar rounded-sm border border-gray-600 bg-neutral-800 text-white shadow-md [--anchor-gap:4px]"
+          className="w-(--input-width) font-pkmnem text-xl kerning-wide no-scrollbar rounded-sm border border-gray-600 bg-gray-800 text-white shadow-md [--anchor-gap:4px]"
         >
           {({ option: entry }) => (
             <ComboboxOption
