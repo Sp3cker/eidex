@@ -49,7 +49,7 @@ const putIdOnEncounter: (
           );
           return;
         }
-        specieIndex = pokemon[monInJson].dexId;
+        specieIndex = pokemon[monInJson].speciesId;
       }
     }
     return (enc[index].index = specieIndex);
@@ -103,7 +103,7 @@ const getSelectedMapInfo = (id: string, levelId: string) => {
      */
     const monsNameKeys = new Map<string, number>([]);
     pokemon.forEach((p) => {
-      monsNameKeys.set(p.nameKey.toLowerCase().replace(/-/g, "_"), p.dexId);
+      monsNameKeys.set(p.nameKey.toLowerCase().replace(/-/g, "_"), p.speciesId);
       // monsNameKeys.set(p.speciesName.replace("-", "_").toLowerCase(), p.dexId);
     }); //nameKey cause it probly matches encounter Data
     if (targetMapEncounters && targetMapEncounters.land_mons) {
@@ -134,18 +134,25 @@ const getSelectedMapInfo = (id: string, levelId: string) => {
  * @param level
  * @returns
  */
-const getSelectedLevel = (map: string, level: number) => {
-  const targetMap = getMap(map);
+const getSelectedLevel = ({
+  baseMapName,
+  levelIndex,
+}: {
+  baseMapName: string;
+  levelIndex: number;
+}) => {
+  const targetMap = getMap(baseMapName);
   if (targetMap === undefined) {
-    console.error("Error selecting map level %s, %s", level, map);
+    console.error("Error selecting map level %s, %s",   levelIndex,
+, baseMapName);
     return;
   }
 
   const { levels, mapBaseName } = targetMap;
 
-  const targetLevel = levels[level]; // Use ID to get map information from Encounters
+  const targetLevel = levels[  levelIndex]; // Use ID to get map information from Encounters
   if (!targetLevel) {
-    throw new Error(`Error selecting map level ${level}`);
+    throw new Error(`Error selecting map level ${levelIndex}`);
   }
   const numOfLevels = Encounters[mapBaseName]?.length || 0;
   const thisLevelEncounter = getSelectedMapInfo(

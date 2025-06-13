@@ -5,6 +5,12 @@ import { getSelectedLevel } from "./setSelectedMap";
 import { MapStore } from "./types";
 import { subscribeWithSelector } from "zustand/middleware";
 import { updateMapHelmet } from "./helmetUpdater";
+import {
+  initializeLevelIdLookup,
+  levelIdToLocationMap,
+} from "./levelIdtoLocationMap";
+
+initializeLevelIdLookup();
 
 const UnderscoreRegex = new RegExp(/^[^_]*_/);
 
@@ -42,7 +48,7 @@ export const useMapStore = create<MapStore>()(
         set({ ...initialState });
       },
       setSelectedMap: (map: string) => {
-        const targetLevel = getSelectedLevel(map, 0);
+        const targetLevel = getSelectedLevel({ baseMap: map, level: 0 });
         if (targetLevel === undefined) {
           console.error("Error selecting map %s", map);
           return;
@@ -64,20 +70,23 @@ export const useMapStore = create<MapStore>()(
           selectedLevelId: targetLevel.selectedLevelId,
         });
       },
-      setSelectedMapLevel: (level: number) => {
-        const currMap = get().selectedMap;
-        if (!currMap) {
+      setSelectedMapLevel: (levelId: string) => {
+        const baseMapAndLevelIndex = levelIdToLocationMap.get(levelId);
+        if (!baseMapAndLevelIndex) {
           console.error("No map selected");
           return;
         }
-        const targetMap = getSelectedLevel(currMap, level);
+        const targetMap = getSelectedLevel(baseMapAndLevelIndex);
         if (targetMap === undefined) {
-          console.error("Error selecting map level %s, %s", level, currMap);
+          console.error(
+            "Error selecting map level %s, %s",
+            baseMapAndLevelIndex.baseMapName,
+          );
           return;
         }
 
         set({
-          selectedMapLevel: level,
+          selectedMapLevel: baseMapAndLevelIndex.levelIndex,
           selectedMapsLevels: targetMap.selectedMapsLevels,
           selectedLevelLabel: targetMap.mapLabel,
           selectedLevelLandMons: targetMap.landEncounters,

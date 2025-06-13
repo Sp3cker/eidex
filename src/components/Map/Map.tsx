@@ -1,6 +1,5 @@
 import "./map.css";
 import { ErrorBoundary } from "react-error-boundary";
-import Search from "./Search";
 import NewMap from "./ReactSvg";
 import Dexnav from "./ItemsBox";
 import MapPlaceInfo from "./MapPlaceInfo";
@@ -10,6 +9,7 @@ import "./grid.css";
 import useMapStore from "@/stores/useMapStore";
 import { lazy, Suspense, useLayoutEffect } from "react";
 import Roamers from "./Roamers";
+import SearchContainer from "./Search/SearchContainer";
 document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
 const ImageViewer = lazy(() => import("./ImageViewer"));
@@ -28,7 +28,7 @@ const Map = () => {
       <MapContainer>
         <NewMap />
       </MapContainer>
-      <Search />
+      <SearchContainer />
       <Selecta />
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <MapPlaceInfo />

@@ -126,7 +126,7 @@ const Search = () => {
   }, []);
 
   return (
-    <div className="content-visible cool-font search-bar-grid relative w-full">
+    <>
       <ErrorBanner show={showError} />
       <input
         value={searchTerm}
@@ -157,7 +157,7 @@ const Search = () => {
           ))}
       </ul>
       <SearchSelecta maps={itemMaps} />
-    </div>
+    </>
   );
 };
 
