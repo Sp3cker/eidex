@@ -21,9 +21,7 @@ const MapPlaceInfo = () => {
 
   useEffect(() => {
     if (show) {
-      // const toSize = screenWidth === "sm" ? 150 : 200;
       api.start({
-        // delay: (key) => (key === "opacity" ? 0 : 300),
         config: { mass: 0.6, damping: 0.2 },
         opacity: 1,
         translate: 0, // Ensure it doesn't go too far left
@@ -67,7 +65,7 @@ const MapPlaceInfo = () => {
       >
         <button
           title="land"
-          className={`tab-label w-[36px] text-lg font-bold md:text-xl ${selectedTab === "land" && "land-tab"}`}
+          className={`tab-label w-[2rem] text-lg font-bold md:text-xl ${selectedTab === "land" && "land-tab"}`}
           onClick={handleClick}
           role="tab"
           aria-selected={selectedTab === "land"}
@@ -80,7 +78,7 @@ const MapPlaceInfo = () => {
         </button>
         <button
           title="water"
-          className={`tab-label w-[44px] text-lg font-bold md:text-xl ${selectedTab === "water" && "water-tab"}`}
+          className={`tab-label w-[2rem] text-lg font-bold ${selectedTab === "water" && "water-tab"}`}
           onClick={handleClick}
           role="tab"
           aria-selected={selectedTab === "water"}
@@ -93,7 +91,7 @@ const MapPlaceInfo = () => {
         </button>
         <button
           title="fishing"
-          className={`tab-label w-[46px] text-lg font-bold md:text-xl ${selectedTab === "fishing" && "fishing-tab"}`}
+          className={`tab-label w-[3rem] text-lg font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
           onClick={handleClick}
           role="tab"
           aria-selected={selectedTab === "fishing"}

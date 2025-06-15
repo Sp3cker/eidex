@@ -7,6 +7,10 @@ vi.mock("@/utils/formatMapString", () => ({
   formatMapString: vi.fn((str: string) => {
     // Simple mock implementation that removes MAP_ and formats names
     return str.replace("MAP_", "").toLowerCase().replace(/^\w/, c => c.toUpperCase());
+  }),
+  formatSpeciesString: vi.fn((str: string) => {
+    // Mock implementation for species string formatting
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
   })
 }));
 

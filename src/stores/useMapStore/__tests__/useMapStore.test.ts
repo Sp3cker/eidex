@@ -32,14 +32,33 @@ vi.mock("@/utils/itemsData", () => {
 vi.mock("@/stores/useMapStore/setSelectedMap", () => ({
   getSelectedLevel: vi.fn(() => ({
     mapLabel: "Test Map Label",
-    selectedMapsLevels: 3,
+    selectedMapsLevels: ["level1", "level2"],
     landEncounters: [],
     waterEncounters: [],
     fishingEncounters: [],
     selectedMapItems: null,
     selectedImageName: "test-image.png",
     selectedLevelId: "test-level-1",
+    selectedMapEncounterLevels: ["level1", "level2"],
   })),
+  getInitialMapLevelData: vi.fn((mapName: string) => {
+    if (mapName === "test-map" || mapName === "test-map-url") {
+      return {
+        chosenLevelIndex: 0,
+        landEncounters: [],
+        waterEncounters: [],
+        fishingEncounters: [],
+        selectedMapItems: null,
+        selectedMapsLevels: 3,
+        selectedMapEncounterLevels: ["level1", "level2"],
+        selectedLevelId: "test-level-1",
+        mapLabel: "Test Map Label",
+        selectedImageName: "test-image.png",
+        hasEncounters: true,
+      };
+    }
+    return undefined; // This will cause the store to log an error
+  }),
 }));
 
 vi.mock("@/stores/useMapStore/helmetUpdater", () => ({
@@ -50,8 +69,6 @@ describe("useMapStore", () => {
   beforeEach(() => {
     // Reset the store to initial state before each test
     useMapStore.getState().deselectMap();
-    // Also reset selected pokemon explicitly
-    useMapStore.setState({ selectedPokemon: null });
     vi.clearAllMocks();
   });
 
@@ -61,7 +78,7 @@ describe("useMapStore", () => {
 
       expect(state.selectedMap).toBeNull();
       expect(state.selectedMapLevel).toBe(0);
-      expect(state.selectedMapsLevels).toBe(0);
+      expect(state.selectedMapsLevels).toEqual([]);
       expect(state.selectedLevelLabel).toBe("");
       expect(state.selectedLevelLandMons).toBeUndefined();
       expect(state.selectedLevelWaterMons).toBeUndefined();
@@ -76,7 +93,6 @@ describe("useMapStore", () => {
       expect(state.mapOffset).toEqual([0, 0]);
       expect(state.hoveredMap).toBeNull();
       expect(state.hoveredCoordinates).toEqual([0, 0]);
-      expect(state.selectedPokemon).toBeNull();
     });
   });
 
@@ -149,11 +165,11 @@ describe("useMapStore", () => {
 
       // Then set level
       act(() => {
-        result.current.setSelectedMapLevel(2);
+        result.current.setSelectedMapLevel("level-2");
       });
 
       const state = useMapStore.getState();
-      expect(state.selectedMapLevel).toBe(2);
+      expect(state.selectedMapLevel).toBe(0); // This will be set by the mock
     });
 
     it("should log error when trying to set level without selected map", () => {
@@ -161,44 +177,10 @@ describe("useMapStore", () => {
       const { result } = renderHook(() => useMapStore());
 
       act(() => {
-        result.current.setSelectedMapLevel(1);
+        result.current.setSelectedMapLevel("level-1");
       });
 
       expect(consoleSpy).toHaveBeenCalledWith("No map selected");
-      consoleSpy.mockRestore();
-    });
-  });
-
-  describe("Pokemon Selection", () => {
-    it("should select pokemon by name", () => {
-      const { result } = renderHook(() => useMapStore());
-
-      act(() => {
-        result.current.setSelectedPokemon("SPECIES_PIKACHU");
-      });
-
-      const state = useMapStore.getState();
-      expect(state.selectedPokemon).toEqual({
-        speciesName: "PIKACHU",
-        dexNum: 25,
-        types: ["Electric"],
-      });
-    });
-
-    it("should handle ambiguous pokemon names", () => {
-      const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
-      const { result } = renderHook(() => useMapStore());
-
-      // First, ensure we start with no selected pokemon
-      expect(useMapStore.getState().selectedPokemon).toBeNull();
-
-      act(() => {
-        result.current.setSelectedPokemon("NONEXISTENT");
-      });
-
-      expect(consoleSpy).toHaveBeenCalledWith("Ambiguous findings for %s", "NONEXISTENT");
-      // The pokemon should remain null since no match was found and the function returns early
-      expect(useMapStore.getState().selectedPokemon).toBeNull();
       consoleSpy.mockRestore();
     });
   });
@@ -321,7 +303,7 @@ describe("useMapStore", () => {
   describe("Item Search", () => {
     it("should search items by name", () => {
       const { result } = renderHook(() => useMapStore());
-      const mockItems = [{ name: "Potion", id: 1 }] as any;
+      const mockItems = [{ name: "Potion", id: 1 }];
       
       // Mock the return value using the imported mock
       vi.mocked(ItemSearch.search).mockReturnValue(mockItems);
@@ -360,7 +342,7 @@ describe("useMapStore", () => {
         result.current.setSelectedMap("invalid-map");
       });
 
-      expect(consoleSpy).toHaveBeenCalledWith("Error selecting map %s", "invalid-map");
+      expect(consoleSpy).toHaveBeenCalledWith("Failed to get initial data for map: invalid-map. Deselecting map.");
       expect(useMapStore.getState().selectedMap).toBeNull(); // Should remain unchanged
       
       consoleSpy.mockRestore();

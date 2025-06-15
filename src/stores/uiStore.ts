@@ -33,7 +33,7 @@ export const useUIStore = create<UIState>()(
         toggleShiny: () => set((state) => ({ isShiny: !state.isShiny })),
         setSelectedPokemon: (pokemon) => set({ selectedPokemon: pokemon }),
         setSelectedPokemonByIndex: (index: number) => {
-          const pokemon = pokemons.find((p) => p.dexId === index);
+          const pokemon = pokemons.find((p) => p.speciesId === index);
           if (pokemon) {
             set({ selectedPokemon: pokemon });
           }

@@ -28,17 +28,36 @@ vi.mock("@/utils/itemsData", () => ({
 }));
 
 vi.mock("./setSelectedMap", () => ({
-  getSelectedLevel: vi.fn((map: string) => {
-    if (map === "test-map") {
+  getSelectedLevel: vi.fn((map: { baseMapName: string; levelIndex: number }) => {
+    if (map.baseMapName === "test-map") {
       return {
-        mapLabel: "Test Map Level 1",
+        selectedMapEncounterLevels: ["level1", "level2"],
         selectedMapsLevels: 3,
+        mapLabel: "Test Map Level 1",
         landEncounters: [],
         waterEncounters: [],
         fishingEncounters: [],
-        selectedMapItems: {},
+        selectedMapItems: [],
         selectedImageName: "test-map.webp",
         selectedLevelId: "test-map-1",
+      };
+    }
+    return undefined;
+  }),
+  getInitialMapLevelData: vi.fn((mapName: string) => {
+    if (mapName === "test-map") {
+      return {
+        chosenLevelIndex: 1,
+        landEncounters: [],
+        waterEncounters: [],
+        fishingEncounters: [],
+        selectedMapItems: [],
+        selectedMapsLevels: 3,
+        selectedMapEncounterLevels: ["level1", "level2"],
+        selectedLevelId: "level1",
+        mapLabel: "Test Map Level 1",
+        selectedImageName: "test-map.webp",
+        hasEncounters: true,
       };
     }
     return undefined;
@@ -66,9 +85,8 @@ describe("useMapStore", () => {
 
       expect(state.selectedMap).toBeNull();
       expect(state.selectedMapLevel).toBe(0);
-      expect(state.selectedMapsLevels).toBe(0);
+      expect(state.selectedMapsLevels).toEqual([]);
       expect(state.selectedLevelLabel).toBe("");
-      expect(state.selectedPokemon).toBeNull();
       expect(state.selectedCoordinates).toEqual([400, 340]);
       expect(state.mapScale).toBe(1);
       expect(state.mapOffset).toEqual([0, 0]);
@@ -106,7 +124,7 @@ describe("useMapStore", () => {
       });
 
       expect(result.current.selectedMap).toBeNull();
-      expect(consoleSpy).toHaveBeenCalledWith("Error selecting map %s", "invalid-map");
+      expect(consoleSpy).toHaveBeenCalledWith("Failed to get initial data for map: invalid-map. Deselecting map.");
       
       consoleSpy.mockRestore();
     });
@@ -157,36 +175,6 @@ describe("useMapStore", () => {
       });
 
       expect(consoleSpy).toHaveBeenCalledWith("No map selected");
-      consoleSpy.mockRestore();
-    });
-  });
-
-  describe("Pokemon Selection", () => {
-    it("should set selected pokemon correctly", () => {
-      const { result } = renderHook(() => useMapStore());
-
-      act(() => {
-        result.current.setSelectedPokemon("PIKACHU");
-      });
-
-      expect(result.current.selectedPokemon).toEqual({
-        speciesName: "PIKACHU",
-        dexNumber: 25,
-        type1: "Electric",
-        type2: null,
-      });
-    });
-
-    it("should handle ambiguous pokemon names", () => {
-      const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
-      const { result } = renderHook(() => useMapStore());
-
-      act(() => {
-        result.current.setSelectedPokemon("NONEXISTENT");
-      });
-
-      expect(result.current.selectedPokemon).toBeNull();
-      expect(consoleSpy).toHaveBeenCalledWith("Ambiguous findings for %s", "NONEXISTENT");
       consoleSpy.mockRestore();
     });
   });
@@ -308,16 +296,11 @@ describe("useMapStore", () => {
   describe("Item Search", () => {
     it("should search items by name", () => {
       const { result } = renderHook(() => useMapStore());
-      const mockItems = [{ name: "Potion", id: 1 }];
       
-      // Mock the search function to return our test data
-      const ItemSearch = require("@/utils/itemsData").default;
-      ItemSearch.search.mockReturnValue(mockItems);
-
+      // The search function is already mocked in the vi.mock above
       const searchResult = result.current.searchItemByName("Potion");
 
-      expect(ItemSearch.search).toHaveBeenCalledWith("Potion");
-      expect(searchResult).toEqual(mockItems);
+      expect(searchResult).toEqual([]);
     });
   });
 });

@@ -56,7 +56,7 @@ describe("BaseListContent", () => {
     
     render(<BaseListContent items={items} className="custom-class test-bg" />);
     
-    const itemElement = screen.getByText("Item 1").closest("div");
+    const itemElement = screen.getByText("Item 1").closest(".cool-font");
     expect(itemElement).toHaveClass("custom-class", "test-bg");
   });
 
@@ -79,7 +79,9 @@ describe("BaseListContent", () => {
     render(<BaseListContent items={items} />);
     
     expect(screen.getByText("Item without description")).toBeInTheDocument();
-    // Should not render empty description
-    expect(screen.queryByText("")).not.toBeInTheDocument();
+    // Should not render description paragraph when description is not provided
+    const item = screen.getByText("Item without description").closest(".cool-font");
+    const descriptionParagraph = item?.querySelector("p.font-pkmnem");
+    expect(descriptionParagraph).not.toBeInTheDocument();
   });
 });

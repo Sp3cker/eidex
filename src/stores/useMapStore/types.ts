@@ -1,5 +1,4 @@
 import { ItemsByMap } from "@/utils/itemsData";
-import { Pokemon } from "@/types";
 import { Item } from "@/data/map";
 type EncounterMons = {
   min_level: number;
@@ -21,15 +20,17 @@ type Level = {
   levelLabel?: string;
 };
 type MapStore = {
-  selectedMap: string | null;
+  selectedMap: string | null; // Map Base Name
+  selectedMapEncounterLevels: string[]; // Selecta and EncountersList
+  selectedEncounterLevel: string | null; // Selecta and EncountersList
   selectedLevelLandMons: EncounterMons[] | undefined;
   selectedLevelWaterMons: EncounterMons[] | undefined;
   selectedLevelFishingMons: EncounterMons[] | undefined;
-  selectedPokemon: Pokemon | null;
+
   selectedCoordinates: number[];
   storedCoordinates: Map<string, number[]>;
   selectedMapLevel: number;
-  selectedMapsLevels: number;
+  selectedMapsLevels: string[];
   selectedLevelLabel: string;
   selectedMapItems: ItemsByMap | null;
   mapScale: number;
@@ -45,7 +46,6 @@ type MapStore = {
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
-  setSelectedPokemon: (name_no_prefix: string) => void;
   setSelectedCoordinates: (coords: number[]) => void;
   setMapScale: (n: number) => void;
   setMapOffset: (offset: number[]) => void;
@@ -53,12 +53,13 @@ type MapStore = {
 
   setHoveredCoordinates: (coords: number[]) => void;
   searchItemByName: (name: string) => Item[];
-  setSelectedMapLevel: (level: number) => void;
+  setSelectedMapLevel: (level: string) => void;
   setStoredCoordinates: (mapCoords: Map<string, number[]>) => void;
   setViewingImage: (viewing: boolean) => void;
   setSelectedRoamer: (nameKey: string) => void;
   deselectRoamer: () => void;
   setDragging: (dragging: boolean) => void;
+  setSelectedEncounterLevel: (levelId: string) => void;
 };
 
 export type { EncounterMons, EncounterMonsFromJSON, MapStore, Level };

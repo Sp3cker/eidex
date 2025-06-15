@@ -1,5 +1,5 @@
 import encounters from "./encounterGroup.json";
-import levels from "./groupedData.json";
+import levels from "./levels.json";
 import items from "./items.json";
 
 export type EncounterGroup = {

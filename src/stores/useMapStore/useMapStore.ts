@@ -1,7 +1,6 @@
 import { createWithEqualityFn as create } from "zustand/traditional";
-import { pokemonData as pokemon } from "@/data/pokemon";
 import ItemSearch from "@/utils/itemsData";
-import { getSelectedLevel } from "./setSelectedMap";
+import { getInitialMapLevelData, getSelectedLevel } from "./setSelectedMap";
 import { MapStore } from "./types";
 import { subscribeWithSelector } from "zustand/middleware";
 import { updateMapHelmet } from "./helmetUpdater";
@@ -12,7 +11,6 @@ import {
 
 initializeLevelIdLookup();
 
-const UnderscoreRegex = new RegExp(/^[^_]*_/);
 
 export const useMapStore = create<MapStore>()(
   subscribeWithSelector((set, get) => {
@@ -20,7 +18,9 @@ export const useMapStore = create<MapStore>()(
       currentRoute: window.location.href,
       selectedMap: null,
       selectedMapLevel: 0,
-      selectedMapsLevels: 0,
+      selectedMapsLevels: [],
+      selectedMapEncounterLevels: [],
+      selectedEncounterLevel: null,
       selectedLevelLabel: "", // Added missing property
       selectedLevelLandMons: undefined,
       selectedLevelWaterMons: undefined,
@@ -47,30 +47,97 @@ export const useMapStore = create<MapStore>()(
         window.location.hash = "";
         set({ ...initialState });
       },
-      setSelectedMap: (map: string) => {
-        const targetLevel = getSelectedLevel({ baseMap: map, level: 0 });
-        if (targetLevel === undefined) {
-          console.error("Error selecting map %s", map);
+      setSelectedMap: (mapName: string) => {
+        const currentRoute = window.location.href;
+        if (!currentRoute.includes(mapName)) {
+          window.history.pushState({}, "", `/map/${mapName}`);
+        }
+        // updateMapHelmet(mapName);
+
+        const initialMapData = getInitialMapLevelData(mapName);
+
+        if (!initialMapData) {
+          console.error(
+            `Failed to get initial data for map: ${mapName}. Deselecting map.`,
+          );
+          get().deselectMap(); // Call deselectMap if no data could be resolved
           return;
         }
-        const storedCoords = get().storedCoordinates.get(map);
-        window.history.pushState({}, "", `/map/${map}`);
+
+        const {
+          chosenLevelIndex,
+          landEncounters,
+          waterEncounters,
+          fishingEncounters,
+          selectedMapItems,
+          selectedMapsLevels,
+          selectedMapEncounterLevels,
+          selectedLevelId,
+          mapLabel, // This label is for the chosenLevelIndex
+          selectedImageName,
+          // hasEncounters, // Can be used if needed, but mapLabel implies it
+        } = initialMapData;
+
+        const storedCoords = get().storedCoordinates.get(mapName) || [400, 340];
 
         set({
-          selectedMap: map,
-          selectedMapLevel: 0,
-          selectedLevelLabel: targetLevel.mapLabel,
-          selectedMapsLevels: targetLevel.selectedMapsLevels,
-          selectedLevelLandMons: targetLevel.landEncounters,
-          selectedLevelWaterMons: targetLevel.waterEncounters,
-          selectedLevelFishingMons: targetLevel.fishingEncounters,
-          selectedMapItems: targetLevel.selectedMapItems,
-          selectedCoordinates: storedCoords || [400, 340],
-          selectedImageName: targetLevel.selectedImageName,
-          selectedLevelId: targetLevel.selectedLevelId,
+          selectedMap: mapName,
+          selectedMapLevel: chosenLevelIndex, // Use the index returned by the utility
+          selectedLevelLandMons: landEncounters,
+          selectedLevelWaterMons: waterEncounters,
+          selectedLevelFishingMons: fishingEncounters,
+          selectedMapItems,
+          selectedMapsLevels,
+          selectedMapEncounterLevels,
+          selectedLevelId,
+          selectedLevelLabel: mapLabel,
+          selectedImageName,
+          selectedEncounterLevel: selectedLevelId, // Sync Selecta with the chosen level
+          selectedCoordinates: storedCoords,
+          selectedRoamer: null,
+          viewingImage: false,
         });
       },
       setSelectedMapLevel: (levelId: string) => {
+        const baseMapAndLevelIndex = levelIdToLocationMap.get(levelId);
+
+        if (!baseMapAndLevelIndex) {
+          console.error("No map selected");
+          return;
+        }
+        const targetMap = getSelectedLevel(baseMapAndLevelIndex);
+        if (targetMap === undefined) {
+          console.error(
+            "Error selecting map level %s, %s",
+            baseMapAndLevelIndex.baseMapName,
+          );
+          return;
+        }
+        const storedCoords = get().storedCoordinates.get(
+          baseMapAndLevelIndex.baseMapName,
+        );
+        window.history.pushState(
+          {},
+          "",
+          `/map/${baseMapAndLevelIndex.baseMapName}`,
+        );
+
+        set({
+          selectedMap: baseMapAndLevelIndex.baseMapName,
+          selectedCoordinates: storedCoords,
+          selectedMapEncounterLevels: targetMap.selectedMapEncounterLevels,
+          selectedMapLevel: baseMapAndLevelIndex.levelIndex,
+          selectedMapsLevels: targetMap.selectedMapsLevels,
+          selectedLevelLabel: targetMap.mapLabel,
+          selectedLevelLandMons: targetMap.landEncounters,
+          selectedLevelWaterMons: targetMap.waterEncounters,
+          selectedLevelFishingMons: targetMap.fishingEncounters,
+          selectedMapItems: targetMap.selectedMapItems,
+          selectedImageName: targetMap.selectedImageName,
+          selectedLevelId: targetMap.selectedLevelId,
+        });
+      },
+      setSelectedEncounterLevel: (levelId: string) => {
         const baseMapAndLevelIndex = levelIdToLocationMap.get(levelId);
         if (!baseMapAndLevelIndex) {
           console.error("No map selected");
@@ -84,31 +151,14 @@ export const useMapStore = create<MapStore>()(
           );
           return;
         }
-
         set({
-          selectedMapLevel: baseMapAndLevelIndex.levelIndex,
-          selectedMapsLevels: targetMap.selectedMapsLevels,
+          selectedEncounterLevel: levelId,
           selectedLevelLabel: targetMap.mapLabel,
           selectedLevelLandMons: targetMap.landEncounters,
           selectedLevelWaterMons: targetMap.waterEncounters,
           selectedLevelFishingMons: targetMap.fishingEncounters,
-          selectedMapItems: targetMap.selectedMapItems,
-          selectedImageName: targetMap.selectedImageName,
-          selectedLevelId: targetMap.selectedLevelId,
         });
       },
-      setSelectedPokemon: (name: string) => {
-        const poke = pokemon.filter(
-          (p) =>
-            p.speciesName.toUpperCase() === name.replace(UnderscoreRegex, ""),
-        );
-        if (poke.length !== 1) {
-          console.error("Ambiguous findings for %s", name);
-          return;
-        }
-        set({ selectedPokemon: poke[0] });
-      },
-      selectedPokemon: null,
       setSelectedCoordinates: (coords) => {
         set({ selectedCoordinates: coords });
       },

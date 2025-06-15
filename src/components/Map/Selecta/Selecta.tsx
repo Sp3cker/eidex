@@ -1,61 +1,58 @@
 import useMapStore from "@/stores/useMapStore";
-// import mapsBreakdown from "@/data/map/mapBreakdown.json";
-import { useEffect } from "react";
-import { MapStore } from "@/stores/useMapStore/types";
+import { useMemo } from "react";
 import { animated, useSpring } from "@react-spring/web";
-// const MMAAPPSS = new Set(
-//   mapsBreakdown
-//     .filter((m) => {
-//       if (m.levels.length > 1) {
-//         return true;
-//       }
-//     })
-//     .map((m) => m.mapBaseName),
-// );
+import { shallow } from "zustand/shallow";
 
 const Selecta = () => {
-  const setSelectedLevel = useMapStore(
-    (state: MapStore) => state.setSelectedMapLevel,
+  const {
+    selectedMapEncounterLevels,
+    setSelectedEncounterLevel,
+    selectedEncounterLevel,
+  } = useMapStore(
+    (state) => ({
+      selectedMapEncounterLevels: state.selectedMapEncounterLevels,
+      setSelectedEncounterLevel: state.setSelectedEncounterLevel,
+      selectedEncounterLevel: state.selectedEncounterLevel,
+    }),
+    shallow,
   );
+
+  const currentLevelIndex = useMemo(() => {
+    if (selectedMapEncounterLevels.length === 0) {
+      return -1;
+    }
+    return selectedMapEncounterLevels.findIndex((l) => {
+      return l === selectedEncounterLevel;
+    });
+  }, [selectedEncounterLevel, selectedMapEncounterLevels]);
+
   const handleUpClick = () => {
-    const { selectedMapLevel, selectedMapsLevels } = useMapStore.getState();
-    const toLevel = selectedMapLevel + 1;
-    if (toLevel >= selectedMapsLevels) return;
-    setSelectedLevel(toLevel);
+    if (currentLevelIndex === -1) return;
+    const nextIndex = currentLevelIndex + 1;
+
+    if (nextIndex < selectedMapEncounterLevels.length) {
+      setSelectedEncounterLevel(selectedMapEncounterLevels[nextIndex]);
+    }
   };
+
   const handleDownClick = () => {
-    const { selectedMapLevel } = useMapStore.getState();
-    const toLevel = selectedMapLevel - 1;
-    if (0 > toLevel) return;
-    setSelectedLevel(toLevel);
+    if (currentLevelIndex === -1 || selectedMapEncounterLevels.length === 0)
+      return;
+    const prevIndex = currentLevelIndex - 1;
+    if (prevIndex >= 0) {
+      setSelectedEncounterLevel(selectedMapEncounterLevels[prevIndex]);
+    }
   };
-  const [spring, api] = useSpring(
+
+  const [spring] = useSpring(
     () => ({
-      opacity: 0,
-      translateY: 0,
+      opacity: selectedMapEncounterLevels.length > 1 ? 1 : 0,
+      translateY: selectedMapEncounterLevels.length > 1 ? 70 : 0,
       // config: (key) => (key === "translateY" ? {} : {}),
     }),
-    [],
+    [selectedMapEncounterLevels],
   );
-  useEffect(() => {
-    let numOfLevels = useMapStore.getState().selectedMapsLevels;
-    if (numOfLevels > 1) {
-      api.start({ opacity: 1, translateY: 70 });
-    } else {
-      api.start({ opacity: 0, translateY: 0 });
-    }
-    const unsub = useMapStore.subscribe((state: MapStore) => {
-      numOfLevels = state.selectedMapsLevels;
-      if (numOfLevels > 1) {
-        api.start({ opacity: 1, translateY: 70 });
-      } else {
-        api.start({ opacity: 0, translateY: 0 });
-      }
-    });
-    return () => {
-      unsub();
-    };
-  }, []);
+
   return (
     <animated.aside style={spring} className="selecta-grid selecta-z flex w-8">
       <div className={`flex flex-row`}>

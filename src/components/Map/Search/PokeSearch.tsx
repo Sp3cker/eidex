@@ -1,65 +1,120 @@
-import { useState } from "react";
-import pokemonSearchStore from "@/stores/pokemonSearchStore";
+import { useEffect, useState, useRef, useCallback } from "react";
+import { pokemonSearchStore } from "@/stores/pokemonSearchStore";
 import { useMapStore } from "@/stores/useMapStore";
 import { useUIStore } from "@/stores/uiStore";
+import { animated as a, useSpringValue, config } from "react-spring";
+import { useSearchSelectionStore } from "./selectedSearchStore";
+import { SearchResultsList } from "./SearchResultsList";
+type PokeSearchResult = {
+  name: string;
+  maps: string[];
+};
 const PokeSearch = () => {
-  const [searchResults, setSearchResults] = useState<string[]>([]);
-  const setSelectedPokemon = useUIStore((state) => state.setSelectedPokemon);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const { itemSearchSelected, setSearchSelected } = useSearchSelectionStore();
+  const width = useSpringValue("20rem"); // Initialize with smaller width
+  const [searchResults, setSearchResults] = useState<PokeSearchResult[]>([]);
+  const setSelectedPokemonByIndex = useUIStore(
+    (state) => state.setSelectedPokemonByIndex,
+  );
   const setSelectedMapLevel = useMapStore((state) => state.setSelectedMapLevel);
+  const deselectMap = useMapStore((state) => state.deselectMap);
   const [query, setQuery] = useState("");
 
-  const handleSearch = () => {
-    const results = pokemonSearchStore.search(query);
-    if (results) {
-      setSearchResults(results.matches);
-    }
-  };
-
-  const handleSelect = (pokemonNameKey: string) => {
-    const mon = //getfromSpeciesJson 
-    const searchResult = pokemonSearchStore.search(pokemonName); // Assuming search returns the object
-    if (!searchResult) {
-      console.error("error selecting mon search result");
-      return;
-    }
-    // const selectedMonName =
-      /* logic to get the full selected pokemon name from searchResult.matches if it's a list */ pokemonName;
-
-    if (searchResult.foundInEncounters) {
-      // Get *all* level IDs for the selected Pokémon name
-      const levelIDs =
-        pokemonSearchStore.getLevelIDsForPokemon(selectedMonName); // NEW function needed in store
-      if (levelIDs && levelIDs.length > 0) {
-        // For now, let's pick the first one. UI might let user choose if multiple.
-        // You'd call your new store action here:
-        // selectMapByLevelId(levelIDs[0]);
-        console.log(`Set map to level: ${levelIDs[0]}`); // Placeholder
-      }
+  // Animate width based on selection state (opposite of Search component)
+  useEffect(() => {
+    if (itemSearchSelected) {
+      setSearchResults([]);
+      // Shrink when item search is selected
+      width.start("1rem", { config: config.gentle });
     } else {
-      const details = pokemonSearchStore.getPokemonDetails(selectedMonName);
-      if (details) {
-        // setSelectedPokemon(details); // Your existing logic
-        console.log(`Set selected Pokémon: ${details.speciesName}`); // Placeholder
-      }
+      // Expand when pokemon search is selected
+      width.start("10.75rem");
     }
+  }, [itemSearchSelected, width]);
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.value === undefined) return;
+    const value = e.target.value;
+    handleQuery(value);
   };
+  const handleQuery = useCallback((value: string) => {
+    setQuery(value);
+
+    const results = pokemonSearchStore.getSearchSuggestions(value);
+    if (results) {
+      setSearchResults(
+        results.map((r) => ({
+          ...r,
+          type: "mon",
+          name: r.name.charAt(0).toUpperCase() + r.name.slice(1),
+        })),
+      );
+    }
+    deselectMap();
+  }, []);
+
+  const handleFocus = useCallback(() => {
+    setSearchSelected(false); // Pokemon search selected = itemSearchSelected false
+  }, [setSearchSelected]);
+
+  const handleClick = useCallback(
+    (pokemonNameKey: string) => {
+      // Set the query to the selected pokemon's name (like Search component does)
+      handleQuery(pokemonNameKey);
+
+      const mon = pokemonSearchStore.getPokemonEncounterInfo(pokemonNameKey);
+      if (!mon) {
+        console.error("Error selecting mon search result");
+        return;
+      }
+      if (mon.foundInEncounters) {
+        if (mon.levelIDs && mon.levelIDs.length > 0) {
+          setSelectedMapLevel(mon.levelIDs[0]);
+        }
+      } else {
+        const dexId = pokemonSearchStore.getPokemonDexId(pokemonNameKey);
+        if (dexId) {
+          setSelectedPokemonByIndex(dexId); // Your existing logic
+        }
+      }
+    },
+    [setSelectedMapLevel, setSelectedPokemonByIndex],
+  );
 
   return (
-    <div>
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search Pokémon"
+    <div className="flex flex-col">
+      <div className="relative">
+        <a.input
+          ref={inputRef}
+          type="search"
+          value={query}
+          onChange={handleSearch}
+          onFocus={handleFocus}
+          style={{
+            width: width,
+          }}
+          className="search-input mb-2 w-full rounded-sm border border-neutral-100 p-1 py-1 pl-8 pr-2 text-sm/6 text-neutral-50 shadow-inner shadow-xl"
+          placeholder={itemSearchSelected ? "" : "Search Pokemon"}
+        />
+        <div
+          className={`absolute ${itemSearchSelected ? "left-3" : "left-2"} pointer-events-none top-1/2 -translate-y-1/2 transform`}
+        >
+          <img
+            src="/pokeball.svg"
+            alt="Pokéball"
+            className="h-[1rem] w-[1rem] opacity-60"
+          />
+        </div>
+      </div>
+      <SearchResultsList
+        monStyling={true}
+        results={searchResults}
+        onItemClick={(item) => handleClick(item.name)}
+        getItemKey={(item) => item.name}
+        getItemDisplayName={(item) => item.name}
+        visible={true}
       />
-      <button onClick={handleSearch}>Search</button>
-      <ul>
-        {searchResults.map((result) => (
-          <li key={result} onClick={() => handleSelect(result)}>
-            {result}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };

@@ -106,11 +106,13 @@ const DisclaimerModal = () => {
     opacity: isOpen ? 1 : 0,
     translateY: isOpen ? 0 : 20,
   });
+
   const wordSprings = useTrail(8, {
     opacity: isOpen ? 1 : 0,
     clipPath: isOpen ? "inset(0 0% 0 0)" : "inset(0 100% 0 0)",
     delay: 100,
   });
+  
   useBodyScrollLock(isOpen);
 
   const handleOpen = () => {
@@ -119,7 +121,7 @@ const DisclaimerModal = () => {
   };
 
   return (
-    <>
+    <span className="z-7">
       <button
         onClick={handleOpen}
         className="text-sm/3 text-white underline transition-colors hover:text-emerald-400"
@@ -127,7 +129,7 @@ const DisclaimerModal = () => {
         Click here
       </button>
 
-      <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
+      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="z-7">
         <div
           style={{
             backdropFilter: "blur(12px) saturate(120%)",
@@ -138,10 +140,10 @@ const DisclaimerModal = () => {
         />
         <animated.div
           style={springs}
-          className="will-translate fixed inset-0 flex items-start justify-center overflow-y-auto p-4"
+          className="will-translate z-7 fixed inset-0 flex items-start justify-center overflow-y-auto p-4"
         >
-          <DialogPanel className="my-8 max-h-[calc(100vh-4rem)] w-full max-w-lg rounded-lg bg-zinc-900 p-6 transition">
-            <div className="max-h-[calc(100vh-8rem)] overflow-y-auto">
+          <DialogPanel className="z-7 my-8 max-h-[calc(100vh-4rem)] w-full max-w-lg rounded-lg bg-zinc-900 p-6 transition">
+            <div className="z-7 max-h-[calc(100vh-8rem)] overflow-y-auto">
               <DialogTitle className="cool-font mb-4 text-xl font-bold text-gray-200">
                 Disclaimer
               </DialogTitle>
@@ -165,7 +167,7 @@ const DisclaimerModal = () => {
           </DialogPanel>
         </animated.div>
       </Dialog>
-    </>
+    </span>
   );
 };
 

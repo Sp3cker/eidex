@@ -1,10 +1,4 @@
-import {
-  LevelsInfo,
-  Item,
-  Items,
-
-  ItemWithCoords,
-} from "@/data/map";
+import { LevelsInfo, Item, Items, ItemWithCoords } from "@/data/map";
 
 import { useCallback, useEffect, useState } from "react";
 import TrieSearch from "trie-search";
@@ -92,6 +86,10 @@ class ItemSearch {
   private throwOnPile(item: string, mapBaseName: string) {
     if (this.itemsToMap.has(item)) {
       const currPlacesToGetItem = this.itemsToMap.get(item);
+      /**
+       * Right now I'll just say u get 1 item even tho u could get 2 at a place.
+       */
+      if (currPlacesToGetItem?.includes(mapBaseName)) return;
       currPlacesToGetItem?.push(mapBaseName); // so item: 'apple', places: ['tree', 'ground',....]
       return;
     }
@@ -136,7 +134,6 @@ class ItemSearch {
         });
       });
       level.shopItems.forEach((shop: { items: string[] }) => {
-
         const toPush = shop.items
           .map((i) => Items.get(i))
           .filter((i) => i !== undefined) as Item[];
