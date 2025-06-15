@@ -20,6 +20,7 @@ class PokemonSearchStore {
     this.encounterMap = new Map();
     this.monNameKeys = new Map<string, number>([]);
     pokemonData.forEach((p) => {
+      if (p.formId !== 0) return;
       this.monNameKeys.set(
         p.speciesName.toLowerCase().replace(/-/g, "_"),
         p.speciesId,
