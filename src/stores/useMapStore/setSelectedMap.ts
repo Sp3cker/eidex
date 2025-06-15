@@ -56,6 +56,70 @@ const putIdOnEncounter: (
   });
 };
 
+const putRodUsed = (mons: EncounterMons[]) => {
+  // First pass: assign rod type based on slot
+  mons.forEach((mon, slot) => {
+    let rod: string;
+    if (slot === 0 || slot === 1) {
+      rod = "Old Rod";
+    } else if (slot >= 2 && slot <= 4) {
+      rod = "Good Rod";
+    } else if (slot >= 5 && slot <= 9) {
+      rod = "Super Rod";
+    } else {
+      rod = "Super Rod"; // Default for higher indices
+    }
+    mon.rod = rod;
+  });
+
+  // Second pass: determine chance level for each species within each rod type
+  const rodGroups: { [rodType: string]: { [species: string]: number[] } } = {};
+  
+  // Group by rod type and species, tracking slot indices
+  mons.forEach((mon, slot) => {
+    if (!mon.rod) return;
+    
+    if (!rodGroups[mon.rod]) {
+      rodGroups[mon.rod] = {};
+    }
+    if (!rodGroups[mon.rod][mon.species]) {
+      rodGroups[mon.rod][mon.species] = [];
+    }
+    rodGroups[mon.rod][mon.species].push(slot);
+  });
+
+  // Third pass: combine rod types for species that appear across multiple rods
+  const speciesRodSummary: { [species: string]: { rods: Set<string> } } = {};
+  
+  // Collect all rod types for each species
+  Object.keys(rodGroups).forEach(rodType => {
+    Object.keys(rodGroups[rodType]).forEach(species => {
+      if (!speciesRodSummary[species]) {
+        speciesRodSummary[species] = { rods: new Set() };
+      }
+      speciesRodSummary[species].rods.add(rodType);
+    });
+  });
+
+  // Assign combined rod strings
+  mons.forEach((mon) => {
+    if (!mon.rod) return;
+    
+    const summary = speciesRodSummary[mon.species];
+    if (!summary) return;
+    
+    // Create combined rod string
+    const rodArray = Array.from(summary.rods);
+    const rodOrder = ["Old Rod", "Good Rod", "Super Rod"];
+    const sortedRods = rodArray.sort((a, b) => rodOrder.indexOf(a) - rodOrder.indexOf(b));
+    const combinedRodString = sortedRods.join("/").replace(/ Rod/g, "").replace(/\//g, "/") + " Rod";
+    
+    mon.rod = combinedRodString;
+  });
+
+  return mons;
+};
+
 const putEncounterRate = (mons: EncounterMons[]) => {
   const rates = [20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1];
   const encounterRates = new Map<string, number>();
@@ -74,6 +138,7 @@ const putEncounterRate = (mons: EncounterMons[]) => {
         min_level: encounter.min_level,
         index: encounter.index,
         rate: monsNewRate,
+        rod: encounter.rod, // Preserve rod property if it exists
       });
     }
   });
@@ -117,6 +182,7 @@ const getSelectedMapInfo = (id: string, levelId: string) => {
     }
     if (targetMapEncounters && targetMapEncounters.fishing_mons) {
       putIdOnEncounter(targetMapEncounters.fishing_mons.mons, monsNameKeys);
+      putRodUsed(targetMapEncounters.fishing_mons.mons); // Add rod information
       fishingEncounters = putEncounterRate(
         targetMapEncounters.fishing_mons.mons,
       );

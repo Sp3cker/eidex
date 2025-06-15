@@ -19,6 +19,25 @@ const zoneToBgColor = (zone: string) => {
   };
   return obj[zone];
 };
+
+const EncounterDescriptor = ({ zone, rate, rod, rodChance }: any) => {
+  if (rod && rodChance) {
+    return (
+      <p
+        className={`font-pkmnem pkmnem-types ${zoneToTextColor(zone)} text-sm leading-tight`}
+      >
+        {rod}
+      </p>
+    );
+  }
+  return (
+    <p
+      className={`font-pkmnem ${zoneToTextColor(zone)} font-bold leading-tight`}
+    >
+      {rate}% {rod}
+    </p>
+  );
+};
 const EncounterMonsList = React.memo(function EncounterList({
   zone,
 }: {
@@ -60,15 +79,17 @@ const EncounterMonsList = React.memo(function EncounterList({
           </div>
           <div>
             <h3
-              className={`font-bold ${zoneToTextColor(zone)} text-xs leading-tight `}
+              className={`font-bold ${zoneToTextColor(zone)} text-xs leading-tight`}
             >
               {formatMapString(mon.species)}
             </h3>
-            <p
-              className={`font-pkmnem ${zoneToTextColor(zone)} font-bold leading-tight`}
-            >
-              {mon.rate}%
-            </p>
+
+            <EncounterDescriptor
+              zone={zone}
+              rate={mon.rate}
+              rod={mon.rod}
+              rodChance={mon.rodChance}
+            />
           </div>
         </div>
       ))}

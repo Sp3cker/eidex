@@ -16,7 +16,7 @@ const sortOptions: { label: string; statType?: string }[] = [
   { label: "Spe", statType: "speed" },
 ];
 
-export const SortBar = React.memo(({}) => {
+export const SortBar = React.memo(function SortBar() {
   // const selected = statType ? `${sortBy}:${statType}` : sortBy;
   const { sortBy, sortDirection, setSort } = useFilterStore((state) => ({
     sortBy: state.sortBy,
@@ -41,7 +41,7 @@ export const SortBar = React.memo(({}) => {
               title={option.statType}
               key={option.label}
               data-selected={isSelected}
-              className="min-w-max border-b-4 border-transparent px-2 text-xs font-medium text-gray-300 data-[selected=true]:border-emerald-500 data-[selected=true]:text-emerald-500"
+              className="font-pkmnem min-w-max border-b-4 border-transparent px-2 font-bold text-gray-300 data-[selected=true]:border-emerald-500 data-[selected=true]:text-emerald-500"
               onClick={handleChange}
             >
               {option.label}

@@ -6,6 +6,7 @@ type EncounterMons = {
   species: string;
   index: number;
   rate: number;
+  rod?: string; // Optional rod type for fishing encounters
 };
 type EncounterMonsFromJSON = {
   min_level: number;
