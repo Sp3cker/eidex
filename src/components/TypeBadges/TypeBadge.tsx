@@ -38,9 +38,9 @@ const TypeBadge = React.memo(function TypeBadge({
         </span>
         {/* Name container */}
         <span className="flex h-full flex-1 items-center justify-center">
-          <span className="pr-1 text-xs font-bold leading-none text-white sm:font-medium">
+          <p className="pr-1 font-pkmnem text-lg font-bold text-neutral-100 ">
             {name}
-          </span>
+          </p>
         </span>
       </span>
     </span>
