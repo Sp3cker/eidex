@@ -32,7 +32,6 @@ export const SortBar = React.memo(function SortBar() {
   );
   return (
     <div className="flex w-full items-center justify-between bg-neutral-900/90">
-      {/* Sort buttons group */}
       <div className="ml-3 flex h-9 flex-1 text-nowrap">
         {sortOptions.map((option) => {
           const isSelected = sortBy === option.statType;
@@ -41,7 +40,7 @@ export const SortBar = React.memo(function SortBar() {
               title={option.statType}
               key={option.label}
               data-selected={isSelected}
-              className="font-pkmnem min-w-max border-b-4 border-transparent px-2 font-bold text-gray-300 data-[selected=true]:border-emerald-500 data-[selected=true]:text-emerald-500"
+              className="cursor-pointer hover:text-emerald-400 font-pkmnem min-w-max border-b-4 border-transparent px-2 font-bold text-gray-300 data-[selected=true]:border-emerald-500 data-[selected=true]:text-emerald-500"
               onClick={handleChange}
             >
               {option.label}
@@ -49,7 +48,6 @@ export const SortBar = React.memo(function SortBar() {
           );
         })}
       </div>
-      {/* Direction marker */}
       <div
         className="cursor-pointer select-none pr-3 text-emerald-300"
         onClick={() => {

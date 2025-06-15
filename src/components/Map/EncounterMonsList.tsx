@@ -84,12 +84,7 @@ const EncounterMonsList = React.memo(function EncounterList({
               {formatMapString(mon.species)}
             </h3>
 
-            <EncounterDescriptor
-              zone={zone}
-              rate={mon.rate}
-              rod={mon.rod}
-              rodChance={mon.rodChance}
-            />
+            <EncounterDescriptor zone={zone} rate={mon.rate} rod={mon.rod} />
           </div>
         </div>
       ))}

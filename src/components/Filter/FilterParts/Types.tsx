@@ -7,7 +7,6 @@ import { useCallback } from "react";
 
 const normal = {
   x: 0,
-  // boxShadow: "0px 0px 1px 4px #00000000",
   backgroundColor: "var(--color-gray-500)",
   config: {
     tension: 300,
@@ -16,7 +15,6 @@ const normal = {
 const selectedStlyes = {
   x: 0.4,
   backgroundColor: "var(--color-gray-700)",
-  // boxShadow: "0px 0px 2px 2px #17171780",
 };
 
 const Types = () => {
@@ -30,7 +28,6 @@ const Types = () => {
       if (!selectedFilter) {
         return normal;
       }
-      // Check if this type is selected (either as first or second type in tuple)
       const typeId = validTypes[i];
       const isSelected = selectedFilter.includes(typeId);
 
@@ -58,12 +55,11 @@ const Types = () => {
           return;
         });
       } else {
-        // Unselected items: animate x translation on hover
         api.start((i) => {
           if (i === index) {
             return active
-              ? { x: 0.2 } // Slide on hover
-              : { x: 0 }; // Back to normal position
+              ? { x: 0.2 }
+              : { x: 0 };
           }
           return;
         });
@@ -92,13 +88,9 @@ const Types = () => {
           }}
           className="cursor-pointer rounded-lg border-2 p-1 text-center"
         >
-          {/* Your type display content here */}
-          <p
-            className={`font-pkmnem font-bold tracking-wider text-[${getTypeColor(typeId)}]`}
-          >
+          <p className={`font-pkmnem font-bold tracking-wider`}>
             {adjustTypeForDevice(getTypeName(typeId), "md")}
           </p>
-          {/* <TypeBadge typeId={typeId} screenWidth="sm" /> */}
         </a.div>
       ))}
     </div>

@@ -21,12 +21,12 @@ const TypeBadge = React.memo(function TypeBadge({
 
   return (
     <span
-      className="relative inline-flex h-[2rem] w-[5rem] select-none items-center overflow-hidden rounded-full md:h-[24px]"
+      className="relative inline-flex h-[1.5rem] w-[5rem] select-none items-center overflow-hidden rounded-full"
       style={{ background: spriteBackground }}
     >
       <span className="flex h-full w-full flex-row items-center">
         {/* Icon container */}
-        <span className="flex h-full w-[28px] items-center">
+        <span className="flex h-full w-[2rem] items-center">
           {icon && (
             <img
               src={icon}
@@ -38,7 +38,7 @@ const TypeBadge = React.memo(function TypeBadge({
         </span>
         {/* Name container */}
         <span className="flex h-full flex-1 items-center justify-center">
-          <p className="pr-1 font-pkmnem text-lg font-bold text-neutral-100 ">
+          <p className="pr-1 font-pkmnem text-lg sm:text-md font-bold text-neutral-100/90 ">
             {name}
           </p>
         </span>

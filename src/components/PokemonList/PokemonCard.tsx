@@ -108,14 +108,14 @@ export const PokemonCard = React.memo(function Card({
           </div>
 
           {/* Stats here */}
-          <div className="my-3 flex flex-col">
-            <div className="flex items-start gap-1 text-center sm:gap-4">
+          <div className="flex flex-col">
+            <div className="flex items-start gap-2 text-center ">
               {reorderedStats.map((statValue, index) => (
                 <div
                   key={index}
                   className="align-start flex min-w-1 flex-col items-center"
                 >
-                  <div className="font-pkmnem text-2xl/4 font-bold tracking-wide">
+                  <div className="font-pkmnem text-xl/4 font-bold tracking-wide">
                     {statValue}
                   </div>
                   <div className="font-calamity text-sm font-bold text-neutral-100/70">
@@ -125,9 +125,9 @@ export const PokemonCard = React.memo(function Card({
               ))}
               {/* BST box, styled identically to stat boxes */}
               <div className="flex flex-col items-center border-l border-amber-400/50 pl-3">
-                <div className="font-pkmnem text-2xl/4 font-bold">{bst}</div>
+                <div className="font-pkmnem text-xl/4 font-bold">{bst}</div>
 
-                <div className="font-calamity font-bold text-amber-400">
+                <div className="font-calamity font-xs font-bold text-amber-400">
                   BST
                 </div>
               </div>

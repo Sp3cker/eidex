@@ -8,26 +8,29 @@ const SelectedLevel = () => {
 };
 const MapPlaceInfo = () => {
   const [selectedTab, setSelectedTab] = useState("land");
+  const selectedMap = useMapStore((state) => state.selectedMap);
   const show = useMapStore((state) => {
     return state.selectedMap !== null && state.dragging === false;
   });
   const [spring, api] = useSpring(
     {
       opacity: 0,
-      translate: 200, // Start off-screen, animate to 2/3rd position
+      translate: 200,
     },
     [],
   );
 
   useEffect(() => {
     if (show) {
+      if (selectedMap) {
+        api.start({ opacity: 1 });
+      }
       api.start({
         config: { mass: 0.6, damping: 0.2 },
-        opacity: 1,
-        translate: 0, // Ensure it doesn't go too far left
+        translate: 0,
       });
     } else {
-      api.start({ translate: 200, opacity: 0 });
+      api.start({ translate: 200 });
     }
   }, [show]);
 
