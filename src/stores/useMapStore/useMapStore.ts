@@ -159,9 +159,7 @@ export const useMapStore = create<MapStore>()(
           selectedLevelFishingMons: targetMap.fishingEncounters,
         });
       },
-      setSelectedCoordinates: (coords) => {
-        set({ selectedCoordinates: coords });
-      },
+
       setMapScale: (n) => set({ mapScale: n }),
       setMapOffset: (offset) => set({ mapOffset: offset }),
       setHoveredMap: (map: string) => set({ hoveredMap: map }),

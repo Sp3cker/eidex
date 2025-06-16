@@ -30,6 +30,7 @@ const MapContainer = ({ children }: any) => {
       const [x, y] = selectedCoordinates;
       const centerX = window.innerWidth / 2 - x; // X/y is center of target locale
       const centerY = window.innerHeight / 2 - y;
+      console.log(selectedCoordinates)
       api.start({
         centerOffset: [centerX, centerY],
         delay: 160,
@@ -80,7 +81,7 @@ const MapContainer = ({ children }: any) => {
         right: 500 ^ scale.toJSON(),
       },
       from: () => {
-        // console.log(centerOffset.get());
+
         return [centerOffset.get()[0], centerOffset.get()[1]];
       },
     },
