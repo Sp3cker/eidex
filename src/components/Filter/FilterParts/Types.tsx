@@ -3,7 +3,7 @@ import { useGesture } from "@use-gesture/react";
 import { useFilterStore } from "@/stores/filterStore";
 import { getTypeColor, getTypeName, validTypes } from "@/utils/typeInfo";
 import adjustTypeForDevice from "@/utils/adjustType";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 
 const normal = {
   x: 0,
@@ -22,54 +22,40 @@ const Types = () => {
     state.typeValue,
     state.setFilter,
   ]);
-  const [springs, api] = useSprings(
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const [springs] = useSprings(
     validTypes.length,
     (i) => {
-      if (!selectedFilter) {
-        return normal;
-      }
-      const typeId = validTypes[i];
-      const isSelected = selectedFilter.includes(typeId);
+      const isSelected = selectedFilter?.includes(validTypes[i]);
+      const isHovered = hoveredIndex === i;
 
       if (isSelected) {
-        return { ...selectedStlyes };
+        return {
+          ...selectedStlyes,
+          backgroundColor: isHovered
+            ? "var(--color-gray-600)"
+            : "var(--color-gray-700)",
+
+        };
       }
-      return normal;
+      return {
+        ...normal,
+        x: isHovered ? 0.2 : 0,
+      };
     },
-    [selectedFilter],
+    [selectedFilter, hoveredIndex],
   );
 
   const bind = useGesture({
     onHover: ({ active, args: [index] }) => {
-      const hoveredType = validTypes[index];
-      const isSelected = selectedFilter?.includes(hoveredType) || false;
-
-      if (isSelected) {
-        // Hovering on currently selected Type
-        api.start((i) => {
-          if (i === index) {
-            return active
-              ? { backgroundColor: "var(--color-gray-600)" }
-              : { backgroundColor: "var(--color-gray-700)" }; // Back to selected color
-          }
-          return;
-        });
-      } else {
-        api.start((i) => {
-          if (i === index) {
-            return active
-              ? { x: 0.2 }
-              : { x: 0 };
-          }
-          return;
-        });
-      }
+      setHoveredIndex(active ? index : null);
     },
-
     onClick: ({ args: [index] }) => {
       handleSelect(index);
     },
   });
+
   const handleSelect = useCallback((index: number) => {
     const selectedTypeId = validTypes[index];
     setFilter("typeValue", selectedTypeId);
