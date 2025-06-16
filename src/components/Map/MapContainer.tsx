@@ -1,7 +1,7 @@
 import useMapStore from "@/stores/useMapStore";
 import { useSpring, animated, to } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { shallow } from "zustand/shallow";
 
 const MapContainer = ({ children }: any) => {
@@ -80,6 +80,9 @@ const MapContainer = ({ children }: any) => {
       },
     },
   );
+  useEffect(() => {
+    api.start({ centerOffset: [0, 0] });
+  }, []);
   return (
     <div
       ref={targetRef}
