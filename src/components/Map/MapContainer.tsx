@@ -2,20 +2,25 @@ import useMapStore from "@/stores/useMapStore";
 import { useSpring, animated, to } from "@react-spring/web";
 import { useDrag, usePinch } from "@use-gesture/react";
 import { useEffect, useRef } from "react";
+import { shallow } from "zustand/shallow";
 
 const MapContainer = ({ children }: any) => {
-  const selectedCoordinates = useMapStore((state) => state.selectedCoordinates);
+  const [selectedCoordinates, setMapScale, setDragging] = useMapStore(
+    (state) => [
+      state.selectedCoordinates,
+      state.setMapScale,
+      state.setDragging,
+    ],
+    shallow,
+  );
+
   const mapRef = useRef<HTMLDivElement>(null);
-  const setMapScale = useMapStore((state) => state.setMapScale);
-  const setDragging = useMapStore((state) => state.setDragging);
   const [{ scale, centerOffset }, api] = useSpring(
     () => ({
       scale: 1.32,
       centerOffset: [400, 340],
       config: { mass: 5, tension: 800, friction: 200 },
-      // onStart: () => {
-      //   setDragging(true);
-      // },
+
       onRest: () => {
         setDragging(false);
       },
@@ -30,7 +35,7 @@ const MapContainer = ({ children }: any) => {
       const [x, y] = selectedCoordinates;
       const centerX = window.innerWidth / 2 - x; // X/y is center of target locale
       const centerY = window.innerHeight / 2 - y;
-      console.log(selectedCoordinates)
+      console.log(selectedCoordinates);
       api.start({
         centerOffset: [centerX, centerY],
         delay: 160,
@@ -81,7 +86,6 @@ const MapContainer = ({ children }: any) => {
         right: 500 ^ scale.toJSON(),
       },
       from: () => {
-
         return [centerOffset.get()[0], centerOffset.get()[1]];
       },
     },
