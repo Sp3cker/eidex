@@ -1,60 +1,65 @@
 import useMapStore from "@/stores/useMapStore";
 import { useSpring, animated, to } from "@react-spring/web";
-import { useDrag, usePinch } from "@use-gesture/react";
-import { useEffect, useRef } from "react";
+import { useDrag } from "@use-gesture/react";
+import {  useRef } from "react";
 import { shallow } from "zustand/shallow";
 
 const MapContainer = ({ children }: any) => {
-  const [selectedCoordinates, setMapScale, setDragging] = useMapStore(
-    (state) => [
-      state.selectedCoordinates,
-      state.setMapScale,
-      state.setDragging,
-    ],
+  const [selectedCoordinates, setDragging] = useMapStore(
+    (state) => [state.selectedCoordinates, state.setDragging],
     shallow,
   );
 
-  const mapRef = useRef<HTMLDivElement>(null);
-  const [{ scale, centerOffset }, api] = useSpring(
-    () => ({
-      scale: 1.32,
-      centerOffset: [400, 340],
-      config: { mass: 5, tension: 800, friction: 200 },
-
-      onRest: () => {
-        setDragging(false);
-      },
-    }),
-    [],
-  );
-
   const targetRef = useRef<HTMLDivElement>(null);
-  // Pinch-to-zoom
-  useEffect(() => {
-    if (selectedCoordinates && mapRef.current) {
-      const [x, y] = selectedCoordinates;
-      const centerX = window.innerWidth / 2 - x; // X/y is center of target locale
-      const centerY = window.innerHeight / 2 - y;
-      console.log(selectedCoordinates);
-      api.start({
-        centerOffset: [centerX, centerY],
-        delay: 160,
-        config: { damping: 2.5, precision: 0.2 },
-      });
-    }
-  }, [selectedCoordinates, scale, api]);
-  usePinch(
-    ({ offset: [s] }) => {
-      const toScale = Math.min(Math.max(s, 0.5), 1.5);
-      setMapScale(toScale);
+  const mapRef = useRef<HTMLDivElement>(null);
 
-      api.set({ scale: toScale }); // Limit: 0.5x to 3x
+  const [{ scale, centerOffset }, api] = useSpring(
+    () => {
+      // Default values for the spring
+      let currentTargetCenterOffset = [400, 340]; // Default if no coordinates or mapRef
+      let currentSpringConfig = {
+        mass: 5,
+        tension: 800,
+        friction: 200,
+        precision: 0.2,
+      }; // Default config
+      let currentSpringDelay = 0; // Default delay
+
+      // This logic is moved from the useEffect:
+      // If selectedCoordinates are present and mapRef.current is available,
+      // then we update the target offset, config, and delay for the spring.
+      if (selectedCoordinates && mapRef.current) {
+        const [x, y] = selectedCoordinates;
+        currentTargetCenterOffset = [
+          window.innerWidth / 2 - x,
+          window.innerHeight / 2 - y,
+        ];
+        // currentSpringConfig = { damping: 2.5, precision: 0.2 }; // Specific config for this case
+        currentSpringDelay = 160; // Specific delay for this case
+      }
+      // If the above condition (selectedCoordinates && mapRef.current) is not met,
+      // the spring will use the default values defined at the start of this function.
+      // This means if selectedCoordinates is set but mapRef.current is null,
+      // or if selectedCoordinates is null, it defaults to the initial state.
+
+      return {
+        scale: 1.32, // Assuming scale remains constant
+        centerOffset: currentTargetCenterOffset,
+        config: currentSpringConfig,
+        delay: currentSpringDelay,
+        onRest: () => {
+          // Ensure setDragging is available and is a function before calling
+          if (typeof setDragging === "function") {
+            setDragging(false);
+          }
+        },
+      };
     },
-    {
-      target: mapRef,
-      scaleBounds: { min: 0.75, max: 1.5 },
-    },
+    [selectedCoordinates], // The spring definition will re-evaluate when selectedCoordinates changes.
+    // Note: Changes to mapRef.current will not trigger re-evaluation,
+    // which matches the behavior of your original useEffect's dependency array.
   );
+
   // useWheel(
   //   ({ movement: [, y] }) => {
   //     const calcY = Math.abs(Math.min(Math.max(y, 0.75), 2));
@@ -103,7 +108,7 @@ const MapContainer = ({ children }: any) => {
           cursor: "move",
           //@ts-ignore
           transform: to([centerOffset, scale], ([x, y], scale) => {
-            return `translate3d(${x}px,${y}px, ${x}px) scale(${scale})`;
+            return `translate3d(${x}px,${y}px, 0) scale(${scale})`;
           }),
           transformOrigin: "center",
         }}
