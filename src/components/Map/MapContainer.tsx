@@ -37,7 +37,7 @@ const MapContainer = ({ children }: any) => {
         config: { damping: 2.5, precision: 0.2 },
       });
     }
-  }, [selectedCoordinates, scale]);
+  }, [selectedCoordinates, scale, api]);
   usePinch(
     ({ offset: [s] }) => {
       const toScale = Math.min(Math.max(s, 0.5), 1.5);

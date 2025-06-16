@@ -29,7 +29,7 @@ const MapPlaceInfo = () => {
     } else {
       api.start({ translate: 200 });
     }
-  }, [show]);
+  }, [show, api]);
 
   const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.currentTarget;
