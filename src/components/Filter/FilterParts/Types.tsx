@@ -72,7 +72,7 @@ const Types = () => {
             backgroundColor: springs[index].backgroundColor,
             transform: springs[index].x.to((x) => `translateX(${x}rem)`),
           }}
-          className="cursor-pointer rounded-lg border-2 p-1 text-center"
+          className="cursor-pointer rounded-lg border-2 p-1 text-center bg-gray-500"
         >
           <p className={`font-pkmnem font-bold tracking-wider`}>
             {adjustTypeForDevice(getTypeName(typeId), "md")}
