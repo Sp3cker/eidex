@@ -8,7 +8,6 @@ const SelectedLevel = () => {
 };
 const MapPlaceInfo = () => {
   const [selectedTab, setSelectedTab] = useState("land");
-  const selectedMap = useMapStore((state) => state.selectedMap);
   const show = useMapStore((state) => {
     return state.selectedMap !== null && state.dragging === false;
   });
@@ -22,12 +21,10 @@ const MapPlaceInfo = () => {
 
   useEffect(() => {
     if (show) {
-      if (selectedMap) {
-        api.start({ opacity: 1 });
-      }
       api.start({
         config: { mass: 0.6, damping: 0.2 },
         translate: 0,
+        opacity: 1,
       });
     } else {
       api.start({ translate: 200 });
