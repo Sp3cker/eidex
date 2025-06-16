@@ -2,9 +2,6 @@ import { lazy, Suspense } from "react";
 import { Route, Router, Switch, useLocation } from "wouter";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 
-const PokemonModal = lazy(
-  () => import("./components/PokemonModal/PokemonModal"),
-);
 const Map = lazy(() => import("./components/Map/Map"));
 const App = lazy(() => import("./App"));
 import Header from "@/components/ui/Header";
@@ -37,7 +34,7 @@ const AppRouter = () => {
             <Route
               path="/dex"
               component={() => (
-                <Suspense fallback={<LoadingSpinner/>}>
+                <Suspense fallback={<LoadingSpinner />}>
                   <App />
                 </Suspense>
               )}
@@ -52,9 +49,6 @@ const AppRouter = () => {
       </main>
 
       <Footer />
-      <Suspense fallback={<span/>}>
-        <PokemonModal />
-      </Suspense>
     </div>
   );
 };

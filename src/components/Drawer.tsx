@@ -1,18 +1,22 @@
 import {
+  lazy,
   useCallback,
   useEffect,
   useLayoutEffect,
   useRef,
   useState,
+  Suspense,
 } from "react";
-import FilterBar from "./FilterBar";
-import { useScreenWidth } from "../../hooks/useScreenWidth";
+
+import { useScreenWidth } from "../hooks/useScreenWidth";
 import { useSpring, animated } from "react-spring";
 import { useUIStore } from "@/stores/uiStore";
-
+import LoadingSpinner from "./ui/LoadingSpinner";
+import PokemonModal from "./PokemonModal";
+const DrawerContent = lazy(() => import("./DrawerContent"));
 
 const Drawer = ({ currOpen, toggleOpen, currTailwindSize, ...props }: any) => {
-  const desktopDisplayStyles = "flex";
+  const desktopDisplayStyles = "flex bg-blue-800";
   const mobileDisplayStyles =
     "fixed w-3/4 h-screen right-0 inset-y-0 bg-black/30 backdrop-blur-md";
 
@@ -75,15 +79,18 @@ const DrawerContainer = (props: any) => {
       openDrawer();
     }
   }, [currOpen]);
+
   useEffect(() => {
     if (props.closeDrawer) {
       closeDrawer();
     }
   }, [props.closeDrawer]);
   return (
-    <div ref={containerRef}>
+    <div ref={containerRef} className="bg-gray-800 h-full w-full">
       {currBreakpoint === "md" ? (
-        <FilterBar />
+        <Suspense fallback={<LoadingSpinner />}>
+          <DrawerContent />
+        </Suspense>
       ) : (
         <>
           <div
@@ -97,8 +104,11 @@ const DrawerContainer = (props: any) => {
             currTailwindSize={currBreakpoint}
             parentRef={containerRef}
           >
-            <FilterBar />
+            <Suspense fallback={<LoadingSpinner />}>
+              <DrawerContent />
+            </Suspense>
           </Drawer>
+          <PokemonModal />
         </>
       )}
     </div>

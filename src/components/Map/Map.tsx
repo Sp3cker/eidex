@@ -12,6 +12,7 @@ import Roamers from "./Roamers";
 import SearchContainer from "./Search/SearchContainer";
 document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
+const PokemonModal = lazy(() => import("@/components/PokemonModal"));
 const ImageViewer = lazy(() => import("./ImageViewer"));
 const Map = () => {
   const setStateFromURL = useMapStore((state) => state.setStateFromURL);
@@ -42,6 +43,9 @@ const Map = () => {
         </Suspense>
       </ErrorBoundary>
       <Roamers />
+      <Suspense fallback={<></>}>
+        <PokemonModal />
+      </Suspense>
     </div>
   );
 };
