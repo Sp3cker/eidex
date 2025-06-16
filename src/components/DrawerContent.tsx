@@ -1,12 +1,8 @@
 import { useTransition, animated } from "@react-spring/web";
 import { useUIStore } from "@/stores/uiStore";
-import { useScreenWidth } from "@/hooks/useScreenWidth"; // Adjust path as needed
 import FilterBar from "./Filter/FilterBar"; // Adjust path as needed
-import PokeInfoView from "./PokeInfoView/PokeInfoView"; // Adjust path as needed
 import { useWindowSize } from "@/hooks/useWindowResize";
-import PokemonModal from "./PokemonModal";
 import PokemonView from "./PokemonView/PokemonView";
-import { CloseButton } from "@headlessui/react";
 const AnimatedArea = () => {
   const selectedPokemon = useUIStore((state) => state.selectedPokemon);
   const closeModal = useUIStore((state) => state.closeModal);

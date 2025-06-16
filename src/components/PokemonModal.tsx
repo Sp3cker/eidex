@@ -1,4 +1,3 @@
-import { CloseButton } from "@headlessui/react";
 import PokemonView from "./PokemonView/PokemonView";
 import { useUIStore } from "@/stores/uiStore";
 
