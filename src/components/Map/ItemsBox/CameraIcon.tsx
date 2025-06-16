@@ -1,5 +1,5 @@
 import React from "react";
-import { config, useSpring, animated } from "react-spring";
+import { config, useSpring, animated } from "@react-spring/web";
 const CameraIcon = React.memo(function CameraIcon({
   mapLabel,
   setViewingImage,

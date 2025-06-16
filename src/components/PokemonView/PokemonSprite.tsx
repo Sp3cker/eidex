@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { animated } from "react-spring";
+import { animated } from "@react-spring/web";
 import { useAnimConfig } from "@/utils/animConfigs";
 
 import { useUIStore } from "@/stores/uiStore";

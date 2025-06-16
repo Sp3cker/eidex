@@ -9,7 +9,7 @@ import {
 } from "react";
 
 import { useScreenWidth } from "../hooks/useScreenWidth";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated } from "@react-spring/web";
 import { useUIStore } from "@/stores/uiStore";
 import LoadingSpinner from "./ui/LoadingSpinner";
 import PokemonModal from "./PokemonModal";

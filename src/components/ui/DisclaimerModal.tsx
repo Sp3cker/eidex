@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import useBodyScrollLock from "../../hooks/useBodyScrollLock";
 import { useMapStore } from "../../stores/useMapStore";
-import { useSpring, animated, useTrail } from "react-spring";
+import { useSpring, animated, useTrail } from "@react-spring/web";
 import { ErrorBoundary } from "react-error-boundary";
 
 const paragraphs = (index: number, springAnim: any) => {

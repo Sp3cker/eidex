@@ -18,8 +18,8 @@ vi.mock("@/utils/formatMapString", () => ({
   formatMapString: vi.fn((mapName: string) => mapName?.replace(/_/g, " ") || ""),
 }));
 
-// Mock react-spring
-vi.mock("react-spring", () => ({
+// Mock @react-spring/web
+vi.mock("@react-spring/web", () => ({
   useSpring: vi.fn(() => [
     { opacity: 1, translateY: 0 }
   ]),

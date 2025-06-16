@@ -1,4 +1,4 @@
-import { useTransition, animated as a } from "react-spring";
+import { useTransition, animated as a } from "@react-spring/web";
 
 export const SEARCH_RESULT_SPACING = window.innerWidth < 400 ? 40 : 40;
 export const SEARCH_SIZE = '15rem'

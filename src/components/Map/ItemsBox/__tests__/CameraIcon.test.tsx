@@ -3,8 +3,8 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import CameraIcon from "../CameraIcon";
 
-// Mock react-spring
-vi.mock("react-spring", () => ({
+// Mock @react-spring/web
+vi.mock("@react-spring/web", () => ({
   config: { gentle: {} },
   useSpring: vi.fn(() => [
     { rotate: { to: vi.fn(() => ({ to: vi.fn((fn) => fn) })) } },

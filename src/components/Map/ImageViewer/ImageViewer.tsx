@@ -1,6 +1,6 @@
 import useMapStore from "@/stores/useMapStore";
 import { useMemo, useState, useRef, useEffect } from "react";
-import { animated, config, useSprings } from "react-spring";
+import { animated, config, useSprings } from "@react-spring/web";
 import { getItemSpriteStyle } from "@/utils/itemSprites";
 import itemSearch from "@/utils/itemsData";
 import { shallow } from "zustand/shallow";

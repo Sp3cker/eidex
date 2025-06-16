@@ -1,4 +1,4 @@
-import { useSprings, animated as a } from "react-spring";
+import { useSprings, animated as a } from "@react-spring/web";
 import { useGesture } from "@use-gesture/react";
 import { useFilterStore } from "@/stores/filterStore";
 import { getTypeColor, getTypeName, validTypes } from "@/utils/typeInfo";

@@ -2,7 +2,7 @@
 import { memo } from "react";
 import { useMapStore } from "@/stores/useMapStore";
 import { formatMapString } from "@/utils/formatMapString";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated } from "@react-spring/web";
 import ItemsList from "./ItemsList";
 import CameraIcon from "./CameraIcon";
 const ItemsBox = memo(function ItemsBox() {

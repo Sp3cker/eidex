@@ -1,4 +1,4 @@
-import { animated, useSpring } from "react-spring";
+import { animated, useSpring } from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
 import { useCallback, useEffect, useState } from "react";
 import EncounterMonsList from "./EncounterMonsList";

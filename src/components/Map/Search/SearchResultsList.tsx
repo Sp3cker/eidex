@@ -1,4 +1,4 @@
-import { useSprings, useTransition, animated as a } from "react-spring";
+import { useSprings, useTransition, animated as a } from "@react-spring/web";
 import { useGesture } from "@use-gesture/react";
 import { animConfigs, animFn as fn } from "./misc";
 import { formatMapString } from "@/utils/formatMapString";

@@ -1,4 +1,4 @@
-import { config, SpringValue, useSpring, Interpolation, SpringProps } from "react-spring";
+import { config, SpringValue, useSpring, Interpolation, SpringProps } from "@react-spring/web";
 import frames from "@/data/animationFrames.json";
 import { useMemo } from "react";
 import { AnimMaps } from "./animMaps.ts";

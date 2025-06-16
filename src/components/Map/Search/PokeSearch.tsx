@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import { pokemonSearchStore } from "@/stores/pokemonSearchStore";
 import { useMapStore } from "@/stores/useMapStore";
 import { useUIStore } from "@/stores/uiStore";
-import { animated as a, useSpringValue, config } from "react-spring";
+import { animated as a, useSpringValue, config } from "@react-spring/web";
 import { useSearchSelectionStore } from "./selectedSearchStore";
 import { SearchResultsList } from "./SearchResultsList";
 type PokeSearchResult = {
