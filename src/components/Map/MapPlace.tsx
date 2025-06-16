@@ -1,11 +1,6 @@
 import useMapStore from "@/stores/useMapStore";
 import { useGesture } from "@use-gesture/react";
-import {
-  useCallback,
-  useEffect,
-  useRef,
-  memo,
-} from "react";
+import { useCallback, useEffect, useRef, memo } from "react";
 
 interface MapPlaceProps {
   item: Record<string, any>;
@@ -25,26 +20,16 @@ const MapPlace = memo(function MapPlace({ item }: MapPlaceProps) {
       return;
     }
 
-    // setSelectedCoordinates([myCoords[0], myCoords[1] + 100]);
     setSelectedMap(item.id);
   }, []);
 
   useGesture(
     {
-      onMouseDown: () => handleClick(),
-      onTouchStart: () => handleClick(),
+      onClick: () => handleClick(),
     },
     { target: ref },
   );
 
-  // useEffect(() => {
-  //   const unsub = useMapStore.subscribe((state) => {
-  //     setIsSelectedMap(state.selectedMap === item.id);
-  //   });
-  //   return () => {
-  //     unsub();
-  //   };
-  // }, [item.id]);
   useEffect(() => {
     if (!ref.current) return;
     if (item.id.slice(0, 4).includes("MAP_") === false) return;
