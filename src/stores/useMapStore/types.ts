@@ -47,7 +47,6 @@ type MapStore = {
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
-  setSelectedCoordinates: (coords: number[]) => void;
   setMapScale: (n: number) => void;
   setMapOffset: (offset: number[]) => void;
   setHoveredMap: (map: string) => void;
