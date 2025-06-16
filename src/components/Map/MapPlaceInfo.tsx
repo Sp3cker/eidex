@@ -1,6 +1,6 @@
 import { animated, useSpring } from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import EncounterMonsList from "./EncounterMonsList";
 const SelectedLevel = () => {
   const selectedMapLabel = useMapStore((state) => state.selectedLevelLabel);
@@ -11,25 +11,13 @@ const MapPlaceInfo = () => {
   const show = useMapStore((state) => {
     return state.selectedMap !== null && state.dragging === false;
   });
-  const [spring, api] = useSpring(
+  const [spring] = useSpring(
     {
-      opacity: 0,
-      translate: 200,
+      opacity: show ? 1 : 0,
+      translate: show ? 0 : 200,
     },
-    [],
+    [show],
   );
-
-  useEffect(() => {
-    if (show) {
-      api.start({
-        config: { mass: 0.6, damping: 0.2 },
-        translate: 0,
-        opacity: 1,
-      });
-    } else {
-      api.start({ translate: 200 });
-    }
-  }, [show, api]);
 
   const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.currentTarget;
