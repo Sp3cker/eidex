@@ -33,12 +33,17 @@ const Types = () => {
       if (isSelected) {
         return {
           x: 0.4,
-          backgroundColor: "var(--color-gray-700)",
+          backgroundColor: isHovered
+            ? "var(--color-gray-600)"
+            : "var(--color-gray-700)",
         };
       }
       return {
-        x: isHovered ? 0.2 : 0,
         backgroundColor: "var(--color-gray-500)",
+        config: {
+          tension: 300,
+        },
+        x: isHovered ? 0.2 : 0,
       };
     },
     [selectedFilter, hoveredIndex],
@@ -69,7 +74,7 @@ const Types = () => {
             backgroundColor: spring.backgroundColor,
             transform: spring.x.to((x) => `translateX(${x}rem)`),
           }}
-          className="cursor-pointer rounded-lg border-2 p-1 text-center"
+          className="cursor-pointer transition-color rounded-lg border-2 p-1 text-center"
         >
           <p className={`font-pkmnem font-bold tracking-wider`}>
             {adjustTypeForDevice(getTypeName(validTypes[index]), "md")}
