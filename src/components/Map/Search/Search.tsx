@@ -20,7 +20,7 @@ const Search = () => {
     getMapsForItem,
   ] = useItemSearch();
   const [showError, setShowError] = useState(false);
-  const width = useSpringValue("20rem"); // Initialize with CSS value
+  const width = useSpringValue("10rem"); // Initialize with CSS value
   // Animate width based on selection state
   useEffect(() => {
     if (itemSearchSelected) {

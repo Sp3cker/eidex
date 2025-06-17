@@ -12,7 +12,7 @@ type PokeSearchResult = {
 const PokeSearch = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const { itemSearchSelected, setSearchSelected } = useSearchSelectionStore();
-  const width = useSpringValue("20rem"); // Initialize with smaller width
+  const width = useSpringValue("1rem"); // Initialize with smaller width
   const [searchResults, setSearchResults] = useState<PokeSearchResult[]>([]);
   const setSelectedPokemonByIndex = useUIStore(
     (state) => state.setSelectedPokemonByIndex,
