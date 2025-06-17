@@ -63,19 +63,19 @@ const Types = () => {
 
   return (
     <div className="grid w-full grid-cols-4 grid-rows-4 items-center justify-center gap-2 px-2 py-2 text-neutral-50">
-      {validTypes.map((typeId, index) => (
+      {springs.map((spring, index) => (
         <a.div
-          key={typeId}
+          key={index}
           {...bind(index)}
           style={{
-            borderColor: getTypeColor(typeId)[0],
-            backgroundColor: springs[index].backgroundColor,
-            transform: springs[index].x.to((x) => `translateX(${x}rem)`),
+            borderColor: getTypeColor(validTypes[index])[0],
+            backgroundColor: spring.backgroundColor,
+            transform: spring.x.to((x) => `translateX(${x}rem)`),
           }}
           className="cursor-pointer rounded-lg border-2 p-1 text-center bg-gray-500"
         >
           <p className={`font-pkmnem font-bold tracking-wider`}>
-            {adjustTypeForDevice(getTypeName(typeId), "md")}
+            {adjustTypeForDevice(getTypeName(validTypes[index]), "md")}
           </p>
         </a.div>
       ))}
