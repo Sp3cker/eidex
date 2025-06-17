@@ -5,17 +5,17 @@ import { getTypeColor, getTypeName, validTypes } from "@/utils/typeInfo";
 import adjustTypeForDevice from "@/utils/adjustType";
 import { useCallback, useState } from "react";
 
-const normal = {
-  x: 0,
-  backgroundColor: "var(--color-gray-500)",
-  config: {
-    tension: 300,
-  },
-};
-const selectedStlyes = {
-  x: 0.4,
-  backgroundColor: "var(--color-gray-700)",
-};
+// const normal = {
+//   x: 0,
+//   backgroundColor: "var(--color-gray-500)",
+//   config: {
+//     tension: 300,
+//   },
+// };
+// const selectedStlyes = {
+//   x: 0.4,
+//   backgroundColor: "var(--color-gray-700)",
+// };
 
 const Types = () => {
   const [selectedFilter, setFilter] = useFilterStore((state) => [
@@ -32,16 +32,13 @@ const Types = () => {
 
       if (isSelected) {
         return {
-          ...selectedStlyes,
-          backgroundColor: isHovered
-            ? "var(--color-gray-600)"
-            : "var(--color-gray-700)",
-
+          x: 0.4,
+          backgroundColor: "var(--color-gray-700)",
         };
       }
       return {
-        ...normal,
         x: isHovered ? 0.2 : 0,
+        backgroundColor: "var(--color-gray-500)",
       };
     },
     [selectedFilter, hoveredIndex],
@@ -72,7 +69,7 @@ const Types = () => {
             backgroundColor: spring.backgroundColor,
             transform: spring.x.to((x) => `translateX(${x}rem)`),
           }}
-          className="cursor-pointer rounded-lg border-2 p-1 text-center bg-gray-500"
+          className="cursor-pointer rounded-lg border-2 p-1 text-center"
         >
           <p className={`font-pkmnem font-bold tracking-wider`}>
             {adjustTypeForDevice(getTypeName(validTypes[index]), "md")}
