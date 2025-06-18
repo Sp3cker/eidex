@@ -5,17 +5,10 @@ import { getTypeColor, getTypeName, validTypes } from "@/utils/typeInfo";
 import adjustTypeForDevice from "@/utils/adjustType";
 import { useCallback, useState } from "react";
 
-// const normal = {
-//   x: 0,
-//   backgroundColor: "var(--color-gray-500)",
-//   config: {
-//     tension: 300,
-//   },
-// };
-// const selectedStlyes = {
-//   x: 0.4,
-//   backgroundColor: "var(--color-gray-700)",
-// };
+// had problems using CSS VAriables
+const gray500 = "#6b7280"; // Tailwind gray-500
+const gray600 = "#4b5563"; // Tailwind gray-600
+const gray700 = "#374151"; // Tailwind gray-700
 
 const Types = () => {
   const [selectedFilter, setFilter] = useFilterStore((state) => [
@@ -30,21 +23,19 @@ const Types = () => {
       const isSelected = selectedFilter?.includes(validTypes[i]);
       const isHovered = hoveredIndex === i;
 
-      if (isSelected) {
-        return {
-          x: 0.4,
-          backgroundColor: isHovered
-            ? "var(--color-gray-600)"
-            : "var(--color-gray-700)",
-        };
-      }
-      return {
-        backgroundColor: "var(--color-gray-500)",
-        config: {
-          tension: 300,
-        },
-        x: isHovered ? 0.2 : 0,
-      };
+     return {
+      x: isSelected ? 0.4 : isHovered ? 0.2 : 0,
+      backgroundColor: isSelected
+        ? isHovered
+          ? gray700
+          : gray600
+        : gray500,
+      config: {
+        tension: 300,
+        mass:2
+
+      },
+    };
     },
     [selectedFilter, hoveredIndex],
   );
@@ -64,7 +55,7 @@ const Types = () => {
   }, []);
 
   return (
-    <div className="grid w-full grid-cols-4 grid-rows-4 items-center justify-center gap-2 px-2 py-2 text-neutral-50">
+    <div className="grid w-full grid-cols-4 grid-rows-4 items-center justify-center gap-2 px-2 py-2 text-neutral-100">
       {springs.map((spring, index) => (
         <a.div
           key={index}
@@ -74,7 +65,7 @@ const Types = () => {
             backgroundColor: spring.backgroundColor,
             transform: spring.x.to((x) => `translateX(${x}rem)`),
           }}
-          className="cursor-pointer transition-color rounded-lg border-2 p-1 text-center"
+          className="cursor-pointer rounded-lg border-2 p-1 text-center"
         >
           <p className={`font-pkmnem font-bold tracking-wider`}>
             {adjustTypeForDevice(getTypeName(validTypes[index]), "md")}

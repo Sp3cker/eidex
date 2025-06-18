@@ -7,7 +7,11 @@ import path from "path";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      babel: {
+        plugins: [["babel-plugin-react-compiler", { target: "19" }]],
+      },
+    }),
     cloudflare({
       configPath: "./wrangler.toml",
       persistState: true,
@@ -36,5 +40,4 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: ["./src/test/setup.ts"],
   },
-
 });
