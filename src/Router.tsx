@@ -20,7 +20,7 @@ const useLocToScroll = () => {
 const AppRouter = () => {
   const scrollClase = useLocToScroll();
   return (
-    <div className="flex h-screen flex-col bg-sky-600">
+    <div className="flex h-screen flex-col bg-zinc-800">
       <Header />
       <main className={`flex-1 ${scrollClase}`}>
         <Router>
