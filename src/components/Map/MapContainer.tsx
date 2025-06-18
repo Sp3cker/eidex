@@ -15,7 +15,7 @@ const MapContainer = ({ children }: any) => {
 
   const [{ scale, centerOffset }, api] = useSpring(() => {
     let currentTargetCenterOffset = [400, 340]; // Default if no coordinates or mapRef
-    let currentSpringConfig = {
+    const currentSpringConfig = {
       mass: 5,
       tension: 800,
       friction: 200,

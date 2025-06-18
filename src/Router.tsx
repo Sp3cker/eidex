@@ -8,13 +8,7 @@ import Header from "@/components/ui/Header";
 import Footer from "./components/ui/Footer";
 
 const MapComponent = () => (
-  <Suspense
-    fallback={
-      <div className="flex h-full w-full bg-zinc-500">
-        <h1>Loading Map!</h1>
-      </div>
-    }
-  >
+  <Suspense fallback={<LoadingSpinner />}>
     <Map />
   </Suspense>
 );
@@ -26,7 +20,7 @@ const useLocToScroll = () => {
 const AppRouter = () => {
   const scrollClase = useLocToScroll();
   return (
-    <div className="flex h-screen flex-col bg-zinc-800">
+    <div className="flex h-screen flex-col bg-sky-600">
       <Header />
       <main className={`flex-1 ${scrollClase}`}>
         <Router>

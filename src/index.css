@@ -88,6 +88,18 @@ input[type="number"] {
 }
 
 @layer utilities {
+  .fade-in {
+    animation: fadeIn 0.3s cubic-bezier(0, 0.4, 0.6, 1);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   .rendering-pixelated {
     image-rendering: pixelated;
   }
@@ -247,11 +259,9 @@ input[type="number"] {
 @keyframes fadeInFooter {
   from {
     opacity: 0;
-
   }
   to {
     opacity: 1;
-
   }
 }
 .fade-in-footer {

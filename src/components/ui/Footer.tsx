@@ -9,26 +9,25 @@ const Footer = () => {
         className: "text-baseline md:text-xl cursor-pointer hover:sepia  ",
       }}
     >
-      <div className="bg-gray-700  fade-in-footer z-10 flex w-full select-none items-center justify-between  px-2 ring md:relative md:bottom-auto">
+      <div className="fade-in-footer z-10 flex w-full items-center justify-between bg-gray-700 px-2 ring md:relative md:bottom-auto">
         <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">
-          <p> Dex by Kildemal{" – "}</p>
+          <p> Dex by Kildemal</p>
           <p>
             <a
               href="https://www.youtube.com/watch?v=Vhh_GeBPOhs"
               target="__blank"
             >
-              Map by Specker
+              Map by Specker ☻
             </a>
           </p>
         </div>
         <div className="flex flex-col sm:w-80">
-
-        <p className="font-pkmnem leading-xs text-sm/3 text-white ">
-          Data&nbsp;for E.I.&nbsp;1.2
-        </p>
-        <p className="font-pkmnem leading-xs text-sm/3 text-white ">
-          Send me ideas on Discord!{" "}
-        </p>
+          <p className="font-pkmnem leading-xs text-sm/3 text-white">
+            Data&nbsp;for E.I.&nbsp;1.2
+          </p>
+          <p className="font-pkmnem leading-xs text-sm/3 text-white">
+            Tell your friends!{" "}
+          </p>
         </div>
         <div className="flex items-center justify-end gap-5">
           <div className="md:w-full">
