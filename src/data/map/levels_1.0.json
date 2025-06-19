@@ -2420,7 +2420,7 @@
      "scriptName": "Event Script",
      "items": [],
      "pokemon": [
-      "SPECIES_KLAWF"
+      "SPECIES_EEVEE"
      ]
     }
    ],
@@ -2976,7 +2976,15 @@
    "baseMap": "MAP_LILYCOVE_CITY",
    "levelLabel": "House1",
    "thisLevelsId": "MAP_LILYCOVE_CITY_HOUSE1",
-   "scriptedGives": [],
+   "scriptedGives": [
+    {
+     "scriptName": "House1",
+     "items": [],
+     "pokemon": [
+      "SPECIES_TYPE_NULL"
+     ]
+    }
+   ],
    "shopItems": [],
    "trainers": [],
    "pickupItems": [],
@@ -4331,7 +4339,7 @@
      "scriptName": "Steven's House",
      "items": [],
      "pokemon": [
-      "SPECIES_MELTAN"
+      "SPECIES_BELDUM"
      ]
     }
    ],
@@ -5293,15 +5301,7 @@
    "baseMap": "MAP_OLDALE_TOWN",
    "levelLabel": "Pokemon Center1 F",
    "thisLevelsId": "MAP_OLDALE_TOWN_POKEMON_CENTER_1F",
-   "scriptedGives": [
-    {
-     "scriptName": "Pokemon Center",
-     "items": [],
-     "pokemon": [
-      "SPECIES_SENTRET"
-     ]
-    }
-   ],
+   "scriptedGives": [],
    "shopItems": [],
    "trainers": [],
    "pickupItems": [],
@@ -5395,15 +5395,7 @@
    "baseMap": "MAP_PACIFIDLOG_TOWN",
    "levelLabel": "Pokemon Center1 F",
    "thisLevelsId": "MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_1F",
-   "scriptedGives": [
-    {
-     "scriptName": "Pokemon Center",
-     "items": [],
-     "pokemon": [
-      "SPECIES_DRATINI"
-     ]
-    }
-   ],
+   "scriptedGives": [],
    "shopItems": [],
    "trainers": [],
    "pickupItems": [],
@@ -5429,8 +5421,7 @@
     {
      "scriptName": "Event Script",
      "items": [
-      "ITEM_EXP_SHARE",
-      "ITEM_HEX_ORB"
+      "ITEM_EXP_SHARE"
      ],
      "pokemon": []
     },
@@ -5535,7 +5526,7 @@
       68
      ],
      "trainer_type": "TRAINER_TYPE_NORMAL",
-     "script": "PetalburgCity_Gym_EventScript_Parker"
+     "script": "PetalburgCity_Gym_EventScript_George"
     },
     {
      "coords": [
@@ -5961,13 +5952,6 @@
      "scriptName": "Event Script",
      "items": [
       "ITEM_WHITE_HERB"
-     ],
-     "pokemon": []
-    },
-    {
-     "scriptName": "Event Script",
-     "items": [
-      "ITEM_HEX_ORB"
      ],
      "pokemon": []
     },
@@ -6735,27 +6719,44 @@
      "scriptName": "Seashore House",
      "items": [],
      "pokemon": [
-      "SPECIES_TYROGUE",
-      "SPECIES_PANSAGE",
-      "SPECIES_PANPOUR",
-      "SPECIES_PANSEAR",
-      "SPECIES_MISDREAVUS",
-      "SPECIES_PINSIR",
-      "SPECIES_HERACROSS",
-      "SPECIES_SCYTHER",
-      "SPECIES_EEVEE",
-      "SPECIES_MAGBY",
-      "SPECIES_ELEKID",
-      "SPECIES_SMOOCHUM",
-      "SPECIES_RIOLU",
-      "SPECIES_TOGEPI",
-      "SPECIES_TYPE_NULL",
       "SPECIES_CHARCADET"
      ]
+    },
+    {
+     "scriptName": "Seashore House",
+     "items": [
+      "ITEM_SODA_POP"
+     ],
+     "pokemon": []
     }
    ],
    "shopItems": [],
-   "trainers": [],
+   "trainers": [
+    {
+     "coords": [
+      2,
+      3
+     ],
+     "trainer_type": "TRAINER_TYPE_NORMAL",
+     "script": "Route109_SeashoreHouse_EventScript_Dwayne"
+    },
+    {
+     "coords": [
+      14,
+      9
+     ],
+     "trainer_type": "TRAINER_TYPE_NORMAL",
+     "script": "Route109_SeashoreHouse_EventScript_Simon"
+    },
+    {
+     "coords": [
+      10,
+      5
+     ],
+     "trainer_type": "TRAINER_TYPE_NORMAL",
+     "script": "Route109_SeashoreHouse_EventScript_Johanna"
+    }
+   ],
    "pickupItems": [],
    "image": "Route109_SeashoreHouse"
   }
@@ -7505,6 +7506,13 @@
       "ITEM_LOADED_DICE"
      ],
      "pokemon": []
+    },
+    {
+     "scriptName": "Event Script",
+     "items": [],
+     "pokemon": [
+      "SPECIES_TYROGUE"
+     ]
     }
    ],
    "shopItems": [],
@@ -7686,7 +7694,15 @@
    "baseMap": "MAP_ROUTE111",
    "levelLabel": "Old Ladys Rest Stop",
    "thisLevelsId": "MAP_ROUTE111_OLD_LADYS_REST_STOP",
-   "scriptedGives": [],
+   "scriptedGives": [
+    {
+     "scriptName": "Old Ladys Rest Stop",
+     "items": [],
+     "pokemon": [
+      "SPECIES_RIOLU"
+     ]
+    }
+   ],
    "shopItems": [],
    "trainers": [],
    "pickupItems": [],
@@ -9291,7 +9307,7 @@
      "scriptName": "Event Script",
      "items": [],
      "pokemon": [
-      "SPECIES_JIRACHI"
+      "SPECIES_MELTAN"
      ]
     }
    ],
@@ -11001,7 +11017,15 @@
    "baseMap": "MAP_RUSTBORO_CITY",
    "levelLabel": "Pokemon Center1 F",
    "thisLevelsId": "MAP_RUSTBORO_CITY_POKEMON_CENTER_1F",
-   "scriptedGives": [],
+   "scriptedGives": [
+    {
+     "scriptName": "Pokemon Center",
+     "items": [],
+     "pokemon": [
+      "SPECIES_TOGEPI"
+     ]
+    }
+   ],
    "shopItems": [],
    "trainers": [],
    "pickupItems": [],

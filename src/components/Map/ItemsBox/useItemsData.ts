@@ -1,7 +1,7 @@
 import useMapStore from "@/stores/useMapStore";
 
-import { Item } from "@/data/map";
-import { ItemsByMap } from "@/utils/itemsData";
+import type { Item, LevelScriptedEvent } from "@/data/map";
+import type { ItemsByMap } from "@/utils/itemsData";
 import { useMemo, useEffect, useState } from "react";
 
 export interface ItemWithAmount extends Item {
@@ -17,7 +17,7 @@ export type ItemsToReturn = {
   items:
     | {
         type: "story";
-        items: { scriptName: string; items: Item[]; pokemon: string[] }[];
+        items: LevelScriptedEvent[];
       }
     | { type: "marts"; items: Item[] }
     | { type: "pickup"; items: Item[] };
@@ -30,7 +30,10 @@ export const hasAnyItems = (items: ItemsByMap | null): boolean => {
   );
 };
 /** Zustand state comparator */
-function itemsArrayEqual(a?: ItemsByMap | null, b?: ItemsByMap | null): boolean {
+function itemsArrayEqual(
+  a?: ItemsByMap | null,
+  b?: ItemsByMap | null,
+): boolean {
   if (a === b) return true;
   if (!a || !b) return false;
 
@@ -76,8 +79,8 @@ function sumItemsByName<T extends { name: string }>(items: T[]): T[] {
   return Array.from(map.values());
 }
 export const useItemsData = (selectedTab: TabType): ItemsToReturn => {
-  const [items, setItems] = useState<ItemsByMap | null>(() => 
-    useMapStore.getState().selectedMapItems
+  const [items, setItems] = useState<ItemsByMap | null>(
+    () => useMapStore.getState().selectedMapItems,
   );
 
   useEffect(() => {
@@ -91,8 +94,8 @@ export const useItemsData = (selectedTab: TabType): ItemsToReturn => {
       (newItems) => setItems(newItems ?? null),
       {
         equalityFn: itemsArrayEqual,
-        fireImmediately: false
-      }
+        fireImmediately: false,
+      },
     );
 
     return unsubscribe;
@@ -119,34 +122,38 @@ export const useItemsData = (selectedTab: TabType): ItemsToReturn => {
       pickup: items.pickupItems.length > 0,
     };
     if (selectedTab === "story") {
-      const groupedAndSummed = Object.values(
-        items.scriptedGives.reduce(
-          (acc, curr) => {
-            if (!acc[curr.scriptName]) {
-              acc[curr.scriptName] = {
-                scriptName: curr.scriptName,
-                items: [],
-                pokemon: [],
-              };
-            }
-            acc[curr.scriptName].items.push(...curr.items);
-            acc[curr.scriptName].pokemon.push(...curr.pokemon);
-            return acc;
-          },
-          {} as Record<
-            string,
-            { scriptName: string; items: Item[]; pokemon: string[] }
-          >,
-        ),
-      ).map((group) => ({
-        scriptName: group.scriptName,
-        items: sumItemsByName(group.items),
-        pokemon: group.pokemon,
-      }));
+      // const groupedAndSummed = Object.values(
+      //   items.scriptedGives.reduce<
+      //     Record<
+      //       string,
+      //       LevelScriptedEvent & {
+      //         items: Item[];
+      //         pokemon: LevelScriptedEventMon[];
+      //       }
+      //     >
+      //   >((acc, curr) => {
+      //     if (!acc[curr.explanation]) {
+      //       acc[curr.explanation] = {
+      //         scriptName: curr.scriptName,
+      //         explanation: curr.explanation,
+      //         items: [],
+      //         pokemon: [],
+      //       };
+      //     }
+      //     acc[curr.explanation].items.push(...curr.items);
+      //     acc[curr.explanation].pokemon.push(...curr.pokemon);
+      //     return acc;
+      //   }, {}),
+      // ).map((group) => ({
+      //   explanation: group.explanation,
+      //   scriptName: group.scriptName,
+      //   items: sumItemsByName(group.items) as ItemWithAmount[],
+      //   pokemon: group.pokemon,
+      // })) as LevelScriptedEvent[];
 
       return {
         whatToShow,
-        items: { type: "story" as const, items: groupedAndSummed },
+        items: { type: "story" as const, items: items.scriptedGives },
       };
     } else if (selectedTab === "marts") {
       return {

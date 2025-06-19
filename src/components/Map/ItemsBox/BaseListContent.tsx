@@ -11,7 +11,9 @@ export const EmptyState = React.memo(function EmptyState({
     </p>
   );
 });
-
+/**
+ * Basically draws boxes around your render functions.
+ */
 interface BaseListContentProps<T> {
   items: T[];
   emptyMessage?: string;

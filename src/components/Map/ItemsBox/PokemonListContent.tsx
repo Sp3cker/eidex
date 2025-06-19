@@ -1,15 +1,13 @@
 import React from "react";
 import { formatSpeciesString } from "@/utils/formatMapString";
 import { BaseListContent } from "./BaseListContent";
-
+import { LevelScriptedEventMon } from "@/data/map";
 interface PokemonListItem {
   name: string;
-  id: string;
-  description?: string;
 }
 
 interface PokemonListContentProps {
-  pokemon: string[];
+  pokemon: LevelScriptedEventMon[];
   emptyMessage?: string;
 }
 
@@ -24,7 +22,7 @@ const renderContent = (item: PokemonListItem) => (
     {item.name}
   </h3>
 );
-const getKey = (item: PokemonListItem) => item.id;
+const getKey = (item: PokemonListItem) => item.name;
 
 export const PokemonListContent = React.memo(function PokemonListContent({
   pokemon,
@@ -32,8 +30,9 @@ export const PokemonListContent = React.memo(function PokemonListContent({
 }: PokemonListContentProps) {
   // Convert pokemon strings to the expected format
   const pokemonItems: PokemonListItem[] = pokemon.map((p) => ({
-    name: formatSpeciesString(p),
-    id: p,
+    name: formatSpeciesString(p.species),
+    id: p.species,
+    level: p.level,
     description: "", // No description for pokemon
   }));
 
@@ -41,7 +40,7 @@ export const PokemonListContent = React.memo(function PokemonListContent({
     <BaseListContent
       items={pokemonItems}
       emptyMessage={emptyMessage}
-      className="border-yellow-200 bg-gradient-to-r from-yellow-50/50 to-white-50 text-yellow-900 hover:bg-yellow-100"
+      className="to-white-50 border-yellow-200 bg-gradient-to-r from-yellow-50/50 text-yellow-900 hover:bg-yellow-100"
       renderIcon={renderIcon}
       renderContent={renderContent}
       getKey={getKey}
