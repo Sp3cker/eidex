@@ -6025,19 +6025,7 @@
    "baseMap": "MAP_OLDALE_TOWN",
    "levelLabel": "House2",
    "thisLevelsId": "MAP_OLDALE_TOWN_HOUSE2",
-   "scriptedGives": [
-    {
-     "items": [
-      {
-       "name": "ITEM_SHINY_CHARM",
-       "quantity": 1
-      }
-     ],
-     "pokemon": [],
-     "explanation": "Be a real OG – Talk to a man in House 2",
-     "scriptName": "House2"
-    }
-   ],
+   "scriptedGives": [],
    "shopItems": [],
    "trainers": [],
    "pickupItems": [],
@@ -6207,7 +6195,7 @@
       }
      ],
      "pokemon": [],
-     "explanation": "Speak to Scott",
+     "explanation": "Speak to Scott (dude with sunglasses).",
      "scriptName": "Event Script"
     },
     {
@@ -6288,7 +6276,7 @@
       }
      ],
      "pokemon": [],
-     "explanation": "Defeat your father",
+     "explanation": "Whoop your father's ass",
      "scriptName": "Gym"
     }
    ],
