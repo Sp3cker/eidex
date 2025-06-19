@@ -19,7 +19,7 @@ interface BaseListContentProps<T> {
   emptyMessage?: string;
   className?: string;
   renderIcon?: (item: T) => React.ReactNode;
-  renderContent?: (item: T) => React.ReactNode;
+  renderContent: (item: T) => React.ReactNode;
   getKey?: (item: T, index: number) => string | number;
 }
 
@@ -45,20 +45,7 @@ export function BaseListContent<T>({
           {renderIcon && renderIcon(item)}
 
           <div className="flex min-w-0 flex-1 flex-col">
-            {renderContent ? (
-              renderContent(item)
-            ) : (
-              <>
-                <h3 className="text-xs/4 font-bold md:text-sm">
-                  {(item as { name?: string }).name || "Unnamed"}
-                </h3>
-                {(item as { description?: string }).description && (
-                  <p className="font-pkmnem text-shadow-2xs leading-4">
-                    {(item as { description?: string }).description}
-                  </p>
-                )}
-              </>
-            )}
+            {renderContent(item)}
           </div>
         </div>
       ))}

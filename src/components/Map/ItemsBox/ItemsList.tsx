@@ -10,7 +10,6 @@ const ItemsList = memo(function ItemsList() {
 
   const { whatToShow, items } = useItemsData(selectedTab);
   useEffect(() => {
-
     if (whatToShow.story === false && whatToShow.marts === false) {
       setSelectedTab("pickup"); // pickup could be false too but whatev
     } else if (whatToShow.story) {
@@ -28,12 +27,14 @@ const ItemsList = memo(function ItemsList() {
         whatToShow={whatToShow}
       />
       {whatToShow.story && selectedTab === "story" ? (
-
         //@ts-ignore
         <StoryItems scriptedGives={items.items} />
       ) : (
         //@ts-ignore
-        <ItemListContent items={items.items} />
+        <ItemListContent
+          items={items.items}
+          showPrice={selectedTab === "marts"}
+        />
       )}
     </>
   );

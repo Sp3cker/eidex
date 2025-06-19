@@ -4,7 +4,7 @@ import { useCallback, useState } from "react";
 import EncounterMonsList from "./EncounterMonsList";
 const SelectedLevel = () => {
   const selectedMapLabel = useMapStore((state) => state.selectedLevelLabel);
-  return <h3>{selectedMapLabel}</h3>;
+  return <h3 className="font-bold text-sm text-neutral-700">{selectedMapLabel}</h3>;
 };
 const MapPlaceInfo = () => {
   const [selectedTab, setSelectedTab] = useState("land");
