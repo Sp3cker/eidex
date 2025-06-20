@@ -2,7 +2,7 @@ import React from "react";
 import { useEvolutionData } from "@/hooks/useEvolutionData";
 import { pokemonDataMap } from "@/data/pokemon";
 import { useUIStore } from "@/stores/uiStore";
-import { RootLookupMap, FamilyTreeMap, type FamilyTreeNode } from "../../utils/evolutionFamilies";
+import { RootLookupMap, FamilyTreeMap, type FamilyTreeNode } from "@/utils/evolutionFamilies";
 import EvolutionChain from "./EvolutionChain";
 import BranchingEvolutionTree from "./BranchingEvolutionTree";
 import './evolutions.css'
@@ -11,14 +11,12 @@ interface EvolutionDetailsProps {
 }
 
 const EvolutionDetails: React.FC<EvolutionDetailsProps> = ({ speciesId }) => {
-  const selectedPokemon = useUIStore((state) => state.selectedPokemon);
   const setSelectedPokemon = useUIStore((state) => state.setSelectedPokemon);
   const evolutionData = useEvolutionData(speciesId);
 
   const handlePokemonClick = (id: number) => {
     const pokemon = pokemonDataMap[id.toString()];
     if (pokemon) {
-      console.log(`Clicked on ${pokemon.speciesName}`, pokemon);
       setSelectedPokemon(pokemon);
       // You can add navigation logic here if needed
     }
@@ -33,7 +31,6 @@ const EvolutionDetails: React.FC<EvolutionDetailsProps> = ({ speciesId }) => {
   }
 
   const { parentId, allDescendants } = evolutionData;
-  const currentPokemon = pokemonDataMap[speciesId.toString()];
   const parentPokemon = parentId ? pokemonDataMap[parentId.toString()] : null;
 
   // Determine if we should use branching layout

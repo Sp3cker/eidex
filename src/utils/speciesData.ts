@@ -23,3 +23,7 @@ export function hasForms(pokemon: Pokemon): boolean {
   const forms = speciesData.filter((species) => species.dexId === pokemon.dexId);
   return forms.length > 1;
 }
+
+export function getForms(pokemon: Pokemon): Pokemon[] {
+  return speciesData.filter((species) => species.dexId === pokemon.dexId);
+}

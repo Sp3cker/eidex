@@ -15,11 +15,11 @@ const TypeMatchup = lazy(() => import("./TypeMatchup"));
 import { TypeBadge } from "../TypeBadges/TypeBadge";
 import StatBars from "./StatBars";
 const FormeView = lazy(() =>
-  import("../FormeView/FormeView").then((module) => ({
+  import("./FormeView/FormeView").then((module) => ({
     default: module.FormeView,
   })),
 );
-const EvolutionView = lazy(() => import("../EvolutionView/EvolutionDetails"));
+const EvolutionView = lazy(() => import("./EvolutionView/EvolutionDetails"));
 function PokemonView({ pokemon }: { pokemon: Pokemon }) {
   const setSelectedPokemon = useUIStore((state) => state.setSelectedPokemon);
   const isShiny = useUIStore((state) => state.isShiny);

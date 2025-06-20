@@ -1,6 +1,6 @@
 import React from 'react';
-import { type FamilyTreeNode } from '../../utils/evolutionFamilies';
-import { RootLookupMap, FamilyTreeMap } from '../../utils/evolutionFamilies';
+import { type FamilyTreeNode } from '@/utils/evolutionFamilies';
+import { RootLookupMap, FamilyTreeMap } from '@/utils/evolutionFamilies';
 import EvolutionNodeCard from './EvolutionNodeCard';
 
 interface BranchingEvolutionTreeProps {
