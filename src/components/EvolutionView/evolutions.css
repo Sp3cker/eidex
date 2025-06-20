@@ -1,0 +1,42 @@
+/* Evolution Tree Styling */
+.evolution-connection-line {
+  transition: all 0.2s ease;
+  background: #9ca3af;
+  border-radius: 1px;
+}
+
+.evolution-method-badge {
+  background: rgba(31, 41, 55, 0.6);
+  border: 1px solid rgba(107, 114, 128, 0.3);
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+
+
+/* Ensure proper spacing for evolution trees */
+.evolution-tree-container {
+  position: relative;
+  isolation: isolate;
+  /* Ensure horizontal scrolling works properly */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+.evolution-tree-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.evolution-tree-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.evolution-tree-container::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 3px;
+}
+
+.evolution-tree-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}

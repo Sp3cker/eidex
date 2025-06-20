@@ -1,4 +1,4 @@
-import { findRootSpecies } from "@/utils/evoFamily";
+import { RootLookupMap } from "@/utils/evolutionFamilies";
 import { Pokemon } from "../../../types";
 import { getMoveData } from "../../../utils/moveData";
 import MoveEntry from "./MoveEntry";
@@ -53,8 +53,8 @@ export const buildPokemonMoveTabs = (pokemon: Pokemon) => [
     content: (
       <div className="text-center font-bold text-white">
         {(() => {
-          const rootSpeciesId = findRootSpecies(pokemon.dexId);
-          const rootSpecies = getSpeciesData(rootSpeciesId);
+          const rootSpeciesId = RootLookupMap.get(pokemon.dexId);
+          const rootSpecies = getSpeciesData(rootSpeciesId || 0);
           return (rootSpecies.eggMoves ?? []).length > 0 ? (
             <ul>
               {(rootSpecies.eggMoves ?? []).map((moveId, index) => {

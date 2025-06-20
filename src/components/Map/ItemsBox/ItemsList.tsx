@@ -4,6 +4,7 @@ import TabNavigation from "./Tabs";
 import ItemListContent from "./ItemListContent";
 import { TabType, useItemsData } from "./useItemsData";
 import StoryItems from "./StoryItems";
+import { ItemWithAmount, LevelScriptedEvent } from "@/data/map";
 
 const ItemsList = memo(function ItemsList() {
   const [selectedTab, setSelectedTab] = useState<TabType>("story");
@@ -27,12 +28,10 @@ const ItemsList = memo(function ItemsList() {
         whatToShow={whatToShow}
       />
       {whatToShow.story && selectedTab === "story" ? (
-        //@ts-ignore
-        <StoryItems scriptedGives={items.items} />
+        <StoryItems scriptedGives={items.items as LevelScriptedEvent[]} />
       ) : (
-        //@ts-ignore
         <ItemListContent
-          items={items.items}
+          items={items.items as ItemWithAmount[]}
           showPrice={selectedTab === "marts"}
         />
       )}

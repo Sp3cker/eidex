@@ -1,6 +1,7 @@
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import { lazy, Suspense, useEffect } from "react";
 import "./App.css";
+import { ErrorBoundary } from "react-error-boundary";
 
 const PokemonList = lazy(() => import("./components/PokemonList/PokemonList"));
 const DrawerContainer = lazy(() => import("./components/Drawer"));
@@ -17,7 +18,10 @@ function App() {
       </div>
       <div className="order-1 md:order-2 md:w-2/5 md:pl-1 bg-gray-800">
         <Suspense fallback={<LoadingSpinner />}>
+        <ErrorBoundary fallback={<p>whups</p>}>
+
           <DrawerContainer />
+        </ErrorBoundary>
         </Suspense>
       </div>
     </div>

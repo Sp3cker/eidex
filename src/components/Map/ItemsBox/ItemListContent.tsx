@@ -1,4 +1,4 @@
-import React from "react";
+
 import { getItemSpriteStyle } from "@/utils/itemSprites";
 import { BaseListContent } from "./BaseListContent";
 import { ItemWithAmount } from "@/data/map";

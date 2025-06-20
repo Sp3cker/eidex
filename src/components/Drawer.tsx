@@ -13,6 +13,7 @@ import { useSpring, animated } from "@react-spring/web";
 import { useUIStore } from "@/stores/uiStore";
 import LoadingSpinner from "./ui/LoadingSpinner";
 import PokemonModal from "./PokemonModal";
+import { ErrorBoundary } from "react-error-boundary";
 const DrawerContent = lazy(() => import("./DrawerContent"));
 
 const Drawer = ({ currOpen, toggleOpen, currTailwindSize, ...props }: any) => {
@@ -86,7 +87,7 @@ const DrawerContainer = (props: any) => {
     }
   }, [props.closeDrawer]);
   return (
-    <div ref={containerRef} className="bg-gray-800 h-full w-full">
+    <div ref={containerRef} className="h-full w-full bg-gray-800">
       {currBreakpoint === "md" ? (
         <Suspense fallback={<LoadingSpinner />}>
           <DrawerContent />
@@ -108,7 +109,9 @@ const DrawerContainer = (props: any) => {
               <DrawerContent />
             </Suspense>
           </Drawer>
-          <PokemonModal />
+          <ErrorBoundary fallback={<p>Whups</p>}>
+            <PokemonModal />
+          </ErrorBoundary>
         </>
       )}
     </div>
