@@ -56,12 +56,9 @@ const EvolutionDetails: React.FC<EvolutionDetailsProps> = ({ speciesId }) => {
   const useBranchingLayout = shouldUseBranchingLayout();
 
   return (
-    <div className="neutral-box space-y-4 rounded-md mx-[-1rem] text-sm text-gray-200">
+    <div className="font-calamity neutral-box space-y-4 rounded-md mx-[-1rem] text-sm text-gray-200">
       <h3 className="text-center text-lg font-bold">
-        Evolution Chain:{" "}
-        {selectedPokemon?.speciesName ||
-          currentPokemon?.speciesName ||
-          "Unknown"}
+        Evolution
       </h3>
 
       {/* Evolution Chain - Choose layout based on tree structure */}

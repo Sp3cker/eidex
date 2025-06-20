@@ -64,7 +64,7 @@ const HorizontalEvolutionChain: React.FC<HorizontalEvolutionChainProps> = ({
   if (!currentChain) return null;
 
   return (
-    <div className="flex items-center justify-center overflow-x-auto min-h-[140px] py-6 px-4">
+    <div className="font-calamity flex items-center justify-center overflow-x-auto min-h-[140px] py-6 px-4">
       <div className="flex items-center space-x-4">
         {currentChain.map((node, index) => (
           <React.Fragment key={node.speciesId}>
@@ -81,10 +81,10 @@ const HorizontalEvolutionChain: React.FC<HorizontalEvolutionChainProps> = ({
             
             {/* Show arrow and method if this is not the last item */}
             {index < currentChain.length - 1 && (
-              <div className="flex flex-col items-center justify-center flex-shrink-0">
+              <div className="flex font-pmknem flex-col items-center justify-center flex-shrink-0">
                 <ArrowIcon />
                 {currentChain[index + 1].method && (
-                  <div className="text-xs text-gray-500 text-center mt-1 max-w-[90px] leading-tight">
+                  <div className="font-bold text-lg font-pkmnem text-gray-400 text-center max-w-[90px] leading-tight">
                     {currentChain[index + 1].method}
                   </div>
                 )}
