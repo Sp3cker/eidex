@@ -16,12 +16,12 @@ const TypeBadge = React.memo(function TypeBadge({
   const name = adjustTypeForDevice(getTypeName(typeId), screenWidth);
   const color = getTypeSnapColor(typeId);
   const icon = typeIcons[typeId];
-
+  const width = screenWidth === 'sm' ? 'w-[4.5rem]':'w-[5rem]'
   const spriteBackground = makeBackgroundStyle(color, screenWidth);
 
   return (
-    <span
-      className="relative inline-flex h-[1.5rem] w-[5rem] select-none items-center overflow-hidden rounded-full"
+    <div
+      className={`relative inline-flex h-[1.25rem] pt-0.25 ${width} select-none items-center overflow-hidden rounded-full`}
       style={{ background: spriteBackground }}
     >
       <span className="flex h-full w-full flex-row items-center">
@@ -43,7 +43,7 @@ const TypeBadge = React.memo(function TypeBadge({
           </p>
         </span>
       </span>
-    </span>
+    </div>
   );
 });
 

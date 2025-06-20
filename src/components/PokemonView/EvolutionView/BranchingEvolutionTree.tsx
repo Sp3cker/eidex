@@ -130,7 +130,7 @@ const BranchingEvolutionTree: React.FC<BranchingEvolutionTreeProps> = ({
   if (!familyTree) return null;
 
   return (
-    <div className="evolution-tree-container overflow-x-auto overflow-y-visible min-h-[300px] py-8 px-4">
+    <div className="evolution-tree-container overflow-x-auto overflow-y-visible py-8 px-1">
       <div className="flex flex-col items-center justify-start min-w-max">
         <EvolutionStage
           node={familyTree}

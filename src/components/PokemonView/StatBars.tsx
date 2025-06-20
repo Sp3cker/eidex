@@ -48,16 +48,16 @@ export default function StatBars({ stats }: StatBarsProps) {
   });
 
   return (
-    <div className="neutral-box flex h-[136px] w-full select-none flex-col gap-1 rounded-sm p-2">
+    <div className="pkmnem-face-shadow neutral-box items-center flex h-[10rem] w-full flex-col gap-1 rounded-sm p-2">
       {transitions((springs, stat, _, index) => (
         <div
           key={stat.label}
-          className="mx-auto flex h-4 w-full items-center gap-2"
+          className="flex h-4 w-full items-center gap-3"
         >
-          <span className="font-pixel w-8 text-sm text-gray-200">
+          <p className="font-calamity w-5 text-xs text-neutral-200">
             {STAT_LABELS[index]}
-          </span>
-          <div className="relative h-4 flex-1 overflow-hidden">
+          </p>
+          <div className="relative h-4 flex-1 overflow-hidden pt-1">
             <animated.div
               style={{ opacity: springs.opacity }}
               className={`stat-bar ${getBarColor(stat.stat)} absolute h-2 w-full rounded rounded-sm`}
@@ -71,9 +71,9 @@ export default function StatBars({ stats }: StatBarsProps) {
               }}
             />
           </div>
-          <span className="font-pixel w-8 text-right text-sm text-gray-300">
+          <p className="mt-[-0.1rem] font-pkmnem pkmnem-face-shadow w-8 text-left text-lg font-bold tracking-wide text-neutral-100">
             {stat.stat}
-          </span>
+          </p>
         </div>
       ))}
     </div>

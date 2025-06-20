@@ -1,6 +1,6 @@
 import React from "react";
 import { pokemonDataMap } from "@/data/pokemon";
-import Evolution from "./Evolution"; // Your existing sprite component
+import EvolutionSprite from "./EvolutionSprite"; // Your existing sprite component
 
 interface EvolutionNodeCardProps {
   speciesId: number;
@@ -64,7 +64,7 @@ const EvolutionNodeCard: React.FC<EvolutionNodeCardProps> = ({
     // Compact horizontal layout
     return (
       <div className="flex flex-col items-center space-y-1 p-2">
-        <Evolution pokemon={pokemon} onClick={handleClick} />
+        <EvolutionSprite pokemon={pokemon} onClick={handleClick} />
         <div className="text-center">
           <div className="text-xs font-medium text-gray-200">
             {pokemon.speciesName}

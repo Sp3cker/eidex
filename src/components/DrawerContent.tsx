@@ -46,7 +46,7 @@ const AnimatedArea = () => {
                 className="no-scrollbar relative max-h-screen justify-normal overflow-y-auto rounded-lg  bg-gray-700"
                 onClick={(e) => e.stopPropagation()}
               >
-                <span className="absolute top-5 left-3 flex flex-row items-center gap-1 self-center">
+                <span className="absolute top-5 right-3 flex flex-row items-center gap-1 self-center">
                   <button
                     onClick={closeModal}
                     className="font-pkmnem rounded px-3 text-3xl font-bold text-neutral-300 hover:bg-neutral-700 hover:text-neutral-100" // Example styling

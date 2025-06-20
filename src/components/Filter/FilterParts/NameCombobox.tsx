@@ -4,11 +4,12 @@ import { Pokemon } from "@/types";
 import { useMemo, useState, useEffect } from "react";
 import { MdSearch } from "react-icons/md";
 import { useFilterStore } from "@/stores/filterStore";
+import { useUIStore } from "@/stores/uiStore";
 
 const speciesIDMap: ComboBoxEntry[] = pokemonData
   .filter((p) => typeof p === "object" && !!p && "nameKey" in p)
   .map((p) => ({
-    id: (p as Pokemon).dexId,
+    id: (p as Pokemon).speciesId,
     name: (p as Pokemon).nameKey,
   }));
 
@@ -20,6 +21,7 @@ function NameCombobox() {
   const [selectedEntry, setSelectedEntry] = useState<ComboBoxEntry | null>(
     null,
   );
+  const setSelectedPokemonByDexId  = useUIStore(state => state.setSelectedPokemonByIndex) 
   const pokemonEntries: ComboBoxEntry[] = useMemo(() => speciesIDMap, []);
 
   // Reset the component when nameValue is cleared
@@ -32,8 +34,9 @@ function NameCombobox() {
   // Custom wrapper around onSelect that also updates our local state
   const handleSelect = (entry: ComboBoxEntry | null) => {
     if (entry) {
-      setSelectedEntry(entry);
-      nameValue(entry.name);
+      // setSelectedEntry(entry);
+      // nameValue(entry.name);
+      setSelectedPokemonByDexId(entry.id)
       return;
     }
     nameValue(null);

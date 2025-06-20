@@ -2,15 +2,20 @@ import React from "react";
 import { useEvolutionData } from "@/hooks/useEvolutionData";
 import { pokemonDataMap } from "@/data/pokemon";
 import { useUIStore } from "@/stores/uiStore";
-import { RootLookupMap, FamilyTreeMap, type FamilyTreeNode } from "@/utils/evolutionFamilies";
+import {
+  RootLookupMap,
+  FamilyTreeMap,
+  type FamilyTreeNode,
+} from "@/utils/evolutionFamilies";
 import EvolutionChain from "./EvolutionChain";
 import BranchingEvolutionTree from "./BranchingEvolutionTree";
-import './evolutions.css'
-interface EvolutionDetailsProps {
+import "./evolutions.css";
+import InfoLabelBadge from "@/components/ui/InfoLabelBadge";
+interface EvolutionViewProps {
   speciesId: number;
 }
 
-const EvolutionDetails: React.FC<EvolutionDetailsProps> = ({ speciesId }) => {
+const EvolutionView = ({ speciesId }: EvolutionViewProps) => {
   const setSelectedPokemon = useUIStore((state) => state.setSelectedPokemon);
   const evolutionData = useEvolutionData(speciesId);
 
@@ -37,29 +42,29 @@ const EvolutionDetails: React.FC<EvolutionDetailsProps> = ({ speciesId }) => {
   const shouldUseBranchingLayout = () => {
     const rootId = RootLookupMap.get(speciesId);
     if (!rootId) return false;
-    
+
     const familyTree = FamilyTreeMap.get(rootId);
     if (!familyTree) return false;
-    
+
     // Check if any node in the tree has multiple children (branching)
     const hasMultipleChildren = (node: FamilyTreeNode): boolean => {
       if (node.children.length > 1) return true;
-      return node.children.some((child: FamilyTreeNode) => hasMultipleChildren(child));
+      return node.children.some((child: FamilyTreeNode) =>
+        hasMultipleChildren(child),
+      );
     };
-    
+
     return hasMultipleChildren(familyTree);
   };
 
   const useBranchingLayout = shouldUseBranchingLayout();
 
   return (
-    <div className="font-calamity neutral-box space-y-4 rounded-md mx-[-1rem] text-sm text-gray-200">
-      <h3 className="text-center text-lg font-bold">
-        Evolution
-      </h3>
+    <div className="relative font-calamity neutral-box mx-[-1rem] space-y-4 rounded-md text-sm text-gray-200">
+      <InfoLabelBadge text="Evolution" />
 
       {/* Evolution Chain - Choose layout based on tree structure */}
-      <div className="rounded-lg mx-[-2] bg-gray-800/50 overflow-hidden">
+      <div className="overflow-hidden rounded-lg bg-gray-800/50">
         {useBranchingLayout ? (
           <BranchingEvolutionTree
             speciesId={speciesId}
@@ -85,4 +90,4 @@ const EvolutionDetails: React.FC<EvolutionDetailsProps> = ({ speciesId }) => {
   );
 };
 
-export default EvolutionDetails;
+export default EvolutionView;
