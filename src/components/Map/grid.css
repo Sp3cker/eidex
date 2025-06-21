@@ -19,7 +19,7 @@
   grid-template-columns: 1rem 1fr 1fr 1rem;
 }
 .map-place-info-grid {
-  grid-area: 2 / 9 / 7 / 13;
+  grid-area: 2 / 9 / 12 / 11;
 }
 .selecta-grid {
   grid-area: 6 / 9 / 6 / 13;

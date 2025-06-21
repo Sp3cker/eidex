@@ -4,10 +4,13 @@ import { useCallback, useState } from "react";
 import EncounterMonsList from "./EncounterMonsList";
 const SelectedLevel = () => {
   const selectedMapLabel = useMapStore((state) => state.selectedLevelLabel);
-  return <h3 className="font-bold text-sm text-neutral-700">{selectedMapLabel}</h3>;
+  return (
+    <h3 className="text-sm font-bold text-neutral-700">{selectedMapLabel}</h3>
+  );
 };
 const MapPlaceInfo = () => {
   const [selectedTab, setSelectedTab] = useState("land");
+
   const show = useMapStore((state) => {
     return state.selectedMap !== null && state.dragging === false;
   });
@@ -32,7 +35,7 @@ const MapPlaceInfo = () => {
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex h-full w-[150px] flex-col rounded-lg pb-1`}
+      className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex h-full min-w-[150px] flex-col rounded-lg pb-1`}
     >
       <div className="tabs w-full overflow-hidden px-3 py-3">
         <SelectedLevel />
@@ -48,6 +51,7 @@ const MapPlaceInfo = () => {
       </div>
       <div
         className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap"
+        style={{ boxShadow: '0 -4px 6px -1px rgba(0, 0, 0, 0.1)' }}
         role="tablist"
         aria-label="Encounter type tabs"
       >

@@ -1,7 +1,7 @@
 import { Pokemon, StatArray } from "../../types";
 import { useInView } from "@react-spring/web";
 import { lazy, Suspense } from "react";
-import { hasForms } from "@/utils/speciesData";
+// import { hasForms } from "@/utils/speciesData";
 import { buildPokemonMoveTabs } from "./Learnset/learnsetTabs";
 import LoadingSpinner from "../ui/LoadingSpinner";
 import PokemonSprite from "./PokemonSprite";
@@ -12,11 +12,11 @@ import StatBars from "./StatBars";
 const AbilityBox = lazy(() => import("./AbilityBox"));
 const TabbedInterface = lazy(() => import("./TabbedInterface"));
 const TypeMatchup = lazy(() => import("./TypeMatchup"));
-const FormeView = lazy(() =>
-  import("./FormeView/FormeView").then((module) => ({
-    default: module.FormeView,
-  })),
-);
+// const FormeView = lazy(() =>
+//   import("./FormeView/FormeView").then((module) => ({
+//     default: module.FormeView,
+//   })),
+// );
 const EvolutionView = lazy(() => import("./EvolutionView"));
 const EvolutionSkeleton = () => (
   <div className="h-[200px] w-full animate-pulse rounded rounded-lg bg-gray-700" />
@@ -65,11 +65,11 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
             <StatBars stats={pokemon.stats as StatArray} />
           </div>
           <div className="h-15">
-            {hasForms(pokemon) && (
+            {/* {hasForms(pokemon) && (
               <Suspense fallback={<LoadingSpinner />}>
                 <FormeView />
               </Suspense>
-            )}
+            )} */}
           </div>
         </div>
       </div>
