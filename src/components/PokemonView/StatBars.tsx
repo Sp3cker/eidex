@@ -1,5 +1,10 @@
 import { StatArray } from "@/types";
-import { animated, useTransition } from "@react-spring/web";
+import {
+  animated,
+  useTransition,
+
+  useSpring,
+} from "@react-spring/web";
 import "./statsBar.css";
 const STAT_LABELS = ["HP", "ATK", "DEF", "SPA", "SPD", "SPE"];
 
@@ -26,6 +31,18 @@ export default function StatBars({ stats }: StatBarsProps) {
     { label: "SPE", stat: stats[3] },
   ];
   const highestStat = Math.max(...reorderedStats.map((x) => x.stat), 150);
+  const bstValue = reorderedStats.reduce((sum, stat) => sum + stat.stat, 0);
+  const bst = useSpring({
+    from: {
+      opacity: 0,
+      translateX: 0,
+    },
+    to: {
+      opacity: 1,
+      translateX: bstValue,
+    },
+  });
+
   // Create springs for bars and covers
   const transitions = useTransition(reorderedStats, {
     key: (item: any) => item.label,
@@ -48,12 +65,9 @@ export default function StatBars({ stats }: StatBarsProps) {
   });
 
   return (
-    <div className="pkmnem-face-shadow neutral-box items-center flex h-[10rem] w-full flex-col gap-1 rounded-sm p-2">
+    <div className="pkmnem-face-shadow neutral-box flex h-[10rem] w-full flex-col items-center gap-1 rounded-sm p-2">
       {transitions((springs, stat, _, index) => (
-        <div
-          key={stat.label}
-          className="flex h-4 w-full items-center gap-3"
-        >
+        <div key={stat.label} className="flex h-4 w-full items-center gap-3">
           <p className="font-calamity w-5 text-xs text-neutral-200">
             {STAT_LABELS[index]}
           </p>
@@ -71,11 +85,33 @@ export default function StatBars({ stats }: StatBarsProps) {
               }}
             />
           </div>
-          <p className="mt-[-0.1rem] font-pkmnem pkmnem-face-shadow w-8 text-left text-lg font-bold tracking-wide text-neutral-100">
+          <p className="font-pkmnem pkmnem-face-shadow mt-[-0.1rem] w-8 text-left text-lg font-bold tracking-wide text-neutral-100">
             {stat.stat}
           </p>
         </div>
       ))}
+      <div  className="flex h-4 w-full items-center gap-3">
+        <p className="font-calamity w-5 text-sm text-neutral-200">
+          BST
+        </p>
+        <div className="relative h-4 flex-1 overflow-hidden pt-1">
+          <animated.div
+            style={{ opacity: bst.opacity }}
+            className={`stat-bar absolute h-2 w-full rounded rounded-sm`}
+          />
+          <animated.div
+            className="cover rounded-right absolute h-2 w-full bg-neutral-900"
+            style={{
+              transform: bst.translateX.to(
+                (t) => `translate3d(${(t / 790) * 100}%, 0,0)`,
+              ),
+            }}
+          />
+        </div>
+        <p className="font-pkmnem pkmnem-face-shadow mt-[-0.1rem] w-8 text-left text-xl font-bold tracking-wide text-neutral-100">
+          {bstValue}
+        </p>
+      </div>
     </div>
   );
 }

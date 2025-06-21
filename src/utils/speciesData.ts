@@ -25,5 +25,14 @@ export function hasForms(pokemon: Pokemon): boolean {
 }
 
 export function getForms(pokemon: Pokemon): Pokemon[] {
-  return speciesData.filter((species) => species.dexId === pokemon.dexId);
+  return speciesData.filter((species) => species.dexId === pokemon.dexId)
+  // .map(p =>{
+  //   const obj = {
+  //     formName:'',
+  //     speciesId: p.speciesId
+  //   }
+  //   if (p.forms === null){
+  //     obj.formName = "Normal"
+  //   }
+  // });
 }

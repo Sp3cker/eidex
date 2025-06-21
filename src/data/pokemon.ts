@@ -1,10 +1,12 @@
 import speciesDataJson from "./speciesData.json";
 import type { Pokemon } from "@/types";
 import { parseShortEvolutions } from "../utils/parseEvo";
-export {Pokemon}
+export { Pokemon };
 // Export both formats for flexibility
 export const pokemonDataMap = speciesDataJson as Record<string, Pokemon>;
-export const pokemonData: Pokemon[] = Object.values(speciesDataJson);
+export const pokemonData: Pokemon[] = Object.values(speciesDataJson).filter(
+  (p) => p.nameKey.includes("Gmax") === false,
+);
 
 // --- PRE-EVOLUTION (CHILD -> PARENT) LOOKUP ---
 

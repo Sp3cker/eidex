@@ -25,7 +25,7 @@ export interface Pokemon {
   eggMoves?: number[] | null;
   dexId: number;
   evolutions?: number[][] | null;
-  forms?: string[] | null;
+  forms: string[] | null;
   formId?: number;
   nameKey: string;
   siblings?: number[];

@@ -2,18 +2,17 @@ import React, { useEffect, useState } from "react";
 import { animated } from "@react-spring/web";
 import { useAnimConfig } from "@/utils/animConfigs";
 
-import { useUIStore } from "@/stores/uiStore";
-
 const PokemonSprite = React.memo(function PSprite({
   spriteIndex,
   alt,
+  nameKey,
 }: {
   spriteIndex: number;
   alt: string;
-  isOpen: boolean;
+  nameKey: string;
 }) {
-  const isShiny = useUIStore((state) => state.isShiny);
-  const imgDir = `/sprites/anim/${spriteIndex}/anim_front.webp`;
+  debugger
+  const imgDir = nameKey === alt ? `/sprites/anim/${spriteIndex}/anim_front.webp` : `sprites/front/${spriteIndex}.png`;
   const [displaySprite, setDisplaySprite] = useState(imgDir);
   const [frame, setFrame] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
@@ -32,17 +31,13 @@ const PokemonSprite = React.memo(function PSprite({
     currentTarget.onerror = null; // prevents looping
     setIsRunning(false);
     setDisplaySprite(`/sprites/front/${spriteIndex}.png`);
-    // getSprite(spriteIndex, isShiny).then((sprite) => {
-    //   debugger
-    //   setDisplaySprite(sprite);
-    // });
   };
-  /**
-   * Need this incase user clicks Evo form so `displaySprite` changes
-   */
+  // /**
+  //  * Need this incase user clicks Evo form so `displaySprite` changes
+  //  */
   useEffect(() => {
     setDisplaySprite(imgDir);
-  }, [spriteIndex, isShiny]);
+  }, [spriteIndex]);
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;

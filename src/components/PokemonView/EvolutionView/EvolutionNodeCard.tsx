@@ -69,8 +69,8 @@ const EvolutionNodeCard: React.FC<EvolutionNodeCardProps> = ({
           <div className="text-xs font-medium text-gray-200">
             {pokemon.speciesName}
           </div>
-          {type === 'current' && (
-            <div className="text-xs text-blue-300 mt-1">Current</div>
+          {type === "current" && (
+            <div className="mt-1 text-xs text-blue-300">Current</div>
           )}
         </div>
       </div>
@@ -79,17 +79,15 @@ const EvolutionNodeCard: React.FC<EvolutionNodeCardProps> = ({
 
   // Regular vertical layout
   return (
-    <div
-      className={`${colors.bg} rounded-md p-3 border ${colors.border}`}
-    >
+    <div className={`${colors.bg} rounded-md border p-3 ${colors.border}`}>
       {title && (
         <h4 className={`font-semibold ${colors.titleColor} mb-2`}>{title}</h4>
       )}
-      <div 
+      <div
         className="flex flex-col items-center space-y-2"
         style={{ marginLeft: `${indentLevel * 20}px` }}
       >
-        <Evolution pokemon={pokemon} onClick={handleClick} />
+        <EvolutionSprite pokemon={pokemon} onClick={handleClick} />
 
         <div className="text-center">
           <span

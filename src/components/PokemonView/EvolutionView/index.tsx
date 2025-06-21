@@ -1,4 +1,3 @@
-import React from "react";
 import { useEvolutionData } from "@/hooks/useEvolutionData";
 import { pokemonDataMap } from "@/data/pokemon";
 import { useUIStore } from "@/stores/uiStore";
@@ -78,14 +77,14 @@ const EvolutionView = ({ speciesId }: EvolutionViewProps) => {
         )}
       </div>
 
-      {/* No evolutions message */}
+      {/* No evolutions message
       {!parentPokemon && allDescendants.length === 0 && (
         <div className="rounded-md border border-gray-400 bg-gray-600/30 p-3 text-center">
           <p className="text-gray-300">
             This Pokémon has no evolution relationships.
           </p>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
