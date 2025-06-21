@@ -34,8 +34,8 @@ const EvolutionView = ({ speciesId }: EvolutionViewProps) => {
     );
   }
 
-  const { parentId, allDescendants } = evolutionData;
-  const parentPokemon = parentId ? pokemonDataMap[parentId.toString()] : null;
+  
+  // const parentPokemon = parentId ? pokemonDataMap[parentId.toString()] : null;
 
   // Determine if we should use branching layout
   const shouldUseBranchingLayout = () => {
@@ -59,7 +59,7 @@ const EvolutionView = ({ speciesId }: EvolutionViewProps) => {
   const useBranchingLayout = shouldUseBranchingLayout();
 
   return (
-    <div className="relative font-calamity neutral-box mx-[-1rem] space-y-4 rounded-md text-sm text-gray-200">
+    <div className="font-calamity neutral-box relative mx-[-1rem] space-y-4 rounded-md text-sm text-gray-200">
       <InfoLabelBadge text="Evolution" />
 
       {/* Evolution Chain - Choose layout based on tree structure */}
