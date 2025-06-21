@@ -55,31 +55,31 @@ const EncounterMonsList = React.memo(function EncounterList({
 
   if (!encounter || encounter.length === 0) {
     return (
-      <div className="font-pkmnem py-2 text-center text-sm font-bold text-gray-500">
+      <div className="font-pkmnem py-2 text-center max-w-[5rem] text-sm/3 font-bold text-gray-500">
         No Pokémon found in this area.
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1 min-w-5rem]">
       {encounter.map((mon, index) => (
         <div
           key={`${mon.index}${index}`}
-          className={`align-center flex cursor-pointer items-center gap-1 rounded p-0 pl-2 transition-colors ${zoneToBgColor(zone)}`}
+          className={`align-center w-[9rem] overflow-hidden flex cursor-pointer items-center gap-1 rounded p-0 pl-2 transition-colors ${zoneToBgColor(zone)}`}
           onMouseDown={() => setSelectedPokemon(mon.index)}
         >
           <div className="icon-sprite-box mb-1">
             <img
               className="pokemon-icon-sprite"
-              // style={{ filter: "drop-shadow(1px 0px 3px #2b2b2b50)" }}
+              style={{ filter: "drop-shadow(0.1px 0px 3px #2b2b2b20)" }}
               src={`/icon/${mon.index}/icon.webp`}
               alt={formatMapString(mon.species)}
             />
           </div>
           <div>
             <h3
-              className={`font-bold ${zoneToTextColor(zone)} text-xs leading-tight`}
+              className={`font-bold ${zoneToTextColor(zone)} text-xs text-shadow-2xs text-shadow-stone-200`}
             >
               {formatMapString(mon.species)}
             </h3>

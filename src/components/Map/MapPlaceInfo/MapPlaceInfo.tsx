@@ -1,25 +1,22 @@
 import { animated, useSpring } from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
 import { useCallback, useState } from "react";
-import EncounterMonsList from "./EncounterMonsList";
-const SelectedLevel = () => {
-  const selectedMapLabel = useMapStore((state) => state.selectedLevelLabel);
-  return (
-    <h3 className="text-sm font-bold text-neutral-700">{selectedMapLabel}</h3>
-  );
-};
+
+
+import EncounterMonsContainer from "./EncounterMonsContainer";
+
 const MapPlaceInfo = () => {
   const [selectedTab, setSelectedTab] = useState("land");
 
-  const show = useMapStore((state) => {
-    return state.selectedMap !== null && state.dragging === false;
-  });
+  const selectedMap = useMapStore((state) => state.selectedMap);
+  const dragging = useMapStore((state) => state.dragging);
+
   const [spring] = useSpring(
     {
-      opacity: show ? 1 : 0,
-      translate: show ? 0 : 200,
+      opacity: selectedMap !== null ? 1 : 0,
+      translate: dragging ? 200 : 0,
     },
-    [show],
+    [selectedMap, dragging],
   );
 
   const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
@@ -35,23 +32,12 @@ const MapPlaceInfo = () => {
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex h-full min-w-[150px] flex-col rounded-lg pb-1`}
+      className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate pt-3 font-calamity cursor-touch flex h-full min-w-[150px] flex-col rounded-lg pb-1`}
     >
-      <div className="tabs w-full overflow-hidden px-3 py-3">
-        <SelectedLevel />
-      </div>
-      <div className="mb-1 flex-1 overflow-y-auto">
-        {selectedTab === "land" ? (
-          <EncounterMonsList zone="land" />
-        ) : selectedTab === "water" ? (
-          <EncounterMonsList zone="water" />
-        ) : selectedTab === "fishing" ? (
-          <EncounterMonsList zone="fishing" />
-        ) : null}
-      </div>
+      <EncounterMonsContainer selectedTab={selectedTab} />
       <div
-        className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap"
-        style={{ boxShadow: '0 -4px 6px -1px rgba(0, 0, 0, 0.1)' }}
+        className="font-pkmnem tab-list lg:hidden flex w-full justify-evenly text-nowrap"
+        style={{ boxShadow: "0 -4px 6px -1px rgba(0, 0, 0, 0.1)" }}
         role="tablist"
         aria-label="Encounter type tabs"
       >

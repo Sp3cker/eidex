@@ -8,11 +8,13 @@ const Selecta = () => {
     selectedMapEncounterLevels,
     setSelectedEncounterLevel,
     selectedEncounterLevel,
+    selectedLevelLabel,
   } = useMapStore(
     (state) => ({
       selectedMapEncounterLevels: state.selectedMapEncounterLevels,
       setSelectedEncounterLevel: state.setSelectedEncounterLevel,
       selectedEncounterLevel: state.selectedEncounterLevel,
+      selectedLevelLabel: state.selectedLevelLabel,
     }),
     shallow,
   );
@@ -54,24 +56,31 @@ const Selecta = () => {
   );
 
   return (
-    <animated.aside style={spring} className="selecta-grid selecta-z flex w-8">
-      <div className={`flex flex-row`}>
-        <animated.button
-          className="selecta-button-animation font-pkmnem m-auto rounded-sm bg-neutral-300 px-2 text-xl shadow-lg"
-          onClick={handleDownClick}
-        >
-          ←
-        </animated.button>
-        <p className="font-pkmnem pl-0.25 text-shadow-sm text-xl font-bold text-neutral-50">
-          Level
-        </p>
-        <animated.button
-          className="selecta-button-animation font-pkmnem m-auto rounded-sm bg-neutral-300 px-2 text-xl shadow-lg"
-          onClick={handleUpClick}
-        >
-          →
-        </animated.button>
+    <animated.aside 
+      style={spring} 
+      className="selecta-grid select-none selecta-z flex flex-row items-center bg-gray-800/90 h-10 rounded px-1 py-1 shadow-lg border border-gray-600/50 min-w-[120px]"
+    >
+      <button
+        className="selecta-button-animation font-pkmnem w-8 h-8 rounded bg-blue-500 hover:bg-blue-400 text-white text-xs shadow-md transition-colors disabled:opacity-50 flex-shrink-0"
+        onClick={handleDownClick}
+        disabled={currentLevelIndex <= 0}
+        title="Go down one floor"
+      >
+        ▼
+      </button>
+      
+      <div className="flex-1 px-2 text-xs font-calamity font-bold text-white text-center truncate">
+        {selectedLevelLabel || "N/A"}
       </div>
+      
+      <button
+        className="selecta-button-animation font-pkmnem w-8 h-8 rounded bg-blue-500 hover:bg-blue-400 text-white text-xs shadow-md transition-colors disabled:opacity-50 flex-shrink-0"
+        onClick={handleUpClick}
+        disabled={currentLevelIndex === -1 || currentLevelIndex >= selectedMapEncounterLevels.length - 1}
+        title="Go up one floor"
+      >
+        ▲
+      </button>
     </animated.aside>
   );
 };

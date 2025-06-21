@@ -1,0 +1,45 @@
+import EncounterMonsList from "./EncounterMonsList";
+import { useWindowSize } from "@/hooks/useWindowResize";
+const EncounterHeader = ({ text }: { text: string }) => (
+  <p className="text-center font-bold pl-2 text-neutral-700">{text}</p>
+);
+const renderList = (selectedTab: string, largeScreen: boolean) => {
+  if (largeScreen) {
+    return (
+      <div className="grid grid-cols-3 gap-1">
+        <div className="flex flex-col items-center flex-1">
+          <EncounterHeader text="Land" />
+          <EncounterMonsList zone="land" />
+        </div>
+        <div className="flex flex-col items-center flex-1">
+          <EncounterHeader text="Water" />
+          <EncounterMonsList zone="water" />
+        </div>
+        <div className="flex flex-col items-center flex-1">
+          <EncounterHeader text="Fishing" />
+          <EncounterMonsList zone="fishing" />
+        </div>
+      </div>
+    );
+  } else {
+    return selectedTab === "land" ? (
+      <EncounterMonsList zone="land" />
+    ) : selectedTab === "water" ? (
+      <EncounterMonsList zone="water" />
+    ) : selectedTab === "fishing" ? (
+      <EncounterMonsList zone="fishing" />
+    ) : null;
+  }
+};
+const EncounterMonsContainer = ({ selectedTab }: { selectedTab: string }) => {
+  const { width } = useWindowSize();
+  const largeOrSmall = width >= 1024;
+
+  return (
+    <div className="mb-1 flex-1 overflow-y-auto">
+      {renderList(selectedTab, largeOrSmall)}
+    </div>
+  );
+};
+
+export default EncounterMonsContainer;

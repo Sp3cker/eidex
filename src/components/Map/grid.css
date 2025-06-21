@@ -1,6 +1,6 @@
 .parent {
   display: grid;
-  grid-template-columns: 1rem repeat(10, 1fr) 1rem;
+  grid-template-columns: 1rem repeat(9, 1fr) 1rem;
   grid-template-rows: 3rem repeat(11, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -19,7 +19,7 @@
   grid-template-columns: 1rem 1fr 1fr 1rem;
 }
 .map-place-info-grid {
-  grid-area: 2 / 9 / 12 / 11;
+  grid-area: 2 / 8 / 12 / 11;
 }
 .selecta-grid {
   grid-area: 6 / 9 / 6 / 13;
@@ -45,13 +45,22 @@
     grid-area: 1 / 1 / 2 / 6;
   }
   .map-place-info-grid {
-    grid-area: 1 / 8 / 6 / 13;
+    grid-area: 1 / 8 / 7 / 13;
   }
   .selecta-grid {
-    grid-area: 5 / 8 / 6 / 13;
+    grid-area: 6 / 8 / 7 / 13;
   }
   .dexnav-grid {
     grid-area: 7 / 1 / 13 / 7;
+  }
+}
+@media (width >= 64rem) {
+  .map-place-info-grid {
+    grid-area: 2 / 7 / 12 / 11;
+    width: 100%
+  }
+    .selecta-grid {
+    grid-area: 11 / 8 / 13 / 10;
   }
 }
 /* @media (max-height: 1200px) {

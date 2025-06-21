@@ -2,7 +2,7 @@ import "./map.css";
 import { ErrorBoundary } from "react-error-boundary";
 import NewMap from "./ReactSvg";
 import Dexnav from "./ItemsBox";
-import MapPlaceInfo from "./MapPlaceInfo";
+
 import MapContainer from "./MapContainer";
 import Selecta from "./Selecta";
 import "./grid.css";
@@ -10,8 +10,10 @@ import useMapStore from "@/stores/useMapStore";
 import { lazy, Suspense, useLayoutEffect } from "react";
 import Roamers from "./Roamers";
 import SearchContainer from "./Search/SearchContainer";
+import LoadingSpinner from "../ui/LoadingSpinner";
 document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
+const MapPlaceInfo = lazy(() => import("./MapPlaceInfo/MapPlaceInfo"));
 const PokemonModal = lazy(() => import("@/components/PokemonModal"));
 const ImageViewer = lazy(() => import("./ImageViewer"));
 const Map = () => {
@@ -32,7 +34,9 @@ const Map = () => {
       <SearchContainer />
       <Selecta />
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
-        <MapPlaceInfo />
+        <Suspense fallback={<LoadingSpinner />}>
+          <MapPlaceInfo />
+        </Suspense>
       </ErrorBoundary>
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <Dexnav />

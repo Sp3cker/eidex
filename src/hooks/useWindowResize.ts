@@ -1,7 +1,7 @@
 import React from "react";
 
 export function useWindowSize() {
-  const [size, setSize] = React.useState<Record<string, number | null>>({
+  const [size, setSize] = React.useState<Record<string, number>>({
     width: window.innerWidth,
     height: window.innerHeight,
   });
