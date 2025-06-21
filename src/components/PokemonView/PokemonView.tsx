@@ -18,7 +18,16 @@ const FormeView = lazy(() =>
   })),
 );
 const EvolutionView = lazy(() => import("./EvolutionView"));
+const EvolutionSkeleton = () => (
+  <div className="h-[200px] w-full animate-pulse rounded rounded-lg bg-gray-700" />
+);
 
+const TypeMatchupSkeleton = () => (
+  <div className="h-[150px] w-full animate-pulse rounded rounded-lg bg-gray-700" />
+);
+const AbilitiesSkeleton = () => (
+  <div className="h-[100px] w-full animate-pulse rounded rounded-lg bg-gray-700" />
+);
 function PokemonView({ pokemon }: { pokemon: Pokemon }) {
   const [tabsRef, tabsInView] = useInView();
 
@@ -32,7 +41,10 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
           #{pokemon.dexId}
         </p>
       </div>
-      <div className="flex w-full flex-row items-center justify-between">
+      <div
+        id="box1"
+        className="flex w-full flex-row items-center justify-between"
+      >
         <div className="flex flex-col pr-5">
           <PokemonSprite
             nameKey={pokemon.nameKey}
@@ -62,27 +74,26 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
         </div>
       </div>
 
-      <div className="flex w-full flex-col">
-        <Suspense fallback={<LoadingSpinner />}>
+      <div id="box2" className="flex w-full flex-col">
+        <Suspense fallback={<AbilitiesSkeleton />}>
           <AbilityBox key={pokemon.speciesId} abilities={pokemon.abilities} />
         </Suspense>
 
-        {/* <div className="w-full"><AbilityDescription /></div> */}
 
-        <div className="py-3">
-          <Suspense fallback={<LoadingSpinner />}>
+        <div id="box3" className="py-3">
+          <Suspense fallback={<EvolutionSkeleton />}>
             <EvolutionView speciesId={pokemon.speciesId} />
           </Suspense>
         </div>
 
         <div className="flex flex-wrap text-gray-100">
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<TypeMatchupSkeleton />}>
             <TypeMatchup pokemon={pokemon} />
           </Suspense>
         </div>
       </div>
 
-      <div className="flex w-full flex-grow" ref={tabsRef}>
+      <div id="box4" className="flex w-full flex-grow" ref={tabsRef}>
         {tabsInView && (
           <Suspense fallback={<LoadingSpinner />}>
             <TabbedInterface tabs={tabsData} />

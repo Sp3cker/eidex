@@ -74,24 +74,26 @@ export default function StatBars({ stats }: StatBarsProps) {
           <div className="relative h-4 flex-1 overflow-hidden pt-1">
             <animated.div
               style={{ opacity: springs.opacity }}
-              className={`stat-bar ${getBarColor(stat.stat)} absolute h-2 w-full rounded rounded-sm`}
+              className={`stat-bar ${getBarColor(stat.stat)} absolute h-2 w-full rounded rounded-sm transition-colors`}
             />
-            <animated.div
-              className="cover rounded-right absolute h-2 w-full bg-neutral-900"
+            <animated.div 
+              className="cover rounded-right absolute h-2 w-full bg-linear-to-r from-neutral-900/90 to-neutral-900"
               style={{
                 transform: springs.coverTranslate.to(
-                  (t) => `translate3d(${t}%, 0,0)`,
+                  (t) => `translateX(${t}%)`,
                 ),
               }}
             />
           </div>
-          <p className="font-pkmnem pkmnem-face-shadow mt-[-0.1rem] w-8 text-left text-lg font-bold tracking-wide text-neutral-100">
+          <p className="font-pkmnem pkmnem-face-shadow  w-8 text-left text-lg font-bold tracking-wide text-neutral-100">
             {stat.stat}
           </p>
         </div>
       ))}
+      <hr className="bg-neutral-200 border-0 dark:bg-neutral-200"/>
+
       <div  className="flex h-4 w-full items-center gap-3">
-        <p className="font-calamity w-5 text-sm text-neutral-200">
+        <p className="font-calamity font-bold w-5 text-sm text-amber-200">
           BST
         </p>
         <div className="relative h-4 flex-1 overflow-hidden pt-1">
