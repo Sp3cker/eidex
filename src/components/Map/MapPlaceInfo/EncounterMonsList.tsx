@@ -62,11 +62,11 @@ const EncounterMonsList = React.memo(function EncounterList({
   }
 
   return (
-    <div className="flex flex-col gap-1 min-w-5rem]">
+    <div className="flex flex-col gap-1">
       {encounter.map((mon, index) => (
         <div
           key={`${mon.index}${index}`}
-          className={`align-center w-[9rem] overflow-hidden flex cursor-pointer items-center gap-1 rounded p-0 pl-2 transition-colors ${zoneToBgColor(zone)}`}
+          className={`align-center w-[8rem] overflow-hidden flex cursor-pointer items-center gap-1 rounded p-0 pl-2 transition-colors ${zoneToBgColor(zone)}`}
           onMouseDown={() => setSelectedPokemon(mon.index)}
         >
           <div className="icon-sprite-box mb-1">

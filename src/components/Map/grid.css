@@ -57,7 +57,7 @@
 @media (width >= 64rem) {
   .map-place-info-grid {
     grid-area: 2 / 7 / 12 / 11;
-    width: 100%
+    /* width: 25rem; */
   }
     .selecta-grid {
     grid-area: 11 / 8 / 13 / 10;

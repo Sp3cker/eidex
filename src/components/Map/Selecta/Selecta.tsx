@@ -61,7 +61,7 @@ const Selecta = () => {
       className="selecta-grid select-none selecta-z flex flex-row items-center bg-gray-800/90 h-10 rounded px-1 py-1 shadow-lg border border-gray-600/50 min-w-[120px]"
     >
       <button
-        className="selecta-button-animation font-pkmnem w-8 h-8 rounded bg-blue-500 hover:bg-blue-400 text-white text-xs shadow-md transition-colors disabled:opacity-50 flex-shrink-0"
+        className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 text-neutral-100 font-pkmnem w-8 h-8 rounded text-xs shadow-md flex-shrink-0"
         onClick={handleDownClick}
         disabled={currentLevelIndex <= 0}
         title="Go down one floor"
@@ -74,7 +74,7 @@ const Selecta = () => {
       </div>
       
       <button
-        className="selecta-button-animation font-pkmnem w-8 h-8 rounded bg-blue-500 hover:bg-blue-400 text-white text-xs shadow-md transition-colors disabled:opacity-50 flex-shrink-0"
+        className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 text-neutral-100 font-pkmnem w-8 h-8 rounded text-xs shadow-md disabled:opacity-50 flex-shrink-0"
         onClick={handleUpClick}
         disabled={currentLevelIndex === -1 || currentLevelIndex >= selectedMapEncounterLevels.length - 1}
         title="Go up one floor"

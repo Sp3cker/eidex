@@ -2,7 +2,6 @@ import { animated, useSpring } from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
 import { useCallback, useState } from "react";
 
-
 import EncounterMonsContainer from "./EncounterMonsContainer";
 
 const MapPlaceInfo = () => {
@@ -32,11 +31,11 @@ const MapPlaceInfo = () => {
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate pt-3 font-calamity cursor-touch flex h-full min-w-[150px] flex-col rounded-lg pb-1`}
+      className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex max-h-[35rem] min-w-[150px] flex-col rounded-lg pb-1 pt-3`}
     >
       <EncounterMonsContainer selectedTab={selectedTab} />
       <div
-        className="font-pkmnem tab-list lg:hidden flex w-full justify-evenly text-nowrap"
+        className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap lg:hidden"
         style={{ boxShadow: "0 -4px 6px -1px rgba(0, 0, 0, 0.1)" }}
         role="tablist"
         aria-label="Encounter type tabs"

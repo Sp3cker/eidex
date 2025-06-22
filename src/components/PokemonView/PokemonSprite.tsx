@@ -11,7 +11,7 @@ const PokemonSprite = React.memo(function PSprite({
   alt: string;
   nameKey: string;
 }) {
-  debugger
+
   const imgDir = nameKey === alt ? `/sprites/anim/${spriteIndex}/anim_front.webp` : `sprites/front/${spriteIndex}.png`;
   const [displaySprite, setDisplaySprite] = useState(imgDir);
   const [frame, setFrame] = useState(0);

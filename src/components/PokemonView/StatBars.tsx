@@ -1,10 +1,5 @@
 import { StatArray } from "@/types";
-import {
-  animated,
-  useTransition,
-
-  useSpring,
-} from "@react-spring/web";
+import { animated, useTransition, useSpring } from "@react-spring/web";
 import "./statsBar.css";
 const STAT_LABELS = ["HP", "ATK", "DEF", "SPA", "SPD", "SPE"];
 
@@ -76,8 +71,8 @@ export default function StatBars({ stats }: StatBarsProps) {
               style={{ opacity: springs.opacity }}
               className={`stat-bar ${getBarColor(stat.stat)} absolute h-2 w-full rounded rounded-sm transition-colors`}
             />
-            <animated.div 
-              className="cover rounded-right absolute h-2 w-full bg-linear-to-r from-neutral-900/90 to-neutral-900"
+            <animated.div
+              className="cover rounded-right bg-linear-to-r absolute h-2 w-full from-neutral-900/90 to-neutral-900"
               style={{
                 transform: springs.coverTranslate.to(
                   (t) => `translateX(${t}%)`,
@@ -85,21 +80,21 @@ export default function StatBars({ stats }: StatBarsProps) {
               }}
             />
           </div>
-          <p className="font-pkmnem pkmnem-face-shadow  w-8 text-left text-lg font-bold tracking-wide text-neutral-100">
+          <p className="font-pkmnem pkmnem-face-shadow w-8 text-left text-lg font-bold tracking-wide text-neutral-100">
             {stat.stat}
           </p>
         </div>
       ))}
-      <hr className="bg-neutral-200 border-0 dark:bg-neutral-200"/>
+      <hr className="border-0 bg-neutral-200 dark:bg-neutral-200" />
 
-      <div  className="flex h-4 w-full items-center gap-3">
-        <p className="font-calamity font-bold w-5 text-sm text-amber-200">
+      <div className="flex h-4 w-full items-center gap-3">
+        <p className="font-calamity w-5 text-sm font-bold text-amber-200">
           BST
         </p>
         <div className="relative h-4 flex-1 overflow-hidden pt-1">
           <animated.div
             style={{ opacity: bst.opacity }}
-            className={`stat-bar absolute h-2 w-full rounded rounded-sm`}
+            className={`stat-bar ${getBarColor(bstValue / 5)} absolute h-2 w-full rounded rounded-sm`}
           />
           <animated.div
             className="cover rounded-right absolute h-2 w-full bg-neutral-900"
@@ -110,7 +105,9 @@ export default function StatBars({ stats }: StatBarsProps) {
             }}
           />
         </div>
-        <p className="font-pkmnem pkmnem-face-shadow mt-[-0.1rem] w-8 text-left text-xl font-bold tracking-wide text-neutral-100">
+        <p
+          className={`font-pkmnem pkmnem-face-shadow mt-[-0.1rem] w-8 text-left text-xl font-bold tracking-wide text-neutral-100`}
+        >
           {bstValue}
         </p>
       </div>
