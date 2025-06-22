@@ -88,11 +88,7 @@ const DrawerContainer = (props: any) => {
   }, [props.closeDrawer]);
   return (
     <div ref={containerRef} className="h-full w-full bg-gray-800">
-      {currBreakpoint === "md" ? (
-        <Suspense fallback={<LoadingSpinner />}>
-          <DrawerContent />
-        </Suspense>
-      ) : (
+      {currBreakpoint === "sm" || currBreakpoint === 'xs' ? (
         <>
           <div
             onClick={toggleOpen}
@@ -113,6 +109,10 @@ const DrawerContainer = (props: any) => {
             <PokemonModal />
           </ErrorBoundary>
         </>
+      ) : (
+        <Suspense fallback={<LoadingSpinner />}>
+          <DrawerContent />
+        </Suspense>
       )}
     </div>
   );

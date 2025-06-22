@@ -20,7 +20,7 @@ const usePanAndZoom = () => {
       },
 
       // Handle drag events for panning
-      onDrag: ({ offset: [x, y], dragging }) => {
+      onDrag: ({ offset: [x, y] }) => {
         // Only allow panning when zoomed in
         if (zoom > 1) {
           setPosition({ x, y });

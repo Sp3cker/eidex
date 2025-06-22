@@ -6,7 +6,6 @@ import EncounterMonsContainer from "./EncounterMonsContainer";
 
 const MapPlaceInfo = () => {
   const [selectedTab, setSelectedTab] = useState("land");
-
   const selectedMap = useMapStore((state) => state.selectedMap);
   const dragging = useMapStore((state) => state.dragging);
 
@@ -28,6 +27,8 @@ const MapPlaceInfo = () => {
   return (
     <animated.div
       style={{
+        pointerEvents: selectedMap !== null ? "auto" : "none", // Add this line
+
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}

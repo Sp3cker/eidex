@@ -2,8 +2,15 @@ import useMapStore from "@/stores/useMapStore";
 import { useMemo } from "react";
 import { animated, useSpring } from "@react-spring/web";
 import { shallow } from "zustand/shallow";
-
+import { useScreenWidth } from "@/hooks/useScreenWidth";
+const translatesTo = {
+  lg: 50,
+  md: 3,
+  sm: 70,
+  xs: 70
+};
 const Selecta = () => {
+  const screenWidth = useScreenWidth();
   const {
     selectedMapEncounterLevels,
     setSelectedEncounterLevel,
@@ -49,34 +56,38 @@ const Selecta = () => {
   const [spring] = useSpring(
     () => ({
       opacity: selectedMapEncounterLevels.length > 1 ? 1 : 0,
-      translateY: selectedMapEncounterLevels.length > 1 ? 70 : 0,
+      translateY:
+        selectedMapEncounterLevels.length > 1 ? translatesTo[screenWidth] : 0,
       // config: (key) => (key === "translateY" ? {} : {}),
     }),
-    [selectedMapEncounterLevels],
+    [selectedMapEncounterLevels, screenWidth],
   );
 
   return (
-    <animated.aside 
-      style={spring} 
-      className="selecta-grid select-none selecta-z flex flex-row items-center bg-gray-800/90 h-10 rounded px-1 py-1 shadow-lg border border-gray-600/50 min-w-[120px]"
+    <animated.aside
+      style={spring}
+      className="selecta-grid selecta-z flex h-10 min-w-[120px] select-none flex-row items-center rounded-lg border border-gray-600/50 bg-gray-800/90 px-1 py-1 shadow-lg"
     >
       <button
-        className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 text-neutral-100 font-pkmnem w-8 h-8 rounded text-xs shadow-md flex-shrink-0"
+        className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 flex-shrink-0 rounded-lg text-xs text-neutral-100 shadow-md"
         onClick={handleDownClick}
         disabled={currentLevelIndex <= 0}
         title="Go down one floor"
       >
         ▼
       </button>
-      
-      <div className="flex-1 px-2 text-xs font-calamity font-bold text-white text-center truncate">
+
+      <div className="font-calamity flex-1 truncate px-2 text-center text-xs font-bold text-white">
         {selectedLevelLabel || "N/A"}
       </div>
-      
+
       <button
-        className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 text-neutral-100 font-pkmnem w-8 h-8 rounded text-xs shadow-md disabled:opacity-50 flex-shrink-0"
+        className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 flex-shrink-0 rounded-lg text-xs text-neutral-100 shadow-md disabled:opacity-50"
         onClick={handleUpClick}
-        disabled={currentLevelIndex === -1 || currentLevelIndex >= selectedMapEncounterLevels.length - 1}
+        disabled={
+          currentLevelIndex === -1 ||
+          currentLevelIndex >= selectedMapEncounterLevels.length - 1
+        }
         title="Go up one floor"
       >
         ▲
