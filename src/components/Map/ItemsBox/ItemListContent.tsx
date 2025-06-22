@@ -3,7 +3,7 @@ import { getItemSpriteStyle } from "@/utils/itemSprites";
 import { BaseListContent } from "./BaseListContent";
 import { ItemWithAmount } from "@/data/map";
 const ItemListRender = (showPrice: boolean) => (item: ItemWithAmount) => (
-  <>
+  <hgroup>
     <div className="flex flex-row justify-between">
       <h3 className="text-xs/4 font-bold md:text-sm">
         {(item as { name?: string }).name || "Unnamed"}
@@ -17,7 +17,7 @@ const ItemListRender = (showPrice: boolean) => (item: ItemWithAmount) => (
         {(item as { description?: string }).description}
       </p>
     )}
-  </>
+  </hgroup>
 );
 
 export const ItemListContent = function ItemListContent<

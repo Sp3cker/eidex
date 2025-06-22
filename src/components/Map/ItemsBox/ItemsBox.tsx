@@ -29,9 +29,9 @@ const ItemsBox = memo(function ItemsBox() {
       className="dexnav-grid dexnav-z max-h-[70vh] w-full overflow-y-auto rounded-lg border border-gray-200 bg-gradient-to-br from-emerald-50 via-white to-gray-100 p-4 shadow-xl md:w-96"
     >
       <div className="sticky top-0 z-10 flex items-center justify-between">
-        <h3 className="cool-font md:text-md pb-2 text-sm font-bold text-neutral-700">
+        <h2 className="cool-font md:text-md pb-2 text-sm font-bold text-neutral-700">
           {mapLabel}
-        </h3>
+        </h2>
         <CameraIcon mapLabel={mapLabel} setViewingImage={setViewingImage} />
       </div>
       <div className="font-pkmnem flex flex-col rounded-sm">
