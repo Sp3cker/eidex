@@ -14,12 +14,13 @@ const MapContainer = ({ children }: any) => {
   const mapRef = useRef<HTMLDivElement>(null);
 
   const [{ scale, centerOffset }, api] = useSpring(() => {
-    let currentTargetCenterOffset = [400, 340]; // Default if no coordinates or mapRef
+    let currentTargetCenterOffset = [30, 40]; // Default if no coordinates or mapRef
     const currentSpringConfig = {
-      mass: 5,
-      tension: 800,
-      friction: 200,
+      mass: 4,
+      tension: 550,
+      friction: 100,
       precision: 0.2,
+      
     }; // Default config
     let currentSpringDelay = 0; // Default delay
 
@@ -86,7 +87,7 @@ const MapContainer = ({ children }: any) => {
   return (
     <div
       ref={targetRef}
-      className="map-grid font-calamity z-0 w-full touch-none overflow-auto bg-[#0082CA]"
+      className="fade-in map-grid font-calamity z-0 w-full touch-none overflow-auto bg-[#0082CA]"
     >
       <animated.div
         ref={mapRef}

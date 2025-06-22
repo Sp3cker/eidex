@@ -8,17 +8,9 @@ function PokemonModal() {
 
   return (
     <div
-      className="z-9 fixed inset-0 flex items-center justify-center"
+      className="z-9 fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-md"
       onClick={closeModal}
     >
-      <div
-        style={{
-          // backdropFilter: "blur(12px) saturate(120%)",
-          // WebkitBackdropFilter: "blur(12px) saturate(120%)", // Safari support
-        }}
-        className="fade-in-background fixed inset-0 bg-black/80"
-        aria-hidden="true"
-      />
       <div
         className="w-xl no-scrollbar relative my-0 h-[95dvh] max-h-screen justify-normal overflow-y-auto rounded-lg border border-gray-100 bg-zinc-800 px-6 py-3"
         onClick={(e) => e.stopPropagation()}
