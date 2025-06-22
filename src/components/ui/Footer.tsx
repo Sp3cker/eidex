@@ -1,5 +1,6 @@
 import { IconContext } from "react-icons";
 import DisclaimerModal from "./DisclaimerModal";
+import HiddenFileDrop from "./HiddenFileDrop";
 
 const Footer = () => {
   return (
@@ -22,9 +23,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex flex-col sm:w-80">
-          <p className="font-pkmnem leading-xs text-sm/3 text-white">
-            Data&nbsp;for E.I.&nbsp;1.2
-          </p>
+          <HiddenFileDrop />
           <p className="font-pkmnem leading-xs text-sm/3 text-white">
             Tell your friends!{" "}
           </p>

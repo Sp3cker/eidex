@@ -44,13 +44,15 @@ type MapStore = {
   selectedLevelId: string | null;
   selectedRoamer: string | null;
   dragging: boolean;
+  hasEncounterDataStored: boolean;
+  encounterDataSource: "default" | "next";
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
   setMapScale: (n: number) => void;
   setMapOffset: (offset: number[]) => void;
   setHoveredMap: (map: string) => void;
-
+  
   setHoveredCoordinates: (coords: number[]) => void;
   searchItemByName: (name: string) => Item[];
   setSelectedMapLevel: (level: string) => void;
@@ -60,6 +62,9 @@ type MapStore = {
   deselectRoamer: () => void;
   setDragging: (dragging: boolean) => void;
   setSelectedEncounterLevel: (levelId: string) => void;
+  setEncountersData: (data: any) => void;
+  setEncounterDataSource: (to: "default" | "next") => void;
+  revertToDefaultEncounters: () => void;
 };
 
 export type { EncounterMons, EncounterMonsFromJSON, MapStore, Level };

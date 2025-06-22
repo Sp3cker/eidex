@@ -1,11 +1,13 @@
 import ItemSearch from "@/utils/itemsData";
-import { Encounters, LevelsInfo } from "@/data/map";
+import { LevelsInfo } from "@/data/map";
+
 import { pokemonData as pokemon } from "@/data/pokemon";
 
 import {
   EncounterMons,
   EncounterMonsFromJSON,
 } from "@/stores/useMapStore/types";
+import { encounterStore } from "@/data/map/encounters";
 /** Works off of `mapBreakDown`, pass it `MAP_SIMPLE_NAME `
  * IT WILl return the baseName, the `id` of the map, and levels
  */
@@ -74,11 +76,11 @@ const putRodUsed = (mons: EncounterMons[]) => {
 
   // Second pass: determine chance level for each species within each rod type
   const rodGroups: { [rodType: string]: { [species: string]: number[] } } = {};
-  
+
   // Group by rod type and species, tracking slot indices
   mons.forEach((mon, slot) => {
     if (!mon.rod) return;
-    
+
     if (!rodGroups[mon.rod]) {
       rodGroups[mon.rod] = {};
     }
@@ -90,10 +92,10 @@ const putRodUsed = (mons: EncounterMons[]) => {
 
   // Third pass: combine rod types for species that appear across multiple rods
   const speciesRodSummary: { [species: string]: { rods: Set<string> } } = {};
-  
+
   // Collect all rod types for each species
-  Object.keys(rodGroups).forEach(rodType => {
-    Object.keys(rodGroups[rodType]).forEach(species => {
+  Object.keys(rodGroups).forEach((rodType) => {
+    Object.keys(rodGroups[rodType]).forEach((species) => {
       if (!speciesRodSummary[species]) {
         speciesRodSummary[species] = { rods: new Set() };
       }
@@ -104,16 +106,19 @@ const putRodUsed = (mons: EncounterMons[]) => {
   // Assign combined rod strings
   mons.forEach((mon) => {
     if (!mon.rod) return;
-    
+
     const summary = speciesRodSummary[mon.species];
     if (!summary) return;
-    
+
     // Create combined rod string
     const rodArray = Array.from(summary.rods);
     const rodOrder = ["Old Rod", "Good Rod", "Super Rod"];
-    const sortedRods = rodArray.sort((a, b) => rodOrder.indexOf(a) - rodOrder.indexOf(b));
-    const combinedRodString = sortedRods.join("/").replace(/ Rod/g, "").replace(/\//g, "/") + " Rod";
-    
+    const sortedRods = rodArray.sort(
+      (a, b) => rodOrder.indexOf(a) - rodOrder.indexOf(b),
+    );
+    const combinedRodString =
+      sortedRods.join("/").replace(/ Rod/g, "").replace(/\//g, "/") + " Rod";
+
     mon.rod = combinedRodString;
   });
 
@@ -147,8 +152,8 @@ const putEncounterRate = (mons: EncounterMons[]) => {
 };
 
 const getSelectedMapInfo = (id: string, levelId: string) => {
+  const Encounters = encounterStore.getEncounterData();
   const targetMapEncounterGroup = Encounters[id];
-
   if (targetMapEncounterGroup === undefined) {
     console.warn("No encounters for map %s", id);
     return;
@@ -240,7 +245,8 @@ const getSelectedLevel = ({
   }
   // Get encounter level IDs for Selecta ("MAP_SHOAL_CAVE_LOW_TIDE_XXX")
   // Encounters are keyed by targetLevel.baseMap
-  const encounterGroupForThisBaseMapKey = Encounters[targetLevel.baseMap];
+  const encounterGroupForThisBaseMapKey =
+    encounterStore.getEncounterData()[targetLevel.baseMap];
   const encounterLevelIdsForSelecta = encounterGroupForThisBaseMapKey
     ? encounterGroupForThisBaseMapKey.map((lv) => lv.map)
     : [];
@@ -273,6 +279,8 @@ export const getInitialMapLevelData = (baseMapName: string) => {
     const currentLevelDetails = mapDetails.levels[i]; // { levelLabel, thisLevelsId, baseMap, image }
 
     // Call getSelectedMapInfo to check for encounters on this specific level
+    // Returns `undefined` early so shouldn't worry
+    // aobut calling in loop
     const encounterData = getSelectedMapInfo(
       currentLevelDetails.baseMap, // Key for Encounters data (e.g., "MAP_PETALBURG_CITY_LAND")
       currentLevelDetails.thisLevelsId, // Specific sub-level ID (e.g., "MAP_PETALBURG_CITY_LAND_MAIN")

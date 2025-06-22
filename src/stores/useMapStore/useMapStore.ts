@@ -8,9 +8,9 @@ import {
   initializeLevelIdLookup,
   levelIdToLocationMap,
 } from "./levelIdtoLocationMap";
+import { encounterStore } from "@/data/map/encounters";
 
 initializeLevelIdLookup();
-
 
 export const useMapStore = create<MapStore>()(
   subscribeWithSelector((set, get) => {
@@ -37,10 +37,12 @@ export const useMapStore = create<MapStore>()(
       selectedCoordinates: [400, 340],
       storedCoordinates: new Map<string, number[]>(),
       mapScale: 1,
+      hasEncounterDataStored: encounterStore.isStoredEncounterData(),
 
       mapOffset: [0, 0],
       hoveredMap: null,
       hoveredCoordinates: [0, 0],
+      encounterDataSource: "default",
 
       deselectMap: () => {
         window.history.pushState({}, "", "");
@@ -187,6 +189,36 @@ export const useMapStore = create<MapStore>()(
       deselectRoamer: () => set({ selectedRoamer: null }),
       setDragging: (dragging: boolean) => {
         set({ dragging });
+      },
+      setEncountersData: (data: unknown) => {
+        try {
+          encounterStore.setEncounterData(data as any);
+          encounterStore.dataSource = "next";
+          set({ encounterDataSource: "next", hasEncounterDataStored: true });
+          const selectedMap = get().selectedMap;
+          if (selectedMap) {
+            get().setSelectedMap(selectedMap);
+          }
+        } catch (error) {
+          console.error(error);
+          // Optionally, you could add some user-facing error state here
+        }
+      },
+      revertToDefaultEncounters: () => {
+        encounterStore.clearEncounterData();
+        set({ encounterDataSource: "default", hasEncounterDataStored: false });
+        const selectedMap = get().selectedMap;
+        if (selectedMap) {
+          get().setSelectedMap(selectedMap);
+        }
+      },
+      setEncounterDataSource: (to: "default" | "next") => {
+        encounterStore.dataSource = to;
+        set({ encounterDataSource: to });
+        const selectedMap = get().selectedMap;
+        if (selectedMap) {
+          get().setSelectedMap(selectedMap);
+        }
       },
     };
   }),

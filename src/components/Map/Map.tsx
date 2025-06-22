@@ -11,6 +11,7 @@ import { lazy, Suspense, useLayoutEffect } from "react";
 import Roamers from "./Roamers";
 import SearchContainer from "./Search/SearchContainer";
 import LoadingSpinner from "../ui/LoadingSpinner";
+
 document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
 const MapPlaceInfo = lazy(() => import("./MapPlaceInfo/MapPlaceInfo"));
@@ -18,7 +19,6 @@ const PokemonModal = lazy(() => import("@/components/PokemonModal"));
 const ImageViewer = lazy(() => import("./ImageViewer"));
 const Map = () => {
   const setStateFromURL = useMapStore((state) => state.setStateFromURL);
-
   useLayoutEffect(() => {
     const segments = window.location.pathname.split("/");
     const [, route, param] = segments;

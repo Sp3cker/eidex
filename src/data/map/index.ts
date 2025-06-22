@@ -1,4 +1,3 @@
-import encounters from "./encounterGroup.json";
 import levels from "./levels.json";
 import items from "./items.json";
 
@@ -113,6 +112,10 @@ export type EncounterGroup = {
     encounter_rate: number;
     mons: EncounterListing[];
   };
+  rock_smash_mons?: {
+    encounter_rate: number;
+    mons: EncounterListing[];
+  };
 };
 
 export type PickupItem = Level["pickupItems"][number];
@@ -146,4 +149,3 @@ function processLevelsInfo(): Record<string, Level[]> {
 }
 
 export const LevelsInfo: Record<string, Level[]> = processLevelsInfo();
-export const Encounters = encounters as Record<string, EncounterGroup[]>;
