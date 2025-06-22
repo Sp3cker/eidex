@@ -1,7 +1,6 @@
-
 import { getItemSpriteStyle } from "@/utils/itemSprites";
 import { BaseListContent } from "./BaseListContent";
-import { ItemWithAmount } from "@/data/map";
+import { Item, ItemWithAmount } from "@/data/map";
 const ItemListRender = (showPrice: boolean) => (item: ItemWithAmount) => (
   <hgroup>
     <div className="flex flex-row justify-between">
@@ -19,25 +18,26 @@ const ItemListRender = (showPrice: boolean) => (item: ItemWithAmount) => (
     )}
   </hgroup>
 );
+const renderIcon = (item: Item) => {
+  const spriteStyle = getItemSpriteStyle(item.id,36); // Changed from 64 to 32
+
+  return spriteStyle ? (
+      <img
+        src="/spritesheet-items-36.webp"
+        className=" flex-shrink-0"
+        style={spriteStyle}
+      />
+
+  ) : (
+    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded bg-gray-200 text-xs text-gray-500">
+      ?
+    </div>
+  );
+};
 
 export const ItemListContent = function ItemListContent<
   T extends ItemWithAmount,
 >({ items, showPrice }: { items: T[]; showPrice: boolean }) {
-  const renderIcon = (item: T) => {
-    const spriteStyle = getItemSpriteStyle(item.id, 32);
-
-    return spriteStyle ? (
-      <div
-        className="rendering-crisp-edges flex-shrink-0"
-        style={spriteStyle}
-      />
-    ) : (
-      <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded bg-gray-200 text-xs text-gray-500">
-        ?
-      </div>
-    );
-  };
-
   const getKey = (item: T) => item.name;
 
   return (

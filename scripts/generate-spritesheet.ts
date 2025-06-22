@@ -25,16 +25,35 @@ interface SpritesheetConfig {
   // Output paths
   outputImagePath: string;
   outputJsonPath: string;
+  // Resize filter for smoothing ('sample', 'lanczos', 'cubic', 'catrom', 'spline', 'gaussian')
+  resizeFilter: string;
+  // Optional suffix for file naming
+  sizeSuffix?: string;
 }
 
-const config: SpritesheetConfig = {
-  spriteWidth: 64,  // 2x upscale from original 32px images for better quality
-  spriteHeight: 64, // 2x upscale from original 32px images for better quality
-  padding: 2,
-  spritesPerRow: 16, // 16x16 grid should handle 256 items comfortably
-  outputImagePath: './public/spritesheet-items.png',
-  outputJsonPath: './src/data/spritesheet-coords.json'
-};
+// Multiple configurations for different sprite sizes
+const configs: SpritesheetConfig[] = [
+  {
+    spriteWidth: 36,
+    spriteHeight: 36,
+    padding: 2,
+    spritesPerRow: 16,
+    outputImagePath: './public/spritesheet-items-36.png',
+    outputJsonPath: './src/data/spritesheet-coords-36.json',
+    resizeFilter: 'catrom',
+    sizeSuffix: '36'
+  },
+  {
+    spriteWidth: 16,
+    spriteHeight: 16,
+    padding: 1,
+    spritesPerRow: 16, // More sprites per row for smaller size
+    outputImagePath: './public/spritesheet-items-16.png',
+    outputJsonPath: './src/data/spritesheet-coords-16.json',
+    resizeFilter: 'catrom',
+    sizeSuffix: '16'
+  }
+];
 
 function loadItemsData(): Set<string> {
   try {
@@ -173,17 +192,21 @@ function generateSpritesheet(inputDir: string, config: SpritesheetConfig): void 
   console.log('🎨 Generating spritesheet with ImageMagick...');
   
   // Create a transparent canvas
-  let magickCmd = `magick -size ${canvasWidth}x${canvasHeight} xc:transparent`;
+  let magickCmd = `magick -size ${canvasWidth}x${canvasHeight} +antialias xc:transparent`;
   
   // Add each image to the canvas
   imageFiles.forEach((file, index) => {
     const filePath = join(inputDir, file);
     const coord = coordinates[index];
     
-    // Resize image to sprite size using point filter for crisp pixel art
-    // Options: point (nearest-neighbor, crisp), lanczos (smooth), cubic (smooth)
-    // For pixel art, use 'point' to avoid blurring/anti-aliasing
-    magickCmd += ` \\( "${filePath}" -filter point -resize ${config.spriteWidth}x${config.spriteHeight}! \\)`;
+    // Apply the configured resize filter
+    if (config.resizeFilter === 'sample') {
+      // Use -sample for pixel-perfect scaling (no anti-aliasing)
+      magickCmd += ` \\( "${filePath}" -sample ${config.spriteWidth}x${config.spriteHeight}! \\)`;
+    } else {
+      // Use specified filter for smooth anti-aliasing
+      magickCmd += ` \\( "${filePath}" -filter ${config.resizeFilter} -resize ${config.spriteWidth}x${config.spriteHeight}! \\)`;
+    }
     magickCmd += ` -geometry +${coord.coords[0]}+${coord.coords[1]} -composite`;
   });
   
@@ -248,23 +271,31 @@ function main() {
     process.exit(1);
   }
   
-  generateSpritesheet(inputDirectory, config);
+  // Generate spritesheets for each configuration
+  configs.forEach((config, index) => {
+    console.log(`\n🚀 Generating spritesheet ${index + 1}/${configs.length} (${config.spriteWidth}x${config.spriteHeight})...`);
+    generateSpritesheet(inputDirectory, config);
+    
+    // Convert PNG to WebP for each size
+    console.log(`📸 Converting ${config.spriteWidth}x${config.spriteHeight} spritesheet to WebP format...`);
+    const webpOutputPath = config.outputImagePath.replace('.png', '.webp');
+    
+    try {
+      // Use cwebp with quality 100 and lossless compression for pixel art
+      const cwebpCommand = `cwebp -lossless -q 100 "${config.outputImagePath}" -o "${webpOutputPath}"`;
+      execSync(cwebpCommand, { stdio: 'inherit' });
+      console.log(`✅ WebP spritesheet saved to: ${webpOutputPath}`);
+    } catch (error) {
+      console.error('❌ Failed to convert to WebP:', error);
+      console.log('⚠️  PNG version is still available at:', config.outputImagePath);
+    }
+  });
   
-  // Convert PNG to WebP
-  console.log('📸 Converting spritesheet to WebP format...');
-  const webpOutputPath = './public/spritesheet-items.webp';
-  
-  try {
-    // Use cwebp with quality 100 and lossless compression for pixel art
-    const cwebpCommand = `cwebp -lossless -q 100 "${config.outputImagePath}" -o "${webpOutputPath}"`;
-    execSync(cwebpCommand, { stdio: 'inherit' });
-    console.log(`✅ WebP spritesheet saved to: ${webpOutputPath}`);
-  } catch (error) {
-    console.error('❌ Failed to convert to WebP:', error);
-    console.log('⚠️  PNG version is still available at:', config.outputImagePath);
-  }
-  
-  console.log('🎉 Spritesheet generation complete!');
+  console.log('\n🎉 All spritesheet generation complete!');
+  console.log(`📋 Generated ${configs.length} different sizes:`);
+  configs.forEach(config => {
+    console.log(`   • ${config.spriteWidth}x${config.spriteHeight}px: ${config.outputImagePath.replace('.png', '.webp')}`);
+  });
 }
 
 // Run main function directly (ES module style)

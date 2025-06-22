@@ -16,7 +16,9 @@ export const PickupItemMarker: React.FC<PickupItemMarkerProps> = ({
   scaleY,
   spring,
 }) => {
-  return (
+  const spriteStyle = getItemSpriteStyle(item.id, 36)
+
+  return spriteStyle ? (
     <animated.div
       className="pickup-item-marker"
       style={{
@@ -26,16 +28,17 @@ export const PickupItemMarker: React.FC<PickupItemMarkerProps> = ({
       }}
     >
       <div className="pickup-item-tooltip cool-font">
-        <div
+        <img
+        src="/spritesheet-items-36.webp"
           className="rendering-pixelated"
-          style={getItemSpriteStyle(item.id, 16) || {}}
+          style={spriteStyle}
         />
         <p className="item-name pkmnem-face-shadow">{item.name || "Item"}</p>
       </div>
       {/* Pointer triangle */}
       <div className="pickup-item-arrow" />
     </animated.div>
-  );
+  ): null;
 };
 
 export default PickupItemMarker;

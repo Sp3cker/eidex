@@ -33,7 +33,7 @@ export function getItemSpriteCoords(itemId: string): [number, number] | null {
  */
 export function getItemSpriteStyle(
   itemId: string,
-  spriteSize: number = 64,
+  spriteSize: number,
 ): React.CSSProperties | null {
   const coords = getItemSpriteCoords(itemId);
 
@@ -41,28 +41,16 @@ export function getItemSpriteStyle(
 
   const [x, y] = coords;
 
-  // Spritesheet dimensions (from generation script)
-  const sourceSize = 64; // Individual sprite size in spritesheet
-  const scale = spriteSize / sourceSize;
-
   // Calculate the scaled spritesheet dimensions
   // Original spritesheet: 1054x2506px (from the generation output)
-  const originalSheetWidth = 1054;
-  const originalSheetHeight = 3826;
-  const scaledSheetWidth = originalSheetWidth * scale;
-  const scaledSheetHeight = originalSheetHeight * scale;
 
   const style: React.CSSProperties = {
-    backgroundImage: "url(/spritesheet-items.webp)",
-    backgroundPosition: `-${x * scale}px -${y * scale}px`,
-    backgroundSize: `${scaledSheetWidth}px ${scaledSheetHeight}px`,
-    WebkitBackgroundSize: `${scaledSheetWidth}px ${scaledSheetHeight}px`,
-
+    objectFit: "none",
+    objectPosition: `-${x }px -${y }px`,
     width: `${spriteSize}px`,
     height: `${spriteSize}px`,
     display: "inline-block",
     imageRendering: "pixelated",
-    overflow: "hidden",
     filter: `drop-shadow(0 0 2px rgba(0, 0, 0, 0.3))`,
   };
 
@@ -79,49 +67,28 @@ export const getItemSpriteStyle48 = (itemId: string) =>
 export const getItemSpriteStyle64 = (itemId: string) =>
   getItemSpriteStyle(itemId, 64);
 
-/**
- * Get a simple img src for a single item sprite
- * @param itemId - The item ID in ITEM_ format
- * @returns Object with src attribute and dimensions for an img tag, or null if not found
- */
-export function getItemImgProps(
-  itemId: string,
-): { src: string; width: number; height: number } | null {
-  const coords = getItemSpriteCoords(itemId);
-  if (!coords) return null;
+// /**
+//  * Get a simple img src for a single item sprite
+//  * @param itemId - The item ID in ITEM_ format
+//  * @returns Object with src attribute and dimensions for an img tag, or null if not found
+//  */
+// export function getItemImgProps(
+//   itemId: string,
+// ): { src: string; width: number; height: number } | null {
+//   const coords = getItemSpriteCoords(itemId);
+//   if (!coords) return null;
 
-  // For now, return the spritesheet with coordinates
-  // Note: In a production app, we might want to extract each sprite to its own file
-  // or use a canvas to extract just this sprite
-  return {
-    src: "/spritesheet-items.webp",
-    width: 64,
-    height: 64,
-    // We'll need to handle the sprite cropping in CSS
-  };
-}
+//   // For now, return the spritesheet with coordinates
+//   // Note: In a production app, we might want to extract each sprite to its own file
+//   // or use a canvas to extract just this sprite
+//   return {
+//     src: "/spritesheet-items.webp",
+//     width: 64,
+//     height: 64,
+//     // We'll need to handle the sprite cropping in CSS
+//   };
+// }
 
-/**
- * Get CSS properties for rendering a sprite using an img element with proper positioning
- * This approach uses transform and overflow:hidden to crop the sprite from the spritesheet
- * @param itemId - The item ID in ITEM_ format
- * @returns CSS properties for img element or null if not found
- */
-export function getItemImgStyle(itemId: string): React.CSSProperties | null {
-  const coords = getItemSpriteCoords(itemId);
-
-  if (!coords) return null;
-
-  const [x, y] = coords;
-
-  return {
-    transform: `translate(-${x}px, -${y}px)`,
-    imageRendering: "crisp-edges" as const,
-    width: "auto",
-    height: "auto",
-    display: "block",
-  };
-}
 
 /**
  * Alternative approach using img elements with transform and overflow:hidden container

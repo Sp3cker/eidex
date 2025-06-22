@@ -119,11 +119,7 @@
   white-space: nowrap;
 }
 
-.item-sprite {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-}
+
 
 .item-name {
   overflow: hidden;
@@ -139,11 +135,6 @@
   margin-top: -2px;
 }
 
-.debug-info {
-  margin-top: 0.5rem;
-  font-size: 0.75rem;
-  color: rgb(255, 255, 255);
-}
 
 @media (min-width: 640px) {
   .debug-info {
