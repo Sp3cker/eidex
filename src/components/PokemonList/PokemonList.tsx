@@ -6,6 +6,9 @@ import usePokemonStore from "@/stores/pokemonStore";
 import { FixedSizeList as List } from "react-window";
 import { Pokemon } from "@/types";
 import { useState, useEffect } from "react";
+const rootFontSize = parseFloat(
+  getComputedStyle(document.documentElement).fontSize,
+);
 
 // Row component for react-window
 const PokemonRow = ({
@@ -28,13 +31,6 @@ const useItemHeight = () => {
 
   useEffect(() => {
     const updateHeight = () => {
-      // Get the root font size
-      const rootFontSize = parseFloat(
-        getComputedStyle(document.documentElement).fontSize,
-      );
-
-      // Define heights in rem, then convert to pixels
-      // const isMobile = window.innerWidth < 768; // md breakpoint
       const heightInRem = 15; // 6.25rem = 100px, 7.5rem = 120px (at 16px base)
 
       setItemHeight(heightInRem * rootFontSize);

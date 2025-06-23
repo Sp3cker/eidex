@@ -1,15 +1,19 @@
+import { useScreenWidth } from "@/hooks/useScreenWidth";
 import useMapStore from "@/stores/useMapStore";
 import { useSpring, animated, to } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
 import { useEffect, useRef } from "react";
 import { shallow } from "zustand/shallow";
+const rootFontSize = parseFloat(
+  getComputedStyle(document.documentElement).fontSize,
+);
 
 const MapContainer = ({ children }: any) => {
   const [selectedCoordinates, setDragging] = useMapStore(
     (state) => [state.selectedCoordinates, state.setDragging],
     shallow,
   );
-
+  const screenWidth = useScreenWidth();
   const targetRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<HTMLDivElement>(null);
 
@@ -20,15 +24,17 @@ const MapContainer = ({ children }: any) => {
       tension: 550,
       friction: 100,
       precision: 0.2,
-      
     }; // Default config
     let currentSpringDelay = 0; // Default delay
-
+    const xyScales =
+      screenWidth === "sm" || screenWidth === "xs"
+        ? [-3 * rootFontSize, 3 * rootFontSize]
+        : [3 * rootFontSize, 4 * rootFontSize];
     if (selectedCoordinates && mapRef.current) {
       const [x, y] = selectedCoordinates;
       currentTargetCenterOffset = [
-        window.innerWidth / 2 - x,
-        window.innerHeight / 2 - y,
+        window.innerWidth / 2 - x - xyScales[0],
+        window.innerHeight / 2 - y - xyScales[1],
       ];
       currentSpringDelay = 160; // Specific delay for this case
     }
@@ -39,12 +45,10 @@ const MapContainer = ({ children }: any) => {
       config: currentSpringConfig,
       delay: currentSpringDelay,
       onRest: () => {
-        if (typeof setDragging === "function") {
-          setDragging(false);
-        }
+        setDragging(false);
       },
     };
-  }, [selectedCoordinates]);
+  }, [selectedCoordinates, screenWidth]);
 
   // useWheel(
   //   ({ movement: [, y] }) => {
