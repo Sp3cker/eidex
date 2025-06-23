@@ -24,7 +24,7 @@ const Header = () => {
     <div className="content-visibility relative flex w-full items-center justify-between bg-gray-800 px-1 py-1">
       <div className="flex flex-row items-center gap-1">
         <img
-          src="/Pokemans_395-1200px.webp"
+          src="/Pokemans_395.webp"
           alt="Emerald Imperium Map & Dexnav"
           className="h-9"
           height="36"
