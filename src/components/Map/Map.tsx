@@ -4,7 +4,7 @@ import NewMap from "./ReactSvg";
 import Dexnav from "./ItemsBox";
 
 import MapContainer from "./MapContainer";
-import Selecta from "./Selecta";
+import Selecta from "./MapPlaceInfo/Selecta";
 import "./grid.css";
 import useMapStore from "@/stores/useMapStore";
 import { lazy, Suspense, useLayoutEffect } from "react";

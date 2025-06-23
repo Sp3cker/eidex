@@ -7,7 +7,7 @@ const translatesTo = {
   lg: 50,
   md: 3,
   sm: 70,
-  xs: 70
+  xs: 70,
 };
 const Selecta = () => {
   const screenWidth = useScreenWidth();
@@ -66,7 +66,7 @@ const Selecta = () => {
   return (
     <animated.aside
       style={spring}
-      className="selecta-grid selecta-z flex h-10 min-w-[120px] select-none flex-row items-center rounded-lg border border-gray-600/50 bg-gray-800/90 px-1 py-1 shadow-lg"
+      className="selecta-grid selecta-z flex h-10 min-w-[120px] max-w-[9.25rem] select-none flex-row items-center rounded-lg border border-gray-600/50 bg-gray-800/90 px-1 py-1 shadow-lg md:max-w-[30rem]"
     >
       <button
         className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 flex-shrink-0 rounded-lg text-xs text-neutral-100 shadow-md"
@@ -77,9 +77,9 @@ const Selecta = () => {
         ▼
       </button>
 
-      <div className="font-calamity flex-1 truncate px-2 text-center text-xs font-bold text-white">
+      <p className="font-pkmnem text-ellipsis leading-tight flex-1 text-wrap px-2 text-center text-md font-bold text-neutral-100">
         {selectedLevelLabel || "N/A"}
-      </div>
+      </p>
 
       <button
         className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 flex-shrink-0 rounded-lg text-xs text-neutral-100 shadow-md disabled:opacity-50"
