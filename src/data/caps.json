@@ -1,0 +1,21 @@
+[
+  { "desc": "FLAG_BADGE01_GET", "cap": 15 },
+  { "desc": "FLAG_DEFEATED_RIVAL_RUSTBORO", "cap": 20 },
+  { "desc": "FLAG_BADGE02_GET", "cap": 25 },
+  { "desc": "FLAG_HIDE_ROUTE_110_TEAM_AQUA", "cap": 30 },
+  { "desc": "FLAG_RIVAL_110", "cap": 32 },
+  { "desc": "FLAG_BADGE03_GET", "cap": 34 },
+  { "desc": "FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY", "cap": 44 },
+  { "desc": "FLAG_BADGE04_GET", "cap": 47 },
+  { "desc": "FLAG_BEAT_TRICK_HOUSE_3", "cap": 56 },
+  { "desc": "FLAG_BADGE05_GET", "cap": 59 },
+  { "desc": "FLAG_RECEIVED_HM_FLY", "cap": 64 },
+  { "desc": "FLAG_BADGE06_GET", "cap": 68 },
+  { "desc": "FLAG_DAWN_LILYCOVE", "cap": 71 },
+  { "desc": "FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE", "cap": 74 },
+  { "desc": "FLAG_BADGE07_GET", "cap": 76 },
+  { "desc": "FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN", "cap": 80 },
+  { "desc": "FLAG_BADGE08_GET", "cap": 82 },
+  { "desc": "FLAG_DEFEATED_WALLY_VICTORY_ROAD", "cap": 84 },
+  { "desc": "FLAG_IS_CHAMPION", "cap": 85 }
+]
