@@ -31,6 +31,7 @@ export const useMapStore = create<MapStore>()(
       selectedLevelId: null,
       selectedRoamer: null,
       dragging: false,
+      isPlacesListOpen: false,
     };
     return {
       ...initialState,
@@ -219,6 +220,14 @@ export const useMapStore = create<MapStore>()(
         if (selectedMap) {
           get().setSelectedMap(selectedMap);
         }
+      },
+
+      // PlacesList panel actions
+      setPlacesListOpen: (open: boolean) => {
+        set({ isPlacesListOpen: open });
+      },
+      togglePlacesList: () => {
+        set((state) => ({ isPlacesListOpen: !state.isPlacesListOpen }));
       },
     };
   }),

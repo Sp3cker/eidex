@@ -11,6 +11,7 @@ import { lazy, Suspense, useLayoutEffect } from "react";
 import Roamers from "./Roamers";
 import SearchContainer from "./Search/SearchContainer";
 import LoadingSpinner from "../ui/LoadingSpinner";
+import PlacesList from "./PlacesList";
 
 document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
@@ -47,6 +48,12 @@ const Map = () => {
         </Suspense>
       </ErrorBoundary>
       <Roamers />
+      <ErrorBoundary
+        fallback={<div>something went wrong with place list </div>}
+      >
+        <PlacesList />
+      </ErrorBoundary>
+
       <Suspense fallback={<></>}>
         <PokemonModal />
       </Suspense>

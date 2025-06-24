@@ -8,6 +8,7 @@ import CameraIcon from "./CameraIcon";
 const ItemsBox = memo(function ItemsBox() {
   const selectedMap = useMapStore((state) => state.selectedMap);
   const setViewingImage = useMapStore((state) => state.setViewingImage);
+  const togglePlacesList = useMapStore((state) => state.togglePlacesList);
   const show = useMapStore((state) => {
     return state.selectedMap !== null && state.dragging === false;
   });
@@ -29,9 +30,18 @@ const ItemsBox = memo(function ItemsBox() {
       className="dexnav-grid dexnav-z max-h-[70vh] w-full overflow-y-auto rounded-lg border border-gray-200 bg-gradient-to-br from-emerald-50 via-white to-gray-100 p-4 shadow-xl md:w-96"
     >
       <div className="sticky top-0 z-10 flex items-center justify-between">
-        <h2 className="cool-font md:text-md pb-2 text-sm font-bold text-neutral-700">
-          {mapLabel}
-        </h2>
+        <span className="flex flex-row gap-3 justify-center items-center">
+          <button
+            className="bg-fieldset px-1 rounded-sm"
+            onClick={togglePlacesList}
+            title="Click to view all locations"
+          >
+            »
+          </button>
+          <h2 className="cool-font md:text-md cursor-pointer text-left text-sm font-bold text-neutral-700 transition-colors hover:text-blue-600">
+            {mapLabel}
+          </h2>
+        </span>
         <CameraIcon mapLabel={mapLabel} setViewingImage={setViewingImage} />
       </div>
       <div className="font-pkmnem flex flex-col rounded-sm">

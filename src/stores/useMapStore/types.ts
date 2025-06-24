@@ -46,6 +46,10 @@ type MapStore = {
   dragging: boolean;
   hasEncounterDataStored: boolean;
   encounterDataSource: "default" | "next";
+  
+  // PlacesList panel state
+  isPlacesListOpen: boolean;
+  
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
@@ -65,6 +69,10 @@ type MapStore = {
   setEncountersData: (data: any) => void;
   setEncounterDataSource: (to: "default" | "next") => void;
   revertToDefaultEncounters: () => void;
+  
+  // PlacesList panel actions
+  setPlacesListOpen: (open: boolean) => void;
+  togglePlacesList: () => void;
 };
 
 export type { EncounterMons, EncounterMonsFromJSON, MapStore, Level };

@@ -2,29 +2,7 @@ import MapPlace from "./MapPlace";
 import objects from "@/data/map/mapsvgs.json";
 import React from "react";
 import { ErrorBoundary } from "react-error-boundary";
-// const coords = () => {
-//   const coords = new Map<string, number[]>();
-//   function loop(obj: any) {
-//     if (obj.x && obj.y) {
-//       coords.set(obj.id, [obj.x, obj.y]);
-//       // console.log({ x: obj.x, y: obj.y, id: obj.id });
-//     }
-//     if (obj.d) {
-//       const [x, y] = obj.d.split(",");
-//       coords.set(obj.id, [
-//         Number.parseInt(x.replace("M", "")),
-//         Number.parseInt(y),
-//       ]);
-//     }
-//     if (obj.children) {
-//       loop({ id: obj.id, ...obj.children[0] });
-//     }
-//   }
-//   objects.forEach(loop);
 
-//   useMapStore.setState({ storedCoordinates: coords });
-// };
-// coords();
 const SVGComponent = React.memo(function Svg() {
   return <svg
     width="100%"
