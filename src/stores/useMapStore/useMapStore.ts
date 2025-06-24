@@ -46,7 +46,7 @@ export const useMapStore = create<MapStore>()(
       encounterDataSource: "default",
 
       deselectMap: () => {
-        window.history.pushState({}, "", "");
+        window.history.pushState({}, "", "/map");
         window.location.hash = "";
         set({ ...initialState });
       },

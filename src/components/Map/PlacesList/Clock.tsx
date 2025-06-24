@@ -4,48 +4,23 @@ import {
   memo,
   useCallback,
   useMemo,
-  useRef,
-  RefObject,
 } from "react";
 
-// Static styles to avoid re-creating objects
-const visibleStyle = { visibility: "visible" as const };
-const hiddenStyle = { visibility: "hidden" as const };
+const Colon = memo(function Colon() {
 
-const Colon = memo(function Colon({ show }: { show: boolean }) {
-  return <p style={show ? visibleStyle : hiddenStyle}>:</p>;
-});
-
-function useIntersectionObserver(): [
-  RefObject<HTMLDivElement | null>,
-  boolean,
-] {
-  const [isVisible, setIsVisible] = useState<boolean>(true);
-  const elementRef = useRef<HTMLDivElement>(null);
-
+  const [show, setShow] = useState<boolean>(true);
+  const handleShow = () => {
+    setShow(!show);
+  };
   useEffect(() => {
-    const element = elementRef.current;
-    if (!element) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      {
-        threshold: 0,
-        rootMargin: "100px",
-      },
-    );
-
-    observer.observe(element);
-
+    // handleShow(); // Initial call to set visibility
+    const timeInterval = setInterval(handleShow, 1000);
     return () => {
-      observer.disconnect();
+      clearInterval(timeInterval);
     };
-  }, []);
-
-  return [elementRef, isVisible];
-}
+  }, [handleShow]);
+  return <p className={show ? 'visible' : 'invisible'}>:</p>;
+});
 
 // Pre-calculated period symbols to avoid repeated array creation
 const PERIOD_SYMBOLS = {
@@ -61,8 +36,6 @@ const Clock = memo(function Clock() {
   const [minute, setMinute] = useState<string>("");
   const [period, setPeriod] = useState<string>("");
   const [periodSymbol, setPeriodSymbol] = useState<string>("");
-  const [showColon, setShowColon] = useState<boolean>(true);
-  const [clockRef, isVisible] = useIntersectionObserver();
 
   // Static formatter - never changes
   const formatter = useMemo(
@@ -116,30 +89,22 @@ const Clock = memo(function Clock() {
     setPeriodSymbol(getPeriodSymbol(hour24));
   }, [formatter, getPeriodSymbol]);
 
-  const toggleColon = useCallback(() => {
-    setShowColon((prev) => !prev);
-  }, []);
-
   useEffect(() => {
-    if (!isVisible) return; // Don't run when off screen.
-
     updateTime(); // Initial call
     const timeInterval = setInterval(updateTime, 60000);
-    const colonInterval = setInterval(toggleColon, 1000);
 
     return () => {
       clearInterval(timeInterval);
-      clearInterval(colonInterval);
     };
-  }, [updateTime, toggleColon, isVisible]);
+  }, [updateTime]);
 
   return (
-    <div ref={clockRef} className="pr-1 pt-1 content-visibility font-pkmnem pkmn-types flex items-center text-lg/4 text-neutral-600">
+    <div className="content-visibility font-pkmnem pkmn-types flex items-center pr-1 pt-1 text-lg/4 text-neutral-600">
       <p>{periodSymbol}</p>
       {"\u2006"}
       <span className="tracking-wider">{hour}</span>
       {"\u202a"}
-      <Colon show={showColon} />
+      <Colon />
       {"\u202a"}
       <span className="tracking-wider">
         {minute}
