@@ -42,7 +42,11 @@ const putIdOnEncounter: (
       if (specieIndex === undefined) {
         // If it gets this far, the mon in 'Encounters' doesn't specify its form so fuck it
         const monInJson = pokemon.findIndex(
-          (p) => p.speciesName.toLowerCase() === specie.species,
+          (p) =>
+            p.speciesName
+              .toLowerCase()
+              .replace(/♂/g, "_m")
+              .replace(/♀/g, "_f") === specie.species,
         );
         if (monInJson === -1) {
           console.error(
@@ -50,6 +54,10 @@ const putIdOnEncounter: (
             specie.species,
           );
           return;
+        }
+        // We found them, now to use their Baseform if its there
+        if (pokemon[monInJson].baseForm) {
+          specieIndex = pokemon[monInJson].baseForm
         }
         specieIndex = pokemon[monInJson].speciesId;
       }
