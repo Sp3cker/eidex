@@ -3,6 +3,7 @@ import { useUIStore } from "@/stores/uiStore";
 import FilterBar from "./Filter/FilterBar"; // Adjust path as needed
 import { useWindowSize } from "@/hooks/useWindowResize";
 import PokemonView from "./PokemonView/PokemonView";
+import CloseButton from "./ui/CloseButton";
 const AnimatedArea = () => {
   const selectedPokemon = useUIStore((state) => state.selectedPokemon);
   const closeModal = useUIStore((state) => state.closeModal);
@@ -38,14 +39,7 @@ const AnimatedArea = () => {
                 className="relative max-h-screen justify-normal overflow-y-auto rounded-lg bg-gray-700"
                 onClick={(e) => e.stopPropagation()}
               >
-                <span className="absolute left-3 top-5 flex flex-row items-center gap-1 self-center">
-                  <button
-                    onClick={closeModal}
-                    className="font-pkmnem rounded px-3 text-3xl font-bold text-neutral-300 hover:bg-neutral-700 hover:text-neutral-100" // Example styling
-                  >
-                    X
-                  </button>
-                </span>
+                <CloseButton onClick={closeModal} />
                 {selectedPokemon && <PokemonView pokemon={selectedPokemon} />}
               </div>
             </animated.div>

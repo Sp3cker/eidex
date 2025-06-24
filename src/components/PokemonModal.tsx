@@ -1,5 +1,6 @@
 import PokemonView from "./PokemonView/PokemonView";
 import { useUIStore } from "@/stores/uiStore";
+import CloseButton from "./ui/CloseButton";
 
 function PokemonModal() {
   const closeModal = useUIStore((state) => state.closeModal);
@@ -15,14 +16,7 @@ function PokemonModal() {
         className="w-xl no-scrollbar relative my-0 h-[95dvh] max-h-screen justify-normal overflow-y-auto rounded-lg border border-gray-100 bg-zinc-800 px-6 py-3"
         onClick={(e) => e.stopPropagation()}
       >
-        <span className="absolute right-5 top-5 flex flex-row items-center gap-1 self-center">
-          <button
-            onClick={closeModal}
-            className="font-pkmnem rounded px-3 text-3xl font-bold text-neutral-300 hover:bg-neutral-700 hover:text-neutral-100" // Example styling
-          >
-            X
-          </button>
-        </span>
+    <CloseButton onClick={closeModal} />
         <PokemonView pokemon={selectedPokemon} />
       </div>
     </div>

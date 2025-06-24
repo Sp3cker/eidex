@@ -54,7 +54,7 @@ const Map = () => {
         <PlacesList />
       </ErrorBoundary>
 
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<div className="hidden"></div>}>
         <PokemonModal />
       </Suspense>
     </div>
