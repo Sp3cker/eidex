@@ -32,7 +32,7 @@ const MapPlaceInfo = () => {
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex max-h-[35rem] min-w-[150px] flex-col rounded-lg pb-1 pt-3`}
+      className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex max-h-[35rem] min-w-[150px] max-w-[35rem] flex-col rounded-lg pb-1 pt-3`}
     >
       <EncounterMonsContainer selectedTab={selectedTab} />
       <div
