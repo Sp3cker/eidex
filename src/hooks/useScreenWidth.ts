@@ -23,7 +23,7 @@ const getScreenWidth = (): ScreenWidth => {
   if (width >= 1024) return "lg";
   if (width >= 768) return "md";
   if (width >= 640) return "sm"; // Fixed: Tailwind's sm breakpoint is 640px
-  return "xs";
+  return "sm";
 };
 
 export const useScreenWidth = (): ScreenWidth => {

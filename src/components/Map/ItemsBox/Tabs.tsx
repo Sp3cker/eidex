@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { TabType } from "./useItemsData";
+import { TabType } from "./hooks/useItemsData";
 
 interface TabNavigationProps {
   selectedTab: TabType;

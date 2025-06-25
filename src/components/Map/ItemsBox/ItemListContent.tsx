@@ -12,18 +12,18 @@ const ItemListRender = (showPrice: boolean) => (item: ItemWithAmount) => (
       </p>
     </div>
     {(item as { description?: string }).description && (
-      <p className="font-pkmnem text-shadow-2xs leading-4">
+      <p className="font-pkmnem text-shadow-2xs leading-3 md:leading-4">
         {(item as { description?: string }).description}
       </p>
     )}
   </hgroup>
 );
 const renderIcon = (item: Item) => {
-  const spriteStyle = getItemSpriteStyle(item.id,36); // Changed from 64 to 32
+  const spriteStyle = getItemSpriteStyle(item.id,24); // Changed from 64 to 32
 
   return spriteStyle ? (
       <img
-        src="/spritesheet-items-36.webp"
+        src="/spritesheet-items-16.webp"
         className=" flex-shrink-0"
         style={spriteStyle}
       />

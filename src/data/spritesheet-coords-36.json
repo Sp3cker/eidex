@@ -9,105 +9,105 @@
   {
     "item": "ITEM_ABILITY_PATCH",
     "coords": [
-      38,
+      32,
       0
     ]
   },
   {
     "item": "ITEM_ABILITY_SHIELD",
     "coords": [
-      76,
+      64,
       0
     ]
   },
   {
     "item": "ITEM_ABOMASITE",
     "coords": [
-      114,
+      96,
       0
     ]
   },
   {
     "item": "ITEM_ABSOLITE",
     "coords": [
-      152,
+      128,
       0
     ]
   },
   {
     "item": "ITEM_ABSORB_BULB",
     "coords": [
-      190,
+      160,
       0
     ]
   },
   {
     "item": "ITEM_ACRO_BIKE",
     "coords": [
-      228,
+      192,
       0
     ]
   },
   {
     "item": "ITEM_ADAMANT_CRYSTAL",
     "coords": [
-      266,
+      224,
       0
     ]
   },
   {
     "item": "ITEM_ADAMANT_MINT",
     "coords": [
-      304,
+      256,
       0
     ]
   },
   {
     "item": "ITEM_ADAMANT_ORB",
     "coords": [
-      342,
+      288,
       0
     ]
   },
   {
     "item": "ITEM_ADRENALINE_ORB",
     "coords": [
-      380,
+      320,
       0
     ]
   },
   {
     "item": "ITEM_AERODACTYLITE",
     "coords": [
-      418,
+      352,
       0
     ]
   },
   {
     "item": "ITEM_AGGRONITE",
     "coords": [
-      456,
+      384,
       0
     ]
   },
   {
     "item": "ITEM_AGUAV_BERRY",
     "coords": [
-      494,
+      416,
       0
     ]
   },
   {
     "item": "ITEM_AIR_BALLOON",
     "coords": [
-      532,
+      448,
       0
     ]
   },
   {
     "item": "ITEM_ALAKAZITE",
     "coords": [
-      570,
+      480,
       0
     ]
   },
@@ -115,6370 +115,6370 @@
     "item": "ITEM_ALORAICHIUM_Z",
     "coords": [
       0,
-      38
+      32
     ]
   },
   {
     "item": "ITEM_ALTARIANITE",
     "coords": [
-      38,
-      38
+      32,
+      32
     ]
   },
   {
     "item": "ITEM_AMAZE_MULCH",
     "coords": [
-      76,
-      38
+      64,
+      32
     ]
   },
   {
     "item": "ITEM_AMPHAROSITE",
     "coords": [
-      114,
-      38
+      96,
+      32
     ]
   },
   {
     "item": "ITEM_AMULET_COIN",
     "coords": [
-      152,
-      38
+      128,
+      32
     ]
   },
   {
     "item": "ITEM_ANTIDOTE",
     "coords": [
-      190,
-      38
+      160,
+      32
     ]
   },
   {
     "item": "ITEM_APICOT_BERRY",
     "coords": [
-      228,
-      38
+      192,
+      32
     ]
   },
   {
     "item": "ITEM_APPLITE",
     "coords": [
-      266,
-      38
+      224,
+      32
     ]
   },
   {
     "item": "ITEM_ARMOR_FOSSIL",
     "coords": [
-      304,
-      38
+      256,
+      32
     ]
   },
   {
     "item": "ITEM_ARMORITE_ORE",
     "coords": [
-      342,
-      38
+      288,
+      32
     ]
   },
   {
     "item": "ITEM_ASPEAR_BERRY",
     "coords": [
-      380,
-      38
+      320,
+      32
     ]
   },
   {
     "item": "ITEM_ASSAULT_VEST",
     "coords": [
-      418,
-      38
+      352,
+      32
     ]
   },
   {
     "item": "ITEM_AUDINITE",
     "coords": [
-      456,
-      38
+      384,
+      32
     ]
   },
   {
     "item": "ITEM_AURORA_TICKET",
     "coords": [
-      494,
-      38
+      416,
+      32
     ]
   },
   {
     "item": "ITEM_AUSPICIOUS_ARMOR",
     "coords": [
-      532,
-      38
+      448,
+      32
     ]
   },
   {
     "item": "ITEM_AUX_EVASION",
     "coords": [
-      570,
-      38
+      480,
+      32
     ]
   },
   {
     "item": "ITEM_AUX_GUARD",
     "coords": [
       0,
-      76
+      64
     ]
   },
   {
     "item": "ITEM_AUX_POWER",
     "coords": [
-      38,
-      76
+      32,
+      64
     ]
   },
   {
     "item": "ITEM_AUX_POWERGUARD",
     "coords": [
-      76,
-      76
+      64,
+      64
     ]
   },
   {
     "item": "ITEM_AWAKENING",
     "coords": [
-      114,
-      76
+      96,
+      64
     ]
   },
   {
     "item": "ITEM_BABIRI_BERRY",
     "coords": [
-      152,
-      76
+      128,
+      64
     ]
   },
   {
     "item": "ITEM_BALM_MUSHROOM",
     "coords": [
-      190,
-      76
+      160,
+      64
     ]
   },
   {
     "item": "ITEM_BANETTITE",
     "coords": [
-      228,
-      76
+      192,
+      64
     ]
   },
   {
     "item": "ITEM_BASEMENT_KEY",
     "coords": [
-      266,
-      76
+      224,
+      64
     ]
   },
   {
     "item": "ITEM_BEAD_MAIL",
     "coords": [
-      304,
-      76
+      256,
+      64
     ]
   },
   {
     "item": "ITEM_BEAST_BALL",
     "coords": [
-      342,
-      76
+      288,
+      64
     ]
   },
   {
     "item": "ITEM_BEEDRILLITE",
     "coords": [
-      380,
-      76
+      320,
+      64
     ]
   },
   {
     "item": "ITEM_BELUE_BERRY",
     "coords": [
-      418,
-      76
+      352,
+      64
     ]
   },
   {
     "item": "ITEM_BERRY_JUICE",
     "coords": [
-      456,
-      76
+      384,
+      64
     ]
   },
   {
     "item": "ITEM_BERRY_POUCH",
     "coords": [
-      494,
-      76
+      416,
+      64
     ]
   },
   {
     "item": "ITEM_BERRY_SWEET",
     "coords": [
-      532,
-      76
+      448,
+      64
     ]
   },
   {
     "item": "ITEM_BERSERK_GENE",
     "coords": [
-      570,
-      76
+      480,
+      64
     ]
   },
   {
     "item": "ITEM_BICYCLE",
     "coords": [
       0,
-      114
+      96
     ]
   },
   {
     "item": "ITEM_BIG_BAMBOO_SHOOT",
     "coords": [
-      38,
-      114
+      32,
+      96
     ]
   },
   {
     "item": "ITEM_BIG_MALASADA",
     "coords": [
-      76,
-      114
+      64,
+      96
     ]
   },
   {
     "item": "ITEM_BIG_MUSHROOM",
     "coords": [
-      114,
-      114
+      96,
+      96
     ]
   },
   {
     "item": "ITEM_BIG_NUGGET",
     "coords": [
-      152,
-      114
+      128,
+      96
     ]
   },
   {
     "item": "ITEM_BIG_PEARL",
     "coords": [
-      190,
-      114
+      160,
+      96
     ]
   },
   {
     "item": "ITEM_BIG_ROOT",
     "coords": [
-      228,
-      114
+      192,
+      96
     ]
   },
   {
     "item": "ITEM_BIKE_VOUCHER",
     "coords": [
-      266,
-      114
+      224,
+      96
     ]
   },
   {
     "item": "ITEM_BINDING_BAND",
     "coords": [
-      304,
-      114
+      256,
+      96
     ]
   },
   {
     "item": "ITEM_BLACK_APRICORN",
     "coords": [
-      342,
-      114
+      288,
+      96
     ]
   },
   {
     "item": "ITEM_BLACK_AUGURITE",
     "coords": [
-      380,
-      114
+      320,
+      96
     ]
   },
   {
     "item": "ITEM_BLACK_BELT",
     "coords": [
-      418,
-      114
+      352,
+      96
     ]
   },
   {
     "item": "ITEM_BLACK_FLUTE",
     "coords": [
-      456,
-      114
+      384,
+      96
     ]
   },
   {
     "item": "ITEM_BLACK_GLASSES",
     "coords": [
-      494,
-      114
+      416,
+      96
     ]
   },
   {
     "item": "ITEM_BLACK_SLUDGE",
     "coords": [
-      532,
-      114
+      448,
+      96
     ]
   },
   {
     "item": "ITEM_BLASTOISINITE",
     "coords": [
-      570,
-      114
+      480,
+      96
     ]
   },
   {
     "item": "ITEM_BLAZIKENITE",
     "coords": [
       0,
-      152
+      128
     ]
   },
   {
     "item": "ITEM_BLUE_APRICORN",
     "coords": [
-      38,
-      152
+      32,
+      128
     ]
   },
   {
     "item": "ITEM_BLUE_FLUTE",
     "coords": [
-      76,
-      152
+      64,
+      128
     ]
   },
   {
     "item": "ITEM_BLUE_ORB",
     "coords": [
-      114,
-      152
+      96,
+      128
     ]
   },
   {
     "item": "ITEM_BLUE_SCARF",
     "coords": [
-      152,
-      152
+      128,
+      128
     ]
   },
   {
     "item": "ITEM_BLUE_SHARD",
     "coords": [
-      190,
-      152
+      160,
+      128
     ]
   },
   {
     "item": "ITEM_BLUK_BERRY",
     "coords": [
-      228,
-      152
+      192,
+      128
     ]
   },
   {
     "item": "ITEM_BLUNDER_POLICY",
     "coords": [
-      266,
-      152
+      224,
+      128
     ]
   },
   {
     "item": "ITEM_BOLD_MINT",
     "coords": [
-      304,
-      152
+      256,
+      128
     ]
   },
   {
     "item": "ITEM_BOOST_MULCH",
     "coords": [
-      342,
-      152
+      288,
+      128
     ]
   },
   {
     "item": "ITEM_BOOSTER_ENERGY",
     "coords": [
-      380,
-      152
+      320,
+      128
     ]
   },
   {
     "item": "ITEM_BOTTLE_CAP",
     "coords": [
-      418,
-      152
+      352,
+      128
     ]
   },
   {
     "item": "ITEM_BRAVE_MINT",
     "coords": [
-      456,
-      152
+      384,
+      128
     ]
   },
   {
     "item": "ITEM_BRIGHT_POWDER",
     "coords": [
-      494,
-      152
+      416,
+      128
     ]
   },
   {
     "item": "ITEM_BUG_GEM",
     "coords": [
-      532,
-      152
+      448,
+      128
     ]
   },
   {
     "item": "ITEM_BUG_MEMORY",
     "coords": [
-      570,
-      152
+      480,
+      128
     ]
   },
   {
     "item": "ITEM_BUG_TERA_SHARD",
     "coords": [
       0,
-      190
+      160
     ]
   },
   {
     "item": "ITEM_BUGINIUM_Z",
     "coords": [
-      38,
-      190
+      32,
+      160
     ]
   },
   {
     "item": "ITEM_BURN_DRIVE",
     "coords": [
-      76,
-      190
+      64,
+      160
     ]
   },
   {
     "item": "ITEM_BURN_HEAL",
     "coords": [
-      114,
-      190
+      96,
+      160
     ]
   },
   {
     "item": "ITEM_BUTTERFRITE",
     "coords": [
-      152,
-      190
+      128,
+      160
     ]
   },
   {
     "item": "ITEM_CALCIUM",
     "coords": [
-      190,
-      190
+      160,
+      160
     ]
   },
   {
     "item": "ITEM_CALM_MINT",
     "coords": [
-      228,
-      190
+      192,
+      160
     ]
   },
   {
     "item": "ITEM_CAMERUPTITE",
     "coords": [
-      266,
-      190
+      224,
+      160
     ]
   },
   {
     "item": "ITEM_CARBOS",
     "coords": [
-      304,
-      190
+      256,
+      160
     ]
   },
   {
     "item": "ITEM_CARD_KEY",
     "coords": [
-      342,
-      190
+      288,
+      160
     ]
   },
   {
     "item": "ITEM_CAREFUL_MINT",
     "coords": [
-      380,
-      190
+      320,
+      160
     ]
   },
   {
     "item": "ITEM_CASTELIACONE",
     "coords": [
-      418,
-      190
+      352,
+      160
     ]
   },
   {
     "item": "ITEM_CATCHING_CHARM",
     "coords": [
-      456,
-      190
+      384,
+      160
     ]
   },
   {
     "item": "ITEM_CELL_BATTERY",
     "coords": [
-      494,
-      190
+      416,
+      160
     ]
   },
   {
     "item": "ITEM_CENTISKITE",
     "coords": [
-      532,
-      190
+      448,
+      160
     ]
   },
   {
     "item": "ITEM_CHARCOAL",
     "coords": [
-      570,
-      190
+      480,
+      160
     ]
   },
   {
     "item": "ITEM_CHARIZARDITE_X",
     "coords": [
       0,
-      228
+      192
     ]
   },
   {
     "item": "ITEM_CHARIZARDITE_Y",
     "coords": [
-      38,
-      228
+      32,
+      192
     ]
   },
   {
     "item": "ITEM_CHARTI_BERRY",
     "coords": [
-      76,
-      228
+      64,
+      192
     ]
   },
   {
     "item": "ITEM_CHERI_BERRY",
     "coords": [
-      114,
-      228
+      96,
+      192
     ]
   },
   {
     "item": "ITEM_CHERISH_BALL",
     "coords": [
-      152,
-      228
+      128,
+      192
     ]
   },
   {
     "item": "ITEM_CHESTO_BERRY",
     "coords": [
-      190,
-      228
+      160,
+      192
     ]
   },
   {
     "item": "ITEM_CHILAN_BERRY",
     "coords": [
-      228,
-      228
+      192,
+      192
     ]
   },
   {
     "item": "ITEM_CHILL_DRIVE",
     "coords": [
-      266,
-      228
+      224,
+      192
     ]
   },
   {
     "item": "ITEM_CHIPPED_POT",
     "coords": [
-      304,
-      228
+      256,
+      192
     ]
   },
   {
     "item": "ITEM_CHOICE_BAND",
     "coords": [
-      342,
-      228
+      288,
+      192
     ]
   },
   {
     "item": "ITEM_CHOICE_DUMPLING",
     "coords": [
-      380,
-      228
+      320,
+      192
     ]
   },
   {
     "item": "ITEM_CHOICE_SCARF",
     "coords": [
-      418,
-      228
+      352,
+      192
     ]
   },
   {
     "item": "ITEM_CHOICE_SPECS",
     "coords": [
-      456,
-      228
+      384,
+      192
     ]
   },
   {
     "item": "ITEM_CHOPLE_BERRY",
     "coords": [
-      494,
-      228
+      416,
+      192
     ]
   },
   {
     "item": "ITEM_CLAW_FOSSIL",
     "coords": [
-      532,
-      228
+      448,
+      192
     ]
   },
   {
     "item": "ITEM_CLEANSE_TAG",
     "coords": [
-      570,
-      228
+      480,
+      192
     ]
   },
   {
     "item": "ITEM_CLEAR_AMULET",
     "coords": [
       0,
-      266
+      224
     ]
   },
   {
     "item": "ITEM_CLEVER_FEATHER",
     "coords": [
-      38,
-      266
+      32,
+      224
     ]
   },
   {
     "item": "ITEM_CLEVER_MOCHI",
     "coords": [
-      76,
-      266
+      64,
+      224
     ]
   },
   {
     "item": "ITEM_CLOVER_SWEET",
     "coords": [
-      114,
-      266
+      96,
+      224
     ]
   },
   {
     "item": "ITEM_COALOSSITE",
     "coords": [
-      152,
-      266
+      128,
+      224
     ]
   },
   {
     "item": "ITEM_COBA_BERRY",
     "coords": [
-      190,
-      266
+      160,
+      224
     ]
   },
   {
     "item": "ITEM_COIN_CASE",
     "coords": [
-      228,
-      266
+      192,
+      224
     ]
   },
   {
     "item": "ITEM_COLBUR_BERRY",
     "coords": [
-      266,
-      266
+      224,
+      224
     ]
   },
   {
     "item": "ITEM_COMET_SHARD",
     "coords": [
-      304,
-      266
+      256,
+      224
     ]
   },
   {
     "item": "ITEM_CONTEST_PASS",
     "coords": [
-      342,
-      266
+      288,
+      224
     ]
   },
   {
     "item": "ITEM_COPPERAJITE",
     "coords": [
-      380,
-      266
+      320,
+      224
     ]
   },
   {
     "item": "ITEM_CORNERSTONE_MASK",
     "coords": [
-      418,
-      266
+      352,
+      224
     ]
   },
   {
     "item": "ITEM_CORNN_BERRY",
     "coords": [
-      456,
-      266
+      384,
+      224
     ]
   },
   {
     "item": "ITEM_COVER_FOSSIL",
     "coords": [
-      494,
-      266
+      416,
+      224
     ]
   },
   {
     "item": "ITEM_COVERT_CLOAK",
     "coords": [
-      532,
-      266
+      448,
+      224
     ]
   },
   {
     "item": "ITEM_CRACKED_POT",
     "coords": [
-      570,
-      266
+      480,
+      224
     ]
   },
   {
     "item": "ITEM_CUSTAP_BERRY",
     "coords": [
       0,
-      304
+      256
     ]
   },
   {
     "item": "ITEM_DAMP_MULCH",
     "coords": [
-      38,
-      304
+      32,
+      256
     ]
   },
   {
     "item": "ITEM_DAMP_ROCK",
     "coords": [
-      76,
-      304
+      64,
+      256
     ]
   },
   {
     "item": "ITEM_DARK_GEM",
     "coords": [
-      114,
-      304
+      96,
+      256
     ]
   },
   {
     "item": "ITEM_DARK_MEMORY",
     "coords": [
-      152,
-      304
+      128,
+      256
     ]
   },
   {
     "item": "ITEM_DARK_TERA_SHARD",
     "coords": [
-      190,
-      304
+      160,
+      256
     ]
   },
   {
     "item": "ITEM_DARKINIUM_Z",
     "coords": [
-      228,
-      304
+      192,
+      256
     ]
   },
   {
     "item": "ITEM_DAWN_STONE",
     "coords": [
-      266,
-      304
+      224,
+      256
     ]
   },
   {
     "item": "ITEM_DECIDIUM_Z",
     "coords": [
-      304,
-      304
+      256,
+      256
     ]
   },
   {
     "item": "ITEM_DEEP_SEA_SCALE",
     "coords": [
-      342,
-      304
+      288,
+      256
     ]
   },
   {
     "item": "ITEM_DEEP_SEA_TOOTH",
     "coords": [
-      380,
-      304
+      320,
+      256
     ]
   },
   {
     "item": "ITEM_DESTINY_KNOT",
     "coords": [
-      418,
-      304
+      352,
+      256
     ]
   },
   {
     "item": "ITEM_DEVON_PARTS",
     "coords": [
-      456,
-      304
+      384,
+      256
     ]
   },
   {
     "item": "ITEM_DEVON_SCOPE",
     "coords": [
-      494,
-      304
+      416,
+      256
     ]
   },
   {
     "item": "ITEM_DIANCITE",
     "coords": [
-      532,
-      304
+      448,
+      256
     ]
   },
   {
     "item": "ITEM_DIRE_HIT",
     "coords": [
-      570,
-      304
+      480,
+      256
     ]
   },
   {
     "item": "ITEM_DIVE_BALL",
     "coords": [
       0,
-      342
+      288
     ]
   },
   {
     "item": "ITEM_DNA_SPLICERS",
     "coords": [
-      38,
-      342
+      32,
+      288
     ]
   },
   {
     "item": "ITEM_DOME_FOSSIL",
     "coords": [
-      76,
-      342
+      64,
+      288
     ]
   },
   {
     "item": "ITEM_DOUSE_DRIVE",
     "coords": [
-      114,
-      342
+      96,
+      288
     ]
   },
   {
     "item": "ITEM_DOWSING_MACHINE",
     "coords": [
-      152,
-      342
+      128,
+      288
     ]
   },
   {
     "item": "ITEM_DRACO_PLATE",
     "coords": [
-      190,
-      342
+      160,
+      288
     ]
   },
   {
     "item": "ITEM_DRAGON_FANG",
     "coords": [
-      228,
-      342
+      192,
+      288
     ]
   },
   {
     "item": "ITEM_DRAGON_GEM",
     "coords": [
-      266,
-      342
+      224,
+      288
     ]
   },
   {
     "item": "ITEM_DRAGON_MEMORY",
     "coords": [
-      304,
-      342
+      256,
+      288
     ]
   },
   {
     "item": "ITEM_DRAGON_SCALE",
     "coords": [
-      342,
-      342
+      288,
+      288
     ]
   },
   {
     "item": "ITEM_DRAGON_TERA_SHARD",
     "coords": [
-      380,
-      342
+      320,
+      288
     ]
   },
   {
     "item": "ITEM_DRAGONIUM_Z",
     "coords": [
-      418,
-      342
+      352,
+      288
     ]
   },
   {
     "item": "ITEM_DREAD_PLATE",
     "coords": [
-      456,
-      342
+      384,
+      288
     ]
   },
   {
     "item": "ITEM_DREAM_BALL",
     "coords": [
-      494,
-      342
+      416,
+      288
     ]
   },
   {
     "item": "ITEM_DREAM_MAIL",
     "coords": [
-      532,
-      342
+      448,
+      288
     ]
   },
   {
     "item": "ITEM_DREDNAWITE",
     "coords": [
-      570,
-      342
+      480,
+      288
     ]
   },
   {
     "item": "ITEM_DUBIOUS_DISC",
     "coords": [
       0,
-      380
+      320
     ]
   },
   {
     "item": "ITEM_DURIN_BERRY",
     "coords": [
-      38,
-      380
+      32,
+      320
     ]
   },
   {
     "item": "ITEM_DUSK_BALL",
     "coords": [
-      76,
-      380
+      64,
+      320
     ]
   },
   {
     "item": "ITEM_DUSK_STONE",
     "coords": [
-      114,
-      380
+      96,
+      320
     ]
   },
   {
     "item": "ITEM_DUSKNOIRITE",
     "coords": [
-      152,
-      380
+      128,
+      320
     ]
   },
   {
     "item": "ITEM_DYNAMAX_BAND",
     "coords": [
-      190,
-      380
+      160,
+      320
     ]
   },
   {
     "item": "ITEM_DYNAMAX_CANDY",
     "coords": [
-      228,
-      380
+      192,
+      320
     ]
   },
   {
     "item": "ITEM_DYNITE_ORE",
     "coords": [
-      266,
-      380
+      224,
+      320
     ]
   },
   {
     "item": "ITEM_EARTH_PLATE",
     "coords": [
-      304,
-      380
+      256,
+      320
     ]
   },
   {
     "item": "ITEM_EEVIUM_Z",
     "coords": [
-      342,
-      380
+      288,
+      320
     ]
   },
   {
     "item": "ITEM_EJECT_BUTTON",
     "coords": [
-      380,
-      380
+      320,
+      320
     ]
   },
   {
     "item": "ITEM_EJECT_PACK",
     "coords": [
-      418,
-      380
+      352,
+      320
     ]
   },
   {
     "item": "ITEM_ELECTIRIZER",
     "coords": [
-      456,
-      380
+      384,
+      320
     ]
   },
   {
     "item": "ITEM_ELECTRIC_GEM",
     "coords": [
-      494,
-      380
+      416,
+      320
     ]
   },
   {
     "item": "ITEM_ELECTRIC_MEMORY",
     "coords": [
-      532,
-      380
+      448,
+      320
     ]
   },
   {
     "item": "ITEM_ELECTRIC_SEED",
     "coords": [
-      570,
-      380
+      480,
+      320
     ]
   },
   {
     "item": "ITEM_ELECTRIC_TERA_SHARD",
     "coords": [
       0,
-      418
+      352
     ]
   },
   {
     "item": "ITEM_ELECTRIUM_Z",
     "coords": [
-      38,
-      418
+      32,
+      352
     ]
   },
   {
     "item": "ITEM_ELIXIR",
     "coords": [
-      76,
-      418
+      64,
+      352
     ]
   },
   {
     "item": "ITEM_EMPOLEONITE_D",
     "coords": [
-      114,
-      418
+      96,
+      352
     ]
   },
   {
     "item": "ITEM_EMPOLEONITE_O",
     "coords": [
-      152,
-      418
+      128,
+      352
     ]
   },
   {
     "item": "ITEM_ENERGY_POWDER",
     "coords": [
-      190,
-      418
+      160,
+      352
     ]
   },
   {
     "item": "ITEM_ENERGY_ROOT",
     "coords": [
-      228,
-      418
+      192,
+      352
     ]
   },
   {
     "item": "ITEM_ENIGMA_BERRY",
     "coords": [
-      266,
-      418
+      224,
+      352
     ]
   },
   {
     "item": "ITEM_ENIGMA_BERRY_E_READER",
     "coords": [
-      304,
-      418
+      256,
+      352
     ]
   },
   {
     "item": "ITEM_EON_TICKET",
     "coords": [
-      342,
-      418
+      288,
+      352
     ]
   },
   {
     "item": "ITEM_ESCAPE_ROPE",
     "coords": [
-      380,
-      418
+      320,
+      352
     ]
   },
   {
     "item": "ITEM_ETHER",
     "coords": [
-      418,
-      418
+      352,
+      352
     ]
   },
   {
     "item": "ITEM_EVERSTONE",
     "coords": [
-      456,
-      418
+      384,
+      352
     ]
   },
   {
     "item": "ITEM_EVIOLITE",
     "coords": [
-      494,
-      418
+      416,
+      352
     ]
   },
   {
     "item": "ITEM_EXP_CANDY_L",
     "coords": [
-      532,
-      418
+      448,
+      352
     ]
   },
   {
     "item": "ITEM_EXP_CANDY_M",
     "coords": [
-      570,
-      418
+      480,
+      352
     ]
   },
   {
     "item": "ITEM_EXP_CANDY_S",
     "coords": [
       0,
-      456
+      384
     ]
   },
   {
     "item": "ITEM_EXP_CANDY_XL",
     "coords": [
-      38,
-      456
+      32,
+      384
     ]
   },
   {
     "item": "ITEM_EXP_CANDY_XS",
     "coords": [
-      76,
-      456
+      64,
+      384
     ]
   },
   {
     "item": "ITEM_EXP_CHARM",
     "coords": [
-      114,
-      456
+      96,
+      384
     ]
   },
   {
     "item": "ITEM_EXP_SHARE",
     "coords": [
-      152,
-      456
+      128,
+      384
     ]
   },
   {
     "item": "ITEM_EXPERT_BELT",
     "coords": [
-      190,
-      456
+      160,
+      384
     ]
   },
   {
     "item": "ITEM_FAB_MAIL",
     "coords": [
-      228,
-      456
+      192,
+      384
     ]
   },
   {
     "item": "ITEM_FAIRIUM_Z",
     "coords": [
-      266,
-      456
+      224,
+      384
     ]
   },
   {
     "item": "ITEM_FAIRY_FEATHER",
     "coords": [
-      304,
-      456
+      256,
+      384
     ]
   },
   {
     "item": "ITEM_FAIRY_GEM",
     "coords": [
-      342,
-      456
+      288,
+      384
     ]
   },
   {
     "item": "ITEM_FAIRY_MEMORY",
     "coords": [
-      380,
-      456
+      320,
+      384
     ]
   },
   {
     "item": "ITEM_FAIRY_TERA_SHARD",
     "coords": [
-      418,
-      456
+      352,
+      384
     ]
   },
   {
     "item": "ITEM_FAME_CHECKER",
     "coords": [
-      456,
-      456
+      384,
+      384
     ]
   },
   {
     "item": "ITEM_FAST_BALL",
     "coords": [
-      494,
-      456
+      416,
+      384
     ]
   },
   {
     "item": "ITEM_FIGHTING_GEM",
     "coords": [
-      532,
-      456
+      448,
+      384
     ]
   },
   {
     "item": "ITEM_FIGHTING_MEMORY",
     "coords": [
-      570,
-      456
+      480,
+      384
     ]
   },
   {
     "item": "ITEM_FIGHTING_TERA_SHARD",
     "coords": [
       0,
-      494
+      416
     ]
   },
   {
     "item": "ITEM_FIGHTINIUM_Z",
     "coords": [
-      38,
-      494
+      32,
+      416
     ]
   },
   {
     "item": "ITEM_FIGY_BERRY",
     "coords": [
-      76,
-      494
+      64,
+      416
     ]
   },
   {
     "item": "ITEM_FINE_REMEDY",
     "coords": [
-      114,
-      494
+      96,
+      416
     ]
   },
   {
     "item": "ITEM_FIRE_GEM",
     "coords": [
-      152,
-      494
+      128,
+      416
     ]
   },
   {
     "item": "ITEM_FIRE_MEMORY",
     "coords": [
-      190,
-      494
+      160,
+      416
     ]
   },
   {
     "item": "ITEM_FIRE_STONE",
     "coords": [
-      228,
-      494
+      192,
+      416
     ]
   },
   {
     "item": "ITEM_FIRE_TERA_SHARD",
     "coords": [
-      266,
-      494
+      224,
+      416
     ]
   },
   {
     "item": "ITEM_FIRIUM_Z",
     "coords": [
-      304,
-      494
+      256,
+      416
     ]
   },
   {
     "item": "ITEM_FIST_PLATE",
     "coords": [
-      342,
-      494
+      288,
+      416
     ]
   },
   {
     "item": "ITEM_FLAME_ORB",
     "coords": [
-      380,
-      494
+      320,
+      416
     ]
   },
   {
     "item": "ITEM_FLAME_PLATE",
     "coords": [
-      418,
-      494
+      352,
+      416
     ]
   },
   {
     "item": "ITEM_FLOAT_STONE",
     "coords": [
-      456,
-      494
+      384,
+      416
     ]
   },
   {
     "item": "ITEM_FLOWER_SWEET",
     "coords": [
-      494,
-      494
+      416,
+      416
     ]
   },
   {
     "item": "ITEM_FLUFFY_TAIL",
     "coords": [
-      532,
-      494
+      448,
+      416
     ]
   },
   {
     "item": "ITEM_FLYING_GEM",
     "coords": [
-      570,
-      494
+      480,
+      416
     ]
   },
   {
     "item": "ITEM_FLYING_MEMORY",
     "coords": [
       0,
-      532
+      448
     ]
   },
   {
     "item": "ITEM_FLYING_TERA_SHARD",
     "coords": [
-      38,
-      532
+      32,
+      448
     ]
   },
   {
     "item": "ITEM_FLYINIUM_Z",
     "coords": [
-      76,
-      532
+      64,
+      448
     ]
   },
   {
     "item": "ITEM_FOCUS_BAND",
     "coords": [
-      114,
-      532
+      96,
+      448
     ]
   },
   {
     "item": "ITEM_FOCUS_SASH",
     "coords": [
-      152,
-      532
+      128,
+      448
     ]
   },
   {
     "item": "ITEM_FOSSILIZED_BIRD",
     "coords": [
-      190,
-      532
+      160,
+      448
     ]
   },
   {
     "item": "ITEM_FOSSILIZED_DINO",
     "coords": [
-      228,
-      532
+      192,
+      448
     ]
   },
   {
     "item": "ITEM_FOSSILIZED_DRAKE",
     "coords": [
-      266,
-      532
+      224,
+      448
     ]
   },
   {
     "item": "ITEM_FOSSILIZED_FISH",
     "coords": [
-      304,
-      532
+      256,
+      448
     ]
   },
   {
     "item": "ITEM_FRESH_START_MOCHI",
     "coords": [
-      342,
-      532
+      288,
+      448
     ]
   },
   {
     "item": "ITEM_FRESH_WATER",
     "coords": [
-      380,
-      532
+      320,
+      448
     ]
   },
   {
     "item": "ITEM_FRIEND_BALL",
     "coords": [
-      418,
-      532
+      352,
+      448
     ]
   },
   {
     "item": "ITEM_FULL_HEAL",
     "coords": [
-      456,
-      532
+      384,
+      448
     ]
   },
   {
     "item": "ITEM_FULL_INCENSE",
     "coords": [
-      494,
-      532
+      416,
+      448
     ]
   },
   {
     "item": "ITEM_FULL_RESTORE",
     "coords": [
-      532,
-      532
+      448,
+      448
     ]
   },
   {
     "item": "ITEM_GALARICA_CUFF",
     "coords": [
-      570,
-      532
+      480,
+      448
     ]
   },
   {
     "item": "ITEM_GALARICA_TWIG",
     "coords": [
       0,
-      570
+      480
     ]
   },
   {
     "item": "ITEM_GALARICA_WREATH",
     "coords": [
-      38,
-      570
+      32,
+      480
     ]
   },
   {
     "item": "ITEM_GALLADITE",
     "coords": [
-      76,
-      570
+      64,
+      480
     ]
   },
   {
     "item": "ITEM_GANLON_BERRY",
     "coords": [
-      114,
-      570
+      96,
+      480
     ]
   },
   {
     "item": "ITEM_GARBODORITE",
     "coords": [
-      152,
-      570
+      128,
+      480
     ]
   },
   {
     "item": "ITEM_GARCHOMPITE",
     "coords": [
-      190,
-      570
+      160,
+      480
     ]
   },
   {
     "item": "ITEM_GARDEVOIRITE",
     "coords": [
-      228,
-      570
+      192,
+      480
     ]
   },
   {
     "item": "ITEM_GENGARITE",
     "coords": [
-      266,
-      570
+      224,
+      480
     ]
   },
   {
     "item": "ITEM_GENIUS_FEATHER",
     "coords": [
-      304,
-      570
+      256,
+      480
     ]
   },
   {
     "item": "ITEM_GENIUS_MOCHI",
     "coords": [
-      342,
-      570
+      288,
+      480
     ]
   },
   {
     "item": "ITEM_GENTLE_MINT",
     "coords": [
-      380,
-      570
+      320,
+      480
     ]
   },
   {
     "item": "ITEM_GHOST_GEM",
     "coords": [
-      418,
-      570
+      352,
+      480
     ]
   },
   {
     "item": "ITEM_GHOST_MEMORY",
     "coords": [
-      456,
-      570
+      384,
+      480
     ]
   },
   {
     "item": "ITEM_GHOST_TERA_SHARD",
     "coords": [
-      494,
-      570
+      416,
+      480
     ]
   },
   {
     "item": "ITEM_GHOSTIUM_Z",
     "coords": [
-      532,
-      570
+      448,
+      480
     ]
   },
   {
     "item": "ITEM_GIMMIGHOUL_COIN",
     "coords": [
-      570,
-      570
+      480,
+      480
     ]
   },
   {
     "item": "ITEM_GLALITITE",
     "coords": [
       0,
-      608
+      512
     ]
   },
   {
     "item": "ITEM_GLIMMERING_CHARM",
     "coords": [
-      38,
-      608
+      32,
+      512
     ]
   },
   {
     "item": "ITEM_GLITTER_MAIL",
     "coords": [
-      76,
-      608
+      64,
+      512
     ]
   },
   {
     "item": "ITEM_GO_GOGGLES",
     "coords": [
-      114,
-      608
+      96,
+      512
     ]
   },
   {
     "item": "ITEM_GOLD_BOTTLE_CAP",
     "coords": [
-      152,
-      608
+      128,
+      512
     ]
   },
   {
     "item": "ITEM_GOLD_TEETH",
     "coords": [
-      190,
-      608
+      160,
+      512
     ]
   },
   {
     "item": "ITEM_GOOD_ROD",
     "coords": [
-      228,
-      608
+      192,
+      512
     ]
   },
   {
     "item": "ITEM_GOOEY_MULCH",
     "coords": [
-      266,
-      608
+      224,
+      512
     ]
   },
   {
     "item": "ITEM_GRACIDEA",
     "coords": [
-      304,
-      608
+      256,
+      512
     ]
   },
   {
     "item": "ITEM_GRASS_GEM",
     "coords": [
-      342,
-      608
+      288,
+      512
     ]
   },
   {
     "item": "ITEM_GRASS_MEMORY",
     "coords": [
-      380,
-      608
+      320,
+      512
     ]
   },
   {
     "item": "ITEM_GRASS_TERA_SHARD",
     "coords": [
-      418,
-      608
+      352,
+      512
     ]
   },
   {
     "item": "ITEM_GRASSIUM_Z",
     "coords": [
-      456,
-      608
+      384,
+      512
     ]
   },
   {
     "item": "ITEM_GRASSY_SEED",
     "coords": [
-      494,
-      608
+      416,
+      512
     ]
   },
   {
     "item": "ITEM_GREAT_BALL",
     "coords": [
-      532,
-      608
+      448,
+      512
     ]
   },
   {
     "item": "ITEM_GREEN_APRICORN",
     "coords": [
-      570,
-      608
+      480,
+      512
     ]
   },
   {
     "item": "ITEM_GREEN_SCARF",
     "coords": [
       0,
-      646
+      544
     ]
   },
   {
     "item": "ITEM_GREEN_SHARD",
     "coords": [
-      38,
-      646
+      32,
+      544
     ]
   },
   {
     "item": "ITEM_GREPA_BERRY",
     "coords": [
-      76,
-      646
+      64,
+      544
     ]
   },
   {
     "item": "ITEM_GRIMMITE",
     "coords": [
-      114,
-      646
+      96,
+      544
     ]
   },
   {
     "item": "ITEM_GRIP_CLAW",
     "coords": [
-      152,
-      646
+      128,
+      544
     ]
   },
   {
     "item": "ITEM_GRISEOUS_CORE",
     "coords": [
-      190,
-      646
+      160,
+      544
     ]
   },
   {
     "item": "ITEM_GRISEOUS_ORB",
     "coords": [
-      228,
-      646
+      192,
+      544
     ]
   },
   {
     "item": "ITEM_GROUND_GEM",
     "coords": [
-      266,
-      646
+      224,
+      544
     ]
   },
   {
     "item": "ITEM_GROUND_MEMORY",
     "coords": [
-      304,
-      646
+      256,
+      544
     ]
   },
   {
     "item": "ITEM_GROUND_TERA_SHARD",
     "coords": [
-      342,
-      646
+      288,
+      544
     ]
   },
   {
     "item": "ITEM_GROUNDIUM_Z",
     "coords": [
-      380,
-      646
+      320,
+      544
     ]
   },
   {
     "item": "ITEM_GROWTH_MULCH",
     "coords": [
-      418,
-      646
+      352,
+      544
     ]
   },
   {
     "item": "ITEM_GUARD_SPEC",
     "coords": [
-      456,
-      646
+      384,
+      544
     ]
   },
   {
     "item": "ITEM_GYARADOSITE",
     "coords": [
-      494,
-      646
+      416,
+      544
     ]
   },
   {
     "item": "ITEM_HABAN_BERRY",
     "coords": [
-      532,
-      646
+      448,
+      544
     ]
   },
   {
     "item": "ITEM_HARBOR_MAIL",
     "coords": [
-      570,
-      646
+      480,
+      544
     ]
   },
   {
     "item": "ITEM_HARD_STONE",
     "coords": [
       0,
-      684
+      576
     ]
   },
   {
     "item": "ITEM_HASTY_MINT",
     "coords": [
-      38,
-      684
+      32,
+      576
     ]
   },
   {
     "item": "ITEM_HEAL_BALL",
     "coords": [
-      76,
-      684
+      64,
+      576
     ]
   },
   {
     "item": "ITEM_HEAL_POWDER",
     "coords": [
-      114,
-      684
+      96,
+      576
     ]
   },
   {
     "item": "ITEM_HEALTH_FEATHER",
     "coords": [
-      152,
-      684
+      128,
+      576
     ]
   },
   {
     "item": "ITEM_HEALTH_MOCHI",
     "coords": [
-      190,
-      684
+      160,
+      576
     ]
   },
   {
     "item": "ITEM_HEART_SCALE",
     "coords": [
-      228,
-      684
+      192,
+      576
     ]
   },
   {
     "item": "ITEM_HEARTHFLAME_MASK",
     "coords": [
-      266,
-      684
+      224,
+      576
     ]
   },
   {
     "item": "ITEM_HEAT_ROCK",
     "coords": [
-      304,
-      684
+      256,
+      576
     ]
   },
   {
     "item": "ITEM_HEAVY_BALL",
     "coords": [
-      342,
-      684
+      288,
+      576
     ]
   },
   {
     "item": "ITEM_HEAVY_DUTY_BOOTS",
     "coords": [
-      380,
-      684
+      320,
+      576
     ]
   },
   {
     "item": "ITEM_HELIX_FOSSIL",
     "coords": [
-      418,
-      684
+      352,
+      576
     ]
   },
   {
     "item": "ITEM_HERACRONITE",
     "coords": [
-      456,
-      684
+      384,
+      576
     ]
   },
   {
     "item": "ITEM_HEX_ORB",
     "coords": [
-      494,
-      684
+      416,
+      576
     ]
   },
   {
     "item": "ITEM_HM_CUT",
     "coords": [
-      532,
-      684
+      448,
+      576
     ]
   },
   {
     "item": "ITEM_HM_DIVE",
     "coords": [
-      570,
-      684
+      480,
+      576
     ]
   },
   {
     "item": "ITEM_HM_FLASH",
     "coords": [
       0,
-      722
+      608
     ]
   },
   {
     "item": "ITEM_HM_FLY",
     "coords": [
-      38,
-      722
+      32,
+      608
     ]
   },
   {
     "item": "ITEM_HM_ROCK_SMASH",
     "coords": [
-      76,
-      722
+      64,
+      608
     ]
   },
   {
     "item": "ITEM_HM_STRENGTH",
     "coords": [
-      114,
-      722
+      96,
+      608
     ]
   },
   {
     "item": "ITEM_HM_SURF",
     "coords": [
-      152,
-      722
+      128,
+      608
     ]
   },
   {
     "item": "ITEM_HM_WATERFALL",
     "coords": [
-      190,
-      722
+      160,
+      608
     ]
   },
   {
     "item": "ITEM_HONDEW_BERRY",
     "coords": [
-      228,
-      722
+      192,
+      608
     ]
   },
   {
     "item": "ITEM_HONEY",
     "coords": [
-      266,
-      722
+      224,
+      608
     ]
   },
   {
     "item": "ITEM_HOUNDOOMINITE",
     "coords": [
-      304,
-      722
+      256,
+      608
     ]
   },
   {
     "item": "ITEM_HP_UP",
     "coords": [
-      342,
-      722
+      288,
+      608
     ]
   },
   {
     "item": "ITEM_HYPER_POTION",
     "coords": [
-      380,
-      722
+      320,
+      608
     ]
   },
   {
     "item": "ITEM_IAPAPA_BERRY",
     "coords": [
-      418,
-      722
+      352,
+      608
     ]
   },
   {
     "item": "ITEM_ICE_GEM",
     "coords": [
-      456,
-      722
+      384,
+      608
     ]
   },
   {
     "item": "ITEM_ICE_HEAL",
     "coords": [
-      494,
-      722
+      416,
+      608
     ]
   },
   {
     "item": "ITEM_ICE_MEMORY",
     "coords": [
-      532,
-      722
+      448,
+      608
     ]
   },
   {
     "item": "ITEM_ICE_STONE",
     "coords": [
-      570,
-      722
+      480,
+      608
     ]
   },
   {
     "item": "ITEM_ICE_TERA_SHARD",
     "coords": [
       0,
-      760
+      640
     ]
   },
   {
     "item": "ITEM_ICICLE_PLATE",
     "coords": [
-      38,
-      760
+      32,
+      640
     ]
   },
   {
     "item": "ITEM_ICIUM_Z",
     "coords": [
-      76,
-      760
+      64,
+      640
     ]
   },
   {
     "item": "ITEM_ICY_ROCK",
     "coords": [
-      114,
-      760
+      96,
+      640
     ]
   },
   {
     "item": "ITEM_IMPISH_MINT",
     "coords": [
-      152,
-      760
+      128,
+      640
     ]
   },
   {
     "item": "ITEM_INCINIUM_Z",
     "coords": [
-      190,
-      760
+      160,
+      640
     ]
   },
   {
     "item": "ITEM_INFERNAPITE",
     "coords": [
-      228,
-      760
+      192,
+      640
     ]
   },
   {
     "item": "ITEM_INFINITE_CANDY",
     "coords": [
-      266,
-      760
+      224,
+      640
     ]
   },
   {
     "item": "ITEM_INFINITE_REPEL",
     "coords": [
-      304,
-      760
+      256,
+      640
     ]
   },
   {
     "item": "ITEM_INSECT_PLATE",
     "coords": [
-      342,
-      760
+      288,
+      640
     ]
   },
   {
     "item": "ITEM_IRON",
     "coords": [
-      380,
-      760
+      320,
+      640
     ]
   },
   {
     "item": "ITEM_IRON_BALL",
     "coords": [
-      418,
-      760
+      352,
+      640
     ]
   },
   {
     "item": "ITEM_IRON_PLATE",
     "coords": [
-      456,
-      760
+      384,
+      640
     ]
   },
   {
     "item": "ITEM_JABOCA_BERRY",
     "coords": [
-      494,
-      760
+      416,
+      640
     ]
   },
   {
     "item": "ITEM_JAW_FOSSIL",
     "coords": [
-      532,
-      760
+      448,
+      640
     ]
   },
   {
     "item": "ITEM_JOLLY_MINT",
     "coords": [
-      570,
-      760
+      480,
+      640
     ]
   },
   {
     "item": "ITEM_JUBILIFE_MUFFIN",
     "coords": [
       0,
-      798
+      672
     ]
   },
   {
     "item": "ITEM_KANGASKHANITE",
     "coords": [
-      38,
-      798
+      32,
+      672
     ]
   },
   {
     "item": "ITEM_KASIB_BERRY",
     "coords": [
-      76,
-      798
+      64,
+      672
     ]
   },
   {
     "item": "ITEM_KEBIA_BERRY",
     "coords": [
-      114,
-      798
+      96,
+      672
     ]
   },
   {
     "item": "ITEM_KEE_BERRY",
     "coords": [
-      152,
-      798
+      128,
+      672
     ]
   },
   {
     "item": "ITEM_KELPSY_BERRY",
     "coords": [
-      190,
-      798
+      160,
+      672
     ]
   },
   {
     "item": "ITEM_KEY_TO_ROOM_1",
     "coords": [
-      228,
-      798
+      192,
+      672
     ]
   },
   {
     "item": "ITEM_KEY_TO_ROOM_2",
     "coords": [
-      266,
-      798
+      224,
+      672
     ]
   },
   {
     "item": "ITEM_KEY_TO_ROOM_4",
     "coords": [
-      304,
-      798
+      256,
+      672
     ]
   },
   {
     "item": "ITEM_KEY_TO_ROOM_6",
     "coords": [
-      342,
-      798
+      288,
+      672
     ]
   },
   {
     "item": "ITEM_KICKING_SHOES",
     "coords": [
-      380,
-      798
+      320,
+      672
     ]
   },
   {
     "item": "ITEM_KINGLERITE",
     "coords": [
-      418,
-      798
+      352,
+      672
     ]
   },
   {
     "item": "ITEM_KINGS_ROCK",
     "coords": [
-      456,
-      798
+      384,
+      672
     ]
   },
   {
     "item": "ITEM_KOMMONIUM_Z",
     "coords": [
-      494,
-      798
+      416,
+      672
     ]
   },
   {
     "item": "ITEM_LAGGING_TAIL",
     "coords": [
-      532,
-      798
+      448,
+      672
     ]
   },
   {
     "item": "ITEM_LANSAT_BERRY",
     "coords": [
-      570,
-      798
+      480,
+      672
     ]
   },
   {
     "item": "ITEM_LAPRASITE",
     "coords": [
       0,
-      836
+      704
     ]
   },
   {
     "item": "ITEM_LATIASITE",
     "coords": [
-      38,
-      836
+      32,
+      704
     ]
   },
   {
     "item": "ITEM_LATIOSITE",
     "coords": [
-      76,
-      836
+      64,
+      704
     ]
   },
   {
     "item": "ITEM_LAVA_COOKIE",
     "coords": [
-      114,
-      836
+      96,
+      704
     ]
   },
   {
     "item": "ITEM_LAX_INCENSE",
     "coords": [
-      152,
-      836
+      128,
+      704
     ]
   },
   {
     "item": "ITEM_LAX_MINT",
     "coords": [
-      190,
-      836
+      160,
+      704
     ]
   },
   {
     "item": "ITEM_LEADERS_CREST",
     "coords": [
-      228,
-      836
+      192,
+      704
     ]
   },
   {
     "item": "ITEM_LEAF_STONE",
     "coords": [
-      266,
-      836
+      224,
+      704
     ]
   },
   {
     "item": "ITEM_LEEK",
     "coords": [
-      304,
-      836
+      256,
+      704
     ]
   },
   {
     "item": "ITEM_LEFTOVERS",
     "coords": [
-      342,
-      836
+      288,
+      704
     ]
   },
   {
     "item": "ITEM_LEMONADE",
     "coords": [
-      380,
-      836
+      320,
+      704
     ]
   },
   {
     "item": "ITEM_LEPPA_BERRY",
     "coords": [
-      418,
-      836
+      352,
+      704
     ]
   },
   {
     "item": "ITEM_LETTER",
     "coords": [
-      456,
-      836
+      384,
+      704
     ]
   },
   {
     "item": "ITEM_LEVEL_BALL",
     "coords": [
-      494,
-      836
+      416,
+      704
     ]
   },
   {
     "item": "ITEM_LIECHI_BERRY",
     "coords": [
-      532,
-      836
+      448,
+      704
     ]
   },
   {
     "item": "ITEM_LIFE_ORB",
     "coords": [
-      570,
-      836
+      480,
+      704
     ]
   },
   {
     "item": "ITEM_LIFT_KEY",
     "coords": [
       0,
-      874
+      736
     ]
   },
   {
     "item": "ITEM_LIGHT_BALL",
     "coords": [
-      38,
-      874
+      32,
+      736
     ]
   },
   {
     "item": "ITEM_LIGHT_CLAY",
     "coords": [
-      76,
-      874
+      64,
+      736
     ]
   },
   {
     "item": "ITEM_LINKING_CORD",
     "coords": [
-      114,
-      874
+      96,
+      736
     ]
   },
   {
     "item": "ITEM_LOADED_DICE",
     "coords": [
-      152,
-      874
+      128,
+      736
     ]
   },
   {
     "item": "ITEM_LONELY_MINT",
     "coords": [
-      190,
-      874
+      160,
+      736
     ]
   },
   {
     "item": "ITEM_LOPUNNITE",
     "coords": [
-      228,
-      874
+      192,
+      736
     ]
   },
   {
     "item": "ITEM_LOVE_BALL",
     "coords": [
-      266,
-      874
+      224,
+      736
     ]
   },
   {
     "item": "ITEM_LOVE_SWEET",
     "coords": [
-      304,
-      874
+      256,
+      736
     ]
   },
   {
     "item": "ITEM_LUCARIONITE",
     "coords": [
-      342,
-      874
+      288,
+      736
     ]
   },
   {
     "item": "ITEM_LUCK_INCENSE",
     "coords": [
-      380,
-      874
+      320,
+      736
     ]
   },
   {
     "item": "ITEM_LUCKY_EGG",
     "coords": [
-      418,
-      874
+      352,
+      736
     ]
   },
   {
     "item": "ITEM_LUCKY_PUNCH",
     "coords": [
-      456,
-      874
+      384,
+      736
     ]
   },
   {
     "item": "ITEM_LUM_BERRY",
     "coords": [
-      494,
-      874
+      416,
+      736
     ]
   },
   {
     "item": "ITEM_LUMINOUS_MOSS",
     "coords": [
-      532,
-      874
+      448,
+      736
     ]
   },
   {
     "item": "ITEM_LUMIOSE_GALETTE",
     "coords": [
-      570,
-      874
+      480,
+      736
     ]
   },
   {
     "item": "ITEM_LUNALIUM_Z",
     "coords": [
       0,
-      912
+      768
     ]
   },
   {
     "item": "ITEM_LURE",
     "coords": [
-      38,
-      912
+      32,
+      768
     ]
   },
   {
     "item": "ITEM_LURE_BALL",
     "coords": [
-      76,
-      912
+      64,
+      768
     ]
   },
   {
     "item": "ITEM_LUSTROUS_GLOBE",
     "coords": [
-      114,
-      912
+      96,
+      768
     ]
   },
   {
     "item": "ITEM_LUSTROUS_ORB",
     "coords": [
-      152,
-      912
+      128,
+      768
     ]
   },
   {
     "item": "ITEM_LUXRITE",
     "coords": [
-      190,
-      912
+      160,
+      768
     ]
   },
   {
     "item": "ITEM_LUXURY_BALL",
     "coords": [
-      228,
-      912
+      192,
+      768
     ]
   },
   {
     "item": "ITEM_LYCANIUM_Z",
     "coords": [
-      266,
-      912
+      224,
+      768
     ]
   },
   {
     "item": "ITEM_MACH_BIKE",
     "coords": [
-      304,
-      912
+      256,
+      768
     ]
   },
   {
     "item": "ITEM_MACHAMPITE",
     "coords": [
-      342,
-      912
+      288,
+      768
     ]
   },
   {
     "item": "ITEM_MACHO_BRACE",
     "coords": [
-      380,
-      912
+      320,
+      768
     ]
   },
   {
     "item": "ITEM_MAGMA_EMBLEM",
     "coords": [
-      418,
-      912
+      352,
+      768
     ]
   },
   {
     "item": "ITEM_MAGMARIZER",
     "coords": [
-      456,
-      912
+      384,
+      768
     ]
   },
   {
     "item": "ITEM_MAGNET",
     "coords": [
-      494,
-      912
+      416,
+      768
     ]
   },
   {
     "item": "ITEM_MAGO_BERRY",
     "coords": [
-      532,
-      912
+      448,
+      768
     ]
   },
   {
     "item": "ITEM_MAGOST_BERRY",
     "coords": [
-      570,
-      912
+      480,
+      768
     ]
   },
   {
     "item": "ITEM_MALICIOUS_ARMOR",
     "coords": [
       0,
-      950
+      800
     ]
   },
   {
     "item": "ITEM_MANECTITE",
     "coords": [
-      38,
-      950
+      32,
+      800
     ]
   },
   {
     "item": "ITEM_MARANGA_BERRY",
     "coords": [
-      76,
-      950
+      64,
+      800
     ]
   },
   {
     "item": "ITEM_MARSHADIUM_Z",
     "coords": [
-      114,
-      950
+      96,
+      800
     ]
   },
   {
     "item": "ITEM_MASTER_BALL",
     "coords": [
-      152,
-      950
+      128,
+      800
     ]
   },
   {
     "item": "ITEM_MASTERPIECE_TEACUP",
     "coords": [
-      190,
-      950
+      160,
+      800
     ]
   },
   {
     "item": "ITEM_MAWILITE",
     "coords": [
-      228,
-      950
+      192,
+      800
     ]
   },
   {
     "item": "ITEM_MAX_ELIXIR",
     "coords": [
-      266,
-      950
+      224,
+      800
     ]
   },
   {
     "item": "ITEM_MAX_ETHER",
     "coords": [
-      304,
-      950
+      256,
+      800
     ]
   },
   {
     "item": "ITEM_MAX_HONEY",
     "coords": [
-      342,
-      950
+      288,
+      800
     ]
   },
   {
     "item": "ITEM_MAX_LURE",
     "coords": [
-      380,
-      950
+      320,
+      800
     ]
   },
   {
     "item": "ITEM_MAX_MUSHROOMS",
     "coords": [
-      418,
-      950
+      352,
+      800
     ]
   },
   {
     "item": "ITEM_MAX_POTION",
     "coords": [
-      456,
-      950
+      384,
+      800
     ]
   },
   {
     "item": "ITEM_MAX_REPEL",
     "coords": [
-      494,
-      950
+      416,
+      800
     ]
   },
   {
     "item": "ITEM_MAX_REVIVE",
     "coords": [
-      532,
-      950
+      448,
+      800
     ]
   },
   {
     "item": "ITEM_MEADOW_PLATE",
     "coords": [
-      570,
-      950
+      480,
+      800
     ]
   },
   {
     "item": "ITEM_MECH_MAIL",
     "coords": [
       0,
-      988
+      832
     ]
   },
   {
     "item": "ITEM_MEDICHAMITE",
     "coords": [
-      38,
-      988
+      32,
+      832
     ]
   },
   {
     "item": "ITEM_MEGA_RING",
     "coords": [
-      76,
-      988
+      64,
+      832
     ]
   },
   {
     "item": "ITEM_MENTAL_HERB",
     "coords": [
-      114,
-      988
+      96,
+      832
     ]
   },
   {
     "item": "ITEM_METAGROSSITE",
     "coords": [
-      152,
-      988
+      128,
+      832
     ]
   },
   {
     "item": "ITEM_METAL_ALLOY",
     "coords": [
-      190,
-      988
+      160,
+      832
     ]
   },
   {
     "item": "ITEM_METAL_COAT",
     "coords": [
-      228,
-      988
+      192,
+      832
     ]
   },
   {
     "item": "ITEM_METAL_POWDER",
     "coords": [
-      266,
-      988
+      224,
+      832
     ]
   },
   {
     "item": "ITEM_METEORITE",
     "coords": [
-      304,
-      988
+      256,
+      832
     ]
   },
   {
     "item": "ITEM_METRONOME",
     "coords": [
-      342,
-      988
+      288,
+      832
     ]
   },
   {
     "item": "ITEM_MEWNIUM_Z",
     "coords": [
-      380,
-      988
+      320,
+      832
     ]
   },
   {
     "item": "ITEM_MEWTWONITE_X",
     "coords": [
-      418,
-      988
+      352,
+      832
     ]
   },
   {
     "item": "ITEM_MEWTWONITE_Y",
     "coords": [
-      456,
-      988
+      384,
+      832
     ]
   },
   {
     "item": "ITEM_MICLE_BERRY",
     "coords": [
-      494,
-      988
+      416,
+      832
     ]
   },
   {
     "item": "ITEM_MILD_MINT",
     "coords": [
-      532,
-      988
+      448,
+      832
     ]
   },
   {
     "item": "ITEM_MIMIKIUM_Z",
     "coords": [
-      570,
-      988
+      480,
+      832
     ]
   },
   {
     "item": "ITEM_MIND_PLATE",
     "coords": [
       0,
-      1026
+      864
     ]
   },
   {
     "item": "ITEM_MIRACLE_SEED",
     "coords": [
-      38,
-      1026
+      32,
+      864
     ]
   },
   {
     "item": "ITEM_MIRROR_HERB",
     "coords": [
-      76,
-      1026
+      64,
+      864
     ]
   },
   {
     "item": "ITEM_MISTY_SEED",
     "coords": [
-      114,
-      1026
+      96,
+      864
     ]
   },
   {
     "item": "ITEM_MODEST_MINT",
     "coords": [
-      152,
-      1026
+      128,
+      864
     ]
   },
   {
     "item": "ITEM_MOOMOO_MILK",
     "coords": [
-      190,
-      1026
+      160,
+      864
     ]
   },
   {
     "item": "ITEM_MOON_BALL",
     "coords": [
-      228,
-      1026
+      192,
+      864
     ]
   },
   {
     "item": "ITEM_MOON_STONE",
     "coords": [
-      266,
-      1026
+      224,
+      864
     ]
   },
   {
     "item": "ITEM_MUSCLE_BAND",
     "coords": [
-      304,
-      1026
+      256,
+      864
     ]
   },
   {
     "item": "ITEM_MUSCLE_FEATHER",
     "coords": [
-      342,
-      1026
+      288,
+      864
     ]
   },
   {
     "item": "ITEM_MUSCLE_MOCHI",
     "coords": [
-      380,
-      1026
+      320,
+      864
     ]
   },
   {
     "item": "ITEM_MYSTIC_TICKET",
     "coords": [
-      418,
-      1026
+      352,
+      864
     ]
   },
   {
     "item": "ITEM_MYSTIC_WATER",
     "coords": [
-      456,
-      1026
+      384,
+      864
     ]
   },
   {
     "item": "ITEM_N_LUNARIZER",
     "coords": [
-      494,
-      1026
+      416,
+      864
     ]
   },
   {
     "item": "ITEM_N_SOLARIZER",
     "coords": [
-      532,
-      1026
+      448,
+      864
     ]
   },
   {
     "item": "ITEM_NAIVE_MINT",
     "coords": [
-      570,
-      1026
+      480,
+      864
     ]
   },
   {
     "item": "ITEM_NANAB_BERRY",
     "coords": [
       0,
-      1064
+      896
     ]
   },
   {
     "item": "ITEM_NAUGHTY_MINT",
     "coords": [
-      38,
-      1064
+      32,
+      896
     ]
   },
   {
     "item": "ITEM_NEST_BALL",
     "coords": [
-      76,
-      1064
+      64,
+      896
     ]
   },
   {
     "item": "ITEM_NET_BALL",
     "coords": [
-      114,
-      1064
+      96,
+      896
     ]
   },
   {
     "item": "ITEM_NEVER_MELT_ICE",
     "coords": [
-      152,
-      1064
+      128,
+      896
     ]
   },
   {
     "item": "ITEM_NOMEL_BERRY",
     "coords": [
-      190,
-      1064
+      160,
+      896
     ]
   },
   {
     "item": "ITEM_NONE",
     "coords": [
-      228,
-      1064
+      192,
+      896
     ]
   },
   {
     "item": "ITEM_NORMAL_GEM",
     "coords": [
-      266,
-      1064
+      224,
+      896
     ]
   },
   {
     "item": "ITEM_NORMAL_TERA_SHARD",
     "coords": [
-      304,
-      1064
+      256,
+      896
     ]
   },
   {
     "item": "ITEM_NORMALIUM_Z",
     "coords": [
-      342,
-      1064
+      288,
+      896
     ]
   },
   {
     "item": "ITEM_NUGGET",
     "coords": [
-      380,
-      1064
+      320,
+      896
     ]
   },
   {
     "item": "ITEM_OCCA_BERRY",
     "coords": [
-      418,
-      1064
+      352,
+      896
     ]
   },
   {
     "item": "ITEM_ODD_INCENSE",
     "coords": [
-      456,
-      1064
+      384,
+      896
     ]
   },
   {
     "item": "ITEM_ODD_KEYSTONE",
     "coords": [
-      494,
-      1064
+      416,
+      896
     ]
   },
   {
     "item": "ITEM_OLD_AMBER",
     "coords": [
-      532,
-      1064
+      448,
+      896
     ]
   },
   {
     "item": "ITEM_OLD_GATEAU",
     "coords": [
-      570,
-      1064
+      480,
+      896
     ]
   },
   {
     "item": "ITEM_OLD_ROD",
     "coords": [
       0,
-      1102
+      928
     ]
   },
   {
     "item": "ITEM_OLD_SEA_MAP",
     "coords": [
-      38,
-      1102
+      32,
+      928
     ]
   },
   {
     "item": "ITEM_ORAN_BERRY",
     "coords": [
-      76,
-      1102
+      64,
+      928
     ]
   },
   {
     "item": "ITEM_ORANGE_MAIL",
     "coords": [
-      114,
-      1102
+      96,
+      928
     ]
   },
   {
     "item": "ITEM_ORBEETLITE",
     "coords": [
-      152,
-      1102
+      128,
+      928
     ]
   },
   {
     "item": "ITEM_OVAL_CHARM",
     "coords": [
-      190,
-      1102
+      160,
+      928
     ]
   },
   {
     "item": "ITEM_OVAL_STONE",
     "coords": [
-      228,
-      1102
+      192,
+      928
     ]
   },
   {
     "item": "ITEM_PAMTRE_BERRY",
     "coords": [
-      266,
-      1102
+      224,
+      928
     ]
   },
   {
     "item": "ITEM_PARALYZE_HEAL",
     "coords": [
-      304,
-      1102
+      256,
+      928
     ]
   },
   {
     "item": "ITEM_PARCEL",
     "coords": [
-      342,
-      1102
+      288,
+      928
     ]
   },
   {
     "item": "ITEM_PARK_BALL",
     "coords": [
-      380,
-      1102
+      320,
+      928
     ]
   },
   {
     "item": "ITEM_PASSHO_BERRY",
     "coords": [
-      418,
-      1102
+      352,
+      928
     ]
   },
   {
     "item": "ITEM_PAYAPA_BERRY",
     "coords": [
-      456,
-      1102
+      384,
+      928
     ]
   },
   {
     "item": "ITEM_PEARL",
     "coords": [
-      494,
-      1102
+      416,
+      928
     ]
   },
   {
     "item": "ITEM_PEARL_STRING",
     "coords": [
-      532,
-      1102
+      448,
+      928
     ]
   },
   {
     "item": "ITEM_PEAT_BLOCK",
     "coords": [
-      570,
-      1102
+      480,
+      928
     ]
   },
   {
     "item": "ITEM_PECHA_BERRY",
     "coords": [
       0,
-      1140
+      960
     ]
   },
   {
     "item": "ITEM_PERSIM_BERRY",
     "coords": [
-      38,
-      1140
+      32,
+      960
     ]
   },
   {
     "item": "ITEM_PETAYA_BERRY",
     "coords": [
-      76,
-      1140
+      64,
+      960
     ]
   },
   {
     "item": "ITEM_PEWTER_CRUNCHIES",
     "coords": [
-      114,
-      1140
+      96,
+      960
     ]
   },
   {
     "item": "ITEM_PIDGEOTITE",
     "coords": [
-      152,
-      1140
+      128,
+      960
     ]
   },
   {
     "item": "ITEM_PIKANIUM_Z",
     "coords": [
-      190,
-      1140
+      160,
+      960
     ]
   },
   {
     "item": "ITEM_PIKASHUNIUM_Z",
     "coords": [
-      228,
-      1140
+      192,
+      960
     ]
   },
   {
     "item": "ITEM_PINAP_BERRY",
     "coords": [
-      266,
-      1140
+      224,
+      960
     ]
   },
   {
     "item": "ITEM_PINK_APRICORN",
     "coords": [
-      304,
-      1140
+      256,
+      960
     ]
   },
   {
     "item": "ITEM_PINK_NECTAR",
     "coords": [
-      342,
-      1140
+      288,
+      960
     ]
   },
   {
     "item": "ITEM_PINK_SCARF",
     "coords": [
-      380,
-      1140
+      320,
+      960
     ]
   },
   {
     "item": "ITEM_PINSIRITE",
     "coords": [
-      418,
-      1140
+      352,
+      960
     ]
   },
   {
     "item": "ITEM_PIXIE_PLATE",
     "coords": [
-      456,
-      1140
+      384,
+      960
     ]
   },
   {
     "item": "ITEM_PLUME_FOSSIL",
     "coords": [
-      494,
-      1140
+      416,
+      960
     ]
   },
   {
     "item": "ITEM_POISON_BARB",
     "coords": [
-      532,
-      1140
+      448,
+      960
     ]
   },
   {
     "item": "ITEM_POISON_GEM",
     "coords": [
-      570,
-      1140
+      480,
+      960
     ]
   },
   {
     "item": "ITEM_POISON_MEMORY",
     "coords": [
       0,
-      1178
+      992
     ]
   },
   {
     "item": "ITEM_POISON_TERA_SHARD",
     "coords": [
-      38,
-      1178
+      32,
+      992
     ]
   },
   {
     "item": "ITEM_POISONIUM_Z",
     "coords": [
-      76,
-      1178
+      64,
+      992
     ]
   },
   {
     "item": "ITEM_POKE_BALL",
     "coords": [
-      114,
-      1178
+      96,
+      992
     ]
   },
   {
     "item": "ITEM_POKE_DOLL",
     "coords": [
-      152,
-      1178
+      128,
+      992
     ]
   },
   {
     "item": "ITEM_POKE_FLUTE",
     "coords": [
-      190,
-      1178
+      160,
+      992
     ]
   },
   {
     "item": "ITEM_POKE_RADAR",
     "coords": [
-      228,
-      1178
+      192,
+      992
     ]
   },
   {
     "item": "ITEM_POKE_TOY",
     "coords": [
-      266,
-      1178
+      224,
+      992
     ]
   },
   {
     "item": "ITEM_POKE_VIAL",
     "coords": [
-      304,
-      1178
+      256,
+      992
     ]
   },
   {
     "item": "ITEM_POKEBLOCK_CASE",
     "coords": [
-      342,
-      1178
+      288,
+      992
     ]
   },
   {
     "item": "ITEM_POKEMON_BOX_LINK",
     "coords": [
-      380,
-      1178
+      320,
+      992
     ]
   },
   {
     "item": "ITEM_POKESHI_DOLL",
     "coords": [
-      418,
-      1178
+      352,
+      992
     ]
   },
   {
     "item": "ITEM_POMEG_BERRY",
     "coords": [
-      456,
-      1178
+      384,
+      992
     ]
   },
   {
     "item": "ITEM_POTION",
     "coords": [
-      494,
-      1178
+      416,
+      992
     ]
   },
   {
     "item": "ITEM_POWDER_JAR",
     "coords": [
-      532,
-      1178
+      448,
+      992
     ]
   },
   {
     "item": "ITEM_POWER_ANKLET",
     "coords": [
-      570,
-      1178
+      480,
+      992
     ]
   },
   {
     "item": "ITEM_POWER_BAND",
     "coords": [
       0,
-      1216
+      1024
     ]
   },
   {
     "item": "ITEM_POWER_BELT",
     "coords": [
-      38,
-      1216
+      32,
+      1024
     ]
   },
   {
     "item": "ITEM_POWER_BRACER",
     "coords": [
-      76,
-      1216
+      64,
+      1024
     ]
   },
   {
     "item": "ITEM_POWER_HERB",
     "coords": [
-      114,
-      1216
+      96,
+      1024
     ]
   },
   {
     "item": "ITEM_POWER_LENS",
     "coords": [
-      152,
-      1216
+      128,
+      1024
     ]
   },
   {
     "item": "ITEM_POWER_WEIGHT",
     "coords": [
-      190,
-      1216
+      160,
+      1024
     ]
   },
   {
     "item": "ITEM_PP_MAX",
     "coords": [
-      228,
-      1216
+      192,
+      1024
     ]
   },
   {
     "item": "ITEM_PP_UP",
     "coords": [
-      266,
-      1216
+      224,
+      1024
     ]
   },
   {
     "item": "ITEM_PREMIER_BALL",
     "coords": [
-      304,
-      1216
+      256,
+      1024
     ]
   },
   {
     "item": "ITEM_PRETTY_FEATHER",
     "coords": [
-      342,
-      1216
+      288,
+      1024
     ]
   },
   {
     "item": "ITEM_PRIMARIUM_Z",
     "coords": [
-      380,
-      1216
+      320,
+      1024
     ]
   },
   {
     "item": "ITEM_PRISM_SCALE",
     "coords": [
-      418,
-      1216
+      352,
+      1024
     ]
   },
   {
     "item": "ITEM_PRISON_BOTTLE",
     "coords": [
-      456,
-      1216
+      384,
+      1024
     ]
   },
   {
     "item": "ITEM_PROTECTIVE_PADS",
     "coords": [
-      494,
-      1216
+      416,
+      1024
     ]
   },
   {
     "item": "ITEM_PROTECTOR",
     "coords": [
-      532,
-      1216
+      448,
+      1024
     ]
   },
   {
     "item": "ITEM_PROTEIN",
     "coords": [
-      570,
-      1216
+      480,
+      1024
     ]
   },
   {
     "item": "ITEM_PSYCHIC_GEM",
     "coords": [
       0,
-      1254
+      1056
     ]
   },
   {
     "item": "ITEM_PSYCHIC_MEMORY",
     "coords": [
-      38,
-      1254
+      32,
+      1056
     ]
   },
   {
     "item": "ITEM_PSYCHIC_SEED",
     "coords": [
-      76,
-      1254
+      64,
+      1056
     ]
   },
   {
     "item": "ITEM_PSYCHIC_TERA_SHARD",
     "coords": [
-      114,
-      1254
+      96,
+      1056
     ]
   },
   {
     "item": "ITEM_PSYCHIUM_Z",
     "coords": [
-      152,
-      1254
+      128,
+      1056
     ]
   },
   {
     "item": "ITEM_PUNCHING_GLOVE",
     "coords": [
-      190,
-      1254
+      160,
+      1056
     ]
   },
   {
     "item": "ITEM_PURE_INCENSE",
     "coords": [
-      228,
-      1254
+      192,
+      1056
     ]
   },
   {
     "item": "ITEM_PURPLE_NECTAR",
     "coords": [
-      266,
-      1254
+      224,
+      1056
     ]
   },
   {
     "item": "ITEM_QUALOT_BERRY",
     "coords": [
-      304,
-      1254
+      256,
+      1056
     ]
   },
   {
     "item": "ITEM_QUICK_BALL",
     "coords": [
-      342,
-      1254
+      288,
+      1056
     ]
   },
   {
     "item": "ITEM_QUICK_CLAW",
     "coords": [
-      380,
-      1254
+      320,
+      1056
     ]
   },
   {
     "item": "ITEM_QUICK_POWDER",
     "coords": [
-      418,
-      1254
+      352,
+      1056
     ]
   },
   {
     "item": "ITEM_QUIET_MINT",
     "coords": [
-      456,
-      1254
+      384,
+      1056
     ]
   },
   {
     "item": "ITEM_RABUTA_BERRY",
     "coords": [
-      494,
-      1254
+      416,
+      1056
     ]
   },
   {
     "item": "ITEM_RAGE_CANDY_BAR",
     "coords": [
-      532,
-      1254
+      448,
+      1056
     ]
   },
   {
     "item": "ITEM_RAINBOW_PASS",
     "coords": [
-      570,
-      1254
+      480,
+      1056
     ]
   },
   {
     "item": "ITEM_RARE_BONE",
     "coords": [
       0,
-      1292
+      1088
     ]
   },
   {
     "item": "ITEM_RARE_CANDY",
     "coords": [
-      38,
-      1292
+      32,
+      1088
     ]
   },
   {
     "item": "ITEM_RASH_MINT",
     "coords": [
-      76,
-      1292
+      64,
+      1088
     ]
   },
   {
     "item": "ITEM_RAWST_BERRY",
     "coords": [
-      114,
-      1292
+      96,
+      1088
     ]
   },
   {
     "item": "ITEM_RAZOR_CLAW",
     "coords": [
-      152,
-      1292
+      128,
+      1088
     ]
   },
   {
     "item": "ITEM_RAZOR_FANG",
     "coords": [
-      190,
-      1292
+      160,
+      1088
     ]
   },
   {
     "item": "ITEM_RAZZ_BERRY",
     "coords": [
-      228,
-      1292
+      192,
+      1088
     ]
   },
   {
     "item": "ITEM_REAPER_CLOTH",
     "coords": [
-      266,
-      1292
+      224,
+      1088
     ]
   },
   {
     "item": "ITEM_RED_APRICORN",
     "coords": [
-      304,
-      1292
+      256,
+      1088
     ]
   },
   {
     "item": "ITEM_RED_CARD",
     "coords": [
-      342,
-      1292
+      288,
+      1088
     ]
   },
   {
     "item": "ITEM_RED_FLUTE",
     "coords": [
-      380,
-      1292
+      320,
+      1088
     ]
   },
   {
     "item": "ITEM_RED_NECTAR",
     "coords": [
-      418,
-      1292
+      352,
+      1088
     ]
   },
   {
     "item": "ITEM_RED_ORB",
     "coords": [
-      456,
-      1292
+      384,
+      1088
     ]
   },
   {
     "item": "ITEM_RED_SCARF",
     "coords": [
-      494,
-      1292
+      416,
+      1088
     ]
   },
   {
     "item": "ITEM_RED_SHARD",
     "coords": [
-      532,
-      1292
+      448,
+      1088
     ]
   },
   {
     "item": "ITEM_REINS_OF_UNITY",
     "coords": [
-      570,
-      1292
+      480,
+      1088
     ]
   },
   {
     "item": "ITEM_RELAXED_MINT",
     "coords": [
       0,
-      1330
+      1120
     ]
   },
   {
     "item": "ITEM_RELIC_BAND",
     "coords": [
-      38,
-      1330
+      32,
+      1120
     ]
   },
   {
     "item": "ITEM_RELIC_COPPER",
     "coords": [
-      76,
-      1330
+      64,
+      1120
     ]
   },
   {
     "item": "ITEM_RELIC_CROWN",
     "coords": [
-      114,
-      1330
+      96,
+      1120
     ]
   },
   {
     "item": "ITEM_RELIC_GOLD",
     "coords": [
-      152,
-      1330
+      128,
+      1120
     ]
   },
   {
     "item": "ITEM_RELIC_SILVER",
     "coords": [
-      190,
-      1330
+      160,
+      1120
     ]
   },
   {
     "item": "ITEM_RELIC_STATUE",
     "coords": [
-      228,
-      1330
+      192,
+      1120
     ]
   },
   {
     "item": "ITEM_RELIC_VASE",
     "coords": [
-      266,
-      1330
+      224,
+      1120
     ]
   },
   {
     "item": "ITEM_REMEDY",
     "coords": [
-      304,
-      1330
+      256,
+      1120
     ]
   },
   {
     "item": "ITEM_REPEAT_BALL",
     "coords": [
-      342,
-      1330
+      288,
+      1120
     ]
   },
   {
     "item": "ITEM_REPEL",
     "coords": [
-      380,
-      1330
+      320,
+      1120
     ]
   },
   {
     "item": "ITEM_RESIST_FEATHER",
     "coords": [
-      418,
-      1330
+      352,
+      1120
     ]
   },
   {
     "item": "ITEM_RESIST_MOCHI",
     "coords": [
-      456,
-      1330
+      384,
+      1120
     ]
   },
   {
     "item": "ITEM_RETRO_MAIL",
     "coords": [
-      494,
-      1330
+      416,
+      1120
     ]
   },
   {
     "item": "ITEM_REVEAL_GLASS",
     "coords": [
-      532,
-      1330
+      448,
+      1120
     ]
   },
   {
     "item": "ITEM_REVIVAL_HERB",
     "coords": [
-      570,
-      1330
+      480,
+      1120
     ]
   },
   {
     "item": "ITEM_REVIVE",
     "coords": [
       0,
-      1368
+      1152
     ]
   },
   {
     "item": "ITEM_RIBBON_SWEET",
     "coords": [
-      38,
-      1368
+      32,
+      1152
     ]
   },
   {
     "item": "ITEM_RICH_MULCH",
     "coords": [
-      76,
-      1368
+      64,
+      1152
     ]
   },
   {
     "item": "ITEM_RINDO_BERRY",
     "coords": [
-      114,
-      1368
+      96,
+      1152
     ]
   },
   {
     "item": "ITEM_RING_TARGET",
     "coords": [
-      152,
-      1368
+      128,
+      1152
     ]
   },
   {
     "item": "ITEM_ROCK_GEM",
     "coords": [
-      190,
-      1368
+      160,
+      1152
     ]
   },
   {
     "item": "ITEM_ROCK_INCENSE",
     "coords": [
-      228,
-      1368
+      192,
+      1152
     ]
   },
   {
     "item": "ITEM_ROCK_MEMORY",
     "coords": [
-      266,
-      1368
+      224,
+      1152
     ]
   },
   {
     "item": "ITEM_ROCK_TERA_SHARD",
     "coords": [
-      304,
-      1368
+      256,
+      1152
     ]
   },
   {
     "item": "ITEM_ROCKIUM_Z",
     "coords": [
-      342,
-      1368
+      288,
+      1152
     ]
   },
   {
     "item": "ITEM_ROCKY_HELMET",
     "coords": [
-      380,
-      1368
+      320,
+      1152
     ]
   },
   {
     "item": "ITEM_ROOM_SERVICE",
     "coords": [
-      418,
-      1368
+      352,
+      1152
     ]
   },
   {
     "item": "ITEM_ROOT_FOSSIL",
     "coords": [
-      456,
-      1368
+      384,
+      1152
     ]
   },
   {
     "item": "ITEM_ROSE_INCENSE",
     "coords": [
-      494,
-      1368
+      416,
+      1152
     ]
   },
   {
     "item": "ITEM_ROSELI_BERRY",
     "coords": [
-      532,
-      1368
+      448,
+      1152
     ]
   },
   {
     "item": "ITEM_ROSERADITE",
     "coords": [
-      570,
-      1368
+      480,
+      1152
     ]
   },
   {
     "item": "ITEM_ROTOM_CATALOG",
     "coords": [
       0,
-      1406
+      1184
     ]
   },
   {
     "item": "ITEM_ROWAP_BERRY",
     "coords": [
-      38,
-      1406
+      32,
+      1184
     ]
   },
   {
     "item": "ITEM_RUBY",
     "coords": [
-      76,
-      1406
+      64,
+      1184
     ]
   },
   {
     "item": "ITEM_RUSTED_SHIELD",
     "coords": [
-      114,
-      1406
+      96,
+      1184
     ]
   },
   {
     "item": "ITEM_RUSTED_SWORD",
     "coords": [
-      152,
-      1406
+      128,
+      1184
     ]
   },
   {
     "item": "ITEM_SABLENITE",
     "coords": [
-      190,
-      1406
+      160,
+      1184
     ]
   },
   {
     "item": "ITEM_SACHET",
     "coords": [
-      228,
-      1406
+      192,
+      1184
     ]
   },
   {
     "item": "ITEM_SACRED_ASH",
     "coords": [
-      266,
-      1406
+      224,
+      1184
     ]
   },
   {
     "item": "ITEM_SAFARI_BALL",
     "coords": [
-      304,
-      1406
+      256,
+      1184
     ]
   },
   {
     "item": "ITEM_SAFETY_GOGGLES",
     "coords": [
-      342,
-      1406
+      288,
+      1184
     ]
   },
   {
     "item": "ITEM_SAIL_FOSSIL",
     "coords": [
-      380,
-      1406
+      320,
+      1184
     ]
   },
   {
     "item": "ITEM_SALAC_BERRY",
     "coords": [
-      418,
-      1406
+      352,
+      1184
     ]
   },
   {
     "item": "ITEM_SALAMENCITE",
     "coords": [
-      456,
-      1406
+      384,
+      1184
     ]
   },
   {
     "item": "ITEM_SANDACONDITE",
     "coords": [
-      494,
-      1406
+      416,
+      1184
     ]
   },
   {
     "item": "ITEM_SAPPHIRE",
     "coords": [
-      532,
-      1406
+      448,
+      1184
     ]
   },
   {
     "item": "ITEM_SASSY_MINT",
     "coords": [
-      570,
-      1406
+      480,
+      1184
     ]
   },
   {
     "item": "ITEM_SCANNER",
     "coords": [
       0,
-      1444
+      1216
     ]
   },
   {
     "item": "ITEM_SCEPTILITE",
     "coords": [
-      38,
-      1444
+      32,
+      1216
     ]
   },
   {
     "item": "ITEM_SCIZORITE",
     "coords": [
-      76,
-      1444
+      64,
+      1216
     ]
   },
   {
     "item": "ITEM_SCOPE_LENS",
     "coords": [
-      114,
-      1444
+      96,
+      1216
     ]
   },
   {
     "item": "ITEM_SCROLL_OF_DARKNESS",
     "coords": [
-      152,
-      1444
+      128,
+      1216
     ]
   },
   {
     "item": "ITEM_SCROLL_OF_WATERS",
     "coords": [
-      190,
-      1444
+      160,
+      1216
     ]
   },
   {
     "item": "ITEM_SEA_INCENSE",
     "coords": [
-      228,
-      1444
+      192,
+      1216
     ]
   },
   {
     "item": "ITEM_SECRET_KEY",
     "coords": [
-      266,
-      1444
+      224,
+      1216
     ]
   },
   {
     "item": "ITEM_SERIOUS_MINT",
     "coords": [
-      304,
-      1444
+      256,
+      1216
     ]
   },
   {
     "item": "ITEM_SHADOW_MAIL",
     "coords": [
-      342,
-      1444
+      288,
+      1216
     ]
   },
   {
     "item": "ITEM_SHALOUR_SABLE",
     "coords": [
-      380,
-      1444
+      320,
+      1216
     ]
   },
   {
     "item": "ITEM_SHARP_BEAK",
     "coords": [
-      418,
-      1444
+      352,
+      1216
     ]
   },
   {
     "item": "ITEM_SHARPEDONITE",
     "coords": [
-      456,
-      1444
+      384,
+      1216
     ]
   },
   {
     "item": "ITEM_SHED_SHELL",
     "coords": [
-      494,
-      1444
+      416,
+      1216
     ]
   },
   {
     "item": "ITEM_SHELL_BELL",
     "coords": [
-      532,
-      1444
+      448,
+      1216
     ]
   },
   {
     "item": "ITEM_SHINY_CHARM",
     "coords": [
-      570,
-      1444
+      480,
+      1216
     ]
   },
   {
     "item": "ITEM_SHINY_STONE",
     "coords": [
       0,
-      1482
+      1248
     ]
   },
   {
     "item": "ITEM_SHOAL_SALT",
     "coords": [
-      38,
-      1482
+      32,
+      1248
     ]
   },
   {
     "item": "ITEM_SHOAL_SHELL",
     "coords": [
-      76,
-      1482
+      64,
+      1248
     ]
   },
   {
     "item": "ITEM_SHOCK_DRIVE",
     "coords": [
-      114,
-      1482
+      96,
+      1248
     ]
   },
   {
     "item": "ITEM_SHUCA_BERRY",
     "coords": [
-      152,
-      1482
+      128,
+      1248
     ]
   },
   {
     "item": "ITEM_SILK_SCARF",
     "coords": [
-      190,
-      1482
+      160,
+      1248
     ]
   },
   {
     "item": "ITEM_SILPH_SCOPE",
     "coords": [
-      228,
-      1482
+      192,
+      1248
     ]
   },
   {
     "item": "ITEM_SILVER_POWDER",
     "coords": [
-      266,
-      1482
+      224,
+      1248
     ]
   },
   {
     "item": "ITEM_SITRUS_BERRY",
     "coords": [
-      304,
-      1482
+      256,
+      1248
     ]
   },
   {
     "item": "ITEM_SKULL_FOSSIL",
     "coords": [
-      342,
-      1482
+      288,
+      1248
     ]
   },
   {
     "item": "ITEM_SKY_PLATE",
     "coords": [
-      380,
-      1482
+      320,
+      1248
     ]
   },
   {
     "item": "ITEM_SLAKITE",
     "coords": [
-      418,
-      1482
+      352,
+      1248
     ]
   },
   {
     "item": "ITEM_SLOWBRONITE",
     "coords": [
-      456,
-      1482
+      384,
+      1248
     ]
   },
   {
     "item": "ITEM_SMOKE_BALL",
     "coords": [
-      494,
-      1482
+      416,
+      1248
     ]
   },
   {
     "item": "ITEM_SMOOTH_ROCK",
     "coords": [
-      532,
-      1482
+      448,
+      1248
     ]
   },
   {
     "item": "ITEM_SNORLAXITE",
     "coords": [
-      570,
-      1482
+      480,
+      1248
     ]
   },
   {
     "item": "ITEM_SNORLIUM_Z",
     "coords": [
       0,
-      1520
+      1280
     ]
   },
   {
     "item": "ITEM_SNOWBALL",
     "coords": [
-      38,
-      1520
+      32,
+      1280
     ]
   },
   {
     "item": "ITEM_SODA_POP",
     "coords": [
-      76,
-      1520
+      64,
+      1280
     ]
   },
   {
     "item": "ITEM_SOFT_SAND",
     "coords": [
-      114,
-      1520
+      96,
+      1280
     ]
   },
   {
     "item": "ITEM_SOLGANIUM_Z",
     "coords": [
-      152,
-      1520
+      128,
+      1280
     ]
   },
   {
     "item": "ITEM_SOOT_SACK",
     "coords": [
-      190,
-      1520
+      160,
+      1280
     ]
   },
   {
     "item": "ITEM_SOOTHE_BELL",
     "coords": [
-      228,
-      1520
+      192,
+      1280
     ]
   },
   {
     "item": "ITEM_SOUL_DEW",
     "coords": [
-      266,
-      1520
+      224,
+      1280
     ]
   },
   {
     "item": "ITEM_SPELL_TAG",
     "coords": [
-      304,
-      1520
+      256,
+      1280
     ]
   },
   {
     "item": "ITEM_SPELON_BERRY",
     "coords": [
-      342,
-      1520
+      288,
+      1280
     ]
   },
   {
     "item": "ITEM_SPLASH_PLATE",
     "coords": [
-      380,
-      1520
+      320,
+      1280
     ]
   },
   {
     "item": "ITEM_SPOOKY_PLATE",
     "coords": [
-      418,
-      1520
+      352,
+      1280
     ]
   },
   {
     "item": "ITEM_SPORT_BALL",
     "coords": [
-      456,
-      1520
+      384,
+      1280
     ]
   },
   {
     "item": "ITEM_SS_TICKET",
     "coords": [
-      494,
-      1520
+      416,
+      1280
     ]
   },
   {
     "item": "ITEM_STABLE_MULCH",
     "coords": [
-      532,
-      1520
+      448,
+      1280
     ]
   },
   {
     "item": "ITEM_STAR_PIECE",
     "coords": [
-      570,
-      1520
+      480,
+      1280
     ]
   },
   {
     "item": "ITEM_STAR_SWEET",
     "coords": [
       0,
-      1558
+      1312
     ]
   },
   {
     "item": "ITEM_STARDUST",
     "coords": [
-      38,
-      1558
+      32,
+      1312
     ]
   },
   {
     "item": "ITEM_STARF_BERRY",
     "coords": [
-      76,
-      1558
+      64,
+      1312
     ]
   },
   {
     "item": "ITEM_STEEL_FEATHER",
     "coords": [
-      114,
-      1558
+      96,
+      1312
     ]
   },
   {
     "item": "ITEM_STEEL_GEM",
     "coords": [
-      152,
-      1558
+      128,
+      1312
     ]
   },
   {
     "item": "ITEM_STEEL_MEMORY",
     "coords": [
-      190,
-      1558
+      160,
+      1312
     ]
   },
   {
     "item": "ITEM_STEEL_TERA_SHARD",
     "coords": [
-      228,
-      1558
+      192,
+      1312
     ]
   },
   {
     "item": "ITEM_STEELIUM_Z",
     "coords": [
-      266,
-      1558
+      224,
+      1312
     ]
   },
   {
     "item": "ITEM_STEELIXITE",
     "coords": [
-      304,
-      1558
+      256,
+      1312
     ]
   },
   {
     "item": "ITEM_STELLAR_TERA_SHARD",
     "coords": [
-      342,
-      1558
+      288,
+      1312
     ]
   },
   {
     "item": "ITEM_STICKY_BARB",
     "coords": [
-      380,
-      1558
+      320,
+      1312
     ]
   },
   {
     "item": "ITEM_STONE_PLATE",
     "coords": [
-      418,
-      1558
+      352,
+      1312
     ]
   },
   {
     "item": "ITEM_STORAGE_KEY",
     "coords": [
-      456,
-      1558
+      384,
+      1312
     ]
   },
   {
     "item": "ITEM_STRANGE_BALL",
     "coords": [
-      494,
-      1558
+      416,
+      1312
     ]
   },
   {
     "item": "ITEM_STRANGE_SOUVENIR",
     "coords": [
-      532,
-      1558
+      448,
+      1312
     ]
   },
   {
     "item": "ITEM_STRAWBERRY_SWEET",
     "coords": [
-      570,
-      1558
+      480,
+      1312
     ]
   },
   {
     "item": "ITEM_SUN_STONE",
     "coords": [
       0,
-      1596
+      1344
     ]
   },
   {
     "item": "ITEM_SUPER_LURE",
     "coords": [
-      38,
-      1596
+      32,
+      1344
     ]
   },
   {
     "item": "ITEM_SUPER_POTION",
     "coords": [
-      76,
-      1596
+      64,
+      1344
     ]
   },
   {
     "item": "ITEM_SUPER_REPEL",
     "coords": [
-      114,
-      1596
+      96,
+      1344
     ]
   },
   {
     "item": "ITEM_SUPER_ROD",
     "coords": [
-      152,
-      1596
+      128,
+      1344
     ]
   },
   {
     "item": "ITEM_SUPERB_REMEDY",
     "coords": [
-      190,
-      1596
+      160,
+      1344
     ]
   },
   {
     "item": "ITEM_SURPRISE_MULCH",
     "coords": [
-      228,
-      1596
+      192,
+      1344
     ]
   },
   {
     "item": "ITEM_SWAMPERTITE",
     "coords": [
-      266,
-      1596
+      224,
+      1344
     ]
   },
   {
     "item": "ITEM_SWAP_SNACK",
     "coords": [
-      304,
-      1596
+      256,
+      1344
     ]
   },
   {
     "item": "ITEM_SWEET_APPLE",
     "coords": [
-      342,
-      1596
+      288,
+      1344
     ]
   },
   {
     "item": "ITEM_SWEET_HEART",
     "coords": [
-      380,
-      1596
+      320,
+      1344
     ]
   },
   {
     "item": "ITEM_SWIFT_FEATHER",
     "coords": [
-      418,
-      1596
+      352,
+      1344
     ]
   },
   {
     "item": "ITEM_SWIFT_MOCHI",
     "coords": [
-      456,
-      1596
+      384,
+      1344
     ]
   },
   {
     "item": "ITEM_SYRUPY_APPLE",
     "coords": [
-      494,
-      1596
+      416,
+      1344
     ]
   },
   {
     "item": "ITEM_TAMATO_BERRY",
     "coords": [
-      532,
-      1596
+      448,
+      1344
     ]
   },
   {
     "item": "ITEM_TANGA_BERRY",
     "coords": [
-      570,
-      1596
+      480,
+      1344
     ]
   },
   {
     "item": "ITEM_TAPUNIUM_Z",
     "coords": [
       0,
-      1634
+      1376
     ]
   },
   {
     "item": "ITEM_TART_APPLE",
     "coords": [
-      38,
-      1634
+      32,
+      1376
     ]
   },
   {
     "item": "ITEM_TEA",
     "coords": [
-      76,
-      1634
+      64,
+      1376
     ]
   },
   {
     "item": "ITEM_TEACHY_TV",
     "coords": [
-      114,
-      1634
+      96,
+      1376
     ]
   },
   {
     "item": "ITEM_TERA_ORB",
     "coords": [
-      152,
-      1634
+      128,
+      1376
     ]
   },
   {
     "item": "ITEM_TERRAIN_EXTENDER",
     "coords": [
-      190,
-      1634
+      160,
+      1376
     ]
   },
   {
     "item": "ITEM_THICK_CLUB",
     "coords": [
-      228,
-      1634
+      192,
+      1376
     ]
   },
   {
     "item": "ITEM_THROAT_SPRAY",
     "coords": [
-      266,
-      1634
+      224,
+      1376
     ]
   },
   {
     "item": "ITEM_THUNDER_STONE",
     "coords": [
-      304,
-      1634
+      256,
+      1376
     ]
   },
   {
     "item": "ITEM_TIMER_BALL",
     "coords": [
-      342,
-      1634
+      288,
+      1376
     ]
   },
   {
     "item": "ITEM_TIMID_MINT",
     "coords": [
-      380,
-      1634
+      320,
+      1376
     ]
   },
   {
     "item": "ITEM_TINY_BAMBOO_SHOOT",
     "coords": [
-      418,
-      1634
+      352,
+      1376
     ]
   },
   {
     "item": "ITEM_TINY_MUSHROOM",
     "coords": [
-      456,
-      1634
+      384,
+      1376
     ]
   },
   {
     "item": "ITEM_TM_ACROBATICS",
     "coords": [
-      494,
-      1634
+      416,
+      1376
     ]
   },
   {
     "item": "ITEM_TM_AERIAL_ACE",
     "coords": [
-      532,
-      1634
+      448,
+      1376
     ]
   },
   {
     "item": "ITEM_TM_AIR_SLASH",
     "coords": [
-      570,
-      1634
+      480,
+      1376
     ]
   },
   {
     "item": "ITEM_TM_ALLURING_VOICE",
     "coords": [
       0,
-      1672
+      1408
     ]
   },
   {
     "item": "ITEM_TM_ARM_THRUST",
     "coords": [
-      38,
-      1672
+      32,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_AURA_SPHERE",
     "coords": [
-      76,
-      1672
+      64,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_BLAZE_KICK",
     "coords": [
-      114,
-      1672
+      96,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_BLIZZARD",
     "coords": [
-      152,
-      1672
+      128,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_BODY_PRESS",
     "coords": [
-      190,
-      1672
+      160,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_BODY_SLAM",
     "coords": [
-      228,
-      1672
+      192,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_BRAVE_BIRD",
     "coords": [
-      266,
-      1672
+      224,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_BRICK_BREAK",
     "coords": [
-      304,
-      1672
+      256,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_BUG_BITE",
     "coords": [
-      342,
-      1672
+      288,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_BUG_BUZZ",
     "coords": [
-      380,
-      1672
+      320,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_BULK_UP",
     "coords": [
-      418,
-      1672
+      352,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_BULLDOZE",
     "coords": [
-      456,
-      1672
+      384,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_BULLET_SEED",
     "coords": [
-      494,
-      1672
+      416,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_CALM_MIND",
     "coords": [
-      532,
-      1672
+      448,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_CASE",
     "coords": [
-      570,
-      1672
+      480,
+      1408
     ]
   },
   {
     "item": "ITEM_TM_CHARGE_BEAM",
     "coords": [
       0,
-      1710
+      1440
     ]
   },
   {
     "item": "ITEM_TM_CLOSE_COMBAT",
     "coords": [
-      38,
-      1710
+      32,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DARK_HOLE",
     "coords": [
-      76,
-      1710
+      64,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DARK_PULSE",
     "coords": [
-      114,
-      1710
+      96,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DAZZLING_GLEAM",
     "coords": [
-      152,
-      1710
+      128,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DEFOG",
     "coords": [
-      190,
-      1710
+      160,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DIG",
     "coords": [
-      228,
-      1710
+      192,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DRACO_METEOR",
     "coords": [
-      266,
-      1710
+      224,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DRAGON_CLAW",
     "coords": [
-      304,
-      1710
+      256,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DRAGON_DANCE",
     "coords": [
-      342,
-      1710
+      288,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DRAGON_PULSE",
     "coords": [
-      380,
-      1710
+      320,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DRAGON_TAIL",
     "coords": [
-      418,
-      1710
+      352,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DRAIN_PUNCH",
     "coords": [
-      456,
-      1710
+      384,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DRAINING_KISS",
     "coords": [
-      494,
-      1710
+      416,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DRILL_RUN",
     "coords": [
-      532,
-      1710
+      448,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DUAL_CHOP",
     "coords": [
-      570,
-      1710
+      480,
+      1440
     ]
   },
   {
     "item": "ITEM_TM_DUAL_WINGBEAT",
     "coords": [
       0,
-      1748
+      1472
     ]
   },
   {
     "item": "ITEM_TM_EARTH_POWER",
     "coords": [
-      38,
-      1748
+      32,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_EARTHQUAKE",
     "coords": [
-      76,
-      1748
+      64,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_ELECTROWEB",
     "coords": [
-      114,
-      1748
+      96,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_ENERGY_BALL",
     "coords": [
-      152,
-      1748
+      128,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_EXPANDING_FORCE",
     "coords": [
-      190,
-      1748
+      160,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_EXPLOSION",
     "coords": [
-      228,
-      1748
+      192,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_FACADE",
     "coords": [
-      266,
-      1748
+      224,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_FIRE_BLAST",
     "coords": [
-      304,
-      1748
+      256,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_FIRE_FANG",
     "coords": [
-      342,
-      1748
+      288,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_FIRE_PUNCH",
     "coords": [
-      380,
-      1748
+      320,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_FLAME_CHARGE",
     "coords": [
-      418,
-      1748
+      352,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_FLAMETHROWER",
     "coords": [
-      456,
-      1748
+      384,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_FLARE_BLITZ",
     "coords": [
-      494,
-      1748
+      416,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_FLASH_CANNON",
     "coords": [
-      532,
-      1748
+      448,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_FLIP_TURN",
     "coords": [
-      570,
-      1748
+      480,
+      1472
     ]
   },
   {
     "item": "ITEM_TM_FOCUS_BLAST",
     "coords": [
       0,
-      1786
+      1504
     ]
   },
   {
     "item": "ITEM_TM_FOCUS_PUNCH",
     "coords": [
-      38,
-      1786
+      32,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_FOUL_PLAY",
     "coords": [
-      76,
-      1786
+      64,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_FUTURE_SIGHT",
     "coords": [
-      114,
-      1786
+      96,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_GIGA_DRAIN",
     "coords": [
-      152,
-      1786
+      128,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_GRASS_KNOT",
     "coords": [
-      190,
-      1786
+      160,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_GRASSY_GLIDE",
     "coords": [
-      228,
-      1786
+      192,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_GUNK_SHOT",
     "coords": [
-      266,
-      1786
+      224,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_GYRO_BALL",
     "coords": [
-      304,
-      1786
+      256,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_HEAT_CRASH",
     "coords": [
-      342,
-      1786
+      288,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_HEAT_WAVE",
     "coords": [
-      380,
-      1786
+      320,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_HEX",
     "coords": [
-      418,
-      1786
+      352,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_HIDDEN_POWER",
     "coords": [
-      456,
-      1786
+      384,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_HIGH_HORSEPOWER",
     "coords": [
-      494,
-      1786
+      416,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_HURRICANE",
     "coords": [
-      532,
-      1786
+      448,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_HYDRO_PUMP",
     "coords": [
-      570,
-      1786
+      480,
+      1504
     ]
   },
   {
     "item": "ITEM_TM_HYPER_VOICE",
     "coords": [
       0,
-      1824
+      1536
     ]
   },
   {
     "item": "ITEM_TM_ICE_BEAM",
     "coords": [
-      38,
-      1824
+      32,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_ICE_FANG",
     "coords": [
-      76,
-      1824
+      64,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_ICE_PUNCH",
     "coords": [
-      114,
-      1824
+      96,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_ICE_SPINNER",
     "coords": [
-      152,
-      1824
+      128,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_ICICLE_SPEAR",
     "coords": [
-      190,
-      1824
+      160,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_ICY_WIND",
     "coords": [
-      228,
-      1824
+      192,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_IRON_DEFENSE",
     "coords": [
-      266,
-      1824
+      224,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_IRON_HEAD",
     "coords": [
-      304,
-      1824
+      256,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_IRON_TAIL",
     "coords": [
-      342,
-      1824
+      288,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_KNOCK_OFF",
     "coords": [
-      380,
-      1824
+      320,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_LEAF_BLADE",
     "coords": [
-      418,
-      1824
+      352,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_LEECH_LIFE",
     "coords": [
-      456,
-      1824
+      384,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_LIGHT_SCREEN",
     "coords": [
-      494,
-      1824
+      416,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_LIQUIDATION",
     "coords": [
-      532,
-      1824
+      448,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_LOW_KICK",
     "coords": [
-      570,
-      1824
+      480,
+      1536
     ]
   },
   {
     "item": "ITEM_TM_LOW_SWEEP",
     "coords": [
       0,
-      1862
+      1568
     ]
   },
   {
     "item": "ITEM_TM_MEGAHORN",
     "coords": [
-      38,
-      1862
+      32,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_METEOR_BEAM",
     "coords": [
-      76,
-      1862
+      64,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_MOONBLAST",
     "coords": [
-      114,
-      1862
+      96,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_MYSTICAL_FIRE",
     "coords": [
-      152,
-      1862
+      128,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_NASTY_PLOT",
     "coords": [
-      190,
-      1862
+      160,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_OVERHEAT",
     "coords": [
-      228,
-      1862
+      192,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_PAIN_SPLIT",
     "coords": [
-      266,
-      1862
+      224,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_PHANTOM_FORCE",
     "coords": [
-      304,
-      1862
+      256,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_PIN_MISSILE",
     "coords": [
-      342,
-      1862
+      288,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_PLAY_ROUGH",
     "coords": [
-      380,
-      1862
+      320,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_PLUCK",
     "coords": [
-      418,
-      1862
+      352,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_POISON_FANG",
     "coords": [
-      456,
-      1862
+      384,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_POISON_JAB",
     "coords": [
-      494,
-      1862
+      416,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_POLTERGEIST",
     "coords": [
-      532,
-      1862
+      448,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_POWER_GEM",
     "coords": [
-      570,
-      1862
+      480,
+      1568
     ]
   },
   {
     "item": "ITEM_TM_POWER_UP_PUNCH",
     "coords": [
       0,
-      1900
+      1600
     ]
   },
   {
     "item": "ITEM_TM_POWER_WHIP",
     "coords": [
-      38,
-      1900
+      32,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_PROTECT",
     "coords": [
-      76,
-      1900
+      64,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_PSYCHIC",
     "coords": [
-      114,
-      1900
+      96,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_PSYCHIC_FANGS",
     "coords": [
-      152,
-      1900
+      128,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_PSYCHIC_NOISE",
     "coords": [
-      190,
-      1900
+      160,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_PSYSHOCK",
     "coords": [
-      228,
-      1900
+      192,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_RAIN_DANCE",
     "coords": [
-      266,
-      1900
+      224,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_REFLECT",
     "coords": [
-      304,
-      1900
+      256,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_REST",
     "coords": [
-      342,
-      1900
+      288,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_RETURN",
     "coords": [
-      380,
-      1900
+      320,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_RISING_VOLTAGE",
     "coords": [
-      418,
-      1900
+      352,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_ROAR",
     "coords": [
-      456,
-      1900
+      384,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_ROCK_BLAST",
     "coords": [
-      494,
-      1900
+      416,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_ROCK_POLISH",
     "coords": [
-      532,
-      1900
+      448,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_ROCK_SLIDE",
     "coords": [
-      570,
-      1900
+      480,
+      1600
     ]
   },
   {
     "item": "ITEM_TM_ROCK_TOMB",
     "coords": [
       0,
-      1938
+      1632
     ]
   },
   {
     "item": "ITEM_TM_ROOST",
     "coords": [
-      38,
-      1938
+      32,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SANDSTORM",
     "coords": [
-      76,
-      1938
+      64,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SCALD",
     "coords": [
-      114,
-      1938
+      96,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SCALE_SHOT",
     "coords": [
-      152,
-      1938
+      128,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SCORCHING_SANDS",
     "coords": [
-      190,
-      1938
+      160,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SEED_BOMB",
     "coords": [
-      228,
-      1938
+      192,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SHADOW_BALL",
     "coords": [
-      266,
-      1938
+      224,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SHADOW_CLAW",
     "coords": [
-      304,
-      1938
+      256,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SILVER_WIND",
     "coords": [
-      342,
-      1938
+      288,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SLEEP_TALK",
     "coords": [
-      380,
-      1938
+      320,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SLUDGE_BOMB",
     "coords": [
-      418,
-      1938
+      352,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SLUDGE_WAVE",
     "coords": [
-      456,
-      1938
+      384,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SMACK_DOWN",
     "coords": [
-      494,
-      1938
+      416,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SNARL",
     "coords": [
-      532,
-      1938
+      448,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SNOWSCAPE",
     "coords": [
-      570,
-      1938
+      480,
+      1632
     ]
   },
   {
     "item": "ITEM_TM_SOLAR_BEAM",
     "coords": [
       0,
-      1976
+      1664
     ]
   },
   {
     "item": "ITEM_TM_SOLAR_BLADE",
     "coords": [
-      38,
-      1976
+      32,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_STEALTH_ROCK",
     "coords": [
-      76,
-      1976
+      64,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_STEEL_WING",
     "coords": [
-      114,
-      1976
+      96,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_STOMPING_TANTRUM",
     "coords": [
-      152,
-      1976
+      128,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_STONE_EDGE",
     "coords": [
-      190,
-      1976
+      160,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_STORED_POWER",
     "coords": [
-      228,
-      1976
+      192,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_SUBSTITUTE",
     "coords": [
-      266,
-      1976
+      224,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_SUNNY_DAY",
     "coords": [
-      304,
-      1976
+      256,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_SUPERCELL_SLAM",
     "coords": [
-      342,
-      1976
+      288,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_SUPERPOWER",
     "coords": [
-      380,
-      1976
+      320,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_SWORDS_DANCE",
     "coords": [
-      418,
-      1976
+      352,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_TAIL_SLAP",
     "coords": [
-      456,
-      1976
+      384,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_TAILWIND",
     "coords": [
-      494,
-      1976
+      416,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_TAUNT",
     "coords": [
-      532,
-      1976
+      448,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_TELEPORT",
     "coords": [
-      570,
-      1976
+      480,
+      1664
     ]
   },
   {
     "item": "ITEM_TM_TEMPER_FLARE",
     "coords": [
       0,
-      2014
+      1696
     ]
   },
   {
     "item": "ITEM_TM_THIEF",
     "coords": [
-      38,
-      2014
+      32,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_THUNDER",
     "coords": [
-      76,
-      2014
+      64,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_THUNDER_FANG",
     "coords": [
-      114,
-      2014
+      96,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_THUNDER_PUNCH",
     "coords": [
-      152,
-      2014
+      128,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_THUNDER_WAVE",
     "coords": [
-      190,
-      2014
+      160,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_THUNDERBOLT",
     "coords": [
-      228,
-      2014
+      192,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_TOXIC",
     "coords": [
-      266,
-      2014
+      224,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_TRAILBLAZE",
     "coords": [
-      304,
-      2014
+      256,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_TRICK_ROOM",
     "coords": [
-      342,
-      2014
+      288,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_TRIPLE_AXEL",
     "coords": [
-      380,
-      2014
+      320,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_U_TURN",
     "coords": [
-      418,
-      2014
+      352,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_VACUUM_WAVE",
     "coords": [
-      456,
-      2014
+      384,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_VENOSHOCK",
     "coords": [
-      494,
-      2014
+      416,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_VOLT_SWITCH",
     "coords": [
-      532,
-      2014
+      448,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_WATER_PULSE",
     "coords": [
-      570,
-      2014
+      480,
+      1696
     ]
   },
   {
     "item": "ITEM_TM_WEATHER_BALL",
     "coords": [
       0,
-      2052
+      1728
     ]
   },
   {
     "item": "ITEM_TM_WILD_CHARGE",
     "coords": [
-      38,
-      2052
+      32,
+      1728
     ]
   },
   {
     "item": "ITEM_TM_WILL_O_WISP",
     "coords": [
-      76,
-      2052
+      64,
+      1728
     ]
   },
   {
     "item": "ITEM_TM_WORK_UP",
     "coords": [
-      114,
-      2052
+      96,
+      1728
     ]
   },
   {
     "item": "ITEM_TM_X_SCISSOR",
     "coords": [
-      152,
-      2052
+      128,
+      1728
     ]
   },
   {
     "item": "ITEM_TM_ZEN_HEADBUTT",
     "coords": [
-      190,
-      2052
+      160,
+      1728
     ]
   },
   {
     "item": "ITEM_TORTERRITE",
     "coords": [
-      228,
-      2052
+      192,
+      1728
     ]
   },
   {
     "item": "ITEM_TOWN_MAP",
     "coords": [
-      266,
-      2052
+      224,
+      1728
     ]
   },
   {
     "item": "ITEM_TOXIC_ORB",
     "coords": [
-      304,
-      2052
+      256,
+      1728
     ]
   },
   {
     "item": "ITEM_TOXIC_PLATE",
     "coords": [
-      342,
-      2052
+      288,
+      1728
     ]
   },
   {
     "item": "ITEM_TOXTRICITITE",
     "coords": [
-      380,
-      2052
+      320,
+      1728
     ]
   },
   {
     "item": "ITEM_TRI_PASS",
     "coords": [
-      418,
-      2052
+      352,
+      1728
     ]
   },
   {
     "item": "ITEM_TROPIC_MAIL",
     "coords": [
-      456,
-      2052
+      384,
+      1728
     ]
   },
   {
     "item": "ITEM_TWICE_SPICED_RADISH",
     "coords": [
-      494,
-      2052
+      416,
+      1728
     ]
   },
   {
     "item": "ITEM_TWISTED_SPOON",
     "coords": [
-      532,
-      2052
+      448,
+      1728
     ]
   },
   {
     "item": "ITEM_TYRANITARITE",
     "coords": [
-      570,
-      2052
+      480,
+      1728
     ]
   },
   {
     "item": "ITEM_ULTRA_BALL",
     "coords": [
       0,
-      2090
+      1760
     ]
   },
   {
     "item": "ITEM_ULTRANECROZIUM_Z",
     "coords": [
-      38,
-      2090
+      32,
+      1760
     ]
   },
   {
     "item": "ITEM_UNREMARKABLE_TEACUP",
     "coords": [
-      76,
-      2090
+      64,
+      1760
     ]
   },
   {
     "item": "ITEM_UPGRADE",
     "coords": [
-      114,
-      2090
+      96,
+      1760
     ]
   },
   {
     "item": "ITEM_UTILITY_UMBRELLA",
     "coords": [
-      152,
-      2090
+      128,
+      1760
     ]
   },
   {
     "item": "ITEM_VENUSAURITE",
     "coords": [
-      190,
-      2090
+      160,
+      1760
     ]
   },
   {
     "item": "ITEM_VS_SEEKER",
     "coords": [
-      228,
-      2090
+      192,
+      1760
     ]
   },
   {
     "item": "ITEM_WACAN_BERRY",
     "coords": [
-      266,
-      2090
+      224,
+      1760
     ]
   },
   {
     "item": "ITEM_WAILMER_PAIL",
     "coords": [
-      304,
-      2090
+      256,
+      1760
     ]
   },
   {
     "item": "ITEM_WATER_GEM",
     "coords": [
-      342,
-      2090
+      288,
+      1760
     ]
   },
   {
     "item": "ITEM_WATER_MEMORY",
     "coords": [
-      380,
-      2090
+      320,
+      1760
     ]
   },
   {
     "item": "ITEM_WATER_STONE",
     "coords": [
-      418,
-      2090
+      352,
+      1760
     ]
   },
   {
     "item": "ITEM_WATER_TERA_SHARD",
     "coords": [
-      456,
-      2090
+      384,
+      1760
     ]
   },
   {
     "item": "ITEM_WATERIUM_Z",
     "coords": [
-      494,
-      2090
+      416,
+      1760
     ]
   },
   {
     "item": "ITEM_WATMEL_BERRY",
     "coords": [
-      532,
-      2090
+      448,
+      1760
     ]
   },
   {
     "item": "ITEM_WAVE_INCENSE",
     "coords": [
-      570,
-      2090
+      480,
+      1760
     ]
   },
   {
     "item": "ITEM_WAVE_MAIL",
     "coords": [
       0,
-      2128
+      1792
     ]
   },
   {
     "item": "ITEM_WEAKNESS_POLICY",
     "coords": [
-      38,
-      2128
+      32,
+      1792
     ]
   },
   {
     "item": "ITEM_WELLSPRING_MASK",
     "coords": [
-      76,
-      2128
+      64,
+      1792
     ]
   },
   {
     "item": "ITEM_WEPEAR_BERRY",
     "coords": [
-      114,
-      2128
+      96,
+      1792
     ]
   },
   {
     "item": "ITEM_WHIPPED_DREAM",
     "coords": [
-      152,
-      2128
+      128,
+      1792
     ]
   },
   {
     "item": "ITEM_WHITE_APRICORN",
     "coords": [
-      190,
-      2128
+      160,
+      1792
     ]
   },
   {
     "item": "ITEM_WHITE_FLUTE",
     "coords": [
-      228,
-      2128
+      192,
+      1792
     ]
   },
   {
     "item": "ITEM_WHITE_HERB",
     "coords": [
-      266,
-      2128
+      224,
+      1792
     ]
   },
   {
     "item": "ITEM_WIDE_LENS",
     "coords": [
-      304,
-      2128
+      256,
+      1792
     ]
   },
   {
     "item": "ITEM_WIKI_BERRY",
     "coords": [
-      342,
-      2128
+      288,
+      1792
     ]
   },
   {
     "item": "ITEM_WISE_GLASSES",
     "coords": [
-      380,
-      2128
+      320,
+      1792
     ]
   },
   {
     "item": "ITEM_WISHING_PIECE",
     "coords": [
-      418,
-      2128
+      352,
+      1792
     ]
   },
   {
     "item": "ITEM_WOOD_MAIL",
     "coords": [
-      456,
-      2128
+      384,
+      1792
     ]
   },
   {
     "item": "ITEM_X_ACCURACY",
     "coords": [
-      494,
-      2128
+      416,
+      1792
     ]
   },
   {
     "item": "ITEM_X_ATTACK",
     "coords": [
-      532,
-      2128
+      448,
+      1792
     ]
   },
   {
     "item": "ITEM_X_DEFENSE",
     "coords": [
-      570,
-      2128
+      480,
+      1792
     ]
   },
   {
     "item": "ITEM_X_SP_ATK",
     "coords": [
       0,
-      2166
+      1824
     ]
   },
   {
     "item": "ITEM_X_SP_DEF",
     "coords": [
-      38,
-      2166
+      32,
+      1824
     ]
   },
   {
     "item": "ITEM_X_SPEED",
     "coords": [
-      76,
-      2166
+      64,
+      1824
     ]
   },
   {
     "item": "ITEM_YACHE_BERRY",
     "coords": [
-      114,
-      2166
+      96,
+      1824
     ]
   },
   {
     "item": "ITEM_YELLOW_APRICORN",
     "coords": [
-      152,
-      2166
+      128,
+      1824
     ]
   },
   {
     "item": "ITEM_YELLOW_FLUTE",
     "coords": [
-      190,
-      2166
+      160,
+      1824
     ]
   },
   {
     "item": "ITEM_YELLOW_NECTAR",
     "coords": [
-      228,
-      2166
+      192,
+      1824
     ]
   },
   {
     "item": "ITEM_YELLOW_SCARF",
     "coords": [
-      266,
-      2166
+      224,
+      1824
     ]
   },
   {
     "item": "ITEM_YELLOW_SHARD",
     "coords": [
-      304,
-      2166
+      256,
+      1824
     ]
   },
   {
     "item": "ITEM_Z_POWER_RING",
     "coords": [
-      342,
-      2166
+      288,
+      1824
     ]
   },
   {
     "item": "ITEM_ZAP_PLATE",
     "coords": [
-      380,
-      2166
+      320,
+      1824
     ]
   },
   {
     "item": "ITEM_ZINC",
     "coords": [
-      418,
-      2166
+      352,
+      1824
     ]
   },
   {
     "item": "ITEM_ZOOM_LENS",
     "coords": [
-      456,
-      2166
+      384,
+      1824
     ]
   },
   {
     "item": "ITEM_ZYGARDE_CUBE",
     "coords": [
-      494,
-      2166
+      416,
+      1824
     ]
   }
 ]

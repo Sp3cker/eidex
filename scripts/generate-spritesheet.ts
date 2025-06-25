@@ -34,8 +34,8 @@ interface SpritesheetConfig {
 // Multiple configurations for different sprite sizes
 const configs: SpritesheetConfig[] = [
   {
-    spriteWidth: 36,
-    spriteHeight: 36,
+    spriteWidth: 30,
+    spriteHeight: 30,
     padding: 2,
     spritesPerRow: 16,
     outputImagePath: './public/spritesheet-items-36.png',
@@ -44,14 +44,14 @@ const configs: SpritesheetConfig[] = [
     sizeSuffix: '36'
   },
   {
-    spriteWidth: 16,
-    spriteHeight: 16,
-    padding: 1,
+    spriteWidth: 24,
+    spriteHeight: 24,
+    padding: 2,
     spritesPerRow: 16, // More sprites per row for smaller size
     outputImagePath: './public/spritesheet-items-16.png',
     outputJsonPath: './src/data/spritesheet-coords-16.json',
     resizeFilter: 'catrom',
-    sizeSuffix: '16'
+    sizeSuffix: '24'
   }
 ];
 

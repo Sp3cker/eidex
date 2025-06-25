@@ -8,7 +8,7 @@ import Selecta from "./MapPlaceInfo/Selecta";
 import "./grid.css";
 import useMapStore from "@/stores/useMapStore";
 import { lazy, Suspense, useLayoutEffect } from "react";
-import Roamers from "./Roamers";
+// import Roamers from "./Roamers";
 import SearchContainer from "./Search/SearchContainer";
 import LoadingSpinner from "../ui/LoadingSpinner";
 import PlacesList from "./PlacesList";
@@ -47,12 +47,14 @@ const Map = () => {
           <ImageViewer />
         </Suspense>
       </ErrorBoundary>
+      {/* <Roamers /> */}
       <ErrorBoundary
         fallback={<div>something went wrong with place list </div>}
       >
-        <PlacesList />
+        <Suspense>
+          <PlacesList />
+        </Suspense>
       </ErrorBoundary>
-      <Roamers />
 
       <Suspense fallback={<div className="hidden"></div>}>
         <PokemonModal />

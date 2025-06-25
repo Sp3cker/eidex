@@ -1,5 +1,5 @@
 // Utility functions for working with the item spritesheet
-import spritesheetCoords from "@/data/spritesheet-coords.json";
+import spritesheetCoords from "@/data/spritesheet-coords-16.json";
 
 interface SpriteCoordinate {
   item: string;
@@ -46,7 +46,7 @@ export function getItemSpriteStyle(
 
   const style: React.CSSProperties = {
     objectFit: "none",
-    objectPosition: `-${x }px -${y }px`,
+    objectPosition: `-${x}px -${y}px`,
     width: `${spriteSize}px`,
     height: `${spriteSize}px`,
     display: "inline-block",
