@@ -2,11 +2,13 @@ import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import { cloudflare } from "@cloudflare/vite-plugin";
 import tailwindcss from "@tailwindcss/postcss";
+import tailwindcsssafearea from "tailwindcss-safe-area";
 import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    tailwindcsssafearea,
     react({
       babel: {
         plugins: [["babel-plugin-react-compiler", { target: "19" }]],

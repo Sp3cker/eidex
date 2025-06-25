@@ -117,7 +117,7 @@ const PlacesList = memo(function PlacesList() {
   const [slideAnimation, api] = useSpring(
     {
       transform: "translateX(-100%)",
-      config: { tension: 240, friction: 34 },
+      config: { mass: 0.5,  friction: 20 },
     },
     [],
   );
@@ -214,7 +214,7 @@ const PlacesList = memo(function PlacesList() {
 
       <animated.nav
         style={slideAnimation}
-        className="places-list-z fixed bottom-0 left-0 top-0 w-80 max-w-[80vw] overflow-hidden border-r border-gray-200 bg-gradient-to-br from-emerald-50 via-white to-gray-100 shadow-2xl"
+        className="places-list-z fixed bottom-6 pb-safe-or-8 left-0 top-0 w-80 max-w-[80vw] overflow-hidden border-r border-gray-200 bg-gradient-to-br from-emerald-50 via-white to-gray-100 shadow-2xl"
       >
         <div className="sticky top-0 z-10 flex flex-col items-center justify-between border-b border-gray-200 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 p-2">
           <div className="flex w-full justify-end">
