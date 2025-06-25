@@ -60,7 +60,6 @@ const EncounterMonsList = React.memo(function EncounterList({
       </div>
     );
   }
-console.log(encounter)
   return (
     <div className="flex flex-col gap-1">
       {encounter.map((mon, index) => (

@@ -6,6 +6,7 @@ import mapsvgs from "@/data/map/mapsvgs.json";
 import { shallow } from "zustand/shallow";
 import Clock from "./Clock";
 import CloseButton from "@/components/ui/CloseButton";
+import OpenButton from "./OpenButton";
 
 // Stable className for Clock to prevent re-renders
 
@@ -208,6 +209,9 @@ const PlacesList = memo(function PlacesList() {
         onClick={handleClose}
       />
 
+      {/* Static tab that's always visible on the left side */}
+      {!isPlacesListOpen && <OpenButton />}
+
       <animated.nav
         style={slideAnimation}
         className="places-list-z fixed bottom-0 left-0 top-0 w-80 max-w-[80vw] overflow-hidden border-r border-gray-200 bg-gradient-to-br from-emerald-50 via-white to-gray-100 shadow-2xl"
@@ -226,7 +230,8 @@ const PlacesList = memo(function PlacesList() {
               <div className="flex flex-col items-start justify-between pb-1">
                 <h3 className="cool-font font-bold text-neutral-700">Hoenn</h3>
                 <p className="font-pkmnem text-md text-neutral-500">
-                  {places.length} areas (I&apos;ll add sorting later, I promise!)
+                  {places.length} areas (I&apos;ll add sorting later, I
+                  promise!)
                 </p>
               </div>
             </div>
