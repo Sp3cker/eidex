@@ -4,10 +4,14 @@ import { create } from "zustand";
 interface SearchSelectionState {
   itemSearchSelected: boolean;
   setSearchSelected: (bool: boolean) => void;
+  itemSearchFocused: boolean;
+  setItemSearchFocused: (bool: boolean) => void;
 }
 
 // Create the Zustand store, export it for use in Search and PokeSearch
 export const useSearchSelectionStore = create<SearchSelectionState>((set) => ({
   itemSearchSelected: true, // Default to 'item' search, or choose based on your preference
+  itemSearchFocused: false,
   setSearchSelected: (bool: boolean) => set({ itemSearchSelected: bool }),
+  setItemSearchFocused: (bool: boolean) => set({itemSearchFocused: bool})
 }));

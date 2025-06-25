@@ -33,6 +33,10 @@
 .roamers-info-grid {
   grid-area: 10 / 3 / 13 / 7;
 }
+.places-list-button-grid {
+  grid-area: 3 / 1 / 4 / 3;
+  width: 2rem;
+}
 @media (max-width: 768px) {
   .parent {
     grid-template-columns: repeat(6, 1fr);
@@ -53,13 +57,18 @@
   .dexnav-grid {
     grid-area: 7 / 1 / 13 / 7;
   }
+  .places-list-button-grid {
+    grid-area: 2 / 1 / 3 / 3;
+    width: 2rem;
+    height: 5rem;
+  }
 }
 @media (width >= 64rem) {
   .map-place-info-grid {
     grid-area: 2 / 7 / 12 / 11;
     /* width: 25rem; */
   }
-    .selecta-grid {
+  .selecta-grid {
     grid-area: 11 / 8 / 13 / 10;
   }
 }

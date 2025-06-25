@@ -10,7 +10,8 @@ const Search = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const setSelectedMap = useMapStore((state) => state.setSelectedMap);
   const deSelectMap = useMapStore((state) => state.deselectMap);
-  const { itemSearchSelected, setSearchSelected } = useSearchSelectionStore();
+  const { itemSearchSelected, setSearchSelected, setItemSearchFocused } =
+    useSearchSelectionStore();
   const [itemMaps, setItemMaps] = useState<string[]>([]);
   const [
     searchTerm,
@@ -73,8 +74,11 @@ const Search = () => {
 
   const handleFocus = useCallback(() => {
     setSearchSelected(true);
+    setItemSearchFocused(true);
   }, [setSearchSelected]);
-
+  const handleBlur = useCallback(() => {
+    setItemSearchFocused(false);
+  }, []);
   return (
     <div className="flex flex-col">
       <ErrorBanner show={showError} />
@@ -88,6 +92,7 @@ const Search = () => {
         type="search"
         onInput={handleChange}
         onFocus={handleFocus}
+        onBlur={handleBlur}
         placeholder="Find items, TMs..."
       />
       <SearchResultsList

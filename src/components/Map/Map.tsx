@@ -47,12 +47,12 @@ const Map = () => {
           <ImageViewer />
         </Suspense>
       </ErrorBoundary>
-      <Roamers />
       <ErrorBoundary
         fallback={<div>something went wrong with place list </div>}
       >
         <PlacesList />
       </ErrorBoundary>
+      <Roamers />
 
       <Suspense fallback={<div className="hidden"></div>}>
         <PokemonModal />
