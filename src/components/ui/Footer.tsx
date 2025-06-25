@@ -10,10 +10,14 @@ const Footer = () => {
         className: "text-baseline md:text-xl cursor-pointer hover:sepia  ",
       }}
     >
-      <div style={{
-        paddingBottom: 'env(safe-area-inset-bottom)'
-
-      }} className="fade-in-footer z-10 flex w-full items-center justify-between bg-gray-700 px-2 ring md:relative md:bottom-auto">
+      <div 
+        style={{
+          paddingBottom: 'env(safe-area-inset-bottom)',
+          paddingLeft: 'env(safe-area-inset-left)',
+          paddingRight: 'env(safe-area-inset-right)',
+        }} 
+        className="fade-in-footer fixed bottom-0 left-0 right-0 z-10 flex w-full items-center justify-between bg-gray-700 px-2 ring md:relative md:bottom-auto"
+      >
         <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">
           <p> Dex by Kildemal</p>
           <p>
