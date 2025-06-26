@@ -4,11 +4,7 @@ const Weather = ({ periodSymbol }: { periodSymbol: string }) => {
   const { data, loading, error } = useWeather();
 
   if (loading) {
-    return (
-      <div className="font-pkmnem p-2 text-center text-sm">
-        Loading weather...
-      </div>
-    );
+    return null;
   }
 
   if (error || !data) {
