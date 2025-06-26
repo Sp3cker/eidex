@@ -17,6 +17,7 @@ export default defineConfig({
     cloudflare({
       configPath: "./wrangler.toml",
       persistState: true,
+
       experimental: { headersAndRedirectsDevModeSupport: true },
     }),
   ],

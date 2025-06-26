@@ -17,7 +17,7 @@ import { ErrorBoundary } from "react-error-boundary";
 const DrawerContent = lazy(() => import("./DrawerContent"));
 
 const Drawer = ({ currOpen, toggleOpen, currTailwindSize, ...props }: any) => {
-  const desktopDisplayStyles = "flex bg-blue-800";
+  const desktopDisplayStyles = "flex bg-blue-800 h-screen flex-col";
   const mobileDisplayStyles =
     "fixed w-3/4 h-screen right-0 inset-y-0 bg-black/30 backdrop-blur-md";
 
@@ -88,7 +88,7 @@ const DrawerContainer = (props: any) => {
   }, [props.closeDrawer]);
   return (
     <div ref={containerRef} className="h-full w-full bg-gray-800">
-      {currBreakpoint === "sm" || currBreakpoint === 'xs' ? (
+      {currBreakpoint === "sm" || currBreakpoint === "xs" ? (
         <>
           <div
             onClick={toggleOpen}
@@ -110,9 +110,11 @@ const DrawerContainer = (props: any) => {
           </ErrorBoundary>
         </>
       ) : (
-        <Suspense fallback={<LoadingSpinner />}>
-          <DrawerContent />
-        </Suspense>
+        <div className="flex h-full flex-col">
+          <Suspense fallback={<LoadingSpinner />}>
+            <DrawerContent />
+          </Suspense>
+        </div>
       )}
     </div>
   );
