@@ -1,0 +1,51 @@
+addEventListener("fetch", (event) => {
+  event.respondWith(handleRequest(event.request));
+});
+
+async function handleRequest(request) {
+  // Fukuoka, Kyushu coordinates & API query parameters
+  const apiUrl =
+    "https://api.open-meteo.com/v1/forecast?" +
+    "latitude=33.5902&longitude=130.4017&current_weather=true" +
+    "&hourly=precipitation,cloudcover";
+
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      return new Response(`Error fetching weather: ${response.statusText}`, {
+        status: response.status,
+      });
+    }
+
+    const data = await response.json();
+
+    // Get the current weather time
+    const currentTime = data.current_weather?.time;
+    const hourlyTimes = data.hourly?.time || [];
+    const index = hourlyTimes.findIndex((t) => t === currentTime);
+
+    if (index === -1) {
+      return new Response("Current time not found in hourly data", {
+        status: 500,
+      });
+    }
+
+    const weatherData = {
+      temperature: data.current_weather.temperature,
+      precipitation: data.hourly.precipitation[index],
+      cloudcover: data.hourly.cloudcover[index],
+    };
+
+    // Set CORS headers to allow requests from your local dev server
+    const headers = {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*", // Or be more specific: "http://localhost:5173"
+      "Access-Control-Allow-Methods": "GET, HEAD, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    };
+
+    return new Response(JSON.stringify(weatherData), { headers });
+  } catch (err) {
+    return new Response(`Unexpected error: ${err.message}`, { status: 500 });
+  }
+}

@@ -1,6 +1,9 @@
 name = "eidex"
+main = "worker/worker.ts"
+compatibility_date = "2024-05-18"
 
-compatibility_date = "2025-05-18"
+[vars]
+API_URL = "https://api.open-meteo.com/v1/forecast"
 
 [assets]
 directory = "./dist/"

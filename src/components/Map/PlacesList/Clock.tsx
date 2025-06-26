@@ -5,7 +5,7 @@ import {
   useCallback,
   useMemo,
 } from "react";
-
+// import Weather from "./Weather";
 const Colon = memo(function Colon() {
 
   const [show, setShow] = useState<boolean>(true);
@@ -111,6 +111,7 @@ const Clock = memo(function Clock() {
         {"\u200a"}
         {period}
       </span>
+
     </div>
   );
 });
