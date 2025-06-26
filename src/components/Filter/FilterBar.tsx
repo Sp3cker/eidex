@@ -9,7 +9,7 @@ function FilterBar() {
         <FilterModal />
         <div className="mt-auto p-4 text-center">
           <p className="font-pkmnem text-lg text-neutral-200">
-            The <a className="underline hover:bg-gray-600" href="https://dex.emeraldimperium.net/">Official Pokédex has better filtering + Randomizer support</a>
+            The <a className="underline hover:bg-gray-600" href="https://dex.emeraldimperium.net/">Official Pokédex has more filtering + Randomizer support</a>
           </p>
         </div>
       </div>
