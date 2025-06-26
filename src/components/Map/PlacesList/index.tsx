@@ -225,7 +225,7 @@ const PlacesList = memo(function PlacesList() {
               className="text-neutral-700 hover:bg-neutral-300"
             />
           </div>
-          <div className="flex w-full flex-row items-center justify-between pl-1">
+          <div className="flex w-full flex-row items-start justify-between pl-1">
             <div>
               <div className="flex flex-col items-start justify-between pb-1">
                 <h3 className="cool-font font-bold text-neutral-700">Hoenn</h3>

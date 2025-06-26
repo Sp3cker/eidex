@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API_URL = import.meta.env.DEV
-  ? "http://localhost:8787"
-  : "https://eidex.spencer.workers.dev";
+const API_URL = "https://yellow-sunset-856b.specker.workers.dev/";
 
 interface WeatherData {
   temperature: number;

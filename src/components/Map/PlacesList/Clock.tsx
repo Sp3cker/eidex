@@ -1,17 +1,12 @@
-import {
-  useState,
-  useEffect,
-  memo,
-  useCallback,
-  useMemo,
-} from "react";
-// import Weather from "./Weather";
+import { useState, useEffect, memo, useCallback, useMemo } from "react";
+import Weather from "./Weather";
 const Colon = memo(function Colon() {
-
   const [show, setShow] = useState<boolean>(true);
   const handleShow = () => {
     setShow(!show);
   };
+  const showClass = "visible text-xl/2";
+  const dontShowClass = "invisible text-xl/2";
   useEffect(() => {
     // handleShow(); // Initial call to set visibility
     const timeInterval = setInterval(handleShow, 1000);
@@ -19,7 +14,7 @@ const Colon = memo(function Colon() {
       clearInterval(timeInterval);
     };
   }, [handleShow]);
-  return <p className={show ? 'visible' : 'invisible'}>:</p>;
+  return <p className={show ? showClass : dontShowClass}>:</p>;
 });
 
 // Pre-calculated period symbols to avoid repeated array creation
@@ -99,19 +94,20 @@ const Clock = memo(function Clock() {
   }, [updateTime]);
 
   return (
-    <div className="content-visibility font-pkmnem pkmn-types flex items-center pr-1 pt-1 text-lg/4 text-neutral-600">
-      <p>{periodSymbol}</p>
-      {"\u2006"}
-      <span className="tracking-wider">{hour}</span>
-      {"\u202a"}
-      <Colon />
-      {"\u202a"}
-      <span className="tracking-wider">
-        {minute}
+    <div title="Weather in Hoenn (Kyushu)" className="pkmn-types flex flex-col items-center justify-center text-lg/2 text-neutral-600">
+      <div className="content-visibility font-pkmnem mb-0 flex items-center pr-1 pt-1">
+        {"\u2006"}
+        <span className="tracking-wider">{hour}</span>
         {"\u200a"}
-        {period}
-      </span>
-
+        <Colon />
+        {"\u200a"}
+        <span className="tracking-wider">
+          {minute}
+          {"\u200a"}
+          {period}
+        </span>
+      </div>
+      <Weather periodSymbol={periodSymbol} />
     </div>
   );
 });
