@@ -30,7 +30,7 @@ const usePokemonStore = () => {
       (pokemon) =>
         !ignoreList.includes(pokemon.speciesId) && !excludeForms(pokemon.forms),
     );
-    debugger
+
     if (filters.sortDirection === "up") {
       mon.reverse();
     }
