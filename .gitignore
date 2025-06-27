@@ -12,7 +12,8 @@ dist
 dist-ssr
 *.local
 .wrangler/tmp
-
+public/fonts/emerald-pro/*
+public/fonts/emerald-pro
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
