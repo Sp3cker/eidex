@@ -11,14 +11,14 @@ const ItemsList = memo(function ItemsList({ firstItemRef }: any) {
 
   const { whatToShow, items } = useItemsData(selectedTab);
   useEffect(() => {
-    if (whatToShow.story === false && whatToShow.marts === false) {
-      setSelectedTab("pickup"); // pickup could be false too but whatev
-    } else if (whatToShow.story) {
+    if (whatToShow.story) {
       setSelectedTab("story");
+    } else if (whatToShow.pickup) {
+      setSelectedTab("pickup");
     } else if (whatToShow.marts) {
       setSelectedTab("marts");
     }
-  }, []);
+  }, [whatToShow]);
 
   return (
     <>

@@ -14,7 +14,7 @@ const ItemsBox = memo(function ItemsBox() {
   const show = useMapStore((state) => {
     return state.selectedMap !== null && state.dragging === false;
   });
-  console.log(isHeaderOverlaying);
+
   const [springs] = useSpring(
     {
       opacity: selectedMap ? 1 : 0,
