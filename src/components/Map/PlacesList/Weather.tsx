@@ -27,12 +27,12 @@ const Weather = ({ periodSymbol }: { periodSymbol: string }) => {
     switch (periodSymbol) {
       case "☾": // Night (waning)
       case "☽": // Late night (waxing)
-        return isCloudy ? "☾⛅" : "☾✨";
+        return isCloudy ? "☾" : "☾✨";
       case "☼": // Sunny afternoon
-        return isCloudy ? "☼⛅" : "☼";
+        return isCloudy ? "⛅" : "☼";
       case "⛅": // Morning/cloudy
       default:
-        return isCloudy ? "⛅" : "☼";
+        return isCloudy ? "☁️" : "☼";
     }
   };
   const weatherIcon = getWeatherIcon();
