@@ -1,5 +1,6 @@
 import { useState, useEffect, memo, useCallback, useMemo } from "react";
 import Weather from "./Weather";
+// import { useScan } from "react-scan";
 const Colon = memo(function Colon() {
   const [show, setShow] = useState<boolean>(true);
   const handleShow = () => {
@@ -94,8 +95,11 @@ const Clock = memo(function Clock() {
   }, [updateTime]);
 
   return (
-    <div title="Weather in Hoenn (Kyushu)" className="pkmn-types flex flex-col items-end justify-center text-lg/4 text-neutral-600">
-      <div className="content-visibility font-pkmnem mb-0 flex items-center pr-1 pt-1">
+    <div
+      title="Weather in Hoenn (Kyushu)"
+      className="pkmn-types flex flex-col items-end justify-center text-lg/4 text-neutral-600"
+    >
+      <div className="content-visibility font-pkmnem relative mb-0 flex items-center pr-1 pt-1">
         {"\u2006"}
         <span className="tracking-wider">{hour}</span>
         {"\u200a"}

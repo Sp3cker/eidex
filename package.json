@@ -15,7 +15,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "generate-spritesheet": "tsc scripts/generate-spritesheet.ts --outDir dist/scripts --target ES2022 --module ES2022 --moduleResolution bundler && node dist/scripts/generate-spritesheet.js",
-    "generate-pokemon-spritesheet": "tsc scripts/generate-pokemon-spritesheet.ts --outDir dist/scripts --target ES2022 --module ES2022 --moduleResolution bundler && node dist/scripts/generate-pokemon-spritesheet.js"
+    "generate-pokemon-spritesheet": "tsc scripts/generate-pokemon-spritesheet.ts --outDir dist/scripts --target ES2022 --module ES2022 --moduleResolution bundler && node dist/scripts/generate-pokemon-spritesheet.js",
+    "scan": "next dev & npx react-scan@latest localhost:3000"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.5.0",
@@ -36,6 +37,7 @@
     "react-dom": "^19.1.0",
     "react-error-boundary": "^6.0.0",
     "react-icons": "^5.5.0",
+    "react-scan": "^0.3.4",
     "react-spring": "^10.0.0",
     "react-window": "^1.8.11",
     "tailwind-merge": "^3.2.0",

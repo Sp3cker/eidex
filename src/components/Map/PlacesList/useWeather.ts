@@ -13,6 +13,9 @@ interface UseWeatherResult {
   loading: boolean;
   error: Error | null;
 }
+function celcToFahr(n: number) {
+  return (n * 9.0) / 5.0 + 32.0;
+}
 
 export function useWeather(): UseWeatherResult {
   const [data, setData] = useState<WeatherData | null>(null);
@@ -33,6 +36,9 @@ export function useWeather(): UseWeatherResult {
         return res.json();
       })
       .then((weatherData: WeatherData) => {
+        if (weatherData.temperature) {
+          weatherData.temperature = celcToFahr(weatherData.temperature);
+        }
         setData(weatherData);
         setLoading(false);
       })
