@@ -23,7 +23,7 @@ export default defineConfig({
     fetchAssetsPlugin({
       baseUrl: "https://asset.imperiummap.com",
       files: ["nbit-Regular.woff2", "nbit-Bold.woff2"], // Replace with your actual file names
-      outputDir: "dist/fonts/emerald-pro" // Will be included in build
+      outputDir: "public/fonts/emerald-pro" // Will be included in build
     }),
   ],
   server: {
