@@ -30,6 +30,7 @@ export const useScreenWidth = (): ScreenWidth => {
   const [screenWidth, setWindowDimensions] = useState(getScreenWidth());
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
+    let isMounted = true;
 
     function handleResize() {
       // Clear the previous timeout
@@ -37,13 +38,16 @@ export const useScreenWidth = (): ScreenWidth => {
 
       // Set a new timeout to update the state after 150ms of no resize events
       timeoutId = setTimeout(() => {
-        setWindowDimensions(getScreenWidth());
+        if (isMounted) {
+          setWindowDimensions(getScreenWidth());
+        }
       }, 150);
     }
 
     window.addEventListener("resize", handleResize);
 
     return () => {
+      isMounted = false;
       window.removeEventListener("resize", handleResize);
       clearTimeout(timeoutId); // Clean up timeout on unmount
     };

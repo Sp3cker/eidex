@@ -1160,14 +1160,7 @@
             {
               "name": "ITEM_CLAW_FOSSIL",
               "quantity": 1
-            }
-          ],
-          "pokemon": [],
-          "explanation": "Having selected the Root Fossil in Desert Ruins",
-          "scriptName": "Event Script"
-        },
-        {
-          "items": [
+            },
             {
               "name": "ITEM_ROOT_FOSSIL",
               "quantity": 1
@@ -9088,12 +9081,6 @@
               "quantity": 1
             }
           ],
-          "pokemon": [],
-          "explanation": "Defeat Byron outside Lilycove City",
-          "scriptName": "Event Script"
-        },
-        {
-          "items": [],
           "pokemon": [
             {
               "species": "SPECIES_MELTAN",
@@ -9373,36 +9360,15 @@
             {
               "name": "ITEM_SPELON_BERRY",
               "quantity": 1
-            }
-          ],
-          "pokemon": [],
-          "explanation": "Part of Berry Master Quest",
-          "scriptName": "Berry Masters House"
-        },
-        {
-          "items": [
+            },
             {
               "name": "ITEM_PAMTRE_BERRY",
               "quantity": 1
-            }
-          ],
-          "pokemon": [],
-          "explanation": "Part of Berry Master Quest",
-          "scriptName": "Berry Masters House"
-        },
-        {
-          "items": [
+            },
             {
               "name": "ITEM_WATMEL_BERRY",
               "quantity": 1
-            }
-          ],
-          "pokemon": [],
-          "explanation": "Part of Berry Master Quest",
-          "scriptName": "Berry Masters House"
-        },
-        {
-          "items": [
+            },
             {
               "name": "ITEM_DURIN_BERRY",
               "quantity": 1
@@ -11003,47 +10969,19 @@
             {
               "name": "ITEM_SHOAL_SHELL",
               "quantity": 1
-            }
-          ],
-          "pokemon": [],
-          "explanation": "Pick up from ground",
-          "scriptName": "Low Tide Inner Room"
-        },
-        {
-          "items": [
+            },
             {
               "name": "ITEM_SHOAL_SHELL",
               "quantity": 1
-            }
-          ],
-          "pokemon": [],
-          "explanation": "Pick up from ground",
-          "scriptName": "Low Tide Inner Room"
-        },
-        {
-          "items": [
+            },
             {
               "name": "ITEM_SHOAL_SHELL",
               "quantity": 1
-            }
-          ],
-          "pokemon": [],
-          "explanation": "Pick up from ground",
-          "scriptName": "Low Tide Inner Room"
-        },
-        {
-          "items": [
+            },
             {
               "name": "ITEM_SHOAL_SALT",
               "quantity": 1
-            }
-          ],
-          "pokemon": [],
-          "explanation": "Pick up from ground",
-          "scriptName": "Low Tide Inner Room"
-        },
-        {
-          "items": [
+            },
             {
               "name": "ITEM_SHOAL_SALT",
               "quantity": 1
@@ -11351,7 +11289,7 @@
             }
           ],
           "pokemon": [],
-          "explanation": "Trade 1 for a Scanner with Cpt. Stern",
+          "explanation": "Trade for a Scanner with Cpt. Stern",
           "scriptName": "Harbor"
         }
       ],
