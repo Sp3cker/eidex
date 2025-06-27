@@ -30,13 +30,13 @@ const usePokemonStore = () => {
       (pokemon) =>
         !ignoreList.includes(pokemon.speciesId) && !excludeForms(pokemon.forms),
     );
-
+    debugger
     if (filters.sortDirection === "up") {
       mon.reverse();
     }
 
     return mon;
-  }, [filters]);
+  }, [filters.name, filters.id, filters.typeId, filters.chosenStat, filters.statType, filters.isStatMax, filters.sortBy, filters.sortStat, filters.sortDirection, filters.moveSource, filters.nameValue]);
 
   return filteredPokemon;
 };

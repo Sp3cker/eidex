@@ -10,7 +10,7 @@ function App() {
     document.title = "Emerald Imperium Dex";
   });
   return (
-    <div className="flex min-h-screen justify-center bg-zinc-800 md:flex-row">
+    <div className="flex justify-center bg-zinc-800 md:flex-row">
       <div className="shadow-2xl/60 flex w-full flex-col rounded-lg border-neutral-900/50 md:w-1/2">
         <Suspense fallback={<LoadingSpinner />}>
           <PokemonList />

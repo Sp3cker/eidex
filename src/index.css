@@ -93,6 +93,12 @@ input[type="number"] {
     animation: fadeIn 0.3s cubic-bezier(0, 0.4, 0.6, 1);
   }
 
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
   @keyframes fadeIn {
     from {
       opacity: 0;

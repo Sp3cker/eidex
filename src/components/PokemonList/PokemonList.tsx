@@ -57,7 +57,7 @@ export default function PokemonList() {
       <SortBar />
       <div className="w-full">
         <List
-          height={window.innerHeight - 24} // Footer Height
+          height={window.innerHeight - 100} // Footer Height
           width="100%"
           itemCount={pokemon.length}
           itemSize={itemHeight}

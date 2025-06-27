@@ -39,7 +39,10 @@ const AnimatedArea = () => {
                 className="relative max-h-screen justify-normal overflow-y-auto rounded-lg bg-gray-700"
                 onClick={(e) => e.stopPropagation()}
               >
-                <CloseButton onClick={closeModal} />
+                <CloseButton
+                  onClick={closeModal}
+                  className=" z-99 sticky right-4 top-4 "
+                />
                 {selectedPokemon && <PokemonView pokemon={selectedPokemon} />}
               </div>
             </animated.div>

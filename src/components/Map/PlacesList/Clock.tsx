@@ -94,7 +94,7 @@ const Clock = memo(function Clock() {
   }, [updateTime]);
 
   return (
-    <div title="Weather in Hoenn (Kyushu)" className="pkmn-types flex flex-col items-center justify-center text-lg/2 text-neutral-600">
+    <div title="Weather in Hoenn (Kyushu)" className="pkmn-types flex flex-col items-end justify-center text-lg/4 text-neutral-600">
       <div className="content-visibility font-pkmnem mb-0 flex items-center pr-1 pt-1">
         {"\u2006"}
         <span className="tracking-wider">{hour}</span>
