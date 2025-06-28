@@ -27,13 +27,21 @@ const getMap = (map: string) => {
   //   (m: { id: string; mapBaseName: string }) => m.mapBaseName === map,
   // );
 };
-
+const MONNAMEKEYS = new Map<string, number>([]); // 'darmanitan_galar' -> 990
+pokemon.forEach((p) => {
+  MONNAMEKEYS.set(p.nameKey.toLowerCase().replace(/-/g, "_"), p.speciesId);
+  // monsNameKeys.set(p.speciesName.replace("-", "_").toLowerCase(), p.dexId);
+});
 const putIdOnEncounter: (
   enc: EncounterMonsFromJSON[],
   monsNameKeys: Map<string, number>,
 ) => asserts enc is EncounterMons[] = (enc, monsNameKeys) => {
   enc.forEach((specie, index) => {
     let specieIndex = monsNameKeys.get(specie.species);
+    if (specie.species === "darmanitan_galar") {
+      // Special case for darmanitan_galar, which is stored as darmanitan in encounters.json
+      specieIndex = 990; // darmanitan_galar is 990 in pokemon.json
+    }
     if (specieIndex === undefined) {
       // "iron_valiant" from encounters file -> iron valiant in nameKeys
       specieIndex = monsNameKeys.get(
@@ -45,6 +53,7 @@ const putIdOnEncounter: (
           (p) =>
             p.speciesName
               .toLowerCase()
+              .replace("flabébé", "flabebe")
               .replace(/♂/g, "_m")
               .replace(/♀/g, "_f") === specie.species,
         );
@@ -57,7 +66,7 @@ const putIdOnEncounter: (
         }
         // We found them, now to use their Baseform if its there
         if (pokemon[monInJson].baseForm) {
-          specieIndex = pokemon[monInJson].baseForm
+          specieIndex = pokemon[monInJson].baseForm;
         }
         specieIndex = pokemon[monInJson].speciesId;
       }
@@ -180,21 +189,17 @@ const getSelectedMapInfo = (id: string, levelId: string) => {
     /** Put ID on each mon so we can get their sprite andn info later
      * Build a Map so we don't have to `map` through the `encounters` json for each lookup :3
      */
-    const monsNameKeys = new Map<string, number>([]);
-    pokemon.forEach((p) => {
-      monsNameKeys.set(p.nameKey.toLowerCase().replace(/-/g, "_"), p.speciesId);
-      // monsNameKeys.set(p.speciesName.replace("-", "_").toLowerCase(), p.dexId);
-    }); //nameKey cause it probly matches encounter Data
+    //nameKey cause it probly matches encounter Data
     if (targetMapEncounters && targetMapEncounters.land_mons) {
-      putIdOnEncounter(targetMapEncounters.land_mons.mons, monsNameKeys);
+      putIdOnEncounter(targetMapEncounters.land_mons.mons, MONNAMEKEYS);
       landEncounters = putEncounterRate(targetMapEncounters.land_mons?.mons);
     }
     if (targetMapEncounters && targetMapEncounters.water_mons) {
-      putIdOnEncounter(targetMapEncounters.water_mons.mons, monsNameKeys);
+      putIdOnEncounter(targetMapEncounters.water_mons.mons, MONNAMEKEYS);
       waterEncounters = putEncounterRate(targetMapEncounters.water_mons?.mons);
     }
     if (targetMapEncounters && targetMapEncounters.fishing_mons) {
-      putIdOnEncounter(targetMapEncounters.fishing_mons.mons, monsNameKeys);
+      putIdOnEncounter(targetMapEncounters.fishing_mons.mons, MONNAMEKEYS);
       putRodUsed(targetMapEncounters.fishing_mons.mons); // Add rod information
       fishingEncounters = putEncounterRate(
         targetMapEncounters.fishing_mons.mons,

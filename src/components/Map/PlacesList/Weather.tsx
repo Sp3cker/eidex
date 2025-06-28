@@ -39,8 +39,8 @@ const Weather = ({ periodSymbol }: { periodSymbol: string }) => {
   return (
     <div className="font-pkmnem flex items-center pr-1 tracking-wider fade-in">
       <p>
+        {data.temperature}℉
         {" "}
-        {data.temperature}°F
         {weatherIcon}
       </p>
     </div>

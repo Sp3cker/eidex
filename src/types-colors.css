@@ -1,0 +1,265 @@
+:root {
+  --normal-type-color: #C6C199;
+  --fire-type-color: #f08030;
+  --water-type-color: #5584f1;
+  --grass-type-color: #78c850;
+  --electric-type-color: #f8d030;
+  --ice-type-color: #98d8d8;
+  --fighting-type-color: #c03028;
+  --poison-type-color: #a040a0;
+  --ground-type-color: #e0c068;
+  --flying-type-color: #a890f0;
+  --psychic-type-color: #f85888;
+  --bug-type-color: #a8b820;
+  --rock-type-color: #b8a038;
+  --ghost-type-color: #705898;
+  --dragon-type-color: #7038f8;
+  --dark-type-color: #705848;
+  --steel-type-color: #b8b8d0;
+  --fairy-type-color: #f0b6c0;
+  --background-color-mix: var(--color-neutral-100);
+}
+
+.normal-type {
+  /* color: var(--normal-type-color); */
+  color: color-mix(
+    in srgb,
+    var(--normal-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--normal-type-color)
+  );
+  border-radius: 0.15rem;
+}
+
+.fire-type {
+  color: color-mix(
+    in srgb,
+    var(--fire-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--fire-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.water-type {
+  color: color-mix(
+    in srgb,
+    var(--water-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--water-type-color)
+  );
+  border-radius: 0.15rem;
+}
+/* .water-type {
+  transform: scaleX(0.9);
+} */
+.grass-type {
+  color: color-mix(
+    in srgb,
+    var(--grass-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--grass-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.electric-type {
+  
+  color: color-mix(
+    in srgb,
+    var(--electric-type-color) 0%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--electric-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.ice-type {
+  color: color-mix(
+    in srgb,
+    var(--ice-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--ice-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.fighting-type {
+  color: color-mix(
+    in srgb,
+    var(--fighting-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--fighting-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.poison-type {
+  color: color-mix(
+    in srgb,
+    var(--poison-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--poison-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.ground-type {
+  color: color-mix(
+    in srgb,
+    var(--ground-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--ground-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.flying-type {
+  color: color-mix(
+    in srgb,
+    var(--flying-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--flying-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.psychic-type {
+  color: color-mix(
+    in srgb,
+    var(--psychic-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--psychic-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.bug-type {
+  color: color-mix(
+    in srgb,
+    var(--bug-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--bug-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.rock-type {
+  color: color-mix(
+    in srgb,
+    var(--rock-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--rock-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.ghost-type {
+  color: color-mix(
+    in srgb,
+    var(--ghost-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--ghost-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.dragon-type {
+  color: color-mix(
+    in srgb,
+    var(--dragon-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--dragon-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.dark-type {
+  color: color-mix(
+    in srgb,
+    var(--dark-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--dark-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.steel-type {
+  color: color-mix(
+    in srgb,
+    var(--steel-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--steel-type-color)
+  );
+  border-radius: 0.15rem;
+}
+.steel-type p {
+  transform: scaleX(1.1);
+}
+.fairy-type {
+  color: color-mix(
+    in srgb,
+    var(--fairy-type-color) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in srgb,
+    var(--background-color-mix) 25%,
+    var(--fairy-type-color)
+  );
+  border-radius: 0.15rem;
+}

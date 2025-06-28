@@ -5,6 +5,7 @@ type EncounterMons = {
   max_level: number;
   species: string;
   index: number;
+
   rate: number;
   rod?: string; // Optional rod type for fishing encounters
 };
@@ -46,17 +47,17 @@ type MapStore = {
   dragging: boolean;
   hasEncounterDataStored: boolean;
   encounterDataSource: "default" | "next";
-  
+
   // PlacesList panel state
   isPlacesListOpen: boolean;
-  
+
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
   setMapScale: (n: number) => void;
   setMapOffset: (offset: number[]) => void;
   setHoveredMap: (map: string) => void;
-  
+
   setHoveredCoordinates: (coords: number[]) => void;
   searchItemByName: (name: string) => Item[];
   setSelectedMapLevel: (level: string) => void;
@@ -69,7 +70,7 @@ type MapStore = {
   setEncountersData: (data: any) => void;
   setEncounterDataSource: (to: "default" | "next") => void;
   revertToDefaultEncounters: () => void;
-  
+
   // PlacesList panel actions
   setPlacesListOpen: (open: boolean) => void;
   togglePlacesList: () => void;

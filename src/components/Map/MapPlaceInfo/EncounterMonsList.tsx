@@ -1,7 +1,10 @@
 import { useUIStore } from "@/stores/uiStore";
-import { useMapStore } from "@/stores/useMapStore";
+import { useEncounter } from "./useEncounter";
 import React from "react";
+import { EncounterTypeBadge } from "./EncounterTypeBadge";
 import { formatMapString } from "@/utils/formatMapString";
+// Reads species from pokemon by ID, puts type, ie 'Normal' or 'Fire' on encounter
+// This is used to display the type of the encounter in the UI
 
 const zoneToTextColor = (zone: string) => {
   const obj: Record<string, string> = {
@@ -20,22 +23,31 @@ const zoneToBgColor = (zone: string) => {
   return obj[zone];
 };
 
-const EncounterDescriptor = ({ zone, rate, rod, rodChance }: any) => {
-  if (rod && rodChance) {
-    return (
-      <p
-        className={`font-pkmnem pkmnem-types ${zoneToTextColor(zone)} text-sm leading-tight`}
-      >
-        {rod}
-      </p>
-    );
-  }
+const EncounterDescriptor = ({
+  minLevel,
+  maxLevel,
+  zone,
+  rate,
+  rod,
+  types,
+}: any) => {
   return (
-    <p
-      className={`font-pkmnem ${zoneToTextColor(zone)} font-bold leading-tight`}
-    >
-      {rate}% {rod}
-    </p>
+    <div className="font-pkmnem text-sm/1 leading-tight flex flex-row justify-between">
+      <span>
+        <p className={`text-base/5 md:text-base/5 ${zoneToTextColor(zone)} font-bold`}>
+          {rod ? rod : rate + " %"}
+        </p>
+        <div className="text-sm/1 h-3 flex flex-col">
+          <p>
+            Lv.{"\u200a"}
+            {minLevel}
+            {"\u200a"}-{"\u200a"}
+            {maxLevel}
+          </p>
+        </div>
+      </span>
+      <EncounterTypeBadge types={types} />
+    </div>
   );
 };
 const EncounterMonsList = React.memo(function EncounterList({
@@ -46,18 +58,12 @@ const EncounterMonsList = React.memo(function EncounterList({
   const setSelectedPokemon = useUIStore(
     (state) => state.setSelectedPokemonByIndex,
   );
-  const encounter = useMapStore((state) => {
-    if (zone === "water") return state.selectedLevelWaterMons;
-    if (zone === "land") return state.selectedLevelLandMons;
-    if (zone === "fishing") return state.selectedLevelFishingMons;
-    return [];
-  });
-
+  const encounter = useEncounter(zone);
   if (!encounter || encounter.length === 0) {
     return (
-      <div className="font-pkmnem max-w-[5rem] py-2 text-center text-sm/3 font-bold text-gray-500">
-        No Pokémon found in this area.
-      </div>
+      <h4 className="font-pkmnem py-2 text-center text-sm/3 font-bold text-gray-500">
+        No {zone} encounters in this area.
+      </h4>
     );
   }
   return (
@@ -65,7 +71,7 @@ const EncounterMonsList = React.memo(function EncounterList({
       {encounter.map((mon, index) => (
         <div
           key={`${mon.index}${index}`}
-          className={`align-center flex w-[8rem] cursor-pointer items-center gap-1 overflow-hidden rounded p-0 pl-2 transition-colors ${zoneToBgColor(zone)}`}
+          className={`align-center w-37 md:w-35 flex cursor-pointer items-center gap-1 overflow-hidden rounded p-0 pl-2 transition-colors ${zoneToBgColor(zone)}`}
           onMouseDown={() => setSelectedPokemon(mon.index)}
         >
           <div className="icon-sprite-box mb-1">
@@ -75,14 +81,21 @@ const EncounterMonsList = React.memo(function EncounterList({
               alt={formatMapString(mon.species)}
             />
           </div>
-          <div>
+          <div className="flex-grow pr-0">
             <h3
-              className={`font-bold ${zoneToTextColor(zone)} text-shadow-2xs text-shadow-stone-200 text-xs`}
+              className={`font-bold ${zoneToTextColor(zone)} text-shadow-2xs text-shadow-stone-200 max-w-20 text-xs`}
             >
               {formatMapString(mon.species)}
             </h3>
 
-            <EncounterDescriptor zone={zone} rate={mon.rate} rod={mon.rod} />
+            <EncounterDescriptor
+              zone={zone}
+              minLevel={mon.min_level}
+              maxLevel={mon.max_level}
+              rate={mon.rate}
+              rod={mon.rod}
+              types={mon.types}
+            />
           </div>
         </div>
       ))}

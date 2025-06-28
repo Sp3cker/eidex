@@ -88,4 +88,5 @@ export interface TypeData {
   color: string;
   colorEnd: string;
   matchup: number[];
+  cssClass: string;
 }

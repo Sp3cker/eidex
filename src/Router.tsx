@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Route, Router, Switch, useLocation } from "wouter";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
+import "./types-colors.css";
 
 const Map = lazy(() => import("./components/Map/Map"));
 const App = lazy(() => import("./App"));

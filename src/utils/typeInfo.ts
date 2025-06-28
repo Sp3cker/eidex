@@ -110,3 +110,13 @@ const typeColors: Record<number, string> = {
 export function getTypeSnapColor(typeID: number): string {
   return typeColors[typeID] || "#cecac5"; // Default to Normal color if not found
 }
+// If you have a pair of type IDs, return their colors
+// If the second type ID is undefined, use the first one for both colors
+export function getTypeCSSColors(typeIDs: [number, number]): string[] {
+  return [
+   typeDataArray[typeIDs[0]]?.cssClass || "normal-type",
+    typeIDs[1] !== undefined
+      ? typeDataArray[typeIDs[1]]?.cssClass || "normal-type"
+      : typeDataArray[typeIDs[0]]?.cssClass || "normal-type",
+  ];
+}

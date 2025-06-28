@@ -4,6 +4,7 @@
     "typeName": "Normal",
     "color": "#A8A77A",
     "colorEnd": "#a8a878",
+    "cssClass": "normal-type",
     "matchup": [
       10, 10, 10, 10, 10, 10, 5, 10, 0, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10,
       10, 10
@@ -14,6 +15,7 @@
     "typeName": "Fighting",
     "color": "#C22E28",
     "colorEnd": "#c03028",
+    "cssClass": "fighting-type",
     "matchup": [
       10, 20, 10, 5, 5, 10, 20, 5, 0, 20, 10, 10, 10, 10, 10, 5, 20, 10, 20, 5,
       10
@@ -24,6 +26,7 @@
     "typeName": "Flying",
     "color": "#8571BE",
     "colorEnd": "#a890f0",
+    "cssClass": "flying-type",
     "matchup": [
       10, 10, 20, 10, 10, 10, 5, 20, 10, 5, 10, 10, 10, 20, 5, 10, 10, 10, 10,
       10, 10
@@ -34,6 +37,7 @@
     "typeName": "Poison",
     "color": "#A33EA1",
     "colorEnd": "#a040a0",
+    "cssClass": "poison-type",
     "matchup": [
       10, 10, 10, 10, 5, 5, 5, 10, 5, 0, 10, 10, 10, 20, 10, 10, 10, 10, 10, 20,
       10
@@ -44,6 +48,7 @@
     "typeName": "Ground",
     "color": "#B1954F",
     "colorEnd": "#e0c068",
+    "cssClass": "ground-type",
     "matchup": [
       10, 10, 10, 0, 20, 10, 20, 5, 10, 20, 10, 20, 10, 5, 20, 10, 10, 10, 10,
       10, 10
@@ -54,6 +59,7 @@
     "typeName": "Rock",
     "color": "#B6A136",
     "colorEnd": "#b8a038",
+    "cssClass": "rock-type",
     "matchup": [
       10, 10, 5, 20, 10, 5, 10, 20, 10, 5, 10, 20, 10, 10, 10, 10, 20, 10, 10,
       10, 10
@@ -64,6 +70,7 @@
     "typeName": "Bug",
     "color": "#808F13",
     "colorEnd": "#a8b820",
+    "cssClass": "bug-type",
     "matchup": [
       10, 10, 5, 5, 5, 10, 10, 10, 5, 5, 10, 5, 10, 20, 10, 20, 10, 10, 20, 5,
       10
@@ -74,6 +81,7 @@
     "typeName": "Ghost",
     "color": "#735797",
     "colorEnd": "#705898",
+    "cssClass": "ghost-type",
     "matchup": [
       10, 0, 10, 10, 10, 10, 10, 10, 20, 10, 10, 10, 10, 10, 10, 20, 10, 10, 5,
       10, 10
@@ -84,6 +92,7 @@
     "typeName": "Steel",
     "color": "#8C8C9E",
     "colorEnd": "#b8b8d0",
+    "cssClass": "steel-type",
     "matchup": [
       10, 10, 10, 10, 10, 10, 20, 10, 10, 5, 10, 5, 5, 10, 5, 10, 20, 10, 10,
       20, 10
@@ -94,6 +103,7 @@
     "typeName": "Fire",
     "color": "#EE8130",
     "colorEnd": "#f08030",
+    "cssClass": "fire-type",
     "matchup": [
       10, 10, 10, 10, 10, 10, 5, 20, 10, 20, 10, 5, 5, 20, 10, 10, 20, 5, 10,
       10, 10
@@ -104,6 +114,7 @@
     "typeName": "Water",
     "color": "#6390F0",
     "colorEnd": "#6890f0",
+    "cssClass": "water-type",
     "matchup": [
       10, 10, 10, 10, 10, 20, 20, 10, 10, 10, 10, 20, 5, 5, 10, 10, 10, 5, 10,
       10, 10
@@ -114,6 +125,7 @@
     "typeName": "Grass",
     "color": "#62A13D",
     "colorEnd": "#78c850",
+    "cssClass": "grass-type",
     "matchup": [
       10, 10, 10, 5, 5, 20, 20, 5, 10, 5, 10, 5, 20, 5, 10, 10, 10, 5, 10, 10,
       10
@@ -124,6 +136,7 @@
     "typeName": "Electric",
     "color": "#CF9A09",
     "colorEnd": "#f8d030",
+    "cssClass": "electric-type",
     "matchup": [
       10, 10, 10, 20, 10, 0, 10, 10, 10, 10, 10, 10, 20, 5, 5, 10, 10, 5, 10,
       10, 10
@@ -134,6 +147,7 @@
     "typeName": "Psychic",
     "color": "#F95587",
     "colorEnd": "#f85888",
+    "cssClass": "psychic-type",
     "matchup": [
       10, 10, 20, 10, 20, 10, 10, 10, 10, 5, 10, 10, 10, 10, 10, 5, 10, 10, 0,
       10, 10
@@ -144,6 +158,7 @@
     "typeName": "Ice",
     "color": "#65A19E",
     "colorEnd": "#98d8d8",
+    "cssClass": "ice-type",
     "matchup": [
       10, 10, 10, 20, 10, 20, 10, 10, 10, 5, 10, 5, 5, 20, 10, 10, 5, 20, 10,
       10, 10
@@ -154,6 +169,7 @@
     "typeName": "Dragon",
     "color": "#6F35FC",
     "colorEnd": "#7038f8",
+    "cssClass": "dragon-type",
     "matchup": [
       10, 10, 10, 10, 10, 10, 10, 10, 10, 5, 10, 10, 10, 10, 10, 10, 10, 20, 10,
       0, 10
@@ -164,6 +180,7 @@
     "typeName": "Dark",
     "color": "#705746",
     "colorEnd": "#705848",
+    "cssClass": "dark-type",
     "matchup": [
       10, 10, 5, 10, 10, 10, 10, 10, 20, 10, 10, 10, 10, 10, 10, 20, 10, 10, 5,
       5, 10
@@ -174,6 +191,7 @@
     "typeName": "Fairy",
     "color": "#D685AD",
     "colorEnd": "#ffaaff",
+    "cssClass": "fairy-type",
     "matchup": [
       10, 10, 20, 10, 5, 10, 10, 10, 10, 5, 10, 5, 10, 10, 10, 10, 10, 20, 20,
       10, 10

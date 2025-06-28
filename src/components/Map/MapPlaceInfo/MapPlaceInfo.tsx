@@ -27,7 +27,7 @@ const MapPlaceInfo = () => {
   return (
     <animated.div
       style={{
-        pointerEvents: selectedMap !== null ? "auto" : "none", // Add this line
+        pointerEvents: selectedMap !== null ? "all" : "none", // Add this line
 
         opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
