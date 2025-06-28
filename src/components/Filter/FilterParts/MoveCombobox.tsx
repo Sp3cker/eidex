@@ -14,18 +14,18 @@ const moveIDMap: ComboBoxEntry[] = Object.values(moveData)
 
 function MoveCombobox() {
   const moveEntries: ComboBoxEntry[] = useMemo(() => moveIDMap, []);
-  const moveValue = useFilterStore((state) => state.moveValue);
+  const selectedMove = useFilterStore((state) => state.moveId);
   const setFilter = useFilterStore((state) => state.setFilter);
+
   const handleChange = useCallback((entry: ComboBoxEntry | null) => {
-    if (entry) {
-      setFilter("moveId", entry ? entry.id : null);
-    } else setFilter("moveId", null);
-  }, []);
+    setFilter("moveId", entry);
+  }, [setFilter]);
+
   return (
     <GenericComboBox
       entries={moveEntries}
       onSelect={handleChange}
-      value={moveValue}
+      value={selectedMove}
       placeholder="Pick a move..."
       icon={<LuSword />}
     />

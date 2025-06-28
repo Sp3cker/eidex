@@ -26,7 +26,11 @@ const usePokemonStore = () => {
   const ignoreList: number[] = [1435, 1522];
 
   const filteredPokemon = useMemo(() => {
-    const mon = filterPokemon(pokemon as Pokemon[], filters).filter(
+    const filterOptions = {
+      ...filters,
+      moveId: filters.moveId?.id || undefined,
+    };
+    const mon = filterPokemon(pokemon as Pokemon[], filterOptions).filter(
       (pokemon) =>
         !ignoreList.includes(pokemon.speciesId) && !excludeForms(pokemon.forms),
     );

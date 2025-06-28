@@ -1,7 +1,7 @@
 import GenericComboBox, { ComboBoxEntry } from "./GenericComboBox";
 import { pokemonData } from "@/data/pokemon";
 import { Pokemon } from "@/types";
-import { useMemo, useState, useEffect, useCallback } from "react";
+import { useMemo, useCallback } from "react";
 import { MdSearch } from "react-icons/md";
 import { useFilterStore } from "@/stores/filterStore";
 import { useUIStore } from "@/stores/uiStore";
@@ -16,30 +16,24 @@ const speciesIDMap: ComboBoxEntry[] = pokemonData
 function NameCombobox() {
   const setFilterValue = useFilterStore((state) => state.setFilter);
   const currentName = useFilterStore((state) => state.name);
-  const [selectedEntry, setSelectedEntry] = useState<ComboBoxEntry | null>(
-    null,
-  );
   const setSelectedPokemonByDexId = useUIStore(
     (state) => state.setSelectedPokemonByIndex,
   );
   const pokemonEntries: ComboBoxEntry[] = useMemo(() => speciesIDMap, []);
 
-  // Reset the component when nameValue is cleared
-  useEffect(() => {
-    if (!currentName && selectedEntry) {
-      setSelectedEntry(null);
-    }
-  }, [currentName, selectedEntry]);
-  
+  // Convert the stored name back to the full ComboBoxEntry object
+  const selectedEntry = useMemo(() => {
+    if (!currentName) return null;
+    return pokemonEntries.find(entry => entry.name === currentName) || null;
+  }, [currentName, pokemonEntries]);
+
   const handleClear = useCallback(() => {
     setFilterValue("name", "");
-    setSelectedEntry(null);
   }, [setFilterValue]);
   
   // Custom wrapper around onSelect that also updates our local state
   const handleSelect = (entry: ComboBoxEntry | null) => {
     if (entry) {
-      setSelectedEntry(entry);
       setFilterValue("name", entry.name);
       setSelectedPokemonByDexId(entry.id);
       return;
