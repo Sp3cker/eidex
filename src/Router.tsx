@@ -2,7 +2,6 @@ import { lazy, Suspense } from "react";
 import { Route, Router, Switch, useLocation } from "wouter";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import "./types-colors.css";
-
 const Map = lazy(() => import("./components/Map/Map"));
 const App = lazy(() => import("./App"));
 import Header from "@/components/ui/Header";
@@ -18,34 +17,39 @@ const useLocToScroll = () => {
   if (location === "/dex") return "overflow-auto";
   else return "overflow-hidden";
 };
-const AppRouter = () => {
-  const scrollClase = useLocToScroll();
+const RouterWrapper = () => {
   return (
     <div className="flex h-screen flex-col bg-zinc-800">
       <Header />
-      <main className={`flex-1 ${scrollClase}`}>
-        <Router>
-          <Switch>
-            <Route
-              path="/dex"
-              component={() => (
-                <Suspense fallback={<LoadingSpinner />}>
-                  <App />
-                </Suspense>
-              )}
-            />
-            <Route path="/map/*" component={MapComponent} />
-            <Route path="/map" component={MapComponent} />
-            <Route path="/roamers" component={MapComponent} />
-
-            <Route path="/" component={MapComponent} />
-          </Switch>
-        </Router>
-      </main>
-
+      <AppRouter />
       <Footer />
     </div>
   );
 };
+const AppRouter = () => {
+  const scrollClase = useLocToScroll();
 
-export default AppRouter;
+
+  return (
+    <main className={`flex-1 ${scrollClase}`}>
+      <Router>
+        <Switch>
+          <Route
+            path="/dex"
+            component={() => (
+              <Suspense fallback={<LoadingSpinner />}>
+                <App />
+              </Suspense>
+            )}
+          />
+          <Route path="/map/*" component={MapComponent} />
+          <Route path="/map" component={MapComponent} />
+          <Route path="/roamers" component={MapComponent} />
+
+          <Route path="/" component={MapComponent} />
+        </Switch>
+      </Router>
+    </main>
+  );
+};
+export default RouterWrapper;

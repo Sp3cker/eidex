@@ -1,9 +1,9 @@
 import { memo, useCallback, useEffect, useRef, useMemo } from "react";
 import { useMapStore } from "@/stores/useMapStore";
 import { formatMapString } from "@/utils/formatMapString";
-import { useSpring, animated } from "@react-spring/web";
 import mapsvgs from "@/data/map/mapsvgs.json";
 import { shallow } from "zustand/shallow";
+import { useSpring, animated } from "@react-spring/web";
 import Clock from "./Clock";
 import CloseButton from "@/components/ui/CloseButton";
 import OpenButton from "./OpenButton";
@@ -31,75 +31,149 @@ interface Place {
 }
 
 // Component to render individual place item
-const PlaceItem = memo(function PlaceItem({
-  place,
-  onClick,
-}: {
-  place: Place;
-  onClick: (id: string) => void;
-}) {
-  return (
-    <button
-      className={`white-box w-full cursor-pointer rounded-lg border p-3 text-left transition-colors ${
-        place.isCurrentLevel
-          ? "border-blue-200 bg-blue-50 text-blue-900"
-          : "text-gray-700 hover:bg-gray-50"
-      }`}
-      onClick={() => onClick(place.id)}
-    >
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          {/* Map icon */}
-          <div
-            className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold ${
-              place.isCurrentLevel
-                ? "bg-blue-100 text-blue-600"
-                : "bg-gray-100 text-gray-500"
-            }`}
-          >
-            <svg
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+const PlaceItem = memo(
+  function PlaceItem({
+    place,
+    onClick,
+  }: {
+    place: Place;
+    onClick: (id: string) => void;
+  }) {
+    return (
+      <div
+        role="button"
+        className={`white-box w-full cursor-pointer rounded-lg border p-3 text-left transition-colors ${
+          place.isCurrentLevel
+            ? "border-blue-200 bg-blue-50 text-blue-900"
+            : "text-gray-700 hover:bg-gray-50"
+        }`}
+        onClick={() => onClick(place.id)}
+      >
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            {/* Map icon */}
+            <div
+              className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold ${
+                place.isCurrentLevel
+                  ? "bg-blue-100 text-blue-600"
+                  : "bg-gray-100 text-gray-500"
+              }`}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-            </svg>
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </div>
+
+            {/* Place name */}
+            <div>
+              <h3 className="text-lg font-bold leading-tight">{place.label}</h3>
+            </div>
           </div>
 
-          {/* Place name */}
-          <div>
-            <h3 className="text-lg font-bold leading-tight">{place.label}</h3>
-          </div>
+          {/* Selected indicator */}
+          {place.isCurrentLevel && (
+            <div className="text-blue-500">
+              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+          )}
         </div>
-
-        {/* Selected indicator */}
-        {place.isCurrentLevel && (
-          <div className="text-blue-500">
-            <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-              <path
-                fillRule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </div>
-        )}
       </div>
-    </button>
+    );
+  },
+  (prev, next) =>
+    prev.place.id === next.place.id &&
+    prev.place.isCurrentLevel !== next.place.isCurrentLevel,
+);
+
+let currentBackdropAnimation: Animation | null = null;
+
+const animateBackdrop = (
+  backdrop: HTMLDivElement,
+  direction: "show" | "hide",
+  onFinish?: () => void,
+) => {
+  if (currentBackdropAnimation) {
+    currentBackdropAnimation.cancel();
+    currentBackdropAnimation = null;
+  }
+
+  const showKeyframes = [
+    {
+      opacity: 0,
+      backdropFilter: "blur(0px)",
+      background: "rgba(0, 0, 0, 0.0)",
+    },
+    {
+      opacity: 0.6,
+      backdropFilter: "blur(5px)",
+      background: "rgba(0, 0, 0, 0.6)",
+    },
+  ];
+
+  const hideKeyframes = [
+    {
+      opacity: 0.6,
+      backdropFilter: "blur(5px)",
+      background: "rgba(0, 0, 0, 0.6)",
+    },
+    {
+      opacity: 0,
+      backdropFilter: "blur(0px)",
+      background: "rgba(0, 0, 0, 0.0)",
+    },
+  ];
+
+  if (direction === "show") {
+    backdrop.style.display = "block";
+  }
+
+  currentBackdropAnimation = backdrop.animate(
+    direction === "show" ? showKeyframes : hideKeyframes,
+    {
+      duration: 200,
+      easing: direction === "show" ? "ease-out" : "ease-in",
+      fill: "forwards",
+    },
   );
-});
+
+  currentBackdropAnimation.addEventListener("finish", () => {
+    if (direction === "hide") {
+      backdrop.style.display = "none";
+    }
+    currentBackdropAnimation = null;
+    if (onFinish) {
+      onFinish();
+    }
+  });
+
+  currentBackdropAnimation.addEventListener("cancel", () => {
+    currentBackdropAnimation = null;
+  });
+
+  return currentBackdropAnimation;
+};
 
 const PlacesList = memo(function PlacesList() {
   const { selectedMap, isPlacesListOpen, setSelectedMap, setPlacesListOpen } =
@@ -117,7 +191,7 @@ const PlacesList = memo(function PlacesList() {
   const [slideAnimation, api] = useSpring(
     {
       transform: "translateX(-100%)",
-      config: { mass: 0.5,  friction: 20 },
+      config: { mass: 0.5, friction: 20 },
     },
     [],
   );
@@ -129,27 +203,10 @@ const PlacesList = memo(function PlacesList() {
 
     if (isPlacesListOpen) {
       api.start({ transform: "translateX(0%)" });
-      // Show backdrop and animate in
-      backdrop.style.display = "block";
-      backdrop.animate(
-        [
-          {
-            opacity: 0,
-            backdropFilter: "blur(0px)",
-            background: "rgba(0, 0, 0, 0.0)",
-          },
-          {
-            opacity: 0.6,
-            backdropFilter: "blur(5px)",
-            background: "rgba(0, 0, 0, 0.6)",
-          },
-        ],
-        {
-          duration: 200,
-          easing: "ease-out",
-          fill: "forwards",
-        },
-      );
+      animateBackdrop(backdrop, "show");
+    } else {
+      api.start({ transform: "translateX(-100%)" });
+      animateBackdrop(backdrop, "hide");
     }
   }, [isPlacesListOpen, api]);
 
@@ -168,33 +225,12 @@ const PlacesList = memo(function PlacesList() {
   const handleClose = useCallback(() => {
     const backdrop = backdropRef.current;
     if (!backdrop) return;
-    api.start({ transform: "translateX(-100%)" });
-    const animation = backdrop.animate(
-      [
-        {
-          opacity: 0.6,
-          backdropFilter: "blur(5px)",
-          background: "rgba(0, 0, 0, 0.6)",
-        },
-        {
-          opacity: 0,
-          backdropFilter: "blur(0px)",
-          background: "rgba(0, 0, 0, 0.0)",
-        },
-      ],
-      {
-        duration: 200,
-        easing: "ease-in",
-        fill: "forwards",
-      },
-    );
 
-    animation.addEventListener("finish", () => {
-      backdrop.style.display = "none";
+    api.start({ transform: "translateX(-100%)" });
+    animateBackdrop(backdrop, "hide", () => {
       setPlacesListOpen(false);
-      //   setPlacesListOpen(false);
     });
-  }, [api]);
+  }, [api, setPlacesListOpen]);
 
   //   if (!isPlacesListOpen) {
   //     return null;
@@ -214,7 +250,7 @@ const PlacesList = memo(function PlacesList() {
 
       <animated.nav
         style={slideAnimation}
-        className="places-list-z fixed bottom-6 pb-safe-or-8 left-0 top-0 w-80 max-w-[80vw] overflow-hidden border-r border-gray-200 bg-gradient-to-br from-emerald-50 via-white to-gray-100 shadow-2xl"
+        className="places-list-z pb-safe-or-8 fixed bottom-6 left-0 top-0 w-80 max-w-[80vw] overflow-hidden border-r border-gray-200 bg-gradient-to-br from-emerald-50 via-white to-gray-100 shadow-2xl"
       >
         <div className="sticky top-0 z-10 flex flex-col items-center justify-between border-b border-gray-200 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 p-2">
           <div className="flex w-full justify-end">

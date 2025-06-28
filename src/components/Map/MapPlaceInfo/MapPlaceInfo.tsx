@@ -1,17 +1,74 @@
 import { animated, useSpring } from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
-import { useCallback, useState } from "react";
-
+import { useCallback, useRef, useEffect, useState } from "react";
 import EncounterMonsContainer from "./EncounterMonsContainer";
+let currentBackdropAnimation: Animation | null = null;
+
+const deopaque = (
+  backdrop: HTMLDivElement,
+  direction: "show" | "hide",
+  onFinish?: () => void,
+) => {
+  if (currentBackdropAnimation) {
+    currentBackdropAnimation.cancel();
+    currentBackdropAnimation = null;
+  }
+
+  const showKeyframes = [
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+    },
+  ];
+
+  const hideKeyframes = [
+    {
+      opacity: 1,
+    },
+    {
+      opacity: 0,
+    },
+  ];
+
+  if (direction === "show" && backdrop.style.display !== "block") {
+    backdrop.style.display = "block";
+  }
+
+  currentBackdropAnimation = backdrop.animate(
+    direction === "show" ? showKeyframes : hideKeyframes,
+    {
+      duration: 200,
+      easing: direction === "show" ? "ease-out" : "ease-in",
+      fill: "forwards",
+    },
+  );
+
+  currentBackdropAnimation.addEventListener("finish", () => {
+    if (direction === "hide") {
+      backdrop.style.display = "none";
+    }
+    currentBackdropAnimation = null;
+    if (onFinish) {
+      onFinish();
+    }
+  });
+
+  currentBackdropAnimation.addEventListener("cancel", () => {
+    currentBackdropAnimation = null;
+  });
+
+  return currentBackdropAnimation;
+};
 
 const MapPlaceInfo = () => {
   const [selectedTab, setSelectedTab] = useState("land");
   const selectedMap = useMapStore((state) => state.selectedMap);
   const dragging = useMapStore((state) => state.dragging);
-
+  const divRef = useRef(null);
   const [spring] = useSpring(
     {
-      opacity: selectedMap !== null ? 1 : 0,
       translate: dragging ? 200 : 0,
     },
     [selectedMap, dragging],
@@ -24,12 +81,25 @@ const MapPlaceInfo = () => {
       setSelectedTab(title);
     }
   }, []);
+  const prevMapOpen = useRef<boolean>(!!selectedMap);
+
+  useEffect(() => {
+    if (!divRef.current) return;
+
+    // Only animate when selectedMap actually toggles
+    const wasOpen = prevMapOpen.current;
+    const isOpen = !!selectedMap;
+    if (isOpen !== wasOpen) {
+      deopaque(divRef.current, isOpen ? "show" : "hide");
+      prevMapOpen.current = isOpen;
+    }
+  }, [selectedMap]);
   return (
     <animated.div
+      ref={divRef}
       style={{
+        display: selectedMap ? "block" : "none",
         pointerEvents: selectedMap !== null ? "all" : "none", // Add this line
-
-        opacity: spring.opacity,
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
       className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex max-h-[35rem] min-w-[150px] max-w-[35rem] flex-col rounded-lg pb-1 pt-3`}

@@ -21,15 +21,16 @@ const DynamicButtons = () => {
     );
   } else {
     return (
-      <Link href="/roamers">
-        <button
-          role="button"
-          title="Roamers"
-          className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 mr-2 cursor-pointer rounded-sm px-5 py-1 text-sm text-gray-200"
-        >
-          <GiSparkles size={20} />
-        </button>
-      </Link>
+      null
+      // <Link href="/roamers">
+      //   <button
+      //     role="button"
+      //     title="Roamers"
+      //     className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 mr-2 cursor-pointer rounded-sm px-5 py-1 text-sm text-gray-200"
+      //   >
+      //     <GiSparkles size={20} />
+      //   </button>
+      // </Link>
     );
   }
 };
