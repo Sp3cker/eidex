@@ -1,7 +1,7 @@
-import { Link, useLocation } from "wouter";
+import { useLocation } from "wouter";
 import { useUIStore } from "@/stores/uiStore";
 
-import { GiSparkles } from "react-icons/gi";
+
 const DynamicButtons = () => {
   const [location] = useLocation();
   const openDrawer = useUIStore((state) => state.openDrawer);
