@@ -9,7 +9,7 @@ import { memo } from "react";
  */
 const Badge = (props: { color: string; typeName: string }) => (
     <p
-      className={`w-7 ${props.color} font-pkmnem pkmnem-face-shadow font-bold tracking-wider h-4`}
+      className={`w-7 ${props.color} font-pkmnem pkmnem-face-shadow font-bold h-4`}
     >
       {props.typeName}
     </p>
