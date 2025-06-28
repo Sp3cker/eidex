@@ -17,7 +17,7 @@ export const useFilterStore = create(
       sortStat: undefined as string | undefined,
       sortDirection: "down",
       moveSource: "all" as MoveSource,
-
+      moveName: "",
       // Type options
       typeOptions: [
         { typeID: undefined, typeName: "All" },
@@ -25,10 +25,10 @@ export const useFilterStore = create(
       ],
 
       // Individual state slices
-      moveValue: null as ComboBoxEntry | null,
+      moveId: null as ComboBoxEntry | null,
       typeValue: undefined as [number, number] | undefined,
       abilityId: null,
-
+      abilityName: "",
       nameValue: "",
     },
     (set, get) => ({
@@ -82,9 +82,11 @@ export const useFilterStore = create(
           sortStat: undefined,
           sortDirection: "down",
           moveSource: "all" as MoveSource,
-          moveValue: null,
+          moveId: null,
           typeValue: undefined,
           abilityId: null,
+          abilityName: "",
+          moveName: "",
           nameValue: "",
         }),
 

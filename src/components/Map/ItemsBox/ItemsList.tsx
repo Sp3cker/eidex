@@ -18,7 +18,7 @@ const ItemsList = memo(function ItemsList({ firstItemRef }: any) {
     } else if (whatToShow.marts) {
       setSelectedTab("marts");
     }
-  }, [whatToShow]);
+  }, []);
 
   return (
     <>

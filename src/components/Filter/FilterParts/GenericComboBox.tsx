@@ -4,15 +4,7 @@ import {
   ComboboxOption,
   ComboboxOptions,
 } from "@headlessui/react";
-import {
-  useState,
-  useRef,
-  ReactNode,
-  ReactElement,
-  isValidElement,
-  cloneElement,
-  useEffect,
-} from "react";
+import { useState, useRef, ReactNode, useEffect } from "react";
 import { MdSearch, MdClose } from "react-icons/md";
 
 export type ComboBoxEntry = { id: number; name: string };
@@ -24,6 +16,17 @@ type GenericComboBoxProps = {
   icon?: ReactNode;
   value?: ComboBoxEntry | null;
 };
+
+const renderOption = ({ option: entry }: { option: ComboBoxEntry }) => (
+  <ComboboxOption
+    key={entry.id}
+    value={entry}
+    className="data-focus:bg-gray-600 w-full cursor-pointer px-3 py-2 text-neutral-50"
+  >
+    {entry.name}
+  </ComboboxOption>
+);
+const renderDisplayValue = (entry: ComboBoxEntry) => entry?.name;
 
 function GenericComboBox({
   entries,
@@ -49,8 +52,10 @@ function GenericComboBox({
         );
 
   const handleChange = (entry: ComboBoxEntry | null) => {
-    setSelected(entry);
-    onSelect(entry);
+    setSelected(() => {
+      onSelect(entry);
+      return entry;
+    });
   };
 
   const handleClose = () => {
@@ -58,11 +63,13 @@ function GenericComboBox({
       inputRef.current?.blur();
     }, 0);
   };
-
-  const renderedIcon =
-    isValidElement(icon) && typeof icon.type === "function"
-      ? cloneElement(icon as ReactElement<{ size?: number }>, { size: 20 })
-      : icon;
+  const handleClear = () => {
+    setSelected(null);
+    setQuery("");
+    onSelect(null);
+  };
+  const handleSetQuery = (event: React.ChangeEvent<HTMLInputElement>) =>
+    setQuery(event.target.value);
 
   return (
     <div
@@ -70,7 +77,7 @@ function GenericComboBox({
       className="relative flex w-full items-center rounded-md bg-neutral-800 px-2"
     >
       <span className="pointer-events-none absolute inset-y-0 left-2 flex items-center text-gray-400">
-        {renderedIcon}
+        {icon}
       </span>
       <Combobox
         value={selected}
@@ -80,21 +87,16 @@ function GenericComboBox({
         virtual={{ options: filteredEntries }}
       >
         <ComboboxInput
-
           ref={inputRef}
           aria-label="Enter something"
-          displayValue={(entry: ComboBoxEntry) => entry?.name}
-          onChange={(event) => setQuery(event.target.value)}
+          displayValue={renderDisplayValue}
+          onChange={handleSetQuery}
           placeholder={placeholder || "Select an entry..."}
           className="font-pkmnem h-9 w-full rounded-md border-0 bg-neutral-800 pl-8 text-sm text-xl text-white placeholder-gray-500 focus:ring-1 focus:ring-blue-400"
         />
         <span
           className="ml-2 inline-flex cursor-pointer select-none items-center text-gray-100 transition-colors hover:text-red-400 active:text-fuchsia-600"
-          onClick={() => {
-            setSelected(null);
-            setQuery("");
-            onSelect(null);
-          }}
+          onClick={handleClear}
         >
           <MdClose size={20} />
         </span>
@@ -102,15 +104,7 @@ function GenericComboBox({
           anchor="bottom start"
           className="w-(--input-width) font-pkmnem kerning-wide no-scrollbar rounded-sm border border-gray-600 bg-gray-800 text-xl text-white shadow-md [--anchor-gap:4px]"
         >
-          {({ option: entry }) => (
-            <ComboboxOption
-              key={entry.id}
-              value={entry}
-              className="data-focus:bg-blue-600 w-full cursor-pointer px-3 py-2 text-white"
-            >
-              {entry.name}
-            </ComboboxOption>
-          )}
+          {renderOption}
         </ComboboxOptions>
       </Combobox>
     </div>

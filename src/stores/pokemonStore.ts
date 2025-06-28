@@ -36,7 +36,21 @@ const usePokemonStore = () => {
     }
 
     return mon;
-  }, [filters.name, filters.id, filters.typeId, filters.chosenStat, filters.statType, filters.isStatMax, filters.sortBy, filters.sortStat, filters.sortDirection, filters.moveSource, filters.nameValue]);
+  }, [
+    filters.name,
+    filters.moveId,
+    filters.abilityId,
+    filters.id,
+    filters.typeId,
+    filters.chosenStat,
+    filters.statType,
+    filters.isStatMax,
+    filters.sortBy,
+    filters.sortStat,
+    filters.sortDirection,
+    filters.moveSource,
+    filters.nameValue,
+  ]);
 
   return filteredPokemon;
 };
