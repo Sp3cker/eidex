@@ -32,8 +32,8 @@ const deopaque = (
     },
   ];
 
-  if (direction === "show" && backdrop.style.display !== "block") {
-    backdrop.style.display = "block";
+  if (direction === "show" && backdrop.style.visibility !== "visible") {
+    backdrop.style.visibility = "visible";
   }
 
   currentBackdropAnimation = backdrop.animate(
@@ -47,7 +47,7 @@ const deopaque = (
 
   currentBackdropAnimation.addEventListener("finish", () => {
     if (direction === "hide") {
-      backdrop.style.display = "none";
+      backdrop.style.visibility = "hidden";
     }
     currentBackdropAnimation = null;
     if (onFinish) {
@@ -98,7 +98,7 @@ const MapPlaceInfo = () => {
     <animated.div
       ref={divRef}
       style={{
-        display: selectedMap ? "block" : "none",
+        visibility: 'hidden',
         pointerEvents: selectedMap !== null ? "all" : "none", // Add this line
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
