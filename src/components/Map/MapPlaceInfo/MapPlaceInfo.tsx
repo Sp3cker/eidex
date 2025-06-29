@@ -81,28 +81,16 @@ const MapPlaceInfo = () => {
       setSelectedTab(title);
     }
   }, []);
-  const prevMapOpen = useRef<boolean>(!!selectedMap);
 
-  useEffect(() => {
-    if (!divRef.current) return;
-
-    // Only animate when selectedMap actually toggles
-    const wasOpen = prevMapOpen.current;
-    const isOpen = !!selectedMap;
-    if (isOpen !== wasOpen) {
-      deopaque(divRef.current, isOpen ? "show" : "hide");
-      prevMapOpen.current = isOpen;
-    }
-  }, [selectedMap]);
   return (
     <animated.div
       ref={divRef}
       style={{
-        visibility: 'hidden',
+        opacity: selectedMap ? 1 : 0,
         pointerEvents: selectedMap !== null ? "all" : "none", // Add this line
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex max-h-[35rem] min-w-[150px] max-w-[35rem] flex-col rounded-lg pb-1 pt-3`}
+      className="content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex max-h-[35rem] min-w-[150px] max-w-[35rem] flex-col rounded-lg pb-1 pt-3"
     >
       <EncounterMonsContainer selectedTab={selectedTab} />
       <div
