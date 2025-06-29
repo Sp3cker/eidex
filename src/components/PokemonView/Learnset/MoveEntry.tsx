@@ -22,7 +22,7 @@ const MoveEntry: React.FC<MoveEntryProps> = ({ move, level }) => {
             >
               {move.name}
             </span>
-            <span className="font-semibold italic text-neutral-100/80">
+            <span className="font-semibold text-neutral-100/80">
               {level ? ` @ ${level}` : ""}
             </span>
           </span>
@@ -39,12 +39,12 @@ const MoveEntry: React.FC<MoveEntryProps> = ({ move, level }) => {
             </span>
             <span className="absolute bottom-2 right-3"><MovePropBox move={move}/></span>
           </div>
-          <span className="h-6 w-6 object-contain mr-3">
+          <span className="h-6 w-6 object-contain">
             <img src={`icons/category/${move.cat}.png`}></img>
           </span>
         </div>
       </div>
-      <span className="mt-1 text-left text-xs font-normal italic text-gray-300">
+      <span className="font-calamity text-left text-sm font-normal text-neutral-200">
         {move.description}
       </span>
     </div>
