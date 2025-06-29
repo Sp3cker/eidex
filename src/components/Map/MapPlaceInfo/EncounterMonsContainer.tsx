@@ -36,7 +36,7 @@ const EncounterMonsContainer = ({ selectedTab }: { selectedTab: string }) => {
   const largeOrSmall = width >= 1024;
 
   return (
-    <div className="mb-1 flex-1 overflow-y-auto">
+    <div className=" flex-1 min-w-40 overflow-y-auto">
       {renderList(selectedTab, largeOrSmall)}
     </div>
   );
