@@ -50,7 +50,7 @@ type RawLevel = {
   thisLevelsId: string;
   scriptedGives: RawLevelScriptedEvent[];
   shopItems: LevelMart[];
-  trainers: LevelTrainer[];
+  trainerRefs: { id: string; script: string }[];
   pickupItems: LevelPickupItem[];
   image: string;
 };
@@ -69,12 +69,6 @@ export type LevelScriptedEventMon = {
   isRandom: boolean;
 };
 
-export type LevelTrainer = {
-  coords: number[];
-  trainer_type: string;
-  script: string;
-};
-
 export type LevelPickupItem = {
   coords: number[];
   item: string;
@@ -87,7 +81,7 @@ export type Level = {
   thisLevelsId: string;
   scriptedGives: LevelScriptedEvent[];
   shopItems: LevelMart[];
-  trainers: LevelTrainer[];
+  // trainers: LevelTrainer[];
   pickupItems: LevelPickupItem[];
   image: string;
 };

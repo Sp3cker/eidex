@@ -37,7 +37,7 @@ const Map = () => {
       <SearchContainer />
       <Selecta />
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
-        <Suspense fallback={<LoadingSpinner />}>
+        <Suspense>
           <MapPlaceInfo />
         </Suspense>
       </ErrorBoundary>
@@ -45,7 +45,7 @@ const Map = () => {
         <Dexnav />
       </ErrorBoundary>
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense>
           <ImageViewer />
         </Suspense>
       </ErrorBoundary>
@@ -58,7 +58,7 @@ const Map = () => {
         </Suspense>
       </ErrorBoundary>
 
-      <Suspense fallback={<div className="hidden"></div>}>
+      <Suspense>
         <PokemonModal />
       </Suspense>
     </div>

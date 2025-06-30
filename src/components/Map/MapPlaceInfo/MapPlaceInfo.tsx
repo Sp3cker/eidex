@@ -78,7 +78,10 @@ const MapPlaceInfo = memo(() => {
     {
       translate: dragging ? 200 : 0,
       opacity: selectedMap ? 1 : 0,
-      config: (key: string) => key === "opacity" ? { damping: 0.21, mass: 2, stiffness: 0.5 } : { damping: 0.21, mass: 0.1, stiffness: 0.5 },
+      config: (key: string) =>
+        key === "opacity"
+          ? { duration: 200 }
+          : { frequency: 0.62, damping: 0.81, mass: 0.1, stiffness: 0.5 },
     },
     [selectedMap, dragging],
   );
@@ -93,7 +96,9 @@ const MapPlaceInfo = memo(() => {
       }}
       className="content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex max-h-[35rem] flex-col rounded-lg pb-1 pt-3"
     >
-      <MapPlaceInfoContent />
+      <div className="fade-in">
+        <MapPlaceInfoContent />
+      </div>
     </animated.div>
   );
 });
