@@ -96,9 +96,9 @@ const MapPlaceInfo = memo(() => {
       }}
       className="content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex max-h-[35rem] flex-col rounded-lg pb-1 pt-3"
     >
-      <div className="fade-in">
+
         <MapPlaceInfoContent />
-      </div>
+
     </animated.div>
   );
 });
