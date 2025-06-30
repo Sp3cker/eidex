@@ -10,7 +10,7 @@ import useMapStore from "@/stores/useMapStore";
 import { lazy, Suspense, useLayoutEffect } from "react";
 // import Roamers from "./Roamers";
 import SearchContainer from "./Search/SearchContainer";
-import LoadingSpinner from "../ui/LoadingSpinner";
+
 import PlacesList from "./PlacesList";
 import { useMapHotkeys } from "@/hooks/useHotkeys";
 
