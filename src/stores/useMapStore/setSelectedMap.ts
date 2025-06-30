@@ -42,6 +42,14 @@ const putIdOnEncounter: (
       // Special case for darmanitan_galar, which is stored as darmanitan in encounters.json
       specieIndex = 990; // darmanitan_galar is 990 in pokemon.json
     }
+    if (specie.species === 'mr_mime_galar'){
+      specieIndex = 981
+    }
+    
+    if (specie.species === 'mr_mime'){
+      specieIndex = 122
+    }
+    
     if (specieIndex === undefined) {
       // "iron_valiant" from encounters file -> iron valiant in nameKeys
       specieIndex = monsNameKeys.get(
