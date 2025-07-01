@@ -23,13 +23,13 @@ function TypeBadgeSimple({
   };
 
   const deselectedTypeStyle = {
-    backgroundColor: 'var(--color-gray-600)',
+    backgroundColor: "var(--color-gray-600)",
     borderColor: bgColor,
   };
 
   return (
     <div
-      className={`w-17 flex cursor-pointer select-none items-center justify-center whitespace-nowrap rounded-full border-2  py-0.5`}
+      className={`w-17 flex cursor-pointer select-none items-center justify-center whitespace-nowrap rounded-full border-2 py-0.5`}
       style={isSelected ? typeStyle : deselectedTypeStyle}
       onClick={onClick}
     >
