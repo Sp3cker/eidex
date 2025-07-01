@@ -15,10 +15,12 @@ const MapPlaceInfoContent = memo(() => {
   }, []);
 
   return (
-    <div className="map-place-info-textbox-gradient flex max-h-[35rem] flex-col rounded-lg pb-1 pt-3">
-      <EncounterMonsContainer selectedTab={selectedTab} />
+    <div className="map-place-info-textbox-gradient flex max-h-[35rem] flex-col rounded-lg pb-1 pt-3 relative">
+      {/* scrollable content area */}
+    
+      {/* floating tab list - moved outside scrollable area */}
       <div
-        className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap lg:hidden"
+        className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap lg:hidden bg-white/80 backdrop-blur-sm md:absolute md:bottom-0 md:left-0 md:right-0 sm:relative sm:mt-auto"
         style={{ boxShadow: "0 -4px 6px -1px rgba(0, 0, 0, 0.1)" }}
         role="tablist"
         aria-label="Encounter type tabs"
@@ -63,6 +65,9 @@ const MapPlaceInfoContent = memo(() => {
           Fishing
         </button>
       </div>
+        <div className="overflow-y-auto flex-1">
+        <EncounterMonsContainer selectedTab={selectedTab} />
+      </div>
     </div>
   );
 });
@@ -106,6 +111,7 @@ const MapPlaceInfo = memo(() => {
           ? { duration: 200 }
           : { frequency: 0.62, damping: 0.81, mass: 0.1, stiffness: 0.5 },
     },
+    [selectedMap, dragging],
   );
 
   return (
@@ -116,7 +122,7 @@ const MapPlaceInfo = memo(() => {
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
         border: "1px solid red",
       }}
-      className="content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch"
+      className="content-visibility map-place-info-z-3 h-full map-place-info-grid will-translate font-calamity cursor-touch"
     >
       <button
         onClick={() =>
@@ -133,7 +139,10 @@ const MapPlaceInfo = memo(() => {
               <TrainersList />
             </animated.div>
           ) : (
-            <animated.div style={style} className="absolute xs:inset-0 sm:inset-0">
+            <animated.div
+              style={style}
+              className="absolute sm:inset-0"
+            >
               <MapPlaceInfoContentAnim />
             </animated.div>
           ),

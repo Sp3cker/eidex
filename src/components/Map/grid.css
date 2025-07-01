@@ -77,7 +77,7 @@
 }
 @media (width >= 64rem) {
   .map-place-info-grid {
-    grid-area: 2 / 7 / 12 / 11;
+    grid-area: 1/ 7 / 12 / 12;
     /* width: 25rem; */
   }
   .selecta-grid {
