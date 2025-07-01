@@ -68,7 +68,7 @@ const HorizontalEvolutionChain: React.FC<HorizontalEvolutionChainProps> = ({
       <div className="flex items-center space-x-4">
         {currentChain.map((node, index) => (
           <React.Fragment key={node.speciesId}>
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <EvolutionNodeCard
                 speciesId={node.speciesId}
                 type={node.speciesId === speciesId ? 'current' : 'parent'}
@@ -81,7 +81,7 @@ const HorizontalEvolutionChain: React.FC<HorizontalEvolutionChainProps> = ({
             
             {/* Show arrow and method if this is not the last item */}
             {index < currentChain.length - 1 && (
-              <div className="flex font-pmknem flex-col items-center justify-center flex-shrink-0">
+              <div className="flex font-pmknem flex-col items-center justify-center shrink-0">
                 <ArrowIcon />
                 {currentChain[index + 1].method && (
                   <div className="font-bold text-lg font-pkmnem text-gray-400 text-center max-w-[90px] leading-tight">

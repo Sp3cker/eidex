@@ -25,7 +25,7 @@ const MapPlaceInfoContent = memo(() => {
       >
         <button
           title="land"
-          className={`tab-label w-[2rem] text-lg font-bold md:text-xl ${selectedTab === "land" && "land-tab"}`}
+          className={`tab-label w-8 text-lg font-bold md:text-xl ${selectedTab === "land" && "land-tab"}`}
           onClick={handleClick}
           role="tab"
           aria-selected={selectedTab === "land"}
@@ -38,7 +38,7 @@ const MapPlaceInfoContent = memo(() => {
         </button>
         <button
           title="water"
-          className={`tab-label w-[2rem] text-lg font-bold ${selectedTab === "water" && "water-tab"}`}
+          className={`tab-label w-8 text-lg font-bold ${selectedTab === "water" && "water-tab"}`}
           onClick={handleClick}
           role="tab"
           aria-selected={selectedTab === "water"}
@@ -51,7 +51,7 @@ const MapPlaceInfoContent = memo(() => {
         </button>
         <button
           title="fishing"
-          className={`tab-label w-[3rem] text-lg font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
+          className={`tab-label w-12 text-lg font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
           onClick={handleClick}
           role="tab"
           aria-selected={selectedTab === "fishing"}
@@ -106,7 +106,6 @@ const MapPlaceInfo = memo(() => {
           ? { duration: 200 }
           : { frequency: 0.62, damping: 0.81, mass: 0.1, stiffness: 0.5 },
     },
-    [selectedMap, dragging],
   );
 
   return (

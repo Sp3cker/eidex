@@ -66,10 +66,10 @@ const Selecta = () => {
   return (
     <animated.aside
       style={spring}
-      className="selecta-grid selecta-z flex h-10 min-w-[120px] max-w-[9.25rem] select-none flex-row items-center rounded-lg border border-gray-600/50 bg-gray-800/90 px-1 py-1 shadow-lg md:max-w-[30rem]"
+      className="selecta-grid selecta-z flex h-10 min-w-[120px] max-w-37 select-none flex-row items-center rounded-lg border border-gray-600/50 bg-gray-800/90 px-1 py-1 shadow-lg md:max-w-120"
     >
       <button
-        className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 flex-shrink-0 rounded-lg text-xs text-neutral-100 shadow-md"
+        className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 shrink-0 rounded-lg text-xs text-neutral-100 shadow-md"
         onClick={handleDownClick}
         disabled={currentLevelIndex <= 0}
         title="Go down one floor"
@@ -82,7 +82,7 @@ const Selecta = () => {
       </p>
 
       <button
-        className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 flex-shrink-0 rounded-lg text-xs text-neutral-100 shadow-md disabled:opacity-50"
+        className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 shrink-0 rounded-lg text-xs text-neutral-100 shadow-md disabled:opacity-50"
         onClick={handleUpClick}
         disabled={
           currentLevelIndex === -1 ||

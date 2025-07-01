@@ -22,7 +22,7 @@ const EncounterTypeBadge = memo(function ETypeBadge({
 }) {
   const typeColors = getTypeCSSColors(types);
   return (
-    <div className="flex flex-row text-center gap-[1px]">
+    <div className="flex flex-row text-center gap-px">
       <Badge
         typeName={adjustTypeForDevice(getTypeName(types[0]), "sm")}
         color={typeColors[0]}

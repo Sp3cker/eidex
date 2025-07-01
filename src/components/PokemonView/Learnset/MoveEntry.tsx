@@ -12,7 +12,7 @@ type MoveEntryProps = {
 const MoveEntry: React.FC<MoveEntryProps> = ({ move, level }) => {
   const screenWidth = useScreenWidth();
   return (
-    <div className="relative border-b-1 flex select-none flex-col gap-2 border-gray-500 bg-zinc-700/20 px-2 py-5">
+    <div className="relative border-b flex select-none flex-col gap-2 border-gray-500 bg-zinc-700/20 px-2 py-5">
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between">
           <span>

@@ -12,7 +12,7 @@ interface PokemonListContentProps {
 }
 
 const renderIcon = () => (
-  <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded bg-yellow-200 text-xs text-yellow-700">
+  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded bg-yellow-200 text-xs text-yellow-700">
     ⭐
   </div>
 );
@@ -40,7 +40,7 @@ export const PokemonListContent = React.memo(function PokemonListContent({
     <BaseListContent
       items={pokemonItems}
       emptyMessage={emptyMessage}
-      className="to-white-50 border-yellow-200 bg-gradient-to-r from-yellow-50/50 text-yellow-900 hover:bg-yellow-100"
+      className="to-white-50 border-yellow-200 bg-linear-to-r from-yellow-50/50 text-yellow-900 hover:bg-yellow-100"
       renderIcon={renderIcon}
       renderContent={renderContent}
       getKey={getKey}

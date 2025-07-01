@@ -24,12 +24,12 @@ const renderIcon = (item: Item) => {
   return spriteStyle ? (
       <img
         src="/spritesheet-items-16.webp"
-        className=" flex-shrink-0"
+        className=" shrink-0"
         style={spriteStyle}
       />
 
   ) : (
-    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded bg-gray-200 text-xs text-gray-500">
+    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded bg-gray-200 text-xs text-gray-500">
       ?
     </div>
   );

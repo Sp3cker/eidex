@@ -103,7 +103,7 @@ const PokeSearch = () => {
           <img
             src="/pokeball.svg"
             alt="Pokéball"
-            className="h-[1rem] w-[1rem] opacity-60"
+            className="h-4 w-4 opacity-60"
           />
         </div>
       </div>

@@ -60,7 +60,7 @@ export default function StatBars({ stats }: StatBarsProps) {
   });
 
   return (
-    <div className="pkmnem-face-shadow neutral-box flex h-[10rem] w-full flex-col items-center gap-1 rounded-sm p-2">
+    <div className="pkmnem-face-shadow neutral-box flex h-40 w-full flex-col items-center gap-1 rounded-sm p-2">
       {transitions((springs, stat, _, index) => (
         <div key={stat.label} className="flex h-4 w-full items-center gap-3">
           <p className="font-calamity w-5 text-xs text-neutral-200">

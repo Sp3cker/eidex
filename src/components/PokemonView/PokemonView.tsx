@@ -55,7 +55,7 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
             ))}
           </div>
         </div>
-        <div className="needs-to-be-right flex-grow flex-col">
+        <div className="needs-to-be-right grow flex-col">
           <div className="flex w-full">
             <StatBars stats={pokemon.stats as StatArray} />
           </div>
@@ -88,7 +88,7 @@ function PokemonView({ pokemon }: { pokemon: Pokemon }) {
         </div>
       </div>
 
-      <div id="box4" className="flex w-full flex-grow" >
+      <div id="box4" className="flex w-full grow" >
         {tabsInView && (
           <Suspense fallback={<LoadingSpinner />}>
             <TabbedInterface tabs={tabsData} />
