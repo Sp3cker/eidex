@@ -20,10 +20,12 @@ const MapContainer = ({ children }: any) => {
   const [{ scale, centerOffset }, api] = useSpring(() => {
     let currentTargetCenterOffset = [30, 40]; // Default if no coordinates or mapRef
     const currentSpringConfig = {
-      mass: 4,
-      tension: 550,
-      friction: 100,
-      precision: 0.2,
+      mass: 2,
+      stiffness: 0.5,
+      damping: 0.81,
+      frequency: 0.62,
+      // friction: 100,
+      // precision: 0.2,
     }; // Default config
     let currentSpringDelay = 0; // Default delay
     const xyScales =
@@ -65,14 +67,11 @@ const MapContainer = ({ children }: any) => {
     ({ offset: [x, y], dragging }) => {
       if (dragging) {
         setDragging(true);
-        api.start({ centerOffset: [x, y] });
-      } else if (!dragging) {
-        // setDragging(false);
+        api.start({ centerOffset: [x * 1.32, y * 1.12] });
       }
     },
     {
       target: targetRef,
-
       filterTaps: true,
       bounds: {
         top: -200 ^ scale.toJSON(),

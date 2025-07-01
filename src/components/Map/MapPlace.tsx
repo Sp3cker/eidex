@@ -1,6 +1,6 @@
 import useMapStore from "@/stores/useMapStore";
 import { useGesture } from "@use-gesture/react";
-import { useCallback, useEffect, useRef, memo } from "react";
+import { useCallback, useEffect, useRef, memo, startTransition } from "react";
 
 interface MapPlaceProps {
   item: Record<string, any>;
@@ -14,14 +14,15 @@ const MapPlace = memo(
     const ref = useRef<any>(null);
 
     const handleClick = useCallback(() => {
-      const stored = useMapStore.getState().storedCoordinates;
-      const myCoords = stored.get(item.id);
-      if (myCoords === undefined) {
-        console.error("Error getting coords for MapPlace $s", item.id);
-        return;
-      }
-
-      setSelectedMap(item.id);
+      startTransition(() => {
+        const stored = useMapStore.getState().storedCoordinates;
+        const myCoords = stored.get(item.id);
+        if (myCoords === undefined) {
+          console.error("Error getting coords for MapPlace $s", item.id);
+          return;
+        }
+        setSelectedMap(item.id);
+      });
     }, []);
 
     useGesture(
