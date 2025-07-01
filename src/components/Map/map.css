@@ -114,6 +114,15 @@
 .places-list-backdrop-z {
   z-index: 6;
 }
+.trainers-list-z {
+  z-index: 7;
+}
+.trainers-list-button-z {
+  z-index: 5;
+}
+.trainers-list-backdrop-z {
+  z-index: 6;
+}
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   height: 1em;

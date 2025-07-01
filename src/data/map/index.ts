@@ -6,7 +6,7 @@ type EncounterListing = {
   max_level: number;
   species: string;
 };
-
+export type TrainerRef = { id: string; script: string };
 export type LevelMart = {
   label: string;
   mart: string;
@@ -50,7 +50,7 @@ type RawLevel = {
   thisLevelsId: string;
   scriptedGives: RawLevelScriptedEvent[];
   shopItems: LevelMart[];
-  trainerRefs: { id: string; script: string }[];
+  trainerRefs: TrainerRef[];
   pickupItems: LevelPickupItem[];
   image: string;
 };

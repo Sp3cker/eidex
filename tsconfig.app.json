@@ -29,7 +29,7 @@
   "include": ["src"],
   "exclude": [
     "src/test/**/*",
-    "src/components/Map/MapPlaceInfo/Selecta/**/*",
+    "src/components/Map/RightSide/MapPlaceInfo/Selecta/**/*",
     "**/*.test.ts",
     "**/*.test.tsx"
   ]

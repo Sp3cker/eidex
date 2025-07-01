@@ -1,5 +1,6 @@
 import { ItemsByMap } from "@/utils/itemsData";
-import { Item } from "@/data/map";
+import { Item, TrainerRef } from "@/data/map";
+
 type EncounterMons = {
   min_level: number;
   max_level: number;
@@ -28,13 +29,14 @@ type MapStore = {
   selectedLevelLandMons: EncounterMons[] | undefined;
   selectedLevelWaterMons: EncounterMons[] | undefined;
   selectedLevelFishingMons: EncounterMons[] | undefined;
+  selectedMapItems: ItemsByMap | null;
+  selectedMapTrainers: TrainerRef[] | null;
 
   selectedCoordinates: number[];
   storedCoordinates: Map<string, number[]>;
   selectedMapLevel: number;
   selectedMapsLevels: string[];
   selectedLevelLabel: string;
-  selectedMapItems: ItemsByMap | null;
   mapScale: number;
   mapOffset: number[];
   hoveredMap: string | null;
@@ -50,6 +52,9 @@ type MapStore = {
 
   // PlacesList panel state
   isPlacesListOpen: boolean;
+
+  // TrainersList panel state
+  isTrainersListOpen: boolean;
 
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
@@ -74,6 +79,10 @@ type MapStore = {
   // PlacesList panel actions
   setPlacesListOpen: (open: boolean) => void;
   togglePlacesList: () => void;
+
+  // TrainersList panel actions
+  setTrainersListOpen: (open: boolean) => void;
+  toggleTrainersList: () => void;
 };
 
 export type { EncounterMons, EncounterMonsFromJSON, MapStore, Level };

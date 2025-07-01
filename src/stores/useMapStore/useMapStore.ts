@@ -32,6 +32,7 @@ export const useMapStore = create<MapStore>()(
       selectedRoamer: null,
       dragging: false,
       isPlacesListOpen: false,
+      isTrainersListOpen: false,
     };
     return {
       ...initialState,
@@ -228,6 +229,14 @@ export const useMapStore = create<MapStore>()(
       },
       togglePlacesList: () => {
         set((state) => ({ isPlacesListOpen: !state.isPlacesListOpen }));
+      },
+      
+      // TrainersList panel actions
+      setTrainersListOpen: (open: boolean) => {
+        set({ isTrainersListOpen: open });
+      },
+      toggleTrainersList: () => {
+        set((state) => ({ isTrainersListOpen: !state.isTrainersListOpen }));
       },
     };
   }),
