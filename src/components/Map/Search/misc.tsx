@@ -26,7 +26,7 @@ export const ErrorBanner = ({ show }: { show: boolean }) => {
     item ? (
       <a.div
         style={style}
-        className="absolute left-0 right-0 z-50 mx-auto mt-2 w-fit rounded border-1 border-red-500 bg-neutral-100/80 px-4 py-2 text-center font-bold text-red-800 shadow-lg backdrop-blur-md"
+        className="absolute left-0 right-0 z-50 mx-auto mt-2 w-fit rounded border border-red-500 bg-neutral-100/80 px-4 py-2 text-center font-bold text-red-800 shadow-lg backdrop-blur-md"
       >
         <div className="flex flex-col">
           Item not buyable/given. Maybe it&apos;s a held item?

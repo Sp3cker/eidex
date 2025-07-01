@@ -58,7 +58,7 @@ const OpenButton = memo(function OpenButton({ className }: OpenButtonProps) {
   return (
     <button
       ref={buttonRef}
-      className={`places-list-button-z fixed left-0 top-1/5 content-visibilty -translate-y-1/2 cursor-pointer rounded-r-lg border border-l-0 border-gray-200 bg-gradient-to-br from-emerald-50 via-white to-gray-100 px-2 py-4 shadow-lg transition-all duration-200 hover:bg-emerald-100 ${className || ""}`}
+      className={`places-list-button-z fixed left-0 top-1/5 content-visibilty -translate-y-1/2 cursor-pointer rounded-r-lg border border-l-0 border-gray-200 bg-linear-to-br from-emerald-50 via-white to-gray-100 px-2 py-4 shadow-lg transition-all duration-200 hover:bg-emerald-100 ${className || ""}`}
       onClick={() => setPlacesListOpen(true)}
     >
       <p>Ξ</p>

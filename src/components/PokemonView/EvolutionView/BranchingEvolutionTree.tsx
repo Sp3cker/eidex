@@ -95,7 +95,7 @@ const EvolutionStage: React.FC<EvolutionStageProps> = ({
           }}
         >
           {node.children.map((child) => (
-            <div key={child.speciesId} className="flex flex-col items-center flex-shrink-0" style={{ width: '80px' }}>
+            <div key={child.speciesId} className="flex flex-col items-center shrink-0" style={{ width: '80px' }}>
               {/* Evolution method positioned between line and card */}
               {child.method && (
                 <div className="text-xs text-gray-400 text-center mb-3 px-1 leading-tight min-h-[32px] flex items-center justify-center evolution-method-badge rounded px-2 py-1">

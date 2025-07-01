@@ -24,7 +24,7 @@ const MapPlaceInfoContent = memo(() => {
       >
         <button
           title="land"
-          className={`tab-label w-[2rem] text-lg font-bold md:text-xl ${selectedTab === "land" && "land-tab"}`}
+          className={`tab-label w-8 text-lg font-bold md:text-xl ${selectedTab === "land" && "land-tab"}`}
           onClick={handleClick}
           role="tab"
           aria-selected={selectedTab === "land"}
@@ -37,7 +37,7 @@ const MapPlaceInfoContent = memo(() => {
         </button>
         <button
           title="water"
-          className={`tab-label w-[2rem] text-lg font-bold ${selectedTab === "water" && "water-tab"}`}
+          className={`tab-label w-8 text-lg font-bold ${selectedTab === "water" && "water-tab"}`}
           onClick={handleClick}
           role="tab"
           aria-selected={selectedTab === "water"}
@@ -50,7 +50,7 @@ const MapPlaceInfoContent = memo(() => {
         </button>
         <button
           title="fishing"
-          className={`tab-label w-[3rem] text-lg font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
+          className={`tab-label w-12 text-lg font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
           onClick={handleClick}
           role="tab"
           aria-selected={selectedTab === "fishing"}
@@ -94,7 +94,7 @@ const MapPlaceInfo = memo(() => {
         pointerEvents: selectedMap !== null ? "all" : "none",
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className="content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex max-h-[35rem] flex-col rounded-lg pb-1 pt-3"
+      className="content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex max-h-140 flex-col rounded-lg pb-1 pt-3"
     >
 
         <MapPlaceInfoContent />

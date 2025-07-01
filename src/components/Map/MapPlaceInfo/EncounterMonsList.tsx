@@ -81,7 +81,7 @@ const EncounterMonsList = React.memo(function EncounterList({
               alt={formatMapString(mon.species)}
             />
           </div>
-          <div className="flex-grow pr-0">
+          <div className="grow pr-0">
             <h3
               className={`font-bold ${zoneToTextColor(zone)} text-shadow-2xs text-shadow-stone-200 max-w-20 text-xs`}
             >

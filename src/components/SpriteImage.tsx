@@ -11,7 +11,7 @@ export default function SpriteImage({ pokemon }: SpriteImageProps) {
   return (
     <img
       src={`/sprites/front/${pokemon.speciesId}.png`}
-      className="rendering-crisp-edges flex-shrink-0"
+      className="rendering-crisp-edges shrink-0"
     />
   );
 }

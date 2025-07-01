@@ -59,7 +59,7 @@ const EvolutionView = ({ speciesId }: EvolutionViewProps) => {
   const useBranchingLayout = shouldUseBranchingLayout();
 
   return (
-    <div className="font-calamity neutral-box relative mx-[-1rem] space-y-4 rounded-md text-sm text-gray-200">
+    <div className="font-calamity neutral-box relative -mx-4 space-y-4 rounded-md text-sm text-gray-200">
       <InfoLabelBadge text="Evolution" />
 
       {/* Evolution Chain - Choose layout based on tree structure */}

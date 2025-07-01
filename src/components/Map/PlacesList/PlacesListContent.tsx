@@ -128,7 +128,7 @@ const PlacesListContent = ({
       ))
     : (sortedPlaces as ReturnType<typeof groupPlacesByType>).map((group) => (
         <div key={group.type} className="mb-6">
-          <div className="sticky top-0 z-10 mb-3 flex items-center gap-2 rounded-lg border border-gray-200/50 bg-gradient-to-r from-emerald-50 to-white px-3 py-2 backdrop-blur-sm">
+          <div className="sticky top-0 z-10 mb-3 flex items-center gap-2 rounded-lg border border-gray-200/50 bg-linear-to-r from-emerald-50 to-white px-3 py-2 backdrop-blur-sm">
             <span className="text-lg">{group.icon}</span>
             <h4 className="font-calamity text-sm font-bold  tracking-wide text-gray-700">
               {group.label}

@@ -88,7 +88,7 @@ const ItemsBox = memo(function ItemsBox() {
   return (
     <animated.nav
       style={springs}
-      className="dexnav-grid dexnav-z max-h-[48vh] w-full overflow-y-auto rounded-lg border border-gray-200 bg-gradient-to-br from-emerald-50 via-white to-gray-100 p-4 shadow-xl md:w-96"
+      className="dexnav-grid dexnav-z max-h-[48vh] w-full overflow-y-auto rounded-lg border border-gray-200 bg-linear-to-br from-emerald-50 via-white to-gray-100 p-4 shadow-xl md:w-96"
     >
       <div
         ref={headerRef}

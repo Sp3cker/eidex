@@ -27,7 +27,7 @@ const RoamersInfo = ({ selectedRoamer }: { selectedRoamer: string | null }) => {
   const selectedRInfo = legendaries.find((le) => le.nameKey === selectedRoamer);
   
   return (
-    <div className="content-visibility fade-in-background roamers-info-grid border-1 cool-font text-neutral-50 rounded-md border-amber-200 p-2">
+    <div className="content-visibility fade-in-background roamers-info-grid border cool-font text-neutral-50 rounded-md border-amber-200 p-2">
       <h3>
         {selectedRoamer ? selectedRoamer : ""}
       </h3>
@@ -85,7 +85,7 @@ const Roamers = React.memo(function Roamers() {
           <div
             onClick={() => handleClick(l.nameKey)}
             key={l.speciesName}
-            className={`border-1 mb-2 flex flex-row items-center rounded-md border-amber-200 p-2 ${
+            className={`border mb-2 flex flex-row items-center rounded-md border-amber-200 p-2 ${
               selectedRoamer === l.nameKey ? 'bg-amber-100/20' : ''
             }`}
           >

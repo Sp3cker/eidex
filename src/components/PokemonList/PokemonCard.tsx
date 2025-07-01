@@ -85,7 +85,7 @@ export const PokemonCard = React.memo(function Card({
         <div className="px-5 py-6" style={{ backgroundColor: adjustedBg }}>
           <div className="border-3 relative mb-5 mt-3 flex flex-row gap-5 rounded-md border-neutral-600 p-4 py-2">
             <span className="absolute -top-2.5 left-2 h-4 rounded-sm border border-gray-300 bg-gray-800 px-2 py-0 text-xs font-bold text-gray-200 md:-top-3 md:h-5">
-              <p className="ios-padding-fix font-calamity -mt-[1px] p-0 md:mt-[1px]">
+              <p className="ios-padding-fix font-calamity -mt-px p-0 md:mt-px">
                 Abilities
               </p>
             </span>
