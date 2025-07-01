@@ -4,7 +4,7 @@ import NewMap from "./ReactSvg";
 import Dexnav from "./ItemsBox";
 
 import MapContainer from "./MapContainer";
-import Selecta from "./RightSide/MapPlaceInfo/Selecta";
+import Selecta from "./MapPlaceInfo/Selecta";
 import "./grid.css";
 import useMapStore from "@/stores/useMapStore";
 import { lazy, Suspense, useLayoutEffect } from "react";
@@ -12,12 +12,12 @@ import { lazy, Suspense, useLayoutEffect } from "react";
 import SearchContainer from "./Search/SearchContainer";
 
 import PlacesList from "./PlacesList";
-import TrainersList from "./RightSide/TrainersList";
+
 import { useMapHotkeys } from "@/hooks/useHotkeys";
 
 document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
-const MapPlaceInfo = lazy(() => import("./RightSide/MapPlaceInfo/MapPlaceInfo"));
+const MapPlaceInfo = lazy(() => import("./MapPlaceInfo/MapPlaceInfo"));
 const PokemonModal = lazy(() => import("@/components/PokemonModal"));
 const ImageViewer = lazy(() => import("./ImageViewer"));
 const Map = () => {
@@ -58,14 +58,10 @@ const Map = () => {
           <PlacesList />
         </Suspense>
       </ErrorBoundary>
-      
+
       <ErrorBoundary
         fallback={<div>something went wrong with trainers list </div>}
-      >
-        <Suspense>
-          <TrainersList />
-        </Suspense>
-      </ErrorBoundary>
+      ></ErrorBoundary>
 
       <Suspense>
         <PokemonModal />

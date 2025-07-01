@@ -1,7 +1,8 @@
-import { animated, useSpring } from "@react-spring/web";
+import { animated, useSpring, useTransition } from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
-import { useCallback, useRef, useState, memo } from "react";
+import { useCallback, useState, memo } from "react";
 import EncounterMonsContainer from "./EncounterMonsContainer";
+import TrainersList from "./TrainersList";
 
 const MapPlaceInfoContent = memo(() => {
   const [selectedTab, setSelectedTab] = useState("land");
@@ -14,7 +15,7 @@ const MapPlaceInfoContent = memo(() => {
   }, []);
 
   return (
-    <>
+    <div className="map-place-info-textbox-gradient flex max-h-[35rem] flex-col rounded-lg pb-1 pt-3">
       <EncounterMonsContainer selectedTab={selectedTab} />
       <div
         className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap lg:hidden"
@@ -62,18 +63,40 @@ const MapPlaceInfoContent = memo(() => {
           Fishing
         </button>
       </div>
-    </>
+    </div>
   );
 });
 
 MapPlaceInfoContent.displayName = "MapPlaceInfoContent";
-
+const MapPlaceInfoContentAnim = animated(MapPlaceInfoContent);
 /** This component is animated. */
 const MapPlaceInfo = memo(() => {
   const selectedMap = useMapStore((state) => state.selectedMap);
   const dragging = useMapStore((state) => state.dragging);
-  const divRef = useRef(null);
+  const trainersListOpen = useMapStore((state) => state.isTrainersListOpen);
 
+  // Card shuffling transition - both components exist in DOM during animation
+  const shuffleTransition = useTransition(trainersListOpen, {
+    from: {
+      translateX: "100%",
+      opacity: 0,
+      // zIndex: 10,
+    },
+    enter: {
+      translateX: "0%",
+      opacity: 1,
+      // zIndex: 10,
+    },
+    leave: {
+      translateX: "100%",
+      opacity: 0,
+    },
+    config: {
+      tension: 280,
+      friction: 25,
+      mass: 0.8,
+    },
+  });
   const [spring] = useSpring(
     {
       translate: dragging ? 200 : 0,
@@ -88,17 +111,35 @@ const MapPlaceInfo = memo(() => {
 
   return (
     <animated.div
-      ref={divRef}
       style={{
         opacity: spring.opacity,
         pointerEvents: selectedMap !== null ? "all" : "none",
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
+        border: "1px solid red",
       }}
-      className="content-visibility map-place-info-textbox-gradient map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch flex max-h-[35rem] flex-col rounded-lg pb-1 pt-3"
+      className="content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch"
     >
+      <button
+        onClick={() =>
+          useMapStore.getState().setTrainersListOpen(!trainersListOpen)
+        }
+      >
+        <span className="text-lg font-bold">Trainers</span>
+      </button>
 
-        <MapPlaceInfoContent />
-
+      <div className="relative">
+        {shuffleTransition((style, isOpen) =>
+          isOpen ? (
+            <animated.div style={style} className="absolute inset-0">
+              <TrainersList />
+            </animated.div>
+          ) : (
+            <animated.div style={style} className="absolute xs:inset-0 sm:inset-0">
+              <MapPlaceInfoContentAnim />
+            </animated.div>
+          ),
+        )}
+      </div>
     </animated.div>
   );
 });

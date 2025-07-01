@@ -56,60 +56,44 @@ const TrainersList = memo(function TrainersList() {
   const { trainers, isLoading, error, selectedMap } = useTrainersData();
 
   // Spring animations for sliding in from the right
-  const [slideAnimation, api] = useSpring(() => ({
-    transform: "translateX(100%)",
-    config: { mass: 0.5, friction: 20 },
-  }));
-  const backdropRef = useRef<HTMLDivElement>(null);
+  // const [slideAnimation, api] = useSpring(() => ({
+  //   transform: "translateX(100%)",
+  //   config: { mass: 0.5, friction: 20 },
+  // }));
+  // const backdropRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const backdrop = backdropRef.current;
-    if (!backdrop) return;
+  // useEffect(() => {
+  //   const backdrop = backdropRef.current;
+  //   if (!backdrop) return;
 
-    if (isTrainersListOpen) {
-      api.start({ transform: "translateX(0%)" });
-      animateBackdrop(backdrop, "show");
-    } else {
-      api.start({ transform: "translateX(100%)" });
-      animateBackdrop(backdrop, "hide");
-    }
-  }, [isTrainersListOpen, api]);
+  //   if (isTrainersListOpen) {
+  //     api.start({ transform: "translateX(0%)" });
+  //     animateBackdrop(backdrop, "show");
+  //   } else {
+  //     api.start({ transform: "translateX(100%)" });
+  //     animateBackdrop(backdrop, "hide");
+  //   }
+  // }, [isTrainersListOpen, api]);
 
-  const handleClose = useCallback(() => {
-    const backdrop = backdropRef.current;
-    if (!backdrop) return;
+  // const handleClose = useCallback(() => {
+  //   const backdrop = backdropRef.current;
+  //   if (!backdrop) return;
 
-    api.start({ transform: "translateX(100%)" });
-    animateBackdrop(backdrop, "hide", () => {
-      setTrainersListOpen(false);
-    });
-  }, [api, setTrainersListOpen]);
+  //   api.start({ transform: "translateX(100%)" });
+  //   animateBackdrop(backdrop, "hide", () => {
+  //     setTrainersListOpen(false);
+  //   });
+  // }, [api, setTrainersListOpen]);
 
   return (
     <>
-      <div
-        ref={backdropRef}
-        style={{ display: "none" }}
-        className="trainers-list-backdrop-z fixed inset-0 bg-black bg-opacity-50"
-        onClick={handleClose}
-      />
+      {/* <div className="trainers-list-backdrop-z fixed inset-0 bg-black bg-opacity-50" /> */}
 
       {/* Static tab that's always visible on the right side */}
-      {!isTrainersListOpen && <TrainersOpenButton />}
+      {/* {!isTrainersListOpen && <TrainersOpenButton />} */}
 
-      <animated.nav
-        style={slideAnimation}
-        className="trainers-list-z pb-safe-or-8 fixed bottom-6 right-0 top-0 w-80 max-w-[80vw] overflow-hidden border-l border-gray-200 bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl"
-      >
+      <nav className="trainers-list-z pb-safe-or-8  overflow-hidden border-l border-gray-200 bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl">
         <div className="sticky top-0 z-10 flex flex-col items-center justify-between border-b border-gray-200 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 p-2">
-          <div className="flex w-full justify-start">
-            <CloseButton
-              onClick={handleClose}
-              variant="minimal"
-              aria-label="Close Trainers List"
-              className="text-neutral-700 hover:bg-neutral-300"
-            />
-          </div>
           <div className="flex w-full flex-row items-start justify-between pr-1">
             <div className="flex-1">
               <div className="flex flex-col items-start justify-between pb-1">
@@ -153,7 +137,7 @@ const TrainersList = memo(function TrainersList() {
             </div>
           </div>
         </div>
-      </animated.nav>
+      </nav>
     </>
   );
 });
