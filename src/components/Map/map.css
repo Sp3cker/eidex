@@ -25,10 +25,6 @@
     var(--color-sky-100)
   );
 }
-.tabs {
-  max-width: 600px;
-  margin: 0 auto;
-}
 
 .tab-list {
   padding-top: 0.2rem;
@@ -87,7 +83,7 @@
 }
 .content-visibility {
   content-visibility: auto;
-  /* contain-intrinsic-size: auto auto; */
+  contain-intrinsic-size: auto auto;
   contain: content;
 }
 .will-transform {

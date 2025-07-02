@@ -3,7 +3,54 @@ import { useMapStore } from "@/stores/useMapStore";
 import { useCallback, useState, memo } from "react";
 import EncounterMonsContainer from "./EncounterMonsContainer";
 import TrainersList from "./TrainersList";
-
+const EncounterAreaButtons = ({ handleClick, selectedTab }: any) => (
+  <div
+    className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap bg-neutral-200 text-slate-900 lg:hidden"
+    // style={{ boxShadow: "0 -4px 6px -1px rgba(0, 0, 0, 0.1)" }}
+    role="tablist"
+    aria-label="Encounter type tabs"
+  >
+    <button
+      title="land"
+      className={`tab-label text-lg font-bold md:text-xl ${selectedTab === "land" && "land-tab"}`}
+      onClick={handleClick}
+      role="tab"
+      aria-selected={selectedTab === "land"}
+      aria-controls="land-panel"
+      tabIndex={selectedTab === "land" ? 0 : -1}
+      id="land-tab"
+      type="button"
+    >
+      Land
+    </button>
+    <button
+      title="water"
+      className={`tab-label text-lg font-bold ${selectedTab === "water" && "water-tab"}`}
+      onClick={handleClick}
+      role="tab"
+      aria-selected={selectedTab === "water"}
+      aria-controls="water-panel"
+      tabIndex={selectedTab === "water" ? 0 : -1}
+      id="water-tab"
+      type="button"
+    >
+      Water
+    </button>
+    <button
+      title="fishing"
+      className={`tab-label text-lg font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
+      onClick={handleClick}
+      role="tab"
+      aria-selected={selectedTab === "fishing"}
+      aria-controls="fishing-panel"
+      tabIndex={selectedTab === "fishing" ? 0 : -1}
+      id="fishing-tab"
+      type="button"
+    >
+      Fishing
+    </button>
+  </div>
+);
 const MapPlaceInfoContent = memo(() => {
   const [selectedTab, setSelectedTab] = useState("land");
   const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
@@ -15,58 +62,17 @@ const MapPlaceInfoContent = memo(() => {
   }, []);
 
   return (
-    <div className="map-place-info-textbox-gradient flex max-h-[35rem] flex-col rounded-lg pb-1 pt-3 relative">
-      {/* scrollable content area */}
-    
-      {/* floating tab list - moved outside scrollable area */}
-      <div
-        className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap lg:hidden bg-white/80 backdrop-blur-sm md:absolute md:bottom-0 md:left-0 md:right-0 sm:relative sm:mt-auto"
-        style={{ boxShadow: "0 -4px 6px -1px rgba(0, 0, 0, 0.1)" }}
-        role="tablist"
-        aria-label="Encounter type tabs"
-      >
-        <button
-          title="land"
-          className={`tab-label w-8 text-lg font-bold md:text-xl ${selectedTab === "land" && "land-tab"}`}
-          onClick={handleClick}
-          role="tab"
-          aria-selected={selectedTab === "land"}
-          aria-controls="land-panel"
-          tabIndex={selectedTab === "land" ? 0 : -1}
-          id="land-tab"
-          type="button"
-        >
-          Land
-        </button>
-        <button
-          title="water"
-          className={`tab-label w-8 text-lg font-bold ${selectedTab === "water" && "water-tab"}`}
-          onClick={handleClick}
-          role="tab"
-          aria-selected={selectedTab === "water"}
-          aria-controls="water-panel"
-          tabIndex={selectedTab === "water" ? 0 : -1}
-          id="water-tab"
-          type="button"
-        >
-          Water
-        </button>
-        <button
-          title="fishing"
-          className={`tab-label w-12 text-lg font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
-          onClick={handleClick}
-          role="tab"
-          aria-selected={selectedTab === "fishing"}
-          aria-controls="fishing-panel"
-          tabIndex={selectedTab === "fishing" ? 0 : -1}
-          id="fishing-tab"
-          type="button"
-        >
-          Fishing
-        </button>
-      </div>
-        <div className="overflow-y-auto flex-1">
+    <div className="flex flex-col">
+      <div className="map-place-info-textbox-gradient h-auto rounded-lg pb-16 pl-1 pt-2 lg:h-full">
+        {/* scrollable content area */}
         <EncounterMonsContainer selectedTab={selectedTab} />
+        {/* floating tab list */}
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 z-30">
+        <EncounterAreaButtons
+          handleClick={handleClick}
+          selectedTab={selectedTab}
+        />
       </div>
     </div>
   );
@@ -85,12 +91,10 @@ const MapPlaceInfo = memo(() => {
     from: {
       translateX: "100%",
       opacity: 0,
-      // zIndex: 10,
     },
     enter: {
       translateX: "0%",
       opacity: 1,
-      // zIndex: 10,
     },
     leave: {
       translateX: "100%",
@@ -122,7 +126,7 @@ const MapPlaceInfo = memo(() => {
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
         border: "1px solid red",
       }}
-      className="content-visibility map-place-info-z-3 h-full map-place-info-grid will-translate font-calamity cursor-touch"
+      className={`content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch h-full`}
     >
       <button
         onClick={() =>
@@ -132,18 +136,23 @@ const MapPlaceInfo = memo(() => {
         <span className="text-lg font-bold">Trainers</span>
       </button>
 
-      <div className="relative">
+      <div className="h-full w-auto">
         {shuffleTransition((style, isOpen) =>
           isOpen ? (
-            <animated.div style={style} className="absolute inset-0">
+            <animated.div
+              style={style}
+              className="absolute bottom-0 left-0 right-0 top-5"
+            >
               <TrainersList />
             </animated.div>
           ) : (
             <animated.div
               style={style}
-              className="absolute sm:inset-0"
+              className="absolute bottom-0 left-0 right-0 top-5"
             >
-              <MapPlaceInfoContentAnim />
+              <div className="relative h-full overflow-y-scroll">
+                <MapPlaceInfoContentAnim />
+              </div>
             </animated.div>
           ),
         )}

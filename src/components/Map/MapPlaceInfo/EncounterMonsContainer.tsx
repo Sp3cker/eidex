@@ -1,7 +1,7 @@
 import EncounterMonsList from "./EncounterMonsList";
 import { useWindowSize } from "@/hooks/useWindowResize";
 const EncounterHeader = ({ text }: { text: string }) => (
-  <p className="text-center font-bold pl-2 text-neutral-700">{text}</p>
+  <p className="pl-2 text-center font-bold text-neutral-700">{text}</p>
 );
 const renderList = (selectedTab: string, largeScreen: boolean) => {
   if (largeScreen) {
@@ -36,7 +36,7 @@ const EncounterMonsContainer = ({ selectedTab }: { selectedTab: string }) => {
   const largeOrSmall = width >= 1024;
 
   return (
-    <div className=" flex-1 min-w-40 overflow-y-auto">
+    <div className="flex-1 min-h-80 min-w-40  overflow-y-scroll">
       {renderList(selectedTab, largeOrSmall)}
     </div>
   );

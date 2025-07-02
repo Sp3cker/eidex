@@ -51,12 +51,14 @@
   }
   .map-place-info-grid {
     width: 100%;
-    grid-area: 1 / 8 / 7 / 13;
+    grid-area: 1 / 8 / 8 / 13;
     max-width: 100%;
     min-width: auto;
+    min-height: 100%;
+    max-height: 100%;
   }
   .selecta-grid {
-    grid-area: 6 / 7 / 7 / 13;
+    grid-area: 7 / 8 / 8 / 13;
   }
   .dexnav-grid {
     grid-area: 6 / 1 / 13 / 8;
@@ -69,11 +71,7 @@
     width: 2rem;
     height: 5rem;
   }
-  .trainers-button-grid {
-    grid-area: 2 / 5 / 3 / 7;
-    width: 2rem;
-    height: 5rem;
-  }
+
 }
 @media (width >= 64rem) {
   .map-place-info-grid {
