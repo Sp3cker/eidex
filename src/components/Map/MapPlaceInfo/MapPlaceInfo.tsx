@@ -4,6 +4,8 @@ import { useCallback, useState, memo } from "react";
 import EncounterMonsContainer from "./EncounterMonsContainer";
 import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
+import InfoToggleButtons from "./InfoToggleButtons";
+
 const EncounterAreaButtons = ({
   handleClick,
   selectedTab,
@@ -78,7 +80,7 @@ const MapPlaceInfoContent = memo(() => {
 
   return (
     <div ref={containerRef} className="relative flex h-full flex-col">
-      <div className="map-place-info-textbox-gradient h-auto overflow-y-auto rounded-lg pl-1 pt-2 pb-10 lg:h-full">
+      <div className="map-place-info-textbox-gradient h-auto overflow-y-auto rounded-lg pb-10 pl-1 pt-2 lg:h-full">
         <EncounterMonsContainer selectedTab={selectedTab} />
       </div>
       <div
@@ -104,10 +106,9 @@ const MapPlaceInfo = memo(() => {
   const selectedMap = useMapStore((state) => state.selectedMap);
   const dragging = useMapStore((state) => state.dragging);
   const trainersListOpen = useMapStore((state) => state.isTrainersListOpen);
-
   const shuffleTransition = useTransition(trainersListOpen, {
     from: {
-      translateX: "100%",
+      translateX: "98%",
       opacity: 0,
     },
     enter: {
@@ -115,7 +116,7 @@ const MapPlaceInfo = memo(() => {
       opacity: 1,
     },
     leave: {
-      translateX: "100%",
+      translateX: "99%",
       opacity: 0,
     },
     config: {
@@ -146,13 +147,7 @@ const MapPlaceInfo = memo(() => {
       }}
       className={`content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch h-full`}
     >
-      <button
-        onClick={() =>
-          useMapStore.getState().setTrainersListOpen(!trainersListOpen)
-        }
-      >
-        <span className="text-lg font-bold">Trainers</span>
-      </button>
+      <InfoToggleButtons />
 
       <div className="h-auto w-auto overscroll-y-auto">
         {shuffleTransition((style, isOpen) =>
@@ -166,7 +161,7 @@ const MapPlaceInfo = memo(() => {
           ) : (
             <animated.div
               style={style}
-              className="absolute bottom-0 left-0 right-0 top-5"
+              className="absolute bottom-0 left-0 right-0 top-5 ml-2"
             >
               <div className="relative h-full">
                 <MapPlaceInfoContentAnim />
