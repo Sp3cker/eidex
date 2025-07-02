@@ -3,10 +3,23 @@ import { useMapStore } from "@/stores/useMapStore";
 import { useCallback, useState, memo } from "react";
 import EncounterMonsContainer from "./EncounterMonsContainer";
 import TrainersList from "./TrainersList";
-const EncounterAreaButtons = ({ handleClick, selectedTab }: any) => (
+import { useElementSize } from "@/hooks/useElementSize";
+const EncounterAreaButtons = ({
+  handleClick,
+  selectedTab,
+}: {
+  handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  selectedTab: string;
+}) => (
   <div
     className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap bg-neutral-200 text-slate-900 lg:hidden"
-    // style={{ boxShadow: "0 -4px 6px -1px rgba(0, 0, 0, 0.1)" }}
+    style={{
+      position: "absolute",
+      bottom: 0,
+      left: 0,
+      right: 0,
+      zIndex: 30,
+    }}
     role="tablist"
     aria-label="Encounter type tabs"
   >
@@ -53,6 +66,8 @@ const EncounterAreaButtons = ({ handleClick, selectedTab }: any) => (
 );
 const MapPlaceInfoContent = memo(() => {
   const [selectedTab, setSelectedTab] = useState("land");
+  const { ref: containerRef, height: containerHeight } = useElementSize();
+
   const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.currentTarget;
     const title = target.getAttribute("title");
@@ -62,13 +77,17 @@ const MapPlaceInfoContent = memo(() => {
   }, []);
 
   return (
-    <div className="flex flex-col">
-      <div className="map-place-info-textbox-gradient h-auto rounded-lg pb-16 pl-1 pt-2 lg:h-full">
-        {/* scrollable content area */}
+    <div ref={containerRef} className="relative flex h-full flex-col">
+      <div className="map-place-info-textbox-gradient h-auto overflow-y-auto rounded-lg pl-1 pt-2 pb-10 lg:h-full">
         <EncounterMonsContainer selectedTab={selectedTab} />
-        {/* floating tab list */}
       </div>
-      <div className="absolute bottom-0 left-0 right-0 z-30">
+      <div
+        className="absolute left-0 right-0 z-30"
+        style={{
+          bottom: 0,
+          top: containerHeight > 0 ? `${containerHeight - 64}px` : "auto",
+        }}
+      >
         <EncounterAreaButtons
           handleClick={handleClick}
           selectedTab={selectedTab}
@@ -86,7 +105,6 @@ const MapPlaceInfo = memo(() => {
   const dragging = useMapStore((state) => state.dragging);
   const trainersListOpen = useMapStore((state) => state.isTrainersListOpen);
 
-  // Card shuffling transition - both components exist in DOM during animation
   const shuffleTransition = useTransition(trainersListOpen, {
     from: {
       translateX: "100%",
@@ -136,7 +154,7 @@ const MapPlaceInfo = memo(() => {
         <span className="text-lg font-bold">Trainers</span>
       </button>
 
-      <div className="h-full w-auto">
+      <div className="h-auto w-auto overscroll-y-auto">
         {shuffleTransition((style, isOpen) =>
           isOpen ? (
             <animated.div
@@ -150,7 +168,7 @@ const MapPlaceInfo = memo(() => {
               style={style}
               className="absolute bottom-0 left-0 right-0 top-5"
             >
-              <div className="relative h-full overflow-y-scroll">
+              <div className="relative h-full">
                 <MapPlaceInfoContentAnim />
               </div>
             </animated.div>
