@@ -84,10 +84,9 @@ const MapPlaceInfoContent = memo(() => {
         <EncounterMonsContainer selectedTab={selectedTab} />
       </div>
       <div
-        className="absolute left-0 right-0 z-30"
+        className="absolute bottom-0 left-0 right-0 z-30"
         style={{
-          bottom: 0,
-          top: containerHeight > 0 ? `${containerHeight - 64}px` : "auto",
+          top: `${containerHeight - 64}px`,
         }}
       >
         <EncounterAreaButtons
@@ -105,26 +104,7 @@ const MapPlaceInfoContentAnim = animated(MapPlaceInfoContent);
 const MapPlaceInfo = memo(() => {
   const selectedMap = useMapStore((state) => state.selectedMap);
   const dragging = useMapStore((state) => state.dragging);
-  const trainersListOpen = useMapStore((state) => state.isTrainersListOpen);
-  const shuffleTransition = useTransition(trainersListOpen, {
-    from: {
-      translateX: "98%",
-      opacity: 0,
-    },
-    enter: {
-      translateX: "0%",
-      opacity: 1,
-    },
-    leave: {
-      translateX: "99%",
-      opacity: 0,
-    },
-    config: {
-      tension: 280,
-      friction: 25,
-      mass: 0.8,
-    },
-  });
+
   const [spring] = useSpring(
     {
       translate: dragging ? 200 : 0,
@@ -149,20 +129,42 @@ const MapPlaceInfo = memo(() => {
     >
       <InfoToggleButtons />
 
-      <div className="h-auto w-auto overscroll-y-auto">
+      <MapInfoSwitcher />
+    </animated.div>
+  );
+});
+const MapInfoSwitcher = memo(() => {
+  const trainersListOpen = useMapStore((state) => state.isTrainersListOpen);
+
+  const shuffleTransition = useTransition(trainersListOpen, {
+    from: {
+      translateX: "98%",
+      opacity: 0,
+    },
+    enter: {
+      translateX: "0%",
+      opacity: 1,
+    },
+    leave: {
+      translateX: "99%",
+      opacity: 0,
+    },
+    config: {
+      tension: 280,
+      friction: 25,
+      mass: 0.8,
+    },
+  });
+  return (
+    <div className="h-auto w-auto overscroll-y-auto">
+      <div className="absolute bottom-0 left-0 right-0 top-10 flex flex-col">
         {shuffleTransition((style, isOpen) =>
           isOpen ? (
-            <animated.div
-              style={style}
-              className="absolute bottom-0 left-0 right-0 top-5"
-            >
+            <animated.div style={style} className="absolute inset-0">
               <TrainersList />
             </animated.div>
           ) : (
-            <animated.div
-              style={style}
-              className="absolute bottom-0 left-0 right-0 top-5 ml-2"
-            >
+            <animated.div style={style} className="absolute inset-0 ml-2">
               <div className="relative h-full">
                 <MapPlaceInfoContentAnim />
               </div>
@@ -170,10 +172,9 @@ const MapPlaceInfo = memo(() => {
           ),
         )}
       </div>
-    </animated.div>
+    </div>
   );
 });
-
 MapPlaceInfo.displayName = "MapPlaceInfo";
 
 export default MapPlaceInfo;

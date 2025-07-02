@@ -71,10 +71,10 @@
     width: 2rem;
     height: 5rem;
   }
-
 }
 @media (width >= 64rem) {
   .map-place-info-grid {
+    margin-top: 0.25rem;
     grid-area: 1/ 7 / 12 / 12;
     /* width: 25rem; */
   }
