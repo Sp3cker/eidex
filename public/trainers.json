@@ -666,6 +666,8 @@
           "heldItem": "ITEM_BLAZIKENITE"
         }
       ],
+      "rival": true,
+      "youPicked": "Treecko",
       "script": "EverGrandeCity_EventScript_BattleMayTreecko",
       "coords": [
         0,
@@ -737,6 +739,8 @@
           "ability": "ABILITY_TORRENT"
         }
       ],
+      "rival": true,
+      "youPicked": "Torchic",
       "script": "EverGrandeCity_EventScript_BattleMayTorchic",
       "coords": [
         0,
@@ -807,6 +811,8 @@
           "heldItem": "ITEM_SCEPTILITE"
         }
       ],
+      "rival": true,
+      "youPicked": "Mudkip",
       "script": "EverGrandeCity_EventScript_BattleMayMudkip",
       "coords": [
         0,
@@ -877,6 +883,8 @@
           "heldItem": "ITEM_BLAZIKENITE"
         }
       ],
+      "rival": true,
+      "youPicked": "Treecko",
       "script": "EverGrandeCity_EventScript_BattleBrendanTreecko",
       "coords": [
         0,
@@ -948,6 +956,8 @@
           "ability": "ABILITY_TORRENT"
         }
       ],
+      "rival": true,
+      "youPicked": "Torchic",
       "script": "EverGrandeCity_EventScript_BattleBrendanTorchic",
       "coords": [
         0,
@@ -1018,6 +1028,8 @@
           "heldItem": "ITEM_SCEPTILITE"
         }
       ],
+      "rival": true,
+      "youPicked": "Mudkip",
       "script": "EverGrandeCity_EventScript_BattleBrendanMudkip",
       "coords": [
         0,
@@ -4803,6 +4815,8 @@
           "species": "SPECIES_TORCHIC"
         }
       ],
+      "rival": true,
+      "youPicked": "Treecko",
       "script": "Route103_EventScript_StartMayBattleTreecko",
       "coords": [
         0,
@@ -4825,6 +4839,8 @@
           "species": "SPECIES_MUDKIP"
         }
       ],
+      "rival": true,
+      "youPicked": "Torchic",
       "script": "Route103_EventScript_StartMayBattleTorchic",
       "coords": [
         0,
@@ -4847,6 +4863,8 @@
           "species": "SPECIES_TREECKO"
         }
       ],
+      "rival": true,
+      "youPicked": "Mudkip",
       "script": "Route103_EventScript_StartMayBattleMudkip",
       "coords": [
         0,
@@ -4869,6 +4887,8 @@
           "species": "SPECIES_TORCHIC"
         }
       ],
+      "rival": true,
+      "youPicked": "Treecko",
       "script": "Route103_EventScript_StartBrendanBattleTreecko",
       "coords": [
         0,
@@ -4891,6 +4911,8 @@
           "species": "SPECIES_MUDKIP"
         }
       ],
+      "rival": true,
+      "youPicked": "Torchic",
       "script": "Route103_EventScript_StartBrendanBattleTorchic",
       "coords": [
         0,
@@ -4913,6 +4935,8 @@
           "species": "SPECIES_TREECKO"
         }
       ],
+      "rival": true,
+      "youPicked": "Mudkip",
       "script": "Route103_EventScript_StartBrendanBattleMudkip",
       "coords": [
         0,
@@ -6853,6 +6877,8 @@
           "heldItem": "ITEM_FOCUS_SASH"
         }
       ],
+      "rival": true,
+      "youPicked": "Treecko",
       "script": "Route110_EventScript_MayBattleTreecko",
       "coords": [
         0,
@@ -6915,6 +6941,8 @@
           "ability": "ABILITY_TORRENT"
         }
       ],
+      "rival": true,
+      "youPicked": "Torchic",
       "script": "Route110_EventScript_MayBattleTorchic",
       "coords": [
         0,
@@ -6977,6 +7005,8 @@
           "heldItem": "ITEM_FOCUS_SASH"
         }
       ],
+      "rival": true,
+      "youPicked": "Mudkip",
       "script": "Route110_EventScript_MayBattleMudkip",
       "coords": [
         0,
@@ -7039,6 +7069,8 @@
           "heldItem": "ITEM_FOCUS_SASH"
         }
       ],
+      "rival": true,
+      "youPicked": "Treecko",
       "script": "Route110_EventScript_BrendanBattleTreecko",
       "coords": [
         0,
@@ -7101,6 +7133,8 @@
           "ability": "ABILITY_TORRENT"
         }
       ],
+      "rival": true,
+      "youPicked": "Torchic",
       "script": "Route110_EventScript_BrendanBattleTorchic",
       "coords": [
         0,
@@ -7163,6 +7197,8 @@
           "heldItem": "ITEM_FOCUS_SASH"
         }
       ],
+      "rival": true,
+      "youPicked": "Mudkip",
       "script": "Route110_EventScript_BrendanBattleMudkip",
       "coords": [
         0,
@@ -10892,6 +10928,8 @@
           "heldItem": "ITEM_BLAZIKENITE"
         }
       ],
+      "rival": true,
+      "youPicked": "Treecko",
       "script": "Route119_EventScript_BattleMayTreecko",
       "coords": [
         0,
@@ -10962,6 +11000,8 @@
           "ability": "ABILITY_TORRENT"
         }
       ],
+      "rival": true,
+      "youPicked": "Torchic",
       "script": "Route119_EventScript_BattleMayTorchic",
       "coords": [
         0,
@@ -11031,6 +11071,8 @@
           "heldItem": "ITEM_SCEPTILITE"
         }
       ],
+      "rival": true,
+      "youPicked": "Mudkip",
       "script": "Route119_EventScript_BattleMayMudkip",
       "coords": [
         0,
@@ -11101,6 +11143,8 @@
           "heldItem": "ITEM_BLAZIKENITE"
         }
       ],
+      "rival": true,
+      "youPicked": "Treecko",
       "script": "Route119_EventScript_BattleBrendanTreecko",
       "coords": [
         0,
@@ -11171,6 +11215,8 @@
           "ability": "ABILITY_TORRENT"
         }
       ],
+      "rival": true,
+      "youPicked": "Torchic",
       "script": "Route119_EventScript_BattleBrendanTorchic",
       "coords": [
         0,
@@ -11241,6 +11287,8 @@
           "heldItem": "ITEM_SCEPTILITE"
         }
       ],
+      "rival": true,
+      "youPicked": "Mudkip",
       "script": "Route119_EventScript_BattleBrendanMudkip",
       "coords": [
         0,
@@ -15077,6 +15125,8 @@
           "ability": "ABILITY_STRIKER"
         }
       ],
+      "rival": true,
+      "youPicked": "Treecko",
       "script": "RustboroCity_EventScript_BattleMayTreecko",
       "coords": [
         0,
@@ -15131,6 +15181,8 @@
           "ability": "ABILITY_TORRENT"
         }
       ],
+      "rival": true,
+      "youPicked": "Torchic",
       "script": "RustboroCity_EventScript_BattleMayTorchic",
       "coords": [
         0,
@@ -15185,6 +15237,8 @@
           "ability": "ABILITY_OVERGROW"
         }
       ],
+      "rival": true,
+      "youPicked": "Mudkip",
       "script": "RustboroCity_EventScript_BattleMayMudkip",
       "coords": [
         0,
@@ -15239,6 +15293,8 @@
           "ability": "ABILITY_STRIKER"
         }
       ],
+      "rival": true,
+      "youPicked": "Treecko",
       "script": "RustboroCity_EventScript_BattleBrendanTreecko",
       "coords": [
         0,
@@ -15293,6 +15349,8 @@
           "ability": "ABILITY_TORRENT"
         }
       ],
+      "rival": true,
+      "youPicked": "Torchic",
       "script": "RustboroCity_EventScript_BattleBrendanTorchic",
       "coords": [
         0,
@@ -15347,6 +15405,8 @@
           "ability": "ABILITY_OVERGROW"
         }
       ],
+      "rival": true,
+      "youPicked": "Mudkip",
       "script": "RustboroCity_EventScript_BattleBrendanMudkip",
       "coords": [
         0,

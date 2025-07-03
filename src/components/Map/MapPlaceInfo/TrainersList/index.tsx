@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect, useRef } from "react";
+import { memo } from "react";
 import { useMapStore } from "@/stores/useMapStore";
 import { shallow } from "zustand/shallow";
 
@@ -22,7 +22,9 @@ const TrainerItem = memo(function TrainerItem({
 
           {/* Trainer info */}
           <div>
-            <h3 className="text-lg font-bold leading-tight">{trainer.trainerName}</h3>
+            <h3 className="text-lg font-bold leading-tight">
+              {trainer.trainerName}
+            </h3>
             {/* <p className="text-sm text-gray-600">{trainer.}</p> */}
           </div>
         </div>
@@ -43,100 +45,52 @@ const TrainerItem = memo(function TrainerItem({
 });
 
 const TrainersList = memo(function TrainersList() {
-  const { isTrainersListOpen, setTrainersListOpen } = useMapStore(
-    (state) => ({
-      isTrainersListOpen: state.isTrainersListOpen,
-      setTrainersListOpen: state.setTrainersListOpen,
-    }),
-    shallow,
-  );
-
   const { trainers, isLoading, error, selectedMap } = useTrainersData();
 
-  // Spring animations for sliding in from the right
-  // const [slideAnimation, api] = useSpring(() => ({
-  //   transform: "translateX(100%)",
-  //   config: { mass: 0.5, friction: 20 },
-  // }));
-  // const backdropRef = useRef<HTMLDivElement>(null);
-
-  // useEffect(() => {
-  //   const backdrop = backdropRef.current;
-  //   if (!backdrop) return;
-
-  //   if (isTrainersListOpen) {
-  //     api.start({ transform: "translateX(0%)" });
-  //     animateBackdrop(backdrop, "show");
-  //   } else {
-  //     api.start({ transform: "translateX(100%)" });
-  //     animateBackdrop(backdrop, "hide");
-  //   }
-  // }, [isTrainersListOpen, api]);
-
-  // const handleClose = useCallback(() => {
-  //   const backdrop = backdropRef.current;
-  //   if (!backdrop) return;
-
-  //   api.start({ transform: "translateX(100%)" });
-  //   animateBackdrop(backdrop, "hide", () => {
-  //     setTrainersListOpen(false);
-  //   });
-  // }, [api, setTrainersListOpen]);
-
   return (
-    <>
-      {/* <div className="trainers-list-backdrop-z fixed inset-0 bg-black bg-opacity-50" /> */}
+    <nav className="rounded rounded-l-lg bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl">
+      <div className="sticky top-0 z-10 flex flex-col items-center justify-between border-b border-gray-200 p-1">
+        <div className="flex w-full flex-row items-start justify-between pr-1">
+          <div className="flex-1">
+            <div className="flex flex-col items-start justify-between pb-1">
+              <p className="font-pkmnem text-md text-neutral-500">
+                {selectedMap
+                  ? `${trainers.length} trainers`
+                  : "No location selected"}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      {/* Static tab that's always visible on the right side */}
-      {/* {!isTrainersListOpen && <TrainersOpenButton />} */}
-
-      <nav className="trainers-list-z pb-safe-or-8 overflow-hidden border-l border-gray-200 bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl">
-        <div className="sticky top-0 z-10 flex flex-col items-center justify-between border-b border-gray-200 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 p-2">
-          <div className="flex w-full flex-row items-start justify-between pr-1">
-            <div className="flex-1">
-              <div className="flex flex-col items-start justify-between pb-1">
-                <h3 className="cool-font font-bold text-neutral-700">
-                  Trainers
-                </h3>
-                <p className="font-pkmnem text-md text-neutral-500">
-                  {selectedMap
-                    ? `${trainers.length} trainers`
-                    : "No location selected"}
-                </p>
+      <div className="h-full overflow-y-auto pb-20">
+        <div className="p-2">
+          <div className="font-pkmnem flex flex-col gap-2 md:gap-1">
+            {isLoading ? (
+              <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
+                <p>Loading trainers...</p>
               </div>
-            </div>
+            ) : error ? (
+              <div className="white-box w-full rounded-lg border p-3 text-center text-red-500">
+                <p>Error loading trainers: {error.message}</p>
+              </div>
+            ) : !selectedMap ? (
+              <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
+                <p>Select a location to view trainers</p>
+              </div>
+            ) : trainers.length === 0 ? (
+              <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
+                <p>No trainers found in this location</p>
+              </div>
+            ) : (
+              trainers.map((trainer) => (
+                <TrainerItem key={trainer.id} trainer={trainer} />
+              ))
+            )}
           </div>
         </div>
-
-        <div className="h-full overflow-y-auto pb-20">
-          <div className="p-2">
-            <div className="font-pkmnem flex flex-col gap-2 md:gap-1">
-              {isLoading ? (
-                <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
-                  <p>Loading trainers...</p>
-                </div>
-              ) : error ? (
-                <div className="white-box w-full rounded-lg border p-3 text-center text-red-500">
-                  <p>Error loading trainers: {error.message}</p>
-                </div>
-              ) : !selectedMap ? (
-                <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
-                  <p>Select a location to view trainers</p>
-                </div>
-              ) : trainers.length === 0 ? (
-                <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
-                  <p>No trainers found in this location</p>
-                </div>
-              ) : (
-                trainers.map((trainer) => (
-                  <TrainerItem key={trainer.id} trainer={trainer} />
-                ))
-              )}
-            </div>
-          </div>
-        </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 });
 

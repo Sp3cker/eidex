@@ -5,7 +5,7 @@ interface ElementDimensions {
   height: number;
 }
 
-export const useElementSize = (actuallyDont: boolean) => {
+export const useElementSize = () => {
   const elementRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState<ElementDimensions>({
     width: 0,
@@ -16,9 +16,6 @@ export const useElementSize = (actuallyDont: boolean) => {
     const element = elementRef.current;
     if (!element) return;
 
-    if (actuallyDont) {
-      return;
-    }
     const resizeObserver = new ResizeObserver((entries) => {
       if (entries[0]) {
         const { width, height } = entries[0].contentRect;
@@ -30,7 +27,7 @@ export const useElementSize = (actuallyDont: boolean) => {
 
     // Initial measurement
     const { width, height } = element.getBoundingClientRect();
-    console.trace()
+    console.trace();
     setDimensions({ width, height });
 
     return () => {

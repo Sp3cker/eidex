@@ -162,7 +162,9 @@ const MapInfoSwitcher = memo(function Switcher() {
         {shuffleTransition((style, isOpen) => (
           <animated.div style={style} className="absolute inset-0">
             {isOpen ? (
-              <TrainersList />
+              <div className="relative h-full">
+                <TrainersList />
+              </div>
             ) : (
               <div className="relative h-full">
                 <MapPlaceInfoContentAnim />
