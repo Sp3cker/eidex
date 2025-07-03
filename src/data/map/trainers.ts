@@ -3,14 +3,18 @@ let trainersData: Record<string, Trainer[]> | null = null;
 let isLoading = false;
 let loadPromise: Promise<Record<string, Trainer[]>> | null = null;
 
+/** Trainer data loaded from `trainers.json` */
 export interface Trainer {
   id: string;
-  name: string;
-  trainerClass: string;
-  location: string;
+  trainerName: string;
   script: string;
-  // Add more trainer properties as needed
+  coords: [number, number];
+  battlePic: string;
+  doubleBattle: boolean;
+  aiFlags: string[];
+  party: any[];
 }
+// Add more trainer properties as needed
 
 // Lazy load trainers data only when first requested
 export const getTrainersData = async (): Promise<Record<string, Trainer[]>> => {

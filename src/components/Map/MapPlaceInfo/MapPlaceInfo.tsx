@@ -80,7 +80,7 @@ const MapPlaceInfoContent = memo(() => {
 
   return (
     <div ref={containerRef} className="relative flex h-full flex-col">
-      <div className="map-place-info-textbox-gradient h-auto overflow-y-auto rounded-lg pb-10 pl-1 pt-2 lg:h-full">
+      <div className="map-place-info-textbox-gradient h-auto overflow-y-auto rounded-l-lg pb-10 pl-1 pt-2 lg:h-full">
         <EncounterMonsContainer selectedTab={selectedTab} />
       </div>
       <div
@@ -123,7 +123,6 @@ const MapPlaceInfo = memo(() => {
         opacity: spring.opacity,
         pointerEvents: selectedMap !== null ? "all" : "none",
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
-        border: "1px solid red",
       }}
       className={`content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch h-full`}
     >
@@ -133,22 +132,24 @@ const MapPlaceInfo = memo(() => {
     </animated.div>
   );
 });
-const MapInfoSwitcher = memo(() => {
+const MapInfoSwitcher = memo(function Switcher() {
   const trainersListOpen = useMapStore((state) => state.isTrainersListOpen);
 
   const shuffleTransition = useTransition(trainersListOpen, {
     from: {
-      translateX: "98%",
-      opacity: 0,
+      translateX: "50%",
+      rotateY: -30,
     },
     enter: {
-      translateX: "0%",
-      opacity: 1,
+      translateX: "1%",
+      rotateY: 0,
     },
     leave: {
-      translateX: "99%",
-      opacity: 0,
+      translateX: "100%",
+      rotateY: 30,
     },
+
+    expires: false, // NEED THIS
     config: {
       tension: 280,
       friction: 25,
@@ -157,20 +158,18 @@ const MapInfoSwitcher = memo(() => {
   });
   return (
     <div className="h-auto w-auto overscroll-y-auto">
-      <div className="absolute bottom-0 left-0 right-0 top-10 flex flex-col">
-        {shuffleTransition((style, isOpen) =>
-          isOpen ? (
-            <animated.div style={style} className="absolute inset-0">
+      <div className="absolute bottom-0 left-0 right-0 top-7 flex flex-col">
+        {shuffleTransition((style, isOpen) => (
+          <animated.div style={style} className="absolute inset-0">
+            {isOpen ? (
               <TrainersList />
-            </animated.div>
-          ) : (
-            <animated.div style={style} className="absolute inset-0 ml-2">
+            ) : (
               <div className="relative h-full">
                 <MapPlaceInfoContentAnim />
               </div>
-            </animated.div>
-          ),
-        )}
+            )}
+          </animated.div>
+        ))}
       </div>
     </div>
   );

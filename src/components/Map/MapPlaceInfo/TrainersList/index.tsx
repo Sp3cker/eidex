@@ -1,9 +1,7 @@
 import { memo, useCallback, useEffect, useRef } from "react";
 import { useMapStore } from "@/stores/useMapStore";
 import { shallow } from "zustand/shallow";
-import { useSpring, animated } from "@react-spring/web";
-import CloseButton from "@/components/ui/CloseButton";
-import TrainersOpenButton from "./TrainersOpenButton";
+
 import { useTrainersData } from "./useTrainersData";
 import type { Trainer } from "@/data/map/trainers";
 
@@ -18,14 +16,14 @@ const TrainerItem = memo(function TrainerItem({
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
           {/* Trainer icon */}
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-600">
+          {/* <div className="flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-600">
             ⚔️
-          </div>
+          </div> */}
 
           {/* Trainer info */}
           <div>
-            <h3 className="text-lg font-bold leading-tight">{trainer.name}</h3>
-            <p className="text-sm text-gray-600">{trainer.trainerClass}</p>
+            <h3 className="text-lg font-bold leading-tight">{trainer.trainerName}</h3>
+            {/* <p className="text-sm text-gray-600">{trainer.}</p> */}
           </div>
         </div>
 
@@ -92,7 +90,7 @@ const TrainersList = memo(function TrainersList() {
       {/* Static tab that's always visible on the right side */}
       {/* {!isTrainersListOpen && <TrainersOpenButton />} */}
 
-      <nav className="trainers-list-z pb-safe-or-8  overflow-hidden border-l border-gray-200 bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl">
+      <nav className="trainers-list-z pb-safe-or-8 overflow-hidden border-l border-gray-200 bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl">
         <div className="sticky top-0 z-10 flex flex-col items-center justify-between border-b border-gray-200 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 p-2">
           <div className="flex w-full flex-row items-start justify-between pr-1">
             <div className="flex-1">
