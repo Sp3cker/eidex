@@ -1,13 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useMapStore } from "@/stores/useMapStore";
-import { getTrainersForMap, getCachedTrainersForMap, type Trainer } from "@/data/map/trainers";
+import {
+  getTrainersForMap,
+  getCachedTrainersForMap,
+  type Trainer,
+} from "@/data/map/trainers";
 
 export const useTrainersData = () => {
   const selectedMap = useMapStore((state) => state.selectedMap);
   const [trainers, setTrainers] = useState<Trainer[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
-
+  const handleTrainerData = useCallback((mapTrainers: Trainer[]) => {}, []);
   useEffect(() => {
     if (!selectedMap) {
       setTrainers([]);
