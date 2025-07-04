@@ -1,7 +1,43 @@
-@import 'tailwindcss';
-@import './fonts.css';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "./fonts.css";
+@import "tw-animate-css";
+:root {
+  --trainer-size: 2rem;
+  --scale: calc(var(--trainer-size) / 32px);
 
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
 @custom-variant dark (&:is(.dark *));
 
 @theme {
@@ -89,7 +125,7 @@ input[type="number"] {
 
 @layer components {
   .ability_badge {
-    @apply w-30 font-pixel text-shadow-lg/40 shadow-md/50 border select-none items-center rounded-md border-gray-200 bg-slate-600 px-1 py-0.5 text-center text-white;
+    @apply w-30 font-pixel text-shadow-lg/40 shadow-md/50 select-none items-center rounded-md border border-gray-200 bg-slate-600 px-1 py-0.5 text-center text-white;
   }
 
   .evolution_box {
@@ -124,6 +160,45 @@ input[type="number"] {
     position: relative;
   }
 }
+
+/* --- Trainer Sprite Animation (spritesheet: 128x40) with Custom Size --- */
+.trainer-sprite {
+  /* Set the visible window size with --trainer-size (defaults to 2rem = 32px) */
+
+  width: var(--trainer-size);
+  height: var(--trainer-size);
+  overflow: hidden;
+  position: relative;
+}
+.trainer-sprite img {
+  /* Actual spritesheet dimensions */
+  width: 128px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  /* Vertically center the 40px tall image inside the square window */
+  top: calc((var(--trainer-size) - (40px * 1.5)) / 2.5);
+
+  /* Prevent global img rules from overriding sprite scaling */
+  max-width: none;
+  max-height: none;
+  min-width: 0;
+  min-height: 0;
+
+  display: block;
+  image-rendering: pixelated;
+  transform-origin: top left;
+  animation: trainer-spritesheet 1s steps(4) infinite;
+}
+@keyframes trainer-spritesheet {
+  from {
+    transform: scale(1.2) translateX(0);
+  }
+  to {
+    transform: scale(1.2) translateX(-100%);
+  }
+}
+/* --- End Trainer Sprite Animation --- */
 
 @layer utilities {
   .fade-in {
@@ -170,39 +245,49 @@ input[type="number"] {
   }
 }
 
-:root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+@keyframes fadeInFrostedGlass {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px) saturate(100%);
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(12px) saturate(120%);
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+@keyframes fadeOutFrostedGlass {
+  from {
+    opacity: 1;
+    backdrop-filter: blur(12px) saturate(120%);
+    background: rgba(0, 0, 0, 0.4);
+  }
+  to {
+    opacity: 0;
+    backdrop-filter: blur(0px) saturate(100%);
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+.fade-in-background {
+  animation: fadeInFrostedGlass 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.fade-out-background {
+  animation: fadeOutFrostedGlass 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in-footer {
+  animation: fadeInFooter 0.3s linear forwards;
 }
 
 @layer base {

@@ -12,6 +12,7 @@ export interface Trainer {
   battlePic: string;
   doubleBattle: boolean;
   aiFlags: string[];
+  sprite: string;
   party: any[];
   youPicked?: "Treecko" | "Torchic" | "Mudkip"; // Optional, only for rival trainers
 }

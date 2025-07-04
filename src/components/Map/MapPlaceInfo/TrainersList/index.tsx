@@ -15,12 +15,9 @@ const TrainerItem = memo(function TrainerItem({
     <div className="white-box w-full rounded-lg border p-3 text-left transition-colors hover:bg-gray-50">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          {/* Trainer icon */}
-          {/* <div className="flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-600">
-            ⚔️
-          </div> */}
-
-          {/* Trainer info */}
+          <div className="trainer-sprite">
+            <img src={`/trainers/48/${trainer.sprite}`} />
+          </div>
           <div>
             <h3 className="text-lg font-bold leading-tight">
               {trainer.trainerName}
