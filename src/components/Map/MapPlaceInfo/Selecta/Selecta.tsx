@@ -11,20 +11,24 @@ const translatesTo = {
 };
 const Selecta = () => {
   const screenWidth = useScreenWidth();
+
   const {
     selectedMapEncounterLevels,
     setSelectedEncounterLevel,
     selectedEncounterLevel,
     selectedLevelLabel,
+    trainerListOpen,
   } = useMapStore(
     (state) => ({
       selectedMapEncounterLevels: state.selectedMapEncounterLevels,
       setSelectedEncounterLevel: state.setSelectedEncounterLevel,
       selectedEncounterLevel: state.selectedEncounterLevel,
       selectedLevelLabel: state.selectedLevelLabel,
+      trainerListOpen: state.isTrainersListOpen,
     }),
     shallow,
   );
+  const shouldShow = !trainerListOpen && selectedMapEncounterLevels.length > 1;
 
   const currentLevelIndex = useMemo(() => {
     if (selectedMapEncounterLevels.length === 0) {
@@ -55,18 +59,18 @@ const Selecta = () => {
 
   const [spring] = useSpring(
     () => ({
-      opacity: selectedMapEncounterLevels.length > 1 ? 1 : 0,
-      translateY:
-        selectedMapEncounterLevels.length > 1 ? translatesTo[screenWidth] : 0,
-      // config: (key) => (key === "translateY" ? {} : {}),
+      translateY: shouldShow ? translatesTo[screenWidth] : 0,
+      config: { mass: 0.8, tension: 200, friction: 18 },
     }),
-    [selectedMapEncounterLevels, screenWidth],
+    [shouldShow, screenWidth],
   );
 
   return (
     <animated.aside
       style={spring}
-      className="selecta-grid selecta-z flex h-10 min-w-[120px] max-w-37 select-none flex-row items-center rounded-lg border border-gray-600/50 bg-gray-800/90 px-1 py-1 shadow-lg md:max-w-120"
+      className={`selecta-grid selecta-z max-w-37 md:max-w-120 flex h-10 min-w-[120px] select-none flex-row items-center rounded-lg border border-gray-600 bg-gray-800 px-1 py-1 drop-shadow-lg ${
+        shouldShow ? "fade-in" : "fade-out"
+      }`}
     >
       <button
         className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 shrink-0 rounded-lg text-xs text-neutral-100 shadow-md"
@@ -77,7 +81,7 @@ const Selecta = () => {
         ▼
       </button>
 
-      <p className="font-pkmnem text-ellipsis leading-tight flex-1 text-wrap px-2 text-center text-md font-bold text-neutral-100">
+      <p className="font-pkmnem text-md flex-1 text-ellipsis text-wrap px-2 text-center font-bold leading-tight text-neutral-100">
         {selectedLevelLabel || "N/A"}
       </p>
 

@@ -157,12 +157,12 @@ const MapInfoSwitcher = memo(function Switcher() {
     },
   });
   return (
-    <div className="h-auto w-auto overscroll-y-auto">
+    <div className="h-full w-full">
       <div className="absolute bottom-0 left-0 right-0 top-7 flex flex-col">
         {shuffleTransition((style, isOpen) => (
           <animated.div style={style} className="absolute inset-0">
             {isOpen ? (
-              <div className="relative h-full">
+              <div className="relative h-full overflow-hidden">
                 <TrainersList />
               </div>
             ) : (

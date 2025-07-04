@@ -23,7 +23,8 @@
       "coords": [
         5,
         10
-      ]
+      ],
+      "level": "Corridors 1F"
     },
     {
       "id": "TRAINER_DUNCAN",
@@ -48,7 +49,8 @@
       "coords": [
         9,
         6
-      ]
+      ],
+      "level": "Corridors B1 F"
     },
     {
       "id": "TRAINER_KIRA_AND_DAN_1",
@@ -73,7 +75,8 @@
       "coords": [
         7,
         13
-      ]
+      ],
+      "level": "Abandoned Ship Rooms 2 1F"
     },
     {
       "id": "TRAINER_JANI",
@@ -98,7 +101,8 @@
       "coords": [
         7,
         2
-      ]
+      ],
+      "level": "Abandoned Ship Rooms 2 1F"
     },
     {
       "id": "TRAINER_GARRISON",
@@ -123,7 +127,8 @@
       "coords": [
         3,
         2
-      ]
+      ],
+      "level": "Abandoned Ship Rooms 2 1F"
     },
     {
       "id": "TRAINER_DEMETRIUS",
@@ -148,7 +153,8 @@
       "coords": [
         10,
         16
-      ]
+      ],
+      "level": "Abandoned Ship Rooms 1F"
     },
     {
       "id": "TRAINER_THALIA_1",
@@ -173,7 +179,8 @@
       "coords": [
         10,
         11
-      ]
+      ],
+      "level": "Abandoned Ship Rooms 1F"
     }
   ],
   "MAP_AQUA_HIDEOUT": [
@@ -196,7 +203,8 @@
       "coords": [
         20,
         4
-      ]
+      ],
+      "level": "Aqua Hideout 1F"
     },
     {
       "id": "TRAINER_GRUNT_AQUA_HIDEOUT_2",
@@ -221,7 +229,8 @@
       "coords": [
         28,
         16
-      ]
+      ],
+      "level": "Aqua Hideout B 1F"
     },
     {
       "id": "TRAINER_GRUNT_AQUA_HIDEOUT_3",
@@ -242,7 +251,8 @@
       "coords": [
         6,
         6
-      ]
+      ],
+      "level": "Aqua Hideout B 1F"
     },
     {
       "id": "TRAINER_GRUNT_AQUA_HIDEOUT_5",
@@ -263,7 +273,8 @@
       "coords": [
         20,
         18
-      ]
+      ],
+      "level": "Aqua Hideout B 1F"
     },
     {
       "id": "TRAINER_GRUNT_AQUA_HIDEOUT_7",
@@ -288,7 +299,8 @@
       "coords": [
         28,
         21
-      ]
+      ],
+      "level": "Aqua Hideout B 1F"
     },
     {
       "id": "TRAINER_ARCHIE_HIDEOUT",
@@ -359,7 +371,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Aqua Hideout B 2F"
     },
     {
       "id": "TRAINER_GRUNT_AQUA_HIDEOUT_4",
@@ -380,7 +393,8 @@
       "coords": [
         23,
         10
-      ]
+      ],
+      "level": "Aqua Hideout B 2F"
     },
     {
       "id": "TRAINER_GRUNT_AQUA_HIDEOUT_6",
@@ -401,7 +415,8 @@
       "coords": [
         7,
         5
-      ]
+      ],
+      "level": "Aqua Hideout B 2F"
     },
     {
       "id": "TRAINER_GRUNT_AQUA_HIDEOUT_8",
@@ -422,7 +437,8 @@
       "coords": [
         13,
         5
-      ]
+      ],
+      "level": "Aqua Hideout B 2F"
     }
   ],
   "MAP_DEWFORD_TOWN": [
@@ -487,7 +503,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_TAKAO",
@@ -512,7 +529,8 @@
       "coords": [
         2,
         18
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_JOCELYN",
@@ -537,7 +555,8 @@
       "coords": [
         15,
         3
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_LAURA",
@@ -558,7 +577,8 @@
       "coords": [
         12,
         25
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_BRENDEN",
@@ -579,7 +599,8 @@
       "coords": [
         14,
         12
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_CRISTIAN",
@@ -600,7 +621,8 @@
       "coords": [
         7,
         8
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_LILITH",
@@ -621,7 +643,8 @@
       "coords": [
         16,
         9
-      ]
+      ],
+      "level": "Gym"
     }
   ],
   "MAP_EVER_GRANDE_CITY": [
@@ -695,7 +718,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande"
     },
     {
       "id": "TRAINER_MAY_EVERGRANDE_TORCHIC",
@@ -768,7 +792,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande"
     },
     {
       "id": "TRAINER_MAY_EVERGRANDE_MUDKIP",
@@ -840,7 +865,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande"
     },
     {
       "id": "TRAINER_BRENDAN_EVERGRANDE_TREECKO",
@@ -912,7 +938,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande"
     },
     {
       "id": "TRAINER_BRENDAN_EVERGRANDE_TORCHIC",
@@ -985,7 +1012,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande"
     },
     {
       "id": "TRAINER_BRENDAN_EVERGRANDE_MUDKIP",
@@ -1057,7 +1085,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande"
     },
     {
       "id": "TRAINER_DAWN_EVERGRANDE",
@@ -1128,7 +1157,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande"
     },
     {
       "id": "TRAINER_VOLKNER",
@@ -1199,7 +1229,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande"
     },
     {
       "id": "TRAINER_STEVEN_WITH_WALLACE",
@@ -1247,7 +1278,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande Champions Room"
     },
     {
       "id": "TRAINER_CYNTHIA",
@@ -1318,7 +1350,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande Drakes Room"
     },
     {
       "id": "TRAINER_GLACIA2",
@@ -1389,7 +1422,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande Glacias Room"
     },
     {
       "id": "TRAINER_GLACIA1",
@@ -1460,7 +1494,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande Glacias Room"
     },
     {
       "id": "TRAINER_PHOEBE2",
@@ -1531,7 +1566,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande Phoebes Room"
     },
     {
       "id": "TRAINER_PHOEBE1",
@@ -1602,7 +1638,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande Phoebes Room"
     },
     {
       "id": "TRAINER_SIDNEY2",
@@ -1674,7 +1711,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande Sidneys Room"
     },
     {
       "id": "TRAINER_SIDNEY1",
@@ -1746,7 +1784,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Ever Grande Sidneys Room"
     }
   ],
   "MAP_FORTREE_CITY": [
@@ -1819,7 +1858,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Creator House"
     },
     {
       "id": "TRAINER_CAP",
@@ -1891,7 +1931,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Creator House"
     },
     {
       "id": "TRAINER_X",
@@ -1962,7 +2003,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Creator House"
     },
     {
       "id": "TRAINER_WINONA_1",
@@ -2034,7 +2076,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_JARED",
@@ -2059,7 +2102,8 @@
       "coords": [
         4,
         14
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_EDWARDO",
@@ -2084,7 +2128,8 @@
       "coords": [
         9,
         8
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_FLINT",
@@ -2109,7 +2154,8 @@
       "coords": [
         10,
         10
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_ASHLEY",
@@ -2134,7 +2180,8 @@
       "coords": [
         5,
         17
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_HUMBERTO",
@@ -2155,7 +2202,8 @@
       "coords": [
         4,
         23
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_DARIUS",
@@ -2178,7 +2226,8 @@
       "coords": [
         1,
         10
-      ]
+      ],
+      "level": "Gym"
     }
   ],
   "MAP_JAGGED_PASS": [
@@ -2205,7 +2254,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Jagged Pass"
     },
     {
       "id": "TRAINER_ERIC",
@@ -2230,7 +2280,8 @@
       "coords": [
         19,
         22
-      ]
+      ],
+      "level": "Jagged Pass"
     },
     {
       "id": "TRAINER_DIANA_1",
@@ -2255,7 +2306,8 @@
       "coords": [
         9,
         21
-      ]
+      ],
+      "level": "Jagged Pass"
     },
     {
       "id": "TRAINER_ETHAN_1",
@@ -2276,7 +2328,8 @@
       "coords": [
         18,
         25
-      ]
+      ],
+      "level": "Jagged Pass"
     },
     {
       "id": "TRAINER_AUTUMN",
@@ -2297,7 +2350,8 @@
       "coords": [
         14,
         25
-      ]
+      ],
+      "level": "Jagged Pass"
     },
     {
       "id": "TRAINER_MAYLENE",
@@ -2369,7 +2423,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Jagged Pass"
     }
   ],
   "MAP_LAVARIDGE_TOWN": [
@@ -2443,7 +2498,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Gym 1F"
     }
   ],
   "MAP_LILYCOVE_CITY": [
@@ -2517,7 +2573,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_MAGMA_HIDEOUT": [
@@ -2540,7 +2597,8 @@
       "coords": [
         4,
         5
-      ]
+      ],
+      "level": "Magma Hideout 1F"
     },
     {
       "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_2",
@@ -2561,7 +2619,8 @@
       "coords": [
         30,
         20
-      ]
+      ],
+      "level": "Magma Hideout 1F"
     },
     {
       "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_14",
@@ -2582,7 +2641,8 @@
       "coords": [
         8,
         8
-      ]
+      ],
+      "level": "Magma Hideout 2F 1r"
     },
     {
       "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_3",
@@ -2603,7 +2663,8 @@
       "coords": [
         21,
         11
-      ]
+      ],
+      "level": "Magma Hideout 2F 1r"
     },
     {
       "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_4",
@@ -2624,7 +2685,8 @@
       "coords": [
         18,
         19
-      ]
+      ],
+      "level": "Magma Hideout 2F 1r"
     },
     {
       "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_5",
@@ -2645,7 +2707,8 @@
       "coords": [
         12,
         14
-      ]
+      ],
+      "level": "Magma Hideout 2F 1r"
     },
     {
       "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_15",
@@ -2666,7 +2729,8 @@
       "coords": [
         7,
         13
-      ]
+      ],
+      "level": "Magma Hideout 2F 2r"
     },
     {
       "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_6",
@@ -2687,7 +2751,8 @@
       "coords": [
         8,
         9
-      ]
+      ],
+      "level": "Magma Hideout 2F 2r"
     },
     {
       "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_7",
@@ -2708,7 +2773,8 @@
       "coords": [
         25,
         11
-      ]
+      ],
+      "level": "Magma Hideout 2F 2r"
     },
     {
       "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_8",
@@ -2729,7 +2795,8 @@
       "coords": [
         29,
         8
-      ]
+      ],
+      "level": "Magma Hideout 2F 2r"
     },
     {
       "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_9",
@@ -2750,7 +2817,8 @@
       "coords": [
         2,
         7
-      ]
+      ],
+      "level": "Magma Hideout 3F 1r"
     },
     {
       "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_16",
@@ -2771,7 +2839,8 @@
       "coords": [
         21,
         21
-      ]
+      ],
+      "level": "Magma Hideout 3F 1r"
     },
     {
       "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_10",
@@ -2792,7 +2861,8 @@
       "coords": [
         16,
         3
-      ]
+      ],
+      "level": "Magma Hideout 3F 2r"
     },
     {
       "id": "TRAINER_MAXIE_MAGMA_HIDEOUT",
@@ -2864,7 +2934,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Magma Hideout 4F"
     },
     {
       "id": "TRAINER_COURTNEY",
@@ -2920,7 +2991,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Magma Hideout 4F"
     },
     {
       "id": "TRAINER_TABITHA_MAGMA_HIDEOUT",
@@ -2975,7 +3047,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Magma Hideout 4F"
     }
   ],
   "MAP_MAUVILLE_CITY": [
@@ -3032,7 +3105,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_WATTSON_1",
@@ -3095,7 +3169,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_KIRK",
@@ -3120,7 +3195,8 @@
       "coords": [
         1,
         13
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_SHAWN",
@@ -3145,7 +3221,8 @@
       "coords": [
         7,
         8
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_BEN",
@@ -3170,7 +3247,8 @@
       "coords": [
         6,
         15
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_VIVIAN",
@@ -3195,7 +3273,8 @@
       "coords": [
         1,
         16
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_ANGELO",
@@ -3222,7 +3301,8 @@
       "coords": [
         7,
         10
-      ]
+      ],
+      "level": "Gym"
     }
   ],
   "MAP_METEOR_FALLS": [
@@ -3249,7 +3329,8 @@
       "coords": [
         13,
         2
-      ]
+      ],
+      "level": "Meteor Falls 1F 2r"
     },
     {
       "id": "TRAINER_JOHN_AND_JAY_1",
@@ -3276,7 +3357,8 @@
       "coords": [
         6,
         12
-      ]
+      ],
+      "level": "Meteor Falls 1F 2r"
     }
   ],
   "MAP_MOSSDEEP_CITY": [
@@ -3361,7 +3443,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Beta Tester House"
     },
     {
       "id": "TRAINER_SUNEAL",
@@ -3433,7 +3516,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Beta Tester House"
     },
     {
       "id": "TRAINER_DOLLAMIKE",
@@ -3504,7 +3588,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Beta Tester House"
     },
     {
       "id": "TRAINER_TATE",
@@ -3551,7 +3636,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_PRESTON",
@@ -3572,7 +3658,8 @@
       "coords": [
         1,
         30
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_VIRGIL",
@@ -3593,7 +3680,8 @@
       "coords": [
         4,
         9
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_BLAKE",
@@ -3614,7 +3702,8 @@
       "coords": [
         5,
         20
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_HANNAH",
@@ -3635,7 +3724,8 @@
       "coords": [
         4,
         3
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_SAMANTHA",
@@ -3656,7 +3746,8 @@
       "coords": [
         4,
         23
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_MAURA",
@@ -3677,7 +3768,8 @@
       "coords": [
         4,
         29
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_SYLVIA",
@@ -3698,7 +3790,8 @@
       "coords": [
         5,
         5
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_NATE",
@@ -3719,7 +3812,8 @@
       "coords": [
         7,
         8
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_MACEY",
@@ -3740,7 +3834,8 @@
       "coords": [
         25,
         25
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_CLIFFORD",
@@ -3761,7 +3856,8 @@
       "coords": [
         22,
         25
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_NICHOLAS",
@@ -3782,7 +3878,8 @@
       "coords": [
         25,
         22
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_KATHLEEN",
@@ -3803,7 +3900,8 @@
       "coords": [
         22,
         23
-      ]
+      ],
+      "level": "Gym"
     }
   ],
   "MAP_MT_CHIMNEY": [
@@ -3876,7 +3974,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Mt Chimney"
     },
     {
       "id": "TRAINER_TABITHA_MT_CHIMNEY",
@@ -3939,7 +4038,8 @@
       "coords": [
         12,
         11
-      ]
+      ],
+      "level": "Mt Chimney"
     },
     {
       "id": "TRAINER_GRUNT_MT_CHIMNEY_2",
@@ -3986,7 +4086,8 @@
       "coords": [
         9,
         16
-      ]
+      ],
+      "level": "Mt Chimney"
     },
     {
       "id": "TRAINER_SHELBY_1",
@@ -4013,7 +4114,8 @@
       "coords": [
         16,
         18
-      ]
+      ],
+      "level": "Mt Chimney"
     },
     {
       "id": "TRAINER_MELISSA",
@@ -4034,7 +4136,8 @@
       "coords": [
         14,
         7
-      ]
+      ],
+      "level": "Mt Chimney"
     },
     {
       "id": "TRAINER_SHEILA",
@@ -4055,7 +4158,8 @@
       "coords": [
         29,
         7
-      ]
+      ],
+      "level": "Mt Chimney"
     },
     {
       "id": "TRAINER_SHIRLEY",
@@ -4076,7 +4180,8 @@
       "coords": [
         27,
         17
-      ]
+      ],
+      "level": "Mt Chimney"
     },
     {
       "id": "TRAINER_COURTNEY_MT_CHIMNEY",
@@ -4123,7 +4228,8 @@
       "coords": [
         14,
         16
-      ]
+      ],
+      "level": "Mt Chimney"
     },
     {
       "id": "TRAINER_SAWYER_1",
@@ -4146,7 +4252,8 @@
       "coords": [
         7,
         7
-      ]
+      ],
+      "level": "Mt Chimney"
     }
   ],
   "MAP_MT_PYRE": [
@@ -4169,7 +4276,8 @@
       "coords": [
         3,
         6
-      ]
+      ],
+      "level": "Mt Pyre 2F"
     },
     {
       "id": "TRAINER_DEZ_AND_LUKE",
@@ -4194,7 +4302,8 @@
       "coords": [
         3,
         9
-      ]
+      ],
+      "level": "Mt Pyre 2F"
     },
     {
       "id": "TRAINER_LEAH",
@@ -4215,7 +4324,8 @@
       "coords": [
         6,
         6
-      ]
+      ],
+      "level": "Mt Pyre 2F"
     },
     {
       "id": "TRAINER_ZANDER",
@@ -4236,7 +4346,8 @@
       "coords": [
         6,
         9
-      ]
+      ],
+      "level": "Mt Pyre 2F"
     },
     {
       "id": "TRAINER_WILLIAM",
@@ -4261,7 +4372,8 @@
       "coords": [
         1,
         4
-      ]
+      ],
+      "level": "Mt Pyre 3F"
     },
     {
       "id": "TRAINER_KAYLA",
@@ -4286,7 +4398,8 @@
       "coords": [
         11,
         4
-      ]
+      ],
+      "level": "Mt Pyre 3F"
     },
     {
       "id": "TRAINER_GABRIELLE_1",
@@ -4311,7 +4424,8 @@
       "coords": [
         6,
         4
-      ]
+      ],
+      "level": "Mt Pyre 3F"
     },
     {
       "id": "TRAINER_ATSUSHI",
@@ -4336,7 +4450,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Mt Pyre 4F"
     },
     {
       "id": "TRAINER_TASHA",
@@ -4357,7 +4472,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Mt Pyre 5F"
     },
     {
       "id": "TRAINER_VALERIE_1",
@@ -4379,7 +4495,8 @@
       "coords": [
         6,
         3
-      ]
+      ],
+      "level": "Mt Pyre 6F"
     },
     {
       "id": "TRAINER_CEDRIC",
@@ -4401,7 +4518,8 @@
       "coords": [
         10,
         3
-      ]
+      ],
+      "level": "Mt Pyre 6F"
     }
   ],
   "MAP_PETALBURG_CITY": [
@@ -4476,7 +4594,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_GEORGE",
@@ -4501,7 +4620,8 @@
       "coords": [
         4,
         68
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_BERKE",
@@ -4526,7 +4646,8 @@
       "coords": [
         4,
         29
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_MARY",
@@ -4551,7 +4672,8 @@
       "coords": [
         4,
         94
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_ALEXIA",
@@ -4576,7 +4698,8 @@
       "coords": [
         4,
         55
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_JODY",
@@ -4601,7 +4724,8 @@
       "coords": [
         4,
         16
-      ]
+      ],
+      "level": "Gym"
     }
   ],
   "MAP_PETALBURG_WOODS": [
@@ -4640,7 +4764,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Woods"
     },
     {
       "id": "TRAINER_LYLE",
@@ -4673,7 +4798,8 @@
       "coords": [
         7,
         32
-      ]
+      ],
+      "level": "Woods"
     },
     {
       "id": "TRAINER_JAMES_1",
@@ -4698,7 +4824,8 @@
       "coords": [
         4,
         14
-      ]
+      ],
+      "level": "Woods"
     },
     {
       "id": "TRAINER_GARDENIA",
@@ -4761,7 +4888,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Woods"
     },
     {
       "id": "TRAINER_GARDENIA2",
@@ -4824,7 +4952,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Woods"
     }
   ],
   "MAP_ROUTE102": [
@@ -4847,7 +4976,8 @@
       "coords": [
         33,
         14
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_RICK",
@@ -4872,7 +5002,8 @@
       "coords": [
         25,
         15
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TIANA",
@@ -4897,7 +5028,8 @@
       "coords": [
         8,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ALLEN",
@@ -4922,7 +5054,8 @@
       "coords": [
         19,
         4
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE103": [
@@ -4948,7 +5081,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MAY_ROUTE_103_TORCHIC",
@@ -4972,7 +5106,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MAY_ROUTE_103_MUDKIP",
@@ -4996,7 +5131,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENDAN_ROUTE_103_TREECKO",
@@ -5020,7 +5156,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENDAN_ROUTE_103_TORCHIC",
@@ -5044,7 +5181,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENDAN_ROUTE_103_MUDKIP",
@@ -5068,7 +5206,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DAISY",
@@ -5093,7 +5232,8 @@
       "coords": [
         71,
         11
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_AMY_AND_LIV_1",
@@ -5118,7 +5258,8 @@
       "coords": [
         64,
         12
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MIGUEL_1",
@@ -5143,7 +5284,8 @@
       "coords": [
         56,
         13
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MARCOS",
@@ -5168,7 +5310,8 @@
       "coords": [
         67,
         9
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_RHETT",
@@ -5193,7 +5336,8 @@
       "coords": [
         67,
         5
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_PETE",
@@ -5214,7 +5358,8 @@
       "coords": [
         28,
         10
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ISABELLE",
@@ -5235,7 +5380,8 @@
       "coords": [
         42,
         10
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE104": [
@@ -5266,7 +5412,8 @@
       "coords": [
         29,
         8
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BILLY",
@@ -5291,7 +5438,8 @@
       "coords": [
         18,
         67
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HALEY_1",
@@ -5322,7 +5470,8 @@
       "coords": [
         31,
         24
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_WINSTON_1",
@@ -5344,7 +5493,8 @@
       "coords": [
         21,
         25
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CINDY_1",
@@ -5366,7 +5516,8 @@
       "coords": [
         11,
         44
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_GINA_AND_MIA_1",
@@ -5391,7 +5542,8 @@
       "coords": [
         27,
         15
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DARIAN",
@@ -5412,7 +5564,8 @@
       "coords": [
         15,
         59
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DAWN_ROUTE_104",
@@ -5459,7 +5612,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE105": [
@@ -5486,7 +5640,8 @@
       "coords": [
         17,
         48
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LUIS",
@@ -5511,7 +5666,8 @@
       "coords": [
         19,
         60
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DOMINIK",
@@ -5532,7 +5688,8 @@
       "coords": [
         27,
         36
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BEVERLY",
@@ -5557,7 +5714,8 @@
       "coords": [
         8,
         45
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_IMANI",
@@ -5578,7 +5736,8 @@
       "coords": [
         19,
         9
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JOSUE",
@@ -5603,7 +5762,8 @@
       "coords": [
         4,
         54
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ANDRES_1",
@@ -5628,7 +5788,8 @@
       "coords": [
         4,
         58
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE106": [
@@ -5655,7 +5816,8 @@
       "coords": [
         18,
         5
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KYLA",
@@ -5676,7 +5838,8 @@
       "coords": [
         29,
         10
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ELLIOT_1",
@@ -5705,7 +5868,8 @@
       "coords": [
         51,
         14
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_NED",
@@ -5731,7 +5895,8 @@
       "coords": [
         65,
         14
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE107": [
@@ -5762,7 +5927,8 @@
       "coords": [
         41,
         10
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TONY_1",
@@ -5783,7 +5949,8 @@
       "coords": [
         36,
         5
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DENISE",
@@ -5808,7 +5975,8 @@
       "coords": [
         21,
         4
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BETH",
@@ -5833,7 +6001,8 @@
       "coords": [
         50,
         11
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LISA_AND_RAY",
@@ -5858,7 +6027,8 @@
       "coords": [
         46,
         5
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CAMRON",
@@ -5883,7 +6053,8 @@
       "coords": [
         54,
         5
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE108": [
@@ -5910,7 +6081,8 @@
       "coords": [
         52,
         13
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MATTHEW",
@@ -5935,7 +6107,8 @@
       "coords": [
         13,
         13
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TARA",
@@ -5960,7 +6133,8 @@
       "coords": [
         35,
         12
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MISSY",
@@ -5989,7 +6163,8 @@
       "coords": [
         8,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CAROLINA",
@@ -6016,7 +6191,8 @@
       "coords": [
         41,
         5
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CORY_1",
@@ -6041,7 +6217,8 @@
       "coords": [
         43,
         5
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE109": [
@@ -6068,7 +6245,8 @@
       "coords": [
         12,
         36
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ALICE",
@@ -6097,7 +6275,8 @@
       "coords": [
         25,
         39
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HUEY",
@@ -6122,7 +6301,8 @@
       "coords": [
         15,
         17
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_EDMOND",
@@ -6143,7 +6323,8 @@
       "coords": [
         24,
         13
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_RICKY_1",
@@ -6165,7 +6346,8 @@
       "coords": [
         19,
         10
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LOLA_1",
@@ -6190,7 +6372,8 @@
       "coords": [
         22,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_AUSTINA",
@@ -6211,7 +6394,8 @@
       "coords": [
         28,
         31
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_GWEN",
@@ -6232,7 +6416,8 @@
       "coords": [
         29,
         32
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CARTER",
@@ -6257,7 +6442,8 @@
       "coords": [
         21,
         56
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MEL_AND_PAUL",
@@ -6290,7 +6476,8 @@
       "coords": [
         9,
         41
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CHANDLER",
@@ -6315,7 +6502,8 @@
       "coords": [
         27,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HAILEY",
@@ -6336,7 +6524,8 @@
       "coords": [
         17,
         13
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ELIJAH",
@@ -6361,7 +6550,8 @@
       "coords": [
         17,
         56
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DWAYNE",
@@ -6408,7 +6598,8 @@
       "coords": [
         2,
         3
-      ]
+      ],
+      "level": "Seashore House"
     },
     {
       "id": "TRAINER_JOHANNA",
@@ -6455,7 +6646,8 @@
       "coords": [
         10,
         5
-      ]
+      ],
+      "level": "Seashore House"
     },
     {
       "id": "TRAINER_SIMON",
@@ -6502,7 +6694,8 @@
       "coords": [
         14,
         9
-      ]
+      ],
+      "level": "Seashore House"
     }
   ],
   "MAP_ROUTE110": [
@@ -6551,7 +6744,8 @@
       "coords": [
         3,
         36
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JACLYN",
@@ -6572,7 +6766,8 @@
       "coords": [
         33,
         15
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_EDWIN_1",
@@ -6619,7 +6814,8 @@
       "coords": [
         32,
         46
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DALE",
@@ -6652,7 +6848,8 @@
       "coords": [
         10,
         19
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JACOB",
@@ -6685,7 +6882,8 @@
       "coords": [
         21,
         78
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ANTHONY",
@@ -6714,7 +6912,8 @@
       "coords": [
         19,
         31
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BENJAMIN_1",
@@ -6743,7 +6942,8 @@
       "coords": [
         16,
         55
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JASMINE",
@@ -6772,7 +6972,8 @@
       "coords": [
         16,
         73
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ABIGAIL_1",
@@ -6797,7 +6998,8 @@
       "coords": [
         30,
         31
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ISABEL_1",
@@ -6836,7 +7038,8 @@
       "coords": [
         10,
         76
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TIMMY",
@@ -6865,7 +7068,8 @@
       "coords": [
         33,
         69
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KALEB",
@@ -6904,7 +7108,8 @@
       "coords": [
         7,
         76
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JOSEPH",
@@ -6959,7 +7164,8 @@
       "coords": [
         36,
         43
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ALYSSA",
@@ -7014,7 +7220,8 @@
       "coords": [
         5,
         32
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MAY_ROUTE_110_TREECKO",
@@ -7078,7 +7285,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MAY_ROUTE_110_TORCHIC",
@@ -7142,7 +7350,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MAY_ROUTE_110_MUDKIP",
@@ -7206,7 +7415,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENDAN_ROUTE_110_TREECKO",
@@ -7270,7 +7480,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENDAN_ROUTE_110_TORCHIC",
@@ -7334,7 +7545,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENDAN_ROUTE_110_MUDKIP",
@@ -7398,7 +7610,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_WALLY_ROUTE_110",
@@ -7469,7 +7682,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_SALLY",
@@ -7532,7 +7746,8 @@
       "coords": [
         14,
         20
-      ]
+      ],
+      "level": "Trick House Puzzle 1"
     },
     {
       "id": "TRAINER_EDDIE",
@@ -7596,7 +7811,8 @@
       "coords": [
         14,
         8
-      ]
+      ],
+      "level": "Trick House Puzzle 1"
     },
     {
       "id": "TRAINER_ROBIN",
@@ -7667,7 +7883,8 @@
       "coords": [
         2,
         15
-      ]
+      ],
+      "level": "Trick House Puzzle 1"
     },
     {
       "id": "TRAINER_TED",
@@ -7730,7 +7947,8 @@
       "coords": [
         13,
         10
-      ]
+      ],
+      "level": "Trick House Puzzle 2"
     },
     {
       "id": "TRAINER_RACHEL",
@@ -7793,7 +8011,8 @@
       "coords": [
         10,
         17
-      ]
+      ],
+      "level": "Trick House Puzzle 2"
     },
     {
       "id": "TRAINER_GEORGIA",
@@ -7856,7 +8075,8 @@
       "coords": [
         11,
         9
-      ]
+      ],
+      "level": "Trick House Puzzle 2"
     },
     {
       "id": "TRAINER_RUSTY",
@@ -7919,7 +8139,8 @@
       "coords": [
         7,
         19
-      ]
+      ],
+      "level": "Trick House Puzzle 3"
     },
     {
       "id": "TRAINER_MARTHA",
@@ -7982,7 +8203,8 @@
       "coords": [
         14,
         2
-      ]
+      ],
+      "level": "Trick House Puzzle 3"
     },
     {
       "id": "TRAINER_ALAN",
@@ -8045,7 +8267,8 @@
       "coords": [
         14,
         5
-      ]
+      ],
+      "level": "Trick House Puzzle 3"
     },
     {
       "id": "TRAINER_CORA",
@@ -8066,7 +8289,8 @@
       "coords": [
         2,
         2
-      ]
+      ],
+      "level": "Trick House Puzzle 4"
     },
     {
       "id": "TRAINER_YUJI",
@@ -8091,7 +8315,8 @@
       "coords": [
         2,
         14
-      ]
+      ],
+      "level": "Trick House Puzzle 4"
     },
     {
       "id": "TRAINER_PAULA",
@@ -8112,7 +8337,8 @@
       "coords": [
         14,
         7
-      ]
+      ],
+      "level": "Trick House Puzzle 4"
     },
     {
       "id": "TRAINER_SOPHIA",
@@ -8139,7 +8365,8 @@
       "coords": [
         7,
         9
-      ]
+      ],
+      "level": "Trick House Puzzle 6"
     },
     {
       "id": "TRAINER_BENNY",
@@ -8168,7 +8395,8 @@
       "coords": [
         11,
         10
-      ]
+      ],
+      "level": "Trick House Puzzle 6"
     },
     {
       "id": "TRAINER_SEBASTIAN",
@@ -8191,7 +8419,8 @@
       "coords": [
         4,
         5
-      ]
+      ],
+      "level": "Trick House Puzzle 6"
     },
     {
       "id": "TRAINER_JOSHUA",
@@ -8216,7 +8445,8 @@
       "coords": [
         9,
         20
-      ]
+      ],
+      "level": "Trick House Puzzle 7"
     },
     {
       "id": "TRAINER_PATRICIA",
@@ -8241,7 +8471,8 @@
       "coords": [
         8,
         17
-      ]
+      ],
+      "level": "Trick House Puzzle 7"
     },
     {
       "id": "TRAINER_ALEXIS",
@@ -8266,7 +8497,8 @@
       "coords": [
         10,
         2
-      ]
+      ],
+      "level": "Trick House Puzzle 7"
     },
     {
       "id": "TRAINER_MARIELA",
@@ -8287,7 +8519,8 @@
       "coords": [
         8,
         13
-      ]
+      ],
+      "level": "Trick House Puzzle 7"
     },
     {
       "id": "TRAINER_ALVARO",
@@ -8312,7 +8545,8 @@
       "coords": [
         9,
         2
-      ]
+      ],
+      "level": "Trick House Puzzle 7"
     },
     {
       "id": "TRAINER_EVERETT",
@@ -8333,7 +8567,8 @@
       "coords": [
         9,
         12
-      ]
+      ],
+      "level": "Trick House Puzzle 7"
     },
     {
       "id": "TRAINER_VINCENT",
@@ -8364,7 +8599,8 @@
       "coords": [
         1,
         10
-      ]
+      ],
+      "level": "Trick House Puzzle 8"
     },
     {
       "id": "TRAINER_KEIRA",
@@ -8391,7 +8627,8 @@
       "coords": [
         8,
         17
-      ]
+      ],
+      "level": "Trick House Puzzle 8"
     },
     {
       "id": "TRAINER_LEROY",
@@ -8418,7 +8655,8 @@
       "coords": [
         4,
         2
-      ]
+      ],
+      "level": "Trick House Puzzle 8"
     }
   ],
   "MAP_ROUTE111": [
@@ -8459,7 +8697,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_VICTORIA",
@@ -8498,7 +8737,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_VIVI",
@@ -8537,7 +8777,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_VICKY",
@@ -8576,7 +8817,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DREW",
@@ -8623,7 +8865,8 @@
       "coords": [
         30,
         99
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HEIDI",
@@ -8648,7 +8891,8 @@
       "coords": [
         28,
         51
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BEAU",
@@ -8673,7 +8917,8 @@
       "coords": [
         21,
         47
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BECKY",
@@ -8698,7 +8943,8 @@
       "coords": [
         32,
         66
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DUSTY_1",
@@ -8753,7 +8999,8 @@
       "coords": [
         32,
         96
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TRAVIS",
@@ -8782,7 +9029,8 @@
       "coords": [
         11,
         71
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_IRENE",
@@ -8807,7 +9055,8 @@
       "coords": [
         14,
         95
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_WILTON_1",
@@ -8838,7 +9087,8 @@
       "coords": [
         9,
         27
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BROOKE_1",
@@ -8865,7 +9115,8 @@
       "coords": [
         11,
         11
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HAYDEN",
@@ -8890,7 +9141,8 @@
       "coords": [
         16,
         119
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BIANCA",
@@ -8915,7 +9167,8 @@
       "coords": [
         19,
         121
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TYRON",
@@ -8940,7 +9193,8 @@
       "coords": [
         26,
         132
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CELINA",
@@ -8965,7 +9219,8 @@
       "coords": [
         20,
         132
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CELIA",
@@ -9020,7 +9275,8 @@
       "coords": [
         29,
         94
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRANDEN",
@@ -9067,7 +9323,8 @@
       "coords": [
         32,
         99
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DAWN_ROUTE_111",
@@ -9132,7 +9389,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DAISUKE",
@@ -9195,7 +9453,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE112": [
@@ -9252,7 +9511,8 @@
       "coords": [
         13,
         40
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LARRY",
@@ -9277,7 +9537,8 @@
       "coords": [
         29,
         49
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CAROL",
@@ -9306,7 +9567,8 @@
       "coords": [
         22,
         46
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRYANT",
@@ -9335,7 +9597,8 @@
       "coords": [
         31,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_SHAYLA",
@@ -9364,7 +9627,8 @@
       "coords": [
         27,
         12
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE113": [
@@ -9391,7 +9655,8 @@
       "coords": [
         62,
         8
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DILLON",
@@ -9416,7 +9681,8 @@
       "coords": [
         21,
         11
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MADELINE_1",
@@ -9471,7 +9737,8 @@
       "coords": [
         49,
         12
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LAO_1",
@@ -9500,7 +9767,8 @@
       "coords": [
         29,
         6
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LUNG",
@@ -9529,7 +9797,8 @@
       "coords": [
         71,
         2
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TORI_AND_TIA",
@@ -9585,7 +9854,8 @@
       "coords": [
         46,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_SOPHIE",
@@ -9610,7 +9880,8 @@
       "coords": [
         7,
         6
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_COBY",
@@ -9635,7 +9906,8 @@
       "coords": [
         7,
         13
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE114": [
@@ -9662,7 +9934,8 @@
       "coords": [
         18,
         65
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LUCAS_1",
@@ -9725,7 +9998,8 @@
       "coords": [
         22,
         28
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_SHANE",
@@ -9750,7 +10024,8 @@
       "coords": [
         22,
         50
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_NANCY",
@@ -9779,7 +10054,8 @@
       "coords": [
         24,
         39
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_STEVE_1",
@@ -9808,7 +10084,8 @@
       "coords": [
         20,
         56
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BERNIE_1",
@@ -9833,7 +10110,8 @@
       "coords": [
         30,
         58
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CLAUDE",
@@ -9888,7 +10166,8 @@
       "coords": [
         19,
         25
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_NOLAN",
@@ -9917,7 +10196,8 @@
       "coords": [
         25,
         6
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TYRA_AND_IVY",
@@ -9944,7 +10224,8 @@
       "coords": [
         15,
         38
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CHARLOTTE",
@@ -10008,7 +10289,8 @@
       "coords": [
         13,
         48
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KAI",
@@ -10063,7 +10345,8 @@
       "coords": [
         22,
         22
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE115": [
@@ -10088,7 +10371,8 @@
       "coords": [
         5,
         15
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KOICHI",
@@ -10113,7 +10397,8 @@
       "coords": [
         19,
         15
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_NOB_1",
@@ -10134,7 +10419,8 @@
       "coords": [
         27,
         53
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CYNDY_1",
@@ -10159,7 +10445,8 @@
       "coords": [
         15,
         50
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HECTOR",
@@ -10184,7 +10471,8 @@
       "coords": [
         24,
         62
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KYRA",
@@ -10209,7 +10497,8 @@
       "coords": [
         10,
         15
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JAIDEN",
@@ -10234,7 +10523,8 @@
       "coords": [
         11,
         12
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ALIX",
@@ -10255,7 +10545,8 @@
       "coords": [
         10,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HELENE",
@@ -10276,7 +10567,8 @@
       "coords": [
         15,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MARLENE",
@@ -10301,7 +10593,8 @@
       "coords": [
         28,
         62
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE116": [
@@ -10324,7 +10617,8 @@
       "coords": [
         12,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JOSE",
@@ -10349,7 +10643,8 @@
       "coords": [
         13,
         17
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JERRY_1",
@@ -10370,7 +10665,8 @@
       "coords": [
         28,
         8
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CLARK",
@@ -10391,7 +10687,8 @@
       "coords": [
         36,
         17
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JANICE",
@@ -10412,7 +10709,8 @@
       "coords": [
         26,
         6
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KAREN_1",
@@ -10433,7 +10731,8 @@
       "coords": [
         22,
         16
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_SARAH",
@@ -10460,7 +10759,8 @@
       "coords": [
         33,
         8
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DAWSON",
@@ -10487,7 +10787,8 @@
       "coords": [
         33,
         5
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DEVAN",
@@ -10512,7 +10813,8 @@
       "coords": [
         42,
         13
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JOHNSON",
@@ -10537,7 +10839,8 @@
       "coords": [
         36,
         13
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ROARK",
@@ -10584,7 +10887,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE117": [
@@ -10649,7 +10953,8 @@
       "coords": [
         25,
         11
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LYDIA_1",
@@ -10712,7 +11017,8 @@
       "coords": [
         23,
         5
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DYLAN_1",
@@ -10737,7 +11043,8 @@
       "coords": [
         38,
         16
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MARIA_1",
@@ -10762,7 +11069,8 @@
       "coords": [
         46,
         17
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ANNA_AND_MEG_1",
@@ -10795,7 +11103,8 @@
       "coords": [
         42,
         6
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRANDI",
@@ -10820,7 +11129,8 @@
       "coords": [
         15,
         4
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_AISHA",
@@ -10845,7 +11155,8 @@
       "coords": [
         21,
         4
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_FANTINA",
@@ -10910,7 +11221,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE118": [
@@ -10937,7 +11249,8 @@
       "coords": [
         7,
         12
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BARNY",
@@ -10962,7 +11275,8 @@
       "coords": [
         39,
         15
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_WADE",
@@ -10983,7 +11297,8 @@
       "coords": [
         28,
         8
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DALTON_1",
@@ -11016,7 +11331,8 @@
       "coords": [
         17,
         11
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_PERRY",
@@ -11037,7 +11353,8 @@
       "coords": [
         64,
         10
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CHESTER",
@@ -11062,7 +11379,8 @@
       "coords": [
         56,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DEANDRE",
@@ -11091,7 +11409,8 @@
       "coords": [
         7,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_WAKE",
@@ -11162,7 +11481,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE119": [
@@ -11236,7 +11556,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MAY_ROUTE_119_TORCHIC",
@@ -11308,7 +11629,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MAY_ROUTE_119_MUDKIP",
@@ -11379,7 +11701,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENDAN_ROUTE_119_TREECKO",
@@ -11451,7 +11774,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENDAN_ROUTE_119_TORCHIC",
@@ -11523,7 +11847,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENDAN_ROUTE_119_MUDKIP",
@@ -11595,7 +11920,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENT",
@@ -11616,7 +11942,8 @@
       "coords": [
         28,
         116
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DONALD",
@@ -11645,7 +11972,8 @@
       "coords": [
         5,
         125
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TAYLOR",
@@ -11670,7 +11998,8 @@
       "coords": [
         26,
         123
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DOUG",
@@ -11695,7 +12024,8 @@
       "coords": [
         34,
         122
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_GREG",
@@ -11720,7 +12050,8 @@
       "coords": [
         12,
         123
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KENT",
@@ -11741,7 +12072,8 @@
       "coords": [
         17,
         128
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JACKSON_1",
@@ -11764,7 +12096,8 @@
       "coords": [
         7,
         74
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CATHERINE_1",
@@ -11791,7 +12124,8 @@
       "coords": [
         35,
         83
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HUGH",
@@ -11812,7 +12146,8 @@
       "coords": [
         10,
         50
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_PHIL",
@@ -11833,7 +12168,8 @@
       "coords": [
         8,
         63
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_YASU",
@@ -11855,7 +12191,8 @@
       "coords": [
         28,
         14
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TAKASHI",
@@ -11881,7 +12218,8 @@
       "coords": [
         19,
         49
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HIDEO",
@@ -11907,7 +12245,8 @@
       "coords": [
         29,
         6
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CHRIS",
@@ -11932,7 +12271,8 @@
       "coords": [
         13,
         104
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_FABIAN",
@@ -11953,7 +12293,8 @@
       "coords": [
         32,
         15
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DAYTON",
@@ -11978,7 +12319,8 @@
       "coords": [
         16,
         52
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_RAQUEL",
@@ -11999,7 +12341,8 @@
       "coords": [
         8,
         68
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_GRUNT_WEATHER_INST_1",
@@ -12024,7 +12367,8 @@
       "coords": [
         15,
         3
-      ]
+      ],
+      "level": "Weather Institute 1F"
     },
     {
       "id": "TRAINER_GRUNT_WEATHER_INST_4",
@@ -12045,7 +12389,8 @@
       "coords": [
         10,
         5
-      ]
+      ],
+      "level": "Weather Institute 1F"
     },
     {
       "id": "TRAINER_GRUNT_WEATHER_INST_5",
@@ -12092,7 +12437,8 @@
       "coords": [
         19,
         6
-      ]
+      ],
+      "level": "Weather Institute 2F"
     },
     {
       "id": "TRAINER_MATT_WEATHER_INST",
@@ -12139,7 +12485,8 @@
       "coords": [
         14,
         6
-      ]
+      ],
+      "level": "Weather Institute 2F"
     },
     {
       "id": "TRAINER_GRUNT_WEATHER_INST_3",
@@ -12164,7 +12511,8 @@
       "coords": [
         10,
         8
-      ]
+      ],
+      "level": "Weather Institute 2F"
     },
     {
       "id": "TRAINER_SHELLY_WEATHER_INSTITUTE",
@@ -12235,7 +12583,8 @@
       "coords": [
         4,
         6
-      ]
+      ],
+      "level": "Weather Institute 2F"
     }
   ],
   "MAP_ROUTE120": [
@@ -12262,7 +12611,8 @@
       "coords": [
         5,
         22
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ROBERT_1",
@@ -12283,7 +12633,8 @@
       "coords": [
         32,
         14
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LORENZO",
@@ -12314,7 +12665,8 @@
       "coords": [
         27,
         51
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JENNA",
@@ -12345,7 +12697,8 @@
       "coords": [
         36,
         45
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JEFFREY_1",
@@ -12366,7 +12719,8 @@
       "coords": [
         19,
         80
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JENNIFER",
@@ -12389,7 +12743,8 @@
       "coords": [
         31,
         37
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CLARISSA",
@@ -12414,7 +12769,8 @@
       "coords": [
         16,
         6
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ANGELICA",
@@ -12435,7 +12791,8 @@
       "coords": [
         18,
         34
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KEIGO",
@@ -12461,7 +12818,8 @@
       "coords": [
         10,
         72
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_RILEY",
@@ -12487,7 +12845,8 @@
       "coords": [
         19,
         28
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LEONEL",
@@ -12510,7 +12869,8 @@
       "coords": [
         14,
         34
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CALLIE",
@@ -12535,7 +12895,8 @@
       "coords": [
         19,
         32
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE121": [
@@ -12584,7 +12945,8 @@
       "coords": [
         59,
         6
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_WALTER_1",
@@ -12631,7 +12993,8 @@
       "coords": [
         56,
         6
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TAMMY",
@@ -12686,7 +13049,8 @@
       "coords": [
         20,
         8
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KATE_AND_JOY",
@@ -12711,7 +13075,8 @@
       "coords": [
         42,
         8
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JESSICA_1",
@@ -12767,7 +13132,8 @@
       "coords": [
         22,
         5
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CALE",
@@ -12822,7 +13188,8 @@
       "coords": [
         18,
         5
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MYLES",
@@ -12847,7 +13214,8 @@
       "coords": [
         60,
         12
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_PAT",
@@ -12868,7 +13236,8 @@
       "coords": [
         49,
         13
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MARCEL",
@@ -12895,7 +13264,8 @@
       "coords": [
         67,
         3
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CRISTIN_1",
@@ -12922,7 +13292,8 @@
       "coords": [
         65,
         8
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BYRON",
@@ -12994,7 +13365,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE123": [
@@ -13027,7 +13399,8 @@
       "coords": [
         70,
         12
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRAXTON",
@@ -13058,7 +13431,8 @@
       "coords": [
         58,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_VIOLET",
@@ -13083,7 +13457,8 @@
       "coords": [
         18,
         9
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CAMERON_1",
@@ -13108,7 +13483,8 @@
       "coords": [
         138,
         12
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JACKI_1",
@@ -13133,7 +13509,8 @@
       "coords": [
         49,
         16
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MIU_AND_YUKI",
@@ -13158,7 +13535,8 @@
       "coords": [
         37,
         13
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KINDRA",
@@ -13183,7 +13561,8 @@
       "coords": [
         87,
         12
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_FREDRICK",
@@ -13210,7 +13589,8 @@
       "coords": [
         49,
         19
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ALBERTO",
@@ -13235,7 +13615,8 @@
       "coords": [
         66,
         19
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ED",
@@ -13260,7 +13641,8 @@
       "coords": [
         87,
         17
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KAYLEY",
@@ -13285,7 +13667,8 @@
       "coords": [
         138,
         16
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JONAS",
@@ -13312,7 +13695,8 @@
       "coords": [
         138,
         14
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JAZMYN",
@@ -13335,7 +13719,8 @@
       "coords": [
         14,
         16
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DAVIS",
@@ -13356,7 +13741,8 @@
       "coords": [
         14,
         12
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_FERNANDO_1",
@@ -13381,7 +13767,8 @@
       "coords": [
         66,
         16
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE124": [
@@ -13438,7 +13825,8 @@
       "coords": [
         9,
         23
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ROLAND",
@@ -13459,7 +13847,8 @@
       "coords": [
         67,
         73
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JENNY_1",
@@ -13522,7 +13911,8 @@
       "coords": [
         10,
         28
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_GRACE",
@@ -13577,7 +13967,8 @@
       "coords": [
         7,
         23
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CHAD",
@@ -13598,7 +13989,8 @@
       "coords": [
         58,
         58
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LILA_AND_ROY_1",
@@ -13623,7 +14015,8 @@
       "coords": [
         52,
         32
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DECLAN",
@@ -13678,7 +14071,8 @@
       "coords": [
         8,
         28
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ISABELLA",
@@ -13699,7 +14093,8 @@
       "coords": [
         23,
         25
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE125": [
@@ -13722,7 +14117,8 @@
       "coords": [
         7,
         31
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_STAN",
@@ -13743,7 +14139,8 @@
       "coords": [
         45,
         9
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TANYA",
@@ -13764,7 +14161,8 @@
       "coords": [
         38,
         24
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_SHARON",
@@ -13785,7 +14183,8 @@
       "coords": [
         30,
         28
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ERNEST_1",
@@ -13810,7 +14209,8 @@
       "coords": [
         21,
         30
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KIM_AND_IRIS",
@@ -13835,7 +14235,8 @@
       "coords": [
         7,
         26
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_PRESLEY",
@@ -13860,7 +14261,8 @@
       "coords": [
         43,
         19
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_AURON",
@@ -13885,7 +14287,8 @@
       "coords": [
         48,
         19
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CANDICE",
@@ -13957,7 +14360,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE126": [
@@ -13984,7 +14388,8 @@
       "coords": [
         51,
         65
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DEAN",
@@ -14013,7 +14418,8 @@
       "coords": [
         56,
         22
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_NIKKI",
@@ -14038,7 +14444,8 @@
       "coords": [
         63,
         43
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENDA",
@@ -14059,7 +14466,8 @@
       "coords": [
         9,
         48
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LEONARDO",
@@ -14080,7 +14488,8 @@
       "coords": [
         56,
         5
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ISOBEL",
@@ -14101,7 +14510,8 @@
       "coords": [
         64,
         5
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_SIENNA",
@@ -14126,7 +14536,8 @@
       "coords": [
         15,
         66
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_PABLO_1",
@@ -14151,7 +14562,8 @@
       "coords": [
         7,
         66
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE127": [
@@ -14178,7 +14590,8 @@
       "coords": [
         45,
         42
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DONNY",
@@ -14203,7 +14616,8 @@
       "coords": [
         18,
         68
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JONAH",
@@ -14232,7 +14646,8 @@
       "coords": [
         42,
         21
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HENRY",
@@ -14257,7 +14672,8 @@
       "coords": [
         54,
         14
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ROGER",
@@ -14286,7 +14702,8 @@
       "coords": [
         64,
         19
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_AIDAN",
@@ -14311,7 +14728,8 @@
       "coords": [
         15,
         23
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ATHENA",
@@ -14338,7 +14756,8 @@
       "coords": [
         12,
         23
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KOJI_1",
@@ -14359,7 +14778,8 @@
       "coords": [
         60,
         62
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE128": [
@@ -14386,7 +14806,8 @@
       "coords": [
         35,
         33
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KATELYN_1",
@@ -14407,7 +14828,8 @@
       "coords": [
         78,
         24
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ALEXA",
@@ -14438,7 +14860,8 @@
       "coords": [
         24,
         8
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_RUBEN",
@@ -14465,7 +14888,8 @@
       "coords": [
         104,
         16
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_WAYNE",
@@ -14494,7 +14918,8 @@
       "coords": [
         63,
         28
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HARRISON",
@@ -14515,7 +14940,8 @@
       "coords": [
         101,
         22
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CARLEE",
@@ -14536,7 +14962,8 @@
       "coords": [
         101,
         29
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE129": [
@@ -14563,7 +14990,8 @@
       "coords": [
         28,
         16
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ALLISON",
@@ -14588,7 +15016,8 @@
       "coords": [
         22,
         22
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_REED",
@@ -14613,7 +15042,8 @@
       "coords": [
         35,
         9
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TISHA",
@@ -14638,7 +15068,8 @@
       "coords": [
         12,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CLARENCE",
@@ -14663,7 +15094,8 @@
       "coords": [
         13,
         27
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE130": [
@@ -14690,7 +15122,8 @@
       "coords": [
         70,
         21
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KATIE",
@@ -14715,7 +15148,8 @@
       "coords": [
         7,
         21
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_SANTIAGO",
@@ -14740,7 +15174,8 @@
       "coords": [
         7,
         30
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE131": [
@@ -14767,7 +15202,8 @@
       "coords": [
         41,
         32
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HERMAN",
@@ -14792,7 +15228,8 @@
       "coords": [
         18,
         19
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_SUSIE",
@@ -14817,7 +15254,8 @@
       "coords": [
         10,
         22
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KARA",
@@ -14842,7 +15280,8 @@
       "coords": [
         31,
         25
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_RELI_AND_IAN",
@@ -14867,7 +15306,8 @@
       "coords": [
         9,
         16
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_TALIA",
@@ -14892,7 +15332,8 @@
       "coords": [
         52,
         27
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KEVIN",
@@ -14917,7 +15358,8 @@
       "coords": [
         52,
         20
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE132": [
@@ -14944,7 +15386,8 @@
       "coords": [
         40,
         13
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DANA",
@@ -14969,7 +15412,8 @@
       "coords": [
         10,
         6
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_RONALD",
@@ -14994,7 +15438,8 @@
       "coords": [
         49,
         28
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KIYO",
@@ -15019,7 +15464,8 @@
       "coords": [
         9,
         15
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_PAXTON",
@@ -15046,7 +15492,8 @@
       "coords": [
         33,
         26
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DARCY",
@@ -15073,7 +15520,8 @@
       "coords": [
         33,
         31
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_JONATHAN",
@@ -15100,7 +15548,8 @@
       "coords": [
         21,
         25
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MAKAYLA",
@@ -15127,7 +15576,8 @@
       "coords": [
         21,
         30
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE133": [
@@ -15154,7 +15604,8 @@
       "coords": [
         68,
         27
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_DEBRA",
@@ -15179,7 +15630,8 @@
       "coords": [
         68,
         28
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LINDA",
@@ -15204,7 +15656,8 @@
       "coords": [
         13,
         3
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_WARREN",
@@ -15231,7 +15684,8 @@
       "coords": [
         37,
         15
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BECK",
@@ -15256,7 +15710,8 @@
       "coords": [
         7,
         14
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MOLLIE",
@@ -15281,7 +15736,8 @@
       "coords": [
         56,
         11
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_CONOR",
@@ -15306,7 +15762,8 @@
       "coords": [
         56,
         15
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_ROUTE134": [
@@ -15329,7 +15786,8 @@
       "coords": [
         49,
         9
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_LAUREL",
@@ -15354,7 +15812,8 @@
       "coords": [
         58,
         7
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ALEX",
@@ -15375,7 +15834,8 @@
       "coords": [
         24,
         23
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_AARON",
@@ -15396,7 +15856,8 @@
       "coords": [
         41,
         23
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HITOSHI",
@@ -15421,7 +15882,8 @@
       "coords": [
         49,
         16
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_HUDSON",
@@ -15446,7 +15908,8 @@
       "coords": [
         63,
         14
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_REYNA",
@@ -15471,7 +15934,8 @@
       "coords": [
         50,
         16
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MARLEY",
@@ -15494,7 +15958,8 @@
       "coords": [
         43,
         23
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_KELVIN",
@@ -15515,7 +15980,8 @@
       "coords": [
         24,
         30
-      ]
+      ],
+      "level": ""
     }
   ],
   "MAP_RUSTBORO_CITY": [
@@ -15573,7 +16039,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MAY_RUSTBORO_TORCHIC",
@@ -15629,7 +16096,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_MAY_RUSTBORO_MUDKIP",
@@ -15685,7 +16153,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENDAN_RUSTBORO_TREECKO",
@@ -15741,7 +16210,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENDAN_RUSTBORO_TORCHIC",
@@ -15797,7 +16267,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_BRENDAN_RUSTBORO_MUDKIP",
@@ -15853,7 +16324,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": ""
     },
     {
       "id": "TRAINER_ROXANNE_1",
@@ -15908,7 +16380,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_JOSH",
@@ -15929,7 +16402,8 @@
       "coords": [
         5,
         13
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_TOMMY",
@@ -15954,7 +16428,8 @@
       "coords": [
         3,
         9
-      ]
+      ],
+      "level": "Gym"
     },
     {
       "id": "TRAINER_MARC",
@@ -15979,7 +16454,8 @@
       "coords": [
         1,
         6
-      ]
+      ],
+      "level": "Gym"
     }
   ],
   "MAP_RUSTURF_TUNNEL": [
@@ -16028,7 +16504,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Rusturf Tunnel"
     },
     {
       "id": "TRAINER_MIKE_2",
@@ -16057,7 +16534,8 @@
       "coords": [
         32,
         13
-      ]
+      ],
+      "level": "Rusturf Tunnel"
     }
   ],
   "MAP_S_S_TIDAL_LOWER_DECK": [
@@ -16084,7 +16562,8 @@
       "coords": [
         10,
         4
-      ]
+      ],
+      "level": "Ss Tidal Lower Deck"
     },
     {
       "id": "TRAINER_LEONARD",
@@ -16113,7 +16592,8 @@
       "coords": [
         7,
         4
-      ]
+      ],
+      "level": "Ss Tidal Lower Deck"
     }
   ],
   "MAP_S_S_TIDAL_ROOMS": [
@@ -16168,7 +16648,8 @@
       "coords": [
         4,
         7
-      ]
+      ],
+      "level": "Ss Tidal Rooms"
     },
     {
       "id": "TRAINER_MICAH",
@@ -16193,7 +16674,8 @@
       "coords": [
         34,
         11
-      ]
+      ],
+      "level": "Ss Tidal Rooms"
     },
     {
       "id": "TRAINER_THOMAS",
@@ -16214,7 +16696,8 @@
       "coords": [
         21,
         5
-      ]
+      ],
+      "level": "Ss Tidal Rooms"
     },
     {
       "id": "TRAINER_LEA_AND_JED",
@@ -16239,7 +16722,8 @@
       "coords": [
         5,
         14
-      ]
+      ],
+      "level": "Ss Tidal Rooms"
     },
     {
       "id": "TRAINER_GARRET",
@@ -16261,7 +16745,8 @@
       "coords": [
         22,
         11
-      ]
+      ],
+      "level": "Ss Tidal Rooms"
     },
     {
       "id": "TRAINER_NAOMI",
@@ -16283,7 +16768,8 @@
       "coords": [
         15,
         6
-      ]
+      ],
+      "level": "Ss Tidal Rooms"
     }
   ],
   "MAP_SEAFLOOR_CAVERN": [
@@ -16314,7 +16800,8 @@
       "coords": [
         8,
         6
-      ]
+      ],
+      "level": "Seafloor Cavern Room 1"
     },
     {
       "id": "TRAINER_GRUNT_SEAFLOOR_CAVERN_5",
@@ -16339,7 +16826,8 @@
       "coords": [
         5,
         5
-      ]
+      ],
+      "level": "Seafloor Cavern Room 3"
     },
     {
       "id": "TRAINER_GRUNT_SEAFLOOR_CAVERN_3",
@@ -16364,7 +16852,8 @@
       "coords": [
         5,
         8
-      ]
+      ],
+      "level": "Seafloor Cavern Room 4"
     },
     {
       "id": "TRAINER_GRUNT_SEAFLOOR_CAVERN_4",
@@ -16389,7 +16878,8 @@
       "coords": [
         5,
         12
-      ]
+      ],
+      "level": "Seafloor Cavern Room 4"
     },
     {
       "id": "TRAINER_ARCHIE",
@@ -16461,7 +16951,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Seafloor Cavern Room 9"
     },
     {
       "id": "TRAINER_SHELLY_SEAFLOOR_CAVERN",
@@ -16516,7 +17007,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Seafloor Cavern Room 9"
     },
     {
       "id": "TRAINER_MATT_SEAFLOOR_CAVERN",
@@ -16571,7 +17063,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Seafloor Cavern Room 9"
     }
   ],
   "MAP_SKY_PILLAR": [
@@ -16645,7 +17138,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Sky Pillar Top"
     }
   ],
   "MAP_SLATEPORT_CITY": [
@@ -16686,7 +17180,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Oceanic Museum 2F"
     },
     {
       "id": "TRAINER_GRUNT_MUSEUM_2",
@@ -16733,7 +17228,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Oceanic Museum 2F"
     }
   ],
   "MAP_SOOTOPOLIS_CITY": [
@@ -16812,7 +17308,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Champ House"
     },
     {
       "id": "TRAINER_MASTA_JANES",
@@ -16884,7 +17381,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Champ House"
     },
     {
       "id": "TRAINER_BEFOOLS",
@@ -16955,7 +17453,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Champ House"
     },
     {
       "id": "TRAINER_JUAN_1",
@@ -17027,7 +17526,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Gym 1F"
     },
     {
       "id": "TRAINER_ANDREA",
@@ -17048,7 +17548,8 @@
       "coords": [
         7,
         17
-      ]
+      ],
+      "level": "Gym B 1F"
     },
     {
       "id": "TRAINER_CRISSY",
@@ -17073,7 +17574,8 @@
       "coords": [
         4,
         8
-      ]
+      ],
+      "level": "Gym B 1F"
     },
     {
       "id": "TRAINER_BRIANNA",
@@ -17098,7 +17600,8 @@
       "coords": [
         12,
         7
-      ]
+      ],
+      "level": "Gym B 1F"
     },
     {
       "id": "TRAINER_CONNIE",
@@ -17119,7 +17622,8 @@
       "coords": [
         9,
         19
-      ]
+      ],
+      "level": "Gym B 1F"
     },
     {
       "id": "TRAINER_BRIDGET",
@@ -17140,7 +17644,8 @@
       "coords": [
         11,
         9
-      ]
+      ],
+      "level": "Gym B 1F"
     },
     {
       "id": "TRAINER_OLIVIA",
@@ -17165,7 +17670,8 @@
       "coords": [
         9,
         7
-      ]
+      ],
+      "level": "Gym B 1F"
     },
     {
       "id": "TRAINER_TIFFANY",
@@ -17190,7 +17696,8 @@
       "coords": [
         5,
         6
-      ]
+      ],
+      "level": "Gym B 1F"
     },
     {
       "id": "TRAINER_BETHANY",
@@ -17219,7 +17726,8 @@
       "coords": [
         7,
         8
-      ]
+      ],
+      "level": "Gym B 1F"
     },
     {
       "id": "TRAINER_ANNIKA",
@@ -17244,7 +17752,8 @@
       "coords": [
         10,
         13
-      ]
+      ],
+      "level": "Gym B 1F"
     },
     {
       "id": "TRAINER_DAPHNE",
@@ -17269,7 +17778,8 @@
       "coords": [
         6,
         13
-      ]
+      ],
+      "level": "Gym B 1F"
     },
     {
       "id": "TRAINER_NATN",
@@ -17341,7 +17851,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "House 5"
     },
     {
       "id": "TRAINER_MASTER_POUCINE",
@@ -17412,7 +17923,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "House 5"
     },
     {
       "id": "TRAINER_OBLIVION_WING",
@@ -17483,7 +17995,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "House 5"
     }
   ],
   "MAP_VERDANTURF_TOWN": [
@@ -17540,7 +18053,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "House"
     }
   ],
   "MAP_VICTORY_ROAD": [
@@ -17613,7 +18127,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Victory Road 1F"
     },
     {
       "id": "TRAINER_WALLY_VR_2",
@@ -17684,7 +18199,8 @@
       "coords": [
         0,
         0
-      ]
+      ],
+      "level": "Victory Road 1F"
     },
     {
       "id": "TRAINER_EDGAR",
@@ -17711,7 +18227,8 @@
       "coords": [
         15,
         30
-      ]
+      ],
+      "level": "Victory Road 1F"
     },
     {
       "id": "TRAINER_ALBERT",
@@ -17774,7 +18291,8 @@
       "coords": [
         2,
         18
-      ]
+      ],
+      "level": "Victory Road 1F"
     },
     {
       "id": "TRAINER_HOPE",
@@ -17837,7 +18355,8 @@
       "coords": [
         5,
         16
-      ]
+      ],
+      "level": "Victory Road 1F"
     },
     {
       "id": "TRAINER_QUINCY",
@@ -17864,7 +18383,8 @@
       "coords": [
         33,
         15
-      ]
+      ],
+      "level": "Victory Road 1F"
     },
     {
       "id": "TRAINER_KATELYNN",
@@ -17895,7 +18415,8 @@
       "coords": [
         32,
         24
-      ]
+      ],
+      "level": "Victory Road 1F"
     },
     {
       "id": "TRAINER_SAMUEL",
@@ -17958,7 +18479,8 @@
       "coords": [
         33,
         27
-      ]
+      ],
+      "level": "Victory Road B 1F"
     },
     {
       "id": "TRAINER_SHANNON",
@@ -17989,7 +18511,8 @@
       "coords": [
         26,
         14
-      ]
+      ],
+      "level": "Victory Road B 1F"
     },
     {
       "id": "TRAINER_MICHELLE",
@@ -18052,7 +18575,8 @@
       "coords": [
         17,
         25
-      ]
+      ],
+      "level": "Victory Road B 1F"
     },
     {
       "id": "TRAINER_MITCHELL",
@@ -18079,7 +18603,8 @@
       "coords": [
         14,
         16
-      ]
+      ],
+      "level": "Victory Road B 1F"
     },
     {
       "id": "TRAINER_HALLE",
@@ -18106,7 +18631,8 @@
       "coords": [
         15,
         21
-      ]
+      ],
+      "level": "Victory Road B 1F"
     },
     {
       "id": "TRAINER_VITO",
@@ -18137,7 +18663,8 @@
       "coords": [
         15,
         6
-      ]
+      ],
+      "level": "Victory Road B 2F"
     },
     {
       "id": "TRAINER_OWEN",
@@ -18168,7 +18695,8 @@
       "coords": [
         2,
         13
-      ]
+      ],
+      "level": "Victory Road B 2F"
     },
     {
       "id": "TRAINER_CAROLINE",
@@ -18232,7 +18760,8 @@
       "coords": [
         36,
         24
-      ]
+      ],
+      "level": "Victory Road B 2F"
     },
     {
       "id": "TRAINER_JULIE",
@@ -18263,7 +18792,8 @@
       "coords": [
         13,
         25
-      ]
+      ],
+      "level": "Victory Road B 2F"
     },
     {
       "id": "TRAINER_FELIX",
@@ -18326,7 +18856,8 @@
       "coords": [
         33,
         22
-      ]
+      ],
+      "level": "Victory Road B 2F"
     },
     {
       "id": "TRAINER_DIANNE",
@@ -18351,7 +18882,8 @@
       "coords": [
         23,
         20
-      ]
+      ],
+      "level": "Victory Road B 2F"
     }
   ]
 }

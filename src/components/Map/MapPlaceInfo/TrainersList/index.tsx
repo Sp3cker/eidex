@@ -1,7 +1,4 @@
 import { memo } from "react";
-import { useMapStore } from "@/stores/useMapStore";
-import { shallow } from "zustand/shallow";
-
 import { useTrainersData } from "./useTrainersData";
 import type { Trainer } from "@/data/map/trainers";
 
@@ -45,8 +42,8 @@ const TrainersList = memo(function TrainersList() {
   const { trainers, isLoading, error, selectedMap } = useTrainersData();
 
   return (
-    <nav className="rounded rounded-l-lg bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl">
-      <div className="sticky top-0 z-10 flex flex-col items-center justify-between border-b border-gray-200 p-1">
+    <nav className="h-full rounded rounded-l-lg bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl flex flex-col">
+      <div className="sticky top-0 z-10 flex flex-col items-center justify-between border-b border-gray-200 p-1 flex-shrink-0">
         <div className="flex w-full flex-row items-start justify-between pr-1">
           <div className="flex-1">
             <div className="flex flex-col items-start justify-between pb-1">
@@ -60,7 +57,7 @@ const TrainersList = memo(function TrainersList() {
         </div>
       </div>
 
-      <div className="h-full overflow-y-auto pb-20">
+      <div className="flex-1 overflow-y-auto">
         <div className="p-2">
           <div className="font-pkmnem flex flex-col gap-2 md:gap-1">
             {isLoading ? (
