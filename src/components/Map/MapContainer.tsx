@@ -64,20 +64,32 @@ const MapContainer = ({ children }: any) => {
   //   },
   // );
   useDrag(
-    ({ offset: [x, y], dragging }) => {
+    ({ offset: [x, y], dragging, velocity: [vx, vy] }) => {
       if (dragging) {
         setDragging(true);
-        api.start({ centerOffset: [x * 1.32, y * 1.12] });
+        
+        // Apply velocity-based smoothing - higher velocity = more responsive
+        const velocityFactor = Math.min(Math.max(Math.sqrt(vx * vx + vy * vy) / 10, 0.1), 1);
+        const smoothingFactor = 0.7 + (velocityFactor * 0.3); // Range: 0.7 to 1.0
+        
+        api.start({ 
+          centerOffset: [x * smoothingFactor, y * smoothingFactor],
+          config: {
+            mass: 1,
+            tension: velocityFactor > 0.5 ? 200 : 100, // More responsive at higher velocities
+            friction: velocityFactor > 0.5 ? 25 : 15,
+          }
+        });
       }
     },
     {
       target: targetRef,
       filterTaps: true,
       bounds: {
-        top: -200 ^ scale.toJSON(),
-        bottom: 200 ^ scale.toJSON(),
-        left: -400 ^ scale.toJSON(),
-        right: 500 ^ scale.toJSON(),
+        top: -200 * scale.get(),
+        bottom: 200 * scale.get(),
+        left: -400 * scale.get(),
+        right: 500 * scale.get(),
       },
       from: () => {
         return [centerOffset.get()[0], centerOffset.get()[1]];
@@ -98,7 +110,7 @@ const MapContainer = ({ children }: any) => {
         style={{
           touchAction: "none",
           cursor: "move",
-          //@ts-ignore
+          // @ts-expect-error - React Spring transform typing issue
           transform: to([centerOffset, scale], ([x, y], scale) => {
             return `translate3d(${x}px,${y}px, 0) scale(${scale})`;
           }),
