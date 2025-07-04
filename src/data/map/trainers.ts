@@ -2,7 +2,14 @@
 let trainersData: Record<string, Trainer[]> | null = null;
 let isLoading = false;
 let loadPromise: Promise<Record<string, Trainer[]>> | null = null;
-
+type PartyMon = {
+  moves?: string[];
+  lvl: number;
+  species: string;
+  nature?: string;
+  ability?: string;
+  heldItem?: string;
+};
 /** Trainer data loaded from `trainers.json` */
 export interface Trainer {
   id: string;
@@ -13,6 +20,7 @@ export interface Trainer {
   doubleBattle: boolean;
   aiFlags: string[];
   sprite: string;
+  level: string; // Can be used to group into level encountered at
   party: any[];
   youPicked?: "Treecko" | "Torchic" | "Mudkip"; // Optional, only for rival trainers
 }

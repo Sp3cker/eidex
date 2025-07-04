@@ -188,7 +188,7 @@ input[type="number"] {
   display: block;
   image-rendering: pixelated;
   transform-origin: top left;
-  animation: trainer-spritesheet 1s steps(4) infinite;
+  animation: trainer-spritesheet 0.93s steps(4) infinite;
 }
 @keyframes trainer-spritesheet {
   from {

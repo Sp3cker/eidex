@@ -1,12 +1,13 @@
 import { memo } from "react";
-import { useTrainersData } from "./useTrainersData";
-import type { Trainer } from "@/data/map/trainers";
+import { DisplayTrainer, useTrainersData } from "./useTrainersData";
+
+import useMapStore from "@/stores/useMapStore";
 
 // Component to render individual trainer item
 const TrainerItem = memo(function TrainerItem({
   trainer,
 }: {
-  trainer: Trainer;
+  trainer: DisplayTrainer;
 }) {
   return (
     <div className="white-box w-full rounded-lg border p-3 text-left transition-colors hover:bg-gray-50">
@@ -16,7 +17,7 @@ const TrainerItem = memo(function TrainerItem({
             <img src={`/trainers/48/${trainer.sprite}`} />
           </div>
           <div>
-            <h3 className="text-lg font-bold leading-tight">
+            <h3 className="font-calamity text-sm font-bold leading-tight">
               {trainer.trainerName}
             </h3>
             {/* <p className="text-sm text-gray-600">{trainer.}</p> */}
@@ -37,26 +38,33 @@ const TrainerItem = memo(function TrainerItem({
     </div>
   );
 });
+const TrainersOnLevelList = ({
+  levelLabel,
+  trainers,
+}: {
+  trainers: DisplayTrainer[];
+  levelLabel: string;
+}) => {
+  return (
+    <section>
+      <h3 className="cool-font md:text-md py-2 pb-1 text-xs/4 font-bold tracking-tight text-stone-800">
+        {levelLabel}
+      </h3>
+      {trainers.length > 0 &&
+        trainers.map((trainer) => (
+          <TrainerItem key={trainer.script} trainer={trainer} />
+        ))}
+    </section>
+  );
+};
 
 const TrainersList = memo(function TrainersList() {
+  const isTrainersListOpen = useMapStore((state) => state.isTrainersListOpen);
   const { trainers, isLoading, error, selectedMap } = useTrainersData();
 
+  const numTrainers = Object.keys(trainers);
   return (
-    <nav className="h-full rounded rounded-l-lg bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl flex flex-col">
-      <div className="sticky top-0 z-10 flex flex-col items-center justify-between border-b border-gray-200 p-1 flex-shrink-0">
-        <div className="flex w-full flex-row items-start justify-between pr-1">
-          <div className="flex-1">
-            <div className="flex flex-col items-start justify-between pb-1">
-              <p className="font-pkmnem text-md text-neutral-500">
-                {selectedMap
-                  ? `${trainers.length} trainers`
-                  : "No location selected"}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <nav className="flex h-full flex-col rounded rounded-l-lg bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl">
       <div className="flex-1 overflow-y-auto">
         <div className="p-2">
           <div className="font-pkmnem flex flex-col gap-2 md:gap-1">
@@ -72,13 +80,18 @@ const TrainersList = memo(function TrainersList() {
               <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
                 <p>Select a location to view trainers</p>
               </div>
-            ) : trainers.length === 0 ? (
+            ) : numTrainers.length === 0 ? (
               <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
                 <p>No trainers found in this location</p>
               </div>
             ) : (
-              trainers.map((trainer) => (
-                <TrainerItem key={trainer.id} trainer={trainer} />
+              isTrainersListOpen &&
+              numTrainers.map((level) => (
+                <TrainersOnLevelList
+                  key={level}
+                  levelLabel={level}
+                  trainers={trainers[level]}
+                />
               ))
             )}
           </div>
