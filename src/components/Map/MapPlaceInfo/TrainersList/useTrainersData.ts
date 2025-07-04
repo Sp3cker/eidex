@@ -96,7 +96,6 @@ export const useTrainersData = () => {
 
   return {
     trainers,
-
     isLoading,
     error,
     selectedMap,
@@ -117,11 +116,13 @@ export function groupTrainersByLevel(
       if (!groups[level]) {
         groups[level] = [];
       }
-      
+
       // Insert trainer in sorted position (Rival first, then alphabetical)
       if (trainer.trainerName === "Rival") {
         // Rival always goes first - find first non-Rival position
-        const firstNonRivalIndex = groups[level].findIndex(existing => existing.trainerName !== "Rival");
+        const firstNonRivalIndex = groups[level].findIndex(
+          (existing) => existing.trainerName !== "Rival",
+        );
         if (firstNonRivalIndex === -1) {
           groups[level].push(trainer);
         } else {
@@ -129,17 +130,19 @@ export function groupTrainersByLevel(
         }
       } else {
         // For non-Rivals, find correct alphabetical position after any Rivals
-        const insertIndex = groups[level].findIndex(existing => 
-          existing.trainerName !== "Rival" && existing.trainerName > trainer.trainerName
+        const insertIndex = groups[level].findIndex(
+          (existing) =>
+            existing.trainerName !== "Rival" &&
+            existing.trainerName > trainer.trainerName,
         );
-        
+
         if (insertIndex === -1) {
           groups[level].push(trainer);
         } else {
           groups[level].splice(insertIndex, 0, trainer);
         }
       }
-      
+
       return groups;
     },
     {} as Record<string, DisplayTrainer[]>,
@@ -153,7 +156,7 @@ export function groupTrainersByLevel(
  * @param trainerSortFn - Optional function to sort trainers within each level (defaults to alphabetical by name)
  * @returns Object with sorted level keys and sorted arrays of trainers as values
  */
-export function groupAndSortTrainersByLevel(
+function groupAndSortTrainersByLevel(
   trainers: DisplayTrainer[],
   levelSortFn?: (a: string, b: string) => number,
   trainerSortFn?: (a: DisplayTrainer, b: DisplayTrainer) => number,

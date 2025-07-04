@@ -21,8 +21,9 @@ export interface Trainer {
   aiFlags: string[];
   sprite: string;
   level: string; // Can be used to group into level encountered at
-  party: any[];
+  party: PartyMon[];
   youPicked?: "Treecko" | "Torchic" | "Mudkip"; // Optional, only for rival trainers
+  rematch?: true; // If battle is rematch.
 }
 // Add more trainer properties as needed
 

@@ -174,13 +174,14 @@
           "species": "SPECIES_GRANBULL"
         }
       ],
-      "script": "AbandonedShip_Rooms_1F_EventScript_Thalia",
+      "script": "AbandonedShip_Rooms_1F_EventScript_ThaliaRematch",
       "sprite": "beauty.png",
       "coords": [
-        10,
-        11
+        0,
+        0
       ],
-      "level": "Abandoned Ship Rooms 1F"
+      "level": "Abandoned Ship Rooms 1F",
+      "rematch": true
     }
   ],
   "MAP_AQUA_HIDEOUT": [
@@ -397,7 +398,7 @@
         }
       ],
       "script": "AquaHideout_B2F_EventScript_Archie",
-      "sprite": "archie.png",
+      "sprite": "archie.webp",
       "coords": [
         0,
         0
@@ -554,7 +555,7 @@
         }
       ],
       "script": "DewfordTown_Gym_EventScript_Brawly",
-      "sprite": "brawly.png",
+      "sprite": "brawly.webp",
       "coords": [
         0,
         0
@@ -1418,7 +1419,7 @@
         }
       ],
       "script": "EverGrandeCity_EventScript_BattleDawn",
-      "sprite": "dawn.png",
+      "sprite": "dawn.webp",
       "coords": [
         0,
         0
@@ -1520,7 +1521,7 @@
         }
       ],
       "script": "EverGrandeCity_EventScript_BattleVolkner",
-      "sprite": "volkner.png",
+      "sprite": "volkner.webp",
       "coords": [
         0,
         0
@@ -1589,7 +1590,7 @@
         0,
         0
       ],
-      "level": "Ever Grande Champions Room"
+      "level": "Pokémon League"
     },
     {
       "id": "TRAINER_CYNTHIA",
@@ -1686,12 +1687,12 @@
         }
       ],
       "script": "EverGrandeCity_DrakesRoom_EventScript_Cynthia",
-      "sprite": "cynthia.png",
+      "sprite": "cynthia.webp",
       "coords": [
         0,
         0
       ],
-      "level": "Ever Grande Drakes Room"
+      "level": "Pokémon League"
     },
     {
       "id": "TRAINER_GLACIA2",
@@ -1788,12 +1789,12 @@
         }
       ],
       "script": "EverGrandeCity_GlaciasRoom_EventScript_Glacia",
-      "sprite": "glacia.png",
+      "sprite": "glacia.webp",
       "coords": [
         0,
         0
       ],
-      "level": "Ever Grande Glacias Room"
+      "level": "Pokémon League"
     },
     {
       "id": "TRAINER_GLACIA1",
@@ -1895,7 +1896,7 @@
         0,
         0
       ],
-      "level": "Ever Grande Glacias Room"
+      "level": "Pokémon League"
     },
     {
       "id": "TRAINER_PHOEBE2",
@@ -1992,12 +1993,12 @@
         }
       ],
       "script": "EverGrandeCity_PhoebesRoom_EventScript_Phoebe",
-      "sprite": "phoebe.png",
+      "sprite": "phoebe.webp",
       "coords": [
         0,
         0
       ],
-      "level": "Ever Grande Phoebes Room"
+      "level": "Pokémon League"
     },
     {
       "id": "TRAINER_PHOEBE1",
@@ -2099,7 +2100,7 @@
         0,
         0
       ],
-      "level": "Ever Grande Phoebes Room"
+      "level": "Pokémon League"
     },
     {
       "id": "TRAINER_SIDNEY2",
@@ -2197,12 +2198,12 @@
         }
       ],
       "script": "EverGrandeCity_SidneysRoom_EventScript_Sidney",
-      "sprite": "sidney.png",
+      "sprite": "sidney.webp",
       "coords": [
         0,
         0
       ],
-      "level": "Ever Grande Sidneys Room"
+      "level": "Pokémon League"
     },
     {
       "id": "TRAINER_SIDNEY1",
@@ -2305,7 +2306,7 @@
         0,
         0
       ],
-      "level": "Ever Grande Sidneys Room"
+      "level": "Pokémon League"
     }
   ],
   "MAP_FORTREE_CITY": [
@@ -2507,7 +2508,7 @@
         }
       ],
       "script": "FortreeCity_CreatorHouse_EventScript_BattleCap",
-      "sprite": "cooltrainer_m.png",
+      "sprite": "man_4.webp",
       "coords": [
         0,
         0
@@ -2712,7 +2713,7 @@
         }
       ],
       "script": "FortreeCity_Gym_EventScript_Winona",
-      "sprite": "winona.png",
+      "sprite": "winona.webp",
       "coords": [
         0,
         0
@@ -2941,13 +2942,14 @@
           "species": "SPECIES_DODRIO"
         }
       ],
-      "script": "JaggedPass_EventScript_Diana",
+      "script": "JaggedPass_EventScript_DianaRematch",
       "sprite": "picnicker.png",
       "coords": [
-        9,
-        21
+        0,
+        0
       ],
-      "level": "Jagged Pass"
+      "level": "Jagged Pass",
+      "rematch": true
     },
     {
       "id": "TRAINER_ETHAN_1",
@@ -2963,13 +2965,14 @@
           "species": "SPECIES_PERSIAN_ALOLA"
         }
       ],
-      "script": "JaggedPass_EventScript_Ethan",
+      "script": "JaggedPass_EventScript_EthanRematch",
       "sprite": "camper.png",
       "coords": [
-        18,
-        25
+        0,
+        0
       ],
-      "level": "Jagged Pass"
+      "level": "Jagged Pass",
+      "rematch": true
     },
     {
       "id": "TRAINER_AUTUMN",
@@ -3089,7 +3092,7 @@
         }
       ],
       "script": "JaggedPass_EventScript_BattleMaylene",
-      "sprite": "maylene.png",
+      "sprite": "maylene.webp",
       "coords": [
         0,
         0
@@ -3194,7 +3197,7 @@
         }
       ],
       "script": "LavaridgeTown_Gym_1F_EventScript_Flannery",
-      "sprite": "flannery.png",
+      "sprite": "flannery.webp",
       "coords": [
         0,
         0
@@ -3690,7 +3693,7 @@
         }
       ],
       "script": "MagmaHideout_4F_EventScript_Maxie",
-      "sprite": "maxie.png",
+      "sprite": "maxie.webp",
       "coords": [
         0,
         0
@@ -3767,7 +3770,7 @@
         }
       ],
       "script": "MagmaHideout_EventScript_BackToBackScene",
-      "sprite": "courtney.png",
+      "sprite": "magma_member_f.webp",
       "coords": [
         0,
         0
@@ -3843,7 +3846,7 @@
         }
       ],
       "script": "MagmaHideout_EventScript_BackToBackScene",
-      "sprite": "magma_admin.png",
+      "sprite": "magma_member_f.webp",
       "coords": [
         0,
         0
@@ -3921,7 +3924,7 @@
         }
       ],
       "script": "MauvilleCity_EventScript_BattleWally",
-      "sprite": "wally.png",
+      "sprite": "wally.webp",
       "coords": [
         0,
         0
@@ -4010,7 +4013,7 @@
         }
       ],
       "script": "MauvilleCity_Gym_EventScript_Wattson",
-      "sprite": "wattson.png",
+      "sprite": "wattson.webp",
       "coords": [
         0,
         0
@@ -4169,13 +4172,14 @@
           "species": "SPECIES_GOODRA_HISUI"
         }
       ],
-      "script": "MeteorFalls_1F_2R_EventScript_Nicolas",
+      "script": "MeteorFalls_1F_2R_EventScript_RematchNicolas",
       "sprite": "man_3.png",
       "coords": [
-        13,
-        2
+        0,
+        0
       ],
-      "level": "Meteor Falls 1F 2r"
+      "level": "Meteor Falls 1F 2r",
+      "rematch": true
     },
     {
       "id": "TRAINER_JOHN_AND_JAY_1",
@@ -4314,7 +4318,7 @@
         }
       ],
       "script": "MossdeepCity_BetaTesterHouse_EventScript_BattleSunbird",
-      "sprite": "beauty_firered.png",
+      "sprite": "woman_4.webp",
       "coords": [
         0,
         0
@@ -4417,7 +4421,7 @@
         }
       ],
       "script": "MossdeepCity_BetaTesterHouse_EventScript_BattleSuneal",
-      "sprite": "TRAINER_PIC_SUPERNERD_FIRERED",
+      "sprite": "scientist_1.webp",
       "coords": [
         0,
         0
@@ -4519,7 +4523,7 @@
         }
       ],
       "script": "MossdeepCity_BetaTesterHouse_EventScript_BattleDollaMike",
-      "sprite": "cooltrainer_m.png",
+      "sprite": "man_4.webp",
       "coords": [
         0,
         0
@@ -4582,7 +4586,7 @@
         }
       ],
       "script": "MossdeepCity_Gym_EventScript_TateAndLiza",
-      "sprite": "tate.png",
+      "sprite": "tate.webp",
       "coords": [
         0,
         0
@@ -4950,7 +4954,7 @@
         }
       ],
       "script": "MtChimney_EventScript_Maxie",
-      "sprite": "maxie.png",
+      "sprite": "maxie.webp",
       "coords": [
         0,
         0
@@ -5129,13 +5133,14 @@
           "species": "SPECIES_MIENSHAO"
         }
       ],
-      "script": "MtChimney_EventScript_Shelby",
+      "script": "MtChimney_EventScript_RematchShelby",
       "sprite": "expert_f.png",
       "coords": [
-        16,
-        18
+        0,
+        0
       ],
-      "level": "Mt Chimney"
+      "level": "Mt Chimney",
+      "rematch": true
     },
     {
       "id": "TRAINER_MELISSA",
@@ -5282,13 +5287,14 @@
           "species": "SPECIES_GEODUDE"
         }
       ],
-      "script": "MtChimney_EventScript_Sawyer",
+      "script": "MtChimney_EventScript_SawyerRematch",
       "sprite": "hiker.png",
       "coords": [
-        7,
-        7
+        0,
+        0
       ],
-      "level": "Mt Chimney"
+      "level": "Mt Chimney",
+      "rematch": true
     }
   ],
   "MAP_MT_PYRE": [
@@ -5454,13 +5460,14 @@
           "species": "SPECIES_MAROWAK_ALOLA"
         }
       ],
-      "script": "MtPyre_3F_EventScript_Gabrielle",
+      "script": "MtPyre_3F_EventScript_RematchGabrielle",
       "sprite": "woman_2.png",
       "coords": [
-        6,
-        4
+        0,
+        0
       ],
-      "level": "Mt Pyre 3F"
+      "level": "Mt Pyre 3F",
+      "rematch": true
     },
     {
       "id": "TRAINER_ATSUSHI",
@@ -5503,7 +5510,7 @@
         }
       ],
       "script": "MtPyre_4F_EventScript_Tasha",
-      "sprite": "maniac.png",
+      "sprite": "maniac.webp",
       "coords": [
         0,
         0
@@ -5530,13 +5537,14 @@
           ]
         }
       ],
-      "script": "MtPyre_6F_EventScript_Valerie",
+      "script": "MtPyre_6F_EventScript_RematchValerie",
       "sprite": "hex_maniac.png",
       "coords": [
-        6,
-        3
+        0,
+        0
       ],
-      "level": "Mt Pyre 6F"
+      "level": "Mt Pyre 6F",
+      "rematch": true
     },
     {
       "id": "TRAINER_CEDRIC",
@@ -5858,7 +5866,7 @@
         }
       ],
       "script": "PetalburgWoods_EventScript_DevonResearcherLeft",
-      "sprite": "aqua_grunt_m.png",
+      "sprite": "aqua_member_m.webp",
       "coords": [
         0,
         0
@@ -5917,13 +5925,14 @@
           "species": "SPECIES_SIZZLIPEDE"
         }
       ],
-      "script": "PetalburgWoods_EventScript_James",
+      "script": "PetalburgWoods_EventScript_JamesRematch",
       "sprite": "bug_catcher.png",
       "coords": [
-        4,
-        14
+        0,
+        0
       ],
-      "level": "Woods"
+      "level": "Woods",
+      "rematch": true
     },
     {
       "id": "TRAINER_GARDENIA",
@@ -6007,7 +6016,7 @@
         }
       ],
       "script": "PetalburgWoods_EventScript_BattleGardenia",
-      "sprite": "gardenia.png",
+      "sprite": "gardenia.webp",
       "coords": [
         0,
         0
@@ -6119,13 +6128,14 @@
           "species": "SPECIES_POOCHYENA"
         }
       ],
-      "script": "Route102_EventScript_Calvin",
+      "script": "Route102_EventScript_CalvinRematch",
       "sprite": "youngster.png",
       "coords": [
-        33,
-        14
+        0,
+        0
       ],
-      "level": "Route 102"
+      "level": "Route 102",
+      "rematch": true
     },
     {
       "id": "TRAINER_RICK",
@@ -6427,13 +6437,14 @@
           "species": "SPECIES_FEAROW"
         }
       ],
-      "script": "Route103_EventScript_Miguel",
+      "script": "Route103_EventScript_MiguelRematch",
       "sprite": "pokefan_m.png",
       "coords": [
-        56,
-        13
+        0,
+        0
       ],
-      "level": "Route 103"
+      "level": "Route 103",
+      "rematch": true
     },
     {
       "id": "TRAINER_MARCOS",
@@ -6619,13 +6630,14 @@
           ]
         }
       ],
-      "script": "Route104_EventScript_Haley",
+      "script": "Route104_EventScript_RematchHaley",
       "sprite": "lass.png",
       "coords": [
-        31,
-        24
+        0,
+        0
       ],
-      "level": "Route 104"
+      "level": "Route 104",
+      "rematch": true
     },
     {
       "id": "TRAINER_WINSTON_1",
@@ -6642,13 +6654,14 @@
           "heldItem": "ITEM_NUGGET"
         }
       ],
-      "script": "Route104_EventScript_Winston",
+      "script": "Route104_EventScript_RematchWinston",
       "sprite": "rich_boy.png",
       "coords": [
-        21,
-        25
+        0,
+        0
       ],
-      "level": "Route 104"
+      "level": "Route 104",
+      "rematch": true
     },
     {
       "id": "TRAINER_CINDY_1",
@@ -6665,13 +6678,14 @@
           "heldItem": "ITEM_NUGGET"
         }
       ],
-      "script": "Route104_EventScript_Cindy",
+      "script": "Route104_EventScript_RematchCindy",
       "sprite": "woman_2.png",
       "coords": [
-        11,
-        44
+        0,
+        0
       ],
-      "level": "Route 104"
+      "level": "Route 104",
+      "rematch": true
     },
     {
       "id": "TRAINER_GINA_AND_MIA_1",
@@ -6950,13 +6964,14 @@
           "species": "SPECIES_EXCADRILL"
         }
       ],
-      "script": "Route105_EventScript_Andres",
+      "script": "Route105_EventScript_AndresRematch",
       "sprite": "hiker.png",
       "coords": [
-        4,
-        58
+        0,
+        0
       ],
-      "level": "Route 105"
+      "level": "Route 105",
+      "rematch": true
     }
   ],
   "MAP_ROUTE106": [
@@ -7030,13 +7045,14 @@
           "species": "SPECIES_KRABBY"
         }
       ],
-      "script": "Route106_EventScript_Elliot",
+      "script": "Route106_EventScript_ElliotRematch",
       "sprite": "fisherman.png",
       "coords": [
-        51,
-        14
+        0,
+        0
       ],
-      "level": "Route 106"
+      "level": "Route 106",
+      "rematch": true
     },
     {
       "id": "TRAINER_NED",
@@ -7114,13 +7130,14 @@
           "species": "SPECIES_RHYDON"
         }
       ],
-      "script": "Route107_EventScript_Tony",
+      "script": "Route107_EventScript_TonyRematch",
       "sprite": "camper.png",
       "coords": [
-        36,
-        5
+        0,
+        0
       ],
-      "level": "Route 107"
+      "level": "Route 107",
+      "rematch": true
     },
     {
       "id": "TRAINER_DENISE",
@@ -7382,13 +7399,14 @@
           "species": "SPECIES_MALAMAR"
         }
       ],
-      "script": "Route108_EventScript_Cory",
+      "script": "Route108_EventScript_CoryRematch",
       "sprite": "sailor.png",
       "coords": [
-        43,
-        5
+        0,
+        0
       ],
-      "level": "Route 108"
+      "level": "Route 108",
+      "rematch": true
     }
   ],
   "MAP_ROUTE109": [
@@ -7513,13 +7531,14 @@
           ]
         }
       ],
-      "script": "Route109_EventScript_Ricky",
+      "script": "Route109_EventScript_RickyRematch",
       "sprite": "tuber_m.png",
       "coords": [
-        19,
-        10
+        0,
+        0
       ],
-      "level": "Route 109"
+      "level": "Route 109",
+      "rematch": true
     },
     {
       "id": "TRAINER_LOLA_1",
@@ -7539,13 +7558,14 @@
           "species": "SPECIES_SEADRA"
         }
       ],
-      "script": "Route109_EventScript_Lola",
+      "script": "Route109_EventScript_LolaRematch",
       "sprite": "tuber_f.png",
       "coords": [
-        22,
-        7
+        0,
+        0
       ],
-      "level": "Route 109"
+      "level": "Route 109",
+      "rematch": true
     },
     {
       "id": "TRAINER_AUSTINA",
@@ -8056,13 +8076,14 @@
           ]
         }
       ],
-      "script": "Route110_EventScript_Edwin",
+      "script": "Route110_EventScript_EdwinRematch",
       "sprite": "maniac.png",
       "coords": [
-        32,
-        46
+        0,
+        0
       ],
-      "level": "Route 110"
+      "level": "Route 110",
+      "rematch": true
     },
     {
       "id": "TRAINER_DALE",
@@ -8184,13 +8205,14 @@
           "species": "SPECIES_SNEASEL"
         }
       ],
-      "script": "Route110_EventScript_Benjamin",
+      "script": "Route110_EventScript_BenjaminRematch",
       "sprite": "cycling_triathlete_m.png",
       "coords": [
-        16,
-        55
+        0,
+        0
       ],
-      "level": "Route 110"
+      "level": "Route 110",
+      "rematch": true
     },
     {
       "id": "TRAINER_JASMINE",
@@ -8240,13 +8262,14 @@
           "species": "SPECIES_CORSOLA"
         }
       ],
-      "script": "Route110_EventScript_Abigail",
+      "script": "Route110_EventScript_AbigailRematch",
       "sprite": "cycling_triathlete_f.png",
       "coords": [
-        30,
-        31
+        0,
+        0
       ],
-      "level": "Route 110"
+      "level": "Route 110",
+      "rematch": true
     },
     {
       "id": "TRAINER_ISABEL_1",
@@ -8290,13 +8313,14 @@
           ]
         }
       ],
-      "script": "Route110_EventScript_Isabel",
+      "script": "Route110_EventScript_IsabelRematch",
       "sprite": "pokefan_f.png",
       "coords": [
-        10,
-        76
+        0,
+        0
       ],
-      "level": "Route 110"
+      "level": "Route 110",
+      "rematch": true
     },
     {
       "id": "TRAINER_TIMMY",
@@ -9165,7 +9189,7 @@
         }
       ],
       "script": "Route110_EventScript_Wally",
-      "sprite": "wally.png",
+      "sprite": "wally.webp",
       "coords": [
         0,
         0
@@ -10786,13 +10810,14 @@
           ]
         }
       ],
-      "script": "Route111_EventScript_Dusty",
+      "script": "Route111_EventScript_RematchDusty",
       "sprite": "hiker.png",
       "coords": [
-        32,
-        96
+        0,
+        0
       ],
-      "level": "Route 111"
+      "level": "Route 111",
+      "rematch": true
     },
     {
       "id": "TRAINER_TRAVIS",
@@ -10874,13 +10899,14 @@
           "species": "SPECIES_BEHEEYEM"
         }
       ],
-      "script": "Route111_EventScript_Wilton",
+      "script": "Route111_EventScript_RematchWilton",
       "sprite": "man_3.png",
       "coords": [
-        9,
-        27
+        0,
+        0
       ],
-      "level": "Route 111"
+      "level": "Route 111",
+      "rematch": true
     },
     {
       "id": "TRAINER_BROOKE_1",
@@ -10902,13 +10928,14 @@
           "species": "SPECIES_GREEDENT"
         }
       ],
-      "script": "Route111_EventScript_Brooke",
+      "script": "Route111_EventScript_RematchBrooke",
       "sprite": "woman_5.png",
       "coords": [
-        11,
-        11
+        0,
+        0
       ],
-      "level": "Route 111"
+      "level": "Route 111",
+      "rematch": true
     },
     {
       "id": "TRAINER_HAYDEN",
@@ -11403,13 +11430,14 @@
           ]
         }
       ],
-      "script": "Route112_EventScript_Trent",
+      "script": "Route112_EventScript_RematchTrent",
       "sprite": "hiker.png",
       "coords": [
-        13,
-        40
+        0,
+        0
       ],
-      "level": "Route 112"
+      "level": "Route 112",
+      "rematch": true
     },
     {
       "id": "TRAINER_LARRY",
@@ -11649,13 +11677,14 @@
           ]
         }
       ],
-      "script": "Route113_EventScript_Madeline",
+      "script": "Route113_EventScript_RematchMadeline",
       "sprite": "woman_5.png",
       "coords": [
-        49,
-        12
+        0,
+        0
       ],
-      "level": "Route 113"
+      "level": "Route 113",
+      "rematch": true
     },
     {
       "id": "TRAINER_LAO_1",
@@ -11679,13 +11708,14 @@
           "species": "SPECIES_SPIDOPS"
         }
       ],
-      "script": "Route113_EventScript_Lao",
+      "script": "Route113_EventScript_RematchLao",
       "sprite": "ninja_boy.png",
       "coords": [
-        29,
-        6
+        0,
+        0
       ],
-      "level": "Route 113"
+      "level": "Route 113",
+      "rematch": true
     },
     {
       "id": "TRAINER_LUNG",
@@ -12041,13 +12071,14 @@
           "species": "SPECIES_LICKILICKY"
         }
       ],
-      "script": "Route114_EventScript_Steve",
+      "script": "Route114_EventScript_RematchSteve",
       "sprite": "maniac.png",
       "coords": [
-        20,
-        56
+        0,
+        0
       ],
-      "level": "Route 114"
+      "level": "Route 114",
+      "rematch": true
     },
     {
       "id": "TRAINER_BERNIE_1",
@@ -12067,13 +12098,14 @@
           "species": "SPECIES_GOURGEIST"
         }
       ],
-      "script": "Route114_EventScript_Bernie",
+      "script": "Route114_EventScript_RematchBernie",
       "sprite": "man_5.png",
       "coords": [
-        30,
-        58
+        0,
+        0
       ],
-      "level": "Route 114"
+      "level": "Route 114",
+      "rematch": true
     },
     {
       "id": "TRAINER_CLAUDE",
@@ -12393,13 +12425,14 @@
           "species": "SPECIES_HAXORUS"
         }
       ],
-      "script": "Route115_EventScript_Timothy",
+      "script": "Route115_EventScript_RematchTimothy",
       "sprite": "expert_m.png",
       "coords": [
-        5,
-        15
+        0,
+        0
       ],
-      "level": "Route 115"
+      "level": "Route 115",
+      "rematch": true
     },
     {
       "id": "TRAINER_KOICHI",
@@ -12441,13 +12474,14 @@
           "species": "SPECIES_MACHAMP"
         }
       ],
-      "script": "Route115_EventScript_Nob",
+      "script": "Route115_EventScript_RematchNob",
       "sprite": "black_belt.png",
       "coords": [
-        27,
-        53
+        0,
+        0
       ],
-      "level": "Route 115"
+      "level": "Route 115",
+      "rematch": true
     },
     {
       "id": "TRAINER_CYNDY_1",
@@ -12467,13 +12501,14 @@
           "species": "SPECIES_ALCREMIE"
         }
       ],
-      "script": "Route115_EventScript_Cyndy",
+      "script": "Route115_EventScript_RematchCyndy",
       "sprite": "girl_3.png",
       "coords": [
-        15,
-        50
+        0,
+        0
       ],
-      "level": "Route 115"
+      "level": "Route 115",
+      "rematch": true
     },
     {
       "id": "TRAINER_HECTOR",
@@ -12687,13 +12722,14 @@
           "species": "SPECIES_MARACTUS"
         }
       ],
-      "script": "Route116_EventScript_Jerry",
+      "script": "Route116_EventScript_RematchJerry",
       "sprite": "school_kid_m.png",
       "coords": [
-        28,
-        8
+        0,
+        0
       ],
-      "level": "Route 116"
+      "level": "Route 116",
+      "rematch": true
     },
     {
       "id": "TRAINER_CLARK",
@@ -12753,13 +12789,14 @@
           "species": "SPECIES_NIDORAN_F"
         }
       ],
-      "script": "Route116_EventScript_Karen",
+      "script": "Route116_EventScript_RematchKaren",
       "sprite": "girl_3.png",
       "coords": [
-        22,
-        16
+        0,
+        0
       ],
-      "level": "Route 116"
+      "level": "Route 116",
+      "rematch": true
     },
     {
       "id": "TRAINER_SARAH",
@@ -12922,7 +12959,7 @@
         }
       ],
       "script": "Route116_EventScript_BattleRoark",
-      "sprite": "roark.png",
+      "sprite": "roark.webp",
       "coords": [
         0,
         0
@@ -13012,13 +13049,14 @@
           ]
         }
       ],
-      "script": "Route117_EventScript_Ezekiel",
+      "script": "Route117_EventScript_RematchEzekiel",
       "sprite": "man_4.png",
       "coords": [
-        25,
-        11
+        0,
+        0
       ],
-      "level": "Route 117"
+      "level": "Route 117",
+      "rematch": true
     },
     {
       "id": "TRAINER_LYDIA_1",
@@ -13101,13 +13139,14 @@
           ]
         }
       ],
-      "script": "Route117_EventScript_Lydia",
+      "script": "Route117_EventScript_RematchLydia",
       "sprite": "woman_2.png",
       "coords": [
-        23,
-        5
+        0,
+        0
       ],
-      "level": "Route 117"
+      "level": "Route 117",
+      "rematch": true
     },
     {
       "id": "TRAINER_DYLAN_1",
@@ -13127,13 +13166,14 @@
           "species": "SPECIES_SAWK"
         }
       ],
-      "script": "Route117_EventScript_Dylan",
+      "script": "Route117_EventScript_RematchDylan",
       "sprite": "running_triathlete_m.png",
       "coords": [
-        38,
-        16
+        0,
+        0
       ],
-      "level": "Route 117"
+      "level": "Route 117",
+      "rematch": true
     },
     {
       "id": "TRAINER_MARIA_1",
@@ -13153,13 +13193,14 @@
           "species": "SPECIES_THROH"
         }
       ],
-      "script": "Route117_EventScript_Maria",
+      "script": "Route117_EventScript_RematchMaria",
       "sprite": "running_triathlete_f.png",
       "coords": [
-        46,
-        17
+        0,
+        0
       ],
-      "level": "Route 117"
+      "level": "Route 117",
+      "rematch": true
     },
     {
       "id": "TRAINER_ANNA_AND_MEG_1",
@@ -13331,7 +13372,7 @@
         }
       ],
       "script": "Route117_EventScript_BattleFantina",
-      "sprite": "fantina.png",
+      "sprite": "fantina.webp",
       "coords": [
         0,
         0
@@ -13358,13 +13399,14 @@
           "species": "SPECIES_GARBODOR"
         }
       ],
-      "script": "Route118_EventScript_Rose",
+      "script": "Route118_EventScript_RematchRose",
       "sprite": "woman_2.png",
       "coords": [
-        7,
-        12
+        0,
+        0
       ],
-      "level": "Route 118"
+      "level": "Route 118",
+      "rematch": true
     },
     {
       "id": "TRAINER_BARNY",
@@ -13440,13 +13482,14 @@
           "species": "SPECIES_OINKOLOGNE"
         }
       ],
-      "script": "Route118_EventScript_Dalton",
+      "script": "Route118_EventScript_RematchDalton",
       "sprite": "man_5.png",
       "coords": [
-        17,
-        11
+        0,
+        0
       ],
-      "level": "Route 118"
+      "level": "Route 118",
+      "rematch": true
     },
     {
       "id": "TRAINER_PERRY",
@@ -13621,7 +13664,7 @@
         }
       ],
       "script": "Route118_EventScript_BattleWake",
-      "sprite": "wake.png",
+      "sprite": "wake.webp",
       "coords": [
         0,
         0
@@ -14415,13 +14458,14 @@
           "species": "SPECIES_BRELOOM"
         }
       ],
-      "script": "Route119_EventScript_Jackson",
+      "script": "Route119_EventScript_RematchJackson",
       "sprite": "camper.png",
       "coords": [
-        7,
-        74
+        0,
+        0
       ],
-      "level": "Route 119"
+      "level": "Route 119",
+      "rematch": true
     },
     {
       "id": "TRAINER_CATHERINE_1",
@@ -14443,13 +14487,14 @@
           "species": "SPECIES_VILEPLUME"
         }
       ],
-      "script": "Route119_EventScript_Catherine",
+      "script": "Route119_EventScript_RematchCatherine",
       "sprite": "picnicker.png",
       "coords": [
-        35,
-        83
+        0,
+        0
       ],
-      "level": "Route 119"
+      "level": "Route 119",
+      "rematch": true
     },
     {
       "id": "TRAINER_HUGH",
@@ -15012,13 +15057,14 @@
           "species": "SPECIES_CRAMORANT"
         }
       ],
-      "script": "Route120_EventScript_Robert",
+      "script": "Route120_EventScript_RematchRobert",
       "sprite": "man_5.png",
       "coords": [
-        32,
-        14
+        0,
+        0
       ],
-      "level": "Route 120"
+      "level": "Route 120",
+      "rematch": true
     },
     {
       "id": "TRAINER_LORENZO",
@@ -15098,13 +15144,14 @@
           "species": "SPECIES_MOTHIM"
         }
       ],
-      "script": "Route120_EventScript_Jeffrey",
+      "script": "Route120_EventScript_RematchJeffrey",
       "sprite": "maniac.png",
       "coords": [
-        19,
-        80
+        0,
+        0
       ],
-      "level": "Route 120"
+      "level": "Route 120",
+      "rematch": true
     },
     {
       "id": "TRAINER_JENNIFER",
@@ -15402,13 +15449,14 @@
           ]
         }
       ],
-      "script": "Route121_EventScript_Walter",
+      "script": "Route121_EventScript_RematchWalter",
       "sprite": "gentleman.png",
       "coords": [
-        56,
-        6
+        0,
+        0
       ],
-      "level": "Route 121"
+      "level": "Route 121",
+      "rematch": true
     },
     {
       "id": "TRAINER_TAMMY",
@@ -15581,13 +15629,14 @@
           ]
         }
       ],
-      "script": "Route121_EventScript_Jessica",
+      "script": "Route121_EventScript_RematchJessica",
       "sprite": "beauty.png",
       "coords": [
-        22,
-        5
+        0,
+        0
       ],
-      "level": "Route 121"
+      "level": "Route 121",
+      "rematch": true
     },
     {
       "id": "TRAINER_CALE",
@@ -15761,13 +15810,14 @@
           "species": "SPECIES_CINCCINO"
         }
       ],
-      "script": "Route121_EventScript_Cristin",
+      "script": "Route121_EventScript_RematchCristin",
       "sprite": "woman_5.png",
       "coords": [
-        65,
-        8
+        0,
+        0
       ],
-      "level": "Route 121"
+      "level": "Route 121",
+      "rematch": true
     },
     {
       "id": "TRAINER_BYRON",
@@ -15865,7 +15915,7 @@
         }
       ],
       "script": "Route121_EventScript_BattleByron",
-      "sprite": "byron.png",
+      "sprite": "byron.webp",
       "coords": [
         0,
         0
@@ -15982,13 +16032,14 @@
           "species": "SPECIES_LUNATONE"
         }
       ],
-      "script": "Route123_EventScript_Cameron",
+      "script": "Route123_EventScript_RematchCameron",
       "sprite": "psychic_m.png",
       "coords": [
-        138,
-        12
+        0,
+        0
       ],
-      "level": "Route 123"
+      "level": "Route 123",
+      "rematch": true
     },
     {
       "id": "TRAINER_JACKI_1",
@@ -16008,13 +16059,14 @@
           "species": "SPECIES_PANGORO"
         }
       ],
-      "script": "Route123_EventScript_Jacki",
+      "script": "Route123_EventScript_RematchJacki",
       "sprite": "lass.png",
       "coords": [
-        49,
-        16
+        0,
+        0
       ],
-      "level": "Route 123"
+      "level": "Route 123",
+      "rematch": true
     },
     {
       "id": "TRAINER_MIU_AND_YUKI",
@@ -16266,13 +16318,14 @@
           "species": "SPECIES_DUSTOX"
         }
       ],
-      "script": "Route123_EventScript_Fernando",
+      "script": "Route123_EventScript_RematchFernando",
       "sprite": "man_5.png",
       "coords": [
-        66,
-        16
+        0,
+        0
       ],
-      "level": "Route 123"
+      "level": "Route 123",
+      "rematch": true
     }
   ],
   "MAP_ROUTE124": [
@@ -16455,13 +16508,14 @@
           ]
         }
       ],
-      "script": "Route124_EventScript_Jenny",
+      "script": "Route124_EventScript_RematchJenny",
       "sprite": "girl_3.png",
       "coords": [
-        10,
-        28
+        0,
+        0
       ],
-      "level": "Route 124"
+      "level": "Route 124",
+      "rematch": true
     },
     {
       "id": "TRAINER_GRACE",
@@ -16793,13 +16847,14 @@
           "species": "SPECIES_LINOONE"
         }
       ],
-      "script": "Route125_EventScript_Ernest",
+      "script": "Route125_EventScript_RematchErnest",
       "sprite": "sailor.png",
       "coords": [
-        21,
-        30
+        0,
+        0
       ],
-      "level": "Route 125"
+      "level": "Route 125",
+      "rematch": true
     },
     {
       "id": "TRAINER_KIM_AND_IRIS",
@@ -16975,7 +17030,7 @@
         }
       ],
       "script": "Route125_EventScript_BattleCandice",
-      "sprite": "candice.png",
+      "sprite": "candice.webp",
       "coords": [
         0,
         0
@@ -17176,13 +17231,14 @@
           "species": "SPECIES_GRENINJA"
         }
       ],
-      "script": "Route126_EventScript_Pablo",
+      "script": "Route126_EventScript_RematchPablo",
       "sprite": "swimmer_m.png",
       "coords": [
-        7,
-        66
+        0,
+        0
       ],
-      "level": "Route 126"
+      "level": "Route 126",
+      "rematch": true
     }
   ],
   "MAP_ROUTE127": [
@@ -17392,13 +17448,14 @@
           "species": "SPECIES_CONKELDURR"
         }
       ],
-      "script": "Route127_EventScript_Koji",
+      "script": "Route127_EventScript_RematchKoji",
       "sprite": "black_belt.png",
       "coords": [
-        60,
-        62
+        0,
+        0
       ],
-      "level": "Route 127"
+      "level": "Route 127",
+      "rematch": true
     }
   ],
   "MAP_ROUTE128": [
@@ -17420,13 +17477,14 @@
           "species": "SPECIES_MANTINE"
         }
       ],
-      "script": "Route128_EventScript_Isaiah",
+      "script": "Route128_EventScript_RematchIsaiah",
       "sprite": "swimmer_m.png",
       "coords": [
-        35,
-        33
+        0,
+        0
       ],
-      "level": "Route 128"
+      "level": "Route 128",
+      "rematch": true
     },
     {
       "id": "TRAINER_KATELYN_1",
@@ -17442,13 +17500,14 @@
           "species": "SPECIES_STARYU"
         }
       ],
-      "script": "Route128_EventScript_Katelyn",
+      "script": "Route128_EventScript_RematchKatelyn",
       "sprite": "swimmer_f.png",
       "coords": [
-        78,
-        24
+        0,
+        0
       ],
-      "level": "Route 128"
+      "level": "Route 128",
+      "rematch": true
     },
     {
       "id": "TRAINER_ALEXA",
@@ -19134,7 +19193,7 @@
         }
       ],
       "script": "RustboroCity_Gym_EventScript_Roxanne",
-      "sprite": "roxanne.png",
+      "sprite": "roxanne.webp",
       "coords": [
         0,
         0
@@ -19856,7 +19915,7 @@
         }
       ],
       "script": "SeafloorCavern_EventScript_BackToBackScene",
-      "sprite": "aqua_admin_f.png",
+      "sprite": "aqua_member_m.webp",
       "coords": [
         0,
         0
@@ -19932,7 +19991,7 @@
         }
       ],
       "script": "SeafloorCavern_EventScript_BackToBackScene",
-      "sprite": "aqua_admin_m.png",
+      "sprite": "aqua_member_m.webp",
       "coords": [
         0,
         0
@@ -20089,7 +20148,7 @@
         }
       ],
       "script": "SlateportCity_OceanicMuseum_2F_EventScript_CaptStern",
-      "sprite": "aqua_grunt_m.png",
+      "sprite": "aqua_member_m.webp",
       "coords": [
         0,
         0
@@ -20152,7 +20211,7 @@
         }
       ],
       "script": "SlateportCity_OceanicMuseum_2F_EventScript_CaptStern",
-      "sprite": "aqua_grunt_m.png",
+      "sprite": "aqua_member_m.webp",
       "coords": [
         0,
         0
@@ -20570,7 +20629,7 @@
         }
       ],
       "script": "SootopolisCity_Gym_1F_EventScript_Juan",
-      "sprite": "juan.png",
+      "sprite": "juan.webp",
       "coords": [
         0,
         0
@@ -21412,13 +21471,14 @@
           ]
         }
       ],
-      "script": "VictoryRoad_1F_EventScript_ExitWally",
-      "sprite": "wally.png",
+      "script": "VictoryRoad_1F_EventScript_RematchWally",
+      "sprite": "wally.webp",
       "coords": [
         0,
         0
       ],
-      "level": "Victory Road 1F"
+      "level": "Victory Road 1F",
+      "rematch": true
     },
     {
       "id": "TRAINER_EDGAR",

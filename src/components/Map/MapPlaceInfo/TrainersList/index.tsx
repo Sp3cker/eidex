@@ -10,7 +10,7 @@ const TrainerItem = memo(function TrainerItem({
   trainer: DisplayTrainer;
 }) {
   return (
-    <div className="white-box w-full rounded-lg border p-3 text-left transition-colors hover:bg-gray-50">
+    <div className={`white-box w-full rounded-lg border ${trainer.rematch ? "border-red-500" : "border-gray-600"  } p-3 text-left transition-colors hover:bg-gray-50`}>
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <div className="trainer-sprite">
