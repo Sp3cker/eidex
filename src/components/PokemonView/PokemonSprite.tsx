@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { animated } from "@react-spring/web";
 import { useAnimConfig } from "@/utils/animConfigs";
 
@@ -11,8 +11,10 @@ const PokemonSprite = React.memo(function PSprite({
   alt: string;
   nameKey: string;
 }) {
-
-  const imgDir = nameKey === alt ? `/sprites/anim/${spriteIndex}/anim_front.webp` : `sprites/front/${spriteIndex}.png`;
+  const imgDir =
+    nameKey === alt
+      ? `/sprites/anim/${spriteIndex}/anim_front.webp`
+      : `sprites/front/${spriteIndex}.png`;
   const [displaySprite, setDisplaySprite] = useState(imgDir);
   const [frame, setFrame] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
@@ -25,13 +27,15 @@ const PokemonSprite = React.memo(function PSprite({
     setFrame(0); // Reset to first state
   };
 
-  const handleSpriteError = ({
-    currentTarget,
-  }: React.SyntheticEvent<HTMLImageElement, Event>) => {
-    currentTarget.onerror = null; // prevents looping
-    setIsRunning(false);
-    setDisplaySprite(`/sprites/front/${spriteIndex}.png`);
-  };
+  const handleSpriteError = useCallback(
+    ({ currentTarget }: React.SyntheticEvent<HTMLImageElement, Event>) => {
+      currentTarget.onerror = null; // prevents looping
+      setIsRunning(false);
+      setDisplaySprite(`/sprites/front/${spriteIndex}.png`);
+    },
+    [],
+  );
+  const handleLoad = useCallback(() => setImageLoaded(true), []);
   // /**
   //  * Need this incase user clicks Evo form so `displaySprite` changes
   //  */
@@ -67,13 +71,13 @@ const PokemonSprite = React.memo(function PSprite({
   }, [isRunning, animeFrames, imageLoaded]);
 
   return (
-    <div className={`sprite-box`} onClick={handleClick}>
+    <div className="sprite-box" onClick={handleClick}>
       <animated.img
         src={displaySprite}
         alt={alt}
         className="pokemon-sprite"
         onError={handleSpriteError}
-        onLoad={() => setImageLoaded(true)}
+        onLoad={handleLoad}
         style={{
           ...animeConfig,
           y: frame === 0 ? "0px" : "-50%",
