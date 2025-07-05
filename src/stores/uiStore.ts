@@ -2,7 +2,7 @@ import { createWithEqualityFn as create } from "zustand/traditional";
 import { Pokemon } from "@/types";
 import { persist, subscribeWithSelector } from "zustand/middleware";
 import { pokemonData as pokemons } from "@/data/pokemon";
-import { updatePokemonHelmet } from "./pokemonHelmetUpdater";
+// import { updatePokemonHelmet } from "./pokemonHelmetUpdater";
 
 interface UIState {
   isShiny: boolean;
@@ -52,22 +52,22 @@ export const useUIStore = create<UIState>()(
 );
 
 // Subscribe to Pokemon modal changes and update head tags only when modal is open
-useUIStore.subscribe(
-  (state) => ({
-    selectedPokemon: state.selectedPokemon,
-    isShiny: state.isShiny,
-    isModalOpen: state.isModalOpen,
-  }),
-  ({ selectedPokemon, isShiny, isModalOpen }) => {
-    // Only update head when modal is open and pokemon is selected
-    if (isModalOpen && selectedPokemon) {
-      updatePokemonHelmet(selectedPokemon, isShiny);
-    }
-  },
-  {
-    equalityFn: (a, b) =>
-      a.selectedPokemon?.dexId === b.selectedPokemon?.dexId &&
-      a.isShiny === b.isShiny &&
-      a.isModalOpen === b.isModalOpen,
-  },
-);
+// useUIStore.subscribe(
+//   (state) => ({
+//     selectedPokemon: state.selectedPokemon,
+//     isShiny: state.isShiny,
+//     isModalOpen: state.isModalOpen,
+//   }),
+//   ({ selectedPokemon, isShiny, isModalOpen }) => {
+//     // Only update head when modal is open and pokemon is selected
+//     if (isModalOpen && selectedPokemon) {
+//       updatePokemonHelmet(selectedPokemon, isShiny);
+//     }
+//   },
+//   {
+//     equalityFn: (a, b) =>
+//       a.selectedPokemon?.dexId === b.selectedPokemon?.dexId &&
+//       a.isShiny === b.isShiny &&
+//       a.isModalOpen === b.isModalOpen,
+//   },
+// );

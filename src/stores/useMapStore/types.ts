@@ -1,5 +1,6 @@
 import { ItemsByMap } from "@/utils/itemsData";
 import { Item, TrainerRef } from "@/data/map";
+import { DisplayTrainer } from "@/components/Map/MapPlaceInfo/TrainersList/useTrainersData";
 
 type EncounterMons = {
   min_level: number;
@@ -55,6 +56,7 @@ type MapStore = {
 
   // TrainersList panel state
   isTrainersListOpen: boolean;
+  selectedTrainer: DisplayTrainer | null;
 
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
@@ -83,6 +85,11 @@ type MapStore = {
   // TrainersList panel actions
   setTrainersListOpen: (open: boolean) => void;
   toggleTrainersList: () => void;
+  setSelectedTrainer: (trainer: DisplayTrainer | null) => void;
+  
+  // Animation coordination
+  setAnimating: (animating: boolean) => void;
+  getIsAnimating: () => boolean;
 };
 
 export type { EncounterMons, EncounterMonsFromJSON, MapStore, Level };

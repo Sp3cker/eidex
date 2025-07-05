@@ -68,7 +68,7 @@ const Selecta = () => {
   return (
     <animated.aside
       style={spring}
-      className={`selecta-grid selecta-z max-w-37 md:max-w-120 flex h-10 min-w-[120px] select-none flex-row items-center rounded-lg border border-gray-600 bg-gray-800 px-1 py-1 drop-shadow-lg ${
+      className={`selecta-grid selecta-z xs:max-w-37 md:max-w-120 flex h-10 min-w-[120px] select-none flex-row items-center rounded-lg border border-gray-600 bg-gray-800 px-1 py-1 drop-shadow-lg ${
         shouldShow ? "fade-in" : "fade-out"
       }`}
     >

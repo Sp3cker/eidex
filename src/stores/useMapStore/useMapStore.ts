@@ -4,11 +4,13 @@ import { getInitialMapLevelData, getSelectedLevel } from "./setSelectedMap";
 import { MapStore } from "./types";
 import { subscribeWithSelector } from "zustand/middleware";
 import { updateMapHelmet } from "./helmetUpdater";
+import { updateTrainerHelmet } from "./trainerHelmetUpdater";
 import {
   initializeLevelIdLookup,
   levelIdToLocationMap,
 } from "./levelIdtoLocationMap";
 import { encounterStore } from "@/data/map/encounters";
+import { urlManager } from "./urlManager";
 
 initializeLevelIdLookup();
 
@@ -26,6 +28,7 @@ export const useMapStore = create<MapStore>()(
       selectedLevelWaterMons: undefined,
       selectedLevelFishingMons: undefined,
       selectedMapItems: null,
+      selectedMapTrainers: null,
       selectedImageName: null,
       viewingImage: false,
       selectedLevelId: null,
@@ -33,6 +36,7 @@ export const useMapStore = create<MapStore>()(
       dragging: false,
       isPlacesListOpen: false,
       isTrainersListOpen: false,
+      selectedTrainer: null,
     };
     return {
       ...initialState,
@@ -47,14 +51,14 @@ export const useMapStore = create<MapStore>()(
       encounterDataSource: "default",
 
       deselectMap: () => {
-        window.history.pushState({}, "", "/map");
+        urlManager.updateURLImmediate(null, null);
         window.location.hash = "";
         set({ ...initialState });
       },
       setSelectedMap: (mapName: string) => {
         const currentRoute = window.location.href;
         if (!currentRoute.includes(mapName)) {
-          window.history.pushState({}, "", `/map/${mapName}`);
+          urlManager.requestURLUpdate(mapName, null);
         }
         // updateMapHelmet(mapName);
 
@@ -120,11 +124,7 @@ export const useMapStore = create<MapStore>()(
         const storedCoords = get().storedCoordinates.get(
           baseMapAndLevelIndex.baseMapName,
         );
-        window.history.pushState(
-          {},
-          "",
-          `/map/${baseMapAndLevelIndex.baseMapName}`,
-        );
+        urlManager.updateURLImmediate(baseMapAndLevelIndex.baseMapName, null);
 
         set({
           selectedMap: baseMapAndLevelIndex.baseMapName,
@@ -234,15 +234,95 @@ export const useMapStore = create<MapStore>()(
       // TrainersList panel actions
       setTrainersListOpen: (open: boolean) => {
         set({ isTrainersListOpen: open });
+        // Clear selected trainer when closing trainers list
+        if (!open) {
+          set({ selectedTrainer: null });
+          // Update URL to remove trainer when closing
+          const currentMap = get().selectedMap;
+          if (currentMap) {
+            urlManager.requestURLUpdate(currentMap, null);
+          }
+        }
       },
       toggleTrainersList: () => {
-        set((state) => ({ isTrainersListOpen: !state.isTrainersListOpen }));
+        set((state) => {
+          const newOpen = !state.isTrainersListOpen;
+          const currentMap = get().selectedMap;
+          
+          // Update URL based on new state
+          if (currentMap) {
+            if (newOpen) {
+              // Opening - keep current trainer if any
+              urlManager.requestURLUpdate(currentMap, state.selectedTrainer?.trainerName || null);
+            } else {
+              // Closing - remove trainer from URL
+              urlManager.requestURLUpdate(currentMap, null);
+            }
+          }
+          
+          return { 
+            isTrainersListOpen: newOpen,
+            // Clear selected trainer when closing trainers list
+            selectedTrainer: newOpen ? state.selectedTrainer : null
+          };
+        });
+      },
+      setSelectedTrainer: (trainer) => {
+        set({ selectedTrainer: trainer });
+        // Request URL update (will be delayed if animation is running)
+        const currentMap = get().selectedMap;
+        if (currentMap) {
+          urlManager.requestURLUpdate(currentMap, trainer?.trainerName || null);
+        }
+      },
+      
+      // Animation coordination methods
+      setAnimating: (animating: boolean) => {
+        urlManager.setAnimating(animating);
+      },
+      
+      getIsAnimating: () => {
+        return urlManager.getIsAnimating();
       },
     };
   }),
 );
 
 export default useMapStore;
+
+// Function to handle URL initialization
+const initializeFromURL = () => {
+  const urlState = urlManager.parseCurrentURL();
+  
+  if (urlState.mapName) {
+    const store = useMapStore.getState();
+    store.setSelectedMap(urlState.mapName);
+    
+    if (urlState.trainerName) {
+      store.setTrainersListOpen(true);
+      
+      // Load trainers and find the specific one
+      import("@/data/map/trainers").then(({ getTrainersForMap }) => {
+        getTrainersForMap(urlState.mapName!).then((trainers) => {
+          const foundTrainer = trainers.find(
+            (trainer) => trainer.trainerName === urlState.trainerName
+          );
+          
+          if (foundTrainer) {
+            store.setSelectedTrainer(foundTrainer);
+          }
+        }).catch((error) => {
+          console.error("Error loading trainers for URL:", error);
+        });
+      });
+    }
+  }
+};
+
+// Initialize on page load
+if (typeof window !== "undefined") {
+  initializeFromURL();
+}
 
 // Subscribe to map changes and update head tags
 useMapStore.subscribe(
@@ -261,10 +341,50 @@ useMapStore.subscribe(
   },
 );
 
+// Subscribe to trainer changes and update head tags (only when not animating)
+useMapStore.subscribe(
+  (state) => ({
+    selectedTrainer: state.selectedTrainer,
+    selectedMap: state.selectedMap,
+    isAnimating: urlManager.getIsAnimating(),
+  }),
+  ({ selectedTrainer, selectedMap, isAnimating }) => {
+    if (!isAnimating) {
+      updateTrainerHelmet(selectedTrainer, selectedMap || undefined);
+    }
+  },
+  {
+    equalityFn: (a, b) =>
+      a.selectedTrainer === b.selectedTrainer &&
+      a.selectedMap === b.selectedMap &&
+      a.isAnimating === b.isAnimating,
+  },
+);
+
 window.addEventListener("popstate", () => {
-  const path = window.location.pathname;
-  const match = path.match(/^\/map\/(.+)$/);
-  if (match) {
-    useMapStore.getState().setSelectedMap(match[1]);
+  const urlState = urlManager.parseCurrentURL();
+  
+  if (urlState.mapName) {
+    const store = useMapStore.getState();
+    store.setSelectedMap(urlState.mapName);
+    
+    if (urlState.trainerName) {
+      store.setTrainersListOpen(true);
+      
+      // Load trainers and find the specific one
+      import("@/data/map/trainers").then(({ getTrainersForMap }) => {
+        getTrainersForMap(urlState.mapName!).then((trainers) => {
+          const foundTrainer = trainers.find(
+            (trainer) => trainer.trainerName === urlState.trainerName
+          );
+          
+          if (foundTrainer) {
+            store.setSelectedTrainer(foundTrainer);
+          }
+        }).catch((error) => {
+          console.error("Error loading trainers for URL:", error);
+        });
+      });
+    }
   }
 });

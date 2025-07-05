@@ -1,6 +1,6 @@
 import { animated, useSpring, useTransition } from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
-import { useCallback, useState, memo } from "react";
+import { useCallback, useState, memo, Suspense } from "react";
 import EncounterMonsContainer from "./EncounterMonsContainer";
 import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
@@ -163,7 +163,10 @@ const MapInfoSwitcher = memo(function Switcher() {
           <animated.div style={style} className="absolute inset-0">
             {isOpen ? (
               <div className="relative h-full overflow-hidden">
+               <Suspense>
+
                 <TrainersList />
+               </Suspense>
               </div>
             ) : (
               <div className="relative h-full">

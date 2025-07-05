@@ -316,7 +316,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 74,
@@ -486,7 +486,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 23,
@@ -717,7 +717,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 84,
@@ -820,7 +820,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 84,
@@ -924,7 +924,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 84,
@@ -1027,7 +1027,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 84,
@@ -1130,7 +1130,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 84,
@@ -1234,7 +1234,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 84,
@@ -1337,7 +1337,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 84,
@@ -1439,7 +1439,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -1541,7 +1541,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 85,
@@ -1605,7 +1605,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 85,
@@ -1707,7 +1707,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 85,
@@ -1809,7 +1809,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 85,
@@ -1911,7 +1911,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 85,
@@ -2013,7 +2013,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 85,
@@ -2116,7 +2116,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 85,
@@ -2219,7 +2219,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 85,
@@ -2323,7 +2323,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -2425,7 +2425,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -2528,7 +2528,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -2630,7 +2630,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 68,
@@ -3010,7 +3010,7 @@
         "SMART_MON_CHOICES",
         "ACE_POKEMON"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -3114,7 +3114,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 47,
@@ -3219,7 +3219,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 71,
@@ -3610,7 +3610,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 80,
@@ -3714,7 +3714,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 80,
@@ -3790,7 +3790,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 80,
@@ -3868,7 +3868,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 30,
@@ -3944,7 +3944,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 34,
@@ -4224,7 +4224,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -4339,7 +4339,7 @@
         "SMART_MON_CHOICES",
         "ACE_POKEMON"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -4441,7 +4441,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -4543,7 +4543,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 76,
@@ -4872,7 +4872,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 44,
@@ -4974,7 +4974,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 44,
@@ -5063,7 +5063,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 42,
@@ -5221,7 +5221,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 43,
@@ -5589,7 +5589,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 59,
@@ -5842,7 +5842,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -5947,7 +5947,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -6036,7 +6036,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -6748,7 +6748,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 203,
@@ -7758,7 +7758,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -7821,7 +7821,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -7884,7 +7884,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -7949,7 +7949,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -8034,7 +8034,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -8284,7 +8284,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 203,
@@ -8365,7 +8365,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 203,
@@ -8415,7 +8415,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 203,
@@ -8491,7 +8491,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 203,
@@ -8567,7 +8567,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -8657,7 +8657,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -8747,7 +8747,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -8837,7 +8837,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -8927,7 +8927,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -9017,7 +9017,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -9107,7 +9107,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -9209,7 +9209,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -9299,7 +9299,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -9388,7 +9388,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -9490,7 +9490,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -9579,7 +9579,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -9668,7 +9668,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -9757,7 +9757,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -9846,7 +9846,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -9935,7 +9935,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -10414,7 +10414,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -10464,7 +10464,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -10514,7 +10514,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -10564,7 +10564,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -10614,7 +10614,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -10755,7 +10755,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -11054,7 +11054,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -11130,7 +11130,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -11194,7 +11194,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -11284,7 +11284,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -11375,7 +11375,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -11622,7 +11622,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 203,
@@ -11760,7 +11760,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -11917,7 +11917,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -12120,7 +12120,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -12254,7 +12254,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -12344,7 +12344,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -12919,7 +12919,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 203,
@@ -12981,7 +12981,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 204,
@@ -13071,7 +13071,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 204,
@@ -13302,7 +13302,7 @@
         "SMART_MON_CHOICES",
         "ACE_POKEMON"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -13582,7 +13582,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -13686,7 +13686,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 64,
@@ -13789,7 +13789,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 64,
@@ -13891,7 +13891,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 64,
@@ -13994,7 +13994,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 64,
@@ -14097,7 +14097,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 64,
@@ -14200,7 +14200,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 64,
@@ -14774,7 +14774,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 63,
@@ -14837,7 +14837,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 64,
@@ -14926,7 +14926,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 64,
@@ -15344,7 +15344,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -15407,7 +15407,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -15471,7 +15471,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -15574,7 +15574,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -15651,7 +15651,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -15833,7 +15833,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -16342,7 +16342,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -16440,7 +16440,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -16530,7 +16530,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -16654,7 +16654,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -16947,7 +16947,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -18676,7 +18676,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -18753,7 +18753,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -18830,7 +18830,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -18907,7 +18907,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -18984,7 +18984,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -19061,7 +19061,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -19138,7 +19138,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 14,
@@ -19289,7 +19289,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 202,
@@ -19756,7 +19756,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 80,
@@ -19859,7 +19859,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 80,
@@ -19935,7 +19935,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 80,
@@ -20013,7 +20013,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 82,
@@ -20118,7 +20118,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 30,
@@ -20168,7 +20168,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 30,
@@ -20233,7 +20233,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -20341,7 +20341,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -20444,7 +20444,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -20546,7 +20546,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 82,
@@ -20901,7 +20901,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -21004,7 +21004,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -21106,7 +21106,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 200,
@@ -21210,7 +21210,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 201,
@@ -21288,7 +21288,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 84,
@@ -21390,7 +21390,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 84,
@@ -21521,7 +21521,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 83,
@@ -21610,7 +21610,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 83,
@@ -21759,7 +21759,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 83,
@@ -21880,7 +21880,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 83,
@@ -22089,7 +22089,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 83,
@@ -22211,7 +22211,7 @@
         "OMNISCIENT",
         "SMART_MON_CHOICES"
       ],
-      "isBossTrainer": "TRUE",
+      "boss": true,
       "party": [
         {
           "lvl": 83,
