@@ -1,8 +1,8 @@
 import { memo } from "react";
-import { DisplayTrainer, useTrainersData } from "./useTrainersData";
-import { useSpring, animated } from "@react-spring/web";
+import { useTrainersData } from "./useTrainersData";
 import useMapStore from "@/stores/useMapStore";
-import TrainerBattleInfo from "../TrainerBattleInfo";
+import { DisplayTrainer } from "@/data/map/trainers";
+// import TrainerBattleInfo from "../../TrainerBattleInfo";
 
 // Component to render individual trainer item
 const TrainerItem = memo(function TrainerItem({
@@ -11,7 +11,6 @@ const TrainerItem = memo(function TrainerItem({
   trainer: DisplayTrainer;
 }) {
   const setSelectedTrainer = useMapStore((state) => state.setSelectedTrainer);
-
   const handleClick = () => {
     setSelectedTrainer(trainer);
   };
@@ -72,26 +71,11 @@ const TrainersOnLevelList = ({
 
 const TrainersList = memo(function TrainersList() {
   const isTrainersListOpen = useMapStore((state) => state.isTrainersListOpen);
-  const selectedTrainer = useMapStore((state) => state.selectedTrainer);
-  const setAnimating = useMapStore((state) => state.setAnimating);
+  // const selectedTrainer = useMapStore((state) => state.selectedTrainer);
+  // const setAnimating = useMapStore((state) => state.setAnimating);
   const { trainers, isLoading, error, selectedMap } = useTrainersData();
 
   // Spring animation for sliding between list and trainer info
-  const slideSpring = useSpring({
-    transform: selectedTrainer ? "translateX(-100%)" : "translateX(0%)",
-    config: { tension: 280, friction: 25 },
-    onStart: () => {
-      setAnimating(true);
-    },
-    onRest: () => {
-      setAnimating(false);
-    },
-  });
-
-  const trainerInfoSpring = useSpring({
-    transform: selectedTrainer ? "translate3d(0%, 0%, 0)" : "translate3d(220%, 0%, 0)",
-    config: { tension: 280, friction: 25 },
-  });
 
   const numTrainers = Object.keys(trainers);
 
@@ -99,10 +83,7 @@ const TrainersList = memo(function TrainersList() {
     <nav className="flex h-full flex-col overflow-hidden rounded rounded-l-lg bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl">
       <div className="relative flex-1">
         {/* Trainers List View */}
-        <animated.div
-          style={slideSpring}
-          className="absolute inset-0 flex flex-col"
-        >
+        <div className="absolute inset-0 flex flex-col">
           <div className="flex-1 overflow-y-auto">
             <div className="p-2">
               <div className="font-pkmnem flex flex-col gap-2 md:gap-1">
@@ -135,15 +116,9 @@ const TrainersList = memo(function TrainersList() {
               </div>
             </div>
           </div>
-        </animated.div>
+        </div>
 
         {/* Trainer Battle Info View */}
-        <animated.div
-          style={trainerInfoSpring}
-          className="absolute inset-0 flex flex-col"
-        >
-          {selectedTrainer && <TrainerBattleInfo trainer={selectedTrainer} />}
-        </animated.div>
       </div>
     </nav>
   );

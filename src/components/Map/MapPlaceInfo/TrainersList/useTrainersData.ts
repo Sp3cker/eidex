@@ -4,13 +4,10 @@ import {
   getTrainersForMap,
   getCachedTrainersForMap,
   type Trainer,
+  type RivalTrainer,
+  type DisplayTrainer,
 } from "@/data/map/trainers";
 
-export type RivalTrainer = Omit<Trainer, "party" | "youPicked"> & {
-  parties: Record<"Treecko" | "Torchic" | "Mudkip", any[]>;
-};
-
-export type DisplayTrainer = Trainer | RivalTrainer;
 
 function groupRivals(trainers: Trainer[]): DisplayTrainer[] {
   const result = trainers.reduce(

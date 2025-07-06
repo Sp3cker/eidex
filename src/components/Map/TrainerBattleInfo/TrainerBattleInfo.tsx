@@ -1,8 +1,8 @@
 import { memo } from "react";
 import { DisplayTrainer } from "@/data/map/trainers";
 import { formatSpeciesString } from "@/utils/formatMapString";
-import CloseButton from "@/components/CloseButton";
-import useMapStore from "@/stores/useMapStore";
+
+// import useMapStore from "@/stores/useMapStore";
 
 interface TrainerBattleInfoProps {
   trainer: DisplayTrainer;
@@ -11,28 +11,26 @@ interface TrainerBattleInfoProps {
 const TrainerBattleInfo = memo(function TrainerBattleInfo({
   trainer,
 }: TrainerBattleInfoProps) {
-  const setSelectedTrainer = useMapStore((state) => state.setSelectedTrainer);
-
-  const handleClose = () => {
-    setSelectedTrainer(null);
-  };
-
+  console.log(trainer);
+  if (!trainer) {
+    return null; // Handle case where trainer is not provided
+  }
   // Check if this is a rival trainer with multiple parties
   const isRivalTrainer = "parties" in trainer;
-
   return (
-    <div className="flex h-full flex-col rounded rounded-l-lg bg-gradient-to-br from-blue-50 via-white to-purple-100 drop-shadow-2xl">
+    <div className="flex h-full flex-col rounded rounded-l-lg">
       {/* Header */}
       <div
-        className={`${isRivalTrainer && "via-orange bg-gradient-to-br from-orange-50 to-orange-300"} relative overflow-hidden flex items-center justify-between border-b border-gray-200 p-2`}
+        className={`${isRivalTrainer && "via-orange bg-gradient-to-br from-orange-50 to-orange-300"} flex items-center justify-between border-b border-gray-200 p-2`}
       >
         <div className="flex items-center space-x-4">
-          <div className="relative max-h-60 max-w-60">
+          <div className="max-h-60 max-w-60">
             <img
               src={`/trainers/${trainer.battlePic}`}
               alt={trainer.trainerName}
-              className="absolute inset-0 h-full w-full object-cover drop-shadow-md"
+              className="h-30 w-30 absolute right-0 top-0 z-0 drop-shadow-md"
               style={{
+                imageRendering: "pixelated",
                 maskImage:
                   "linear-gradient(to bottom, black 0%, black 50%, transparent 100%)",
                 WebkitMaskImage:
@@ -40,51 +38,47 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo({
               }}
             />
           </div>
-          <div>
+          <div className="flex flex-row items-center justify-center space-x-1">
             <h2 className="font-calamity text-xl font-bold text-gray-800">
               {trainer.trainerName}
             </h2>
-            {/* <p className="text-sm text-gray-600">Level {trainer.level}</p> */}
-            {trainer.rematch && (
-              <p className="inline-block rounded bg-amber-100 px-2 py-1 text-xs font-medium text-red-800">
-                Rematch
-              </p>
-            )}
             {trainer.boss && (
-              <p className="inline-block rounded bg-amber-100 px-2 py-1 text-xs font-medium text-red-800">
+              <p className="font-pkmnem mt-1 inline-block rounded bg-amber-100 px-2 py-0 text-base font-bold text-amber-800">
                 Boss Fight
               </p>
             )}
+            {/* <p className="text-sm text-gray-600">Level {trainer.level}</p> */}
           </div>
         </div>
-        <CloseButton onClick={handleClose} className="right-0 top-2" />
       </div>
 
       {/* Battle Info */}
-      <div className="flex-1 overflow-y-auto p-4">
-        <div className="space-y-4">
+      <div className="flex-1 overflow-y-auto">
+        {trainer.rematch && (
+          <p className="inline-block rounded bg-amber-100 px-2 py-1 text-xs font-medium text-red-800">
+            Rematch
+          </p>
+        )}
+
+        <div className="font-pkmnem space-y-4 text-lg">
           {/* Battle Details */}
-          <div className="white-box rounded-lg border border-neutral-300 p-3">
-            <h3 className="font-calamity mb-2 text-lg font-bold text-gray-800">
-              Battle Details
-            </h3>
-            <div className="grid grid-cols-2 gap-4 text-sm">
-              <div>
-                <span className="font-medium text-gray-600">
-                  Double Battle:
-                </span>
-                <span className="ml-2 text-gray-800">
-                  {trainer.doubleBattle ? "Yes" : "No"}
-                </span>
-              </div>
-              <div>
-                <span className="font-medium text-gray-600">AI Flags:</span>
-                <span className="ml-2 text-gray-800">
-                  {trainer.aiFlags.length > 0
-                    ? trainer.aiFlags.join(", ")
-                    : "None"}
-                </span>
-              </div>
+
+          <div className="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <span className="text-lg font-medium text-gray-600">
+                Double:{"\u00A0"}
+              </span>
+              <span className="font-bold text-gray-800">
+                {trainer.doubleBattle ? "Yes" : "No"}
+              </span>
+            </div>
+            <div>
+              <span className="font-medium text-gray-600">AI Flags:</span>
+              <span className="ml-2 text-gray-800">
+                {trainer.aiFlags.length > 0
+                  ? trainer.aiFlags.join(", ")
+                  : "None"}
+              </span>
             </div>
           </div>
 

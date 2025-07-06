@@ -21,7 +21,8 @@ const ItemsList = memo(function ItemsList({ firstItemRef }: any) {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col h-full overflow-y-auto">
+      {/* Tab Navigation */}
       <TabNavigation
         setSelectedTab={setSelectedTab}
         selectedTab={selectedTab}
@@ -39,7 +40,7 @@ const ItemsList = memo(function ItemsList({ firstItemRef }: any) {
           />
         )}
       </div>
-    </>
+    </div>
   );
 });
 

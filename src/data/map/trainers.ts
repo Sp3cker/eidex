@@ -26,6 +26,12 @@ export interface Trainer {
   youPicked?: "Treecko" | "Torchic" | "Mudkip"; // Optional, only for rival trainers
   rematch?: true; // If battle is rematch.
 }
+export type RivalTrainer = Omit<Trainer, "party" | "youPicked"> & {
+  parties: Record<"Treecko" | "Torchic" | "Mudkip", any[]>;
+};
+
+export type DisplayTrainer = Trainer | RivalTrainer;
+
 // Add more trainer properties as needed
 
 // Lazy load trainers data only when first requested

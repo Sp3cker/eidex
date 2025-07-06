@@ -4,7 +4,7 @@ import { animated, useSpring } from "@react-spring/web";
 import { shallow } from "zustand/shallow";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
 const translatesTo = {
-  lg: 50,
+  lg: 45,
   md: 3,
   sm: 70,
   xs: 70,
@@ -68,7 +68,7 @@ const Selecta = () => {
   return (
     <animated.aside
       style={spring}
-      className={`selecta-grid selecta-z xs:max-w-37 md:max-w-120 flex h-10 min-w-[120px] select-none flex-row items-center rounded-lg border border-gray-600 bg-gray-800 px-1 py-1 drop-shadow-lg ${
+      className={`selecta-grid selecta-z xs:max-w-37 md:max-w-120 flex h-10 w-full min-w-[120px] select-none flex-row items-center rounded-lg border border-gray-600 bg-gray-800 px-1 py-1 drop-shadow-lg ${
         shouldShow ? "fade-in" : "fade-out"
       }`}
     >

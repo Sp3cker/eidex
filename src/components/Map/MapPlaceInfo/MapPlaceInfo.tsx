@@ -12,60 +12,71 @@ const EncounterAreaButtons = ({
 }: {
   handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   selectedTab: string;
-}) => (
-  <div
-    className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap bg-neutral-200 text-slate-900 lg:hidden"
-    style={{
-      position: "absolute",
-      bottom: 0,
-      left: 0,
-      right: 0,
-      zIndex: 30,
-    }}
-    role="tablist"
-    aria-label="Encounter type tabs"
-  >
-    <button
-      title="land"
-      className={`tab-label text-lg font-bold md:text-xl ${selectedTab === "land" && "land-tab"}`}
-      onClick={handleClick}
-      role="tab"
-      aria-selected={selectedTab === "land"}
-      aria-controls="land-panel"
-      tabIndex={selectedTab === "land" ? 0 : -1}
-      id="land-tab"
-      type="button"
+}) => {
+  const [haslandTab, hasWaterTab, hasFishingTab] = useMapStore((state) => [
+    state.selectedLevelLandMons !== undefined,
+    state.selectedLevelWaterMons !== undefined,
+    state.selectedLevelFishingMons !== undefined,
+  ]);
+  return (
+    <div
+      className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap bg-neutral-200 text-slate-900 lg:hidden"
+      style={{
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        zIndex: 30,
+      }}
+      role="tablist"
+      aria-label="Encounter type tabs"
     >
-      Land
-    </button>
-    <button
-      title="water"
-      className={`tab-label text-lg font-bold ${selectedTab === "water" && "water-tab"}`}
-      onClick={handleClick}
-      role="tab"
-      aria-selected={selectedTab === "water"}
-      aria-controls="water-panel"
-      tabIndex={selectedTab === "water" ? 0 : -1}
-      id="water-tab"
-      type="button"
-    >
-      Water
-    </button>
-    <button
-      title="fishing"
-      className={`tab-label text-lg font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
-      onClick={handleClick}
-      role="tab"
-      aria-selected={selectedTab === "fishing"}
-      aria-controls="fishing-panel"
-      tabIndex={selectedTab === "fishing" ? 0 : -1}
-      id="fishing-tab"
-      type="button"
-    >
-      Fishing
-    </button>
-  </div>
-);
+      <button
+        disabled={!haslandTab}
+        title="land"
+        className={`tab-label text-lg font-bold md:text-xl ${selectedTab === "land" && "land-tab"}`}
+        onClick={handleClick}
+        role="tab"
+        aria-selected={selectedTab === "land"}
+        aria-controls="land-panel"
+        tabIndex={selectedTab === "land" ? 0 : -1}
+        id="land-tab"
+        type="button"
+      >
+        Land
+      </button>
+      <button
+        disabled={!hasWaterTab}
+        title="water"
+        className={`tab-label text-lg font-bold ${selectedTab === "water" && "water-tab"}`}
+        onClick={handleClick}
+        role="tab"
+        aria-selected={selectedTab === "water"}
+        aria-controls="water-panel"
+        tabIndex={selectedTab === "water" ? 0 : -1}
+        id="water-tab"
+        type="button"
+      >
+        Water
+      </button>
+      <button
+        disabled={!hasFishingTab}
+        title="fishing"
+        className={`tab-label text-lg font-bold ${selectedTab === "fishing" && "fishing-tab"}`}
+        onClick={handleClick}
+        role="tab"
+        aria-selected={selectedTab === "fishing"}
+        aria-controls="fishing-panel"
+        tabIndex={selectedTab === "fishing" ? 0 : -1}
+        id="fishing-tab"
+        type="button"
+      >
+        Fishing
+      </button>
+    </div>
+  );
+};
+
 const MapPlaceInfoContent = memo(() => {
   const [selectedTab, setSelectedTab] = useState("land");
   const { ref: containerRef, height: containerHeight } = useElementSize();
@@ -163,10 +174,9 @@ const MapInfoSwitcher = memo(function Switcher() {
           <animated.div style={style} className="absolute inset-0">
             {isOpen ? (
               <div className="relative h-full overflow-hidden">
-               <Suspense>
-
-                <TrainersList />
-               </Suspense>
+                <Suspense>
+                  <TrainersList />
+                </Suspense>
               </div>
             ) : (
               <div className="relative h-full">

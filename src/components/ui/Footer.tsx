@@ -4,6 +4,7 @@ import HiddenFileDrop from "./HiddenFileDrop";
 import { memo } from "react";
 
 const Footer = memo(function Footer() {
+
   return (
     <div
       style={{
@@ -16,7 +17,10 @@ const Footer = memo(function Footer() {
       <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">
         <p> Dex by Kildemal</p>
         <p>
-          <a href="https://www.youtube.com/watch?v=Vhh_GeBPOhs" target="__blank">
+          <a
+            href="https://www.youtube.com/watch?v=Vhh_GeBPOhs"
+            target="__blank"
+          >
             Map by Specker ☻
           </a>
         </p>

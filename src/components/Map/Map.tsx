@@ -1,7 +1,6 @@
 import "./map.css";
 import { ErrorBoundary } from "react-error-boundary";
 import NewMap from "./ReactSvg";
-import Dexnav from "./ItemsBox";
 
 import MapContainer from "./MapContainer";
 import Selecta from "./MapPlaceInfo/Selecta";
@@ -20,6 +19,7 @@ document.addEventListener("gesturechange", (e) => e.preventDefault());
 const MapPlaceInfo = lazy(() => import("./MapPlaceInfo/MapPlaceInfo"));
 const PokemonModal = lazy(() => import("@/components/PokemonModal"));
 const ImageViewer = lazy(() => import("./ImageViewer"));
+const Dexnav = lazy(() => import("./ItemsBox"));
 const Map = () => {
   const setStateFromURL = useMapStore((state) => state.setStateFromURL);
   useMapHotkeys();
@@ -43,7 +43,9 @@ const Map = () => {
         </Suspense>
       </ErrorBoundary>
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
-        <Dexnav />
+        <Suspense>
+          <Dexnav />
+        </Suspense>
       </ErrorBoundary>
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <Suspense>

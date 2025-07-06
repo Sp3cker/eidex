@@ -2,32 +2,35 @@
 import { memo, useEffect, useRef, useState } from "react";
 import { useMapStore } from "@/stores/useMapStore";
 import { formatMapString } from "@/utils/formatMapString";
-import { useSpring, animated } from "@react-spring/web";
+import { animated } from "@react-spring/web";
 import ItemsList from "./ItemsList";
 import CameraIcon from "./CameraIcon";
-const ItemsBox = memo(function ItemsBox() {
-  const selectedMap = useMapStore((state) => state.selectedMap);
+const ItemsBox = memo(function ItemsBox({
+  selectedMap,
+}: {
+  selectedMap?: string;
+}) {
+  // const selectedMap = useMapStore((state) => state.selectedMap);
   const setViewingImage = useMapStore((state) => state.setViewingImage);
   const [isHeaderOverlaying, setIsHeaderOverlaying] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
   const firstItemRef = useRef<HTMLDivElement>(null); // Ref for first item in list
-  const show = useMapStore((state) => {
-    return state.selectedMap !== null && state.dragging === false;
-  });
-
-  const [springs] = useSpring(
-    {
-      opacity: selectedMap ? 1 : 0,
-      translateY: show ? 0 : (window.innerHeight * 2) / 5 ,
-      config: { mass: 1, damping: 0.2 },
-    },
-    [show, selectedMap],
-  );
+  // const show = useMapStore((state) => {
+  //   return state.selectedMap !== null && state.dragging === false;
+  // });
+  
+  console.log("Selected Map:", selectedMap);
+  // const [springs] = useSpring(
+  //   {
+  //     opacity: selectedMap ? 1 : 0,
+  //     translateY: show ? 0 : (window.innerHeight * 2) / 5 ,
+  //     config: { mass: 1, damping: 0.2 },
+  //   },
+  //   [show, selectedMap],
+  // );
 
   useEffect(() => {
-    const scrollContainer = document.querySelector(
-      ".dexnav-grid.overflow-y-auto",
-    );
+    const scrollContainer = document.getElementById("items-box");
     if (!scrollContainer) return;
 
     const handleScroll = () => {
@@ -84,27 +87,23 @@ const ItemsBox = memo(function ItemsBox() {
   }, [isHeaderOverlaying]);
   const mapLabel =
     typeof selectedMap === "string" ? formatMapString(selectedMap) : "";
-
   return (
-    <animated.nav
-      style={springs}
-      className="dexnav-grid dexnav-z max-h-[48vh] w-full overflow-y-auto rounded-lg border border-gray-200 bg-linear-to-br from-emerald-50 via-white to-gray-100 p-4 shadow-xl md:w-96"
-    >
+    <div id="items-box" className="flex h-full flex-col rounded rounded-l-lg">
       <div
         ref={headerRef}
         className="sticky top-0 z-10 flex items-center justify-between"
       >
         <span className="flex flex-row items-center justify-center gap-3">
-          <h2 className="cool-font md:text-md cursor-pointer text-left text-sm font-bold text-neutral-700 transition-colors hover:text-blue-600">
+          <h2 className="cool-font md:text-md cursor-pointer text-left text-sm font-bold text-neutral-700 transition-colors">
             {mapLabel}
           </h2>
         </span>
         <CameraIcon mapLabel={mapLabel} setViewingImage={setViewingImage} />
       </div>
-      <div className="font-pkmnem flex flex-col rounded-sm">
+      <div className="font-pkmnem flex flex-col flex-1 overflow-y-scroll rounded-sm">
         <ItemsList firstItemRef={firstItemRef} />
       </div>
-    </animated.nav>
+    </div>
   );
 });
 
