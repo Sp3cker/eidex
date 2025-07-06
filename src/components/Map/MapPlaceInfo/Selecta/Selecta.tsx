@@ -6,7 +6,7 @@ import { useScreenWidth } from "@/hooks/useScreenWidth";
 const translatesTo = {
   lg: 45,
   md: 10,
-  sm: 70,
+  sm: 110,
   xs: 70,
 };
 const Selecta = () => {

@@ -54,10 +54,7 @@ const InfoToggleButtons = () => {
   const [springs] = useSprings(
     labels.length,
     (i: number) => ({
-      filter:
-        i === selectedIndex
-          ? "drop-shadow(2px 2px 2px #1d1d1d)"
-          : "drop-shadow(0px 0px 0px #1d1d1d)",
+      filter: i === selectedIndex ? 2 : 0,
       y: i === selectedIndex ? 0 : 0.2,
       scale: i === selectedIndex ? 1 : 0.99,
       config: config.stiff,
@@ -109,7 +106,7 @@ const InfoToggleButtons = () => {
   });
 
   return (
-    <div className="font-pkmnem pkmnem-face-shadow flex flex-row gap-2">
+    <div className="font-pkmnem pkmnem-face-shadow flex flex-row gap-2 p-1">
       {/* Render animated buttons */}
       {springs.map((spring, idx) => (
         <animated.div
@@ -118,9 +115,8 @@ const InfoToggleButtons = () => {
           {...bind(idx)}
           style={{
             transform: spring.y.to((x) => `translateY(${x}rem)`),
-            ...spring,
           }}
-          className="cursor-pointer rounded-sm bg-[#C03232] px-2 py-1 text-sm font-bold leading-none text-neutral-200 md:text-base hover:brightness-200"
+          className={`cursor-pointer ${selectedIndex == idx ? "ring ring-1 bg-[#C03232]" : "bg-[#9A2828]"} rounded-sm  px-2 py-1 text-sm font-bold leading-none text-neutral-200 md:text-base`}
         >
           {labels[idx]}
         </animated.div>

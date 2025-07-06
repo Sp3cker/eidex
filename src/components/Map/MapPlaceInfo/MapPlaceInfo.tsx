@@ -171,7 +171,7 @@ const MapInfoSwitcher = memo(function Switcher() {
     <div className="h-full py-2">
       <div className="absolute py-2 bottom-0 left-0 right-0 top-7 flex flex-col">
         {shuffleTransition((style, isOpen) => (
-          <animated.div style={style} className="absolute inset-0 p-2">
+          <animated.div style={style} className="absolute inset-0 pl-1 md:p-2">
             {isOpen ? (
               <div className="relative h-full overflow-hidden">
                 <Suspense>

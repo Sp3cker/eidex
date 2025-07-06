@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, Suspense } from "react";
 import { useTrainersData } from "./useTrainersData";
 import useMapStore from "@/stores/useMapStore";
 import { DisplayTrainer } from "@/data/map/trainers";
@@ -80,7 +80,7 @@ const TrainersList = memo(function TrainersList() {
   const numTrainers = Object.keys(trainers);
 
   return (
-    <nav className="flex h-full flex-col overflow-hidden rounded rounded-l-lg bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl">
+    <nav className="flex h-full flex-col overflow-hidden rounded rounded-l-lg bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl md:rounded-lg">
       <div className="relative flex-1">
         {/* Trainers List View */}
         <div className="absolute inset-0 flex flex-col">
@@ -106,11 +106,13 @@ const TrainersList = memo(function TrainersList() {
                 ) : (
                   isTrainersListOpen &&
                   numTrainers.map((level) => (
-                    <TrainersOnLevelList
-                      key={level}
-                      levelLabel={level}
-                      trainers={trainers[level]}
-                    />
+                    <Suspense key={level} fallback={<div>Loading...</div>}>
+                      <TrainersOnLevelList
+                        key={level}
+                        levelLabel={level}
+                        trainers={trainers[level]}
+                      />
+                    </Suspense>
                   ))
                 )}
               </div>
