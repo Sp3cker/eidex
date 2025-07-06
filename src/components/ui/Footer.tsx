@@ -1,10 +1,8 @@
-import { IconContext } from "react-icons";
 import DisclaimerModal from "./DisclaimerModal";
 import HiddenFileDrop from "./HiddenFileDrop";
 import { memo } from "react";
 
 const Footer = memo(function Footer() {
-
   return (
     <div
       style={{

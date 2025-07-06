@@ -5,7 +5,8 @@ import {
   getCachedTrainersForMap,
   type Trainer,
   type RivalTrainer,
-  type DisplayTrainer,
+  DisplayTrainer,
+
 } from "@/data/map/trainers";
 
 
@@ -146,35 +147,35 @@ export function groupTrainersByLevel(
   );
 }
 
-/**
- * Groups trainers by level and sorts both the levels and trainers within each level
- * @param trainers - Array of trainers to group and sort
- * @param levelSortFn - Optional function to sort level keys (defaults to alphabetical)
- * @param trainerSortFn - Optional function to sort trainers within each level (defaults to alphabetical by name)
- * @returns Object with sorted level keys and sorted arrays of trainers as values
- */
-function groupAndSortTrainersByLevel(
-  trainers: DisplayTrainer[],
-  levelSortFn?: (a: string, b: string) => number,
-  trainerSortFn?: (a: DisplayTrainer, b: DisplayTrainer) => number,
-): Record<string, DisplayTrainer[]> {
-  const grouped = groupTrainersByLevel(trainers);
+// /**
+//  * Groups trainers by level and sorts both the levels and trainers within each level
+//  * @param trainers - Array of trainers to group and sort
+//  * @param levelSortFn - Optional function to sort level keys (defaults to alphabetical)
+//  * @param trainerSortFn - Optional function to sort trainers within each level (defaults to alphabetical by name)
+//  * @returns Object with sorted level keys and sorted arrays of trainers as values
+//  */
+// function groupAndSortTrainersByLevel(
+//   trainers: DisplayTrainer[],
+//   levelSortFn?: (a: string, b: string) => number,
+//   trainerSortFn?: (a: DisplayTrainer, b: DisplayTrainer) => number,
+// ): Record<string, DisplayTrainer[]> {
+//   const grouped = groupTrainersByLevel(trainers);
 
-  // Sort trainers within each level
-  const sortedGrouped = Object.fromEntries(
-    Object.entries(grouped).map(([level, levelTrainers]) => [
-      level,
-      levelTrainers.sort(
-        trainerSortFn || ((a, b) => a.trainerName.localeCompare(b.trainerName)),
-      ),
-    ]),
-  );
+//   // Sort trainers within each level
+//   const sortedGrouped = Object.fromEntries(
+//     Object.entries(grouped).map(([level, levelTrainers]) => [
+//       level,
+//       levelTrainers.sort(
+//         trainerSortFn || ((a, b) => a.trainerName.localeCompare(b.trainerName)),
+//       ),
+//     ]),
+//   );
 
-  // Sort the level keys
-  const sortedLevels = Object.keys(sortedGrouped).sort(levelSortFn);
+//   // Sort the level keys
+//   const sortedLevels = Object.keys(sortedGrouped).sort(levelSortFn);
 
-  // Return object with sorted keys
-  return Object.fromEntries(
-    sortedLevels.map((level) => [level, sortedGrouped[level]]),
-  );
-}
+//   // Return object with sorted keys
+//   return Object.fromEntries(
+//     sortedLevels.map((level) => [level, sortedGrouped[level]]),
+//   );
+// }

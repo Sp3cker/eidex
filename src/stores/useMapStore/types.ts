@@ -1,6 +1,7 @@
 import { ItemsByMap } from "@/utils/itemsData";
 import { Item, TrainerRef } from "@/data/map";
-import { DisplayTrainer } from "@/components/Map/MapPlaceInfo/TrainersList/useTrainersData";
+import { DisplayTrainer } from "@/data/map/trainers";
+// import { DisplayTrainer } from "@/components/Map/MapPlaceInfo/TrainersList/useTrainersData";
 
 type EncounterMons = {
   min_level: number;

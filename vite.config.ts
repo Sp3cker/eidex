@@ -29,6 +29,10 @@ export default defineConfig({
   server: {
     open: true,
     port: 3000,
+watch: {
+      ignored: ["**/node_modules/**", "**/dist/**", "**/public/fonts/**"],
+      usePolling: true
+    },
   },
 
   resolve: {

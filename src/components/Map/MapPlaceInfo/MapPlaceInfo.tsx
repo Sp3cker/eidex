@@ -91,11 +91,11 @@ const MapPlaceInfoContent = memo(() => {
 
   return (
     <div ref={containerRef} className="relative flex h-full flex-col">
-      <div className="map-place-info-textbox-gradient h-auto overflow-y-auto rounded-l-lg pb-10 pl-1 pt-2 lg:h-full">
+      <div className="map-place-info-textbox-gradient h-full overflow-y-auto rounded-l-lg pb-10 pl-1 pr-3 pt-2 md:rounded-lg lg:h-full">
         <EncounterMonsContainer selectedTab={selectedTab} />
       </div>
       <div
-        className="absolute bottom-0 left-0 right-0 z-30"
+        className="absolute bottom-0 left-0 right-0"
         style={{
           top: `${containerHeight - 64}px`,
         }}
@@ -135,7 +135,7 @@ const MapPlaceInfo = memo(() => {
         pointerEvents: selectedMap !== null ? "all" : "none",
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch h-full`}
+      className={`content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch h-full `}
     >
       <InfoToggleButtons />
 
@@ -152,7 +152,7 @@ const MapInfoSwitcher = memo(function Switcher() {
       rotateY: -30,
     },
     enter: {
-      translateX: "1%",
+      translateX: "0%",
       rotateY: 0,
     },
     leave: {
@@ -168,10 +168,10 @@ const MapInfoSwitcher = memo(function Switcher() {
     },
   });
   return (
-    <div className="h-full w-full">
-      <div className="absolute bottom-0 left-0 right-0 top-7 flex flex-col">
+    <div className="h-full py-2">
+      <div className="absolute py-2 bottom-0 left-0 right-0 top-7 flex flex-col">
         {shuffleTransition((style, isOpen) => (
-          <animated.div style={style} className="absolute inset-0">
+          <animated.div style={style} className="absolute inset-0 p-2">
             {isOpen ? (
               <div className="relative h-full overflow-hidden">
                 <Suspense>

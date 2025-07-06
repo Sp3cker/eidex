@@ -6,16 +6,16 @@ const EncounterHeader = ({ text }: { text: string }) => (
 const renderList = (selectedTab: string, largeScreen: boolean) => {
   if (largeScreen) {
     return (
-      <div className="grid grid-cols-3">
-        <div className="flex flex-col items-center">
+      <div className="grid grid-cols-3 w-auto">
+        <div className="flex-1 flex-col items-center">
           <EncounterHeader text="Land" />
           <EncounterMonsList zone="land" />
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex-1 flex-col items-center">
           <EncounterHeader text="Water" />
           <EncounterMonsList zone="water" />
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex-1   flex-col items-center">
           <EncounterHeader text="Fishing" />
           <EncounterMonsList zone="fishing" />
         </div>
@@ -36,7 +36,7 @@ const EncounterMonsContainer = ({ selectedTab }: { selectedTab: string }) => {
   const largeOrSmall = width >= 1024;
 
   return (
-    <div className="flex-1 min-h-80 min-w-40  overflow-y-scroll">
+    <div className="min-h-80 min-w-40 flex-1 overflow-y-scroll ">
       {renderList(selectedTab, largeOrSmall)}
     </div>
   );

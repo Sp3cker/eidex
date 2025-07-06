@@ -1,4 +1,4 @@
-import { DisplayTrainer } from "@/components/Map/MapPlaceInfo/TrainersList/useTrainersData";
+import { DisplayTrainer } from "@/data/map/trainers";
 
 export const updateTrainerHelmet = (
   selectedTrainer: DisplayTrainer | null, 

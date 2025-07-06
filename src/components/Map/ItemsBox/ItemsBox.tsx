@@ -2,7 +2,7 @@
 import { memo, useEffect, useRef, useState } from "react";
 import { useMapStore } from "@/stores/useMapStore";
 import { formatMapString } from "@/utils/formatMapString";
-import { animated } from "@react-spring/web";
+
 import ItemsList from "./ItemsList";
 import CameraIcon from "./CameraIcon";
 const ItemsBox = memo(function ItemsBox({
@@ -19,7 +19,7 @@ const ItemsBox = memo(function ItemsBox({
   //   return state.selectedMap !== null && state.dragging === false;
   // });
   
-  console.log("Selected Map:", selectedMap);
+
   // const [springs] = useSpring(
   //   {
   //     opacity: selectedMap ? 1 : 0,

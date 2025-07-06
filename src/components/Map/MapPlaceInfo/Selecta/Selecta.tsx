@@ -5,7 +5,7 @@ import { shallow } from "zustand/shallow";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
 const translatesTo = {
   lg: 45,
-  md: 3,
+  md: 10,
   sm: 70,
   xs: 70,
 };

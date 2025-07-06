@@ -19,10 +19,10 @@
   grid-template-columns: 1rem 1fr 1fr 1rem;
 }
 .map-place-info-grid {
-  grid-area: 1 / 8 / 11 / 11;
+  grid-area: 1 / 8 / 11 / 13;
 }
 .selecta-grid {
-  grid-area: 12/ 8 / 13 / 13;
+  grid-area: 11/ 8 / 12 / 13;
 }
 .dexnav-grid {
   grid-area: 5 / 2 / 13 / 7;
