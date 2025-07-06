@@ -1,10 +1,9 @@
 import React from "react";
 import { config, useSpring, animated } from "@react-spring/web";
 const CameraIcon = React.memo(function CameraIcon({
-  mapLabel,
   setViewingImage,
 }: {
-  mapLabel: string;
+
   setViewingImage: (viewing: boolean) => void;
 }) {
   const [buttonSpring, buttonSpringApi] = useSpring(
@@ -30,7 +29,7 @@ const CameraIcon = React.memo(function CameraIcon({
       <animated.img
         onClick={handleImageClick}
         src="/camera.webp"
-        alt={`View image of ${mapLabel}`}
+        alt={`View image of selected level`}
         className="h-10 w-10"
         style={{
           transform: buttonSpring.rotate

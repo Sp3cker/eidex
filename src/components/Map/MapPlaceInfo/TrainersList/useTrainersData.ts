@@ -6,9 +6,7 @@ import {
   type Trainer,
   type RivalTrainer,
   DisplayTrainer,
-
 } from "@/data/map/trainers";
-
 
 function groupRivals(trainers: Trainer[]): DisplayTrainer[] {
   const result = trainers.reduce(
@@ -65,9 +63,8 @@ export const useTrainersData = () => {
     // Check if we have cached data first
     const cachedTrainers = getCachedTrainersForMap(selectedMap);
     if (cachedTrainers.length > 0) {
-      console.time("start");
       setTrainers(groupTrainersByLevel(groupRivals(cachedTrainers)));
-      console.timeEnd("start");
+
       return;
     }
 

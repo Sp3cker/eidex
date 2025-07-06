@@ -3,6 +3,9 @@ import type { Pokemon } from "@/types";
 import { parseShortEvolutions } from "../utils/parseEvo";
 export { Pokemon };
 // Export both formats for flexibility
+/**
+ * Lookup [id] to species data
+ */
 export const pokemonDataMap = speciesDataJson as Record<string, Pokemon>;
 export const pokemonData: Pokemon[] = Object.values(speciesDataJson).filter(
   (p) => p.nameKey.includes("Gmax") === false,

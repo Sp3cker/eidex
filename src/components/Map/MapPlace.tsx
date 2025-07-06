@@ -67,7 +67,7 @@ const MapPlace = memo(
       if (elem.type === "rect") {
         return (
           <rect
-            key={elem.id || `rect-${Math.random()}`}
+            key={elem.id}
             id={elem.id}
             x={elem.x}
             y={elem.y}
@@ -84,7 +84,7 @@ const MapPlace = memo(
         return (
           <path
             className={`${isSelectedMap ? "fill-emerald-600" : ""} transition-colors`}
-            key={elem.id || `path-${Math.random()}`}
+            key={elem.id }
             id={elem.id}
             d={elem.d}
             {...elem.style}
@@ -96,7 +96,7 @@ const MapPlace = memo(
       if (elem.type === "circle") {
         return (
           <circle
-            key={elem.id || `circle-${Math.random()}`}
+            key={elem.id }
             id={elem.id}
             cx={elem.cx}
             cy={elem.cy}
@@ -110,7 +110,7 @@ const MapPlace = memo(
       if (elem.type === "use") {
         return (
           <use
-            key={elem.id || `use-${Math.random()}`}
+            key={elem.id}
             id={elem.id}
             xlinkHref={elem["xlink:href"]}
             x={elem.x}

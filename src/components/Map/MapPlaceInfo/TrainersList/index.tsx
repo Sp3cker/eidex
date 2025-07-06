@@ -62,7 +62,7 @@ const TrainersOnLevelList = ({
       <div className="h-full space-y-2">
         {trainers.length > 0 &&
           trainers.map((trainer) => (
-            <TrainerItem key={trainer.script} trainer={trainer} />
+            <TrainerItem key={trainer.trainerName+trainer.script} trainer={trainer} />
           ))}
       </div>
     </section>

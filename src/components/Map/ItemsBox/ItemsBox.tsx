@@ -5,12 +5,8 @@ import { formatMapString } from "@/utils/formatMapString";
 
 import ItemsList from "./ItemsList";
 import CameraIcon from "./CameraIcon";
-const ItemsBox = memo(function ItemsBox({
-  selectedMap,
-}: {
-  selectedMap?: string;
-}) {
-  // const selectedMap = useMapStore((state) => state.selectedMap);
+const ItemsBox = memo(function ItemsBox() {
+  const selectedMap = useMapStore((state) => state.selectedMap);
   const setViewingImage = useMapStore((state) => state.setViewingImage);
   const [isHeaderOverlaying, setIsHeaderOverlaying] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
@@ -18,7 +14,6 @@ const ItemsBox = memo(function ItemsBox({
   // const show = useMapStore((state) => {
   //   return state.selectedMap !== null && state.dragging === false;
   // });
-  
 
   // const [springs] = useSpring(
   //   {
@@ -98,9 +93,9 @@ const ItemsBox = memo(function ItemsBox({
             {mapLabel}
           </h2>
         </span>
-        <CameraIcon mapLabel={mapLabel} setViewingImage={setViewingImage} />
+        <CameraIcon setViewingImage={setViewingImage} />
       </div>
-      <div className="font-pkmnem flex flex-col flex-1 overflow-y-scroll rounded-sm">
+      <div className="font-pkmnem flex flex-1 flex-col overflow-y-scroll rounded-sm">
         <ItemsList firstItemRef={firstItemRef} />
       </div>
     </div>

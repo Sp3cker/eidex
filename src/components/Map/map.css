@@ -255,3 +255,45 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 .wiggle-on-hover:hover {
   animation: wiggle 0.5s ease-out forwards; /* Changed ease-in-out to ease-out */
 }
+.elite-ai-flag {
+  color: color-mix(in srgb, hsl(50 89% 73%) var(--color-neutral-800));
+  background-color: color-mix(
+    in srgb,
+    var(--background-color-mix) 50%,
+    hsl(50 89% 73%)
+  );
+}
+
+.rare-ai-flag {
+  color: color-mix(in srgb, hsl(262 50% 47%) 10%, var(--color-neutral-800));
+  background-color: color-mix(in srgb, rgba(0 0 0 / 0.1) 50%, hsl(262 50% 47%));
+}
+
+.normal-ai-flag {
+  color: color-mix(in srgb, hsl(205 41% 53%) 25%, var(--color-neutral-800));
+  background-color: color-mix(in srgb, rgba(0 0 0 / 0.1) 50%, hsl(205 41% 53%));
+}
+/* .elite-ai-flag {
+  color: color-mix(in lab, lab(82, 11, 75) 10%, var(--background-color-mix));
+  background-color: color-mix(
+    in srgb,
+    rgba(0, 0, 0, 0.1) 25%,
+    var(--normal-type-color)
+  );
+}
+.rare-ai-flag {
+  color: color-mix(in lab, lab(55, 45, -48) 10%, var(--background-color-mix));
+  background-color: color-mix(in srgb, rgba(0, 0, 0, 0.1) 25%, lab(82, 11, 75));
+}
+.normal-ai-flag {
+  color: color-mix(
+    in lab,
+    lab(55, 10.93, -75) 10%,
+    var(--background-color-mix)
+  );
+  background-color: color-mix(
+    in lab,
+    rgba(0, 0, 0, 0.1) 25%,
+    lab(55, 10.93, -75)
+  );
+} */

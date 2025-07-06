@@ -1,15 +1,15 @@
 import { useTransition, animated as a } from "@react-spring/web";
 
 export const SEARCH_RESULT_SPACING = window.innerWidth < 400 ? 40 : 40;
-export const SEARCH_SIZE = '15rem'
-export const SEARCH_SIZE_SHRUNK = '4rem';
-export const animConfigs = {
+export const SEARCH_SIZE = "15rem";
+export const SEARCH_SIZE_SHRUNK = "4rem";
+export const animConfigs = Object.freeze({
   hover: { shadow: 15 },
   initial: { scale: 1, shadow: 1 },
   click: {
     scale: 1.01,
   },
-};
+});
 
 export const animFn = (active: boolean) =>
   active ? animConfigs.hover : animConfigs.initial;

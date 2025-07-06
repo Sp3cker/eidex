@@ -10,11 +10,11 @@ interface TabNavigationProps {
     pickup: boolean;
   };
 }
-const TAB_CONFIG = {
+const TAB_CONFIG = Object.freeze({
   story: { label: "Story Items", className: "story-tab" },
   pickup: { label: "Pickup Items", className: "story-tab" },
   marts: { label: "PokéMart", className: "pokemart-tab" },
-};
+});
 
 const TabNavigation = React.memo<TabNavigationProps>(function TabNavigation({
   selectedTab,

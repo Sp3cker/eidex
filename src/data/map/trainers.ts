@@ -2,10 +2,12 @@
 let trainersData: Record<string, Trainer[]> | null = null;
 let isLoading = false;
 let loadPromise: Promise<Record<string, Trainer[]>> | null = null;
-type PartyMon = {
+export type PartyMon = {
   moves?: string[];
   lvl: number;
-  species: string;
+  id: number;
+  ev: number[];
+  iv?: 'perfect';
   nature?: string;
   ability?: string;
   heldItem?: string;
