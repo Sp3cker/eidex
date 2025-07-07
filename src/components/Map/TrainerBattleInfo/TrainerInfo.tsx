@@ -20,7 +20,7 @@ const AIFlags = ({ flags }: { flags: (keyof typeof aiFlags)[] }) => {
           const bg = rarityColors[aiFlags[flag].rarity];
           return (
             <p
-              className={`rounded pkmn-types ${bg} px-2 py-0.5 text-gray-700`}
+              className={`pkmn-types rounded ${bg} px-2 py-0.5 text-gray-700`}
               key={index}
             >
               {aiFlags[flag].desc}
@@ -50,7 +50,7 @@ const TrainerInfo = memo(function TrainerInfo({
       className={`max-w-100 flex flex-row justify-between gap-2 md:flex-row ${trainer.boss ? "h-40" : "h-35"} ${className}`}
     >
       {/* Trainer Image and Name */}
-      <div className="flex items-start gap-2  w-[45%]">
+      <div className="flex w-[45%] items-start gap-2">
         <div className="relative flex flex-col">
           <img
             src={`/trainers/${trainer.battlePic}`}
@@ -64,11 +64,11 @@ const TrainerInfo = memo(function TrainerInfo({
             >
               {trainer.trainerName}
             </h3>
-              {trainer.trainerName === "X" && (
-                <p className="font-pkmnem inline text-xs/2 tracking-tight text-gray-500">
-                  His name is really X it's not an error
-                </p>
-              )}
+            {trainer.trainerName === "X" && (
+              <p className="font-pkmnem text-xs/2 inline tracking-tight text-gray-500">
+                His name is really X it's not an error
+              </p>
+            )}
           </div>
           {trainer.boss && (
             <span className="me-2 rounded-sm bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">

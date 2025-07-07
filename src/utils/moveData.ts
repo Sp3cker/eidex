@@ -2,14 +2,14 @@ import moveDataArr from "../data/moveData.json";
 import { Move } from "../types";
 
 // Build a map from id to move for O(1) access
-const moveDataMap: Record<number, Move> = {};
+const moveDataMap = new Map<number, Move>();
 
 (moveDataArr as Move[])
   .filter((move) => move.description && move.name)
-  .forEach((move) => (moveDataMap[move.id] = { ...move }));
+  .forEach((move) => moveDataMap.set(move.id, { ...move }));
 
 function getMoveData(id: number): Move | undefined {
-  return moveDataMap[id];
+  return moveDataMap.get(id);
 }
 
 function getMoveName(id: number) {

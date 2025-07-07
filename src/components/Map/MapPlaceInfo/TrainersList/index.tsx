@@ -29,20 +29,15 @@ const TrainerItem = memo(function TrainerItem({
             <h3 className="font-calamity text-sm font-bold leading-tight text-neutral-700">
               {trainer.trainerName}
             </h3>
-            {/* <p className="text-sm text-gray-600">{trainer.}</p> */}
           </div>
         </div>
 
         {/* Battle indicator */}
-        <div className="text-red-500">
-          <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-            <path
-              fillRule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </div>
+        {trainer.boss && (
+          <div className="text-xs pr-5 font-medium text-amber-800 dark:text-blue-300">
+            <h1 className="text-2xl font-bold">Ω</h1>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -62,7 +57,10 @@ const TrainersOnLevelList = ({
       <div className="h-full space-y-2">
         {trainers.length > 0 &&
           trainers.map((trainer) => (
-            <TrainerItem key={trainer.trainerName+trainer.script} trainer={trainer} />
+            <TrainerItem
+              key={trainer.trainerName + trainer.script}
+              trainer={trainer}
+            />
           ))}
       </div>
     </section>

@@ -37,7 +37,7 @@ export const aiFlags: Record<string, TrainerAIFlag> = Object.freeze({
 
   ACE_POKEMON: { desc: "Reserves strongest Pokémon", rarity: 2 },
 
-  OMNISCIENT: { desc: "Sees your moves and items", rarity: 1 },
+  OMNISCIENT: { desc: "Knows your party", rarity: 1 },
 
   CONSERVATIVE: { desc: "Assumes minimum damage", rarity: 0 },
 

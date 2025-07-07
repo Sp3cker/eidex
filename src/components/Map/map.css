@@ -266,7 +266,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 
 .rare-ai-flag {
   color: color-mix(in srgb, hsl(262 50% 47%) 10%, var(--color-neutral-800));
-  background-color: color-mix(in srgb, rgba(0 0 0 / 0.1) 50%, hsl(262 50% 47%));
+  background-color: color-mix(in srgb, rgba(0 0 0 / 0.1) 60%, hsl(262 50% 47%));
 }
 
 .normal-ai-flag {

@@ -21,13 +21,22 @@ export function getTypeName(typeID: number): string {
 export function getTypeNamesArr(typeIDsArr: number[]): string[] {
   const types: string[] = [];
   if (typeIDsArr.length === 0) return ["Normal"];
-  if (typeof typeIDsArr[0] === "number") {
-    types.push(typeDataArray[typeIDsArr[0]]?.typeName || "Normal");
-  }
-  if (typeof typeIDsArr[1] === "number") {
-    types.push(typeDataArray[typeIDsArr[1]]?.typeName || "Normal");
+  
+  for (const typeID of typeIDsArr) {
+    if (typeof typeID === "number") {
+      types.push(typeDataArray[typeID]?.typeName || "Normal");
+    }
   }
   return types;
+}
+
+/**
+ * Gets type names for multiple moves efficiently
+ * @param moveTypeIds - Array of move type IDs
+ * @returns Array of type names corresponding to each move
+ */
+export function getMoveTypeNames(moveTypeIds: number[]): string[] {
+  return moveTypeIds.map(typeId => typeDataArray[typeId]?.typeName || "Normal");
 }
 
 export function getTypeColor(typeID: number): [string, string] {
@@ -37,6 +46,18 @@ export function getTypeColor(typeID: number): [string, string] {
   ];
 
   return typeColor as [string, string];
+}
+
+/**
+ * Gets type colors for multiple moves efficiently
+ * @param moveTypeIds - Array of move type IDs
+ * @returns Array of color pairs [startColor, endColor] for each move
+ */
+export function getMoveTypeColors(moveTypeIds: number[]): Array<[string, string]> {
+  return moveTypeIds.map(typeId => [
+    typeDataArray[typeId]?.color || "#A8A77A",
+    typeDataArray[typeId]?.colorEnd || "#A8A878"
+  ]);
 }
 
 function codeToMult(code: number): number {
@@ -110,13 +131,13 @@ const typeColors: Record<number, string> = {
 export function getTypeSnapColor(typeID: number): string {
   return typeColors[typeID] || "#cecac5"; // Default to Normal color if not found
 }
-// If you have a pair of type IDs, return their colors
-// If the second type ID is undefined, use the first one for both colors
-export function getTypeCSSColors(typeIDs: [number, number]): string[] {
-  return [
-   typeDataArray[typeIDs[0]]?.cssClass || "normal-type",
-    typeIDs[1] !== undefined
-      ? typeDataArray[typeIDs[1]]?.cssClass || "normal-type"
-      : typeDataArray[typeIDs[0]]?.cssClass || "normal-type",
-  ];
+/**
+ * Gets CSS class names for multiple type IDs
+ * @param typeIDs - Array of type IDs (any length)
+ * @returns Array of CSS class names corresponding to each type ID
+ */
+export function getTypeCSSColors(typeIDs: number[]): string[] {
+  return typeIDs.map(typeId => 
+    typeDataArray[typeId]?.cssClass || "normal-type"
+  );
 }

@@ -17,7 +17,7 @@ const pages = [
   ({ style }: any) => (
     <animated.div
       style={style}
-      className="absolute bottom-0 left-0 right-0 top-0 overflow-y-scroll sm:pb-10 p-2"
+      className="absolute bottom-0 left-0 right-0 top-0 overflow-y-scroll p-0 sm:pb-10"
     >
       <Suspense>
         <FadeInWAAPI>
@@ -32,7 +32,9 @@ const pages = [
       style={style}
     >
       <Suspense>
-        <ItemsBox />
+        <FadeInWAAPI>
+          <ItemsBox />
+        </FadeInWAAPI>
       </Suspense>
     </animated.div>
   ),
@@ -97,7 +99,7 @@ export default memo(function MapItemsBox() {
     >
       <animated.nav
         style={springs}
-        className={`${selectedTrainer ? "h-[70vh] md:h-[75vh]" : "h-[50vh]"} map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 rounded-lg border border-gray-200 p-4 drop-shadow-xl md:row-start-10`}
+        className={`${selectedTrainer ? "h-[70vh] md:h-[75vh]" : "h-[50vh]"} map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 rounded-lg border border-gray-200 drop-shadow-xl md:row-start-10`}
       >
         <div className="flex overflow-hidden">
           {shuffleTransition((style, isOpen) =>

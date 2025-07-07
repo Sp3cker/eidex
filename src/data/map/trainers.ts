@@ -3,7 +3,7 @@ let trainersData: Record<string, Trainer[]> | null = null;
 let isLoading = false;
 let loadPromise: Promise<Record<string, Trainer[]>> | null = null;
 export type PartyMon = {
-  moves?: string[];
+  moves?: number[];
   lvl: number;
   id: number;
   ev: number[];
