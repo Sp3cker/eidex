@@ -28,7 +28,7 @@ const pages = [
   ),
   ({ style }: any) => (
     <animated.div
-      className="absolute bottom-0 left-0 right-0 top-0 overflow-hidden p-2"
+      className="absolute bottom-0 left-0 right-0 top-0 overflow-y-scroll p-2"
       style={style}
     >
       <Suspense>
