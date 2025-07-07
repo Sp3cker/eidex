@@ -99,7 +99,7 @@ export default memo(function MapItemsBox() {
     >
       <animated.nav
         style={springs}
-        className={`${selectedTrainer ? "h-[70vh] md:h-[75vh]" : "h-[50vh]"} map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 rounded-lg border border-gray-200 drop-shadow-xl md:row-start-10`}
+        className={`${selectedTrainer ? "h-[70vh] md:h-[75vh]" : "h-[50vh]"} will-translate map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 overflow-x-hidden rounded-lg border border-gray-200 drop-shadow-xl md:row-start-10`}
       >
         <div className="flex overflow-hidden">
           {shuffleTransition((style, isOpen) =>
