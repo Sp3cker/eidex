@@ -3,7 +3,7 @@
     {
       "thisLevelsId": "MAP_ABANDONED_SHIP_CAPTAINS_OFFICE",
       "baseMap": "MAP_ABANDONED_SHIP",
-      "levelLabel": "Captains Office",
+      "levelLabel": "Captainsoffice",
       "shopItems": [],
       "pickupItems": [
         {
@@ -22,7 +22,7 @@
     {
       "thisLevelsId": "MAP_ABANDONED_SHIP_CORRIDORS_1F",
       "baseMap": "MAP_ABANDONED_SHIP",
-      "levelLabel": "Corridors1 F",
+      "levelLabel": "Corridors 1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -30,14 +30,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_CHARLIE",
-          "script": "AbandonedShip_Corridors_1F_EventScript_Charlie"
+          "script": "AbandonedShip_Corridors_1F_EventScript_Charlie",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ABANDONED_SHIP_CORRIDORS_B1F",
       "baseMap": "MAP_ABANDONED_SHIP",
-      "levelLabel": "Corridors B1 F",
+      "levelLabel": "Corridors B 1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -45,14 +46,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_DUNCAN",
-          "script": "AbandonedShip_Corridors_B1F_EventScript_Duncan"
+          "script": "AbandonedShip_Corridors_B1F_EventScript_Duncan",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS",
       "baseMap": "MAP_ABANDONED_SHIP",
-      "levelLabel": "Hidden Floor Corridors",
+      "levelLabel": "Hiddenfloorcorridors",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -62,7 +64,7 @@
     {
       "thisLevelsId": "MAP_ABANDONED_SHIP_HIDDEN_FLOOR_ROOMS",
       "baseMap": "MAP_ABANDONED_SHIP",
-      "levelLabel": "Hidden Floor Rooms",
+      "levelLabel": "Hiddenfloorrooms",
       "shopItems": [],
       "pickupItems": [
         {
@@ -137,7 +139,7 @@
     {
       "thisLevelsId": "MAP_ABANDONED_SHIP_ROOM_B1F",
       "baseMap": "MAP_ABANDONED_SHIP",
-      "levelLabel": "Room B1 F",
+      "levelLabel": "Room B 1F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -156,7 +158,7 @@
     {
       "thisLevelsId": "MAP_ABANDONED_SHIP_ROOMS2_1F",
       "baseMap": "MAP_ABANDONED_SHIP",
-      "levelLabel": "Rooms21 F",
+      "levelLabel": "Rooms 2 1F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -173,26 +175,30 @@
       "trainerRefs": [
         {
           "id": "TRAINER_KIRA_AND_DAN_1",
-          "script": "AbandonedShip_Rooms2_1F_EventScript_Dan"
+          "script": "AbandonedShip_Rooms2_1F_EventScript_Dan",
+          "rematch": false
         },
         {
           "id": "TRAINER_KIRA_AND_DAN_1",
-          "script": "AbandonedShip_Rooms2_1F_EventScript_Kira"
+          "script": "AbandonedShip_Rooms2_1F_EventScript_Kira",
+          "rematch": false
         },
         {
           "id": "TRAINER_JANI",
-          "script": "AbandonedShip_Rooms2_1F_EventScript_Jani"
+          "script": "AbandonedShip_Rooms2_1F_EventScript_Jani",
+          "rematch": false
         },
         {
           "id": "TRAINER_GARRISON",
-          "script": "AbandonedShip_Rooms2_1F_EventScript_Garrison"
+          "script": "AbandonedShip_Rooms2_1F_EventScript_Garrison",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ABANDONED_SHIP_ROOMS2_B1F",
       "baseMap": "MAP_ABANDONED_SHIP",
-      "levelLabel": "Rooms2 B1 F",
+      "levelLabel": "Rooms 2 B 1F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -211,7 +217,7 @@
     {
       "thisLevelsId": "MAP_ABANDONED_SHIP_ROOMS_1F",
       "baseMap": "MAP_ABANDONED_SHIP",
-      "levelLabel": "Rooms1 F",
+      "levelLabel": "Rooms 1F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -228,18 +234,25 @@
       "trainerRefs": [
         {
           "id": "TRAINER_DEMETRIUS",
-          "script": "AbandonedShip_Rooms_1F_EventScript_Demetrius"
+          "script": "AbandonedShip_Rooms_1F_EventScript_Demetrius",
+          "rematch": false
         },
         {
           "id": "TRAINER_THALIA_1",
-          "script": "AbandonedShip_Rooms_1F_EventScript_Thalia"
+          "script": "AbandonedShip_Rooms_1F_EventScript_Thalia",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_THALIA_1",
+          "script": "AbandonedShip_Rooms_1F_EventScript_ThaliaRematch",
+          "rematch": true
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ABANDONED_SHIP_ROOMS_B1F",
       "baseMap": "MAP_ABANDONED_SHIP",
-      "levelLabel": "Rooms B1 F",
+      "levelLabel": "Rooms B 1F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -293,7 +306,7 @@
     {
       "thisLevelsId": "MAP_AQUA_HIDEOUT_1F",
       "baseMap": "MAP_AQUA_HIDEOUT",
-      "levelLabel": "1 F",
+      "levelLabel": "1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -301,14 +314,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_AQUA_HIDEOUT_1",
-          "script": "AquaHideout_1F_EventScript_Grunt1"
+          "script": "AquaHideout_1F_EventScript_Grunt1",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_AQUA_HIDEOUT_B1F",
       "baseMap": "MAP_AQUA_HIDEOUT",
-      "levelLabel": "B1 F",
+      "levelLabel": "B 1F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -341,26 +355,30 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_AQUA_HIDEOUT_2",
-          "script": "AquaHideout_B1F_EventScript_Grunt2"
+          "script": "AquaHideout_B1F_EventScript_Grunt2",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_AQUA_HIDEOUT_3",
-          "script": "AquaHideout_B1F_EventScript_Grunt3"
+          "script": "AquaHideout_B1F_EventScript_Grunt3",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_AQUA_HIDEOUT_5",
-          "script": "AquaHideout_B1F_EventScript_Grunt5"
+          "script": "AquaHideout_B1F_EventScript_Grunt5",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_AQUA_HIDEOUT_7",
-          "script": "AquaHideout_B1F_EventScript_Grunt7"
+          "script": "AquaHideout_B1F_EventScript_Grunt7",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_AQUA_HIDEOUT_B2F",
       "baseMap": "MAP_AQUA_HIDEOUT",
-      "levelLabel": "B2 F",
+      "levelLabel": "B 2F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -377,19 +395,23 @@
       "trainerRefs": [
         {
           "id": "TRAINER_ARCHIE_HIDEOUT",
-          "script": "AquaHideout_B2F_EventScript_Archie"
+          "script": "AquaHideout_B2F_EventScript_Archie",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_AQUA_HIDEOUT_4",
-          "script": "AquaHideout_B2F_EventScript_Grunt4"
+          "script": "AquaHideout_B2F_EventScript_Grunt4",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_AQUA_HIDEOUT_6",
-          "script": "AquaHideout_B2F_EventScript_Grunt6"
+          "script": "AquaHideout_B2F_EventScript_Grunt6",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_AQUA_HIDEOUT_8",
-          "script": "AquaHideout_B2F_EventScript_Grunt8"
+          "script": "AquaHideout_B2F_EventScript_Grunt8",
+          "rematch": false
         }
       ]
     }
@@ -398,7 +420,7 @@
     {
       "thisLevelsId": "MAP_ARTISAN_CAVE_1F",
       "baseMap": "MAP_ARTISAN_CAVE",
-      "levelLabel": "1 F",
+      "levelLabel": "1F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -417,7 +439,7 @@
     {
       "thisLevelsId": "MAP_ARTISAN_CAVE_B1F",
       "baseMap": "MAP_ARTISAN_CAVE",
-      "levelLabel": "B1 F",
+      "levelLabel": "B 1F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -502,7 +524,7 @@
     {
       "thisLevelsId": "MAP_BATTLE_FRONTIER_SCOTTS_HOUSE",
       "baseMap": "MAP_BATTLE_FRONTIER",
-      "levelLabel": "Scotts House",
+      "levelLabel": "Scottshouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -537,7 +559,7 @@
     {
       "thisLevelsId": "MAP_CAVE_OF_ORIGIN_1F",
       "baseMap": "MAP_CAVE_OF_ORIGIN",
-      "levelLabel": "1 F",
+      "levelLabel": "1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -557,7 +579,7 @@
     {
       "thisLevelsId": "MAP_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP1",
       "baseMap": "MAP_CAVE_OF_ORIGIN",
-      "levelLabel": "Unused Ruby Sapphire Map1",
+      "levelLabel": "Unusedrubysapphiremap 1",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -567,7 +589,7 @@
     {
       "thisLevelsId": "MAP_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP2",
       "baseMap": "MAP_CAVE_OF_ORIGIN",
-      "levelLabel": "Unused Ruby Sapphire Map2",
+      "levelLabel": "Unusedrubysapphiremap 2",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -577,7 +599,7 @@
     {
       "thisLevelsId": "MAP_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP3",
       "baseMap": "MAP_CAVE_OF_ORIGIN",
-      "levelLabel": "Unused Ruby Sapphire Map3",
+      "levelLabel": "Unusedrubysapphiremap 3",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -673,11 +695,7 @@
           "items": [
             {
               "name": "ITEM_TM_LOW_SWEEP",
-              "quantity": 1
-            },
-            {
-              "name": "ITEM_TM_LOW_SWEEP",
-              "quantity": 1
+              "quantity": 2
             }
           ],
           "pokemon": [],
@@ -689,31 +707,38 @@
       "trainerRefs": [
         {
           "id": "TRAINER_BRAWLY_1",
-          "script": "DewfordTown_Gym_EventScript_Brawly"
+          "script": "DewfordTown_Gym_EventScript_Brawly",
+          "rematch": false
         },
         {
           "id": "TRAINER_TAKAO",
-          "script": "DewfordTown_Gym_EventScript_Takao"
+          "script": "DewfordTown_Gym_EventScript_Takao",
+          "rematch": false
         },
         {
           "id": "TRAINER_JOCELYN",
-          "script": "DewfordTown_Gym_EventScript_Jocelyn"
+          "script": "DewfordTown_Gym_EventScript_Jocelyn",
+          "rematch": false
         },
         {
           "id": "TRAINER_LAURA",
-          "script": "DewfordTown_Gym_EventScript_Laura"
+          "script": "DewfordTown_Gym_EventScript_Laura",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDEN",
-          "script": "DewfordTown_Gym_EventScript_Brenden"
+          "script": "DewfordTown_Gym_EventScript_Brenden",
+          "rematch": false
         },
         {
           "id": "TRAINER_CRISTIAN",
-          "script": "DewfordTown_Gym_EventScript_Cristian"
+          "script": "DewfordTown_Gym_EventScript_Cristian",
+          "rematch": false
         },
         {
           "id": "TRAINER_LILITH",
-          "script": "DewfordTown_Gym_EventScript_Lilith"
+          "script": "DewfordTown_Gym_EventScript_Lilith",
+          "rematch": false
         }
       ]
     }
@@ -785,42 +810,50 @@
       "trainerRefs": [
         {
           "id": "TRAINER_MAY_EVERGRANDE_TREECKO",
-          "script": "EverGrandeCity_EventScript_BattleMayTreecko"
+          "script": "EverGrandeCity_EventScript_BattleMayTreecko",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAY_EVERGRANDE_TORCHIC",
-          "script": "EverGrandeCity_EventScript_BattleMayTorchic"
+          "script": "EverGrandeCity_EventScript_BattleMayTorchic",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAY_EVERGRANDE_MUDKIP",
-          "script": "EverGrandeCity_EventScript_BattleMayMudkip"
+          "script": "EverGrandeCity_EventScript_BattleMayMudkip",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_EVERGRANDE_TREECKO",
-          "script": "EverGrandeCity_EventScript_BattleBrendanTreecko"
+          "script": "EverGrandeCity_EventScript_BattleBrendanTreecko",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_EVERGRANDE_TORCHIC",
-          "script": "EverGrandeCity_EventScript_BattleBrendanTorchic"
+          "script": "EverGrandeCity_EventScript_BattleBrendanTorchic",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_EVERGRANDE_MUDKIP",
-          "script": "EverGrandeCity_EventScript_BattleBrendanMudkip"
+          "script": "EverGrandeCity_EventScript_BattleBrendanMudkip",
+          "rematch": false
         },
         {
           "id": "TRAINER_DAWN_EVERGRANDE",
-          "script": "EverGrandeCity_EventScript_BattleDawn"
+          "script": "EverGrandeCity_EventScript_BattleDawn",
+          "rematch": false
         },
         {
           "id": "TRAINER_VOLKNER",
-          "script": "EverGrandeCity_EventScript_BattleVolkner"
+          "script": "EverGrandeCity_EventScript_BattleVolkner",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_EVER_GRANDE_CITY_CHAMPIONS_ROOM",
       "baseMap": "MAP_EVER_GRANDE_CITY",
-      "levelLabel": "Champions Room",
+      "levelLabel": "Championsroom",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -828,14 +861,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_STEVEN_WITH_WALLACE",
-          "script": "EverGrandeCity_ChampionsRoom_EventScript_Wallace"
+          "script": "EverGrandeCity_ChampionsRoom_EventScript_Wallace",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_EVER_GRANDE_CITY_DRAKES_ROOM",
       "baseMap": "MAP_EVER_GRANDE_CITY",
-      "levelLabel": "Drakes Room",
+      "levelLabel": "Drakesroom",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -843,14 +877,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_CYNTHIA",
-          "script": "EverGrandeCity_DrakesRoom_EventScript_Cynthia"
+          "script": "EverGrandeCity_DrakesRoom_EventScript_Cynthia",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_EVER_GRANDE_CITY_GLACIAS_ROOM",
       "baseMap": "MAP_EVER_GRANDE_CITY",
-      "levelLabel": "Glacias Room",
+      "levelLabel": "Glaciasroom",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -858,18 +893,20 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GLACIA2",
-          "script": "EverGrandeCity_GlaciasRoom_EventScript_Glacia"
+          "script": "EverGrandeCity_GlaciasRoom_EventScript_Glacia",
+          "rematch": false
         },
         {
           "id": "TRAINER_GLACIA1",
-          "script": "EverGrandeCity_GlaciasRoom_EventScript_BattleGlacia1"
+          "script": "EverGrandeCity_GlaciasRoom_EventScript_BattleGlacia1",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_EVER_GRANDE_CITY_PHOEBES_ROOM",
       "baseMap": "MAP_EVER_GRANDE_CITY",
-      "levelLabel": "Phoebes Room",
+      "levelLabel": "Phoebesroom",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -877,18 +914,20 @@
       "trainerRefs": [
         {
           "id": "TRAINER_PHOEBE2",
-          "script": "EverGrandeCity_PhoebesRoom_EventScript_Phoebe"
+          "script": "EverGrandeCity_PhoebesRoom_EventScript_Phoebe",
+          "rematch": false
         },
         {
           "id": "TRAINER_PHOEBE1",
-          "script": "EverGrandeCity_PhoebesRoom_EventScript_BattlePhoebe1"
+          "script": "EverGrandeCity_PhoebesRoom_EventScript_BattlePhoebe1",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_1F",
       "baseMap": "MAP_EVER_GRANDE_CITY",
-      "levelLabel": "Pokemon League1 F",
+      "levelLabel": "Pokemonleague 1F",
       "shopItems": [
         {
           "label": "MAP_EVER_GRANDE_CITY",
@@ -902,7 +941,7 @@
             "ITEM_REVIVE",
             "ITEM_MAX_REPEL"
           ],
-          "levelLabel": "Pokemon League1 F",
+          "levelLabel": "Pokemonleague 1F",
           "scriptname": "EverGrandeCity_PokemonLeague_1F_Pokemart:"
         }
       ],
@@ -914,7 +953,7 @@
     {
       "thisLevelsId": "MAP_EVER_GRANDE_CITY_SIDNEYS_ROOM",
       "baseMap": "MAP_EVER_GRANDE_CITY",
-      "levelLabel": "Sidneys Room",
+      "levelLabel": "Sidneysroom",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -922,11 +961,13 @@
       "trainerRefs": [
         {
           "id": "TRAINER_SIDNEY2",
-          "script": "EverGrandeCity_SidneysRoom_EventScript_Sidney"
+          "script": "EverGrandeCity_SidneysRoom_EventScript_Sidney",
+          "rematch": false
         },
         {
           "id": "TRAINER_SIDNEY1",
-          "script": "EverGrandeCity_SidneysRoom_EventScript_BattleSidney1"
+          "script": "EverGrandeCity_SidneysRoom_EventScript_BattleSidney1",
+          "rematch": false
         }
       ]
     }
@@ -985,7 +1026,7 @@
     {
       "thisLevelsId": "MAP_FALLARBOR_TOWN_MOVE_RELEARNERS_HOUSE",
       "baseMap": "MAP_FALLARBOR_TOWN",
-      "levelLabel": "Move Relearners House",
+      "levelLabel": "Moverelearnershouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -1209,7 +1250,7 @@
     {
       "thisLevelsId": "MAP_FORTREE_CITY_CREATOR_HOUSE",
       "baseMap": "MAP_FORTREE_CITY",
-      "levelLabel": "Creator House",
+      "levelLabel": "Creatorhouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -1299,15 +1340,18 @@
       "trainerRefs": [
         {
           "id": "TRAINER_IRIV24",
-          "script": "FortreeCity_CreatorHouse_EventScript_BattleIriv24"
+          "script": "FortreeCity_CreatorHouse_EventScript_BattleIriv24",
+          "rematch": false
         },
         {
           "id": "TRAINER_CAP",
-          "script": "FortreeCity_CreatorHouse_EventScript_BattleCap"
+          "script": "FortreeCity_CreatorHouse_EventScript_BattleCap",
+          "rematch": false
         },
         {
           "id": "TRAINER_X",
-          "script": "FortreeCity_CreatorHouse_EventScript_BattleX"
+          "script": "FortreeCity_CreatorHouse_EventScript_BattleX",
+          "rematch": false
         }
       ]
     },
@@ -1350,38 +1394,45 @@
       "trainerRefs": [
         {
           "id": "TRAINER_WINONA_1",
-          "script": "FortreeCity_Gym_EventScript_Winona"
+          "script": "FortreeCity_Gym_EventScript_Winona",
+          "rematch": false
         },
         {
           "id": "TRAINER_JARED",
-          "script": "FortreeCity_Gym_EventScript_Jared"
+          "script": "FortreeCity_Gym_EventScript_Jared",
+          "rematch": false
         },
         {
           "id": "TRAINER_EDWARDO",
-          "script": "FortreeCity_Gym_EventScript_Edwardo"
+          "script": "FortreeCity_Gym_EventScript_Edwardo",
+          "rematch": false
         },
         {
           "id": "TRAINER_FLINT",
-          "script": "FortreeCity_Gym_EventScript_Flint"
+          "script": "FortreeCity_Gym_EventScript_Flint",
+          "rematch": false
         },
         {
           "id": "TRAINER_ASHLEY",
-          "script": "FortreeCity_Gym_EventScript_Ashley"
+          "script": "FortreeCity_Gym_EventScript_Ashley",
+          "rematch": false
         },
         {
           "id": "TRAINER_HUMBERTO",
-          "script": "FortreeCity_Gym_EventScript_Humberto"
+          "script": "FortreeCity_Gym_EventScript_Humberto",
+          "rematch": false
         },
         {
           "id": "TRAINER_DARIUS",
-          "script": "FortreeCity_Gym_EventScript_Darius"
+          "script": "FortreeCity_Gym_EventScript_Darius",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_FORTREE_CITY_HOUSE2",
       "baseMap": "MAP_FORTREE_CITY",
-      "levelLabel": "House2",
+      "levelLabel": "House 2",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -1403,7 +1454,7 @@
     {
       "thisLevelsId": "MAP_FORTREE_CITY_HOUSE4",
       "baseMap": "MAP_FORTREE_CITY",
-      "levelLabel": "House4",
+      "levelLabel": "House 4",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -1457,7 +1508,7 @@
     {
       "thisLevelsId": "MAP_GRANITE_CAVE_1F",
       "baseMap": "MAP_GRANITE_CAVE",
-      "levelLabel": "1 F",
+      "levelLabel": "1F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -1488,7 +1539,7 @@
     {
       "thisLevelsId": "MAP_GRANITE_CAVE_B1F",
       "baseMap": "MAP_GRANITE_CAVE",
-      "levelLabel": "B1 F",
+      "levelLabel": "B 1F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -1507,7 +1558,7 @@
     {
       "thisLevelsId": "MAP_GRANITE_CAVE_B2F",
       "baseMap": "MAP_GRANITE_CAVE",
-      "levelLabel": "B2 F",
+      "levelLabel": "B 2F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -1542,7 +1593,7 @@
     {
       "thisLevelsId": "MAP_GRANITE_CAVE_STEVENS_ROOM",
       "baseMap": "MAP_GRANITE_CAVE",
-      "levelLabel": "Stevens Room",
+      "levelLabel": "Stevensroom",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -1716,27 +1767,43 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_JAGGED_PASS",
-          "script": "JaggedPass_EventScript_MagmaHideoutGuard"
+          "script": "JaggedPass_EventScript_MagmaHideoutGuard",
+          "rematch": false
         },
         {
           "id": "TRAINER_ERIC",
-          "script": "JaggedPass_EventScript_Eric"
+          "script": "JaggedPass_EventScript_Eric",
+          "rematch": false
         },
         {
           "id": "TRAINER_DIANA_1",
-          "script": "JaggedPass_EventScript_Diana"
+          "script": "JaggedPass_EventScript_Diana",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_DIANA_1",
+          "script": "JaggedPass_EventScript_DianaRematch",
+          "rematch": true
         },
         {
           "id": "TRAINER_ETHAN_1",
-          "script": "JaggedPass_EventScript_Ethan"
+          "script": "JaggedPass_EventScript_Ethan",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_ETHAN_1",
+          "script": "JaggedPass_EventScript_EthanRematch",
+          "rematch": true
         },
         {
           "id": "TRAINER_AUTUMN",
-          "script": "JaggedPass_EventScript_Autumn"
+          "script": "JaggedPass_EventScript_Autumn",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAYLENE",
-          "script": "JaggedPass_EventScript_BattleMaylene"
+          "script": "JaggedPass_EventScript_BattleMaylene",
+          "rematch": false
         }
       ]
     }
@@ -1812,7 +1879,7 @@
     {
       "thisLevelsId": "MAP_LAVARIDGE_TOWN_GYM_1F",
       "baseMap": "MAP_LAVARIDGE_TOWN",
-      "levelLabel": "Gym1 F",
+      "levelLabel": "Gym 1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -1852,14 +1919,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_FLANNERY_1",
-          "script": "LavaridgeTown_Gym_1F_EventScript_Flannery"
+          "script": "LavaridgeTown_Gym_1F_EventScript_Flannery",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_LAVARIDGE_TOWN_HERB_SHOP",
       "baseMap": "MAP_LAVARIDGE_TOWN",
-      "levelLabel": "Herb Shop",
+      "levelLabel": "Herbshop",
       "shopItems": [
         {
           "label": "MAP_LAVARIDGE_TOWN",
@@ -1874,7 +1942,7 @@
             "ITEM_POWER_HERB",
             "ITEM_BIG_ROOT"
           ],
-          "levelLabel": "Herb Shop",
+          "levelLabel": "Herbshop",
           "scriptname": "LavaridgeTown_HerbShop_Pokemart:"
         }
       ],
@@ -1989,14 +2057,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_DAWN_LILYCOVE",
-          "script": "LilycoveCity_EventScript_DawnRivalBattle"
+          "script": "LilycoveCity_EventScript_DawnRivalBattle",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_2F",
       "baseMap": "MAP_LILYCOVE_CITY",
-      "levelLabel": "Department Store2 F",
+      "levelLabel": "Departmentstore 2F",
       "shopItems": [
         {
           "label": "MAP_LILYCOVE_CITY",
@@ -2014,7 +2083,7 @@
             "ITEM_AWAKENING",
             "ITEM_FLUFFY_TAIL"
           ],
-          "levelLabel": "Department Store2 F",
+          "levelLabel": "Departmentstore 2F",
           "scriptname": "LilycoveCity_DepartmentStore_2F_Pokemart1:"
         },
         {
@@ -2032,7 +2101,7 @@
             "ITEM_WAVE_MAIL",
             "ITEM_MECH_MAIL"
           ],
-          "levelLabel": "Department Store2 F",
+          "levelLabel": "Departmentstore 2F",
           "scriptname": "LilycoveCity_DepartmentStore_2F_Pokemart2:"
         }
       ],
@@ -2044,7 +2113,7 @@
     {
       "thisLevelsId": "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_3F",
       "baseMap": "MAP_LILYCOVE_CITY",
-      "levelLabel": "Department Store3 F",
+      "levelLabel": "Departmentstore 3F",
       "shopItems": [
         {
           "label": "MAP_LILYCOVE_CITY",
@@ -2057,7 +2126,7 @@
             "ITEM_CARBOS",
             "ITEM_HP_UP"
           ],
-          "levelLabel": "Department Store3 F",
+          "levelLabel": "Departmentstore 3F",
           "scriptname": "LilycoveCity_DepartmentStore_3F_Pokemart_Vitamins:"
         },
         {
@@ -2072,7 +2141,7 @@
             "ITEM_GUARD_SPEC",
             "ITEM_X_ACCURACY"
           ],
-          "levelLabel": "Department Store3 F",
+          "levelLabel": "Departmentstore 3F",
           "scriptname": "LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters:"
         }
       ],
@@ -2084,7 +2153,7 @@
     {
       "thisLevelsId": "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_4F",
       "baseMap": "MAP_LILYCOVE_CITY",
-      "levelLabel": "Department Store4 F",
+      "levelLabel": "Departmentstore 4F",
       "shopItems": [
         {
           "label": "MAP_LILYCOVE_CITY",
@@ -2110,7 +2179,7 @@
             "ITEM_CHERISH_BALL",
             "ITEM_BEAST_BALL"
           ],
-          "levelLabel": "Department Store4 F",
+          "levelLabel": "Departmentstore 4F",
           "scriptname": "LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs:"
         },
         {
@@ -2134,7 +2203,7 @@
             "ITEM_UPGRADE",
             "ITEM_DUBIOUS_DISC"
           ],
-          "levelLabel": "Department Store4 F",
+          "levelLabel": "Departmentstore 4F",
           "scriptname": "LilycoveCity_DepartmentStore_4F_Pokemart_DefenseTMs:"
         }
       ],
@@ -2146,7 +2215,7 @@
     {
       "thisLevelsId": "MAP_LILYCOVE_CITY_HOUSE1",
       "baseMap": "MAP_LILYCOVE_CITY",
-      "levelLabel": "House1",
+      "levelLabel": "House 1",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -2169,7 +2238,7 @@
     {
       "thisLevelsId": "MAP_LILYCOVE_CITY_HOUSE2",
       "baseMap": "MAP_LILYCOVE_CITY",
-      "levelLabel": "House2",
+      "levelLabel": "House 2",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -2279,7 +2348,7 @@
     {
       "thisLevelsId": "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
       "baseMap": "MAP_LITTLEROOT_TOWN",
-      "levelLabel": "Professor Birchs Lab",
+      "levelLabel": "Professorbirchslab",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -2466,7 +2535,7 @@
     {
       "thisLevelsId": "MAP_MAGMA_HIDEOUT_1F",
       "baseMap": "MAP_MAGMA_HIDEOUT",
-      "levelLabel": "1 F",
+      "levelLabel": "1F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -2483,18 +2552,20 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_1",
-          "script": "MagmaHideout_1F_EventScript_Grunt1"
+          "script": "MagmaHideout_1F_EventScript_Grunt1",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_2",
-          "script": "MagmaHideout_1F_EventScript_Grunt2"
+          "script": "MagmaHideout_1F_EventScript_Grunt2",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_MAGMA_HIDEOUT_2F_1R",
       "baseMap": "MAP_MAGMA_HIDEOUT",
-      "levelLabel": "2 F1 R",
+      "levelLabel": "2F 1r",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -2502,26 +2573,30 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_14",
-          "script": "MagmaHideout_2F_1R_EventScript_Grunt14"
+          "script": "MagmaHideout_2F_1R_EventScript_Grunt14",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_3",
-          "script": "MagmaHideout_2F_1R_EventScript_Grunt3"
+          "script": "MagmaHideout_2F_1R_EventScript_Grunt3",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_4",
-          "script": "MagmaHideout_2F_1R_EventScript_Grunt4"
+          "script": "MagmaHideout_2F_1R_EventScript_Grunt4",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_5",
-          "script": "MagmaHideout_2F_1R_EventScript_Grunt5"
+          "script": "MagmaHideout_2F_1R_EventScript_Grunt5",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_MAGMA_HIDEOUT_2F_2R",
       "baseMap": "MAP_MAGMA_HIDEOUT",
-      "levelLabel": "2 F2 R",
+      "levelLabel": "2F 2r",
       "shopItems": [],
       "pickupItems": [
         {
@@ -2546,26 +2621,30 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_15",
-          "script": "MagmaHideout_2F_2R_EventScript_Grunt15"
+          "script": "MagmaHideout_2F_2R_EventScript_Grunt15",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_6",
-          "script": "MagmaHideout_2F_2R_EventScript_Grunt6"
+          "script": "MagmaHideout_2F_2R_EventScript_Grunt6",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_7",
-          "script": "MagmaHideout_2F_2R_EventScript_Grunt7"
+          "script": "MagmaHideout_2F_2R_EventScript_Grunt7",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_8",
-          "script": "MagmaHideout_2F_2R_EventScript_Grunt8"
+          "script": "MagmaHideout_2F_2R_EventScript_Grunt8",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_MAGMA_HIDEOUT_2F_3R",
       "baseMap": "MAP_MAGMA_HIDEOUT",
-      "levelLabel": "2 F3 R",
+      "levelLabel": "2F 3r",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -2575,7 +2654,7 @@
     {
       "thisLevelsId": "MAP_MAGMA_HIDEOUT_3F_1R",
       "baseMap": "MAP_MAGMA_HIDEOUT",
-      "levelLabel": "3 F1 R",
+      "levelLabel": "3F 1r",
       "shopItems": [],
       "pickupItems": [
         {
@@ -2592,18 +2671,20 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_9",
-          "script": "MagmaHideout_3F_1R_EventScript_Grunt9"
+          "script": "MagmaHideout_3F_1R_EventScript_Grunt9",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_16",
-          "script": "MagmaHideout_3F_1R_EventScript_Grunt16"
+          "script": "MagmaHideout_3F_1R_EventScript_Grunt16",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_MAGMA_HIDEOUT_3F_2R",
       "baseMap": "MAP_MAGMA_HIDEOUT",
-      "levelLabel": "3 F2 R",
+      "levelLabel": "3F 2r",
       "shopItems": [],
       "pickupItems": [
         {
@@ -2620,14 +2701,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_MAGMA_HIDEOUT_10",
-          "script": "MagmaHideout_3F_2R_EventScript_Grunt10"
+          "script": "MagmaHideout_3F_2R_EventScript_Grunt10",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_MAGMA_HIDEOUT_3F_3R",
       "baseMap": "MAP_MAGMA_HIDEOUT",
-      "levelLabel": "3 F3 R",
+      "levelLabel": "3F 3r",
       "shopItems": [],
       "pickupItems": [
         {
@@ -2646,7 +2728,7 @@
     {
       "thisLevelsId": "MAP_MAGMA_HIDEOUT_4F",
       "baseMap": "MAP_MAGMA_HIDEOUT",
-      "levelLabel": "4 F",
+      "levelLabel": "4F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -2663,15 +2745,18 @@
       "trainerRefs": [
         {
           "id": "TRAINER_MAXIE_MAGMA_HIDEOUT",
-          "script": "MagmaHideout_4F_EventScript_Maxie"
+          "script": "MagmaHideout_4F_EventScript_Maxie",
+          "rematch": false
         },
         {
           "id": "TRAINER_COURTNEY",
-          "script": "MagmaHideout_EventScript_BackToBackScene"
+          "script": "MagmaHideout_EventScript_BackToBackScene",
+          "rematch": false
         },
         {
           "id": "TRAINER_TABITHA_MAGMA_HIDEOUT",
-          "script": "MagmaHideout_EventScript_BackToBackScene"
+          "script": "MagmaHideout_EventScript_BackToBackScene",
+          "rematch": false
         }
       ]
     }
@@ -2720,14 +2805,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_WALLY_MAUVILLE",
-          "script": "MauvilleCity_EventScript_BattleWally"
+          "script": "MauvilleCity_EventScript_BattleWally",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_MAUVILLE_CITY_BIKE_SHOP",
       "baseMap": "MAP_MAUVILLE_CITY",
-      "levelLabel": "Bike Shop",
+      "levelLabel": "Bikeshop",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -2753,7 +2839,7 @@
     {
       "thisLevelsId": "MAP_MAUVILLE_CITY_GAME_CORNER",
       "baseMap": "MAP_MAUVILLE_CITY",
-      "levelLabel": "Game Corner",
+      "levelLabel": "Gamecorner",
       "shopItems": [
         {
           "label": "MAP_MAUVILLE_CITY",
@@ -2781,7 +2867,7 @@
             "ITEM_TM_SCORCHING_SANDS",
             "ITEM_TM_ICE_SPINNER"
           ],
-          "levelLabel": "Game Corner",
+          "levelLabel": "Gamecorner",
           "scriptname": "MauvilleCity_TMSales:"
         }
       ],
@@ -2825,34 +2911,40 @@
       "trainerRefs": [
         {
           "id": "TRAINER_WATTSON_1",
-          "script": "MauvilleCity_Gym_EventScript_Wattson"
+          "script": "MauvilleCity_Gym_EventScript_Wattson",
+          "rematch": false
         },
         {
           "id": "TRAINER_KIRK",
-          "script": "MauvilleCity_Gym_EventScript_Kirk"
+          "script": "MauvilleCity_Gym_EventScript_Kirk",
+          "rematch": false
         },
         {
           "id": "TRAINER_SHAWN",
-          "script": "MauvilleCity_Gym_EventScript_Shawn"
+          "script": "MauvilleCity_Gym_EventScript_Shawn",
+          "rematch": false
         },
         {
           "id": "TRAINER_BEN",
-          "script": "MauvilleCity_Gym_EventScript_Ben"
+          "script": "MauvilleCity_Gym_EventScript_Ben",
+          "rematch": false
         },
         {
           "id": "TRAINER_VIVIAN",
-          "script": "MauvilleCity_Gym_EventScript_Vivian"
+          "script": "MauvilleCity_Gym_EventScript_Vivian",
+          "rematch": false
         },
         {
           "id": "TRAINER_ANGELO",
-          "script": "MauvilleCity_Gym_EventScript_Angelo"
+          "script": "MauvilleCity_Gym_EventScript_Angelo",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_MAUVILLE_CITY_HOUSE1",
       "baseMap": "MAP_MAUVILLE_CITY",
-      "levelLabel": "House1",
+      "levelLabel": "House 1",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -2874,7 +2966,7 @@
     {
       "thisLevelsId": "MAP_MAUVILLE_CITY_HOUSE2",
       "baseMap": "MAP_MAUVILLE_CITY",
-      "levelLabel": "House2",
+      "levelLabel": "House 2",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -2928,7 +3020,7 @@
     {
       "thisLevelsId": "MAP_MAUVILLE_CITY_POKEMON_CENTER_1F",
       "baseMap": "MAP_MAUVILLE_CITY",
-      "levelLabel": "Pokemon Center1 F",
+      "levelLabel": "Pokemoncenter 1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -2978,7 +3070,7 @@
     {
       "thisLevelsId": "MAP_METEOR_FALLS_1F_1R",
       "baseMap": "MAP_METEOR_FALLS",
-      "levelLabel": "1 F1 R",
+      "levelLabel": "1F 1r",
       "shopItems": [],
       "pickupItems": [
         {
@@ -3013,7 +3105,7 @@
     {
       "thisLevelsId": "MAP_METEOR_FALLS_1F_2R",
       "baseMap": "MAP_METEOR_FALLS",
-      "levelLabel": "1 F2 R",
+      "levelLabel": "1F 2r",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -3021,22 +3113,30 @@
       "trainerRefs": [
         {
           "id": "TRAINER_NICOLAS_1",
-          "script": "MeteorFalls_1F_2R_EventScript_Nicolas"
+          "script": "MeteorFalls_1F_2R_EventScript_Nicolas",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_NICOLAS_1",
+          "script": "MeteorFalls_1F_2R_EventScript_RematchNicolas",
+          "rematch": true
         },
         {
           "id": "TRAINER_JOHN_AND_JAY_1",
-          "script": "MeteorFalls_1F_2R_EventScript_John"
+          "script": "MeteorFalls_1F_2R_EventScript_John",
+          "rematch": false
         },
         {
           "id": "TRAINER_JOHN_AND_JAY_1",
-          "script": "MeteorFalls_1F_2R_EventScript_Jay"
+          "script": "MeteorFalls_1F_2R_EventScript_Jay",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_METEOR_FALLS_B1F_1R",
       "baseMap": "MAP_METEOR_FALLS",
-      "levelLabel": "B1 F1 R",
+      "levelLabel": "B 1F 1r",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -3046,7 +3146,7 @@
     {
       "thisLevelsId": "MAP_METEOR_FALLS_B1F_2R",
       "baseMap": "MAP_METEOR_FALLS",
-      "levelLabel": "B1 F2 R",
+      "levelLabel": "B 1F 2r",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -3056,7 +3156,7 @@
     {
       "thisLevelsId": "MAP_METEOR_FALLS_STEVENS_CAVE",
       "baseMap": "MAP_METEOR_FALLS",
-      "levelLabel": "Stevens Cave",
+      "levelLabel": "Stevenscave",
       "shopItems": [],
       "pickupItems": [
         {
@@ -3085,7 +3185,7 @@
     {
       "thisLevelsId": "MAP_MIRAGE_TOWER_1F",
       "baseMap": "MAP_MIRAGE_TOWER",
-      "levelLabel": "1 F",
+      "levelLabel": "1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -3095,7 +3195,7 @@
     {
       "thisLevelsId": "MAP_MIRAGE_TOWER_2F",
       "baseMap": "MAP_MIRAGE_TOWER",
-      "levelLabel": "2 F",
+      "levelLabel": "2F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -3105,7 +3205,7 @@
     {
       "thisLevelsId": "MAP_MIRAGE_TOWER_3F",
       "baseMap": "MAP_MIRAGE_TOWER",
-      "levelLabel": "3 F",
+      "levelLabel": "3F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -3115,7 +3215,7 @@
     {
       "thisLevelsId": "MAP_MIRAGE_TOWER_4F",
       "baseMap": "MAP_MIRAGE_TOWER",
-      "levelLabel": "4 F",
+      "levelLabel": "4F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -3181,7 +3281,7 @@
     {
       "thisLevelsId": "MAP_MOSSDEEP_CITY_BETA_TESTER_HOUSE",
       "baseMap": "MAP_MOSSDEEP_CITY",
-      "levelLabel": "Beta Tester House",
+      "levelLabel": "Betatesterhouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -3226,15 +3326,18 @@
       "trainerRefs": [
         {
           "id": "TRAINER_SUNBIRD",
-          "script": "MossdeepCity_BetaTesterHouse_EventScript_BattleSunbird"
+          "script": "MossdeepCity_BetaTesterHouse_EventScript_BattleSunbird",
+          "rematch": false
         },
         {
           "id": "TRAINER_SUNEAL",
-          "script": "MossdeepCity_BetaTesterHouse_EventScript_BattleSuneal"
+          "script": "MossdeepCity_BetaTesterHouse_EventScript_BattleSuneal",
+          "rematch": false
         },
         {
           "id": "TRAINER_DOLLAMIKE",
-          "script": "MossdeepCity_BetaTesterHouse_EventScript_BattleDollaMike"
+          "script": "MossdeepCity_BetaTesterHouse_EventScript_BattleDollaMike",
+          "rematch": false
         }
       ]
     },
@@ -3265,62 +3368,75 @@
       "trainerRefs": [
         {
           "id": "TRAINER_TATE",
-          "script": "MossdeepCity_Gym_EventScript_TateAndLiza"
+          "script": "MossdeepCity_Gym_EventScript_TateAndLiza",
+          "rematch": false
         },
         {
           "id": "TRAINER_PRESTON",
-          "script": "MossdeepCity_Gym_EventScript_Preston"
+          "script": "MossdeepCity_Gym_EventScript_Preston",
+          "rematch": false
         },
         {
           "id": "TRAINER_VIRGIL",
-          "script": "MossdeepCity_Gym_EventScript_Virgil"
+          "script": "MossdeepCity_Gym_EventScript_Virgil",
+          "rematch": false
         },
         {
           "id": "TRAINER_BLAKE",
-          "script": "MossdeepCity_Gym_EventScript_Blake"
+          "script": "MossdeepCity_Gym_EventScript_Blake",
+          "rematch": false
         },
         {
           "id": "TRAINER_HANNAH",
-          "script": "MossdeepCity_Gym_EventScript_Hannah"
+          "script": "MossdeepCity_Gym_EventScript_Hannah",
+          "rematch": false
         },
         {
           "id": "TRAINER_SAMANTHA",
-          "script": "MossdeepCity_Gym_EventScript_Samantha"
+          "script": "MossdeepCity_Gym_EventScript_Samantha",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAURA",
-          "script": "MossdeepCity_Gym_EventScript_Maura"
+          "script": "MossdeepCity_Gym_EventScript_Maura",
+          "rematch": false
         },
         {
           "id": "TRAINER_SYLVIA",
-          "script": "MossdeepCity_Gym_EventScript_Sylvia"
+          "script": "MossdeepCity_Gym_EventScript_Sylvia",
+          "rematch": false
         },
         {
           "id": "TRAINER_NATE",
-          "script": "MossdeepCity_Gym_EventScript_Nate"
+          "script": "MossdeepCity_Gym_EventScript_Nate",
+          "rematch": false
         },
         {
           "id": "TRAINER_MACEY",
-          "script": "MossdeepCity_Gym_EventScript_Macey"
+          "script": "MossdeepCity_Gym_EventScript_Macey",
+          "rematch": false
         },
         {
           "id": "TRAINER_CLIFFORD",
-          "script": "MossdeepCity_Gym_EventScript_Clifford"
+          "script": "MossdeepCity_Gym_EventScript_Clifford",
+          "rematch": false
         },
         {
           "id": "TRAINER_NICHOLAS",
-          "script": "MossdeepCity_Gym_EventScript_Nicholas"
+          "script": "MossdeepCity_Gym_EventScript_Nicholas",
+          "rematch": false
         },
         {
           "id": "TRAINER_KATHLEEN",
-          "script": "MossdeepCity_Gym_EventScript_Kathleen"
+          "script": "MossdeepCity_Gym_EventScript_Kathleen",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_MOSSDEEP_CITY_HOUSE3",
       "baseMap": "MAP_MOSSDEEP_CITY",
-      "levelLabel": "House3",
+      "levelLabel": "House 3",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -3370,7 +3486,7 @@
     {
       "thisLevelsId": "MAP_MOSSDEEP_CITY_SPACE_CENTER_1F",
       "baseMap": "MAP_MOSSDEEP_CITY",
-      "levelLabel": "Space Center1 F",
+      "levelLabel": "Spacecenter 1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -3392,7 +3508,7 @@
     {
       "thisLevelsId": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
       "baseMap": "MAP_MOSSDEEP_CITY",
-      "levelLabel": "Space Center2 F",
+      "levelLabel": "Spacecenter 2F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -3414,7 +3530,7 @@
     {
       "thisLevelsId": "MAP_MOSSDEEP_CITY_STEVENS_HOUSE",
       "baseMap": "MAP_MOSSDEEP_CITY",
-      "levelLabel": "Stevens House",
+      "levelLabel": "Stevenshouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -3481,39 +3597,58 @@
       "trainerRefs": [
         {
           "id": "TRAINER_MAXIE_MT_CHIMNEY",
-          "script": "MtChimney_EventScript_Maxie"
+          "script": "MtChimney_EventScript_Maxie",
+          "rematch": false
         },
         {
           "id": "TRAINER_TABITHA_MT_CHIMNEY",
-          "script": "MtChimney_EventScript_Tabitha"
+          "script": "MtChimney_EventScript_Tabitha",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_MT_CHIMNEY_2",
-          "script": "MtChimney_EventScript_Grunt2"
+          "script": "MtChimney_EventScript_Grunt2",
+          "rematch": false
         },
         {
           "id": "TRAINER_SHELBY_1",
-          "script": "MtChimney_EventScript_Shelby"
+          "script": "MtChimney_EventScript_Shelby",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_SHELBY_1",
+          "script": "MtChimney_EventScript_RematchShelby",
+          "rematch": true
         },
         {
           "id": "TRAINER_MELISSA",
-          "script": "MtChimney_EventScript_Melissa"
+          "script": "MtChimney_EventScript_Melissa",
+          "rematch": false
         },
         {
           "id": "TRAINER_SHEILA",
-          "script": "MtChimney_EventScript_Sheila"
+          "script": "MtChimney_EventScript_Sheila",
+          "rematch": false
         },
         {
           "id": "TRAINER_SHIRLEY",
-          "script": "MtChimney_EventScript_Shirley"
+          "script": "MtChimney_EventScript_Shirley",
+          "rematch": false
         },
         {
           "id": "TRAINER_COURTNEY_MT_CHIMNEY",
-          "script": "MtChimney_EventScript_Grunt1"
+          "script": "MtChimney_EventScript_Grunt1",
+          "rematch": false
         },
         {
           "id": "TRAINER_SAWYER_1",
-          "script": "MtChimney_EventScript_Sawyer"
+          "script": "MtChimney_EventScript_Sawyer",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_SAWYER_1",
+          "script": "MtChimney_EventScript_SawyerRematch",
+          "rematch": true
         }
       ]
     }
@@ -3522,7 +3657,7 @@
     {
       "thisLevelsId": "MAP_MT_PYRE_1F",
       "baseMap": "MAP_MT_PYRE",
-      "levelLabel": "1 F",
+      "levelLabel": "1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -3544,7 +3679,7 @@
     {
       "thisLevelsId": "MAP_MT_PYRE_2F",
       "baseMap": "MAP_MT_PYRE",
-      "levelLabel": "2 F",
+      "levelLabel": "2F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -3561,30 +3696,35 @@
       "trainerRefs": [
         {
           "id": "TRAINER_MARK",
-          "script": "MtPyre_2F_EventScript_Mark"
+          "script": "MtPyre_2F_EventScript_Mark",
+          "rematch": false
         },
         {
           "id": "TRAINER_DEZ_AND_LUKE",
-          "script": "MtPyre_2F_EventScript_Luke"
+          "script": "MtPyre_2F_EventScript_Luke",
+          "rematch": false
         },
         {
           "id": "TRAINER_DEZ_AND_LUKE",
-          "script": "MtPyre_2F_EventScript_Dez"
+          "script": "MtPyre_2F_EventScript_Dez",
+          "rematch": false
         },
         {
           "id": "TRAINER_LEAH",
-          "script": "MtPyre_2F_EventScript_Leah"
+          "script": "MtPyre_2F_EventScript_Leah",
+          "rematch": false
         },
         {
           "id": "TRAINER_ZANDER",
-          "script": "MtPyre_2F_EventScript_Zander"
+          "script": "MtPyre_2F_EventScript_Zander",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_MT_PYRE_3F",
       "baseMap": "MAP_MT_PYRE",
-      "levelLabel": "3 F",
+      "levelLabel": "3F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -3601,22 +3741,30 @@
       "trainerRefs": [
         {
           "id": "TRAINER_WILLIAM",
-          "script": "MtPyre_3F_EventScript_William"
+          "script": "MtPyre_3F_EventScript_William",
+          "rematch": false
         },
         {
           "id": "TRAINER_KAYLA",
-          "script": "MtPyre_3F_EventScript_Kayla"
+          "script": "MtPyre_3F_EventScript_Kayla",
+          "rematch": false
         },
         {
           "id": "TRAINER_GABRIELLE_1",
-          "script": "MtPyre_3F_EventScript_Gabrielle"
+          "script": "MtPyre_3F_EventScript_Gabrielle",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_GABRIELLE_1",
+          "script": "MtPyre_3F_EventScript_RematchGabrielle",
+          "rematch": true
         }
       ]
     },
     {
       "thisLevelsId": "MAP_MT_PYRE_4F",
       "baseMap": "MAP_MT_PYRE",
-      "levelLabel": "4 F",
+      "levelLabel": "4F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -3633,14 +3781,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_ATSUSHI",
-          "script": "MtPyre_5F_EventScript_Atsushi"
+          "script": "MtPyre_5F_EventScript_Atsushi",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_MT_PYRE_5F",
       "baseMap": "MAP_MT_PYRE",
-      "levelLabel": "5 F",
+      "levelLabel": "5F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -3657,14 +3806,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_TASHA",
-          "script": "MtPyre_4F_EventScript_Tasha"
+          "script": "MtPyre_4F_EventScript_Tasha",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_MT_PYRE_6F",
       "baseMap": "MAP_MT_PYRE",
-      "levelLabel": "6 F",
+      "levelLabel": "6F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -3681,11 +3831,18 @@
       "trainerRefs": [
         {
           "id": "TRAINER_VALERIE_1",
-          "script": "MtPyre_6F_EventScript_Valerie"
+          "script": "MtPyre_6F_EventScript_Valerie",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_VALERIE_1",
+          "script": "MtPyre_6F_EventScript_RematchValerie",
+          "rematch": true
         },
         {
           "id": "TRAINER_CEDRIC",
-          "script": "MtPyre_6F_EventScript_Cedric"
+          "script": "MtPyre_6F_EventScript_Cedric",
+          "rematch": false
         }
       ]
     },
@@ -4253,7 +4410,7 @@
     {
       "thisLevelsId": "MAP_PACIFIDLOG_TOWN_HOUSE1",
       "baseMap": "MAP_PACIFIDLOG_TOWN",
-      "levelLabel": "House1",
+      "levelLabel": "House 1",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -4390,27 +4547,33 @@
       "trainerRefs": [
         {
           "id": "TRAINER_NORMAN_1",
-          "script": "PetalburgCity_Gym_EventScript_NormanBattle"
+          "script": "PetalburgCity_Gym_EventScript_NormanBattle",
+          "rematch": false
         },
         {
           "id": "TRAINER_GEORGE",
-          "script": "PetalburgCity_Gym_EventScript_George"
+          "script": "PetalburgCity_Gym_EventScript_George",
+          "rematch": false
         },
         {
           "id": "TRAINER_BERKE",
-          "script": "PetalburgCity_Gym_EventScript_Berke"
+          "script": "PetalburgCity_Gym_EventScript_Berke",
+          "rematch": false
         },
         {
           "id": "TRAINER_MARY",
-          "script": "PetalburgCity_Gym_EventScript_Mary"
+          "script": "PetalburgCity_Gym_EventScript_Mary",
+          "rematch": false
         },
         {
           "id": "TRAINER_ALEXIA",
-          "script": "PetalburgCity_Gym_EventScript_Alexia"
+          "script": "PetalburgCity_Gym_EventScript_Alexia",
+          "rematch": false
         },
         {
           "id": "TRAINER_JODY",
-          "script": "PetalburgCity_Gym_EventScript_Jody"
+          "script": "PetalburgCity_Gym_EventScript_Jody",
+          "rematch": false
         }
       ]
     },
@@ -4447,7 +4610,7 @@
     {
       "thisLevelsId": "MAP_PETALBURG_CITY_WALLYS_HOUSE",
       "baseMap": "MAP_PETALBURG_CITY",
-      "levelLabel": "Wallys House",
+      "levelLabel": "Wallyshouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -4602,27 +4765,38 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_PETALBURG_WOODS",
-          "script": "PetalburgWoods_EventScript_DevonResearcherLeft"
+          "script": "PetalburgWoods_EventScript_DevonResearcherLeft",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_PETALBURG_WOODS",
-          "script": "PetalburgWoods_EventScript_DevonResearcherRight"
+          "script": "PetalburgWoods_EventScript_DevonResearcherRight",
+          "rematch": false
         },
         {
           "id": "TRAINER_LYLE",
-          "script": "PetalburgWoods_EventScript_Lyle"
+          "script": "PetalburgWoods_EventScript_Lyle",
+          "rematch": false
         },
         {
           "id": "TRAINER_JAMES_1",
-          "script": "PetalburgWoods_EventScript_James"
+          "script": "PetalburgWoods_EventScript_James",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_JAMES_1",
+          "script": "PetalburgWoods_EventScript_JamesRematch",
+          "rematch": true
         },
         {
           "id": "TRAINER_GARDENIA",
-          "script": "PetalburgWoods_EventScript_BattleGardenia"
+          "script": "PetalburgWoods_EventScript_BattleGardenia",
+          "rematch": false
         },
         {
           "id": "TRAINER_GARDENIA2",
-          "script": "PetalburgWoods_EventScript_BattleGardenia2"
+          "script": "PetalburgWoods_EventScript_BattleGardenia2",
+          "rematch": false
         }
       ]
     }
@@ -4672,19 +4846,28 @@
       "trainerRefs": [
         {
           "id": "TRAINER_CALVIN_1",
-          "script": "Route102_EventScript_Calvin"
+          "script": "Route102_EventScript_Calvin",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_CALVIN_1",
+          "script": "Route102_EventScript_CalvinRematch",
+          "rematch": true
         },
         {
           "id": "TRAINER_RICK",
-          "script": "Route102_EventScript_Rick"
+          "script": "Route102_EventScript_Rick",
+          "rematch": false
         },
         {
           "id": "TRAINER_TIANA",
-          "script": "Route102_EventScript_Tiana"
+          "script": "Route102_EventScript_Tiana",
+          "rematch": false
         },
         {
           "id": "TRAINER_ALLEN",
-          "script": "Route102_EventScript_Allen"
+          "script": "Route102_EventScript_Allen",
+          "rematch": false
         }
       ]
     }
@@ -4710,59 +4893,78 @@
       "trainerRefs": [
         {
           "id": "TRAINER_MAY_ROUTE_103_TREECKO",
-          "script": "Route103_EventScript_StartMayBattleTreecko"
+          "script": "Route103_EventScript_StartMayBattleTreecko",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAY_ROUTE_103_TORCHIC",
-          "script": "Route103_EventScript_StartMayBattleTorchic"
+          "script": "Route103_EventScript_StartMayBattleTorchic",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAY_ROUTE_103_MUDKIP",
-          "script": "Route103_EventScript_StartMayBattleMudkip"
+          "script": "Route103_EventScript_StartMayBattleMudkip",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_ROUTE_103_TREECKO",
-          "script": "Route103_EventScript_StartBrendanBattleTreecko"
+          "script": "Route103_EventScript_StartBrendanBattleTreecko",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_ROUTE_103_TORCHIC",
-          "script": "Route103_EventScript_StartBrendanBattleTorchic"
+          "script": "Route103_EventScript_StartBrendanBattleTorchic",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_ROUTE_103_MUDKIP",
-          "script": "Route103_EventScript_StartBrendanBattleMudkip"
+          "script": "Route103_EventScript_StartBrendanBattleMudkip",
+          "rematch": false
         },
         {
           "id": "TRAINER_DAISY",
-          "script": "Route103_EventScript_Daisy"
+          "script": "Route103_EventScript_Daisy",
+          "rematch": false
         },
         {
           "id": "TRAINER_AMY_AND_LIV_1",
-          "script": "Route103_EventScript_Amy"
+          "script": "Route103_EventScript_Amy",
+          "rematch": false
         },
         {
           "id": "TRAINER_AMY_AND_LIV_1",
-          "script": "Route103_EventScript_Liv"
+          "script": "Route103_EventScript_Liv",
+          "rematch": false
         },
         {
           "id": "TRAINER_MIGUEL_1",
-          "script": "Route103_EventScript_Miguel"
+          "script": "Route103_EventScript_Miguel",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_MIGUEL_1",
+          "script": "Route103_EventScript_MiguelRematch",
+          "rematch": true
         },
         {
           "id": "TRAINER_MARCOS",
-          "script": "Route103_EventScript_Marcos"
+          "script": "Route103_EventScript_Marcos",
+          "rematch": false
         },
         {
           "id": "TRAINER_RHETT",
-          "script": "Route103_EventScript_Rhett"
+          "script": "Route103_EventScript_Rhett",
+          "rematch": false
         },
         {
           "id": "TRAINER_PETE",
-          "script": "Route103_EventScript_Pete"
+          "script": "Route103_EventScript_Pete",
+          "rematch": false
         },
         {
           "id": "TRAINER_ISABELLE",
-          "script": "Route103_EventScript_Isabelle"
+          "script": "Route103_EventScript_Isabelle",
+          "rematch": false
         }
       ]
     }
@@ -4989,46 +5191,70 @@
       "trainerRefs": [
         {
           "id": "TRAINER_IVAN",
-          "script": "Route104_EventScript_Ivan"
+          "script": "Route104_EventScript_Ivan",
+          "rematch": false
         },
         {
           "id": "TRAINER_BILLY",
-          "script": "Route104_EventScript_Billy"
+          "script": "Route104_EventScript_Billy",
+          "rematch": false
         },
         {
           "id": "TRAINER_HALEY_1",
-          "script": "Route104_EventScript_Haley"
+          "script": "Route104_EventScript_Haley",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_HALEY_1",
+          "script": "Route104_EventScript_RematchHaley",
+          "rematch": true
         },
         {
           "id": "TRAINER_WINSTON_1",
-          "script": "Route104_EventScript_Winston"
+          "script": "Route104_EventScript_Winston",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_WINSTON_1",
+          "script": "Route104_EventScript_RematchWinston",
+          "rematch": true
         },
         {
           "id": "TRAINER_CINDY_1",
-          "script": "Route104_EventScript_Cindy"
+          "script": "Route104_EventScript_Cindy",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_CINDY_1",
+          "script": "Route104_EventScript_RematchCindy",
+          "rematch": true
         },
         {
           "id": "TRAINER_GINA_AND_MIA_1",
-          "script": "Route104_EventScript_Gina"
+          "script": "Route104_EventScript_Gina",
+          "rematch": false
         },
         {
           "id": "TRAINER_GINA_AND_MIA_1",
-          "script": "Route104_EventScript_Mia"
+          "script": "Route104_EventScript_Mia",
+          "rematch": false
         },
         {
           "id": "TRAINER_DARIAN",
-          "script": "Route104_EventScript_Darian"
+          "script": "Route104_EventScript_Darian",
+          "rematch": false
         },
         {
           "id": "TRAINER_DAWN_ROUTE_104",
-          "script": "Route104_EventScript_DawnRivalBattle"
+          "script": "Route104_EventScript_DawnRivalBattle",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE104_PRETTY_PETAL_FLOWER_SHOP",
       "baseMap": "MAP_ROUTE104",
-      "levelLabel": "Pretty Petal Flower Shop",
+      "levelLabel": "Prettypetalflowershop",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -5085,31 +5311,43 @@
       "trainerRefs": [
         {
           "id": "TRAINER_FOSTER",
-          "script": "Route105_EventScript_Foster"
+          "script": "Route105_EventScript_Foster",
+          "rematch": false
         },
         {
           "id": "TRAINER_LUIS",
-          "script": "Route105_EventScript_Luis"
+          "script": "Route105_EventScript_Luis",
+          "rematch": false
         },
         {
           "id": "TRAINER_DOMINIK",
-          "script": "Route105_EventScript_Dominik"
+          "script": "Route105_EventScript_Dominik",
+          "rematch": false
         },
         {
           "id": "TRAINER_BEVERLY",
-          "script": "Route105_EventScript_Beverly"
+          "script": "Route105_EventScript_Beverly",
+          "rematch": false
         },
         {
           "id": "TRAINER_IMANI",
-          "script": "Route105_EventScript_Imani"
+          "script": "Route105_EventScript_Imani",
+          "rematch": false
         },
         {
           "id": "TRAINER_JOSUE",
-          "script": "Route105_EventScript_Josue"
+          "script": "Route105_EventScript_Josue",
+          "rematch": false
         },
         {
           "id": "TRAINER_ANDRES_1",
-          "script": "Route105_EventScript_Andres"
+          "script": "Route105_EventScript_Andres",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_ANDRES_1",
+          "script": "Route105_EventScript_AndresRematch",
+          "rematch": true
         }
       ]
     }
@@ -5159,19 +5397,28 @@
       "trainerRefs": [
         {
           "id": "TRAINER_DOUGLAS",
-          "script": "Route106_EventScript_Douglas"
+          "script": "Route106_EventScript_Douglas",
+          "rematch": false
         },
         {
           "id": "TRAINER_KYLA",
-          "script": "Route106_EventScript_Kyla"
+          "script": "Route106_EventScript_Kyla",
+          "rematch": false
         },
         {
           "id": "TRAINER_ELLIOT_1",
-          "script": "Route106_EventScript_Elliot"
+          "script": "Route106_EventScript_Elliot",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_ELLIOT_1",
+          "script": "Route106_EventScript_ElliotRematch",
+          "rematch": true
         },
         {
           "id": "TRAINER_NED",
-          "script": "Route106_EventScript_Ned"
+          "script": "Route106_EventScript_Ned",
+          "rematch": false
         }
       ]
     }
@@ -5188,31 +5435,43 @@
       "trainerRefs": [
         {
           "id": "TRAINER_DARRIN",
-          "script": "Route107_EventScript_Darrin"
+          "script": "Route107_EventScript_Darrin",
+          "rematch": false
         },
         {
           "id": "TRAINER_TONY_1",
-          "script": "Route107_EventScript_Tony"
+          "script": "Route107_EventScript_Tony",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_TONY_1",
+          "script": "Route107_EventScript_TonyRematch",
+          "rematch": true
         },
         {
           "id": "TRAINER_DENISE",
-          "script": "Route107_EventScript_Denise"
+          "script": "Route107_EventScript_Denise",
+          "rematch": false
         },
         {
           "id": "TRAINER_BETH",
-          "script": "Route107_EventScript_Beth"
+          "script": "Route107_EventScript_Beth",
+          "rematch": false
         },
         {
           "id": "TRAINER_LISA_AND_RAY",
-          "script": "Route107_EventScript_Lisa"
+          "script": "Route107_EventScript_Lisa",
+          "rematch": false
         },
         {
           "id": "TRAINER_LISA_AND_RAY",
-          "script": "Route107_EventScript_Ray"
+          "script": "Route107_EventScript_Ray",
+          "rematch": false
         },
         {
           "id": "TRAINER_CAMRON",
-          "script": "Route107_EventScript_Camron"
+          "script": "Route107_EventScript_Camron",
+          "rematch": false
         }
       ]
     }
@@ -5246,27 +5505,38 @@
       "trainerRefs": [
         {
           "id": "TRAINER_JEROME",
-          "script": "Route108_EventScript_Jerome"
+          "script": "Route108_EventScript_Jerome",
+          "rematch": false
         },
         {
           "id": "TRAINER_MATTHEW",
-          "script": "Route108_EventScript_Matthew"
+          "script": "Route108_EventScript_Matthew",
+          "rematch": false
         },
         {
           "id": "TRAINER_TARA",
-          "script": "Route108_EventScript_Tara"
+          "script": "Route108_EventScript_Tara",
+          "rematch": false
         },
         {
           "id": "TRAINER_MISSY",
-          "script": "Route108_EventScript_Missy"
+          "script": "Route108_EventScript_Missy",
+          "rematch": false
         },
         {
           "id": "TRAINER_CAROLINA",
-          "script": "Route108_EventScript_Carolina"
+          "script": "Route108_EventScript_Carolina",
+          "rematch": false
         },
         {
           "id": "TRAINER_CORY_1",
-          "script": "Route108_EventScript_Cory"
+          "script": "Route108_EventScript_Cory",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_CORY_1",
+          "script": "Route108_EventScript_CoryRematch",
+          "rematch": true
         }
       ]
     }
@@ -5360,66 +5630,90 @@
       "trainerRefs": [
         {
           "id": "TRAINER_DAVID",
-          "script": "Route109_EventScript_David"
+          "script": "Route109_EventScript_David",
+          "rematch": false
         },
         {
           "id": "TRAINER_ALICE",
-          "script": "Route109_EventScript_Alice"
+          "script": "Route109_EventScript_Alice",
+          "rematch": false
         },
         {
           "id": "TRAINER_HUEY",
-          "script": "Route109_EventScript_Huey"
+          "script": "Route109_EventScript_Huey",
+          "rematch": false
         },
         {
           "id": "TRAINER_EDMOND",
-          "script": "Route109_EventScript_Edmond"
+          "script": "Route109_EventScript_Edmond",
+          "rematch": false
         },
         {
           "id": "TRAINER_RICKY_1",
-          "script": "Route109_EventScript_Ricky"
+          "script": "Route109_EventScript_Ricky",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_RICKY_1",
+          "script": "Route109_EventScript_RickyRematch",
+          "rematch": true
         },
         {
           "id": "TRAINER_LOLA_1",
-          "script": "Route109_EventScript_Lola"
+          "script": "Route109_EventScript_Lola",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_LOLA_1",
+          "script": "Route109_EventScript_LolaRematch",
+          "rematch": true
         },
         {
           "id": "TRAINER_AUSTINA",
-          "script": "Route109_EventScript_Austina"
+          "script": "Route109_EventScript_Austina",
+          "rematch": false
         },
         {
           "id": "TRAINER_GWEN",
-          "script": "Route109_EventScript_Gwen"
+          "script": "Route109_EventScript_Gwen",
+          "rematch": false
         },
         {
           "id": "TRAINER_CARTER",
-          "script": "Route109_EventScript_Carter"
+          "script": "Route109_EventScript_Carter",
+          "rematch": false
         },
         {
           "id": "TRAINER_MEL_AND_PAUL",
-          "script": "Route109_EventScript_Paul"
+          "script": "Route109_EventScript_Paul",
+          "rematch": false
         },
         {
           "id": "TRAINER_MEL_AND_PAUL",
-          "script": "Route109_EventScript_Mel"
+          "script": "Route109_EventScript_Mel",
+          "rematch": false
         },
         {
           "id": "TRAINER_CHANDLER",
-          "script": "Route109_EventScript_Chandler"
+          "script": "Route109_EventScript_Chandler",
+          "rematch": false
         },
         {
           "id": "TRAINER_HAILEY",
-          "script": "Route109_EventScript_Hailey"
+          "script": "Route109_EventScript_Hailey",
+          "rematch": false
         },
         {
           "id": "TRAINER_ELIJAH",
-          "script": "Route109_EventScript_Elijah"
+          "script": "Route109_EventScript_Elijah",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE109_SEASHORE_HOUSE",
       "baseMap": "MAP_ROUTE109",
-      "levelLabel": "Seashore House",
+      "levelLabel": "Seashorehouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -5451,15 +5745,18 @@
       "trainerRefs": [
         {
           "id": "TRAINER_DWAYNE",
-          "script": "Route109_SeashoreHouse_EventScript_Dwayne"
+          "script": "Route109_SeashoreHouse_EventScript_Dwayne",
+          "rematch": false
         },
         {
           "id": "TRAINER_JOHANNA",
-          "script": "Route109_SeashoreHouse_EventScript_Johanna"
+          "script": "Route109_SeashoreHouse_EventScript_Johanna",
+          "rematch": false
         },
         {
           "id": "TRAINER_SIMON",
-          "script": "Route109_SeashoreHouse_EventScript_Simon"
+          "script": "Route109_SeashoreHouse_EventScript_Simon",
+          "rematch": false
         }
       ]
     }
@@ -5656,94 +5953,135 @@
       "trainerRefs": [
         {
           "id": "TRAINER_EDWARD",
-          "script": "Route110_EventScript_Edward"
+          "script": "Route110_EventScript_Edward",
+          "rematch": false
         },
         {
           "id": "TRAINER_JACLYN",
-          "script": "Route110_EventScript_Jaclyn"
+          "script": "Route110_EventScript_Jaclyn",
+          "rematch": false
         },
         {
           "id": "TRAINER_EDWIN_1",
-          "script": "Route110_EventScript_Edwin"
+          "script": "Route110_EventScript_Edwin",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_EDWIN_1",
+          "script": "Route110_EventScript_EdwinRematch",
+          "rematch": true
         },
         {
           "id": "TRAINER_DALE",
-          "script": "Route110_EventScript_Dale"
+          "script": "Route110_EventScript_Dale",
+          "rematch": false
         },
         {
           "id": "TRAINER_JACOB",
-          "script": "Route110_EventScript_Jacob"
+          "script": "Route110_EventScript_Jacob",
+          "rematch": false
         },
         {
           "id": "TRAINER_ANTHONY",
-          "script": "Route110_EventScript_Anthony"
+          "script": "Route110_EventScript_Anthony",
+          "rematch": false
         },
         {
           "id": "TRAINER_BENJAMIN_1",
-          "script": "Route110_EventScript_Benjamin"
+          "script": "Route110_EventScript_Benjamin",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_BENJAMIN_1",
+          "script": "Route110_EventScript_BenjaminRematch",
+          "rematch": true
         },
         {
           "id": "TRAINER_JASMINE",
-          "script": "Route110_EventScript_Jasmine"
+          "script": "Route110_EventScript_Jasmine",
+          "rematch": false
         },
         {
           "id": "TRAINER_ABIGAIL_1",
-          "script": "Route110_EventScript_Abigail"
+          "script": "Route110_EventScript_Abigail",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_ABIGAIL_1",
+          "script": "Route110_EventScript_AbigailRematch",
+          "rematch": true
         },
         {
           "id": "TRAINER_ISABEL_1",
-          "script": "Route110_EventScript_Isabel"
+          "script": "Route110_EventScript_Isabel",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_ISABEL_1",
+          "script": "Route110_EventScript_IsabelRematch",
+          "rematch": true
         },
         {
           "id": "TRAINER_TIMMY",
-          "script": "Route110_EventScript_Timmy"
+          "script": "Route110_EventScript_Timmy",
+          "rematch": false
         },
         {
           "id": "TRAINER_KALEB",
-          "script": "Route110_EventScript_Kaleb"
+          "script": "Route110_EventScript_Kaleb",
+          "rematch": false
         },
         {
           "id": "TRAINER_JOSEPH",
-          "script": "Route110_EventScript_Joseph"
+          "script": "Route110_EventScript_Joseph",
+          "rematch": false
         },
         {
           "id": "TRAINER_ALYSSA",
-          "script": "Route110_EventScript_Alyssa"
+          "script": "Route110_EventScript_Alyssa",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAY_ROUTE_110_TREECKO",
-          "script": "Route110_EventScript_MayBattleTreecko"
+          "script": "Route110_EventScript_MayBattleTreecko",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAY_ROUTE_110_TORCHIC",
-          "script": "Route110_EventScript_MayBattleTorchic"
+          "script": "Route110_EventScript_MayBattleTorchic",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAY_ROUTE_110_MUDKIP",
-          "script": "Route110_EventScript_MayBattleMudkip"
+          "script": "Route110_EventScript_MayBattleMudkip",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_ROUTE_110_TREECKO",
-          "script": "Route110_EventScript_BrendanBattleTreecko"
+          "script": "Route110_EventScript_BrendanBattleTreecko",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_ROUTE_110_TORCHIC",
-          "script": "Route110_EventScript_BrendanBattleTorchic"
+          "script": "Route110_EventScript_BrendanBattleTorchic",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_ROUTE_110_MUDKIP",
-          "script": "Route110_EventScript_BrendanBattleMudkip"
+          "script": "Route110_EventScript_BrendanBattleMudkip",
+          "rematch": false
         },
         {
           "id": "TRAINER_WALLY_ROUTE_110",
-          "script": "Route110_EventScript_Wally"
+          "script": "Route110_EventScript_Wally",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE110_TRICK_HOUSE_END",
       "baseMap": "MAP_ROUTE110",
-      "levelLabel": "Trick House End",
+      "levelLabel": "Trickhouseend",
       "shopItems": [],
       "pickupItems": [
         {
@@ -5762,7 +6100,7 @@
     {
       "thisLevelsId": "MAP_ROUTE110_TRICK_HOUSE_ENTRANCE",
       "baseMap": "MAP_ROUTE110",
-      "levelLabel": "Trick House Entrance",
+      "levelLabel": "Trickhouseentrance",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -5906,7 +6244,7 @@
     {
       "thisLevelsId": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE1",
       "baseMap": "MAP_ROUTE110",
-      "levelLabel": "Trick House Puzzle1",
+      "levelLabel": "Trickhousepuzzle 1",
       "shopItems": [],
       "pickupItems": [
         {
@@ -5923,22 +6261,25 @@
       "trainerRefs": [
         {
           "id": "TRAINER_SALLY",
-          "script": "Route110_TrickHousePuzzle1_EventScript_Sally"
+          "script": "Route110_TrickHousePuzzle1_EventScript_Sally",
+          "rematch": false
         },
         {
           "id": "TRAINER_EDDIE",
-          "script": "Route110_TrickHousePuzzle1_EventScript_Eddie"
+          "script": "Route110_TrickHousePuzzle1_EventScript_Eddie",
+          "rematch": false
         },
         {
           "id": "TRAINER_ROBIN",
-          "script": "Route110_TrickHousePuzzle1_EventScript_Robin"
+          "script": "Route110_TrickHousePuzzle1_EventScript_Robin",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE2",
       "baseMap": "MAP_ROUTE110",
-      "levelLabel": "Trick House Puzzle2",
+      "levelLabel": "Trickhousepuzzle 2",
       "shopItems": [],
       "pickupItems": [
         {
@@ -5963,22 +6304,25 @@
       "trainerRefs": [
         {
           "id": "TRAINER_TED",
-          "script": "Route110_TrickHousePuzzle2_EventScript_Ted"
+          "script": "Route110_TrickHousePuzzle2_EventScript_Ted",
+          "rematch": false
         },
         {
           "id": "TRAINER_RACHEL",
-          "script": "Route110_TrickHousePuzzle2_EventScript_Rachel"
+          "script": "Route110_TrickHousePuzzle2_EventScript_Rachel",
+          "rematch": false
         },
         {
           "id": "TRAINER_GEORGIA",
-          "script": "Route110_TrickHousePuzzle2_EventScript_Georgia"
+          "script": "Route110_TrickHousePuzzle2_EventScript_Georgia",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE3",
       "baseMap": "MAP_ROUTE110",
-      "levelLabel": "Trick House Puzzle3",
+      "levelLabel": "Trickhousepuzzle 3",
       "shopItems": [],
       "pickupItems": [
         {
@@ -6003,22 +6347,25 @@
       "trainerRefs": [
         {
           "id": "TRAINER_RUSTY",
-          "script": "Route110_TrickHousePuzzle3_EventScript_Rusty"
+          "script": "Route110_TrickHousePuzzle3_EventScript_Rusty",
+          "rematch": false
         },
         {
           "id": "TRAINER_MARTHA",
-          "script": "Route110_TrickHousePuzzle3_EventScript_Martha"
+          "script": "Route110_TrickHousePuzzle3_EventScript_Martha",
+          "rematch": false
         },
         {
           "id": "TRAINER_ALAN",
-          "script": "Route110_TrickHousePuzzle3_EventScript_Alan"
+          "script": "Route110_TrickHousePuzzle3_EventScript_Alan",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE4",
       "baseMap": "MAP_ROUTE110",
-      "levelLabel": "Trick House Puzzle4",
+      "levelLabel": "Trickhousepuzzle 4",
       "shopItems": [],
       "pickupItems": [
         {
@@ -6035,22 +6382,25 @@
       "trainerRefs": [
         {
           "id": "TRAINER_CORA",
-          "script": "Route110_TrickHousePuzzle4_EventScript_Cora"
+          "script": "Route110_TrickHousePuzzle4_EventScript_Cora",
+          "rematch": false
         },
         {
           "id": "TRAINER_YUJI",
-          "script": "Route110_TrickHousePuzzle4_EventScript_Yuji"
+          "script": "Route110_TrickHousePuzzle4_EventScript_Yuji",
+          "rematch": false
         },
         {
           "id": "TRAINER_PAULA",
-          "script": "Route110_TrickHousePuzzle4_EventScript_Paula"
+          "script": "Route110_TrickHousePuzzle4_EventScript_Paula",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE6",
       "baseMap": "MAP_ROUTE110",
-      "levelLabel": "Trick House Puzzle6",
+      "levelLabel": "Trickhousepuzzle 6",
       "shopItems": [],
       "pickupItems": [
         {
@@ -6067,22 +6417,25 @@
       "trainerRefs": [
         {
           "id": "TRAINER_SOPHIA",
-          "script": "Route110_TrickHousePuzzle6_EventScript_Sophia"
+          "script": "Route110_TrickHousePuzzle6_EventScript_Sophia",
+          "rematch": false
         },
         {
           "id": "TRAINER_BENNY",
-          "script": "Route110_TrickHousePuzzle6_EventScript_Benny"
+          "script": "Route110_TrickHousePuzzle6_EventScript_Benny",
+          "rematch": false
         },
         {
           "id": "TRAINER_SEBASTIAN",
-          "script": "Route110_TrickHousePuzzle6_EventScript_Sebastian"
+          "script": "Route110_TrickHousePuzzle6_EventScript_Sebastian",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE7",
       "baseMap": "MAP_ROUTE110",
-      "levelLabel": "Trick House Puzzle7",
+      "levelLabel": "Trickhousepuzzle 7",
       "shopItems": [],
       "pickupItems": [
         {
@@ -6099,34 +6452,40 @@
       "trainerRefs": [
         {
           "id": "TRAINER_JOSHUA",
-          "script": "Route110_TrickHousePuzzle7_EventScript_Joshua"
+          "script": "Route110_TrickHousePuzzle7_EventScript_Joshua",
+          "rematch": false
         },
         {
           "id": "TRAINER_PATRICIA",
-          "script": "Route110_TrickHousePuzzle7_EventScript_Patricia"
+          "script": "Route110_TrickHousePuzzle7_EventScript_Patricia",
+          "rematch": false
         },
         {
           "id": "TRAINER_ALEXIS",
-          "script": "Route110_TrickHousePuzzle7_EventScript_Alexis"
+          "script": "Route110_TrickHousePuzzle7_EventScript_Alexis",
+          "rematch": false
         },
         {
           "id": "TRAINER_MARIELA",
-          "script": "Route110_TrickHousePuzzle7_EventScript_Mariela"
+          "script": "Route110_TrickHousePuzzle7_EventScript_Mariela",
+          "rematch": false
         },
         {
           "id": "TRAINER_ALVARO",
-          "script": "Route110_TrickHousePuzzle7_EventScript_Alvaro"
+          "script": "Route110_TrickHousePuzzle7_EventScript_Alvaro",
+          "rematch": false
         },
         {
           "id": "TRAINER_EVERETT",
-          "script": "Route110_TrickHousePuzzle7_EventScript_Everett"
+          "script": "Route110_TrickHousePuzzle7_EventScript_Everett",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE8",
       "baseMap": "MAP_ROUTE110",
-      "levelLabel": "Trick House Puzzle8",
+      "levelLabel": "Trickhousepuzzle 8",
       "shopItems": [],
       "pickupItems": [
         {
@@ -6143,15 +6502,18 @@
       "trainerRefs": [
         {
           "id": "TRAINER_VINCENT",
-          "script": "Route110_TrickHousePuzzle8_EventScript_Vincent"
+          "script": "Route110_TrickHousePuzzle8_EventScript_Vincent",
+          "rematch": false
         },
         {
           "id": "TRAINER_KEIRA",
-          "script": "Route110_TrickHousePuzzle8_EventScript_Keira"
+          "script": "Route110_TrickHousePuzzle8_EventScript_Keira",
+          "rematch": false
         },
         {
           "id": "TRAINER_LEROY",
-          "script": "Route110_TrickHousePuzzle8_EventScript_Leroy"
+          "script": "Route110_TrickHousePuzzle8_EventScript_Leroy",
+          "rematch": false
         }
       ]
     }
@@ -6283,94 +6645,130 @@
       "trainerRefs": [
         {
           "id": "TRAINER_VICTOR",
-          "script": "Route111_EventScript_BattleWinstrates"
+          "script": "Route111_EventScript_BattleWinstrates",
+          "rematch": false
         },
         {
           "id": "TRAINER_VICTORIA",
-          "script": "Route111_EventScript_BattleWinstrates"
+          "script": "Route111_EventScript_BattleWinstrates",
+          "rematch": false
         },
         {
           "id": "TRAINER_VIVI",
-          "script": "Route111_EventScript_BattleWinstrates"
+          "script": "Route111_EventScript_BattleWinstrates",
+          "rematch": false
         },
         {
           "id": "TRAINER_VICKY",
-          "script": "Route111_EventScript_BattleWinstrates"
+          "script": "Route111_EventScript_BattleWinstrates",
+          "rematch": false
         },
         {
           "id": "TRAINER_DREW",
-          "script": "Route111_EventScript_Drew"
+          "script": "Route111_EventScript_Drew",
+          "rematch": false
         },
         {
           "id": "TRAINER_HEIDI",
-          "script": "Route111_EventScript_Heidi"
+          "script": "Route111_EventScript_Heidi",
+          "rematch": false
         },
         {
           "id": "TRAINER_BEAU",
-          "script": "Route111_EventScript_Beau"
+          "script": "Route111_EventScript_Beau",
+          "rematch": false
         },
         {
           "id": "TRAINER_BECKY",
-          "script": "Route111_EventScript_Becky"
+          "script": "Route111_EventScript_Becky",
+          "rematch": false
         },
         {
           "id": "TRAINER_DUSTY_1",
-          "script": "Route111_EventScript_Dusty"
+          "script": "Route111_EventScript_Dusty",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_DUSTY_1",
+          "script": "Route111_EventScript_RematchDusty",
+          "rematch": true
         },
         {
           "id": "TRAINER_TRAVIS",
-          "script": "Route111_EventScript_Travis"
+          "script": "Route111_EventScript_Travis",
+          "rematch": false
         },
         {
           "id": "TRAINER_IRENE",
-          "script": "Route111_EventScript_Irene"
+          "script": "Route111_EventScript_Irene",
+          "rematch": false
         },
         {
           "id": "TRAINER_WILTON_1",
-          "script": "Route111_EventScript_Wilton"
+          "script": "Route111_EventScript_Wilton",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_WILTON_1",
+          "script": "Route111_EventScript_RematchWilton",
+          "rematch": true
         },
         {
           "id": "TRAINER_BROOKE_1",
-          "script": "Route111_EventScript_Brooke"
+          "script": "Route111_EventScript_Brooke",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_BROOKE_1",
+          "script": "Route111_EventScript_RematchBrooke",
+          "rematch": true
         },
         {
           "id": "TRAINER_HAYDEN",
-          "script": "Route111_EventScript_Hayden"
+          "script": "Route111_EventScript_Hayden",
+          "rematch": false
         },
         {
           "id": "TRAINER_BIANCA",
-          "script": "Route111_EventScript_Bianca"
+          "script": "Route111_EventScript_Bianca",
+          "rematch": false
         },
         {
           "id": "TRAINER_TYRON",
-          "script": "Route111_EventScript_Tyron"
+          "script": "Route111_EventScript_Tyron",
+          "rematch": false
         },
         {
           "id": "TRAINER_CELINA",
-          "script": "Route111_EventScript_Celina"
+          "script": "Route111_EventScript_Celina",
+          "rematch": false
         },
         {
           "id": "TRAINER_CELIA",
-          "script": "Route111_EventScript_Celia"
+          "script": "Route111_EventScript_Celia",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRANDEN",
-          "script": "Route111_EventScript_Branden"
+          "script": "Route111_EventScript_Branden",
+          "rematch": false
         },
         {
           "id": "TRAINER_DAWN_ROUTE_111",
-          "script": "Route111_EventScript_DawnRivalBattle"
+          "script": "Route111_EventScript_DawnRivalBattle",
+          "rematch": false
         },
         {
           "id": "TRAINER_DAISUKE",
-          "script": "Route111_EventScript_BattleDaisuke"
+          "script": "Route111_EventScript_BattleDaisuke",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE111_OLD_LADYS_REST_STOP",
       "baseMap": "MAP_ROUTE111",
-      "levelLabel": "Old Ladys Rest Stop",
+      "levelLabel": "Oldladysreststop",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -6393,7 +6791,7 @@
     {
       "thisLevelsId": "MAP_ROUTE111_WINSTRATE_FAMILYS_HOUSE",
       "baseMap": "MAP_ROUTE111",
-      "levelLabel": "Winstrate Familys House",
+      "levelLabel": "Winstratefamilyshouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -6549,23 +6947,33 @@
       "trainerRefs": [
         {
           "id": "TRAINER_TRENT_1",
-          "script": "Route112_EventScript_Trent"
+          "script": "Route112_EventScript_Trent",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_TRENT_1",
+          "script": "Route112_EventScript_RematchTrent",
+          "rematch": true
         },
         {
           "id": "TRAINER_LARRY",
-          "script": "Route112_EventScript_Larry"
+          "script": "Route112_EventScript_Larry",
+          "rematch": false
         },
         {
           "id": "TRAINER_CAROL",
-          "script": "Route112_EventScript_Carol"
+          "script": "Route112_EventScript_Carol",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRYANT",
-          "script": "Route112_EventScript_Bryant"
+          "script": "Route112_EventScript_Bryant",
+          "rematch": false
         },
         {
           "id": "TRAINER_SHAYLA",
-          "script": "Route112_EventScript_Shayla"
+          "script": "Route112_EventScript_Shayla",
+          "rematch": false
         }
       ]
     }
@@ -6623,46 +7031,65 @@
       "trainerRefs": [
         {
           "id": "TRAINER_JAYLEN",
-          "script": "Route113_EventScript_Jaylen"
+          "script": "Route113_EventScript_Jaylen",
+          "rematch": false
         },
         {
           "id": "TRAINER_DILLON",
-          "script": "Route113_EventScript_Dillon"
+          "script": "Route113_EventScript_Dillon",
+          "rematch": false
         },
         {
           "id": "TRAINER_MADELINE_1",
-          "script": "Route113_EventScript_Madeline"
+          "script": "Route113_EventScript_Madeline",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_MADELINE_1",
+          "script": "Route113_EventScript_RematchMadeline",
+          "rematch": true
         },
         {
           "id": "TRAINER_LAO_1",
-          "script": "Route113_EventScript_Lao"
+          "script": "Route113_EventScript_Lao",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_LAO_1",
+          "script": "Route113_EventScript_RematchLao",
+          "rematch": true
         },
         {
           "id": "TRAINER_LUNG",
-          "script": "Route113_EventScript_Lung"
+          "script": "Route113_EventScript_Lung",
+          "rematch": false
         },
         {
           "id": "TRAINER_TORI_AND_TIA",
-          "script": "Route113_EventScript_Tori"
+          "script": "Route113_EventScript_Tori",
+          "rematch": false
         },
         {
           "id": "TRAINER_TORI_AND_TIA",
-          "script": "Route113_EventScript_Tia"
+          "script": "Route113_EventScript_Tia",
+          "rematch": false
         },
         {
           "id": "TRAINER_SOPHIE",
-          "script": "Route113_EventScript_Sophie"
+          "script": "Route113_EventScript_Sophie",
+          "rematch": false
         },
         {
           "id": "TRAINER_COBY",
-          "script": "Route113_EventScript_Coby"
+          "script": "Route113_EventScript_Coby",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE113_GLASS_WORKSHOP",
       "baseMap": "MAP_ROUTE113",
-      "levelLabel": "Glass Workshop",
+      "levelLabel": "Glassworkshop",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -6739,58 +7166,80 @@
       "trainerRefs": [
         {
           "id": "TRAINER_LENNY",
-          "script": "Route114_EventScript_Lenny"
+          "script": "Route114_EventScript_Lenny",
+          "rematch": false
         },
         {
           "id": "TRAINER_LUCAS_1",
-          "script": "Route114_EventScript_Lucas"
+          "script": "Route114_EventScript_Lucas",
+          "rematch": false
         },
         {
           "id": "TRAINER_SHANE",
-          "script": "Route114_EventScript_Shane"
+          "script": "Route114_EventScript_Shane",
+          "rematch": false
         },
         {
           "id": "TRAINER_NANCY",
-          "script": "Route114_EventScript_Nancy"
+          "script": "Route114_EventScript_Nancy",
+          "rematch": false
         },
         {
           "id": "TRAINER_STEVE_1",
-          "script": "Route114_EventScript_Steve"
+          "script": "Route114_EventScript_Steve",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_STEVE_1",
+          "script": "Route114_EventScript_RematchSteve",
+          "rematch": true
         },
         {
           "id": "TRAINER_BERNIE_1",
-          "script": "Route114_EventScript_Bernie"
+          "script": "Route114_EventScript_Bernie",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_BERNIE_1",
+          "script": "Route114_EventScript_RematchBernie",
+          "rematch": true
         },
         {
           "id": "TRAINER_CLAUDE",
-          "script": "Route114_EventScript_Claude"
+          "script": "Route114_EventScript_Claude",
+          "rematch": false
         },
         {
           "id": "TRAINER_NOLAN",
-          "script": "Route114_EventScript_Nolan"
+          "script": "Route114_EventScript_Nolan",
+          "rematch": false
         },
         {
           "id": "TRAINER_TYRA_AND_IVY",
-          "script": "Route114_EventScript_Tyra"
+          "script": "Route114_EventScript_Tyra",
+          "rematch": false
         },
         {
           "id": "TRAINER_TYRA_AND_IVY",
-          "script": "Route114_EventScript_Ivy"
+          "script": "Route114_EventScript_Ivy",
+          "rematch": false
         },
         {
           "id": "TRAINER_CHARLOTTE",
-          "script": "Route114_EventScript_Charlotte"
+          "script": "Route114_EventScript_Charlotte",
+          "rematch": false
         },
         {
           "id": "TRAINER_KAI",
-          "script": "Route114_EventScript_Kai"
+          "script": "Route114_EventScript_Kai",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE114_FOSSIL_MANIACS_HOUSE",
       "baseMap": "MAP_ROUTE114",
-      "levelLabel": "Fossil Maniacs House",
+      "levelLabel": "Fossilmaniacshouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -6871,43 +7320,68 @@
       "trainerRefs": [
         {
           "id": "TRAINER_TIMOTHY_1",
-          "script": "Route115_EventScript_Timothy"
+          "script": "Route115_EventScript_Timothy",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_TIMOTHY_1",
+          "script": "Route115_EventScript_RematchTimothy",
+          "rematch": true
         },
         {
           "id": "TRAINER_KOICHI",
-          "script": "Route115_EventScript_Koichi"
+          "script": "Route115_EventScript_Koichi",
+          "rematch": false
         },
         {
           "id": "TRAINER_NOB_1",
-          "script": "Route115_EventScript_Nob"
+          "script": "Route115_EventScript_Nob",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_NOB_1",
+          "script": "Route115_EventScript_RematchNob",
+          "rematch": true
         },
         {
           "id": "TRAINER_CYNDY_1",
-          "script": "Route115_EventScript_Cyndy"
+          "script": "Route115_EventScript_Cyndy",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_CYNDY_1",
+          "script": "Route115_EventScript_RematchCyndy",
+          "rematch": true
         },
         {
           "id": "TRAINER_HECTOR",
-          "script": "Route115_EventScript_Hector"
+          "script": "Route115_EventScript_Hector",
+          "rematch": false
         },
         {
           "id": "TRAINER_KYRA",
-          "script": "Route115_EventScript_Kyra"
+          "script": "Route115_EventScript_Kyra",
+          "rematch": false
         },
         {
           "id": "TRAINER_JAIDEN",
-          "script": "Route115_EventScript_Jaiden"
+          "script": "Route115_EventScript_Jaiden",
+          "rematch": false
         },
         {
           "id": "TRAINER_ALIX",
-          "script": "Route115_EventScript_Alix"
+          "script": "Route115_EventScript_Alix",
+          "rematch": false
         },
         {
           "id": "TRAINER_HELENE",
-          "script": "Route115_EventScript_Helene"
+          "script": "Route115_EventScript_Helene",
+          "rematch": false
         },
         {
           "id": "TRAINER_MARLENE",
-          "script": "Route115_EventScript_Marlene"
+          "script": "Route115_EventScript_Marlene",
+          "rematch": false
         }
       ]
     }
@@ -7008,47 +7482,68 @@
       "trainerRefs": [
         {
           "id": "TRAINER_JOEY",
-          "script": "Route116_EventScript_Joey"
+          "script": "Route116_EventScript_Joey",
+          "rematch": false
         },
         {
           "id": "TRAINER_JOSE",
-          "script": "Route116_EventScript_Jose"
+          "script": "Route116_EventScript_Jose",
+          "rematch": false
         },
         {
           "id": "TRAINER_JERRY_1",
-          "script": "Route116_EventScript_Jerry"
+          "script": "Route116_EventScript_Jerry",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_JERRY_1",
+          "script": "Route116_EventScript_RematchJerry",
+          "rematch": true
         },
         {
           "id": "TRAINER_CLARK",
-          "script": "Route116_EventScript_Clark"
+          "script": "Route116_EventScript_Clark",
+          "rematch": false
         },
         {
           "id": "TRAINER_JANICE",
-          "script": "Route116_EventScript_Janice"
+          "script": "Route116_EventScript_Janice",
+          "rematch": false
         },
         {
           "id": "TRAINER_KAREN_1",
-          "script": "Route116_EventScript_Karen"
+          "script": "Route116_EventScript_Karen",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_KAREN_1",
+          "script": "Route116_EventScript_RematchKaren",
+          "rematch": true
         },
         {
           "id": "TRAINER_SARAH",
-          "script": "Route116_EventScript_Sarah"
+          "script": "Route116_EventScript_Sarah",
+          "rematch": false
         },
         {
           "id": "TRAINER_DAWSON",
-          "script": "Route116_EventScript_Dawson"
+          "script": "Route116_EventScript_Dawson",
+          "rematch": false
         },
         {
           "id": "TRAINER_DEVAN",
-          "script": "Route116_EventScript_Devan"
+          "script": "Route116_EventScript_Devan",
+          "rematch": false
         },
         {
           "id": "TRAINER_JOHNSON",
-          "script": "Route116_EventScript_Johnson"
+          "script": "Route116_EventScript_Johnson",
+          "rematch": false
         },
         {
           "id": "TRAINER_ROARK",
-          "script": "Route116_EventScript_BattleRoark"
+          "script": "Route116_EventScript_BattleRoark",
+          "rematch": false
         }
       ]
     }
@@ -7145,39 +7640,68 @@
       "trainerRefs": [
         {
           "id": "TRAINER_EZEKIEL_1",
-          "script": "Route117_EventScript_Ezekiel"
+          "script": "Route117_EventScript_Ezekiel",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_EZEKIEL_1",
+          "script": "Route117_EventScript_RematchEzekiel",
+          "rematch": true
         },
         {
           "id": "TRAINER_LYDIA_1",
-          "script": "Route117_EventScript_Lydia"
+          "script": "Route117_EventScript_Lydia",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_LYDIA_1",
+          "script": "Route117_EventScript_RematchLydia",
+          "rematch": true
         },
         {
           "id": "TRAINER_DYLAN_1",
-          "script": "Route117_EventScript_Dylan"
+          "script": "Route117_EventScript_Dylan",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_DYLAN_1",
+          "script": "Route117_EventScript_RematchDylan",
+          "rematch": true
         },
         {
           "id": "TRAINER_MARIA_1",
-          "script": "Route117_EventScript_Maria"
+          "script": "Route117_EventScript_Maria",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_MARIA_1",
+          "script": "Route117_EventScript_RematchMaria",
+          "rematch": true
         },
         {
           "id": "TRAINER_ANNA_AND_MEG_1",
-          "script": "Route117_EventScript_Anna"
+          "script": "Route117_EventScript_Anna",
+          "rematch": false
         },
         {
           "id": "TRAINER_ANNA_AND_MEG_1",
-          "script": "Route117_EventScript_Meg"
+          "script": "Route117_EventScript_Meg",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRANDI",
-          "script": "Route117_EventScript_Brandi"
+          "script": "Route117_EventScript_Brandi",
+          "rematch": false
         },
         {
           "id": "TRAINER_AISHA",
-          "script": "Route117_EventScript_Aisha"
+          "script": "Route117_EventScript_Aisha",
+          "rematch": false
         },
         {
           "id": "TRAINER_FANTINA",
-          "script": "Route117_EventScript_BattleFantina"
+          "script": "Route117_EventScript_BattleFantina",
+          "rematch": false
         }
       ]
     }
@@ -7254,35 +7778,53 @@
       "trainerRefs": [
         {
           "id": "TRAINER_ROSE_1",
-          "script": "Route118_EventScript_Rose"
+          "script": "Route118_EventScript_Rose",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_ROSE_1",
+          "script": "Route118_EventScript_RematchRose",
+          "rematch": true
         },
         {
           "id": "TRAINER_BARNY",
-          "script": "Route118_EventScript_Barny"
+          "script": "Route118_EventScript_Barny",
+          "rematch": false
         },
         {
           "id": "TRAINER_WADE",
-          "script": "Route118_EventScript_Wade"
+          "script": "Route118_EventScript_Wade",
+          "rematch": false
         },
         {
           "id": "TRAINER_DALTON_1",
-          "script": "Route118_EventScript_Dalton"
+          "script": "Route118_EventScript_Dalton",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_DALTON_1",
+          "script": "Route118_EventScript_RematchDalton",
+          "rematch": true
         },
         {
           "id": "TRAINER_PERRY",
-          "script": "Route118_EventScript_Perry"
+          "script": "Route118_EventScript_Perry",
+          "rematch": false
         },
         {
           "id": "TRAINER_CHESTER",
-          "script": "Route118_EventScript_Chester"
+          "script": "Route118_EventScript_Chester",
+          "rematch": false
         },
         {
           "id": "TRAINER_DEANDRE",
-          "script": "Route118_EventScript_Deandre"
+          "script": "Route118_EventScript_Deandre",
+          "rematch": false
         },
         {
           "id": "TRAINER_WAKE",
-          "script": "Route118_EventScript_BattleWake"
+          "script": "Route118_EventScript_BattleWake",
+          "rematch": false
         }
       ]
     }
@@ -7428,102 +7970,135 @@
       "trainerRefs": [
         {
           "id": "TRAINER_MAY_ROUTE_119_TREECKO",
-          "script": "Route119_EventScript_BattleMayTreecko"
+          "script": "Route119_EventScript_BattleMayTreecko",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAY_ROUTE_119_TORCHIC",
-          "script": "Route119_EventScript_BattleMayTorchic"
+          "script": "Route119_EventScript_BattleMayTorchic",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAY_ROUTE_119_MUDKIP",
-          "script": "Route119_EventScript_BattleMayMudkip"
+          "script": "Route119_EventScript_BattleMayMudkip",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_ROUTE_119_TREECKO",
-          "script": "Route119_EventScript_BattleBrendanTreecko"
+          "script": "Route119_EventScript_BattleBrendanTreecko",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_ROUTE_119_TORCHIC",
-          "script": "Route119_EventScript_BattleBrendanTorchic"
+          "script": "Route119_EventScript_BattleBrendanTorchic",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_ROUTE_119_MUDKIP",
-          "script": "Route119_EventScript_BattleBrendanMudkip"
+          "script": "Route119_EventScript_BattleBrendanMudkip",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENT",
-          "script": "Route119_EventScript_Brent"
+          "script": "Route119_EventScript_Brent",
+          "rematch": false
         },
         {
           "id": "TRAINER_DONALD",
-          "script": "Route119_EventScript_Donald"
+          "script": "Route119_EventScript_Donald",
+          "rematch": false
         },
         {
           "id": "TRAINER_TAYLOR",
-          "script": "Route119_EventScript_Taylor"
+          "script": "Route119_EventScript_Taylor",
+          "rematch": false
         },
         {
           "id": "TRAINER_DOUG",
-          "script": "Route119_EventScript_Doug"
+          "script": "Route119_EventScript_Doug",
+          "rematch": false
         },
         {
           "id": "TRAINER_GREG",
-          "script": "Route119_EventScript_Greg"
+          "script": "Route119_EventScript_Greg",
+          "rematch": false
         },
         {
           "id": "TRAINER_KENT",
-          "script": "Route119_EventScript_Kent"
+          "script": "Route119_EventScript_Kent",
+          "rematch": false
         },
         {
           "id": "TRAINER_JACKSON_1",
-          "script": "Route119_EventScript_Jackson"
+          "script": "Route119_EventScript_Jackson",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_JACKSON_1",
+          "script": "Route119_EventScript_RematchJackson",
+          "rematch": true
         },
         {
           "id": "TRAINER_CATHERINE_1",
-          "script": "Route119_EventScript_Catherine"
+          "script": "Route119_EventScript_Catherine",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_CATHERINE_1",
+          "script": "Route119_EventScript_RematchCatherine",
+          "rematch": true
         },
         {
           "id": "TRAINER_HUGH",
-          "script": "Route119_EventScript_Hugh"
+          "script": "Route119_EventScript_Hugh",
+          "rematch": false
         },
         {
           "id": "TRAINER_PHIL",
-          "script": "Route119_EventScript_Phil"
+          "script": "Route119_EventScript_Phil",
+          "rematch": false
         },
         {
           "id": "TRAINER_YASU",
-          "script": "Route119_EventScript_Yasu"
+          "script": "Route119_EventScript_Yasu",
+          "rematch": false
         },
         {
           "id": "TRAINER_TAKASHI",
-          "script": "Route119_EventScript_Takashi"
+          "script": "Route119_EventScript_Takashi",
+          "rematch": false
         },
         {
           "id": "TRAINER_HIDEO",
-          "script": "Route119_EventScript_Hideo"
+          "script": "Route119_EventScript_Hideo",
+          "rematch": false
         },
         {
           "id": "TRAINER_CHRIS",
-          "script": "Route119_EventScript_Chris"
+          "script": "Route119_EventScript_Chris",
+          "rematch": false
         },
         {
           "id": "TRAINER_FABIAN",
-          "script": "Route119_EventScript_Fabian"
+          "script": "Route119_EventScript_Fabian",
+          "rematch": false
         },
         {
           "id": "TRAINER_DAYTON",
-          "script": "Route119_EventScript_Dayton"
+          "script": "Route119_EventScript_Dayton",
+          "rematch": false
         },
         {
           "id": "TRAINER_RAQUEL",
-          "script": "Route119_EventScript_Raquel"
+          "script": "Route119_EventScript_Raquel",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE119_WEATHER_INSTITUTE_1F",
       "baseMap": "MAP_ROUTE119",
-      "levelLabel": "Weather Institute1 F",
+      "levelLabel": "Weatherinstitute 1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -7531,18 +8106,20 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_WEATHER_INST_1",
-          "script": "Route119_WeatherInstitute_1F_EventScript_Grunt1"
+          "script": "Route119_WeatherInstitute_1F_EventScript_Grunt1",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_WEATHER_INST_4",
-          "script": "Route119_WeatherInstitute_1F_EventScript_Grunt4"
+          "script": "Route119_WeatherInstitute_1F_EventScript_Grunt4",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE119_WEATHER_INSTITUTE_2F",
       "baseMap": "MAP_ROUTE119",
-      "levelLabel": "Weather Institute2 F",
+      "levelLabel": "Weatherinstitute 2F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -7563,19 +8140,23 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_WEATHER_INST_5",
-          "script": "Route119_WeatherInstitute_2F_EventScript_Grunt5"
+          "script": "Route119_WeatherInstitute_2F_EventScript_Grunt5",
+          "rematch": false
         },
         {
           "id": "TRAINER_MATT_WEATHER_INST",
-          "script": "Route119_WeatherInstitute_2F_EventScript_AdminMatt"
+          "script": "Route119_WeatherInstitute_2F_EventScript_AdminMatt",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_WEATHER_INST_3",
-          "script": "Route119_WeatherInstitute_2F_EventScript_Grunt3"
+          "script": "Route119_WeatherInstitute_2F_EventScript_Grunt3",
+          "rematch": false
         },
         {
           "id": "TRAINER_SHELLY_WEATHER_INSTITUTE",
-          "script": "Route119_WeatherInstitute_2F_EventScript_Shelly"
+          "script": "Route119_WeatherInstitute_2F_EventScript_Shelly",
+          "rematch": false
         }
       ]
     }
@@ -7677,51 +8258,73 @@
       "trainerRefs": [
         {
           "id": "TRAINER_COLIN",
-          "script": "Route120_EventScript_Colin"
+          "script": "Route120_EventScript_Colin",
+          "rematch": false
         },
         {
           "id": "TRAINER_ROBERT_1",
-          "script": "Route120_EventScript_Robert"
+          "script": "Route120_EventScript_Robert",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_ROBERT_1",
+          "script": "Route120_EventScript_RematchRobert",
+          "rematch": true
         },
         {
           "id": "TRAINER_LORENZO",
-          "script": "Route120_EventScript_Lorenzo"
+          "script": "Route120_EventScript_Lorenzo",
+          "rematch": false
         },
         {
           "id": "TRAINER_JENNA",
-          "script": "Route120_EventScript_Jenna"
+          "script": "Route120_EventScript_Jenna",
+          "rematch": false
         },
         {
           "id": "TRAINER_JEFFREY_1",
-          "script": "Route120_EventScript_Jeffrey"
+          "script": "Route120_EventScript_Jeffrey",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_JEFFREY_1",
+          "script": "Route120_EventScript_RematchJeffrey",
+          "rematch": true
         },
         {
           "id": "TRAINER_JENNIFER",
-          "script": "Route120_EventScript_Jennifer"
+          "script": "Route120_EventScript_Jennifer",
+          "rematch": false
         },
         {
           "id": "TRAINER_CLARISSA",
-          "script": "Route120_EventScript_Clarissa"
+          "script": "Route120_EventScript_Clarissa",
+          "rematch": false
         },
         {
           "id": "TRAINER_ANGELICA",
-          "script": "Route120_EventScript_Angelica"
+          "script": "Route120_EventScript_Angelica",
+          "rematch": false
         },
         {
           "id": "TRAINER_KEIGO",
-          "script": "Route120_EventScript_Keigo"
+          "script": "Route120_EventScript_Keigo",
+          "rematch": false
         },
         {
           "id": "TRAINER_RILEY",
-          "script": "Route120_EventScript_Riley"
+          "script": "Route120_EventScript_Riley",
+          "rematch": false
         },
         {
           "id": "TRAINER_LEONEL",
-          "script": "Route120_EventScript_Leonel"
+          "script": "Route120_EventScript_Leonel",
+          "rematch": false
         },
         {
           "id": "TRAINER_CALLIE",
-          "script": "Route120_EventScript_Callie"
+          "script": "Route120_EventScript_Callie",
+          "rematch": false
         }
       ]
     }
@@ -7821,51 +8424,78 @@
       "trainerRefs": [
         {
           "id": "TRAINER_VANESSA",
-          "script": "Route121_EventScript_Vanessa"
+          "script": "Route121_EventScript_Vanessa",
+          "rematch": false
         },
         {
           "id": "TRAINER_WALTER_1",
-          "script": "Route121_EventScript_Walter"
+          "script": "Route121_EventScript_Walter",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_WALTER_1",
+          "script": "Route121_EventScript_RematchWalter",
+          "rematch": true
         },
         {
           "id": "TRAINER_TAMMY",
-          "script": "Route121_EventScript_Tammy"
+          "script": "Route121_EventScript_Tammy",
+          "rematch": false
         },
         {
           "id": "TRAINER_KATE_AND_JOY",
-          "script": "Route121_EventScript_Kate"
+          "script": "Route121_EventScript_Kate",
+          "rematch": false
         },
         {
           "id": "TRAINER_KATE_AND_JOY",
-          "script": "Route121_EventScript_Joy"
+          "script": "Route121_EventScript_Joy",
+          "rematch": false
         },
         {
           "id": "TRAINER_JESSICA_1",
-          "script": "Route121_EventScript_Jessica"
+          "script": "Route121_EventScript_Jessica",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_JESSICA_1",
+          "script": "Route121_EventScript_RematchJessica",
+          "rematch": true
         },
         {
           "id": "TRAINER_CALE",
-          "script": "Route121_EventScript_Cale"
+          "script": "Route121_EventScript_Cale",
+          "rematch": false
         },
         {
           "id": "TRAINER_MYLES",
-          "script": "Route121_EventScript_Myles"
+          "script": "Route121_EventScript_Myles",
+          "rematch": false
         },
         {
           "id": "TRAINER_PAT",
-          "script": "Route121_EventScript_Pat"
+          "script": "Route121_EventScript_Pat",
+          "rematch": false
         },
         {
           "id": "TRAINER_MARCEL",
-          "script": "Route121_EventScript_Marcel"
+          "script": "Route121_EventScript_Marcel",
+          "rematch": false
         },
         {
           "id": "TRAINER_CRISTIN_1",
-          "script": "Route121_EventScript_Cristin"
+          "script": "Route121_EventScript_Cristin",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_CRISTIN_1",
+          "script": "Route121_EventScript_RematchCristin",
+          "rematch": true
         },
         {
           "id": "TRAINER_BYRON",
-          "script": "Route121_EventScript_BattleByron"
+          "script": "Route121_EventScript_BattleByron",
+          "rematch": false
         }
       ]
     }
@@ -7975,74 +8605,105 @@
       "trainerRefs": [
         {
           "id": "TRAINER_WENDY",
-          "script": "Route123_EventScript_Wendy"
+          "script": "Route123_EventScript_Wendy",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRAXTON",
-          "script": "Route123_EventScript_Braxton"
+          "script": "Route123_EventScript_Braxton",
+          "rematch": false
         },
         {
           "id": "TRAINER_VIOLET",
-          "script": "Route123_EventScript_Violet"
+          "script": "Route123_EventScript_Violet",
+          "rematch": false
         },
         {
           "id": "TRAINER_CAMERON_1",
-          "script": "Route123_EventScript_Cameron"
+          "script": "Route123_EventScript_Cameron",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_CAMERON_1",
+          "script": "Route123_EventScript_RematchCameron",
+          "rematch": true
         },
         {
           "id": "TRAINER_JACKI_1",
-          "script": "Route123_EventScript_Jacki"
+          "script": "Route123_EventScript_Jacki",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_JACKI_1",
+          "script": "Route123_EventScript_RematchJacki",
+          "rematch": true
         },
         {
           "id": "TRAINER_MIU_AND_YUKI",
-          "script": "Route123_EventScript_Miu"
+          "script": "Route123_EventScript_Miu",
+          "rematch": false
         },
         {
           "id": "TRAINER_MIU_AND_YUKI",
-          "script": "Route123_EventScript_Yuki"
+          "script": "Route123_EventScript_Yuki",
+          "rematch": false
         },
         {
           "id": "TRAINER_KINDRA",
-          "script": "Route123_EventScript_Kindra"
+          "script": "Route123_EventScript_Kindra",
+          "rematch": false
         },
         {
           "id": "TRAINER_FREDRICK",
-          "script": "Route123_EventScript_Frederick"
+          "script": "Route123_EventScript_Frederick",
+          "rematch": false
         },
         {
           "id": "TRAINER_ALBERTO",
-          "script": "Route123_EventScript_Alberto"
+          "script": "Route123_EventScript_Alberto",
+          "rematch": false
         },
         {
           "id": "TRAINER_ED",
-          "script": "Route123_EventScript_Ed"
+          "script": "Route123_EventScript_Ed",
+          "rematch": false
         },
         {
           "id": "TRAINER_KAYLEY",
-          "script": "Route123_EventScript_Kayley"
+          "script": "Route123_EventScript_Kayley",
+          "rematch": false
         },
         {
           "id": "TRAINER_JONAS",
-          "script": "Route123_EventScript_Jonas"
+          "script": "Route123_EventScript_Jonas",
+          "rematch": false
         },
         {
           "id": "TRAINER_JAZMYN",
-          "script": "Route123_EventScript_Jazmyn"
+          "script": "Route123_EventScript_Jazmyn",
+          "rematch": false
         },
         {
           "id": "TRAINER_DAVIS",
-          "script": "Route123_EventScript_Davis"
+          "script": "Route123_EventScript_Davis",
+          "rematch": false
         },
         {
           "id": "TRAINER_FERNANDO_1",
-          "script": "Route123_EventScript_Fernando"
+          "script": "Route123_EventScript_Fernando",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_FERNANDO_1",
+          "script": "Route123_EventScript_RematchFernando",
+          "rematch": true
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE123_BERRY_MASTERS_HOUSE",
       "baseMap": "MAP_ROUTE123",
-      "levelLabel": "Berry Masters House",
+      "levelLabel": "Berrymastershouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -8114,46 +8775,60 @@
       "trainerRefs": [
         {
           "id": "TRAINER_SPENCER",
-          "script": "Route124_EventScript_Spencer"
+          "script": "Route124_EventScript_Spencer",
+          "rematch": false
         },
         {
           "id": "TRAINER_ROLAND",
-          "script": "Route124_EventScript_Roland"
+          "script": "Route124_EventScript_Roland",
+          "rematch": false
         },
         {
           "id": "TRAINER_JENNY_1",
-          "script": "Route124_EventScript_Jenny"
+          "script": "Route124_EventScript_Jenny",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_JENNY_1",
+          "script": "Route124_EventScript_RematchJenny",
+          "rematch": true
         },
         {
           "id": "TRAINER_GRACE",
-          "script": "Route124_EventScript_Grace"
+          "script": "Route124_EventScript_Grace",
+          "rematch": false
         },
         {
           "id": "TRAINER_CHAD",
-          "script": "Route124_EventScript_Chad"
+          "script": "Route124_EventScript_Chad",
+          "rematch": false
         },
         {
           "id": "TRAINER_LILA_AND_ROY_1",
-          "script": "Route124_EventScript_Lila"
+          "script": "Route124_EventScript_Lila",
+          "rematch": false
         },
         {
           "id": "TRAINER_LILA_AND_ROY_1",
-          "script": "Route124_EventScript_Roy"
+          "script": "Route124_EventScript_Roy",
+          "rematch": false
         },
         {
           "id": "TRAINER_DECLAN",
-          "script": "Route124_EventScript_Declan"
+          "script": "Route124_EventScript_Declan",
+          "rematch": false
         },
         {
           "id": "TRAINER_ISABELLA",
-          "script": "Route124_EventScript_Isabella"
+          "script": "Route124_EventScript_Isabella",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE",
       "baseMap": "MAP_ROUTE124",
-      "levelLabel": "Diving Treasure Hunters House",
+      "levelLabel": "Divingtreasurehuntershouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -8222,43 +8897,58 @@
       "trainerRefs": [
         {
           "id": "TRAINER_NOLEN",
-          "script": "Route125_EventScript_Nolen"
+          "script": "Route125_EventScript_Nolen",
+          "rematch": false
         },
         {
           "id": "TRAINER_STAN",
-          "script": "Route125_EventScript_Stan"
+          "script": "Route125_EventScript_Stan",
+          "rematch": false
         },
         {
           "id": "TRAINER_TANYA",
-          "script": "Route125_EventScript_Tanya"
+          "script": "Route125_EventScript_Tanya",
+          "rematch": false
         },
         {
           "id": "TRAINER_SHARON",
-          "script": "Route125_EventScript_Sharon"
+          "script": "Route125_EventScript_Sharon",
+          "rematch": false
         },
         {
           "id": "TRAINER_ERNEST_1",
-          "script": "Route125_EventScript_Ernest"
+          "script": "Route125_EventScript_Ernest",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_ERNEST_1",
+          "script": "Route125_EventScript_RematchErnest",
+          "rematch": true
         },
         {
           "id": "TRAINER_KIM_AND_IRIS",
-          "script": "Route125_EventScript_Kim"
+          "script": "Route125_EventScript_Kim",
+          "rematch": false
         },
         {
           "id": "TRAINER_KIM_AND_IRIS",
-          "script": "Route125_EventScript_Iris"
+          "script": "Route125_EventScript_Iris",
+          "rematch": false
         },
         {
           "id": "TRAINER_PRESLEY",
-          "script": "Route125_EventScript_Presley"
+          "script": "Route125_EventScript_Presley",
+          "rematch": false
         },
         {
           "id": "TRAINER_AURON",
-          "script": "Route125_EventScript_Auron"
+          "script": "Route125_EventScript_Auron",
+          "rematch": false
         },
         {
           "id": "TRAINER_CANDICE",
-          "script": "Route125_EventScript_BattleCandice"
+          "script": "Route125_EventScript_BattleCandice",
+          "rematch": false
         }
       ]
     }
@@ -8275,35 +8965,48 @@
       "trainerRefs": [
         {
           "id": "TRAINER_BARRY",
-          "script": "Route126_EventScript_Barry"
+          "script": "Route126_EventScript_Barry",
+          "rematch": false
         },
         {
           "id": "TRAINER_DEAN",
-          "script": "Route126_EventScript_Dean"
+          "script": "Route126_EventScript_Dean",
+          "rematch": false
         },
         {
           "id": "TRAINER_NIKKI",
-          "script": "Route126_EventScript_Nikki"
+          "script": "Route126_EventScript_Nikki",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDA",
-          "script": "Route126_EventScript_Brenda"
+          "script": "Route126_EventScript_Brenda",
+          "rematch": false
         },
         {
           "id": "TRAINER_LEONARDO",
-          "script": "Route126_EventScript_Leonardo"
+          "script": "Route126_EventScript_Leonardo",
+          "rematch": false
         },
         {
           "id": "TRAINER_ISOBEL",
-          "script": "Route126_EventScript_Isobel"
+          "script": "Route126_EventScript_Isobel",
+          "rematch": false
         },
         {
           "id": "TRAINER_SIENNA",
-          "script": "Route126_EventScript_Sienna"
+          "script": "Route126_EventScript_Sienna",
+          "rematch": false
         },
         {
           "id": "TRAINER_PABLO_1",
-          "script": "Route126_EventScript_Pablo"
+          "script": "Route126_EventScript_Pablo",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_PABLO_1",
+          "script": "Route126_EventScript_RematchPablo",
+          "rematch": true
         }
       ]
     }
@@ -8345,35 +9048,48 @@
       "trainerRefs": [
         {
           "id": "TRAINER_CAMDEN",
-          "script": "Route127_EventScript_Camden"
+          "script": "Route127_EventScript_Camden",
+          "rematch": false
         },
         {
           "id": "TRAINER_DONNY",
-          "script": "Route127_EventScript_Donny"
+          "script": "Route127_EventScript_Donny",
+          "rematch": false
         },
         {
           "id": "TRAINER_JONAH",
-          "script": "Route127_EventScript_Jonah"
+          "script": "Route127_EventScript_Jonah",
+          "rematch": false
         },
         {
           "id": "TRAINER_HENRY",
-          "script": "Route127_EventScript_Henry"
+          "script": "Route127_EventScript_Henry",
+          "rematch": false
         },
         {
           "id": "TRAINER_ROGER",
-          "script": "Route127_EventScript_Roger"
+          "script": "Route127_EventScript_Roger",
+          "rematch": false
         },
         {
           "id": "TRAINER_AIDAN",
-          "script": "Route127_EventScript_Aidan"
+          "script": "Route127_EventScript_Aidan",
+          "rematch": false
         },
         {
           "id": "TRAINER_ATHENA",
-          "script": "Route127_EventScript_Athena"
+          "script": "Route127_EventScript_Athena",
+          "rematch": false
         },
         {
           "id": "TRAINER_KOJI_1",
-          "script": "Route127_EventScript_Koji"
+          "script": "Route127_EventScript_Koji",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_KOJI_1",
+          "script": "Route127_EventScript_RematchKoji",
+          "rematch": true
         }
       ]
     }
@@ -8415,31 +9131,48 @@
       "trainerRefs": [
         {
           "id": "TRAINER_ISAIAH_1",
-          "script": "Route128_EventScript_Isaiah"
+          "script": "Route128_EventScript_Isaiah",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_ISAIAH_1",
+          "script": "Route128_EventScript_RematchIsaiah",
+          "rematch": true
         },
         {
           "id": "TRAINER_KATELYN_1",
-          "script": "Route128_EventScript_Katelyn"
+          "script": "Route128_EventScript_Katelyn",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_KATELYN_1",
+          "script": "Route128_EventScript_RematchKatelyn",
+          "rematch": true
         },
         {
           "id": "TRAINER_ALEXA",
-          "script": "Route128_EventScript_Alexa"
+          "script": "Route128_EventScript_Alexa",
+          "rematch": false
         },
         {
           "id": "TRAINER_RUBEN",
-          "script": "Route128_EventScript_Ruben"
+          "script": "Route128_EventScript_Ruben",
+          "rematch": false
         },
         {
           "id": "TRAINER_WAYNE",
-          "script": "Route128_EventScript_Wayne"
+          "script": "Route128_EventScript_Wayne",
+          "rematch": false
         },
         {
           "id": "TRAINER_HARRISON",
-          "script": "Route128_EventScript_Harrison"
+          "script": "Route128_EventScript_Harrison",
+          "rematch": false
         },
         {
           "id": "TRAINER_CARLEE",
-          "script": "Route128_EventScript_Carlee"
+          "script": "Route128_EventScript_Carlee",
+          "rematch": false
         }
       ]
     }
@@ -8456,23 +9189,28 @@
       "trainerRefs": [
         {
           "id": "TRAINER_CHASE",
-          "script": "Route129_EventScript_Chase"
+          "script": "Route129_EventScript_Chase",
+          "rematch": false
         },
         {
           "id": "TRAINER_ALLISON",
-          "script": "Route129_EventScript_Allison"
+          "script": "Route129_EventScript_Allison",
+          "rematch": false
         },
         {
           "id": "TRAINER_REED",
-          "script": "Route129_EventScript_Reed"
+          "script": "Route129_EventScript_Reed",
+          "rematch": false
         },
         {
           "id": "TRAINER_TISHA",
-          "script": "Route129_EventScript_Tisha"
+          "script": "Route129_EventScript_Tisha",
+          "rematch": false
         },
         {
           "id": "TRAINER_CLARENCE",
-          "script": "Route129_EventScript_Clarence"
+          "script": "Route129_EventScript_Clarence",
+          "rematch": false
         }
       ]
     }
@@ -8489,15 +9227,18 @@
       "trainerRefs": [
         {
           "id": "TRAINER_RODNEY",
-          "script": "Route130_EventScript_Rodney"
+          "script": "Route130_EventScript_Rodney",
+          "rematch": false
         },
         {
           "id": "TRAINER_KATIE",
-          "script": "Route130_EventScript_Katie"
+          "script": "Route130_EventScript_Katie",
+          "rematch": false
         },
         {
           "id": "TRAINER_SANTIAGO",
-          "script": "Route130_EventScript_Santiago"
+          "script": "Route130_EventScript_Santiago",
+          "rematch": false
         }
       ]
     }
@@ -8514,35 +9255,43 @@
       "trainerRefs": [
         {
           "id": "TRAINER_RICHARD",
-          "script": "Route131_EventScript_Richard"
+          "script": "Route131_EventScript_Richard",
+          "rematch": false
         },
         {
           "id": "TRAINER_HERMAN",
-          "script": "Route131_EventScript_Herman"
+          "script": "Route131_EventScript_Herman",
+          "rematch": false
         },
         {
           "id": "TRAINER_SUSIE",
-          "script": "Route131_EventScript_Susie"
+          "script": "Route131_EventScript_Susie",
+          "rematch": false
         },
         {
           "id": "TRAINER_KARA",
-          "script": "Route131_EventScript_Kara"
+          "script": "Route131_EventScript_Kara",
+          "rematch": false
         },
         {
           "id": "TRAINER_RELI_AND_IAN",
-          "script": "Route131_EventScript_Reli"
+          "script": "Route131_EventScript_Reli",
+          "rematch": false
         },
         {
           "id": "TRAINER_RELI_AND_IAN",
-          "script": "Route131_EventScript_Ian"
+          "script": "Route131_EventScript_Ian",
+          "rematch": false
         },
         {
           "id": "TRAINER_TALIA",
-          "script": "Route131_EventScript_Talia"
+          "script": "Route131_EventScript_Talia",
+          "rematch": false
         },
         {
           "id": "TRAINER_KEVIN",
-          "script": "Route131_EventScript_Kevin"
+          "script": "Route131_EventScript_Kevin",
+          "rematch": false
         }
       ]
     }
@@ -8576,35 +9325,43 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GILBERT",
-          "script": "Route132_EventScript_Gilbert"
+          "script": "Route132_EventScript_Gilbert",
+          "rematch": false
         },
         {
           "id": "TRAINER_DANA",
-          "script": "Route132_EventScript_Dana"
+          "script": "Route132_EventScript_Dana",
+          "rematch": false
         },
         {
           "id": "TRAINER_RONALD",
-          "script": "Route132_EventScript_Ronald"
+          "script": "Route132_EventScript_Ronald",
+          "rematch": false
         },
         {
           "id": "TRAINER_KIYO",
-          "script": "Route132_EventScript_Kiyo"
+          "script": "Route132_EventScript_Kiyo",
+          "rematch": false
         },
         {
           "id": "TRAINER_PAXTON",
-          "script": "Route132_EventScript_Paxton"
+          "script": "Route132_EventScript_Paxton",
+          "rematch": false
         },
         {
           "id": "TRAINER_DARCY",
-          "script": "Route132_EventScript_Darcy"
+          "script": "Route132_EventScript_Darcy",
+          "rematch": false
         },
         {
           "id": "TRAINER_JONATHAN",
-          "script": "Route132_EventScript_Jonathan"
+          "script": "Route132_EventScript_Jonathan",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAKAYLA",
-          "script": "Route132_EventScript_Makayla"
+          "script": "Route132_EventScript_Makayla",
+          "rematch": false
         }
       ]
     }
@@ -8646,31 +9403,38 @@
       "trainerRefs": [
         {
           "id": "TRAINER_FRANKLIN",
-          "script": "Route133_EventScript_Franklin"
+          "script": "Route133_EventScript_Franklin",
+          "rematch": false
         },
         {
           "id": "TRAINER_DEBRA",
-          "script": "Route133_EventScript_Debra"
+          "script": "Route133_EventScript_Debra",
+          "rematch": false
         },
         {
           "id": "TRAINER_LINDA",
-          "script": "Route133_EventScript_Linda"
+          "script": "Route133_EventScript_Linda",
+          "rematch": false
         },
         {
           "id": "TRAINER_WARREN",
-          "script": "Route133_EventScript_Warren"
+          "script": "Route133_EventScript_Warren",
+          "rematch": false
         },
         {
           "id": "TRAINER_BECK",
-          "script": "Route133_EventScript_Beck"
+          "script": "Route133_EventScript_Beck",
+          "rematch": false
         },
         {
           "id": "TRAINER_MOLLIE",
-          "script": "Route133_EventScript_Mollie"
+          "script": "Route133_EventScript_Mollie",
+          "rematch": false
         },
         {
           "id": "TRAINER_CONOR",
-          "script": "Route133_EventScript_Conor"
+          "script": "Route133_EventScript_Conor",
+          "rematch": false
         }
       ]
     }
@@ -8704,39 +9468,48 @@
       "trainerRefs": [
         {
           "id": "TRAINER_JACK",
-          "script": "Route134_EventScript_Jack"
+          "script": "Route134_EventScript_Jack",
+          "rematch": false
         },
         {
           "id": "TRAINER_LAUREL",
-          "script": "Route134_EventScript_Laurel"
+          "script": "Route134_EventScript_Laurel",
+          "rematch": false
         },
         {
           "id": "TRAINER_ALEX",
-          "script": "Route134_EventScript_Alex"
+          "script": "Route134_EventScript_Alex",
+          "rematch": false
         },
         {
           "id": "TRAINER_AARON",
-          "script": "Route134_EventScript_Aaron"
+          "script": "Route134_EventScript_Aaron",
+          "rematch": false
         },
         {
           "id": "TRAINER_HITOSHI",
-          "script": "Route134_EventScript_Hitoshi"
+          "script": "Route134_EventScript_Hitoshi",
+          "rematch": false
         },
         {
           "id": "TRAINER_HUDSON",
-          "script": "Route134_EventScript_Hudson"
+          "script": "Route134_EventScript_Hudson",
+          "rematch": false
         },
         {
           "id": "TRAINER_REYNA",
-          "script": "Route134_EventScript_Reyna"
+          "script": "Route134_EventScript_Reyna",
+          "rematch": false
         },
         {
           "id": "TRAINER_MARLEY",
-          "script": "Route134_EventScript_Marley"
+          "script": "Route134_EventScript_Marley",
+          "rematch": false
         },
         {
           "id": "TRAINER_KELVIN",
-          "script": "Route134_EventScript_Kelvin"
+          "script": "Route134_EventScript_Kelvin",
+          "rematch": false
         }
       ]
     }
@@ -8774,34 +9547,40 @@
       "trainerRefs": [
         {
           "id": "TRAINER_MAY_RUSTBORO_TREECKO",
-          "script": "RustboroCity_EventScript_BattleMayTreecko"
+          "script": "RustboroCity_EventScript_BattleMayTreecko",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAY_RUSTBORO_TORCHIC",
-          "script": "RustboroCity_EventScript_BattleMayTorchic"
+          "script": "RustboroCity_EventScript_BattleMayTorchic",
+          "rematch": false
         },
         {
           "id": "TRAINER_MAY_RUSTBORO_MUDKIP",
-          "script": "RustboroCity_EventScript_BattleMayMudkip"
+          "script": "RustboroCity_EventScript_BattleMayMudkip",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_RUSTBORO_TREECKO",
-          "script": "RustboroCity_EventScript_BattleBrendanTreecko"
+          "script": "RustboroCity_EventScript_BattleBrendanTreecko",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_RUSTBORO_TORCHIC",
-          "script": "RustboroCity_EventScript_BattleBrendanTorchic"
+          "script": "RustboroCity_EventScript_BattleBrendanTorchic",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRENDAN_RUSTBORO_MUDKIP",
-          "script": "RustboroCity_EventScript_BattleBrendanMudkip"
+          "script": "RustboroCity_EventScript_BattleBrendanMudkip",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_RUSTBORO_CITY_CUTTERS_HOUSE",
       "baseMap": "MAP_RUSTBORO_CITY",
-      "levelLabel": "Cutters House",
+      "levelLabel": "Cuttershouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -8823,7 +9602,7 @@
     {
       "thisLevelsId": "MAP_RUSTBORO_CITY_DEVON_CORP_2F",
       "baseMap": "MAP_RUSTBORO_CITY",
-      "levelLabel": "Devon Corp2 F",
+      "levelLabel": "Devoncorp 2F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -8858,7 +9637,7 @@
     {
       "thisLevelsId": "MAP_RUSTBORO_CITY_DEVON_CORP_3F",
       "baseMap": "MAP_RUSTBORO_CITY",
-      "levelLabel": "Devon Corp3 F",
+      "levelLabel": "Devoncorp 3F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -8903,7 +9682,7 @@
     {
       "thisLevelsId": "MAP_RUSTBORO_CITY_FLAT2_2F",
       "baseMap": "MAP_RUSTBORO_CITY",
-      "levelLabel": "Flat22 F",
+      "levelLabel": "Flat 2 2F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -8945,19 +9724,23 @@
       "trainerRefs": [
         {
           "id": "TRAINER_ROXANNE_1",
-          "script": "RustboroCity_Gym_EventScript_Roxanne"
+          "script": "RustboroCity_Gym_EventScript_Roxanne",
+          "rematch": false
         },
         {
           "id": "TRAINER_JOSH",
-          "script": "RustboroCity_Gym_EventScript_Josh"
+          "script": "RustboroCity_Gym_EventScript_Josh",
+          "rematch": false
         },
         {
           "id": "TRAINER_TOMMY",
-          "script": "RustboroCity_Gym_EventScript_Tommy"
+          "script": "RustboroCity_Gym_EventScript_Tommy",
+          "rematch": false
         },
         {
           "id": "TRAINER_MARC",
-          "script": "RustboroCity_Gym_EventScript_Marc"
+          "script": "RustboroCity_Gym_EventScript_Marc",
+          "rematch": false
         }
       ]
     },
@@ -8993,7 +9776,7 @@
     {
       "thisLevelsId": "MAP_RUSTBORO_CITY_POKEMON_CENTER_1F",
       "baseMap": "MAP_RUSTBORO_CITY",
-      "levelLabel": "Pokemon Center1 F",
+      "levelLabel": "Pokemoncenter 1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -9016,7 +9799,7 @@
     {
       "thisLevelsId": "MAP_RUSTBORO_CITY_POKEMON_SCHOOL",
       "baseMap": "MAP_RUSTBORO_CITY",
-      "levelLabel": "Pokemon School",
+      "levelLabel": "Pokemonschool",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -9080,11 +9863,13 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_RUSTURF_TUNNEL",
-          "script": "RusturfTunnel_EventScript_Grunt"
+          "script": "RusturfTunnel_EventScript_Grunt",
+          "rematch": false
         },
         {
           "id": "TRAINER_MIKE_2",
-          "script": "RusturfTunnel_EventScript_Mike"
+          "script": "RusturfTunnel_EventScript_Mike",
+          "rematch": false
         }
       ]
     }
@@ -9110,11 +9895,13 @@
       "trainerRefs": [
         {
           "id": "TRAINER_PHILLIP",
-          "script": "SSTidalLowerDeck_EventScript_Phillip"
+          "script": "SSTidalLowerDeck_EventScript_Phillip",
+          "rematch": false
         },
         {
           "id": "TRAINER_LEONARD",
-          "script": "SSTidalLowerDeck_EventScript_Leonard"
+          "script": "SSTidalLowerDeck_EventScript_Leonard",
+          "rematch": false
         }
       ]
     }
@@ -9143,31 +9930,38 @@
       "trainerRefs": [
         {
           "id": "TRAINER_COLTON",
-          "script": "SSTidalRooms_EventScript_Colton"
+          "script": "SSTidalRooms_EventScript_Colton",
+          "rematch": false
         },
         {
           "id": "TRAINER_MICAH",
-          "script": "SSTidalRooms_EventScript_Micah"
+          "script": "SSTidalRooms_EventScript_Micah",
+          "rematch": false
         },
         {
           "id": "TRAINER_THOMAS",
-          "script": "SSTidalRooms_EventScript_Thomas"
+          "script": "SSTidalRooms_EventScript_Thomas",
+          "rematch": false
         },
         {
           "id": "TRAINER_LEA_AND_JED",
-          "script": "SSTidalRooms_EventScript_Jed"
+          "script": "SSTidalRooms_EventScript_Jed",
+          "rematch": false
         },
         {
           "id": "TRAINER_LEA_AND_JED",
-          "script": "SSTidalRooms_EventScript_Lea"
+          "script": "SSTidalRooms_EventScript_Lea",
+          "rematch": false
         },
         {
           "id": "TRAINER_GARRET",
-          "script": "SSTidalRooms_EventScript_Garret"
+          "script": "SSTidalRooms_EventScript_Garret",
+          "rematch": false
         },
         {
           "id": "TRAINER_NAOMI",
-          "script": "SSTidalRooms_EventScript_Naomi"
+          "script": "SSTidalRooms_EventScript_Naomi",
+          "rematch": false
         }
       ]
     }
@@ -9337,7 +10131,7 @@
     {
       "thisLevelsId": "MAP_SEAFLOOR_CAVERN_ROOM1",
       "baseMap": "MAP_SEAFLOOR_CAVERN",
-      "levelLabel": "Room1",
+      "levelLabel": "Room 1",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -9345,14 +10139,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_SEAFLOOR_CAVERN_1",
-          "script": "SeafloorCavern_Room1_EventScript_Grunt1"
+          "script": "SeafloorCavern_Room1_EventScript_Grunt1",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_SEAFLOOR_CAVERN_ROOM2",
       "baseMap": "MAP_SEAFLOOR_CAVERN",
-      "levelLabel": "Room2",
+      "levelLabel": "Room 2",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -9362,7 +10157,7 @@
     {
       "thisLevelsId": "MAP_SEAFLOOR_CAVERN_ROOM3",
       "baseMap": "MAP_SEAFLOOR_CAVERN",
-      "levelLabel": "Room3",
+      "levelLabel": "Room 3",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -9370,14 +10165,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_SEAFLOOR_CAVERN_5",
-          "script": "SeafloorCavern_Room3_EventScript_Grunt5"
+          "script": "SeafloorCavern_Room3_EventScript_Grunt5",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_SEAFLOOR_CAVERN_ROOM4",
       "baseMap": "MAP_SEAFLOOR_CAVERN",
-      "levelLabel": "Room4",
+      "levelLabel": "Room 4",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -9385,18 +10181,20 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_SEAFLOOR_CAVERN_3",
-          "script": "SeafloorCavern_Room4_EventScript_Grunt3"
+          "script": "SeafloorCavern_Room4_EventScript_Grunt3",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_SEAFLOOR_CAVERN_4",
-          "script": "SeafloorCavern_Room4_EventScript_Grunt4"
+          "script": "SeafloorCavern_Room4_EventScript_Grunt4",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_SEAFLOOR_CAVERN_ROOM5",
       "baseMap": "MAP_SEAFLOOR_CAVERN",
-      "levelLabel": "Room5",
+      "levelLabel": "Room 5",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -9406,7 +10204,7 @@
     {
       "thisLevelsId": "MAP_SEAFLOOR_CAVERN_ROOM6",
       "baseMap": "MAP_SEAFLOOR_CAVERN",
-      "levelLabel": "Room6",
+      "levelLabel": "Room 6",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -9416,7 +10214,7 @@
     {
       "thisLevelsId": "MAP_SEAFLOOR_CAVERN_ROOM7",
       "baseMap": "MAP_SEAFLOOR_CAVERN",
-      "levelLabel": "Room7",
+      "levelLabel": "Room 7",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -9426,7 +10224,7 @@
     {
       "thisLevelsId": "MAP_SEAFLOOR_CAVERN_ROOM8",
       "baseMap": "MAP_SEAFLOOR_CAVERN",
-      "levelLabel": "Room8",
+      "levelLabel": "Room 8",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -9436,7 +10234,7 @@
     {
       "thisLevelsId": "MAP_SEAFLOOR_CAVERN_ROOM9",
       "baseMap": "MAP_SEAFLOOR_CAVERN",
-      "levelLabel": "Room9",
+      "levelLabel": "Room 9",
       "shopItems": [],
       "pickupItems": [
         {
@@ -9453,15 +10251,18 @@
       "trainerRefs": [
         {
           "id": "TRAINER_ARCHIE",
-          "script": "SeafloorCavern_EventScript_Archie"
+          "script": "SeafloorCavern_EventScript_Archie",
+          "rematch": false
         },
         {
           "id": "TRAINER_SHELLY_SEAFLOOR_CAVERN",
-          "script": "SeafloorCavern_EventScript_BackToBackScene"
+          "script": "SeafloorCavern_EventScript_BackToBackScene",
+          "rematch": false
         },
         {
           "id": "TRAINER_MATT_SEAFLOOR_CAVERN",
-          "script": "SeafloorCavern_EventScript_BackToBackScene"
+          "script": "SeafloorCavern_EventScript_BackToBackScene",
+          "rematch": false
         }
       ]
     }
@@ -9470,7 +10271,7 @@
     {
       "thisLevelsId": "MAP_SEALED_CHAMBER_INNER_ROOM",
       "baseMap": "MAP_SEALED_CHAMBER",
-      "levelLabel": "Inner Room",
+      "levelLabel": "Innerroom",
       "shopItems": [],
       "pickupItems": [
         {
@@ -9491,7 +10292,7 @@
     {
       "thisLevelsId": "MAP_SHOAL_CAVE_LOW_TIDE_ENTRANCE_ROOM",
       "baseMap": "MAP_SHOAL_CAVE",
-      "levelLabel": "Low Tide Entrance Room",
+      "levelLabel": "Lowtideentranceroom",
       "shopItems": [],
       "pickupItems": [
         {
@@ -9522,7 +10323,7 @@
     {
       "thisLevelsId": "MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM",
       "baseMap": "MAP_SHOAL_CAVE",
-      "levelLabel": "Low Tide Ice Room",
+      "levelLabel": "Lowtideiceroom",
       "shopItems": [],
       "pickupItems": [
         {
@@ -9549,7 +10350,7 @@
     {
       "thisLevelsId": "MAP_SHOAL_CAVE_LOW_TIDE_INNER_ROOM",
       "baseMap": "MAP_SHOAL_CAVE",
-      "levelLabel": "Low Tide Inner Room",
+      "levelLabel": "Lowtideinnerroom",
       "shopItems": [],
       "pickupItems": [
         {
@@ -9577,23 +10378,11 @@
           "items": [
             {
               "name": "ITEM_SHOAL_SHELL",
-              "quantity": 1
-            },
-            {
-              "name": "ITEM_SHOAL_SHELL",
-              "quantity": 1
-            },
-            {
-              "name": "ITEM_SHOAL_SHELL",
-              "quantity": 1
+              "quantity": 3
             },
             {
               "name": "ITEM_SHOAL_SALT",
-              "quantity": 1
-            },
-            {
-              "name": "ITEM_SHOAL_SALT",
-              "quantity": 1
+              "quantity": 2
             }
           ],
           "pokemon": [],
@@ -9607,7 +10396,7 @@
     {
       "thisLevelsId": "MAP_SHOAL_CAVE_LOW_TIDE_LOWER_ROOM",
       "baseMap": "MAP_SHOAL_CAVE",
-      "levelLabel": "Low Tide Lower Room",
+      "levelLabel": "Lowtidelowerroom",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -9640,7 +10429,7 @@
     {
       "thisLevelsId": "MAP_SHOAL_CAVE_LOW_TIDE_STAIRS_ROOM",
       "baseMap": "MAP_SHOAL_CAVE",
-      "levelLabel": "Low Tide Stairs Room",
+      "levelLabel": "Lowtidestairsroom",
       "shopItems": [],
       "pickupItems": [
         {
@@ -9673,7 +10462,7 @@
     {
       "thisLevelsId": "MAP_SKY_PILLAR_1F",
       "baseMap": "MAP_SKY_PILLAR",
-      "levelLabel": "1 F",
+      "levelLabel": "1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -9683,7 +10472,7 @@
     {
       "thisLevelsId": "MAP_SKY_PILLAR_3F",
       "baseMap": "MAP_SKY_PILLAR",
-      "levelLabel": "3 F",
+      "levelLabel": "3F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -9693,7 +10482,7 @@
     {
       "thisLevelsId": "MAP_SKY_PILLAR_5F",
       "baseMap": "MAP_SKY_PILLAR",
-      "levelLabel": "5 F",
+      "levelLabel": "5F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -9711,7 +10500,8 @@
       "trainerRefs": [
         {
           "id": "TRAINER_DRAKE",
-          "script": "SkyPillar_Top_EventScript_Drake"
+          "script": "SkyPillar_Top_EventScript_Drake",
+          "rematch": false
         }
       ]
     }
@@ -9810,7 +10600,7 @@
     {
       "thisLevelsId": "MAP_SLATEPORT_CITY_BATTLE_TENT_LOBBY",
       "baseMap": "MAP_SLATEPORT_CITY",
-      "levelLabel": "Battle Tent Lobby",
+      "levelLabel": "Battletentlobby",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -9887,7 +10677,7 @@
     {
       "thisLevelsId": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "baseMap": "MAP_SLATEPORT_CITY",
-      "levelLabel": "Oceanic Museum1 F",
+      "levelLabel": "Oceanicmuseum 1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -9909,7 +10699,7 @@
     {
       "thisLevelsId": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_2F",
       "baseMap": "MAP_SLATEPORT_CITY",
-      "levelLabel": "Oceanic Museum2 F",
+      "levelLabel": "Oceanicmuseum 2F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -9917,18 +10707,20 @@
       "trainerRefs": [
         {
           "id": "TRAINER_GRUNT_MUSEUM_1",
-          "script": "SlateportCity_OceanicMuseum_2F_EventScript_CaptStern"
+          "script": "SlateportCity_OceanicMuseum_2F_EventScript_CaptStern",
+          "rematch": false
         },
         {
           "id": "TRAINER_GRUNT_MUSEUM_2",
-          "script": "SlateportCity_OceanicMuseum_2F_EventScript_CaptStern"
+          "script": "SlateportCity_OceanicMuseum_2F_EventScript_CaptStern",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_SLATEPORT_CITY_POKEMON_FAN_CLUB",
       "baseMap": "MAP_SLATEPORT_CITY",
-      "levelLabel": "Pokemon Fan Club",
+      "levelLabel": "Pokemonfanclub",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -10051,7 +10843,7 @@
     {
       "thisLevelsId": "MAP_SOOTOPOLIS_CITY_CHAMP_HOUSE",
       "baseMap": "MAP_SOOTOPOLIS_CITY",
-      "levelLabel": "Champ House",
+      "levelLabel": "Champhouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -10096,22 +10888,25 @@
       "trainerRefs": [
         {
           "id": "TRAINER_DANNI",
-          "script": "SootopolisCity_ChampHouse_EventScript_BattleDanni"
+          "script": "SootopolisCity_ChampHouse_EventScript_BattleDanni",
+          "rematch": false
         },
         {
           "id": "TRAINER_MASTA_JANES",
-          "script": "SootopolisCity_ChampHouse_EventScript_BattleMastaJanes"
+          "script": "SootopolisCity_ChampHouse_EventScript_BattleMastaJanes",
+          "rematch": false
         },
         {
           "id": "TRAINER_BEFOOLS",
-          "script": "SootopolisCity_ChampHouse_EventScript_BattleBefools"
+          "script": "SootopolisCity_ChampHouse_EventScript_BattleBefools",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_SOOTOPOLIS_CITY_GYM_1F",
       "baseMap": "MAP_SOOTOPOLIS_CITY",
-      "levelLabel": "Gym1 F",
+      "levelLabel": "Gym 1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -10135,14 +10930,15 @@
       "trainerRefs": [
         {
           "id": "TRAINER_JUAN_1",
-          "script": "SootopolisCity_Gym_1F_EventScript_Juan"
+          "script": "SootopolisCity_Gym_1F_EventScript_Juan",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_SOOTOPOLIS_CITY_GYM_B1F",
       "baseMap": "MAP_SOOTOPOLIS_CITY",
-      "levelLabel": "Gym B1 F",
+      "levelLabel": "Gym B 1F",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [],
@@ -10150,50 +10946,60 @@
       "trainerRefs": [
         {
           "id": "TRAINER_ANDREA",
-          "script": "SootopolisCity_Gym_B1F_EventScript_Andrea"
+          "script": "SootopolisCity_Gym_B1F_EventScript_Andrea",
+          "rematch": false
         },
         {
           "id": "TRAINER_CRISSY",
-          "script": "SootopolisCity_Gym_B1F_EventScript_Crissy"
+          "script": "SootopolisCity_Gym_B1F_EventScript_Crissy",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRIANNA",
-          "script": "SootopolisCity_Gym_B1F_EventScript_Brianna"
+          "script": "SootopolisCity_Gym_B1F_EventScript_Brianna",
+          "rematch": false
         },
         {
           "id": "TRAINER_CONNIE",
-          "script": "SootopolisCity_Gym_B1F_EventScript_Connie"
+          "script": "SootopolisCity_Gym_B1F_EventScript_Connie",
+          "rematch": false
         },
         {
           "id": "TRAINER_BRIDGET",
-          "script": "SootopolisCity_Gym_B1F_EventScript_Bridget"
+          "script": "SootopolisCity_Gym_B1F_EventScript_Bridget",
+          "rematch": false
         },
         {
           "id": "TRAINER_OLIVIA",
-          "script": "SootopolisCity_Gym_B1F_EventScript_Olivia"
+          "script": "SootopolisCity_Gym_B1F_EventScript_Olivia",
+          "rematch": false
         },
         {
           "id": "TRAINER_TIFFANY",
-          "script": "SootopolisCity_Gym_B1F_EventScript_Tiffany"
+          "script": "SootopolisCity_Gym_B1F_EventScript_Tiffany",
+          "rematch": false
         },
         {
           "id": "TRAINER_BETHANY",
-          "script": "SootopolisCity_Gym_B1F_EventScript_Bethany"
+          "script": "SootopolisCity_Gym_B1F_EventScript_Bethany",
+          "rematch": false
         },
         {
           "id": "TRAINER_ANNIKA",
-          "script": "SootopolisCity_Gym_B1F_EventScript_Annika"
+          "script": "SootopolisCity_Gym_B1F_EventScript_Annika",
+          "rematch": false
         },
         {
           "id": "TRAINER_DAPHNE",
-          "script": "SootopolisCity_Gym_B1F_EventScript_Daphne"
+          "script": "SootopolisCity_Gym_B1F_EventScript_Daphne",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_SOOTOPOLIS_CITY_HOUSE2",
       "baseMap": "MAP_SOOTOPOLIS_CITY",
-      "levelLabel": "House2",
+      "levelLabel": "House 2",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -10279,7 +11085,7 @@
     {
       "thisLevelsId": "MAP_SOOTOPOLIS_CITY_HOUSE5",
       "baseMap": "MAP_SOOTOPOLIS_CITY",
-      "levelLabel": "House5",
+      "levelLabel": "House 5",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -10324,22 +11130,25 @@
       "trainerRefs": [
         {
           "id": "TRAINER_NATN",
-          "script": "SootopolisCity_House5_EventScript_BattleNatn"
+          "script": "SootopolisCity_House5_EventScript_BattleNatn",
+          "rematch": false
         },
         {
           "id": "TRAINER_MASTER_POUCINE",
-          "script": "SootopolisCity_House5_EventScript_BattleMasterPoucine"
+          "script": "SootopolisCity_House5_EventScript_BattleMasterPoucine",
+          "rematch": false
         },
         {
           "id": "TRAINER_OBLIVION_WING",
-          "script": "SootopolisCity_House5_EventScript_BattleOblivionWing"
+          "script": "SootopolisCity_House5_EventScript_BattleOblivionWing",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_SOOTOPOLIS_CITY_LOTAD_AND_SEEDOT_HOUSE",
       "baseMap": "MAP_SOOTOPOLIS_CITY",
-      "levelLabel": "Lotad And Seedot House",
+      "levelLabel": "Lotadandseedothouse",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -10463,7 +11272,7 @@
     {
       "thisLevelsId": "MAP_UNDERWATER_ROUTE124",
       "baseMap": "MAP_UNDERWATER",
-      "levelLabel": "Route124",
+      "levelLabel": "Route 124",
       "shopItems": [],
       "pickupItems": [
         {
@@ -10530,7 +11339,7 @@
     {
       "thisLevelsId": "MAP_UNDERWATER_ROUTE126",
       "baseMap": "MAP_UNDERWATER",
-      "levelLabel": "Route126",
+      "levelLabel": "Route 126",
       "shopItems": [],
       "pickupItems": [
         {
@@ -10605,7 +11414,7 @@
     {
       "thisLevelsId": "MAP_UNDERWATER_ROUTE127",
       "baseMap": "MAP_UNDERWATER",
-      "levelLabel": "Route127",
+      "levelLabel": "Route 127",
       "shopItems": [],
       "pickupItems": [
         {
@@ -10648,7 +11457,7 @@
     {
       "thisLevelsId": "MAP_UNDERWATER_ROUTE128",
       "baseMap": "MAP_UNDERWATER",
-      "levelLabel": "Route128",
+      "levelLabel": "Route 128",
       "shopItems": [],
       "pickupItems": [
         {
@@ -10677,7 +11486,7 @@
     {
       "thisLevelsId": "MAP_VERDANTURF_TOWN_BATTLE_TENT_LOBBY",
       "baseMap": "MAP_VERDANTURF_TOWN",
-      "levelLabel": "Battle Tent Lobby",
+      "levelLabel": "Battletentlobby",
       "shopItems": [],
       "pickupItems": [],
       "scriptedGives": [
@@ -10747,7 +11556,8 @@
       "trainerRefs": [
         {
           "id": "TRAINER_URSULA",
-          "script": "VerdanturfTown_EventScript_BattleUrsula"
+          "script": "VerdanturfTown_EventScript_BattleUrsula",
+          "rematch": false
         }
       ]
     },
@@ -10790,7 +11600,7 @@
     {
       "thisLevelsId": "MAP_VICTORY_ROAD_1F",
       "baseMap": "MAP_VICTORY_ROAD",
-      "levelLabel": "1 F",
+      "levelLabel": "1F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -10851,38 +11661,50 @@
       "trainerRefs": [
         {
           "id": "TRAINER_WALLY_VR_1",
-          "script": "VictoryRoad_1F_EventScript_WallyEntranceBattle"
+          "script": "VictoryRoad_1F_EventScript_WallyEntranceBattle",
+          "rematch": false
         },
         {
           "id": "TRAINER_WALLY_VR_2",
-          "script": "VictoryRoad_1F_EventScript_ExitWally"
+          "script": "VictoryRoad_1F_EventScript_ExitWally",
+          "rematch": false
+        },
+        {
+          "id": "TRAINER_WALLY_VR_2",
+          "script": "VictoryRoad_1F_EventScript_RematchWally",
+          "rematch": true
         },
         {
           "id": "TRAINER_EDGAR",
-          "script": "VictoryRoad_1F_EventScript_Edgar"
+          "script": "VictoryRoad_1F_EventScript_Edgar",
+          "rematch": false
         },
         {
           "id": "TRAINER_ALBERT",
-          "script": "VictoryRoad_1F_EventScript_Albert"
+          "script": "VictoryRoad_1F_EventScript_Albert",
+          "rematch": false
         },
         {
           "id": "TRAINER_HOPE",
-          "script": "VictoryRoad_1F_EventScript_Hope"
+          "script": "VictoryRoad_1F_EventScript_Hope",
+          "rematch": false
         },
         {
           "id": "TRAINER_QUINCY",
-          "script": "VictoryRoad_1F_EventScript_Quincy"
+          "script": "VictoryRoad_1F_EventScript_Quincy",
+          "rematch": false
         },
         {
           "id": "TRAINER_KATELYNN",
-          "script": "VictoryRoad_1F_EventScript_Katelynn"
+          "script": "VictoryRoad_1F_EventScript_Katelynn",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_VICTORY_ROAD_B1F",
       "baseMap": "MAP_VICTORY_ROAD",
-      "levelLabel": "B1 F",
+      "levelLabel": "B 1F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -10907,30 +11729,35 @@
       "trainerRefs": [
         {
           "id": "TRAINER_SAMUEL",
-          "script": "VictoryRoad_B1F_EventScript_Samuel"
+          "script": "VictoryRoad_B1F_EventScript_Samuel",
+          "rematch": false
         },
         {
           "id": "TRAINER_SHANNON",
-          "script": "VictoryRoad_B1F_EventScript_Shannon"
+          "script": "VictoryRoad_B1F_EventScript_Shannon",
+          "rematch": false
         },
         {
           "id": "TRAINER_MICHELLE",
-          "script": "VictoryRoad_B1F_EventScript_Michelle"
+          "script": "VictoryRoad_B1F_EventScript_Michelle",
+          "rematch": false
         },
         {
           "id": "TRAINER_MITCHELL",
-          "script": "VictoryRoad_B1F_EventScript_Mitchell"
+          "script": "VictoryRoad_B1F_EventScript_Mitchell",
+          "rematch": false
         },
         {
           "id": "TRAINER_HALLE",
-          "script": "VictoryRoad_B1F_EventScript_Halle"
+          "script": "VictoryRoad_B1F_EventScript_Halle",
+          "rematch": false
         }
       ]
     },
     {
       "thisLevelsId": "MAP_VICTORY_ROAD_B2F",
       "baseMap": "MAP_VICTORY_ROAD",
-      "levelLabel": "B2 F",
+      "levelLabel": "B 2F",
       "shopItems": [],
       "pickupItems": [
         {
@@ -10955,27 +11782,33 @@
       "trainerRefs": [
         {
           "id": "TRAINER_VITO",
-          "script": "VictoryRoad_B2F_EventScript_Vito"
+          "script": "VictoryRoad_B2F_EventScript_Vito",
+          "rematch": false
         },
         {
           "id": "TRAINER_OWEN",
-          "script": "VictoryRoad_B2F_EventScript_Owen"
+          "script": "VictoryRoad_B2F_EventScript_Owen",
+          "rematch": false
         },
         {
           "id": "TRAINER_CAROLINE",
-          "script": "VictoryRoad_B2F_EventScript_Caroline"
+          "script": "VictoryRoad_B2F_EventScript_Caroline",
+          "rematch": false
         },
         {
           "id": "TRAINER_JULIE",
-          "script": "VictoryRoad_B2F_EventScript_Julie"
+          "script": "VictoryRoad_B2F_EventScript_Julie",
+          "rematch": false
         },
         {
           "id": "TRAINER_FELIX",
-          "script": "VictoryRoad_B2F_EventScript_Felix"
+          "script": "VictoryRoad_B2F_EventScript_Felix",
+          "rematch": false
         },
         {
           "id": "TRAINER_DIANNE",
-          "script": "VictoryRoad_B2F_EventScript_Dianne"
+          "script": "VictoryRoad_B2F_EventScript_Dianne",
+          "rematch": false
         }
       ]
     }
