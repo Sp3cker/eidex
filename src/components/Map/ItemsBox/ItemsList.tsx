@@ -6,7 +6,7 @@ import { TabType, useItemsData } from "./hooks/useItemsData";
 import StoryItems from "./StoryItems";
 import { ItemWithAmount, LevelScriptedEvent } from "@/data/map";
 
-const ItemsList = memo(function ItemsList({ firstItemRef }: any) {
+const ItemsList = memo(function ItemsList() {
   const [selectedTab, setSelectedTab] = useState<TabType>("story");
 
   const { whatToShow, items } = useItemsData(selectedTab);
@@ -21,26 +21,23 @@ const ItemsList = memo(function ItemsList({ firstItemRef }: any) {
   }, []);
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto">
+    <>
       {/* Tab Navigation */}
       <TabNavigation
         setSelectedTab={setSelectedTab}
         selectedTab={selectedTab}
         whatToShow={whatToShow}
       />
-      <div ref={firstItemRef}>
-        {whatToShow.story && selectedTab === "story" ? (
-          <StoryItems 
-            scriptedGives={items.items as LevelScriptedEvent[]} 
-          />
-        ) : (
-          <ItemListContent
-            items={items.items as ItemWithAmount[]}
-            showPrice={selectedTab === "marts"}
-          />
-        )}
-      </div>
-    </div>
+
+      {whatToShow.story && selectedTab === "story" ? (
+        <StoryItems scriptedGives={items.items as LevelScriptedEvent[]} />
+      ) : (
+        <ItemListContent
+          items={items.items as ItemWithAmount[]}
+          showPrice={selectedTab === "marts"}
+        />
+      )}
+    </>
   );
 });
 

@@ -27,7 +27,7 @@ export const useElementSize = () => {
 
     // Initial measurement
     const { width, height } = element.getBoundingClientRect();
-    console.trace();
+
     setDimensions({ width, height });
 
     return () => {

@@ -17,7 +17,7 @@ const pages = [
   ({ style }: any) => (
     <animated.div
       style={style}
-      className="absolute bottom-0 left-0 right-0 top-0 overflow-y-scroll p-0 sm:pb-10"
+      className="absolute bottom-0 left-0 right-0 top-0 overflow-y-auto p-0 sm:pb-10"
     >
       <Suspense>
         <FadeInWAAPI>
@@ -28,7 +28,7 @@ const pages = [
   ),
   ({ style }: any) => (
     <animated.div
-      className="absolute bottom-0 left-0 right-0 top-0 overflow-y-scroll p-2"
+      className="absolute bottom-0 left-0 right-0 top-0 overflow-y-auto p-2"
       style={style}
     >
       <Suspense>
