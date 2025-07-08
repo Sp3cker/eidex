@@ -4,9 +4,15 @@ import { parseShortEvolutions } from "../utils/parseEvo";
 export { Pokemon };
 // Export both formats for flexibility
 /**
- * Lookup [id] to species data
+ * Lookup [id] to species data as a Map for O(1) access
+ * Excludes Gmax forms like pokemonData array
  */
-export const pokemonDataMap = speciesDataJson as Record<string, Pokemon>;
+export const pokemonDataMap = new Map<string, Pokemon>(
+  Object.entries(speciesDataJson).filter(
+    ([, pokemon]) => !pokemon.nameKey.includes("Gmax")
+  )
+);
+
 export const pokemonData: Pokemon[] = Object.values(speciesDataJson).filter(
   (p) => p.nameKey.includes("Gmax") === false,
 );
@@ -22,10 +28,10 @@ type PreEvolutionMap = {
   [targetSpeciesId: string]: PreEvolution[];
 };
 
-function createPreEvolutionMap(data: Record<string, Pokemon>): PreEvolutionMap {
+function createPreEvolutionMap(data: Map<string, Pokemon>): PreEvolutionMap {
   const preEvolutionMap: PreEvolutionMap = {};
 
-  for (const sourcePokemon of Object.values(data)) {
+  for (const [, sourcePokemon] of data) {
     if (!sourcePokemon?.evolutions) continue;
 
     for (const evolution of sourcePokemon.evolutions) {
@@ -59,10 +65,10 @@ export type EvoChild = {
   method: string;
 };
 
-function createEvoMap(data: Record<string, Pokemon>): Map<number, EvoChild[]> {
+function createEvoMap(data: Map<string, Pokemon>): Map<number, EvoChild[]> {
   const evoMap = new Map<number, EvoChild[]>();
 
-  for (const sourcePokemon of Object.values(data)) {
+  for (const [, sourcePokemon] of data) {
     if (!sourcePokemon.evolutions || sourcePokemon.evolutions.length === 0) {
       continue;
     }

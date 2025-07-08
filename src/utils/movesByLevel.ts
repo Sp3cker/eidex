@@ -15,7 +15,7 @@ export function getPokemonMoveIdsAtLevel(
   level: number,
   customMoves: number[] = [],
 ): number[] {
-  const pokemon = pokemonDataMap[speciesId.toString()];
+  const pokemon = pokemonDataMap.get(speciesId.toString());
   if (!pokemon?.levelUpMoves) {
     return [];
   }

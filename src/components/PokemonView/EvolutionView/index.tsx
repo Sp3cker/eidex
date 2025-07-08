@@ -19,7 +19,7 @@ const EvolutionView = ({ speciesId }: EvolutionViewProps) => {
   const evolutionData = useEvolutionData(speciesId);
 
   const handlePokemonClick = (id: number) => {
-    const pokemon = pokemonDataMap[id.toString()];
+    const pokemon = pokemonDataMap.get(id.toString());
     if (pokemon) {
       setSelectedPokemon(pokemon);
       // You can add navigation logic here if needed

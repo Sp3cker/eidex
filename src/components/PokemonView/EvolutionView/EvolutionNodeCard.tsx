@@ -21,7 +21,7 @@ const EvolutionNodeCard: React.FC<EvolutionNodeCardProps> = ({
   onPokemonClick,
   isCompact = false,
 }) => {
-  const pokemon = pokemonDataMap[speciesId.toString()];
+  const pokemon = pokemonDataMap.get(speciesId.toString());
 
   if (!pokemon) {
     return (

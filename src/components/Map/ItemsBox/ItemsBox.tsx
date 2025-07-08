@@ -11,7 +11,7 @@ const ItemsBox = memo(function ItemsBox() {
   const [isHeaderOverlaying, setIsHeaderOverlaying] = useState(false);
 
   const headerRef = useRef<HTMLDivElement>(null);
-  // const firstItemRef = useRef<HTMLDivElement>(null); // Ref for first item in list
+  const firstItemRef = useRef<HTMLDivElement>(null); // Ref for first item in list
   // const show = useMapStore((state) => {
   //   return state.selectedMap !== null && state.dragging === false;
   // });
@@ -26,10 +26,24 @@ const ItemsBox = memo(function ItemsBox() {
   // );
 
   useEffect(() => {
-    const scrollContainer = document.querySelector("#items-box");
-    if (!scrollContainer) return;
-    const handleScroll = () => {
+    // Find the actual scrolling container by traversing up the DOM
+    const findScrollContainer = (element: HTMLElement): HTMLElement | null => {
+      if (!element || element === document.body) return null;
       
+      const styles = window.getComputedStyle(element);
+      const hasScroll = styles.overflowY === 'auto' || styles.overflowY === 'scroll';
+      
+      if (hasScroll && element.scrollHeight > element.clientHeight) {
+        return element;
+      }
+      
+      return findScrollContainer(element.parentElement!);
+    };
+
+    const scrollContainer = firstItemRef.current ? findScrollContainer(firstItemRef.current) : null;
+    if (!scrollContainer) return;
+
+    const handleScroll = () => {
       const scrollTop = scrollContainer.scrollTop;
       // Trigger overlay effect after scrolling past 40px
       setIsHeaderOverlaying(scrollTop > 40);
@@ -40,7 +54,7 @@ const ItemsBox = memo(function ItemsBox() {
 
     scrollContainer.addEventListener("scroll", handleScroll, { passive: true });
     return () => scrollContainer.removeEventListener("scroll", handleScroll);
-  }, []); // Re-initialize when selected map changes
+  }, [selectedMap]); // Re-initialize when selected map changes
   // const handleScroll = (e) => {
   //   const scrollTop = e.currentTarget.scrollTop;
   //   console.log(scrollTop);
@@ -89,7 +103,7 @@ const ItemsBox = memo(function ItemsBox() {
   const mapLabel =
     typeof selectedMap === "string" ? formatMapString(selectedMap) : "";
   return (
-    <div  className="flex h-full flex-col rounded rounded-l-lg">
+    <div className="flex h-full flex-col rounded rounded-l-lg">
       <div
         ref={headerRef}
         className="sticky top-0 z-10 flex items-center justify-between"
@@ -101,8 +115,11 @@ const ItemsBox = memo(function ItemsBox() {
         </span>
         <CameraIcon setViewingImage={setViewingImage} />
       </div>
-      <div className="font-pkmnem flex flex-1 flex-col  rounded-sm">
-        <ItemsList  />
+      <div
+        ref={firstItemRef}
+        className="font-pkmnem flex flex-1 flex-col rounded-sm"
+      >
+        <ItemsList />
       </div>
     </div>
   );

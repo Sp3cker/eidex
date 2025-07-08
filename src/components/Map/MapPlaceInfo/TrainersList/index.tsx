@@ -78,7 +78,7 @@ const TrainersList = memo(function TrainersList() {
   const numTrainers = Object.keys(trainers);
 
   return (
-    <nav className="flex h-full flex-col overflow-hidden rounded rounded-l-lg bg-gradient-to-br from-orange-50 via-white to-red-100 shadow-2xl md:rounded-lg">
+    <nav className="flex h-full flex-col overflow-hidden rounded rounded-l-lg map-place-info-textbox-gradient shadow-2xl md:rounded-lg">
       <div className="relative flex-1">
         {/* Trainers List View */}
         <div className="absolute inset-0 flex flex-col">

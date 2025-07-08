@@ -47,7 +47,7 @@ function createPrecomputedFamilyMaps(): {
   const familyTreeMap = new Map<number, FamilyTreeNode>();
   const processedRoots = new Set<number>();
 
-  for (const pokemon of Object.values(pokemonDataMap)) {
+  for (const [, pokemon] of pokemonDataMap) {
     const rootId = findEvolutionRoot(pokemon.speciesId);
     rootLookupMap.set(pokemon.speciesId, rootId);
 
