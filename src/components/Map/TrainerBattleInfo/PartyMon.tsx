@@ -2,20 +2,28 @@ import { memo, useMemo } from "react";
 import type { PartyMon as PartyMonType } from "@/data/map/trainers";
 import { pokemonDataMap } from "@/data/pokemon";
 import { getPokemonMoveIdsAtLevel, getMoveDetails } from "@/utils/movesByLevel";
-
+import { calculateStats } from "@/utils/calcStatsByLevel";
 interface PartyMonProps {
   pokemon: PartyMonType;
 }
+const StatLevels = ["HP", "Atk", "Def", "SpAtk", "SpDef", "Speed"] as const;
 
 const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
   const pokemonInfo = pokemonDataMap.get(pokemon.id.toString());
   const speciesName = pokemonInfo?.nameKey || "Unknown";
   const moves = useMemo(
     () => getPokemonMoveIdsAtLevel(pokemon.id, pokemon.lvl),
-    [pokemon.id, pokemon.lvl]
+    [pokemon.id, pokemon.lvl],
   );
   const levelIsLevelCap = pokemon.lvl > 199;
   const moveDetails = getMoveDetails(moves);
+  const stats = calculateStats(
+    pokemon.id,
+    pokemon.lvl,
+    pokemon.iv ? true : false,
+    pokemon.ev,
+    pokemon.nature || "",
+  );
 
   return (
     <div className="flex flex-col rounded-lg bg-neutral-50 p-3 drop-shadow-sm">
@@ -27,10 +35,21 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
           />
         </div>
         <h4 className="text-xl font-bold text-gray-800">{speciesName}</h4>
-        {'\u00A0'}
+        {"\u00A0"}
         <span className="text-base/2 text-gray-600">
           Lv. {levelIsLevelCap ? "Scaling" : pokemon.lvl}
         </span>
+      </div>
+      <div className="flex flex-row items-center justify-between text-sm text-gray-700">
+        {stats?.map((stat, index) => (
+          <div
+            className="flex flex-col items-center justify-between"
+            key={index}
+          >
+            <span className="capitalize">{stat}</span>
+            <span className="font-medium">{StatLevels[index]}</span>
+          </div>
+        ))}
       </div>
       <div className="flex items-center space-x-3">
         <div className="flex-1">
@@ -51,7 +70,7 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
               </span>
             )}
           </div>
-          <div className="flex flex-col space-y-1 mt-2">
+          <div className="mt-2 flex flex-col space-y-1">
             {moveDetails.map((m) => (
               <div key={m.name}>
                 <h3 className="font-calamity text-sm/6 font-bold">{m.name}</h3>
