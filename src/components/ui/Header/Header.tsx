@@ -24,12 +24,12 @@ const HeaderButtons = () => {
 
   return (
     <div className="flex gap-1">
-      <Link href="/dex">
-        <button className={getLinkClassName("/dex")}>Dex</button>
+      <Link className={getLinkClassName("/dex")} href="/dex">
+        Dex
       </Link>
 
-      <Link href="/map">
-        <button className={getLinkClassName("/map")}>Map</button>
+      <Link className={getLinkClassName("/map")} href="/map">
+        Map
       </Link>
     </div>
   );

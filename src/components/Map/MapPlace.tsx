@@ -1,11 +1,93 @@
 import useMapStore from "@/stores/useMapStore";
 import { useGesture } from "@use-gesture/react";
-import { useCallback, useEffect, useRef, memo, startTransition } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  memo,
+  startTransition,
+  SVGElementType,
+} from "react";
 
 interface MapPlaceProps {
   item: Record<string, any>;
 }
+const renderElement = (
+  elem: Record<string, any>,
+  isSelectedMap: boolean,
+  ref: React.Ref<SVGElement> | null = null,
+) => {
+  if (elem.type === "g") {
+    return (
+      <g
+        key={elem.id || `g-${Math.random()}`}
+        id={elem.id}
+        transform={elem.transform}
+        className={`${isSelectedMap ? "selected-place" : "touch-none"} stroke-1 transition-all md:stroke-0`}
+      >
+        {elem.children?.map((child: Record<string, any>, index: number) =>
+          renderElement(
+            {
+              ...child,
+              id: child.id || `${elem.id}-child-${index}`,
+            },
+            isSelectedMap,
+            ref,
+          ),
+        )}
+      </g>
+    );
+  }
 
+  if (elem.type === "rect") {
+    return (
+      <rect
+        key={elem.id}
+        id={elem.id}
+        x={elem.x}
+        y={elem.y}
+        width={elem.width}
+        height={elem.height}
+        {...elem.style}
+        className={`${isSelectedMap ? "selected-place fill-emerald-800 stroke-amber-600" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-colors`}
+        ref={ref}
+      />
+    );
+  }
+
+  if (elem.type === "path") {
+    return (
+      <path
+        className={`${isSelectedMap ? "fill-emerald-600" : ""} transition-colors`}
+        key={elem.id}
+        id={elem.id}
+        d={elem.d}
+        {...elem.style}
+        ref={ref}
+      />
+    );
+  }
+
+  if (elem.type === "circle") {
+    return (
+      <circle
+        key={elem.id}
+        id={elem.id}
+        cx={elem.cx}
+        cy={elem.cy}
+        r={elem.r}
+        {...elem.style}
+        ref={ref}
+      />
+    );
+  }
+
+  if (elem.type === "use") {
+    return null;
+  }
+
+  return null;
+};
 const MapPlace = memo(
   function MapPlace({ item }: MapPlaceProps) {
     const mapScale = useMapStore((state) => state.mapScale);
@@ -44,89 +126,8 @@ const MapPlace = memo(
       useMapStore.getState().storedCoordinates.set(item.id, [centerX, centerY]);
     }, [mapScale, item.id]);
     // Render function for individual elements
-    const renderElement = (elem: Record<string, any>) => {
-      if (elem.type === "g") {
-        return (
-          <g
-            key={elem.id || `g-${Math.random()}`}
-            id={elem.id}
-            transform={elem.transform}
-            className={`${isSelectedMap ? "selected-place" : "touch-none"} stroke-1 transition-all md:stroke-0`}
-            ref={ref}
-          >
-            {elem.children?.map((child: Record<string, any>, index: number) =>
-              renderElement({
-                ...child,
-                id: child.id || `${elem.id}-child-${index}`,
-              }),
-            )}
-          </g>
-        );
-      }
 
-      if (elem.type === "rect") {
-        return (
-          <rect
-            key={elem.id}
-            id={elem.id}
-            x={elem.x}
-            y={elem.y}
-            width={elem.width}
-            height={elem.height}
-            {...elem.style}
-            className={`${isSelectedMap ? "selected-place fill-emerald-800 stroke-amber-600" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-colors`}
-            ref={ref}
-          />
-        );
-      }
-
-      if (elem.type === "path") {
-        return (
-          <path
-            className={`${isSelectedMap ? "fill-emerald-600" : ""} transition-colors`}
-            key={elem.id }
-            id={elem.id}
-            d={elem.d}
-            {...elem.style}
-            ref={ref}
-          />
-        );
-      }
-
-      if (elem.type === "circle") {
-        return (
-          <circle
-            key={elem.id }
-            id={elem.id}
-            cx={elem.cx}
-            cy={elem.cy}
-            r={elem.r}
-            {...elem.style}
-            ref={ref}
-          />
-        );
-      }
-
-      if (elem.type === "use") {
-        return (
-          <use
-            key={elem.id}
-            id={elem.id}
-            xlinkHref={elem["xlink:href"]}
-            x={elem.x}
-            y={elem.y}
-            width={elem.width}
-            height={elem.height}
-            transform={elem.transform}
-            ref={ref}
-          />
-        );
-      }
-
-      return null;
-    };
-
-    return renderElement(item);
+    return renderElement(item, isSelectedMap, ref);
   },
   (curr, next) => curr.item.id === next.item.id,
 );
