@@ -1,14 +1,24 @@
-import { memo, useMemo } from "react";
+import { memo, useMemo, useState } from "react";
 import type { PartyMon as PartyMonType } from "@/data/map/trainers";
 import { pokemonDataMap } from "@/data/pokemon";
 import { getPokemonMoveIdsAtLevel, getMoveDetails } from "@/utils/movesByLevel";
 import { calculateStats } from "@/utils/calcStatsByLevel";
+import caps from "@/data/caps.json";
+
+interface CapLevel {
+  desc: string;
+  cap: number;
+}
+
 interface PartyMonProps {
   pokemon: PartyMonType;
 }
 const StatLevels = ["HP", "Atk", "Def", "SpAtk", "SpDef", "Speed"] as const;
 
 const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
+  const [currLevelCap, setCurrentLevelCap] = useState(
+    pokemon.lvl > 199 ? 50 : pokemon.lvl,
+  );
   const pokemonInfo = pokemonDataMap.get(pokemon.id.toString());
   const speciesName = pokemonInfo?.nameKey || "Unknown";
   const moves = useMemo(
@@ -17,37 +27,72 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
   );
   const levelIsLevelCap = pokemon.lvl > 199;
   const moveDetails = getMoveDetails(moves);
-  const stats = calculateStats(
-    pokemon.id,
-    pokemon.lvl,
-    pokemon.iv ? true : false,
-    pokemon.ev,
-    pokemon.nature || "",
-  );
-
+  const stats = useMemo(() => {
+    return calculateStats(
+      pokemon.id,
+      currLevelCap,
+      pokemon.iv ? true : false,
+      pokemon.ev,
+      pokemon.nature || "",
+    );
+  }, [pokemon.id, currLevelCap, pokemon.iv, pokemon.ev, pokemon.nature]);
+  const handleCapChange = (newCap: number) => {
+    setCurrentLevelCap(newCap);
+  };
   return (
-    <div className="flex flex-col rounded-lg bg-neutral-50 p-3 drop-shadow-sm">
-      <div className="flex flex-row items-center justify-center">
-        <div className="icon-sprite-box mb-1">
+    <div className="flex flex-col rounded-lg bg-neutral-50 px-1 drop-shadow-sm md:px-3">
+      <div className="mb-2 flex flex-row items-center justify-start rounded bg-stone-200">
+        <div className="relative h-12 w-12 overflow-hidden">
           <img
-            className="pokemon-icon-sprite"
+            className="pokemon-sprite sprite-animation"
             src={`/icon/${pokemon.id}/icon.webp`}
           />
         </div>
-        <h4 className="text-xl font-bold text-gray-800">{speciesName}</h4>
-        {"\u00A0"}
-        <span className="text-base/2 text-gray-600">
-          Lv. {levelIsLevelCap ? "Scaling" : pokemon.lvl}
-        </span>
+        <div className="ml-3 sm:pt-1 md:pt-5">
+          <h4 className="font-calamity text-sm font-bold text-gray-800 md:text-sm">
+            {speciesName}
+          </h4>
+
+          {levelIsLevelCap ? (
+            <>
+              <label
+                htmlFor="level-cap-select"
+                className="font-calamity text-sm text-gray-600"
+              >
+                Level Cap:
+              </label>
+              <select
+                id="level-cap-select"
+                value={currLevelCap}
+                onChange={(e) => handleCapChange(Number(e.target.value))}
+                className="border-1 rounded px-2 py-1 text-xl ring-1 ring-neutral-500 hover:border-slate-400 focus:border-slate-400"
+              >
+                {caps.map((cap: CapLevel, index: number) => (
+                  <option key={index} value={cap.cap}>
+                    Lv. {cap.cap}{" "}
+                  </option>
+                ))}
+              </select>
+            </>
+          ) : (
+            <span className="text-lg/1 pkmn-types text-gray-600">
+              Lv. {levelIsLevelCap ? "Scaling" : pokemon.lvl}
+            </span>
+          )}
+        </div>
       </div>
-      <div className="flex flex-row items-center justify-between text-sm text-gray-700">
+      <div className="max-w-120 flex flex-row items-center justify-between text-neutral-800">
         {stats?.map((stat, index) => (
           <div
-            className="flex flex-col items-center justify-between"
+            className="border-1 w-15 flex flex-col items-center justify-between rounded-md border-gray-400 bg-stone-100 p-1"
             key={index}
           >
-            <span className="capitalize">{stat}</span>
-            <span className="font-medium">{StatLevels[index]}</span>
+            <span className="font-calamity text-xs font-bold text-neutral-600">
+              {StatLevels[index]}
+            </span>
+            <span className="pkmn-types font-calamity text-xs tracking-tight">
+              {stat}
+            </span>
           </div>
         ))}
       </div>

@@ -1,6 +1,11 @@
-import { animated, useSpring, useTransition } from "@react-spring/web";
+import {
+  animated,
+  useSpring,
+  useSpringRef,
+  useTransition,
+} from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
-import { useCallback, useState, memo, Suspense } from "react";
+import { useCallback, useState, memo, Suspense, useLayoutEffect } from "react";
 import EncounterMonsContainer from "./EncounterMonsContainer";
 import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
@@ -135,7 +140,7 @@ const MapPlaceInfo = memo(() => {
         pointerEvents: selectedMap !== null ? "all" : "none",
         transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
       }}
-      className={`content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch h-full `}
+      className={`content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch h-full`}
     >
       <InfoToggleButtons />
 
@@ -145,21 +150,30 @@ const MapPlaceInfo = memo(() => {
 });
 const MapInfoSwitcher = memo(function Switcher() {
   const trainersListOpen = useMapStore((state) => state.isTrainersListOpen);
+  // const trainerIsSelected = useMapStore(
+  //   (state) => state.selectedTrainer !== null,
+  // );
+  const springRef = useSpringRef();
 
+  const springs = useSpring({
+    transform: "translateX(0)",
+    config: { duration: 300 },
+    ref: springRef,
+  });
   const shuffleTransition = useTransition(trainersListOpen, {
     from: {
-      translateX: "50%",
-      rotateY: -30,
+      translateX: "100%",
+      // rotateY: -30,
     },
     enter: {
       translateX: "0%",
-      rotateY: 0,
+      // rotateY: 0,
     },
     leave: {
       translateX: "100%",
-      rotateY: 30,
+      // rotateY: 30,
     },
-
+    ref: springRef,
     expires: false, // NEED THIS
     config: {
       tension: 280,
@@ -167,9 +181,16 @@ const MapInfoSwitcher = memo(function Switcher() {
       mass: 0.8,
     },
   });
+
+  useLayoutEffect(() => {
+    springRef.start();
+  }, [springRef, trainersListOpen]);
   return (
     <div className="h-full py-2">
-      <div className="absolute py-2 bottom-0 left-0 right-0 top-7 flex flex-col">
+      <animated.div
+        style={springs}
+        className="absolute bottom-0 left-0 right-0 top-7 py-2"
+      >
         {shuffleTransition((style, isOpen) => (
           <animated.div style={style} className="absolute inset-0 pl-1 md:p-2">
             {isOpen ? (
@@ -185,7 +206,7 @@ const MapInfoSwitcher = memo(function Switcher() {
             )}
           </animated.div>
         ))}
-      </div>
+      </animated.div>
     </div>
   );
 });

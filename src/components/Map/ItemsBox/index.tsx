@@ -62,7 +62,9 @@ export default memo(function MapItemsBox() {
     {
       from: {
         translateY: (WINDOW_HEIGHT * 2) / 5,
+        width: "100%",
       },
+      width: selectedTrainer ? "115%" : "100%",
       translateY: show ? (selectedTrainer ? -90 : 0) : (WINDOW_HEIGHT * 2) / 5,
       opacity: selectedMap ? 1 : 0,
       config: { mass: 1, tension: 220, damping: 0.2 },
@@ -79,7 +81,6 @@ export default memo(function MapItemsBox() {
       translateX: "0%",
       opacity: 1,
     },
-
     leave: {
       translateX: "-100%",
       opacity: 0,

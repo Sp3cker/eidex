@@ -17,7 +17,7 @@ const TrainerItem = memo(function TrainerItem({
 
   return (
     <div
-      className={`white-box w-full cursor-pointer rounded-lg border ${trainer.rematch ? "border-red-500" : "border-gray-600"} text-left transition-colors hover:bg-gray-50`}
+      className={`white-box w-full cursor-pointer rounded-sm md:rounded-lg border ${trainer.rematch ? "border-red-500" : "border-gray-600"} text-left transition-colors hover:bg-gray-50`}
       onClick={handleClick}
     >
       <div className="flex items-center justify-between">
@@ -26,7 +26,7 @@ const TrainerItem = memo(function TrainerItem({
             <img src={`/trainers/48/${trainer.sprite}`} />
           </div>
           <div>
-            <h3 className="font-calamity text-sm font-bold leading-tight text-neutral-700">
+            <h3 className="font-calamity text-xs md:text-sm font-bold leading-tight text-neutral-700">
               {trainer.trainerName}
             </h3>
           </div>
@@ -34,7 +34,7 @@ const TrainerItem = memo(function TrainerItem({
 
         {/* Battle indicator */}
         {trainer.boss && (
-          <div className="text-xs pr-5 font-medium text-amber-800 dark:text-blue-300">
+          <div className="pr-5 text-xs font-medium text-amber-800 dark:text-blue-300">
             <h1 className="text-2xl font-bold">Ω</h1>
           </div>
         )}
@@ -78,48 +78,42 @@ const TrainersList = memo(function TrainersList() {
   const numTrainers = Object.keys(trainers);
 
   return (
-    <nav className="flex h-full flex-col overflow-hidden rounded rounded-l-lg map-place-info-textbox-gradient shadow-2xl md:rounded-lg">
-      <div className="relative flex-1">
-        {/* Trainers List View */}
-        <div className="absolute inset-0 flex flex-col">
-          <div className="flex-1 overflow-y-auto">
-            <div className="p-2">
-              <div className="font-pkmnem flex flex-col gap-2 md:gap-1">
-                {isLoading ? (
-                  <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
-                    <p>Loading trainers...</p>
-                  </div>
-                ) : error ? (
-                  <div className="white-box w-full rounded-lg border p-3 text-center text-red-500">
-                    <p>Error loading trainers: {error.message}</p>
-                  </div>
-                ) : !selectedMap ? (
-                  <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
-                    <p>Select a location to view trainers</p>
-                  </div>
-                ) : numTrainers.length === 0 ? (
-                  <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
-                    <p>No trainers found in this location</p>
-                  </div>
-                ) : (
-                  isTrainersListOpen &&
-                  numTrainers.map((level) => (
-                    <Suspense key={level} fallback={<div>Loading...</div>}>
-                      <TrainersOnLevelList
-                        key={level}
-                        levelLabel={level}
-                        trainers={trainers[level]}
-                      />
-                    </Suspense>
-                  ))
-                )}
-              </div>
+    <nav className="h-full overflow-hidden">
+      {/* Trainers List View */}
+      <div className="map-place-info-textbox-gradient max-w-50 absolute bottom-0 right-0 top-0 w-[75%] overflow-y-auto rounded rounded-l-lg md:rounded-lg md:left-0">
+        <div className="font-pkmnem flex flex-1 flex-col gap-2 p-2 md:gap-1">
+          {isLoading ? (
+            <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
+              <p>Loading trainers...</p>
             </div>
-          </div>
+          ) : error ? (
+            <div className="white-box w-full rounded-lg border p-3 text-center text-red-500">
+              <p>Error loading trainers: {error.message}</p>
+            </div>
+          ) : !selectedMap ? (
+            <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
+              <p>Select a location to view trainers</p>
+            </div>
+          ) : numTrainers.length === 0 ? (
+            <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
+              <p>No trainers found in this location</p>
+            </div>
+          ) : (
+            isTrainersListOpen &&
+            numTrainers.map((level) => (
+              <Suspense key={level} fallback={<div>Loading...</div>}>
+                <TrainersOnLevelList
+                  key={level}
+                  levelLabel={level}
+                  trainers={trainers[level]}
+                />
+              </Suspense>
+            ))
+          )}
         </div>
-
-        {/* Trainer Battle Info View */}
       </div>
+
+      {/* Trainer Battle Info View */}
     </nav>
   );
 });
