@@ -1,13 +1,6 @@
 import useMapStore from "@/stores/useMapStore";
 import { useGesture } from "@use-gesture/react";
-import {
-  useCallback,
-  useEffect,
-  useRef,
-  memo,
-  startTransition,
-  SVGElementType,
-} from "react";
+import { useCallback, useEffect, useRef, memo, startTransition } from "react";
 
 interface MapPlaceProps {
   item: Record<string, any>;
