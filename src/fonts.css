@@ -27,16 +27,18 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
+/* @font-face {
   font-family: "Calamity";
   src: url("/fonts/calamity/Calamity-Bold.otf") format("OpenType");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
-}
+} */
 @font-face {
   font-family: "Calamity";
-  src: url("/fonts/calamity/Calamity-Regular.otf") format("OpenType");
+  src: local("Calamity"),
+    url("/fonts/calamity/Calamity-Regular.woff2") format("woff2");
+  /* src: url("/fonts/calamity/Calamity-Regular.otf") format("OpenType"); */
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -76,8 +78,7 @@
       -0.3px 0px rgba(195, 191, 190, 0.25),
       -0.3px -0.3px rgba(195, 191, 190, 0.25),
       0px 0.5px #413141,
-      /* 0.5px 0.5px #413141, */
-      0.5px 0px #413141,
+      /* 0.5px 0.5px #413141, */ 0.5px 0px #413141,
       0.75px 0.75px #6a5a5a80,
       0.5px 0px 2px rgba(129, 119, 111, 0.6);
   }
