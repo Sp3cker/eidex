@@ -7,11 +7,9 @@ import Selecta from "./MapPlaceInfo/Selecta";
 import "./grid.css";
 import useMapStore from "@/stores/useMapStore";
 import { lazy, Suspense, useLayoutEffect } from "react";
-// import Roamers from "./Roamers";
+
 import SearchContainer from "./Search/SearchContainer";
-
 import PlacesList from "./PlacesList";
-
 import { useMapHotkeys } from "@/hooks/useHotkeys";
 
 document.addEventListener("gesturestart", (e) => e.preventDefault());

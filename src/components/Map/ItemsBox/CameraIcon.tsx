@@ -3,7 +3,6 @@ import { config, useSpring, animated } from "@react-spring/web";
 const CameraIcon = React.memo(function CameraIcon({
   setViewingImage,
 }: {
-
   setViewingImage: (viewing: boolean) => void;
 }) {
   const [buttonSpring, buttonSpringApi] = useSpring(
@@ -38,7 +37,7 @@ const CameraIcon = React.memo(function CameraIcon({
               output: [0, -4, 4, 2, 0],
             })
             .to((r) => `rotate(${r}deg)`),
-          filter: `drop-shadow(0 0 2px rgba(0, 0, 0, 0.3))`,
+          filter: `drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3))`,
         }}
       />
     </button>

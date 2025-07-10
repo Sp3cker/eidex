@@ -10,7 +10,7 @@ export type PartyMon = {
   iv?: "perfect";
   nature?: string;
   ability?: number[];
-  heldItem?: string;
+  item?: string;
 };
 /** Trainer data loaded from `trainers.json` */
 export interface Trainer {
@@ -19,7 +19,7 @@ export interface Trainer {
   script: string;
   coords: [number, number];
   battlePic: string;
-  doubleBattle: boolean;
+  doubleBattle?: boolean;
   aiFlags: string[];
   sprite: string;
   boss?: boolean; // Optional, if this trainer is a boss fight

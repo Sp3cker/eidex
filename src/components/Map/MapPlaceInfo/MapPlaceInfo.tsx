@@ -43,7 +43,6 @@ const EncounterAreaButtons = ({
         onClick={handleClick}
         role="tab"
         aria-selected={selectedTab === "land"}
-        aria-controls="land-panel"
         tabIndex={selectedTab === "land" ? 0 : -1}
         id="land-tab"
         type="button"
@@ -57,7 +56,6 @@ const EncounterAreaButtons = ({
         onClick={handleClick}
         role="tab"
         aria-selected={selectedTab === "water"}
-        aria-controls="water-panel"
         tabIndex={selectedTab === "water" ? 0 : -1}
         id="water-tab"
         type="button"
@@ -71,7 +69,6 @@ const EncounterAreaButtons = ({
         onClick={handleClick}
         role="tab"
         aria-selected={selectedTab === "fishing"}
-        aria-controls="fishing-panel"
         tabIndex={selectedTab === "fishing" ? 0 : -1}
         id="fishing-tab"
         type="button"

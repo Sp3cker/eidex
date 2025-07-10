@@ -59,8 +59,7 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
   );
   const levelIsLevelCap = pokemon.lvl > 199;
   const moveDetails = getMoveDetails(moves);
-  const isDefinedPokemon =
-    pokemon.heldItem || pokemon.ability || pokemon.nature;
+  const isDefinedPokemon = pokemon.item || pokemon.ability || pokemon.nature;
   const stats = useMemo(() => {
     return calculateStats(
       pokemon.id,
@@ -79,14 +78,14 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
   return (
     <div className="flex flex-col gap-y-1 rounded-lg bg-neutral-50 drop-shadow-sm md:px-3">
       <div className="flex flex-row items-center justify-start gap-x-2 rounded bg-stone-200">
-        <div className="md:h-13 md:w-13 relative ml-1 h-10 w-10 overflow-hidden">
+        <div className="md:h-13 md:w-13 relative ml-1 h-10 w-9 overflow-hidden">
           <img
-            className="pokemon-sprite w-13 h-19 sprite-animation aspect-square object-contain drop-shadow-md"
+            className="pokemon-sprite sprite-animation md:size-22 aspect-square size-20 object-contain drop-shadow-md"
             src={`/icon/${pokemon.id}/icon.webp`}
           />
         </div>
-        <div className="sm:pt-1 md:pt-5">
-          <h4 className="font-calamity mb-0 text-xs font-bold text-gray-800 md:text-sm">
+        <div className="pb-0 pt-1 md:pt-2">
+          <h4 className="font-calamity mb-0 text-xs font-bold text-gray-800 md:text-base">
             {speciesName}
           </h4>
 
@@ -141,7 +140,7 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
       {isDefinedPokemon && (
         <div className="flex flex-row items-center justify-between gap-x-2 rounded bg-zinc-100 p-1">
           {pokemon.ability && <AbilityDesc ability={pokemon.ability} />}
-          {pokemon.heldItem && <HeldItemIcon heldItem={pokemon.heldItem} />}
+          {pokemon.item && <HeldItemIcon heldItem={pokemon.item} />}
         </div>
       )}
 

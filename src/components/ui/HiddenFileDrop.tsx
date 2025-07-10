@@ -15,7 +15,7 @@ const EncountersSelect = ({
   };
   return (
     <select
-      className="font-pkmnem bg-gray-700 hover:brightness-200  text-neutral-200"
+      className="font-pkmnem bg-gray-700 text-neutral-200 hover:brightness-200"
       onChange={handleChange}
       value={current}
     >
@@ -61,18 +61,20 @@ const HiddenFileDrop = () => {
   };
 
   return (
-    <div className="flex flex-row text-neutral-200 cursor-pointer">
+    <div className="flex cursor-pointer flex-row text-neutral-200">
       <input
         ref={fileInputRef}
         type="file"
         accept=".json"
         onChange={handleFileSelect}
-        style={{ display: "none" }}
+        className="hidden"
       />
-      <button type="button" onClick={openFileSelector}>
-        <p className="font-pkmnem leading-xs cursor-pointer text-left text-sm/3 text-white">
-          Data&nbsp;for E.I.&nbsp;{hasEncountersStored || "1.2"}
-        </p>
+      <button
+        type="button"
+        className="font-pkmnem leading-xs cursor-pointer text-left text-sm/3 text-white"
+        onClick={openFileSelector}
+      >
+        Data&nbsp;for E.I.&nbsp;{hasEncountersStored || "1.2"}
       </button>
       {hasEncountersStored && (
         <>

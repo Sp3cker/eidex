@@ -256,22 +256,36 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   animation: wiggle 0.5s ease-out forwards; /* Changed ease-in-out to ease-out */
 }
 .elite-ai-flag {
-  color: color-mix(in srgb, hsl(50 89% 73%) var(--color-neutral-800));
+  color: color-mix(in srgb, var(--color-rare) var(--color-neutral-800));
   background-color: color-mix(
     in srgb,
     var(--background-color-mix) 50%,
-    hsl(50 89% 73%)
+    var(--color-rare)
   );
 }
 
 .rare-ai-flag {
-  color: color-mix(in srgb, hsl(262 50% 47%) 10%, var(--color-neutral-800));
-  background-color: color-mix(in srgb, rgba(0 0 0 / 0.1) 60%, hsl(262 50% 47%));
+  color: color-mix(in srgb, var(--color-elite) 10%, var(--color-neutral-800));
+  background-color: color-mix(
+    in srgb,
+    rgba(0 0 0 / 0.1) 60%,
+    var(--color-elite)
+  );
 }
-
-.normal-ai-flag {
+.rare-trainer {
+  filter: drop-shadow(0, 0, 1em, var(--color-rare));
+}
+/* .normal-ai-flag {
   color: color-mix(in srgb, hsl(205 41% 53%) 25%, var(--color-neutral-800));
-  background-color: color-mix(in srgb, rgba(0 0 0 / 0.1) 50%, hsl(205 41% 53%));
+  background-color: color-mix(in srgb, rgba(0 0 0 / 0.1) 50%, hsl(205 41% 53%)); */
+/* } */
+.normal-ai-flag {
+  color: color-mix(in srgb, var(--color-normal) 25%, var(--color-neutral-800));
+  background-color: color-mix(
+    in srgb,
+    rgba(0 0 0 / 0.1) 50%,
+    var(--color-normal)
+  );
 }
 /* .elite-ai-flag {
   color: color-mix(in lab, lab(82, 11, 75) 10%, var(--background-color-mix));

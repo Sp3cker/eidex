@@ -55,12 +55,12 @@ const TrainerInfo = memo(function TrainerInfo({
           <img
             src={`/trainers/${trainer.battlePic}`}
             alt={trainer.trainerName}
-            className="h-20 w-20 md:h-30 md:w-30 drop-shadow-md"
+            className="md:h-30 md:w-30 h-20 w-20 drop-shadow-md"
             style={imageStyles}
           />
           <div className="flex flex-row justify-between">
             <h3
-              className={`font-calamity ${trainer.boss && "drop-shadow-sm"} w-full text-xl font-bold text-gray-800`}
+              className={`font-calamity ${trainer.boss && "drop-shadow-(--color-rare)"} w-full text-xl font-bold text-gray-800`}
             >
               {trainer.trainerName}
             </h3>

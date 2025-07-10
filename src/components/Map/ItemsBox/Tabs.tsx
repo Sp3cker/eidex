@@ -33,9 +33,13 @@ const TabNavigation = React.memo<TabNavigationProps>(function TabNavigation({
   );
 
   return (
-    <div className="font-pkmnem tab-list block text-nowrap">
+    <div
+      className="font-pkmnem tab-list block text-nowrap"
+      role="tablist"
+      aria-label="Items tabs"
+    >
       <button
-        type="button"
+        role="tab"
         title="story"
         className={`tab-label font-bold ${
           selectedTab === "story" ? TAB_CONFIG.story.className : ""
@@ -48,6 +52,7 @@ const TabNavigation = React.memo<TabNavigationProps>(function TabNavigation({
       </button>
 
       <button
+        role="tab"
         title="pickup"
         className={`tab-label px-2 font-bold ${
           selectedTab === "pickup" ? TAB_CONFIG.pickup.className : ""
@@ -59,6 +64,7 @@ const TabNavigation = React.memo<TabNavigationProps>(function TabNavigation({
       </button>
 
       <button
+        role="tab"
         title="marts"
         className={`tab-label font-bold ${
           selectedTab === "marts" ? TAB_CONFIG.marts.className : ""

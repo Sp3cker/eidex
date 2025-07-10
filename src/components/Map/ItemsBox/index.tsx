@@ -40,11 +40,11 @@ const pages = [
   ),
 ];
 const WINDOW_HEIGHT = window.innerHeight;
-const SAFE_PADDING = Object.freeze({
-  paddingBottom: "calc(env(safe-area-inset-bottom) + 1rem)",
-  paddingLeft: "env(safe-area-inset-left)",
-  paddingRight: "env(safe-area-inset-right)",
-});
+// const SAFE_PADDING = Object.freeze({
+//   paddingBottom: "calc(env(safe-area-inset-bottom) + 1rem)",
+//   paddingLeft: "env(safe-area-inset-left)",
+//   paddingRight: "env(safe-area-inset-right)",
+// });
 export default memo(function MapItemsBox() {
   const [selectedMap, selectedTrainer, show] = useMapStore(
     (state) => [
@@ -94,10 +94,7 @@ export default memo(function MapItemsBox() {
   });
 
   return (
-    <div
-      style={SAFE_PADDING}
-      className="dexnav-grid dexnav-z grid-rows-auto pointer-events-none relative grid grid-cols-1"
-    >
+    <div className="dexnav-grid dexnav-z grid-rows-auto pointer-events-none relative grid grid-cols-1">
       <animated.nav
         style={springs}
         className={`${selectedTrainer ? "h-[70vh] md:h-[75vh]" : "h-[50vh]"} will-translate map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 overflow-x-hidden rounded-lg border border-gray-200 drop-shadow-xl md:row-start-10`}

@@ -1,6 +1,5 @@
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import { lazy, Suspense, useEffect } from "react";
-import "./App.css";
 import { ErrorBoundary } from "react-error-boundary";
 
 const PokemonList = lazy(() => import("./components/PokemonList/PokemonList"));

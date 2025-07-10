@@ -29,18 +29,21 @@ const ItemsBox = memo(function ItemsBox() {
     // Find the actual scrolling container by traversing up the DOM
     const findScrollContainer = (element: HTMLElement): HTMLElement | null => {
       if (!element || element === document.body) return null;
-      
+
       const styles = window.getComputedStyle(element);
-      const hasScroll = styles.overflowY === 'auto' || styles.overflowY === 'scroll';
-      
+      const hasScroll =
+        styles.overflowY === "auto" || styles.overflowY === "scroll";
+
       if (hasScroll && element.scrollHeight > element.clientHeight) {
         return element;
       }
-      
+
       return findScrollContainer(element.parentElement!);
     };
 
-    const scrollContainer = firstItemRef.current ? findScrollContainer(firstItemRef.current) : null;
+    const scrollContainer = firstItemRef.current
+      ? findScrollContainer(firstItemRef.current)
+      : null;
     if (!scrollContainer) return;
 
     const handleScroll = () => {
@@ -109,9 +112,11 @@ const ItemsBox = memo(function ItemsBox() {
         className="sticky top-0 z-10 flex items-center justify-between"
       >
         <span className="flex flex-row items-center justify-center gap-3">
-          <h2 className="cool-font md:text-md cursor-pointer text-left text-sm font-bold text-neutral-700 transition-colors">
-            {mapLabel}
-          </h2>
+          {mapLabel && (
+            <h2 className="cool-font md:text-md cursor-pointer text-left text-sm font-bold text-neutral-700 transition-colors">
+              {mapLabel}
+            </h2>
+          )}
         </span>
         <CameraIcon setViewingImage={setViewingImage} />
       </div>
