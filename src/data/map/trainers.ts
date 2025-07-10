@@ -7,9 +7,9 @@ export type PartyMon = {
   lvl: number;
   id: number;
   ev: number[];
-  iv?: 'perfect';
+  iv?: "perfect";
   nature?: string;
-  ability?: string;
+  ability?: number[];
   heldItem?: string;
 };
 /** Trainer data loaded from `trainers.json` */

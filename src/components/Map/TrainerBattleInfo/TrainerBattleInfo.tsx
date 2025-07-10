@@ -1,5 +1,5 @@
-import { memo, useDeferredValue } from "react";
-import PartyMon from "./PartyMon";
+import { memo, useDeferredValue, lazy, Suspense } from "react";
+const PartyMon = lazy(() => import("./PartyMon"));
 
 import TrainerInfo from "./TrainerInfo";
 import useMapStore from "@/stores/useMapStore";
@@ -38,7 +38,9 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
                     </h4>
                     <div className="grid gap-2">
                       {party.map((pokemon, index) => (
-                        <PartyMon key={index} pokemon={pokemon} />
+                        <Suspense key={index} fallback={<div className="h-24 animate-pulse rounded bg-gray-200" />}>
+                          <PartyMon pokemon={pokemon} />
+                        </Suspense>
                       ))}
                     </div>
                   </div>
@@ -48,7 +50,9 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
               // Regular trainer party
               <div className="grid gap-2">
                 {trainer.party.map((pokemon, index) => (
-                  <PartyMon key={index} pokemon={pokemon} />
+                  <Suspense key={index} fallback={<div className="h-24 animate-pulse rounded bg-gray-200" />}>
+                    <PartyMon pokemon={pokemon} />
+                  </Suspense>
                 ))}
               </div>
             )}

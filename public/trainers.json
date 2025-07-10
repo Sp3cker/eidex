@@ -262,7 +262,7 @@
           "lvl": 74,
           "id": 904,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [390, 114, 769, 640],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -271,7 +271,7 @@
           "lvl": 74,
           "id": 902,
           "nature": "adamant",
-          "ability": "ABILITY_ADAPTABILITY",
+          "ability": [91],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [627, 764, 276, 426],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -280,7 +280,7 @@
           "lvl": 74,
           "id": 604,
           "nature": "timid",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [85, 406, 53, 839],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -289,7 +289,7 @@
           "lvl": 74,
           "id": 62,
           "nature": "jolly",
-          "ability": "ABILITY_WATER_ABSORB",
+          "ability": [11],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [748, 370, 398, 787],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -298,7 +298,7 @@
           "lvl": 74,
           "id": 1383,
           "nature": "timid",
-          "ability": "ABILITY_QUARK_DRIVE",
+          "ability": [282],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [56, 58, 575, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -307,7 +307,7 @@
           "lvl": 74,
           "id": 936,
           "nature": "jolly",
-          "ability": "ABILITY_SPEED_BOOST",
+          "ability": [3],
           "heldItem": "ITEM_SHARPEDONITE",
           "moves": [242, 662, 454, 425],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -390,7 +390,7 @@
           "lvl": 23,
           "id": 1014,
           "nature": "timid",
-          "ability": "ABILITY_LIGHTNING_ROD",
+          "ability": [31],
           "heldItem": "ITEM_LIGHT_BALL",
           "moves": [252, 529, 237, 579]
         },
@@ -398,7 +398,7 @@
           "lvl": 24,
           "id": 960,
           "nature": "jolly",
-          "ability": "ABILITY_ICE_SCALES",
+          "ability": [246],
           "heldItem": "ITEM_CHOPLE_BERRY",
           "moves": [420, 332, 525, 15]
         },
@@ -406,7 +406,7 @@
           "lvl": 25,
           "id": 1174,
           "nature": "jolly",
-          "ability": "ABILITY_TOUGH_CLAWS",
+          "ability": [181],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [492, 665, 525, 317]
         },
@@ -414,7 +414,7 @@
           "lvl": 25,
           "id": 533,
           "nature": "adamant",
-          "ability": "ABILITY_IRON_FIST",
+          "ability": [89],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [183, 7, 492, 9]
         },
@@ -422,7 +422,7 @@
           "lvl": 25,
           "id": 297,
           "nature": "adamant",
-          "ability": "ABILITY_THICK_FAT",
+          "ability": [47],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [252, 492, 418, 339]
         }
@@ -563,7 +563,7 @@
           "lvl": 84,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [413, 441, 141, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -572,7 +572,7 @@
           "lvl": 84,
           "id": 943,
           "nature": "adamant",
-          "ability": "ABILITY_TOUGH_CLAWS",
+          "ability": [181],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [309, 418, 429, 89],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -581,7 +581,7 @@
           "lvl": 84,
           "id": 787,
           "nature": "jolly",
-          "ability": "ABILITY_GRASSY_SURGE",
+          "ability": [229],
           "heldItem": "ITEM_GRASSY_SEED",
           "moves": [453, 585, 276, 429],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -590,7 +590,7 @@
           "lvl": 84,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [370, 747, 389, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -599,7 +599,7 @@
           "lvl": 84,
           "id": 350,
           "nature": "bold",
-          "ability": "ABILITY_COMPETITIVE",
+          "ability": [172],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [682, 58, 105, 92],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -608,7 +608,7 @@
           "lvl": 84,
           "id": 928,
           "nature": "jolly",
-          "ability": "ABILITY_STRIKER",
+          "ability": [311],
           "heldItem": "ITEM_BLAZIKENITE",
           "moves": [299, 753, 9, 339],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -639,7 +639,7 @@
           "lvl": 84,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [413, 441, 141, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -648,7 +648,7 @@
           "lvl": 84,
           "id": 1006,
           "nature": "calm",
-          "ability": "ABILITY_SAP_SIPPER",
+          "ability": [157],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [406, 431, 273, 92],
           "ev": [252, 0, 0, 6, 252, 0]
@@ -657,7 +657,7 @@
           "lvl": 84,
           "id": 785,
           "nature": "jolly",
-          "ability": "ABILITY_ELECTRIC_SURGE",
+          "ability": [226],
           "heldItem": "ITEM_ELECTRIC_SEED",
           "moves": [846, 216, 585, 355],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -667,7 +667,7 @@
           "lvl": 84,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [370, 747, 389, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -676,7 +676,7 @@
           "lvl": 84,
           "id": 1418,
           "nature": "jolly",
-          "ability": "ABILITY_MOLD_BREAKER",
+          "ability": [104],
           "heldItem": "ITEM_HEARTHFLAME_MASK",
           "moves": [834, 453, 640, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -685,7 +685,7 @@
           "lvl": 84,
           "id": 929,
           "nature": "adamant",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_SWAMPERTITE",
           "moves": [666, 89, 614, 419],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -716,7 +716,7 @@
           "lvl": 84,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [413, 441, 141, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -725,7 +725,7 @@
           "lvl": 84,
           "id": 149,
           "nature": "jolly",
-          "ability": "ABILITY_MULTISCALE",
+          "ability": [136],
           "heldItem": "ITEM_LUM_BERRY",
           "moves": [744, 337, 443, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -734,7 +734,7 @@
           "lvl": 84,
           "id": 788,
           "nature": "timid",
-          "ability": "ABILITY_MISTY_SURGE",
+          "ability": [228],
           "heldItem": "ITEM_MISTY_SEED",
           "moves": [58, 56, 587, 448],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -743,7 +743,7 @@
           "lvl": 84,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [370, 747, 389, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -752,7 +752,7 @@
           "lvl": 84,
           "id": 637,
           "nature": "timid",
-          "ability": "ABILITY_FLAME_BODY",
+          "ability": [49],
           "heldItem": "ITEM_HEAVY_DUTY_BOOTS",
           "moves": [554, 405, 202, 485],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -761,7 +761,7 @@
           "lvl": 84,
           "id": 927,
           "nature": "jolly",
-          "ability": "ABILITY_OVERGROW",
+          "ability": [65],
           "heldItem": "ITEM_SCEPTILITE",
           "moves": [532, 331, 89, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -792,7 +792,7 @@
           "lvl": 84,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [413, 441, 141, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -801,7 +801,7 @@
           "lvl": 84,
           "id": 943,
           "nature": "adamant",
-          "ability": "ABILITY_TOUGH_CLAWS",
+          "ability": [181],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [309, 418, 429, 89],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -810,7 +810,7 @@
           "lvl": 84,
           "id": 787,
           "nature": "jolly",
-          "ability": "ABILITY_GRASSY_SURGE",
+          "ability": [229],
           "heldItem": "ITEM_GRASSY_SEED",
           "moves": [453, 585, 276, 429],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -819,7 +819,7 @@
           "lvl": 84,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [370, 747, 389, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -828,7 +828,7 @@
           "lvl": 84,
           "id": 350,
           "nature": "bold",
-          "ability": "ABILITY_COMPETITIVE",
+          "ability": [172],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [682, 58, 105, 92],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -837,7 +837,7 @@
           "lvl": 84,
           "id": 928,
           "nature": "jolly",
-          "ability": "ABILITY_STRIKER",
+          "ability": [311],
           "heldItem": "ITEM_BLAZIKENITE",
           "moves": [299, 753, 9, 339],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -868,7 +868,7 @@
           "lvl": 84,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [413, 441, 141, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -877,7 +877,7 @@
           "lvl": 84,
           "id": 1006,
           "nature": "calm",
-          "ability": "ABILITY_SAP_SIPPER",
+          "ability": [157],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [406, 431, 273, 92],
           "ev": [252, 0, 0, 6, 252, 0]
@@ -886,7 +886,7 @@
           "lvl": 84,
           "id": 785,
           "nature": "jolly",
-          "ability": "ABILITY_ELECTRIC_SURGE",
+          "ability": [226],
           "heldItem": "ITEM_ELECTRIC_SEED",
           "moves": [846, 216, 585, 355],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -896,7 +896,7 @@
           "lvl": 84,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [370, 747, 389, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -905,7 +905,7 @@
           "lvl": 84,
           "id": 1418,
           "nature": "jolly",
-          "ability": "ABILITY_MOLD_BREAKER",
+          "ability": [104],
           "heldItem": "ITEM_HEARTHFLAME_MASK",
           "moves": [834, 453, 640, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -914,7 +914,7 @@
           "lvl": 84,
           "id": 929,
           "nature": "adamant",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_SWAMPERTITE",
           "moves": [666, 89, 614, 419],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -945,7 +945,7 @@
           "lvl": 84,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [413, 441, 141, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -954,7 +954,7 @@
           "lvl": 84,
           "id": 149,
           "nature": "jolly",
-          "ability": "ABILITY_MULTISCALE",
+          "ability": [136],
           "heldItem": "ITEM_LUM_BERRY",
           "moves": [744, 337, 443, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -963,7 +963,7 @@
           "lvl": 84,
           "id": 788,
           "nature": "timid",
-          "ability": "ABILITY_MISTY_SURGE",
+          "ability": [228],
           "heldItem": "ITEM_MISTY_SEED",
           "moves": [58, 56, 587, 448],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -972,7 +972,7 @@
           "lvl": 84,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [370, 747, 389, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -981,7 +981,7 @@
           "lvl": 84,
           "id": 637,
           "nature": "timid",
-          "ability": "ABILITY_FLAME_BODY",
+          "ability": [49],
           "heldItem": "ITEM_HEAVY_DUTY_BOOTS",
           "moves": [554, 405, 202, 485],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -990,7 +990,7 @@
           "lvl": 84,
           "id": 927,
           "nature": "jolly",
-          "ability": "ABILITY_OVERGROW",
+          "ability": [65],
           "heldItem": "ITEM_SCEPTILITE",
           "moves": [532, 331, 89, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1021,7 +1021,7 @@
           "lvl": 84,
           "id": 795,
           "nature": "jolly",
-          "ability": "ABILITY_BEAST_BOOST",
+          "ability": [224],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [369, 167, 398, 743],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1030,7 +1030,7 @@
           "lvl": 84,
           "id": 715,
           "nature": "timid",
-          "ability": "ABILITY_INFILTRATOR",
+          "ability": [151],
           "heldItem": "ITEM_CHOICE_SPECS",
           "moves": [177, 435, 588, 399],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1039,7 +1039,7 @@
           "lvl": 84,
           "id": 1291,
           "nature": "jolly",
-          "ability": "ABILITY_PROTEAN",
+          "ability": [168],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [282, 800, 585, 743],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1048,7 +1048,7 @@
           "lvl": 84,
           "id": 806,
           "nature": "timid",
-          "ability": "ABILITY_BEAST_BOOST",
+          "ability": [224],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [53, 247, 94, 675],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1057,7 +1057,7 @@
           "lvl": 84,
           "id": 1429,
           "nature": "jolly",
-          "ability": "ABILITY_QUARK_DRIVE",
+          "ability": [282],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [535, 840, 428, 224],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1066,7 +1066,7 @@
           "lvl": 84,
           "id": 1492,
           "nature": "bold",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_EMPOLEONITE_D",
           "moves": [57, 431, 92, 355],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -1096,7 +1096,7 @@
           "lvl": 200,
           "id": 1401,
           "nature": "timid",
-          "ability": "ABILITY_HADRON_ENGINE",
+          "ability": [289],
           "heldItem": "ITEM_TERRAIN_EXTENDER",
           "moves": [807, 406, 315, 269],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1105,7 +1105,7 @@
           "lvl": 201,
           "id": 958,
           "nature": "modest",
-          "ability": "ABILITY_SURGE_SURFER",
+          "ability": [207],
           "heldItem": "ITEM_CHOICE_SPECS",
           "moves": [94, 734, 85, 57],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1114,7 +1114,7 @@
           "lvl": 201,
           "id": 1384,
           "nature": "adamant",
-          "ability": "ABILITY_QUARK_DRIVE",
+          "ability": [282],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [252, 846, 370, 486],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1123,7 +1123,7 @@
           "lvl": 201,
           "id": 85,
           "nature": "jolly",
-          "ability": "ABILITY_ROCK_HEAD",
+          "ability": [69],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [413, 38, 98, 26],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1132,7 +1132,7 @@
           "lvl": 201,
           "id": 807,
           "nature": "adamant",
-          "ability": "ABILITY_VOLT_ABSORB",
+          "ability": [10],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [676, 332, 252, 263],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1141,7 +1141,7 @@
           "lvl": 200,
           "id": 1518,
           "nature": "timid",
-          "ability": "ABILITY_PUNK_ROCK",
+          "ability": [244],
           "heldItem": "ITEM_TOXTRICITITE",
           "moves": [484, 716, 588, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1171,7 +1171,7 @@
           "lvl": 85,
           "id": 1492,
           "nature": "relaxed",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_EMPOLEONITE_D",
           "moves": [92, 431, 742, 355],
           "ev": [252, 0, 252, 6, 0, 0],
@@ -1181,7 +1181,7 @@
           "lvl": 85,
           "id": 1529,
           "nature": "timid",
-          "ability": "ABILITY_TELEPATHY",
+          "ability": [140],
           "heldItem": "ITEM_ADAMANT_ORB",
           "moves": [460, 431, 126, 58],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1190,7 +1190,7 @@
           "lvl": 85,
           "id": 943,
           "nature": "jolly",
-          "ability": "ABILITY_TOUGH_CLAWS",
+          "ability": [181],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [309, 429, 8, 418],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1220,15 +1220,16 @@
           "lvl": 85,
           "id": 442,
           "nature": "sassy",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_ASSAULT_VEST",
-          "moves": [466, 389, 138, 739]
+          "moves": [466, 389, 138, 739],
+          "ev": [252, 0, 0, 6, 252, 0]
         },
         {
           "lvl": 85,
           "id": 485,
           "nature": "timid",
-          "ability": "ABILITY_FLASH_FIRE",
+          "ability": [18],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [53, 431, 408, 261],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1237,7 +1238,7 @@
           "lvl": 85,
           "id": 1212,
           "nature": "timid",
-          "ability": "ABILITY_GULP_MISSILE",
+          "ability": [241],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [57, 58, 403, 355],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1246,7 +1247,7 @@
           "lvl": 85,
           "id": 889,
           "nature": "jolly",
-          "ability": "ABILITY_DAUNTLESS_SHIELD",
+          "ability": [235],
           "heldItem": "ITEM_RUSTED_SHIELD",
           "moves": [706, 334, 443, 585],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1255,7 +1256,7 @@
           "lvl": 85,
           "id": 1163,
           "nature": "timid",
-          "ability": "ABILITY_FAIRY_AURA",
+          "ability": [187],
           "heldItem": "ITEM_POWER_HERB",
           "moves": [587, 475, 237, 603],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1264,7 +1265,7 @@
           "lvl": 85,
           "id": 947,
           "nature": "jolly",
-          "ability": "ABILITY_SAND_VEIL",
+          "ability": [8],
           "heldItem": "ITEM_GARCHOMPITE",
           "moves": [729, 89, 445, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1294,7 +1295,7 @@
           "lvl": 85,
           "id": 962,
           "nature": "timid",
-          "ability": "ABILITY_SNOW_WARNING",
+          "ability": [117],
           "heldItem": "ITEM_ICY_ROCK",
           "moves": [326, 587, 412, 58],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1303,7 +1304,7 @@
           "lvl": 85,
           "id": 466,
           "nature": "jolly",
-          "ability": "ABILITY_IRON_FIST",
+          "ability": [89],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [676, 370, 183, 89],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1312,7 +1313,7 @@
           "lvl": 85,
           "id": 1093,
           "nature": "jolly",
-          "ability": "ABILITY_ZEN_MODE",
+          "ability": [161],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [394, 558, 429, 89],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1321,7 +1322,7 @@
           "lvl": 85,
           "id": 721,
           "nature": "timid",
-          "ability": "ABILITY_WATER_ABSORB",
+          "ability": [11],
           "heldItem": "ITEM_HEAVY_DUTY_BOOTS",
           "moves": [594, 53, 484, 433],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1330,7 +1331,7 @@
           "lvl": 85,
           "id": 1105,
           "nature": "jolly",
-          "ability": "ABILITY_TERAVOLT",
+          "ability": [164],
           "heldItem": "ITEM_LOADED_DICE",
           "moves": [561, 729, 333, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1339,7 +1340,7 @@
           "lvl": 85,
           "id": 949,
           "nature": "jolly",
-          "ability": "ABILITY_SNOW_WARNING",
+          "ability": [117],
           "heldItem": "ITEM_ABOMASITE",
           "moves": [630, 420, 453, 89],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1369,7 +1370,7 @@
           "lvl": 85,
           "id": 962,
           "nature": "timid",
-          "ability": "ABILITY_DROUGHT",
+          "ability": [70],
           "heldItem": "ITEM_HEAT_ROCK",
           "moves": [53, 412, 475, 745],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1378,7 +1379,7 @@
           "lvl": 85,
           "id": 1008,
           "nature": "jolly",
-          "ability": "ABILITY_QUILL_RUSH",
+          "ability": [324],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [370, 348, 389, 445],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1387,7 +1388,7 @@
           "lvl": 85,
           "id": 1093,
           "nature": "jolly",
-          "ability": "ABILITY_ZEN_MODE",
+          "ability": [161],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [394, 558, 429, 89],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1396,7 +1397,7 @@
           "lvl": 85,
           "id": 721,
           "nature": "timid",
-          "ability": "ABILITY_WATER_ABSORB",
+          "ability": [11],
           "heldItem": "ITEM_HEAVY_DUTY_BOOTS",
           "moves": [830, 53, 484, 433],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1405,7 +1406,7 @@
           "lvl": 85,
           "id": 643,
           "nature": "timid",
-          "ability": "ABILITY_TURBOBLAZE",
+          "ability": [163],
           "heldItem": "ITEM_WEAKNESS_POLICY",
           "moves": [560, 406, 396, 490],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1414,7 +1415,7 @@
           "lvl": 85,
           "id": 1496,
           "nature": "timid",
-          "ability": "ABILITY_BLAZE",
+          "ability": [66],
           "heldItem": "ITEM_CHARIZARDITE_Y",
           "moves": [53, 403, 76, 406],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1444,7 +1445,7 @@
           "lvl": 85,
           "id": 887,
           "nature": "jolly",
-          "ability": "ABILITY_CLEAR_BODY",
+          "ability": [29],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [699, 421, 211, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1453,7 +1454,7 @@
           "lvl": 85,
           "id": 452,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [747, 441, 89, 423],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1462,7 +1463,7 @@
           "lvl": 85,
           "id": 1370,
           "nature": "jolly",
-          "ability": "ABILITY_DEFIANT",
+          "ability": [128],
           "heldItem": "ITEM_PUNCHING_GLOVE",
           "moves": [409, 817, 157, 339],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1471,7 +1472,7 @@
           "lvl": 85,
           "id": 1434,
           "nature": "jolly",
-          "ability": "ABILITY_POISON_PUPPETEER",
+          "ability": [310],
           "heldItem": "ITEM_WIDE_LENS",
           "moves": [442, 739, 494, 577],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1480,7 +1481,7 @@
           "lvl": 85,
           "id": 1233,
           "nature": "timid",
-          "ability": "ABILITY_AS_ONE_SHADOW_RIDER",
+          "ability": [267],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [417, 755, 475, 579],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1489,7 +1490,7 @@
           "lvl": 85,
           "id": 1501,
           "nature": "timid",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_GENGARITE",
           "moves": [484, 247, 411, 417],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1519,7 +1520,7 @@
           "lvl": 85,
           "id": 980,
           "nature": "calm",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_PAYAPA_BERRY",
           "moves": [390, 484, 114, 126],
           "ev": [252, 0, 0, 6, 252, 0]
@@ -1528,7 +1529,7 @@
           "lvl": 85,
           "id": 426,
           "nature": "timid",
-          "ability": "ABILITY_UNBURDEN",
+          "ability": [84],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [247, 403, 347, 633],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1537,7 +1538,7 @@
           "lvl": 85,
           "id": 1415,
           "nature": "timid",
-          "ability": "ABILITY_TOXIC_CHAIN",
+          "ability": [305],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [587, 484, 399, 257],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1546,7 +1547,7 @@
           "lvl": 85,
           "id": 1434,
           "nature": "timid",
-          "ability": "ABILITY_POISON_PUPPETEER",
+          "ability": [310],
           "heldItem": "ITEM_BLACK_SLUDGE",
           "moves": [849, 508, 577, 105],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1555,7 +1556,7 @@
           "lvl": 85,
           "id": 792,
           "nature": "bold",
-          "ability": "ABILITY_SHADOW_SHIELD",
+          "ability": [231],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [670, 587, 475, 236],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -1564,7 +1565,7 @@
           "lvl": 85,
           "id": 1532,
           "nature": "impish",
-          "ability": "ABILITY_PRESSURE",
+          "ability": [46],
           "heldItem": "ITEM_DUSKNOIRITE",
           "moves": [261, 133, 89, 739],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -1595,7 +1596,7 @@
           "lvl": 85,
           "id": 984,
           "nature": "quiet",
-          "ability": "ABILITY_BERSERK",
+          "ability": [201],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [434, 752, 403, 389],
           "ev": [252, 6, 0, 252, 0, 0]
@@ -1604,15 +1605,16 @@
           "lvl": 85,
           "id": 940,
           "nature": "brave",
-          "ability": "ABILITY_SUPER_LUCK",
+          "ability": [105],
           "heldItem": "ITEM_SCOPE_LENS",
-          "moves": [400, 428, 389, 370]
+          "moves": [400, 428, 389, 370],
+          "ev": [252, 252, 6, 0, 0, 0]
         },
         {
           "lvl": 85,
           "id": 1414,
           "nature": "timid",
-          "ability": "ABILITY_TOXIC_CHAIN",
+          "ability": [305],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [252, 484, 448, 94],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1621,23 +1623,25 @@
           "lvl": 85,
           "id": 494,
           "nature": "brave",
-          "ability": "ABILITY_VICTORY_STAR",
+          "ability": [162],
           "heldItem": "ITEM_ROOM_SERVICE",
-          "moves": [434, 429, 552, 559]
+          "moves": [434, 429, 552, 559],
+          "ev": [252, 252, 6, 0, 0, 0]
         },
         {
           "lvl": 85,
           "id": 799,
           "nature": "brave",
-          "ability": "ABILITY_BEAST_BOOST",
+          "ability": [224],
           "heldItem": "ITEM_LIFE_ORB",
-          "moves": [89, 359, 337, 282]
+          "moves": [89, 359, 337, 282],
+          "ev": [252, 252, 0, 0, 6, 0]
         },
         {
           "lvl": 85,
           "id": 1521,
           "nature": "quiet",
-          "ability": "ABILITY_PRANKSTER",
+          "ability": [158],
           "heldItem": "ITEM_GRIMMITE",
           "moves": [399, 587, 396, 417],
           "ev": [252, 6, 0, 252, 0, 0]
@@ -1668,7 +1672,7 @@
           "lvl": 85,
           "id": 984,
           "nature": "hasty",
-          "ability": "ABILITY_BERSERK",
+          "ability": [201],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [366, 752, 403, 389],
           "ev": [0, 6, 0, 252, 0, 252]
@@ -1677,7 +1681,7 @@
           "lvl": 85,
           "id": 1521,
           "nature": "jolly",
-          "ability": "ABILITY_PRANKSTER",
+          "ability": [158],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [719, 628, 359, 577],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1686,7 +1690,7 @@
           "lvl": 85,
           "id": 1414,
           "nature": "timid",
-          "ability": "ABILITY_TOXIC_CHAIN",
+          "ability": [305],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [252, 484, 448, 94],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1695,7 +1699,7 @@
           "lvl": 85,
           "id": 655,
           "nature": "timid",
-          "ability": "ABILITY_MAGIC_GUARD",
+          "ability": [98],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [675, 94, 247, 745],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1704,7 +1708,7 @@
           "lvl": 85,
           "id": 1398,
           "nature": "adamant",
-          "ability": "ABILITY_PROTOSYNTHESIS",
+          "ability": [281],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [349, 443, 337, 282],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1713,7 +1717,7 @@
           "lvl": 85,
           "id": 940,
           "nature": "jolly",
-          "ability": "ABILITY_JUSTIFIED",
+          "ability": [154],
           "heldItem": "ITEM_ABSOLITE",
           "moves": [400, 370, 585, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1745,7 +1749,7 @@
           "lvl": 200,
           "id": 1508,
           "nature": "adamant",
-          "ability": "ABILITY_GRASSY_SURGE",
+          "ability": [229],
           "heldItem": "ITEM_TERRAIN_EXTENDER",
           "moves": [632, 453, 269, 409],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1754,7 +1758,7 @@
           "lvl": 200,
           "id": 912,
           "nature": "timid",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [94, 247, 448, 411],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1763,7 +1767,7 @@
           "lvl": 200,
           "id": 926,
           "nature": "adamant",
-          "ability": "ABILITY_SAND_STREAM",
+          "ability": [45],
           "heldItem": "ITEM_CHOPLE_BERRY",
           "moves": [242, 157, 632, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1772,7 +1776,7 @@
           "lvl": 200,
           "id": 921,
           "nature": "modest",
-          "ability": "ABILITY_STATIC",
+          "ability": [9],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [85, 406, 324, 396],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1781,7 +1785,7 @@
           "lvl": 200,
           "id": 1145,
           "nature": "modest",
-          "ability": "ABILITY_NATURAL_CURE",
+          "ability": [30],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [587, 412, 273, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1790,7 +1794,7 @@
           "lvl": 200,
           "id": 1492,
           "nature": "jolly",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_EMPOLEONITE_O",
           "moves": [443, 666, 65, 280],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1820,7 +1824,7 @@
           "lvl": 200,
           "id": 971,
           "nature": "adamant",
-          "ability": "ABILITY_POISON_TOUCH",
+          "ability": [143],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [282, 398, 8, 92],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1829,7 +1833,7 @@
           "lvl": 200,
           "id": 534,
           "nature": "adamant",
-          "ability": "ABILITY_IRON_FIST",
+          "ability": [89],
           "heldItem": "ITEM_PUNCHING_GLOVE",
           "moves": [409, 183, 9, 7],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -1839,7 +1843,7 @@
           "lvl": 200,
           "id": 232,
           "nature": "adamant",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_CUSTAP_BERRY",
           "moves": [89, 282, 157, 585],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1848,7 +1852,7 @@
           "lvl": 200,
           "id": 171,
           "nature": "modest",
-          "ability": "ABILITY_VOLT_ABSORB",
+          "ability": [10],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [505, 86, 109, 85],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1857,7 +1861,7 @@
           "lvl": 200,
           "id": 797,
           "nature": "modest",
-          "ability": "ABILITY_BEAST_BOOST",
+          "ability": [224],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [403, 431, 202, 53],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1866,7 +1870,7 @@
           "lvl": 200,
           "id": 1496,
           "nature": "jolly",
-          "ability": "ABILITY_BLAZE",
+          "ability": [66],
           "heldItem": "ITEM_CHARIZARDITE_X",
           "moves": [349, 337, 394, 89],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1896,7 +1900,7 @@
           "lvl": 200,
           "id": 596,
           "nature": "timid",
-          "ability": "ABILITY_COMPOUND_EYES",
+          "ability": [14],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [566, 87, 405, 202],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1905,7 +1909,7 @@
           "lvl": 200,
           "id": 687,
           "nature": "jolly",
-          "ability": "ABILITY_CONTRARY",
+          "ability": [126],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [276, 400, 428, 365],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1914,7 +1918,7 @@
           "lvl": 200,
           "id": 1528,
           "nature": "jolly",
-          "ability": "ABILITY_SHEER_FORCE",
+          "ability": [125],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [394, 157, 89, 280],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1923,7 +1927,7 @@
           "lvl": 200,
           "id": 778,
           "nature": "jolly",
-          "ability": "ABILITY_DISGUISE",
+          "ability": [209],
           "heldItem": "ITEM_SPELL_TAG",
           "moves": [14, 421, 585, 426],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1932,7 +1936,7 @@
           "lvl": 200,
           "id": 1113,
           "nature": "timid",
-          "ability": "ABILITY_PROTEAN",
+          "ability": [168],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [596, 58, 399, 57],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -1941,7 +1945,7 @@
           "lvl": 200,
           "id": 1490,
           "nature": "adamant",
-          "ability": "ABILITY_OVERGROW",
+          "ability": [65],
           "heldItem": "ITEM_TORTERRITE",
           "moves": [402, 89, 157, 486],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1971,7 +1975,7 @@
           "lvl": 68,
           "id": 398,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_CHOICE_BAND",
           "moves": [38, 413, 370, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -1980,15 +1984,16 @@
           "lvl": 68,
           "id": 933,
           "nature": "adamant",
-          "ability": "ABILITY_ROCK_HEAD",
+          "ability": [69],
           "heldItem": "ITEM_ASSAULT_VEST",
-          "moves": [486, 458, 7, 706]
+          "moves": [486, 458, 7, 706],
+          "ev": [6, 252, 252, 0, 0, 0]
         },
         {
           "lvl": 68,
           "id": 330,
           "nature": "naive",
-          "ability": "ABILITY_TINTED_LENS",
+          "ability": [110],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [435, 768, 744, 157],
           "ev": [0, 252, 0, 6, 0, 252]
@@ -1997,7 +2002,7 @@
           "lvl": 68,
           "id": 873,
           "nature": "timid",
-          "ability": "ABILITY_ICE_SCALES",
+          "ability": [246],
           "heldItem": "ITEM_HEAVY_DUTY_BOOTS",
           "moves": [485, 405, 202, 58],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2006,7 +2011,7 @@
           "lvl": 68,
           "id": 1101,
           "nature": "timid",
-          "ability": "ABILITY_VOLT_ABSORB",
+          "ability": [10],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [85, 448, 484, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2015,7 +2020,7 @@
           "lvl": 68,
           "id": 938,
           "nature": "jolly",
-          "ability": "ABILITY_NATURAL_CURE",
+          "ability": [30],
           "heldItem": "ITEM_ALTARIANITE",
           "moves": [349, 89, 337, 216],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -2266,7 +2271,7 @@
           "lvl": 201,
           "id": 1107,
           "nature": "hasty",
-          "ability": "ABILITY_SERENE_GRACE",
+          "ability": [32],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [549, 409, 94, 396],
           "ev": [0, 6, 0, 252, 0, 252]
@@ -2275,7 +2280,7 @@
           "lvl": 201,
           "id": 675,
           "nature": "adamant",
-          "ability": "ABILITY_IRON_FIST",
+          "ability": [89],
           "heldItem": "ITEM_PUNCHING_GLOVE",
           "moves": [409, 282, 7, 9],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -2284,7 +2289,7 @@
           "lvl": 201,
           "id": 1322,
           "nature": "adamant",
-          "ability": "ABILITY_PURIFYING_SALT",
+          "ability": [272],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [794, 89, 359, 105],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -2293,7 +2298,7 @@
           "lvl": 201,
           "id": 1001,
           "nature": "adamant",
-          "ability": "ABILITY_HUSTLE",
+          "ability": [55],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [348, 409, 263, 767],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -2302,7 +2307,7 @@
           "lvl": 200,
           "id": 948,
           "nature": "timid",
-          "ability": "ABILITY_STEADFAST",
+          "ability": [80],
           "heldItem": "ITEM_LUCARIONITE",
           "moves": [396, 431, 410, 406],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2311,7 +2316,7 @@
           "lvl": 200,
           "id": 1375,
           "nature": "adamant",
-          "ability": "ABILITY_SUPREME_OVERLORD",
+          "ability": [293],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [14, 282, 443, 389],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -2343,7 +2348,7 @@
           "lvl": 47,
           "id": 962,
           "nature": "timid",
-          "ability": "ABILITY_DROUGHT",
+          "ability": [70],
           "heldItem": "ITEM_HEAT_ROCK",
           "moves": [53, 412, 46, 745],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2352,7 +2357,7 @@
           "lvl": 47,
           "id": 1406,
           "nature": "timid",
-          "ability": "ABILITY_PROTOSYNTHESIS",
+          "ability": [281],
           "heldItem": "ITEM_CHOICE_SCARF",
           "moves": [830, 53, 406, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2361,7 +2366,7 @@
           "lvl": 47,
           "id": 1340,
           "nature": "modest",
-          "ability": "ABILITY_CHLOROPHYLL",
+          "ability": [34],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [202, 53, 745, 241],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2370,15 +2375,16 @@
           "lvl": 47,
           "id": 1064,
           "nature": "bold",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_LEFTOVERS",
-          "moves": [85, 315, 261, 220]
+          "moves": [85, 315, 261, 220],
+          "ev": [0, 0, 252, 252, 6, 0]
         },
         {
           "lvl": 47,
           "id": 324,
           "nature": "quiet",
-          "ability": "ABILITY_DROUGHT",
+          "ability": [70],
           "heldItem": "ITEM_WHITE_HERB",
           "moves": [315, 414, 76, 153],
           "ev": [252, 6, 0, 252, 0, 0]
@@ -2387,7 +2393,7 @@
           "lvl": 47,
           "id": 1493,
           "nature": "adamant",
-          "ability": "ABILITY_BLAZE",
+          "ability": [66],
           "heldItem": "ITEM_INFERNAPITE",
           "moves": [394, 370, 183, 9],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -2420,7 +2426,7 @@
           "lvl": 71,
           "id": 946,
           "nature": "jolly",
-          "ability": "ABILITY_LIMBER",
+          "ability": [7],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [252, 216, 9, 370],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -2430,7 +2436,7 @@
           "lvl": 71,
           "id": 715,
           "nature": "timid",
-          "ability": "ABILITY_INFILTRATOR",
+          "ability": [151],
           "heldItem": "ITEM_CHOICE_SPECS",
           "moves": [177, 406, 588, 399],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2439,7 +2445,7 @@
           "lvl": 71,
           "id": 1291,
           "nature": "jolly",
-          "ability": "ABILITY_PROTEAN",
+          "ability": [168],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [282, 800, 585, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -2448,7 +2454,7 @@
           "lvl": 71,
           "id": 609,
           "nature": "timid",
-          "ability": "ABILITY_FLASH_FIRE",
+          "ability": [18],
           "heldItem": "ITEM_CHARCOAL",
           "moves": [53, 247, 94, 261],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2457,7 +2463,7 @@
           "lvl": 71,
           "id": 1429,
           "nature": "jolly",
-          "ability": "ABILITY_QUARK_DRIVE",
+          "ability": [282],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [535, 840, 428, 224],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -2466,7 +2472,7 @@
           "lvl": 71,
           "id": 1492,
           "nature": "bold",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_EMPOLEONITE_D",
           "moves": [57, 431, 92, 355],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -2719,7 +2725,7 @@
           "lvl": 80,
           "id": 727,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [252, 628, 394, 525],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -2728,7 +2734,7 @@
           "lvl": 80,
           "id": 701,
           "nature": "adamant",
-          "ability": "ABILITY_UNBURDEN",
+          "ability": [84],
           "heldItem": "ITEM_WHITE_HERB",
           "moves": [370, 514, 14, 398],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -2737,7 +2743,7 @@
           "lvl": 80,
           "id": 332,
           "nature": "timid",
-          "ability": "ABILITY_WATER_ABSORB",
+          "ability": [11],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [412, 389, 399, 745],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2746,7 +2752,7 @@
           "lvl": 80,
           "id": 1397,
           "nature": "timid",
-          "ability": "ABILITY_BEADS_OF_RUIN",
+          "ability": [287],
           "heldItem": "ITEM_CHOICE_SPECS",
           "moves": [257, 399, 94, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2755,7 +2761,7 @@
           "lvl": 80,
           "id": 937,
           "nature": "modest",
-          "ability": "ABILITY_SOLID_ROCK",
+          "ability": [116],
           "heldItem": "ITEM_CAMERUPTITE",
           "moves": [257, 246, 414, 284],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2764,7 +2770,7 @@
           "lvl": 80,
           "id": 955,
           "nature": "jolly",
-          "ability": "ABILITY_DROUGHT",
+          "ability": [70],
           "heldItem": "ITEM_RED_ORB",
           "moves": [621, 7, 706, 157],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -2796,7 +2802,7 @@
           "lvl": 80,
           "id": 663,
           "nature": "jolly",
-          "ability": "ABILITY_GALE_WINGS",
+          "ability": [177],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [366, 413, 394, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -2805,7 +2811,7 @@
           "lvl": 80,
           "id": 497,
           "nature": "timid",
-          "ability": "ABILITY_CONTRARY",
+          "ability": [126],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [438, 406, 237, 137],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2814,7 +2820,7 @@
           "lvl": 80,
           "id": 1482,
           "nature": "timid",
-          "ability": "ABILITY_OVERCOAT",
+          "ability": [142],
           "heldItem": "ITEM_THROAT_SPRAY",
           "moves": [705, 656, 396, 431],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2823,7 +2829,7 @@
           "lvl": 80,
           "id": 1519,
           "nature": "jolly",
-          "ability": "ABILITY_FLASH_FIRE",
+          "ability": [18],
           "heldItem": "ITEM_CENTISKITE",
           "moves": [645, 141, 282, 439],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -2853,7 +2859,7 @@
           "lvl": 80,
           "id": 1307,
           "nature": "jolly",
-          "ability": "ABILITY_IRON_FIST",
+          "ability": [89],
           "heldItem": "ITEM_PUNCHING_GLOVE",
           "moves": [409, 9, 7, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -2862,7 +2868,7 @@
           "lvl": 80,
           "id": 500,
           "nature": "jolly",
-          "ability": "ABILITY_BULL_RUSH",
+          "ability": [323],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [394, 89, 458, 370],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -2871,7 +2877,7 @@
           "lvl": 80,
           "id": 635,
           "nature": "timid",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_CHOICE_SPECS",
           "moves": [399, 406, 431, 56],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2880,7 +2886,7 @@
           "lvl": 80,
           "id": 925,
           "nature": "timid",
-          "ability": "ABILITY_FLASH_FIRE",
+          "ability": [18],
           "heldItem": "ITEM_HOUNDOOMINITE",
           "moves": [53, 752, 188, 745],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2912,7 +2918,7 @@
           "lvl": 30,
           "id": 1513,
           "nature": "adamant",
-          "ability": "ABILITY_STRONG_JAW",
+          "ability": [173],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [242, 536, 317, 280]
         },
@@ -2920,7 +2926,7 @@
           "lvl": 30,
           "id": 402,
           "nature": "jolly",
-          "ability": "ABILITY_TECHNICIAN",
+          "ability": [101],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [451, 525, 332, 249]
         },
@@ -2928,7 +2934,7 @@
           "lvl": 31,
           "id": 227,
           "nature": "impish",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [211, 65, 355, 92]
         },
@@ -2936,9 +2942,10 @@
           "lvl": 32,
           "id": 930,
           "nature": "timid",
-          "ability": "ABILITY_TRACE",
+          "ability": [36],
           "heldItem": "ITEM_WISE_GLASSES",
-          "moves": [579, 847, 345, 247]
+          "moves": [579, 847, 345, 247],
+          "ev": [0, 0, 0, 80, 0, 0]
         }
       ],
       "script": "MauvilleCity_EventScript_BattleWally",
@@ -2965,7 +2972,7 @@
           "lvl": 34,
           "id": 702,
           "nature": "timid",
-          "ability": "ABILITY_ELECTRIC_SURGE",
+          "ability": [226],
           "heldItem": "ITEM_TERRAIN_EXTENDER",
           "moves": [572, 523, 579, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2974,7 +2981,7 @@
           "lvl": 34,
           "id": 1329,
           "nature": "timid",
-          "ability": "ABILITY_VOLT_ABSORB",
+          "ability": [10],
           "heldItem": "ITEM_CHARTI_BERRY",
           "moves": [403, 529, 523, 355],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2983,7 +2990,7 @@
           "lvl": 34,
           "id": 82,
           "nature": "modest",
-          "ability": "ABILITY_ANALYTIC",
+          "ability": [148],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [351, 430, 523, 161],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -2992,7 +2999,7 @@
           "lvl": 34,
           "id": 1478,
           "nature": "modest",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_OCCA_BERRY",
           "moves": [405, 403, 412, 452],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -3001,7 +3008,7 @@
           "lvl": 34,
           "id": 1489,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_LUXRITE",
           "moves": [422, 44, 662, 423],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3183,7 +3190,7 @@
           "lvl": 200,
           "id": 1359,
           "nature": "modest",
-          "ability": "ABILITY_TOXIC_DEBRIS",
+          "ability": [295],
           "heldItem": "ITEM_BLACK_SLUDGE",
           "moves": [447, 237, 484, 408],
           "ev": [6, 0, 0, 252, 0, 252],
@@ -3194,7 +3201,7 @@
           "lvl": 200,
           "id": 882,
           "nature": "adamant",
-          "ability": "ABILITY_STRONG_JAW",
+          "ability": [173],
           "heldItem": "ITEM_QUICK_CLAW",
           "moves": [242, 662, 703, 246],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -3204,7 +3211,7 @@
           "lvl": 200,
           "id": 149,
           "nature": "gentle",
-          "ability": "ABILITY_MULTISCALE",
+          "ability": [136],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [245, 349, 401, 200],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -3215,7 +3222,7 @@
           "lvl": 200,
           "id": 1291,
           "nature": "adamant",
-          "ability": "ABILITY_PROTEAN",
+          "ability": [168],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [400, 369, 585, 412],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -3226,7 +3233,7 @@
           "lvl": 200,
           "id": 1294,
           "nature": "modest",
-          "ability": "ABILITY_UNAWARE",
+          "ability": [109],
           "heldItem": "ITEM_THROAT_SPRAY",
           "moves": [557, 508, 304, 801],
           "ev": [6, 0, 0, 252, 0, 252],
@@ -3237,7 +3244,7 @@
           "lvl": 200,
           "id": 697,
           "nature": "adamant",
-          "ability": "ABILITY_STRONG_JAW",
+          "ability": [173],
           "heldItem": "ITEM_METRONOME",
           "moves": [305, 157, 242, 337],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -3271,7 +3278,7 @@
           "lvl": 200,
           "id": 887,
           "nature": "naive",
-          "ability": "ABILITY_INFILTRATOR",
+          "ability": [151],
           "heldItem": "ITEM_DRACO_PLATE",
           "moves": [699, 508, 261, 369],
           "ev": [0, 252, 0, 6, 0, 252]
@@ -3280,7 +3287,7 @@
           "lvl": 200,
           "id": 928,
           "nature": "adamant",
-          "ability": "ABILITY_BLAZE",
+          "ability": [66],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [490, 394, 370, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3289,7 +3296,7 @@
           "lvl": 200,
           "id": 903,
           "nature": "jolly",
-          "ability": "ABILITY_POISON_TOUCH",
+          "ability": [143],
           "heldItem": "ITEM_CHOICE_SCARF",
           "moves": [370, 757, 369, 157],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3298,7 +3305,7 @@
           "lvl": 200,
           "id": 1390,
           "nature": "adamant",
-          "ability": "ABILITY_THERMAL_EXCHANGE",
+          "ability": [270],
           "heldItem": "ITEM_LOADED_DICE",
           "moves": [333, 729, 89, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3307,7 +3314,7 @@
           "lvl": 200,
           "id": 917,
           "nature": "adamant",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_GYARADOSITE",
           "moves": [349, 127, 242, 423],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3316,7 +3323,7 @@
           "lvl": 200,
           "id": 1375,
           "nature": "adamant",
-          "ability": "ABILITY_SUPREME_OVERLORD",
+          "ability": [293],
           "heldItem": "ITEM_BLACK_GLASSES",
           "moves": [443, 389, 67, 799],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3346,7 +3353,7 @@
           "lvl": 200,
           "id": 1501,
           "nature": "timid",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_GENGARITE",
           "moves": [95, 188, 247, 417],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -3355,7 +3362,7 @@
           "lvl": 200,
           "id": 928,
           "nature": "jolly",
-          "ability": "ABILITY_STRIKER",
+          "ability": [311],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [490, 280, 14, 299],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3364,7 +3371,7 @@
           "lvl": 200,
           "id": 962,
           "nature": "timid",
-          "ability": "ABILITY_SNOW_WARNING",
+          "ability": [117],
           "heldItem": "ITEM_SHELL_BELL",
           "moves": [59, 659, 607, 575],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -3373,7 +3380,7 @@
           "lvl": 200,
           "id": 929,
           "nature": "impish",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [330, 157, 89, 447],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -3382,7 +3389,7 @@
           "lvl": 200,
           "id": 700,
           "nature": "bold",
-          "ability": "ABILITY_PIXILATE",
+          "ability": [182],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [347, 231, 607, 475],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -3391,7 +3398,7 @@
           "lvl": 200,
           "id": 773,
           "nature": "jolly",
-          "ability": "ABILITY_RKS_SYSTEM",
+          "ability": [225],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [422, 157, 577, 674],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3421,7 +3428,7 @@
           "lvl": 76,
           "id": 786,
           "nature": "timid",
-          "ability": "ABILITY_PSYCHIC_SURGE",
+          "ability": [227],
           "heldItem": "ITEM_TERRAIN_EXTENDER",
           "moves": [587, 347, 94, 85],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -3430,7 +3437,7 @@
           "lvl": 76,
           "id": 1344,
           "nature": "timid",
-          "ability": "ABILITY_SPEED_BOOST",
+          "ability": [3],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [785, 403, 431, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -3439,7 +3446,7 @@
           "lvl": 76,
           "id": 915,
           "nature": "jolly",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_KANGASKHANITE",
           "moves": [614, 34, 242, 280],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3675,7 +3682,7 @@
           "lvl": 44,
           "id": 526,
           "nature": "adamant",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_CUSTAP_BERRY",
           "moves": [157, 89, 153, 706],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3684,7 +3691,7 @@
           "lvl": 44,
           "id": 332,
           "nature": "mild",
-          "ability": "ABILITY_WATER_ABSORB",
+          "ability": [11],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [412, 389, 399, 745],
           "ev": [0, 6, 0, 252, 0, 252]
@@ -3693,15 +3700,16 @@
           "lvl": 44,
           "id": 1514,
           "nature": "relaxed",
-          "ability": "ABILITY_STEAM_ENGINE",
+          "ability": [243],
           "heldItem": "ITEM_AIR_BALLOON",
-          "moves": [53, 157, 261, 505]
+          "moves": [53, 157, 261, 505],
+          "ev": [252, 0, 252, 0, 6, 0]
         },
         {
           "lvl": 44,
           "id": 701,
           "nature": "jolly",
-          "ability": "ABILITY_UNBURDEN",
+          "ability": [84],
           "heldItem": "ITEM_WHITE_HERB",
           "moves": [370, 514, 14, 398],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3710,7 +3718,7 @@
           "lvl": 44,
           "id": 1397,
           "nature": "timid",
-          "ability": "ABILITY_BEADS_OF_RUIN",
+          "ability": [287],
           "heldItem": "ITEM_CHOICE_SPECS",
           "moves": [53, 399, 94, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -3719,7 +3727,7 @@
           "lvl": 44,
           "id": 937,
           "nature": "modest",
-          "ability": "ABILITY_SOLID_ROCK",
+          "ability": [116],
           "heldItem": "ITEM_CAMERUPTITE",
           "moves": [53, 246, 414, 303],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -3749,7 +3757,7 @@
           "lvl": 44,
           "id": 500,
           "nature": "adamant",
-          "ability": "ABILITY_BULL_RUSH",
+          "ability": [323],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [394, 89, 389, 26],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3758,7 +3766,7 @@
           "lvl": 43,
           "id": 994,
           "nature": "jolly",
-          "ability": "ABILITY_ROCK_HEAD",
+          "ability": [69],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [394, 458, 665, 530],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3767,7 +3775,7 @@
           "lvl": 43,
           "id": 534,
           "nature": "adamant",
-          "ability": "ABILITY_SHEER_FORCE",
+          "ability": [125],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [492, 183, 8, 339],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3776,7 +3784,7 @@
           "lvl": 43,
           "id": 1480,
           "nature": "timid",
-          "ability": "ABILITY_CORROSION",
+          "ability": [212],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [53, 92, 188, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -3785,7 +3793,7 @@
           "lvl": 44,
           "id": 925,
           "nature": "timid",
-          "ability": "ABILITY_FLASH_FIRE",
+          "ability": [18],
           "heldItem": "ITEM_HOUNDOOMINITE",
           "moves": [53, 399, 188, 745],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -3815,7 +3823,7 @@
           "lvl": 42,
           "id": 346,
           "nature": "modest",
-          "ability": "ABILITY_STORM_DRAIN",
+          "ability": [114],
           "heldItem": "ITEM_CHOPLE_BERRY",
           "moves": [408, 202, 414, 188],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -3824,7 +3832,7 @@
           "lvl": 42,
           "id": 1350,
           "nature": "jolly",
-          "ability": "ABILITY_ROCKY_PAYLOAD",
+          "ability": [276],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [282, 744, 389, 157],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3833,7 +3841,7 @@
           "lvl": 43,
           "id": 1387,
           "nature": "adamant",
-          "ability": "ABILITY_SOLID_ROCK",
+          "ability": [116],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [157, 846, 8, 665],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3936,7 +3944,7 @@
           "lvl": 43,
           "id": 1519,
           "nature": "jolly",
-          "ability": "ABILITY_FLASH_FIRE",
+          "ability": [18],
           "heldItem": "ITEM_CENTISKITE",
           "moves": [404, 645, 242, 439],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -3945,7 +3953,7 @@
           "lvl": 43,
           "id": 497,
           "nature": "timid",
-          "ability": "ABILITY_CONTRARY",
+          "ability": [126],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [438, 406, 237, 137],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -3954,7 +3962,7 @@
           "lvl": 43,
           "id": 1403,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [445, 803, 370, 429],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -4217,7 +4225,7 @@
           "lvl": 59,
           "id": 1003,
           "nature": "timid",
-          "ability": "ABILITY_ILLUSION",
+          "ability": [149],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [771, 396, 304, 188],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -4226,7 +4234,7 @@
           "lvl": 59,
           "id": 1399,
           "nature": "jolly",
-          "ability": "ABILITY_QUARK_DRIVE",
+          "ability": [282],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [370, 719, 339, 282],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -4235,7 +4243,7 @@
           "lvl": 59,
           "id": 1424,
           "nature": "modest",
-          "ability": "ABILITY_MINDS_EYE",
+          "ability": [300],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [414, 831, 304, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -4244,7 +4252,7 @@
           "lvl": 59,
           "id": 1356,
           "nature": "jolly",
-          "ability": "ABILITY_REGENERATOR",
+          "ability": [144],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [808, 401, 337, 216],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -4254,7 +4262,7 @@
           "lvl": 59,
           "id": 1527,
           "nature": "jolly",
-          "ability": "ABILITY_TRUANT",
+          "ability": [54],
           "heldItem": "ITEM_SLAKITE",
           "moves": [216, 585, 614, 89],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -4264,7 +4272,7 @@
           "lvl": 59,
           "id": 862,
           "nature": "jolly",
-          "ability": "ABILITY_GUTS",
+          "ability": [62],
           "heldItem": "ITEM_FLAME_ORB",
           "moves": [263, 282, 280, 722],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -4391,14 +4399,14 @@
           "lvl": 202,
           "id": 261,
           "nature": "adamant",
-          "ability": "ABILITY_QUICK_FEET",
+          "ability": [95],
           "moves": [44, 33]
         },
         {
           "lvl": 202,
           "id": 318,
           "nature": "adamant",
-          "ability": "ABILITY_ROUGH_SKIN",
+          "ability": [24],
           "moves": [454, 44]
         }
       ],
@@ -4477,7 +4485,7 @@
           "lvl": 200,
           "id": 1531,
           "nature": "timid",
-          "ability": "ABILITY_NATURAL_CURE",
+          "ability": [30],
           "heldItem": "ITEM_MIRACLE_SEED",
           "moves": [202, 124, 79, 237]
         },
@@ -4485,7 +4493,7 @@
           "lvl": 201,
           "id": 1314,
           "nature": "calm",
-          "ability": "ABILITY_HARVEST",
+          "ability": [139],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [73, 182, 72, 263]
         },
@@ -4493,7 +4501,7 @@
           "lvl": 201,
           "id": 185,
           "nature": "adamant",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [317, 525, 813, 614]
         },
@@ -4501,7 +4509,7 @@
           "lvl": 201,
           "id": 44,
           "nature": "bold",
-          "ability": "ABILITY_STENCH",
+          "ability": [1],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [72, 78, 73, 235]
         },
@@ -4509,7 +4517,7 @@
           "lvl": 201,
           "id": 44,
           "nature": "bold",
-          "ability": "ABILITY_STENCH",
+          "ability": [1],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [124, 77, 73, 235]
         }
@@ -4538,7 +4546,7 @@
           "lvl": 201,
           "id": 45,
           "nature": "bold",
-          "ability": "ABILITY_EFFECT_SPORE",
+          "ability": [27],
           "heldItem": "ITEM_BLACK_SLUDGE",
           "moves": [202, 92, 188, 235],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -4547,7 +4555,7 @@
           "lvl": 201,
           "id": 1315,
           "nature": "calm",
-          "ability": "ABILITY_HARVEST",
+          "ability": [139],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [73, 182, 202, 304],
           "ev": [252, 0, 0, 6, 252, 0]
@@ -4556,7 +4564,7 @@
           "lvl": 201,
           "id": 185,
           "nature": "adamant",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [157, 632, 813, 389],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -4565,7 +4573,7 @@
           "lvl": 201,
           "id": 182,
           "nature": "bold",
-          "ability": "ABILITY_CHLOROPHYLL",
+          "ability": [34],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [202, 78, 607, 235],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -4574,7 +4582,7 @@
           "lvl": 200,
           "id": 1531,
           "nature": "timid",
-          "ability": "ABILITY_TECHNICIAN",
+          "ability": [101],
           "heldItem": "ITEM_ROSERADITE",
           "moves": [72, 124, 79, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -5089,7 +5097,7 @@
           "lvl": 203,
           "id": 427,
           "nature": "adamant",
-          "ability": "ABILITY_LIMBER",
+          "ability": [7],
           "heldItem": "ITEM_ORAN_BERRY",
           "moves": [252, 98, 183]
         },
@@ -5097,7 +5105,7 @@
           "lvl": 202,
           "id": 714,
           "nature": "timid",
-          "ability": "ABILITY_INFILTRATOR",
+          "ability": [151],
           "heldItem": "ITEM_ORAN_BERRY",
           "moves": [16, 71, 239]
         },
@@ -5105,7 +5113,7 @@
           "lvl": 201,
           "id": 393,
           "nature": "serious",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_ORAN_BERRY",
           "moves": [61, 454, 610, 64]
         }
@@ -5896,7 +5904,7 @@
           "lvl": 200,
           "id": 828,
           "nature": "timid",
-          "ability": "ABILITY_UNBURDEN",
+          "ability": [84],
           "heldItem": "ITEM_DARK_GEM",
           "moves": [399, 389, 448, 94]
         },
@@ -5904,7 +5912,7 @@
           "lvl": 200,
           "id": 1212,
           "nature": "timid",
-          "ability": "ABILITY_GULP_MISSILE",
+          "ability": [241],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [355, 57, 196, 403]
         },
@@ -5912,7 +5920,7 @@
           "lvl": 200,
           "id": 916,
           "nature": "jolly",
-          "ability": "ABILITY_MOLD_BREAKER",
+          "ability": [104],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [404, 280, 157, 15]
         }
@@ -5941,7 +5949,7 @@
           "lvl": 201,
           "id": 994,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [424, 245, 422, 242]
         },
@@ -5949,7 +5957,7 @@
           "lvl": 201,
           "id": 123,
           "nature": "jolly",
-          "ability": "ABILITY_TECHNICIAN",
+          "ability": [101],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [14, 332, 451, 249]
         },
@@ -5957,7 +5965,7 @@
           "lvl": 201,
           "id": 457,
           "nature": "timid",
-          "ability": "ABILITY_STORM_DRAIN",
+          "ability": [114],
           "heldItem": "ITEM_WISE_GLASSES",
           "moves": [505, 62, 314, 468]
         }
@@ -5986,7 +5994,7 @@
           "lvl": 202,
           "id": 924,
           "nature": "jolly",
-          "ability": "ABILITY_GUTS",
+          "ability": [62],
           "heldItem": "ITEM_FLAME_ORB",
           "moves": [182, 157, 280, 812]
         },
@@ -5994,7 +6002,7 @@
           "lvl": 202,
           "id": 992,
           "nature": "sassy",
-          "ability": "ABILITY_WATER_ABSORB",
+          "ability": [11],
           "heldItem": "ITEM_SHUCA_BERRY",
           "moves": [436, 427, 157, 318]
         },
@@ -6002,7 +6010,7 @@
           "lvl": 202,
           "id": 184,
           "nature": "adamant",
-          "ability": "ABILITY_HUGE_POWER",
+          "ability": [37],
           "heldItem": "ITEM_MYSTIC_WATER",
           "moves": [401, 585, 454, 8]
         }
@@ -6033,7 +6041,7 @@
           "lvl": 202,
           "id": 1312,
           "nature": "adamant",
-          "ability": "ABILITY_WELL_BAKED_BODY",
+          "ability": [273],
           "heldItem": "ITEM_PIXIE_PLATE",
           "moves": [585, 706, 34, 91]
         },
@@ -6041,7 +6049,7 @@
           "lvl": 202,
           "id": 750,
           "nature": "impish",
-          "ability": "ABILITY_STAMINA",
+          "ability": [192],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [632, 706, 317, 486]
         },
@@ -6049,7 +6057,7 @@
           "lvl": 202,
           "id": 615,
           "nature": "timid",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_NEVER_MELT_ICE",
           "moves": [575, 420, 246, 105]
         }
@@ -6095,7 +6103,7 @@
           "lvl": 202,
           "id": 272,
           "nature": "timid",
-          "ability": "ABILITY_OWN_TEMPO",
+          "ability": [20],
           "heldItem": "ITEM_COBA_BERRY",
           "moves": [72, 61, 62, 252]
         },
@@ -6103,7 +6111,7 @@
           "lvl": 202,
           "id": 508,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_SILK_SCARF",
           "moves": [516, 242, 422, 662]
         },
@@ -6111,7 +6119,7 @@
           "lvl": 202,
           "id": 1371,
           "nature": "impish",
-          "ability": "ABILITY_UNAWARE",
+          "ability": [109],
           "heldItem": "ITEM_BLACK_SLUDGE",
           "moves": [398, 525, 317, 105]
         }
@@ -6297,7 +6305,7 @@
           "lvl": 203,
           "id": 311,
           "nature": "timid",
-          "ability": "ABILITY_TRANSISTOR",
+          "ability": [262],
           "heldItem": "ITEM_MAGNET",
           "moves": [448, 324, 529, 452]
         },
@@ -6305,7 +6313,7 @@
           "lvl": 202,
           "id": 226,
           "nature": "calm",
-          "ability": "ABILITY_WATER_ABSORB",
+          "ability": [11],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [61, 196, 403, 355]
         }
@@ -6360,7 +6368,7 @@
           "lvl": 203,
           "id": 312,
           "nature": "jolly",
-          "ability": "ABILITY_GALVANIZE",
+          "ability": [206],
           "heldItem": "ITEM_MAGNET",
           "moves": [34, 252, 448, 98]
         },
@@ -6368,7 +6376,7 @@
           "lvl": 202,
           "id": 112,
           "nature": "impish",
-          "ability": "ABILITY_LIGHTNING_ROD",
+          "ability": [31],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [317, 525, 280, 15]
         }
@@ -6397,7 +6405,7 @@
           "lvl": 203,
           "id": 978,
           "nature": "modest",
-          "ability": "ABILITY_QUICK_DRAW",
+          "ability": [259],
           "heldItem": "ITEM_WISE_GLASSES",
           "moves": [60, 148, 448, 476]
         },
@@ -6405,7 +6413,7 @@
           "lvl": 203,
           "id": 740,
           "nature": "adamant",
-          "ability": "ABILITY_IRON_FIST",
+          "ability": [89],
           "heldItem": "ITEM_PUNCHING_GLOVE",
           "moves": [8, 183, 420, 409]
         },
@@ -6413,7 +6421,7 @@
           "lvl": 203,
           "id": 275,
           "nature": "jolly",
-          "ability": "ABILITY_WIND_RIDER",
+          "ability": [274],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [252, 400, 75, 389]
         },
@@ -6421,7 +6429,7 @@
           "lvl": 203,
           "id": 171,
           "nature": "modest",
-          "ability": "ABILITY_WATER_ABSORB",
+          "ability": [11],
           "heldItem": "ITEM_SHUCA_BERRY",
           "moves": [351, 505, 196, 324]
         }
@@ -6450,7 +6458,7 @@
           "lvl": 203,
           "id": 972,
           "nature": "adamant",
-          "ability": "ABILITY_HARVEST",
+          "ability": [139],
           "heldItem": "ITEM_YACHE_BERRY",
           "moves": [527, 402, 121, 280]
         },
@@ -6458,7 +6466,7 @@
           "lvl": 203,
           "id": 631,
           "nature": "timid",
-          "ability": "ABILITY_FLASH_FIRE",
+          "ability": [18],
           "heldItem": "ITEM_CHARCOAL",
           "moves": [483, 202, 745, 261]
         },
@@ -6466,7 +6474,7 @@
           "lvl": 203,
           "id": 1327,
           "nature": "bold",
-          "ability": "ABILITY_ELECTROMORPHOSIS",
+          "ability": [280],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [436, 341, 330, 303]
         },
@@ -6474,7 +6482,7 @@
           "lvl": 203,
           "id": 67,
           "nature": "jolly",
-          "ability": "ABILITY_GUTS",
+          "ability": [62],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [409, 282, 339, 157]
         }
@@ -6503,7 +6511,7 @@
           "lvl": 201,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [744, 441, 44, 369]
         },
@@ -6511,7 +6519,7 @@
           "lvl": 201,
           "id": 375,
           "nature": "impish",
-          "ability": "ABILITY_TOUGH_CLAWS",
+          "ability": [181],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [232, 418, 429, 525]
         },
@@ -6519,7 +6527,7 @@
           "lvl": 201,
           "id": 547,
           "nature": "timid",
-          "ability": "ABILITY_PRANKSTER",
+          "ability": [158],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [202, 78, 73, 607]
         },
@@ -6527,7 +6535,7 @@
           "lvl": 202,
           "id": 891,
           "nature": "adamant",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_PUNCHING_GLOVE",
           "moves": [409, 7, 9, 8]
         },
@@ -6535,9 +6543,10 @@
           "lvl": 200,
           "id": 256,
           "nature": "modest",
-          "ability": "ABILITY_BLAZE",
+          "ability": [66],
           "heldItem": "ITEM_FOCUS_SASH",
-          "moves": [483, 745, 98, 68]
+          "moves": [483, 745, 98, 68],
+          "ev": [0, 0, 0, 0, 0, 80]
         }
       ],
       "youPicked": "Treecko",
@@ -6565,7 +6574,7 @@
           "lvl": 201,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [744, 441, 44, 369]
         },
@@ -6573,7 +6582,7 @@
           "lvl": 201,
           "id": 1005,
           "nature": "calm",
-          "ability": "ABILITY_SAP_SIPPER",
+          "ability": [157],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [225, 431, 352, 721]
         },
@@ -6581,7 +6590,7 @@
           "lvl": 201,
           "id": 976,
           "nature": "jolly",
-          "ability": "ABILITY_IMMUNITY",
+          "ability": [17],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [172, 261, 343, 98]
         },
@@ -6589,7 +6598,7 @@
           "lvl": 202,
           "id": 891,
           "nature": "adamant",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_PUNCHING_GLOVE",
           "moves": [409, 7, 9, 8]
         },
@@ -6597,9 +6606,10 @@
           "lvl": 200,
           "id": 259,
           "nature": "brave",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_FOCUS_SASH",
-          "moves": [525, 157, 666, 742]
+          "moves": [525, 157, 666, 742],
+          "ev": [0, 80, 0, 0, 0, 0]
         }
       ],
       "youPicked": "Torchic",
@@ -6627,7 +6637,7 @@
           "lvl": 201,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [744, 441, 44, 369]
         },
@@ -6635,7 +6645,7 @@
           "lvl": 201,
           "id": 148,
           "nature": "impish",
-          "ability": "ABILITY_SHED_SKIN",
+          "ability": [61],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [527, 82, 34, 86]
         },
@@ -6643,7 +6653,7 @@
           "lvl": 201,
           "id": 368,
           "nature": "modest",
-          "ability": "ABILITY_DAZZLING",
+          "ability": [219],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [62, 352, 579, 94]
         },
@@ -6651,7 +6661,7 @@
           "lvl": 202,
           "id": 891,
           "nature": "adamant",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_PUNCHING_GLOVE",
           "moves": [409, 7, 9, 8]
         },
@@ -6659,9 +6669,10 @@
           "lvl": 200,
           "id": 253,
           "nature": "jolly",
-          "ability": "ABILITY_OVERGROW",
+          "ability": [65],
           "heldItem": "ITEM_FOCUS_SASH",
-          "moves": [348, 157, 614, 492]
+          "moves": [348, 157, 614, 492],
+          "ev": [0, 0, 0, 0, 0, 80]
         }
       ],
       "youPicked": "Mudkip",
@@ -6689,7 +6700,7 @@
           "lvl": 201,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [744, 441, 44, 369]
         },
@@ -6697,7 +6708,7 @@
           "lvl": 201,
           "id": 375,
           "nature": "impish",
-          "ability": "ABILITY_TOUGH_CLAWS",
+          "ability": [181],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [232, 418, 429, 525]
         },
@@ -6705,7 +6716,7 @@
           "lvl": 201,
           "id": 547,
           "nature": "timid",
-          "ability": "ABILITY_PRANKSTER",
+          "ability": [158],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [202, 78, 73, 607]
         },
@@ -6713,7 +6724,7 @@
           "lvl": 202,
           "id": 891,
           "nature": "adamant",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_PUNCHING_GLOVE",
           "moves": [409, 7, 9, 8]
         },
@@ -6721,9 +6732,10 @@
           "lvl": 200,
           "id": 256,
           "nature": "modest",
-          "ability": "ABILITY_BLAZE",
+          "ability": [66],
           "heldItem": "ITEM_FOCUS_SASH",
-          "moves": [483, 745, 98, 68]
+          "moves": [483, 745, 98, 68],
+          "ev": [0, 0, 0, 0, 0, 80]
         }
       ],
       "youPicked": "Treecko",
@@ -6751,7 +6763,7 @@
           "lvl": 201,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [744, 441, 44, 369]
         },
@@ -6759,7 +6771,7 @@
           "lvl": 201,
           "id": 1005,
           "nature": "calm",
-          "ability": "ABILITY_SAP_SIPPER",
+          "ability": [157],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [225, 431, 352, 721]
         },
@@ -6767,7 +6779,7 @@
           "lvl": 201,
           "id": 976,
           "nature": "jolly",
-          "ability": "ABILITY_IMMUNITY",
+          "ability": [17],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [172, 261, 343, 98]
         },
@@ -6775,7 +6787,7 @@
           "lvl": 202,
           "id": 891,
           "nature": "adamant",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_PUNCHING_GLOVE",
           "moves": [409, 7, 9, 8]
         },
@@ -6783,9 +6795,10 @@
           "lvl": 200,
           "id": 259,
           "nature": "brave",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_FOCUS_SASH",
-          "moves": [525, 157, 666, 742]
+          "moves": [525, 157, 666, 742],
+          "ev": [0, 80, 0, 0, 0, 0]
         }
       ],
       "youPicked": "Torchic",
@@ -6813,7 +6826,7 @@
           "lvl": 201,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [744, 441, 44, 369]
         },
@@ -6821,7 +6834,7 @@
           "lvl": 201,
           "id": 148,
           "nature": "impish",
-          "ability": "ABILITY_SHED_SKIN",
+          "ability": [61],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [527, 82, 34, 86]
         },
@@ -6829,7 +6842,7 @@
           "lvl": 201,
           "id": 368,
           "nature": "modest",
-          "ability": "ABILITY_DAZZLING",
+          "ability": [219],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [62, 352, 579, 94]
         },
@@ -6837,7 +6850,7 @@
           "lvl": 202,
           "id": 891,
           "nature": "adamant",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_PUNCHING_GLOVE",
           "moves": [409, 7, 9, 8]
         },
@@ -6845,9 +6858,10 @@
           "lvl": 200,
           "id": 253,
           "nature": "jolly",
-          "ability": "ABILITY_OVERGROW",
+          "ability": [65],
           "heldItem": "ITEM_FOCUS_SASH",
-          "moves": [348, 157, 614, 492]
+          "moves": [348, 157, 614, 492],
+          "ev": [0, 0, 0, 0, 0, 80]
         }
       ],
       "youPicked": "Mudkip",
@@ -6875,7 +6889,7 @@
           "lvl": 201,
           "id": 903,
           "nature": "jolly",
-          "ability": "ABILITY_UNBURDEN",
+          "ability": [84],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [269, 757, 370, 282],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -6884,7 +6898,7 @@
           "lvl": 201,
           "id": 596,
           "nature": "timid",
-          "ability": "ABILITY_COMPOUND_EYES",
+          "ability": [14],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [523, 87, 405, 202],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -6893,7 +6907,7 @@
           "lvl": 201,
           "id": 1511,
           "nature": "impish",
-          "ability": "ABILITY_UNNERVE",
+          "ability": [127],
           "heldItem": "ITEM_ROCKY_HELMET",
           "moves": [706, 65, 443, 355],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -6902,7 +6916,7 @@
           "lvl": 201,
           "id": 1528,
           "nature": "jolly",
-          "ability": "ABILITY_SHEER_FORCE",
+          "ability": [125],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [394, 157, 89, 276],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -6911,7 +6925,7 @@
           "lvl": 201,
           "id": 1175,
           "nature": "quiet",
-          "ability": "ABILITY_SCHOOLING",
+          "ability": [208],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [56, 58, 237, 742],
           "ev": [252, 6, 0, 252, 0, 0]
@@ -6920,7 +6934,7 @@
           "lvl": 200,
           "id": 930,
           "nature": "timid",
-          "ability": "ABILITY_TRACE",
+          "ability": [36],
           "heldItem": "ITEM_GARDEVOIRITE",
           "moves": [587, 94, 411, 85],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -6950,7 +6964,7 @@
           "lvl": 202,
           "id": 24,
           "nature": "adamant",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [398, 242, 389, 89],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -6959,7 +6973,7 @@
           "lvl": 202,
           "id": 1333,
           "nature": "jolly",
-          "ability": "ABILITY_POISON_TOUCH",
+          "ability": [143],
           "heldItem": "ITEM_NORMAL_GEM",
           "moves": [154, 398, 282, 577],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -6968,7 +6982,7 @@
           "lvl": 202,
           "id": 454,
           "nature": "jolly",
-          "ability": "ABILITY_POISON_TOUCH",
+          "ability": [143],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [252, 398, 409, 389],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -6977,7 +6991,7 @@
           "lvl": 202,
           "id": 1501,
           "nature": "timid",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [247, 94, 411, 188],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -6986,7 +7000,7 @@
           "lvl": 201,
           "id": 1386,
           "nature": "timid",
-          "ability": "ABILITY_QUARK_DRIVE",
+          "ability": [282],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [484, 554, 607, 412],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7017,7 +7031,7 @@
           "lvl": 202,
           "id": 998,
           "nature": "impish",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [390, 742, 269, 153],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -7026,7 +7040,7 @@
           "lvl": 202,
           "id": 1355,
           "nature": "jolly",
-          "ability": "ABILITY_FILTER",
+          "ability": [111],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [442, 789, 510, 632],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7035,7 +7049,7 @@
           "lvl": 202,
           "id": 452,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [747, 441, 423, 280],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7044,7 +7058,7 @@
           "lvl": 202,
           "id": 910,
           "nature": "jolly",
-          "ability": "ABILITY_SWARM",
+          "ability": [68],
           "heldItem": "ITEM_BEEDRILLITE",
           "moves": [14, 404, 398, 531],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7053,7 +7067,7 @@
           "lvl": 201,
           "id": 804,
           "nature": "timid",
-          "ability": "ABILITY_BEAST_BOOST",
+          "ability": [224],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [484, 406, 126, 417],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7083,7 +7097,7 @@
           "lvl": 202,
           "id": 980,
           "nature": "bold",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_BLACK_SLUDGE",
           "moves": [720, 501, 257, 188],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -7092,7 +7106,7 @@
           "lvl": 202,
           "id": 168,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [441, 224, 389, 400],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7101,7 +7115,7 @@
           "lvl": 202,
           "id": 73,
           "nature": "timid",
-          "ability": "ABILITY_CLEAR_BODY",
+          "ability": [29],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [56, 188, 508, 92],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7110,7 +7124,7 @@
           "lvl": 202,
           "id": 1518,
           "nature": "timid",
-          "ability": "ABILITY_PUNK_ROCK",
+          "ability": [244],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [716, 588, 847, 188],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7119,7 +7133,7 @@
           "lvl": 202,
           "id": 1506,
           "nature": "jolly",
-          "ability": "ABILITY_WEAK_ARMOR",
+          "ability": [133],
           "heldItem": "ITEM_GARBODORITE",
           "moves": [442, 34, 409, 89],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7128,7 +7142,7 @@
           "lvl": 201,
           "id": 793,
           "nature": "timid",
-          "ability": "ABILITY_BEAST_BOOST",
+          "ability": [224],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [484, 408, 607, 448],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7158,7 +7172,7 @@
           "lvl": 202,
           "id": 900,
           "nature": "jolly",
-          "ability": "ABILITY_SHARPNESS",
+          "ability": [292],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [760, 404, 665, 400],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7167,7 +7181,7 @@
           "lvl": 202,
           "id": 189,
           "nature": "jolly",
-          "ability": "ABILITY_AERILATE",
+          "ability": [184],
           "heldItem": "ITEM_YACHE_BERRY",
           "moves": [14, 38, 348, 633],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7176,7 +7190,7 @@
           "lvl": 202,
           "id": 47,
           "nature": "adamant",
-          "ability": "ABILITY_DRY_SKIN",
+          "ability": [87],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [147, 687, 141, 152],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7185,7 +7199,7 @@
           "lvl": 202,
           "id": 1505,
           "nature": "adamant",
-          "ability": "ABILITY_THICK_FAT",
+          "ability": [47],
           "heldItem": "ITEM_SNORLAXITE",
           "moves": [34, 453, 89, 486],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7194,7 +7208,7 @@
           "lvl": 201,
           "id": 795,
           "nature": "mild",
-          "ability": "ABILITY_BEAST_BOOST",
+          "ability": [224],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [405, 396, 58, 370],
           "ev": [0, 6, 0, 252, 0, 252]
@@ -7224,7 +7238,7 @@
           "lvl": 202,
           "id": 542,
           "nature": "jolly",
-          "ability": "ABILITY_SHARPNESS",
+          "ability": [292],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [348, 404, 535, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7233,7 +7247,7 @@
           "lvl": 202,
           "id": 996,
           "nature": "modest",
-          "ability": "ABILITY_RECKLESS",
+          "ability": [120],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [765, 85, 523, 431],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7242,7 +7256,7 @@
           "lvl": 202,
           "id": 558,
           "nature": "adamant",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_WHITE_HERB",
           "moves": [506, 404, 445, 282],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7251,7 +7265,7 @@
           "lvl": 202,
           "id": 1531,
           "nature": "timid",
-          "ability": "ABILITY_TECHNICIAN",
+          "ability": [101],
           "heldItem": "ITEM_ROSERADITE",
           "moves": [72, 124, 246, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7260,7 +7274,7 @@
           "lvl": 201,
           "id": 798,
           "nature": "jolly",
-          "ability": "ABILITY_BEAST_BOOST",
+          "ability": [224],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [348, 649, 535, 400],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7290,7 +7304,7 @@
           "lvl": 202,
           "id": 709,
           "nature": "impish",
-          "ability": "ABILITY_HARVEST",
+          "ability": [139],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [73, 109, 534, 739],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -7299,7 +7313,7 @@
           "lvl": 202,
           "id": 1337,
           "nature": "timid",
-          "ability": "ABILITY_CLEAR_BODY",
+          "ability": [29],
           "heldItem": "ITEM_YACHE_BERRY",
           "moves": [147, 73, 414, 202],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7308,7 +7322,7 @@
           "lvl": 202,
           "id": 284,
           "nature": "timid",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [485, 505, 58, 405],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7317,7 +7331,7 @@
           "lvl": 202,
           "id": 1497,
           "nature": "timid",
-          "ability": "ABILITY_COMPOUND_EYES",
+          "ability": [14],
           "heldItem": "ITEM_BUTTERFRITE",
           "moves": [485, 544, 405, 202],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7326,7 +7340,7 @@
           "lvl": 201,
           "id": 1394,
           "nature": "bold",
-          "ability": "ABILITY_TABLETS_OF_RUIN",
+          "ability": [286],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [73, 78, 202, 805],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -7356,23 +7370,25 @@
           "lvl": 202,
           "id": 1524,
           "nature": "relaxed",
-          "ability": "ABILITY_HEAVY_METAL",
+          "ability": [134],
           "heldItem": "ITEM_EVIOLITE",
-          "moves": [431, 406, 706, 527]
+          "moves": [431, 406, 706, 527],
+          "ev": [252, 0, 252, 6, 0, 0]
         },
         {
           "lvl": 202,
           "id": 437,
           "nature": "relaxed",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_OCCA_BERRY",
-          "moves": [94, 360, 706, 89]
+          "moves": [94, 360, 706, 89],
+          "ev": [252, 0, 252, 0, 6, 0]
         },
         {
           "lvl": 202,
           "id": 1393,
           "nature": "timid",
-          "ability": "ABILITY_GOOD_AS_GOLD",
+          "ability": [283],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [417, 247, 804, 411],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7381,7 +7397,7 @@
           "lvl": 202,
           "id": 1000,
           "nature": "jolly",
-          "ability": "ABILITY_SHARPNESS",
+          "ability": [292],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [649, 282, 536, 535],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7390,7 +7406,7 @@
           "lvl": 201,
           "id": 1430,
           "nature": "timid",
-          "ability": "ABILITY_QUARK_DRIVE",
+          "ability": [282],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [841, 475, 550, 403],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7420,7 +7436,7 @@
           "lvl": 202,
           "id": 632,
           "nature": "jolly",
-          "ability": "ABILITY_HUSTLE",
+          "ability": [55],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [625, 443, 404, 276],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7429,15 +7445,16 @@
           "lvl": 202,
           "id": 411,
           "nature": "sassy",
-          "ability": "ABILITY_DAUNTLESS_SHIELD",
+          "ability": [235],
           "heldItem": "ITEM_FOCUS_SASH",
-          "moves": [368, 706, 157, 443]
+          "moves": [368, 706, 157, 443],
+          "ev": [252, 6, 0, 0, 252, 0]
         },
         {
           "lvl": 202,
           "id": 227,
           "nature": "impish",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [355, 92, 19, 443],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -7446,7 +7463,7 @@
           "lvl": 202,
           "id": 1502,
           "nature": "jolly",
-          "ability": "ABILITY_HYPER_CUTTER",
+          "ability": [52],
           "heldItem": "ITEM_KINGLERITE",
           "moves": [454, 666, 630, 443],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7455,7 +7472,7 @@
           "lvl": 201,
           "id": 1382,
           "nature": "jolly",
-          "ability": "ABILITY_QUARK_DRIVE",
+          "ability": [282],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [443, 530, 89, 282],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7485,23 +7502,25 @@
           "lvl": 202,
           "id": 476,
           "nature": "relaxed",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_LEFTOVERS",
-          "moves": [447, 92, 523, 408]
+          "moves": [447, 92, 523, 408],
+          "ev": [252, 0, 252, 6, 0, 0]
         },
         {
           "lvl": 202,
           "id": 598,
           "nature": "relaxed",
-          "ability": "ABILITY_IRON_BARBS",
+          "ability": [160],
           "heldItem": "ITEM_ROCKY_HELMET",
-          "moves": [439, 360, 73, 86]
+          "moves": [439, 360, 73, 86],
+          "ev": [252, 6, 252, 0, 0, 0]
         },
         {
           "lvl": 202,
           "id": 462,
           "nature": "modest",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [85, 431, 161, 523],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7510,7 +7529,7 @@
           "lvl": 202,
           "id": 922,
           "nature": "impish",
-          "ability": "ABILITY_ROCK_HEAD",
+          "ability": [69],
           "heldItem": "ITEM_STEELIXITE",
           "moves": [89, 445, 486, 174],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -7519,7 +7538,7 @@
           "lvl": 201,
           "id": 805,
           "nature": "impish",
-          "ability": "ABILITY_BEAST_BOOST",
+          "ability": [224],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [360, 157, 706, 89],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -7854,7 +7873,7 @@
           "lvl": 201,
           "id": 836,
           "nature": "jolly",
-          "ability": "ABILITY_STRONG_JAW",
+          "ability": [173],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [422, 423, 662, 242],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7863,7 +7882,7 @@
           "lvl": 201,
           "id": 911,
           "nature": "timid",
-          "ability": "ABILITY_FRISK",
+          "ability": [119],
           "heldItem": "ITEM_PIDGEOTITE",
           "moves": [544, 263, 355, 257],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7893,7 +7912,7 @@
           "lvl": 201,
           "id": 1364,
           "nature": "adamant",
-          "ability": "ABILITY_SHEER_FORCE",
+          "ability": [125],
           "heldItem": "ITEM_NEVER_MELT_ICE",
           "moves": [558, 34, 525, 420],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7902,7 +7921,7 @@
           "lvl": 201,
           "id": 978,
           "nature": "modest",
-          "ability": "ABILITY_OWN_TEMPO",
+          "ability": [20],
           "heldItem": "ITEM_SLOWBRONITE",
           "moves": [94, 505, 281, 303],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7932,7 +7951,7 @@
           "lvl": 202,
           "id": 279,
           "nature": "timid",
-          "ability": "ABILITY_DRIZZLE",
+          "ability": [2],
           "heldItem": "ITEM_SHARP_BEAK",
           "moves": [544, 505, 355, 58],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -7941,7 +7960,7 @@
           "lvl": 201,
           "id": 923,
           "nature": "jolly",
-          "ability": "ABILITY_TECHNICIAN",
+          "ability": [101],
           "heldItem": "ITEM_SCIZORITE",
           "moves": [418, 14, 812, 744],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -7971,7 +7990,7 @@
           "lvl": 201,
           "id": 1524,
           "nature": "bold",
-          "ability": "ABILITY_HEAVY_METAL",
+          "ability": [134],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [431, 406, 706, 85],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -7980,7 +7999,7 @@
           "lvl": 201,
           "id": 934,
           "nature": "jolly",
-          "ability": "ABILITY_HUGE_POWER",
+          "ability": [37],
           "heldItem": "ITEM_MEDICHAMITE",
           "moves": [252, 409, 429, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8010,7 +8029,7 @@
           "lvl": 201,
           "id": 530,
           "nature": "jolly",
-          "ability": "ABILITY_SAND_RUSH",
+          "ability": [146],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [89, 443, 157, 280],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8019,7 +8038,7 @@
           "lvl": 201,
           "id": 1381,
           "nature": "timid",
-          "ability": "ABILITY_WATER_COMPACTION",
+          "ability": [195],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [436, 414, 431, 85],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -8028,7 +8047,7 @@
           "lvl": 201,
           "id": 1517,
           "nature": "jolly",
-          "ability": "ABILITY_SAND_SPIT",
+          "ability": [245],
           "heldItem": "ITEM_SANDACONDITE",
           "moves": [38, 98, 632, 729],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8121,7 +8140,7 @@
           "lvl": 202,
           "id": 964,
           "nature": "jolly",
-          "ability": "ABILITY_SAND_FORCE",
+          "ability": [159],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [89, 443, 445, 389],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8130,7 +8149,7 @@
           "lvl": 202,
           "id": 1205,
           "nature": "naive",
-          "ability": "ABILITY_SHIELDS_DOWN",
+          "ability": [197],
           "heldItem": "ITEM_WHITE_HERB",
           "moves": [506, 408, 89, 514],
           "ev": [0, 252, 0, 6, 0, 252]
@@ -8139,7 +8158,7 @@
           "lvl": 202,
           "id": 882,
           "nature": "jolly",
-          "ability": "ABILITY_SAND_RUSH",
+          "ability": [146],
           "heldItem": "ITEM_MYSTIC_WATER",
           "moves": [703, 337, 423, 662],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8148,7 +8167,7 @@
           "lvl": 201,
           "id": 918,
           "nature": "jolly",
-          "ability": "ABILITY_ROCK_HEAD",
+          "ability": [69],
           "heldItem": "ITEM_AERODACTYLITE",
           "moves": [470, 445, 89, 744],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8357,7 +8376,7 @@
           "lvl": 202,
           "id": 1063,
           "nature": "modest",
-          "ability": "ABILITY_SAND_FORCE",
+          "ability": [159],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [505, 414, 501, 105],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -8366,7 +8385,7 @@
           "lvl": 202,
           "id": 899,
           "nature": "hasty",
-          "ability": "ABILITY_SAP_SIPPER",
+          "ability": [157],
           "heldItem": "ITEM_SAFETY_GOGGLES",
           "moves": [94, 644, 89, 304],
           "ev": [0, 6, 0, 252, 0, 252]
@@ -8375,7 +8394,7 @@
           "lvl": 202,
           "id": 880,
           "nature": "jolly",
-          "ability": "ABILITY_SAND_RUSH",
+          "ability": [146],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [702, 337, 89, 34],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8384,7 +8403,7 @@
           "lvl": 201,
           "id": 932,
           "nature": "adamant",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_MAWILITE",
           "moves": [443, 389, 585, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8414,7 +8433,7 @@
           "lvl": 201,
           "id": 1068,
           "nature": "timid",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [436, 202, 508, 109],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -8423,7 +8442,7 @@
           "lvl": 201,
           "id": 994,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [394, 458, 768, 245],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8432,7 +8451,7 @@
           "lvl": 201,
           "id": 866,
           "nature": "timid",
-          "ability": "ABILITY_SCREEN_CLEANER",
+          "ability": [251],
           "heldItem": "ITEM_SAFETY_GOGGLES",
           "moves": [575, 94, 411, 298],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -8463,7 +8482,7 @@
           "lvl": 202,
           "id": 946,
           "nature": "jolly",
-          "ability": "ABILITY_LIMBER",
+          "ability": [7],
           "heldItem": "ITEM_SILK_SCARF",
           "moves": [252, 216, 9, 409],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -8473,7 +8492,7 @@
           "lvl": 202,
           "id": 715,
           "nature": "timid",
-          "ability": "ABILITY_INFILTRATOR",
+          "ability": [151],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [177, 406, 588, 399],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -8482,7 +8501,7 @@
           "lvl": 202,
           "id": 763,
           "nature": "jolly",
-          "ability": "ABILITY_STRIKER",
+          "ability": [311],
           "heldItem": "ITEM_MIRACLE_SEED",
           "moves": [653, 743, 136, 585],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8491,7 +8510,7 @@
           "lvl": 202,
           "id": 609,
           "nature": "timid",
-          "ability": "ABILITY_FLASH_FIRE",
+          "ability": [18],
           "heldItem": "ITEM_CHARCOAL",
           "moves": [53, 247, 94, 261],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -8500,7 +8519,7 @@
           "lvl": 201,
           "id": 1492,
           "nature": "bold",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_EMPOLEONITE_D",
           "moves": [57, 431, 92, 355],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -8530,7 +8549,7 @@
           "lvl": 202,
           "id": 210,
           "nature": "adamant",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [585, 423, 694, 46],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8539,7 +8558,7 @@
           "lvl": 202,
           "id": 553,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [89, 282, 445, 15],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8548,7 +8567,7 @@
           "lvl": 201,
           "id": 237,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_WIDE_LENS",
           "moves": [743, 167, 389, 263],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8557,7 +8576,7 @@
           "lvl": 201,
           "id": 107,
           "nature": "adamant",
-          "ability": "ABILITY_IRON_FIST",
+          "ability": [89],
           "heldItem": "ITEM_PUNCHING_GLOVE",
           "moves": [409, 7, 9, 183],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8566,7 +8585,7 @@
           "lvl": 201,
           "id": 106,
           "nature": "jolly",
-          "ability": "ABILITY_STRIKER",
+          "ability": [311],
           "heldItem": "ITEM_KICKING_SHOES",
           "moves": [136, 389, 299, 802],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8598,7 +8617,7 @@
           "lvl": 202,
           "id": 1007,
           "nature": "impish",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_NEVERMELTICE",
           "moves": [419, 706, 157, 420],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -8607,7 +8626,7 @@
           "lvl": 202,
           "id": 867,
           "nature": "impish",
-          "ability": "ABILITY_SHADOW_SHIELD",
+          "ability": [231],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [421, 89, 426, 261],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -8616,7 +8635,7 @@
           "lvl": 202,
           "id": 776,
           "nature": "calm",
-          "ability": "ABILITY_DAUNTLESS_SHIELD",
+          "ability": [235],
           "heldItem": "ITEM_WHITE_HERB",
           "moves": [53, 396, 406, 506],
           "ev": [252, 0, 0, 6, 252, 0]
@@ -8625,7 +8644,7 @@
           "lvl": 202,
           "id": 182,
           "nature": "timid",
-          "ability": "ABILITY_CHLOROPHYLL",
+          "ability": [34],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [202, 188, 587, 485],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -8796,7 +8815,7 @@
           "lvl": 203,
           "id": 903,
           "nature": "jolly",
-          "ability": "ABILITY_POISON_TOUCH",
+          "ability": [143],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [252, 757, 280, 157],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8805,7 +8824,7 @@
           "lvl": 203,
           "id": 430,
           "nature": "adamant",
-          "ability": "ABILITY_SUPER_LUCK",
+          "ability": [105],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [65, 400, 389, 355],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8814,7 +8833,7 @@
           "lvl": 202,
           "id": 770,
           "nature": "bold",
-          "ability": "ABILITY_WATER_COMPACTION",
+          "ability": [195],
           "heldItem": "ITEM_YACHE_BERRY",
           "moves": [414, 247, 624, 92],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -8823,7 +8842,7 @@
           "lvl": 202,
           "id": 924,
           "nature": "adamant",
-          "ability": "ABILITY_GUTS",
+          "ability": [62],
           "heldItem": "ITEM_HERACRONITE",
           "moves": [350, 292, 331, 42],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8905,7 +8924,7 @@
           "lvl": 202,
           "id": 419,
           "nature": "hasty",
-          "ability": "ABILITY_TECHNICIAN",
+          "ability": [101],
           "heldItem": "ITEM_MYSTIC_WATER",
           "moves": [352, 58, 252, 454],
           "ev": [0, 6, 0, 252, 0, 252]
@@ -8914,7 +8933,7 @@
           "lvl": 202,
           "id": 958,
           "nature": "jolly",
-          "ability": "ABILITY_LIGHTNING_ROD",
+          "ability": [31],
           "heldItem": "ITEM_MAGNET",
           "moves": [252, 678, 280, 263],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -8923,7 +8942,7 @@
           "lvl": 203,
           "id": 1484,
           "nature": "timid",
-          "ability": "ABILITY_SHIELD_DUST",
+          "ability": [19],
           "heldItem": "ITEM_PIXIE_PLATE",
           "moves": [587, 607, 405, 202],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -8932,7 +8951,7 @@
           "lvl": 203,
           "id": 1477,
           "nature": "adamant",
-          "ability": "ABILITY_ADAPTABILITY",
+          "ability": [91],
           "heldItem": "ITEM_SILK_SCARF",
           "moves": [216, 242, 424, 423],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -9028,7 +9047,7 @@
           "lvl": 202,
           "id": 337,
           "nature": "timid",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [94, 408, 95, 59],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -9037,7 +9056,7 @@
           "lvl": 202,
           "id": 875,
           "nature": "jolly",
-          "ability": "ABILITY_ICE_FACE",
+          "ability": [248],
           "heldItem": "ITEM_SALAC_BERRY",
           "moves": [187, 558, 666, 429],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -9046,7 +9065,7 @@
           "lvl": 202,
           "id": 962,
           "nature": "timid",
-          "ability": "ABILITY_SNOW_WARNING",
+          "ability": [117],
           "heldItem": "ITEM_LIGHT_CLAY",
           "moves": [659, 587, 412, 59],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -9055,7 +9074,7 @@
           "lvl": 202,
           "id": 454,
           "nature": "jolly",
-          "ability": "ABILITY_DRY_SKIN",
+          "ability": [87],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [252, 398, 409, 389],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -9064,7 +9083,7 @@
           "lvl": 202,
           "id": 881,
           "nature": "jolly",
-          "ability": "ABILITY_SLUSH_RUSH",
+          "ability": [202],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [702, 558, 365, 157],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -9188,7 +9207,7 @@
           "lvl": 202,
           "id": 614,
           "nature": "jolly",
-          "ability": "ABILITY_SLUSH_RUSH",
+          "ability": [202],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [558, 280, 400, 89],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -9197,7 +9216,7 @@
           "lvl": 202,
           "id": 883,
           "nature": "adamant",
-          "ability": "ABILITY_SLUSH_RUSH",
+          "ability": [202],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [703, 558, 242, 263],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -9206,7 +9225,7 @@
           "lvl": 202,
           "id": 91,
           "nature": "naive",
-          "ability": "ABILITY_SKILL_LINK",
+          "ability": [92],
           "heldItem": "ITEM_WHITE_HERB",
           "moves": [506, 333, 350, 56],
           "ev": [0, 252, 0, 6, 0, 252]
@@ -9215,7 +9234,7 @@
           "lvl": 202,
           "id": 1485,
           "nature": "adamant",
-          "ability": "ABILITY_WATER_BUBBLE",
+          "ability": [199],
           "heldItem": "ITEM_MYSTIC_WATER",
           "moves": [666, 141, 243, 242],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -9293,7 +9312,7 @@
           "lvl": 202,
           "id": 1528,
           "nature": "jolly",
-          "ability": "ABILITY_GORILLA_TACTICS",
+          "ability": [255],
           "heldItem": "ITEM_CHOICE_SCARF",
           "moves": [558, 89, 7, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -9302,7 +9321,7 @@
           "lvl": 202,
           "id": 969,
           "nature": "impish",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_RINDO_BERRY",
           "moves": [397, 89, 157, 153],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -9311,7 +9330,7 @@
           "lvl": 202,
           "id": 1369,
           "nature": "timid",
-          "ability": "ABILITY_STORM_DRAIN",
+          "ability": [114],
           "heldItem": "ITEM_WISE_GLASSES",
           "moves": [406, 57, 196, 417],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -9320,7 +9339,7 @@
           "lvl": 201,
           "id": 478,
           "nature": "timid",
-          "ability": "ABILITY_ICE_BODY",
+          "ability": [115],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [59, 771, 85, 194],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -9329,7 +9348,7 @@
           "lvl": 201,
           "id": 941,
           "nature": "jolly",
-          "ability": "ABILITY_REFRIGERATE",
+          "ability": [174],
           "heldItem": "ITEM_GLALITITE",
           "moves": [216, 89, 153, 242],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -9360,7 +9379,7 @@
           "lvl": 202,
           "id": 985,
           "nature": "modest",
-          "ability": "ABILITY_REGENERATOR",
+          "ability": [144],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [59, 505, 94, 281],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -9369,7 +9388,7 @@
           "lvl": 202,
           "id": 87,
           "nature": "modest",
-          "ability": "ABILITY_ICE_BODY",
+          "ability": [115],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [58, 57, 156, 214],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -9378,7 +9397,7 @@
           "lvl": 202,
           "id": 461,
           "nature": "jolly",
-          "ability": "ABILITY_INFILTRATOR",
+          "ability": [151],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [252, 558, 282, 420],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -9387,7 +9406,7 @@
           "lvl": 202,
           "id": 699,
           "nature": "modest",
-          "ability": "ABILITY_REFRIGERATE",
+          "ability": [174],
           "heldItem": "ITEM_NEVER_MELT_ICE",
           "moves": [304, 408, 414, 94],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -9814,7 +9833,7 @@
           "lvl": 203,
           "id": 410,
           "nature": "impish",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_ORAN_BERRY",
           "moves": [317, 368, 232]
         },
@@ -9822,7 +9841,7 @@
           "lvl": 202,
           "id": 696,
           "nature": "adamant",
-          "ability": "ABILITY_STRONG_JAW",
+          "ability": [173],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [44, 422, 317]
         },
@@ -9830,7 +9849,7 @@
           "lvl": 201,
           "id": 408,
           "nature": "adamant",
-          "ability": "ABILITY_SHEER_FORCE",
+          "ability": [125],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [317, 29, 249]
         }
@@ -9861,7 +9880,7 @@
           "lvl": 204,
           "id": 294,
           "nature": "modest",
-          "ability": "ABILITY_PUNK_ROCK",
+          "ability": [244],
           "heldItem": "ITEM_THROAT_SPRAY",
           "moves": [304, 351, 352, 247],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -9870,7 +9889,7 @@
           "lvl": 204,
           "id": 499,
           "nature": "adamant",
-          "ability": "ABILITY_THICK_FAT",
+          "ability": [47],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [280, 7, 389, 490],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -9879,7 +9898,7 @@
           "lvl": 204,
           "id": 1512,
           "nature": "calm",
-          "ability": "ABILITY_SWARM",
+          "ability": [68],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [324, 475, 109, 202],
           "ev": [252, 0, 0, 6, 252, 0]
@@ -9888,7 +9907,7 @@
           "lvl": 204,
           "id": 1362,
           "nature": "jolly",
-          "ability": "ABILITY_SCRAPPY",
+          "ability": [113],
           "heldItem": "ITEM_FIGHTING_GEM",
           "moves": [26, 514, 355, 263],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -9897,9 +9916,10 @@
           "lvl": 204,
           "id": 442,
           "nature": "relaxed",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_SITRUS_BERRY",
-          "moves": [399, 508, 426, 261]
+          "moves": [399, 508, 426, 261],
+          "ev": [252, 0, 252, 6, 0, 0]
         }
       ],
       "script": "Route117_EventScript_RematchEzekiel",
@@ -9927,7 +9947,7 @@
           "lvl": 204,
           "id": 1358,
           "nature": "bold",
-          "ability": "ABILITY_TOXIC_DEBRIS",
+          "ability": [295],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [246, 188, 607, 412],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -9936,7 +9956,7 @@
           "lvl": 204,
           "id": 153,
           "nature": "bold",
-          "ability": "ABILITY_OVERGROW",
+          "ability": [65],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [72, 235, 77, 148],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -9945,7 +9965,7 @@
           "lvl": 204,
           "id": 336,
           "nature": "jolly",
-          "ability": "ABILITY_MERCILESS",
+          "ability": [196],
           "heldItem": "ITEM_POISON_BARB",
           "moves": [398, 400, 525, 92],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -9954,7 +9974,7 @@
           "lvl": 204,
           "id": 241,
           "nature": "jolly",
-          "ability": "ABILITY_THICK_FAT",
+          "ability": [47],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [34, 208, 9, 92],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -9963,7 +9983,7 @@
           "lvl": 204,
           "id": 999,
           "nature": "jolly",
-          "ability": "ABILITY_POISON_TOUCH",
+          "ability": [143],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [252, 441, 8, 249],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10110,7 +10130,7 @@
           "lvl": 201,
           "id": 429,
           "nature": "timid",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_WISE_GLASSES",
           "moves": [345, 247, 607, 408],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10119,7 +10139,7 @@
           "lvl": 201,
           "id": 864,
           "nature": "modest",
-          "ability": "ABILITY_UNBURDEN",
+          "ability": [84],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [247, 347, 633, 414],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10128,7 +10148,7 @@
           "lvl": 201,
           "id": 950,
           "nature": "jolly",
-          "ability": "ABILITY_JUSTIFIED",
+          "ability": [154],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [429, 280, 339, 426],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10137,7 +10157,7 @@
           "lvl": 200,
           "id": 1003,
           "nature": "timid",
-          "ability": "ABILITY_ILLUSION",
+          "ability": [149],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [399, 188, 53, 326],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10146,7 +10166,7 @@
           "lvl": 200,
           "id": 939,
           "nature": "jolly",
-          "ability": "ABILITY_PRANKSTER",
+          "ability": [158],
           "heldItem": "ITEM_BANETTITE",
           "moves": [282, 421, 426, 216],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -10332,7 +10352,7 @@
           "lvl": 201,
           "id": 186,
           "nature": "modest",
-          "ability": "ABILITY_DRIZZLE",
+          "ability": [2],
           "heldItem": "ITEM_DAMP_ROCK",
           "moves": [505, 58, 114, 94],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10341,7 +10361,7 @@
           "lvl": 201,
           "id": 917,
           "nature": "jolly",
-          "ability": "ABILITY_MOXIE",
+          "ability": [153],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [401, 89, 423, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10350,7 +10370,7 @@
           "lvl": 201,
           "id": 230,
           "nature": "timid",
-          "ability": "ABILITY_SWIFT_SWIM",
+          "ability": [33],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [544, 406, 57, 58],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10359,7 +10379,7 @@
           "lvl": 201,
           "id": 1337,
           "nature": "timid",
-          "ability": "ABILITY_CLEAR_BODY",
+          "ability": [29],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [188, 431, 414, 412],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10368,7 +10388,7 @@
           "lvl": 200,
           "id": 1230,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [409, 748, 339, 398],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10377,7 +10397,7 @@
           "lvl": 200,
           "id": 1503,
           "nature": "modest",
-          "ability": "ABILITY_WATER_ABSORB",
+          "ability": [11],
           "heldItem": "ITEM_LAPRASITE",
           "moves": [588, 406, 58, 85],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10409,7 +10429,7 @@
           "lvl": 64,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [413, 441, 141, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10418,7 +10438,7 @@
           "lvl": 64,
           "id": 943,
           "nature": "adamant",
-          "ability": "ABILITY_TOUGH_CLAWS",
+          "ability": [181],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [309, 418, 429, 89],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10427,7 +10447,7 @@
           "lvl": 64,
           "id": 547,
           "nature": "timid",
-          "ability": "ABILITY_PRANKSTER",
+          "ability": [158],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [202, 78, 73, 587],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10436,7 +10456,7 @@
           "lvl": 64,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [409, 747, 389, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10445,7 +10465,7 @@
           "lvl": 64,
           "id": 1234,
           "nature": "modest",
-          "ability": "ABILITY_ADAPTABILITY",
+          "ability": [91],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [505, 58, 94, 247],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10454,7 +10474,7 @@
           "lvl": 64,
           "id": 928,
           "nature": "jolly",
-          "ability": "ABILITY_STRIKER",
+          "ability": [311],
           "heldItem": "ITEM_BLAZIKENITE",
           "moves": [299, 753, 9, 339],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10485,7 +10505,7 @@
           "lvl": 64,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [413, 441, 141, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10494,7 +10514,7 @@
           "lvl": 64,
           "id": 1006,
           "nature": "calm",
-          "ability": "ABILITY_SAP_SIPPER",
+          "ability": [157],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [406, 431, 273, 92],
           "ev": [252, 0, 0, 6, 252, 0]
@@ -10503,7 +10523,7 @@
           "lvl": 64,
           "id": 976,
           "nature": "jolly",
-          "ability": "ABILITY_FLASH_FIRE",
+          "ability": [18],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [645, 261, 585, 530],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10512,7 +10532,7 @@
           "lvl": 64,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [409, 747, 389, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10521,7 +10541,7 @@
           "lvl": 64,
           "id": 996,
           "nature": "modest",
-          "ability": "ABILITY_RECKLESS",
+          "ability": [120],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [765, 85, 523, 431],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10530,7 +10550,7 @@
           "lvl": 64,
           "id": 929,
           "nature": "adamant",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_SWAMPERTITE",
           "moves": [666, 89, 614, 419],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10560,7 +10580,7 @@
           "lvl": 64,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [413, 441, 141, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10569,7 +10589,7 @@
           "lvl": 64,
           "id": 149,
           "nature": "jolly",
-          "ability": "ABILITY_MULTISCALE",
+          "ability": [136],
           "heldItem": "ITEM_LUM_BERRY",
           "moves": [744, 337, 443, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10578,7 +10598,7 @@
           "lvl": 64,
           "id": 368,
           "nature": "modest",
-          "ability": "ABILITY_DAZZLING",
+          "ability": [219],
           "heldItem": "ITEM_WHITE_HERB",
           "moves": [58, 57, 587, 506],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10587,7 +10607,7 @@
           "lvl": 64,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [409, 747, 389, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10596,7 +10616,7 @@
           "lvl": 64,
           "id": 1324,
           "nature": "modest",
-          "ability": "ABILITY_MEGA_LAUNCHER",
+          "ability": [178],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [818, 396, 94, 247],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10605,7 +10625,7 @@
           "lvl": 64,
           "id": 927,
           "nature": "jolly",
-          "ability": "ABILITY_OVERGROW",
+          "ability": [65],
           "heldItem": "ITEM_SCEPTILITE",
           "moves": [532, 331, 89, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10636,7 +10656,7 @@
           "lvl": 64,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [413, 441, 141, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10645,7 +10665,7 @@
           "lvl": 64,
           "id": 943,
           "nature": "adamant",
-          "ability": "ABILITY_TOUGH_CLAWS",
+          "ability": [181],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [309, 418, 429, 89],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10654,7 +10674,7 @@
           "lvl": 64,
           "id": 547,
           "nature": "timid",
-          "ability": "ABILITY_PRANKSTER",
+          "ability": [158],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [202, 78, 73, 587],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10663,7 +10683,7 @@
           "lvl": 64,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [409, 747, 389, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10672,7 +10692,7 @@
           "lvl": 64,
           "id": 1234,
           "nature": "modest",
-          "ability": "ABILITY_ADAPTABILITY",
+          "ability": [91],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [505, 58, 94, 247],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10681,7 +10701,7 @@
           "lvl": 64,
           "id": 928,
           "nature": "jolly",
-          "ability": "ABILITY_STRIKER",
+          "ability": [311],
           "heldItem": "ITEM_BLAZIKENITE",
           "moves": [299, 753, 9, 339],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10712,7 +10732,7 @@
           "lvl": 64,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [413, 441, 141, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10721,7 +10741,7 @@
           "lvl": 64,
           "id": 1006,
           "nature": "calm",
-          "ability": "ABILITY_SAP_SIPPER",
+          "ability": [157],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [406, 431, 273, 92],
           "ev": [252, 0, 0, 6, 252, 0]
@@ -10730,7 +10750,7 @@
           "lvl": 64,
           "id": 976,
           "nature": "jolly",
-          "ability": "ABILITY_FLASH_FIRE",
+          "ability": [18],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [645, 261, 585, 530],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10739,7 +10759,7 @@
           "lvl": 64,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [409, 747, 389, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10748,7 +10768,7 @@
           "lvl": 64,
           "id": 996,
           "nature": "modest",
-          "ability": "ABILITY_RECKLESS",
+          "ability": [120],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [765, 85, 523, 431],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10757,7 +10777,7 @@
           "lvl": 64,
           "id": 929,
           "nature": "adamant",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_SWAMPERTITE",
           "moves": [666, 89, 614, 419],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10788,7 +10808,7 @@
           "lvl": 64,
           "id": 169,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_SCOPE_LENS",
           "moves": [413, 441, 141, 369],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10797,7 +10817,7 @@
           "lvl": 64,
           "id": 149,
           "nature": "jolly",
-          "ability": "ABILITY_MULTISCALE",
+          "ability": [136],
           "heldItem": "ITEM_LUM_BERRY",
           "moves": [744, 337, 443, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10806,7 +10826,7 @@
           "lvl": 64,
           "id": 368,
           "nature": "modest",
-          "ability": "ABILITY_DAZZLING",
+          "ability": [219],
           "heldItem": "ITEM_WHITE_HERB",
           "moves": [58, 57, 587, 506],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10815,7 +10835,7 @@
           "lvl": 64,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [409, 747, 389, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -10824,7 +10844,7 @@
           "lvl": 64,
           "id": 1324,
           "nature": "modest",
-          "ability": "ABILITY_MEGA_LAUNCHER",
+          "ability": [178],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [818, 396, 94, 247],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -10833,7 +10853,7 @@
           "lvl": 64,
           "id": 927,
           "nature": "jolly",
-          "ability": "ABILITY_OVERGROW",
+          "ability": [65],
           "heldItem": "ITEM_SCEPTILITE",
           "moves": [532, 331, 89, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11233,7 +11253,7 @@
           "lvl": 63,
           "id": 348,
           "nature": "adamant",
-          "ability": "ABILITY_SKILL_LINK",
+          "ability": [92],
           "heldItem": "ITEM_PASSHO_BERRY",
           "moves": [350, 42, 14, 663],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11242,7 +11262,7 @@
           "lvl": 63,
           "id": 121,
           "nature": "timid",
-          "ability": "ABILITY_ILLUMINATE",
+          "ability": [35],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [56, 94, 58, 87],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -11251,7 +11271,7 @@
           "lvl": 63,
           "id": 1385,
           "nature": "timid",
-          "ability": "ABILITY_QUARK_DRIVE",
+          "ability": [282],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [403, 399, 406, 414],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -11281,7 +11301,7 @@
           "lvl": 64,
           "id": 1500,
           "nature": "adamant",
-          "ability": "ABILITY_GUTS",
+          "ability": [62],
           "heldItem": "ITEM_MACHAMPITE",
           "moves": [183, 409, 9, 7],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11290,7 +11310,7 @@
           "lvl": 64,
           "id": 1417,
           "nature": "jolly",
-          "ability": "ABILITY_WATER_ABSORB",
+          "ability": [11],
           "heldItem": "ITEM_WELLSPRING_MASK",
           "moves": [834, 534, 640, 585],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11299,7 +11319,7 @@
           "lvl": 64,
           "id": 1113,
           "nature": "timid",
-          "ability": "ABILITY_BATTLE_BOND",
+          "ability": [210],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [399, 57, 58, 448],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -11350,7 +11370,7 @@
           "lvl": 64,
           "id": 367,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_WHITE_HERB",
           "moves": [506, 423, 242, 764],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11359,7 +11379,7 @@
           "lvl": 64,
           "id": 1106,
           "nature": "timid",
-          "ability": "ABILITY_SHARPNESS",
+          "ability": [292],
           "heldItem": "ITEM_CHOICE_SPECS",
           "moves": [550, 403, 56, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -11368,7 +11388,7 @@
           "lvl": 64,
           "id": 612,
           "nature": "jolly",
-          "ability": "ABILITY_MOLD_BREAKER",
+          "ability": [104],
           "heldItem": "ITEM_LUM_BERRY",
           "moves": [532, 89, 398, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11377,7 +11397,7 @@
           "lvl": 64,
           "id": 1008,
           "nature": "jolly",
-          "ability": "ABILITY_TINTED_LENS",
+          "ability": [110],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [627, 348, 616, 426],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11386,7 +11406,7 @@
           "lvl": 64,
           "id": 1004,
           "nature": "modest",
-          "ability": "ABILITY_SHEER_FORCE",
+          "ability": [125],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [94, 403, 257, 355],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -11395,7 +11415,7 @@
           "lvl": 64,
           "id": 917,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_GYARADOSITE",
           "moves": [349, 89, 401, 242],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11671,7 +11691,7 @@
           "lvl": 201,
           "id": 1329,
           "nature": "timid",
-          "ability": "ABILITY_STATIC",
+          "ability": [9],
           "heldItem": "ITEM_YACHE_BERRY",
           "moves": [544, 87, 436, 311],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -11680,7 +11700,7 @@
           "lvl": 201,
           "id": 141,
           "nature": "jolly",
-          "ability": "ABILITY_SWIFT_SWIM",
+          "ability": [33],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [14, 445, 666, 404],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11689,7 +11709,7 @@
           "lvl": 201,
           "id": 1513,
           "nature": "jolly",
-          "ability": "ABILITY_STRONG_JAW",
+          "ability": [173],
           "heldItem": "ITEM_DREDNAWITE",
           "moves": [694, 423, 242, 425],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11719,7 +11739,7 @@
           "lvl": 201,
           "id": 119,
           "nature": "jolly",
-          "ability": "ABILITY_LIGHTNING_ROD",
+          "ability": [31],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [703, 454, 224, 729],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11728,7 +11748,7 @@
           "lvl": 201,
           "id": 1511,
           "nature": "adamant",
-          "ability": "ABILITY_UNNERVE",
+          "ability": [127],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [706, 413, 443, 366],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11737,7 +11757,7 @@
           "lvl": 201,
           "id": 139,
           "nature": "timid",
-          "ability": "ABILITY_SWIFT_SWIM",
+          "ability": [33],
           "heldItem": "ITEM_WHITE_HERB",
           "moves": [506, 56, 414, 58],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -11768,7 +11788,7 @@
           "lvl": 202,
           "id": 124,
           "nature": "timid",
-          "ability": "ABILITY_DRY_SKIN",
+          "ability": [87],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [252, 542, 575, 142],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -11777,7 +11797,7 @@
           "lvl": 202,
           "id": 454,
           "nature": "jolly",
-          "ability": "ABILITY_DRY_SKIN",
+          "ability": [87],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [252, 442, 370, 389],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11786,7 +11806,7 @@
           "lvl": 202,
           "id": 695,
           "nature": "timid",
-          "ability": "ABILITY_DRY_SKIN",
+          "ability": [87],
           "heldItem": "ITEM_WISE_GLASSES",
           "moves": [57, 588, 87, 406],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -11795,7 +11815,7 @@
           "lvl": 201,
           "id": 1132,
           "nature": "timid",
-          "ability": "ABILITY_SHIELD_DUST",
+          "ability": [19],
           "heldItem": "ITEM_SHARP_BEAK",
           "moves": [485, 544, 202, 79],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -11847,7 +11867,7 @@
           "lvl": 202,
           "id": 462,
           "nature": "naive",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_CUSTAP_BERRY",
           "moves": [153, 431, 87, 706],
           "ev": [0, 6, 0, 252, 0, 252]
@@ -11856,7 +11876,7 @@
           "lvl": 202,
           "id": 472,
           "nature": "jolly",
-          "ability": "ABILITY_POISON_HEAL",
+          "ability": [90],
           "heldItem": "ITEM_TOXIC_ORB",
           "moves": [355, 89, 744, 282],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11865,7 +11885,7 @@
           "lvl": 202,
           "id": 342,
           "nature": "adamant",
-          "ability": "ABILITY_ADAPTABILITY",
+          "ability": [91],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [666, 282, 404, 454],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -11874,7 +11894,7 @@
           "lvl": 201,
           "id": 1495,
           "nature": "timid",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_BLASTOISINITE",
           "moves": [506, 352, 58, 396],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -11905,7 +11925,7 @@
           "lvl": 202,
           "id": 55,
           "nature": "timid",
-          "ability": "ABILITY_SWIFT_SWIM",
+          "ability": [33],
           "heldItem": "ITEM_MYSTIC_WATER",
           "moves": [505, 94, 58, 454],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -11914,7 +11934,7 @@
           "lvl": 202,
           "id": 693,
           "nature": "modest",
-          "ability": "ABILITY_MEGA_LAUNCHER",
+          "ability": [178],
           "heldItem": "ITEM_CHOICE_SPECS",
           "moves": [58, 352, 399, 396],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -11923,7 +11943,7 @@
           "lvl": 202,
           "id": 756,
           "nature": "calm",
-          "ability": "ABILITY_RAIN_DISH",
+          "ability": [44],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [202, 147, 587, 148],
           "ev": [252, 0, 0, 6, 252, 0]
@@ -11932,7 +11952,7 @@
           "lvl": 201,
           "id": 523,
           "nature": "jolly",
-          "ability": "ABILITY_SAP_SIPPER",
+          "ability": [157],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [394, 530, 263, 678],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -12044,7 +12064,7 @@
           "lvl": 201,
           "id": 227,
           "nature": "impish",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_ROCKY_HELMET",
           "moves": [18, 447, 65, 443],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -12053,7 +12073,7 @@
           "lvl": 201,
           "id": 1215,
           "nature": "timid",
-          "ability": "ABILITY_HEATPROOF",
+          "ability": [85],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [506, 247, 202, 502],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -12062,7 +12082,7 @@
           "lvl": 201,
           "id": 1357,
           "nature": "impish",
-          "ability": "ABILITY_EARTH_EATER",
+          "ability": [297],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [808, 706, 443, 89],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -12071,7 +12091,7 @@
           "lvl": 201,
           "id": 923,
           "nature": "jolly",
-          "ability": "ABILITY_TECHNICIAN",
+          "ability": [101],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [418, 451, 744, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -12080,7 +12100,7 @@
           "lvl": 200,
           "id": 1507,
           "nature": "adamant",
-          "ability": "ABILITY_IRON_FIST",
+          "ability": [89],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [691, 89, 9, 8],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -12089,9 +12109,10 @@
           "lvl": 200,
           "id": 1523,
           "nature": "brave",
-          "ability": "ABILITY_HEAVY_METAL",
+          "ability": [134],
           "heldItem": "ITEM_COPPERAJITE",
-          "moves": [443, 276, 585, 632]
+          "moves": [443, 276, 585, 632],
+          "ev": [252, 252, 6, 0, 0, 0]
         }
       ],
       "script": "Route121_EventScript_BattleByron",
@@ -12440,7 +12461,7 @@
           "lvl": 202,
           "id": 424,
           "nature": "jolly",
-          "ability": "ABILITY_TECHNICIAN",
+          "ability": [101],
           "heldItem": "ITEM_LOADED_DICE",
           "moves": [252, 543, 292, 532],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -12449,7 +12470,7 @@
           "lvl": 202,
           "id": 136,
           "nature": "jolly",
-          "ability": "ABILITY_TOXIC_BOOST",
+          "ability": [137],
           "heldItem": "ITEM_TOXIC_ORB",
           "moves": [490, 221, 263, 276],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -12458,7 +12479,7 @@
           "lvl": 202,
           "id": 426,
           "nature": "timid",
-          "ability": "ABILITY_FLARE_BOOST",
+          "ability": [138],
           "heldItem": "ITEM_FLAME_ORB",
           "moves": [633, 247, 403, 311],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -12467,7 +12488,7 @@
           "lvl": 201,
           "id": 1496,
           "nature": "timid",
-          "ability": "ABILITY_SOLAR_POWER",
+          "ability": [94],
           "heldItem": "ITEM_HEAVY_DUTY_BOOTS",
           "moves": [403, 53, 76, 745],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -12514,7 +12535,7 @@
           "lvl": 201,
           "id": 135,
           "nature": "timid",
-          "ability": "ABILITY_VOLT_ABSORB",
+          "ability": [10],
           "heldItem": "ITEM_AIR_BALLOON",
           "moves": [85, 523, 311, 247],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -12523,7 +12544,7 @@
           "lvl": 201,
           "id": 71,
           "nature": "adamant",
-          "ability": "ABILITY_CHLOROPHYLL",
+          "ability": [34],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [439, 398, 79, 282],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -12532,7 +12553,7 @@
           "lvl": 201,
           "id": 1377,
           "nature": "calm",
-          "ability": "ABILITY_PROTOSYNTHESIS",
+          "ability": [281],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [587, 94, 273, 182],
           "ev": [252, 0, 0, 6, 252, 0]
@@ -12541,7 +12562,7 @@
           "lvl": 201,
           "id": 1294,
           "nature": "timid",
-          "ability": "ABILITY_UNAWARE",
+          "ability": [109],
           "heldItem": "ITEM_THROAT_SPRAY",
           "moves": [801, 247, 304, 490],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -12550,7 +12571,7 @@
           "lvl": 201,
           "id": 467,
           "nature": "timid",
-          "ability": "ABILITY_MEGA_LAUNCHER",
+          "ability": [178],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [53, 830, 396, 399],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -12581,7 +12602,7 @@
           "lvl": 202,
           "id": 668,
           "nature": "timid",
-          "ability": "ABILITY_ADAPTABILITY",
+          "ability": [91],
           "heldItem": "ITEM_CHARCOAL",
           "moves": [53, 304, 745, 76],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -12590,7 +12611,7 @@
           "lvl": 202,
           "id": 470,
           "nature": "adamant",
-          "ability": "ABILITY_CHLOROPHYLL",
+          "ability": [34],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [348, 404, 663, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -12599,7 +12620,7 @@
           "lvl": 202,
           "id": 340,
           "nature": "adamant",
-          "ability": "ABILITY_WATER_BUBBLE",
+          "ability": [199],
           "heldItem": "ITEM_RINDO_BERRY",
           "moves": [127, 340, 89, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -12608,7 +12629,7 @@
           "lvl": 201,
           "id": 1509,
           "nature": "jolly",
-          "ability": "ABILITY_LIBERO",
+          "ability": [236],
           "heldItem": "ITEM_WIDE_LENS",
           "moves": [136, 710, 389, 442],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -12676,7 +12697,7 @@
           "lvl": 202,
           "id": 697,
           "nature": "jolly",
-          "ability": "ABILITY_ROCK_HEAD",
+          "ability": [69],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [458, 89, 729, 447],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -12685,7 +12706,7 @@
           "lvl": 202,
           "id": 196,
           "nature": "timid",
-          "ability": "ABILITY_MAGIC_BOUNCE",
+          "ability": [156],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [94, 247, 607, 234],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -12694,7 +12715,7 @@
           "lvl": 202,
           "id": 192,
           "nature": "timid",
-          "ability": "ABILITY_CHLOROPHYLL",
+          "ability": [34],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [467, 414, 311, 188],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -12703,7 +12724,7 @@
           "lvl": 201,
           "id": 997,
           "nature": "modest",
-          "ability": "ABILITY_BLAZING_SOUL",
+          "ability": [315],
           "heldItem": "ITEM_HEAVY_DUTY_BOOTS",
           "moves": [284, 53, 411, 745],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -12905,7 +12926,7 @@
           "lvl": 201,
           "id": 584,
           "nature": "hasty",
-          "ability": "ABILITY_SNOW_WARNING",
+          "ability": [117],
           "heldItem": "ITEM_ICY_ROCK",
           "moves": [59, 575, 431, 269],
           "ev": [0, 6, 0, 252, 0, 252]
@@ -12914,7 +12935,7 @@
           "lvl": 201,
           "id": 985,
           "nature": "calm",
-          "ability": "ABILITY_REGENERATOR",
+          "ability": [144],
           "heldItem": "ITEM_BLACK_SLUDGE",
           "moves": [809, 475, 484, 57],
           "ev": [252, 0, 0, 6, 252, 0]
@@ -12923,7 +12944,7 @@
           "lvl": 201,
           "id": 471,
           "nature": "timid",
-          "ability": "ABILITY_SLUSH_RUSH",
+          "ability": [202],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [575, 59, 414, 304],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -12932,7 +12953,7 @@
           "lvl": 201,
           "id": 1390,
           "nature": "jolly",
-          "ability": "ABILITY_THERMAL_EXCHANGE",
+          "ability": [270],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [792, 558, 443, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -12941,7 +12962,7 @@
           "lvl": 200,
           "id": 1395,
           "nature": "jolly",
-          "ability": "ABILITY_SWORD_OF_RUIN",
+          "ability": [285],
           "heldItem": "ITEM_CHOICE_BAND",
           "moves": [640, 535, 791, 420],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -12950,7 +12971,7 @@
           "lvl": 200,
           "id": 941,
           "nature": "jolly",
-          "ability": "ABILITY_REFRIGERATE",
+          "ability": [174],
           "heldItem": "ITEM_GLALITITE",
           "moves": [216, 89, 153, 242],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -14279,7 +14300,7 @@
           "lvl": 202,
           "id": 42,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [17, 441, 44, 369]
         },
@@ -14287,7 +14308,7 @@
           "lvl": 202,
           "id": 857,
           "nature": "modest",
-          "ability": "ABILITY_MAGIC_BOUNCE",
+          "ability": [156],
           "heldItem": "ITEM_WISE_GLASSES",
           "moves": [579, 60, 86, 721]
         },
@@ -14295,7 +14316,7 @@
           "lvl": 202,
           "id": 891,
           "nature": "adamant",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [249, 332, 29, 9]
         },
@@ -14303,7 +14324,7 @@
           "lvl": 201,
           "id": 256,
           "nature": "adamant",
-          "ability": "ABILITY_STRIKER",
+          "ability": [311],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [24, 317, 490, 9]
         }
@@ -14333,7 +14354,7 @@
           "lvl": 202,
           "id": 42,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [17, 441, 44, 369]
         },
@@ -14341,7 +14362,7 @@
           "lvl": 202,
           "id": 857,
           "nature": "modest",
-          "ability": "ABILITY_MAGIC_BOUNCE",
+          "ability": [156],
           "heldItem": "ITEM_WISE_GLASSES",
           "moves": [579, 60, 86, 721]
         },
@@ -14349,7 +14370,7 @@
           "lvl": 202,
           "id": 891,
           "nature": "adamant",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [249, 332, 29, 7]
         },
@@ -14357,7 +14378,7 @@
           "lvl": 201,
           "id": 259,
           "nature": "quiet",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [352, 317, 341, 8]
         }
@@ -14387,7 +14408,7 @@
           "lvl": 202,
           "id": 42,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [17, 441, 44, 369]
         },
@@ -14395,7 +14416,7 @@
           "lvl": 202,
           "id": 857,
           "nature": "modest",
-          "ability": "ABILITY_MAGIC_BOUNCE",
+          "ability": [156],
           "heldItem": "ITEM_WISE_GLASSES",
           "moves": [579, 60, 86, 721]
         },
@@ -14403,7 +14424,7 @@
           "lvl": 202,
           "id": 891,
           "nature": "adamant",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [249, 332, 29, 317]
         },
@@ -14411,7 +14432,7 @@
           "lvl": 201,
           "id": 253,
           "nature": "adamant",
-          "ability": "ABILITY_OVERGROW",
+          "ability": [65],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [331, 317, 210, 372]
         }
@@ -14441,7 +14462,7 @@
           "lvl": 202,
           "id": 42,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [17, 441, 44, 369]
         },
@@ -14449,7 +14470,7 @@
           "lvl": 202,
           "id": 857,
           "nature": "modest",
-          "ability": "ABILITY_MAGIC_BOUNCE",
+          "ability": [156],
           "heldItem": "ITEM_WISE_GLASSES",
           "moves": [579, 60, 86, 721]
         },
@@ -14457,7 +14478,7 @@
           "lvl": 202,
           "id": 891,
           "nature": "adamant",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [249, 332, 29, 9]
         },
@@ -14465,7 +14486,7 @@
           "lvl": 201,
           "id": 256,
           "nature": "adamant",
-          "ability": "ABILITY_STRIKER",
+          "ability": [311],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [24, 317, 490, 9]
         }
@@ -14495,7 +14516,7 @@
           "lvl": 202,
           "id": 42,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [17, 441, 44, 369]
         },
@@ -14503,7 +14524,7 @@
           "lvl": 202,
           "id": 857,
           "nature": "modest",
-          "ability": "ABILITY_MAGIC_BOUNCE",
+          "ability": [156],
           "heldItem": "ITEM_WISE_GLASSES",
           "moves": [579, 60, 86, 721]
         },
@@ -14511,7 +14532,7 @@
           "lvl": 202,
           "id": 891,
           "nature": "adamant",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [249, 332, 29, 7]
         },
@@ -14519,7 +14540,7 @@
           "lvl": 201,
           "id": 259,
           "nature": "quiet",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [352, 317, 341, 8]
         }
@@ -14549,7 +14570,7 @@
           "lvl": 202,
           "id": 42,
           "nature": "jolly",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [17, 441, 44, 369]
         },
@@ -14557,7 +14578,7 @@
           "lvl": 202,
           "id": 857,
           "nature": "modest",
-          "ability": "ABILITY_MAGIC_BOUNCE",
+          "ability": [156],
           "heldItem": "ITEM_WISE_GLASSES",
           "moves": [579, 60, 86, 721]
         },
@@ -14565,7 +14586,7 @@
           "lvl": 202,
           "id": 891,
           "nature": "adamant",
-          "ability": "ABILITY_INNER_FOCUS",
+          "ability": [39],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [249, 332, 29, 317]
         },
@@ -14573,7 +14594,7 @@
           "lvl": 201,
           "id": 253,
           "nature": "adamant",
-          "ability": "ABILITY_OVERGROW",
+          "ability": [65],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [331, 317, 210, 372]
         }
@@ -14603,7 +14624,7 @@
           "lvl": 14,
           "id": 111,
           "nature": "adamant",
-          "ability": "ABILITY_LIGHTNING_ROD",
+          "ability": [31],
           "heldItem": "ITEM_RINDO_BERRY",
           "moves": [317, 30, 525, 249]
         },
@@ -14611,7 +14632,7 @@
           "lvl": 15,
           "id": 1405,
           "nature": "modest",
-          "ability": "ABILITY_WATER_ABSORB",
+          "ability": [11],
           "heldItem": "ITEM_ORAN_BERRY",
           "moves": [341, 493, 281, 201]
         },
@@ -14619,7 +14640,7 @@
           "lvl": 15,
           "id": 207,
           "nature": "adamant",
-          "ability": "ABILITY_SAND_VEIL",
+          "ability": [8],
           "heldItem": "ITEM_ORAN_BERRY",
           "moves": [17, 98, 525]
         },
@@ -14627,7 +14648,7 @@
           "lvl": 15,
           "id": 299,
           "nature": "impish",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_BERRY_JUICE",
           "moves": [350, 209, 525, 86]
         }
@@ -14717,7 +14738,7 @@
           "lvl": 202,
           "id": 431,
           "nature": "jolly",
-          "ability": "ABILITY_OWN_TEMPO",
+          "ability": [20],
           "heldItem": "ITEM_SILK_SCARF",
           "moves": [252, 282, 369, 263]
         },
@@ -14725,7 +14746,7 @@
           "lvl": 202,
           "id": 262,
           "nature": "adamant",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [44, 389, 424, 422]
         },
@@ -14733,7 +14754,7 @@
           "lvl": 202,
           "id": 325,
           "nature": "calm",
-          "ability": "ABILITY_GLUTTONY",
+          "ability": [82],
           "heldItem": "ITEM_SITRUS_BERRY",
           "moves": [60, 148, 196, 448]
         }
@@ -15071,7 +15092,7 @@
           "lvl": 80,
           "id": 1383,
           "nature": "timid",
-          "ability": "ABILITY_QUARK_DRIVE",
+          "ability": [282],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [56, 196, 575, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15080,7 +15101,7 @@
           "lvl": 80,
           "id": 623,
           "nature": "adamant",
-          "ability": "ABILITY_NO_GUARD",
+          "ability": [99],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [223, 739, 445, 768],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15089,7 +15110,7 @@
           "lvl": 80,
           "id": 604,
           "nature": "timid",
-          "ability": "ABILITY_FATAL_PRECISION",
+          "ability": [314],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [85, 406, 53, 839],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15098,7 +15119,7 @@
           "lvl": 80,
           "id": 1297,
           "nature": "jolly",
-          "ability": "ABILITY_MOXIE",
+          "ability": [153],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [802, 370, 791, 413],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15107,7 +15128,7 @@
           "lvl": 80,
           "id": 936,
           "nature": "jolly",
-          "ability": "ABILITY_SPEED_BOOST",
+          "ability": [3],
           "heldItem": "ITEM_SHARPEDONITE",
           "moves": [242, 662, 425, 454],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15116,7 +15137,7 @@
           "lvl": 80,
           "id": 954,
           "nature": "timid",
-          "ability": "ABILITY_DRIZZLE",
+          "ability": [2],
           "heldItem": "ITEM_BLUE_ORB",
           "moves": [620, 87, 58, 323],
           "ev": [6, 0, 0, 252, 0, 252],
@@ -15147,7 +15168,7 @@
           "lvl": 80,
           "id": 1106,
           "nature": "timid",
-          "ability": "ABILITY_SHARPNESS",
+          "ability": [292],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [550, 403, 56, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15156,7 +15177,7 @@
           "lvl": 80,
           "id": 1008,
           "nature": "jolly",
-          "ability": "ABILITY_TINTED_LENS",
+          "ability": [110],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [627, 348, 616, 426],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15165,7 +15186,7 @@
           "lvl": 80,
           "id": 1006,
           "nature": "calm",
-          "ability": "ABILITY_SAP_SIPPER",
+          "ability": [157],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [406, 431, 85, 58],
           "ev": [252, 0, 0, 6, 252, 0]
@@ -15174,7 +15195,7 @@
           "lvl": 80,
           "id": 917,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_GYARADOSITE",
           "moves": [349, 89, 401, 242],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15204,7 +15225,7 @@
           "lvl": 80,
           "id": 478,
           "nature": "jolly",
-          "ability": "ABILITY_STAKEOUT",
+          "ability": [198],
           "heldItem": "ITEM_WIDE_LENS",
           "moves": [743, 739, 358, 420],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15213,7 +15234,7 @@
           "lvl": 80,
           "id": 1113,
           "nature": "timid",
-          "ability": "ABILITY_BATTLE_BOND",
+          "ability": [210],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [399, 57, 58, 448],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15222,7 +15243,7 @@
           "lvl": 80,
           "id": 149,
           "nature": "jolly",
-          "ability": "ABILITY_MULTISCALE",
+          "ability": [136],
           "heldItem": "ITEM_HEAVY_DUTY_BOOTS",
           "moves": [349, 744, 89, 337],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15231,7 +15252,7 @@
           "lvl": 80,
           "id": 1500,
           "nature": "adamant",
-          "ability": "ABILITY_GUTS",
+          "ability": [62],
           "heldItem": "ITEM_MACHAMPITE",
           "moves": [183, 409, 9, 7],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15263,7 +15284,7 @@
           "lvl": 82,
           "id": 942,
           "nature": "hasty",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [337, 744, 126, 56],
           "ev": [0, 252, 0, 6, 0, 252]
@@ -15272,7 +15293,7 @@
           "lvl": 82,
           "id": 1210,
           "nature": "modest",
-          "ability": "ABILITY_SOUL_HEART",
+          "ability": [220],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [431, 607, 412, 396],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15281,7 +15302,7 @@
           "lvl": 82,
           "id": 1425,
           "nature": "modest",
-          "ability": "ABILITY_BAD_COMPANY",
+          "ability": [322],
           "heldItem": "ITEM_POWER_HERB",
           "moves": [435, 726, 835, 399],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15290,7 +15311,7 @@
           "lvl": 82,
           "id": 1404,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [764, 370, 429, 157],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15299,7 +15320,7 @@
           "lvl": 82,
           "id": 1427,
           "nature": "adamant",
-          "ability": "ABILITY_PROTOSYNTHESIS",
+          "ability": [281],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [394, 337, 663, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15308,7 +15329,7 @@
           "lvl": 82,
           "id": 953,
           "nature": "naive",
-          "ability": "ABILITY_AIR_LOCK",
+          "ability": [76],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [622, 406, 414, 245],
           "ev": [0, 252, 0, 6, 0, 252],
@@ -15341,7 +15362,7 @@
           "lvl": 30,
           "id": 1304,
           "nature": "adamant",
-          "ability": "ABILITY_TINTED_LENS",
+          "ability": [110],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [625, 644, 372, 24]
         },
@@ -15349,7 +15370,7 @@
           "lvl": 28,
           "id": 998,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_WACAN_BERRY",
           "moves": [769, 127, 454, 279]
         }
@@ -15378,7 +15399,7 @@
           "lvl": 30,
           "id": 768,
           "nature": "adamant",
-          "ability": "ABILITY_EMERGENCY_EXIT",
+          "ability": [194],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [625, 536, 454, 141]
         },
@@ -15386,7 +15407,7 @@
           "lvl": 28,
           "id": 536,
           "nature": "timid",
-          "ability": "ABILITY_WATER_ABSORB",
+          "ability": [11],
           "heldItem": "ITEM_EVIOLITE",
           "moves": [61, 196, 427, 253]
         },
@@ -15394,7 +15415,7 @@
           "lvl": 28,
           "id": 998,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_SHUCA_BERRY",
           "moves": [769, 640, 567, 742]
         }
@@ -15425,7 +15446,7 @@
           "lvl": 200,
           "id": 1230,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [748, 370, 454, 369],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -15435,7 +15456,7 @@
           "lvl": 200,
           "id": 491,
           "nature": "timid",
-          "ability": "ABILITY_BAD_DREAMS",
+          "ability": [123],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [399, 411, 465, 417],
           "ev": [6, 0, 0, 252, 0, 252],
@@ -15445,7 +15466,7 @@
           "lvl": 200,
           "id": 887,
           "nature": "timid",
-          "ability": "ABILITY_INFILTRATOR",
+          "ability": [151],
           "heldItem": "ITEM_CHOICE_SPECS",
           "moves": [406, 247, 53, 85],
           "ev": [6, 0, 0, 252, 0, 252],
@@ -15455,7 +15476,7 @@
           "lvl": 200,
           "id": 1509,
           "nature": "jolly",
-          "ability": "ABILITY_LIBERO",
+          "ability": [236],
           "heldItem": "ITEM_MUSCLE_BAND",
           "moves": [710, 136, 389, 369],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -15465,7 +15486,7 @@
           "lvl": 200,
           "id": 1379,
           "nature": "timid",
-          "ability": "ABILITY_PROTOSYNTHESIS",
+          "ability": [281],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [247, 587, 597, 408],
           "ev": [6, 0, 0, 252, 0, 252],
@@ -15475,7 +15496,7 @@
           "lvl": 200,
           "id": 1507,
           "nature": "adamant",
-          "ability": "ABILITY_IRON_FIST",
+          "ability": [89],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [691, 89, 8, 9],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -15506,7 +15527,7 @@
           "lvl": 200,
           "id": 1383,
           "nature": "hasty",
-          "ability": "ABILITY_QUARK_DRIVE",
+          "ability": [282],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [575, 742, 58, 65],
           "ev": [0, 6, 0, 252, 0, 252]
@@ -15515,7 +15536,7 @@
           "lvl": 200,
           "id": 1291,
           "nature": "adamant",
-          "ability": "ABILITY_PROTEAN",
+          "ability": [168],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [743, 585, 800, 389],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -15525,7 +15546,7 @@
           "lvl": 200,
           "id": 912,
           "nature": "modest",
-          "ability": "ABILITY_MAGIC_GUARD",
+          "ability": [98],
           "heldItem": "ITEM_WISE_GLASSES",
           "moves": [607, 237, 94, 412],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15534,7 +15555,7 @@
           "lvl": 200,
           "id": 291,
           "nature": "adamant",
-          "ability": "ABILITY_SPEED_BOOST",
+          "ability": [3],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [14, 404, 744, 625],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15543,7 +15564,7 @@
           "lvl": 200,
           "id": 1230,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_COBA_BERRY",
           "moves": [748, 339, 443, 370],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15552,7 +15573,7 @@
           "lvl": 200,
           "id": 1493,
           "nature": "jolly",
-          "ability": "ABILITY_IRON_FIST",
+          "ability": [89],
           "heldItem": "ITEM_INFERNAPITE",
           "moves": [398, 370, 710, 514],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15582,7 +15603,7 @@
           "lvl": 200,
           "id": 1501,
           "nature": "timid",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_GENGARITE",
           "moves": [247, 95, 508, 124],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15591,7 +15612,7 @@
           "lvl": 200,
           "id": 798,
           "nature": "bold",
-          "ability": "ABILITY_BEAST_BOOST",
+          "ability": [224],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [428, 403, 348, 404],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -15600,7 +15621,7 @@
           "lvl": 200,
           "id": 1387,
           "nature": "jolly",
-          "ability": "ABILITY_QUARK_DRIVE",
+          "ability": [282],
           "heldItem": "ITEM_HARD_STONE",
           "moves": [89, 317, 157, 561],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15609,7 +15630,7 @@
           "lvl": 200,
           "id": 1384,
           "nature": "adamant",
-          "ability": "ABILITY_QUARK_DRIVE",
+          "ability": [282],
           "heldItem": "ITEM_MAGNET",
           "moves": [252, 676, 606, 395],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15618,7 +15639,7 @@
           "lvl": 200,
           "id": 1325,
           "nature": "jolly",
-          "ability": "ABILITY_WEAK_ARMOR",
+          "ability": [133],
           "heldItem": "ITEM_CHARCOAL",
           "moves": [53, 819, 421, 490],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15627,7 +15648,7 @@
           "lvl": 200,
           "id": 785,
           "nature": "rash",
-          "ability": "ABILITY_ELECTRIC_SURGE",
+          "ability": [226],
           "heldItem": "ITEM_MAGNET",
           "moves": [436, 97, 488, 673],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15657,7 +15678,7 @@
           "lvl": 82,
           "id": 788,
           "nature": "timid",
-          "ability": "ABILITY_MISTY_SURGE",
+          "ability": [228],
           "heldItem": "ITEM_TERRAIN_EXTENDER",
           "moves": [587, 58, 57, 742],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15666,7 +15687,7 @@
           "lvl": 82,
           "id": 1347,
           "nature": "jolly",
-          "ability": "ABILITY_OWN_TEMPO",
+          "ability": [20],
           "heldItem": "ITEM_SHUCA_BERRY",
           "moves": [821, 585, 445, 280],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15675,7 +15696,7 @@
           "lvl": 82,
           "id": 976,
           "nature": "jolly",
-          "ability": "ABILITY_FLASH_FIRE",
+          "ability": [18],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [394, 585, 530, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15684,7 +15705,7 @@
           "lvl": 82,
           "id": 1424,
           "nature": "adamant",
-          "ability": "ABILITY_BULLETPROOF",
+          "ability": [171],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [216, 768, 370, 585],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -15694,7 +15715,7 @@
           "lvl": 82,
           "id": 1379,
           "nature": "timid",
-          "ability": "ABILITY_PROTOSYNTHESIS",
+          "ability": [281],
           "heldItem": "ITEM_CHOICE_SPECS",
           "moves": [412, 247, 587, 475],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15703,7 +15724,7 @@
           "lvl": 82,
           "id": 952,
           "nature": "timid",
-          "ability": "ABILITY_CLEAR_BODY",
+          "ability": [29],
           "heldItem": "ITEM_DIANCITE",
           "moves": [587, 593, 347, 414],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15935,7 +15956,7 @@
           "lvl": 200,
           "id": 942,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_SALAMENCITE",
           "moves": [216, 337, 89, 349],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -15945,7 +15966,7 @@
           "lvl": 200,
           "id": 730,
           "nature": "modest",
-          "ability": "ABILITY_LIQUID_VOICE",
+          "ability": [204],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [304, 587, 742, 196],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15954,7 +15975,7 @@
           "lvl": 200,
           "id": 1213,
           "nature": "timid",
-          "ability": "ABILITY_PUNK_ROCK",
+          "ability": [244],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [716, 484, 611, 523],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -15963,7 +15984,7 @@
           "lvl": 200,
           "id": 1375,
           "nature": "adamant",
-          "ability": "ABILITY_DEFIANT",
+          "ability": [128],
           "heldItem": "ITEM_CHOICE_BAND",
           "moves": [389, 282, 443, 67],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15972,7 +15993,7 @@
           "lvl": 200,
           "id": 950,
           "nature": "jolly",
-          "ability": "ABILITY_SHARPNESS",
+          "ability": [292],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [428, 535, 404, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -15981,7 +16002,7 @@
           "lvl": 200,
           "id": 1325,
           "nature": "jolly",
-          "ability": "ABILITY_SHARPNESS",
+          "ability": [292],
           "heldItem": "ITEM_CHARCOAL",
           "moves": [819, 421, 261, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16011,7 +16032,7 @@
           "lvl": 200,
           "id": 887,
           "nature": "jolly",
-          "ability": "ABILITY_CLEAR_BODY",
+          "ability": [29],
           "heldItem": "ITEM_DRAGON_FANG",
           "moves": [699, 369, 421, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16020,7 +16041,7 @@
           "lvl": 200,
           "id": 903,
           "nature": "jolly",
-          "ability": "ABILITY_POISON_TOUCH",
+          "ability": [143],
           "heldItem": "ITEM_SHUCA_BERRY",
           "moves": [14, 409, 757, 183],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16029,7 +16050,7 @@
           "lvl": 200,
           "id": 976,
           "nature": "jolly",
-          "ability": "ABILITY_FLASH_FIRE",
+          "ability": [18],
           "heldItem": "ITEM_CHARCOAL",
           "moves": [645, 490, 585, 530],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16038,7 +16059,7 @@
           "lvl": 200,
           "id": 473,
           "nature": "adamant",
-          "ability": "ABILITY_THICK_FAT",
+          "ability": [47],
           "heldItem": "ITEM_SOFT_SAND",
           "moves": [89, 558, 420, 445],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16047,7 +16068,7 @@
           "lvl": 200,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [370, 747, 389, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16056,7 +16077,7 @@
           "lvl": 200,
           "id": 1492,
           "nature": "jolly",
-          "ability": "ABILITY_TORRENT",
+          "ability": [67],
           "heldItem": "ITEM_EMPOLEONITE_O",
           "moves": [14, 454, 443, 666],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16086,7 +16107,7 @@
           "lvl": 200,
           "id": 917,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_MYSTIC_WATER",
           "moves": [423, 401, 242, 239],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16095,7 +16116,7 @@
           "lvl": 200,
           "id": 1113,
           "nature": "timid",
-          "ability": "ABILITY_PROTEAN",
+          "ability": [168],
           "heldItem": "ITEM_MYSTIC_WATER",
           "moves": [505, 196, 326, 352],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16104,7 +16125,7 @@
           "lvl": 200,
           "id": 928,
           "nature": "adamant",
-          "ability": "ABILITY_STRIKER",
+          "ability": [311],
           "heldItem": "ITEM_EXPERT_BELT",
           "moves": [773, 413, 299, 98],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16113,7 +16134,7 @@
           "lvl": 200,
           "id": 1398,
           "nature": "jolly",
-          "ability": "ABILITY_PROTOSYNTHESIS",
+          "ability": [281],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [400, 337, 429, 29],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16122,7 +16143,7 @@
           "lvl": 200,
           "id": 892,
           "nature": "jolly",
-          "ability": "ABILITY_UNSEEN_FIST",
+          "ability": [260],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [223, 747, 443, 197],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16131,7 +16152,7 @@
           "lvl": 200,
           "id": 1489,
           "nature": "jolly",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_LUXRITE",
           "moves": [242, 672, 422, 610],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16163,7 +16184,7 @@
           "lvl": 201,
           "id": 741,
           "nature": "timid",
-          "ability": "ABILITY_DANCER",
+          "ability": [216],
           "heldItem": "ITEM_CHARTI_BERRY",
           "moves": [651, 485, 314, 355],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16172,7 +16193,7 @@
           "lvl": 201,
           "id": 1170,
           "nature": "timid",
-          "ability": "ABILITY_DANCER",
+          "ability": [216],
           "heldItem": "ITEM_CHARTI_BERRY",
           "moves": [651, 485, 314, 355],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16181,7 +16202,7 @@
           "lvl": 201,
           "id": 1171,
           "nature": "timid",
-          "ability": "ABILITY_DANCER",
+          "ability": [216],
           "heldItem": "ITEM_CHARTI_BERRY",
           "moves": [651, 485, 314, 355],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16190,7 +16211,7 @@
           "lvl": 201,
           "id": 1169,
           "nature": "timid",
-          "ability": "ABILITY_DANCER",
+          "ability": [216],
           "heldItem": "ITEM_CHARTI_BERRY",
           "moves": [651, 485, 314, 355],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16222,7 +16243,7 @@
           "lvl": 84,
           "id": 903,
           "nature": "jolly",
-          "ability": "ABILITY_POISON_TOUCH",
+          "ability": [143],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [252, 757, 370, 157],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16231,7 +16252,7 @@
           "lvl": 84,
           "id": 1072,
           "nature": "timid",
-          "ability": "ABILITY_SERENE_GRACE",
+          "ability": [32],
           "heldItem": "ITEM_CHOICE_SPECS",
           "moves": [403, 467, 414, 94],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16240,7 +16261,7 @@
           "lvl": 84,
           "id": 797,
           "nature": "modest",
-          "ability": "ABILITY_BEAST_BOOST",
+          "ability": [224],
           "heldItem": "ITEM_POWER_HERB",
           "moves": [403, 431, 730, 53],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16249,7 +16270,7 @@
           "lvl": 84,
           "id": 1528,
           "nature": "jolly",
-          "ability": "ABILITY_SHEER_FORCE",
+          "ability": [125],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [394, 157, 89, 276],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16258,7 +16279,7 @@
           "lvl": 84,
           "id": 1428,
           "nature": "timid",
-          "ability": "ABILITY_PROTOSYNTHESIS",
+          "ability": [281],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [406, 839, 85, 304],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16267,7 +16288,7 @@
           "lvl": 84,
           "id": 930,
           "nature": "timid",
-          "ability": "ABILITY_TRACE",
+          "ability": [36],
           "heldItem": "ITEM_GARDEVOIRITE",
           "moves": [304, 94, 411, 347],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16297,7 +16318,7 @@
           "lvl": 84,
           "id": 903,
           "nature": "jolly",
-          "ability": "ABILITY_POISON_TOUCH",
+          "ability": [143],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [252, 757, 370, 157],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16306,7 +16327,7 @@
           "lvl": 84,
           "id": 1072,
           "nature": "timid",
-          "ability": "ABILITY_SERENE_GRACE",
+          "ability": [32],
           "heldItem": "ITEM_CHOICE_SPECS",
           "moves": [403, 467, 414, 94],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16315,7 +16336,7 @@
           "lvl": 84,
           "id": 797,
           "nature": "modest",
-          "ability": "ABILITY_BEAST_BOOST",
+          "ability": [224],
           "heldItem": "ITEM_POWER_HERB",
           "moves": [403, 431, 730, 53],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16324,7 +16345,7 @@
           "lvl": 84,
           "id": 1528,
           "nature": "jolly",
-          "ability": "ABILITY_SHEER_FORCE",
+          "ability": [125],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [394, 157, 89, 276],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16333,7 +16354,7 @@
           "lvl": 84,
           "id": 1428,
           "nature": "timid",
-          "ability": "ABILITY_PROTOSYNTHESIS",
+          "ability": [281],
           "heldItem": "ITEM_BOOSTER_ENERGY",
           "moves": [406, 839, 85, 304],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16342,7 +16363,7 @@
           "lvl": 84,
           "id": 930,
           "nature": "timid",
-          "ability": "ABILITY_TRACE",
+          "ability": [36],
           "heldItem": "ITEM_GARDEVOIRITE",
           "moves": [304, 94, 411, 347],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16394,7 +16415,7 @@
           "lvl": 83,
           "id": 748,
           "nature": "impish",
-          "ability": "ABILITY_REGENERATOR",
+          "ability": [144],
           "heldItem": "ITEM_BLACK_SLUDGE",
           "moves": [390, 114, 666, 398],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -16403,7 +16424,7 @@
           "lvl": 83,
           "id": 1331,
           "nature": "jolly",
-          "ability": "ABILITY_STAKEOUT",
+          "ability": [198],
           "heldItem": "ITEM_CHOICE_BAND",
           "moves": [242, 694, 585, 423],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16412,7 +16433,7 @@
           "lvl": 83,
           "id": 561,
           "nature": "timid",
-          "ability": "ABILITY_MAGIC_GUARD",
+          "ability": [98],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [403, 355, 502, 322],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16421,7 +16442,7 @@
           "lvl": 83,
           "id": 464,
           "nature": "jolly",
-          "ability": "ABILITY_SOLID_ROCK",
+          "ability": [116],
           "heldItem": "ITEM_WEAKNESS_POLICY",
           "moves": [445, 89, 9, 224],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16430,7 +16451,7 @@
           "lvl": 84,
           "id": 1494,
           "nature": "timid",
-          "ability": "ABILITY_OVERGROW",
+          "ability": [65],
           "heldItem": "ITEM_VENUSAURITE",
           "moves": [202, 188, 414, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16460,7 +16481,7 @@
           "lvl": 83,
           "id": 1310,
           "nature": "jolly",
-          "ability": "ABILITY_TECHNICIAN",
+          "ability": [101],
           "heldItem": "ITEM_WIDE_LENS",
           "moves": [790, 44, 331, 810],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16469,7 +16490,7 @@
           "lvl": 83,
           "id": 973,
           "nature": "adamant",
-          "ability": "ABILITY_ROCK_HEAD",
+          "ability": [69],
           "heldItem": "ITEM_THICK_CLUB",
           "moves": [664, 394, 155, 9],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16478,7 +16499,7 @@
           "lvl": 83,
           "id": 468,
           "nature": "timid",
-          "ability": "ABILITY_SERENE_GRACE",
+          "ability": [32],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [403, 86, 587, 355],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16487,7 +16508,7 @@
           "lvl": 83,
           "id": 796,
           "nature": "timid",
-          "ability": "ABILITY_BEAST_BOOST",
+          "ability": [224],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [85, 324, 412, 294],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16496,7 +16517,7 @@
           "lvl": 84,
           "id": 1512,
           "nature": "timid",
-          "ability": "ABILITY_SWARM",
+          "ability": [68],
           "heldItem": "ITEM_ORBEETLITE",
           "moves": [405, 94, 412, 347],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16572,7 +16593,7 @@
           "lvl": 83,
           "id": 620,
           "nature": "jolly",
-          "ability": "ABILITY_REGENERATOR",
+          "ability": [144],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [252, 370, 369, 398],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16581,7 +16602,7 @@
           "lvl": 83,
           "id": 1515,
           "nature": "adamant",
-          "ability": "ABILITY_HUSTLE",
+          "ability": [55],
           "heldItem": "ITEM_WIDE_LENS",
           "moves": [729, 718, 389, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16590,7 +16611,7 @@
           "lvl": 83,
           "id": 866,
           "nature": "timid",
-          "ability": "ABILITY_SCREEN_CLEANER",
+          "ability": [251],
           "heldItem": "ITEM_ASSAULT_VEST",
           "moves": [688, 94, 607, 247],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16599,7 +16620,7 @@
           "lvl": 83,
           "id": 1510,
           "nature": "timid",
-          "ability": "ABILITY_SNIPER",
+          "ability": [97],
           "heldItem": "ITEM_CHOICE_SPECS",
           "moves": [693, 403, 58, 56],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16608,7 +16629,7 @@
           "lvl": 84,
           "id": 916,
           "nature": "jolly",
-          "ability": "ABILITY_HYPER_CUTTER",
+          "ability": [52],
           "heldItem": "ITEM_PINSIRITE",
           "moves": [404, 38, 370, 14],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16663,15 +16684,16 @@
           "lvl": 83,
           "id": 703,
           "nature": "sassy",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_CUSTAP_BERRY",
-          "moves": [447, 587, 408, 153]
+          "moves": [447, 587, 408, 153],
+          "ev": [252, 0, 0, 6, 252, 0]
         },
         {
           "lvl": 83,
           "id": 1215,
           "nature": "timid",
-          "ability": "ABILITY_HEATPROOF",
+          "ability": [85],
           "heldItem": "ITEM_WHITE_HERB",
           "moves": [247, 202, 502, 506],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16680,7 +16702,7 @@
           "lvl": 83,
           "id": 441,
           "nature": "timid",
-          "ability": "ABILITY_PUNK_ROCK",
+          "ability": [244],
           "heldItem": "ITEM_THROAT_SPRAY",
           "moves": [449, 588, 487, 237],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16689,7 +16711,7 @@
           "lvl": 83,
           "id": 1490,
           "nature": "impish",
-          "ability": "ABILITY_SELF_SUFFICIENT",
+          "ability": [321],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [453, 89, 242, 235],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -16698,7 +16720,7 @@
           "lvl": 84,
           "id": 933,
           "nature": "impish",
-          "ability": "ABILITY_STURDY",
+          "ability": [5],
           "heldItem": "ITEM_AGGRONITE",
           "moves": [486, 445, 89, 706],
           "ev": [252, 6, 252, 0, 0, 0]
@@ -16820,7 +16842,7 @@
           "lvl": 83,
           "id": 461,
           "nature": "jolly",
-          "ability": "ABILITY_INFILTRATOR",
+          "ability": [151],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [252, 558, 282, 67],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16829,7 +16851,7 @@
           "lvl": 83,
           "id": 219,
           "nature": "timid",
-          "ability": "ABILITY_SIMPLE",
+          "ability": [86],
           "heldItem": "ITEM_FOCUS_SASH",
           "moves": [506, 53, 408, 414],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16838,7 +16860,7 @@
           "lvl": 83,
           "id": 847,
           "nature": "jolly",
-          "ability": "ABILITY_SWIFT_SWIM",
+          "ability": [33],
           "heldItem": "ITEM_CHOICE_BAND",
           "moves": [666, 729, 370, 398],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16847,7 +16869,7 @@
           "lvl": 83,
           "id": 429,
           "nature": "timid",
-          "ability": "ABILITY_LEVITATE",
+          "ability": [26],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [587, 508, 261, 412],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16856,7 +16878,7 @@
           "lvl": 84,
           "id": 946,
           "nature": "jolly",
-          "ability": "ABILITY_LIMBER",
+          "ability": [7],
           "heldItem": "ITEM_LOPUNNITE",
           "moves": [252, 216, 614, 585],
           "ev": [6, 252, 0, 0, 0, 252],
@@ -16912,7 +16934,7 @@
           "lvl": 83,
           "id": 579,
           "nature": "modest",
-          "ability": "ABILITY_MAGIC_GUARD",
+          "ability": [98],
           "heldItem": "ITEM_LIFE_ORB",
           "moves": [94, 247, 411, 412],
           "ev": [6, 0, 0, 252, 0, 252]
@@ -16921,7 +16943,7 @@
           "lvl": 83,
           "id": 210,
           "nature": "adamant",
-          "ability": "ABILITY_BULL_RUSH",
+          "ability": [323],
           "heldItem": "ITEM_CHOICE_BAND",
           "moves": [585, 423, 694, 242],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16930,7 +16952,7 @@
           "lvl": 83,
           "id": 895,
           "nature": "jolly",
-          "ability": "ABILITY_DRAGONS_MAW",
+          "ability": [263],
           "heldItem": "ITEM_DRAGON_FANG",
           "moves": [750, 337, 34, 349],
           "ev": [6, 252, 0, 0, 0, 252]
@@ -16939,7 +16961,7 @@
           "lvl": 83,
           "id": 1156,
           "nature": "bold",
-          "ability": "ABILITY_STANCE_CHANGE",
+          "ability": [176],
           "heldItem": "ITEM_LEFTOVERS",
           "moves": [92, 431, 247, 590],
           "ev": [252, 0, 252, 6, 0, 0]
@@ -16948,7 +16970,7 @@
           "lvl": 84,
           "id": 935,
           "nature": "timid",
-          "ability": "ABILITY_INTIMIDATE",
+          "ability": [22],
           "heldItem": "ITEM_MANECTITE",
           "moves": [85, 53, 452, 237],
           "ev": [6, 0, 0, 252, 0, 252]

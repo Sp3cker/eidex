@@ -1,9 +1,12 @@
-import { memo, useMemo, useState } from "react";
+import { memo, useCallback, useMemo, useState } from "react";
 import type { PartyMon as PartyMonType } from "@/data/map/trainers";
 import { pokemonDataMap } from "@/data/pokemon";
 import { getPokemonMoveIdsAtLevel, getMoveDetails } from "@/utils/movesByLevel";
 import { calculateStats } from "@/utils/calcStatsByLevel";
 import caps from "@/data/caps.json";
+import { getItemSpriteStyle } from "@/utils/itemSprites";
+import { Items } from "@/data/map";
+import { getAbility } from "@/utils/abilityData";
 
 interface CapLevel {
   desc: string;
@@ -13,7 +16,36 @@ interface CapLevel {
 interface PartyMonProps {
   pokemon: PartyMonType;
 }
-const StatLevels = ["HP", "Atk", "Def", "SpAtk", "SpDef", "Speed"] as const;
+const StatLevels = ["HP", "Atk", "Def", "SpA", "SpD", "Spd"] as const;
+const HeldItemIcon = ({ heldItem }: { heldItem: string }) => {
+  const spriteStyle = getItemSpriteStyle(heldItem, 24); // Changed from 64 to 32
+  const itemName = Items.get(heldItem);
+  return spriteStyle ? (
+    <div className="flex size-max flex-row items-center px-1 ring-1 ring-stone-300">
+      <img
+        src="/spritesheet-items-16.webp"
+        className="shrink-0"
+        style={spriteStyle}
+      />
+      <p>{itemName?.name}</p>
+    </div>
+  ) : (
+    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded bg-gray-200 text-xs text-gray-500">
+      ?
+    </div>
+  );
+};
+
+const AbilityDesc = ({ ability }: { ability: number[] }) => {
+  const abilityNames = ability.map(getAbility);
+
+  if (abilityNames.length === 0) {
+    return <div className="text-red-500">Unknown Ability</div>;
+  }
+  return abilityNames.map((a) =>
+    a ? <div key={a?.name}>{a.name}</div> : null,
+  );
+};
 
 const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
   const [currLevelCap, setCurrentLevelCap] = useState(
@@ -27,6 +59,8 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
   );
   const levelIsLevelCap = pokemon.lvl > 199;
   const moveDetails = getMoveDetails(moves);
+  const isDefinedPokemon =
+    pokemon.heldItem || pokemon.ability || pokemon.nature;
   const stats = useMemo(() => {
     return calculateStats(
       pokemon.id,
@@ -36,35 +70,46 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
       pokemon.nature || "",
     );
   }, [pokemon.id, currLevelCap, pokemon.iv, pokemon.ev, pokemon.nature]);
-  const handleCapChange = (newCap: number) => {
-    setCurrentLevelCap(newCap);
-  };
+  const handleCapChange = useCallback(
+    (e: React.ChangeEvent<HTMLSelectElement>) => {
+      setCurrentLevelCap(Number(e.target.value));
+    },
+    [],
+  );
   return (
-    <div className="flex flex-col rounded-lg bg-neutral-50 px-1 drop-shadow-sm md:px-3">
-      <div className="mb-2 flex flex-row items-center justify-start rounded bg-stone-200">
-        <div className="relative h-12 w-12 overflow-hidden">
+    <div className="flex flex-col gap-y-1 rounded-lg bg-neutral-50 drop-shadow-sm md:px-3">
+      <div className="flex flex-row items-center justify-start gap-x-2 rounded bg-stone-200">
+        <div className="md:h-13 md:w-13 relative ml-1 h-10 w-10 overflow-hidden">
           <img
-            className="pokemon-sprite sprite-animation"
+            className="pokemon-sprite w-13 h-19 sprite-animation aspect-square object-contain drop-shadow-md"
             src={`/icon/${pokemon.id}/icon.webp`}
           />
         </div>
-        <div className="ml-3 sm:pt-1 md:pt-5">
-          <h4 className="font-calamity text-sm font-bold text-gray-800 md:text-sm">
+        <div className="sm:pt-1 md:pt-5">
+          <h4 className="font-calamity mb-0 text-xs font-bold text-gray-800 md:text-sm">
             {speciesName}
           </h4>
 
           {levelIsLevelCap ? (
+            <label
+              htmlFor="level-cap-select"
+              className="font-calamity mt-0 text-xs text-gray-600 md:text-sm"
+            >
+              Level Cap:
+            </label>
+          ) : (
+            <span className="text-lg/1 pkmn-types text-gray-600">
+              Lv. {levelIsLevelCap ? "Scaling" : pokemon.lvl}
+            </span>
+          )}
+        </div>
+        <div>
+          {levelIsLevelCap && (
             <>
-              <label
-                htmlFor="level-cap-select"
-                className="font-calamity text-sm text-gray-600"
-              >
-                Level Cap:
-              </label>
               <select
                 id="level-cap-select"
                 value={currLevelCap}
-                onChange={(e) => handleCapChange(Number(e.target.value))}
+                onChange={handleCapChange}
                 className="border-1 rounded px-2 py-1 text-xl ring-1 ring-neutral-500 hover:border-slate-400 focus:border-slate-400"
               >
                 {caps.map((cap: CapLevel, index: number) => (
@@ -74,20 +119,17 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
                 ))}
               </select>
             </>
-          ) : (
-            <span className="text-lg/1 pkmn-types text-gray-600">
-              Lv. {levelIsLevelCap ? "Scaling" : pokemon.lvl}
-            </span>
           )}
         </div>
       </div>
-      <div className="max-w-120 flex flex-row items-center justify-between text-neutral-800">
+      {/** Ability - Item - Nature */}
+      <div className="max-w-120 flex flex-row items-center gap-x-1 text-neutral-800 md:justify-evenly">
         {stats?.map((stat, index) => (
           <div
-            className="border-1 w-15 flex flex-col items-center justify-between rounded-md border-gray-400 bg-stone-100 p-1"
+            className="border-1 md:w-15 flex w-10 flex-col items-center justify-evenly rounded-md border-gray-400 bg-stone-100 p-1"
             key={index}
           >
-            <span className="font-calamity text-xs font-bold text-neutral-600">
+            <span className="font-calamity text-[0.5rem] font-bold text-neutral-600">
               {StatLevels[index]}
             </span>
             <span className="pkmn-types font-calamity text-xs tracking-tight">
@@ -96,6 +138,13 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
           </div>
         ))}
       </div>
+      {isDefinedPokemon && (
+        <div className="flex flex-row items-center justify-between gap-x-2 rounded bg-zinc-100 p-1">
+          {pokemon.ability && <AbilityDesc ability={pokemon.ability} />}
+          {pokemon.heldItem && <HeldItemIcon heldItem={pokemon.heldItem} />}
+        </div>
+      )}
+
       <div className="flex items-center space-x-3">
         <div className="flex-1">
           <div className="text-xs text-gray-500">
@@ -107,11 +156,6 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
             {pokemon.ability && (
               <span className="mr-3">
                 Ability: <span className="font-medium">{pokemon.ability}</span>
-              </span>
-            )}
-            {pokemon.heldItem && (
-              <span>
-                Item: <span className="font-medium">{pokemon.heldItem}</span>
               </span>
             )}
           </div>

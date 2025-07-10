@@ -55,7 +55,7 @@ const TrainerInfo = memo(function TrainerInfo({
           <img
             src={`/trainers/${trainer.battlePic}`}
             alt={trainer.trainerName}
-            className="h-22 w-22 md:h-30 md:w-30 drop-shadow-md"
+            className="h-20 w-20 md:h-30 md:w-30 drop-shadow-md"
             style={imageStyles}
           />
           <div className="flex flex-row justify-between">
