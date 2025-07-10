@@ -41,7 +41,7 @@ const Header = () => {
         <img
           src="/Pokemans_395.webp"
           alt="Emerald Imperium Map & Dexnav"
-          className="h-9"
+          className="h-9  aspect-rect"
           height="36"
         />
         <div className="justify-self-start">
