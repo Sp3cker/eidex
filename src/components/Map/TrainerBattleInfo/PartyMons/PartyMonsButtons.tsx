@@ -26,7 +26,7 @@ const PartyMonsButtons = ({
           className={`party-mon-button rounded rounded-sm ring-1 ${selectedMon === index ? "bg-cyan-200 ring-cyan-500" : "bg-stone-200 ring-stone-800"}`}
           onClick={() => setSelectedMon(index)}
         >
-          <div className="md:h-13 md:w-13 overflow- relative mb-1 ml-1 h-9 w-9 overflow-hidden">
+          <div className="relative mb-1 ml-1 h-8 w-8 overflow-hidden md:h-12 md:w-12">
             <img
               className="pokemon-sprite sprite-animation md:size-22 size-19 aspect-square drop-shadow-md"
               src={`/icon/${mon.id}/icon.webp`}

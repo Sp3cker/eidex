@@ -93,13 +93,13 @@
   animation: selected-place-animation 1s infinite;
 }
 .dexnav-z {
-  z-index: 2;
-}
-.map-place-info-z-3 {
   z-index: 4;
 }
-.selecta-z {
+.map-place-info-z-3 {
   z-index: 3;
+}
+.selecta-z {
+  z-index: 2;
 }
 .places-list-z {
   z-index: 7;
@@ -287,16 +287,19 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     var(--color-normal)
   );
 }
+.ai-flag-label {
+  background: linear-gradient(42deg);
+}
 .hard-ai-flag {
-  color: color(display-p3 221 200 209);
+  color: color(display-p3 0.1101 0.0791 0.0264 / 0.8);
   font-weight: bold;
   letter-spacing: 0.05em;
   /* text-shadow: 0.2px 0.2px 1px rgba(0, 0, 0, 1); */
   background: linear-gradient(
-    120deg,
-    rgb(182, 230, 158),
-    rgb(230, 158, 163),
-    rgb(158, 203, 230)
+    42deg,
+    color(display-p3 0.7733 0.9993 0.7888),
+    color(display-p3 0.9973 0.7622 0.7633),
+    color(display-p3 0.7573 0.8837 0.9974)
   );
   /* background: linear-gradient(120deg, #de8c8c 0%, #daa4a4 100%); */
 
