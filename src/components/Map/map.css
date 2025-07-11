@@ -287,6 +287,25 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     var(--color-normal)
   );
 }
+.hard-ai-flag {
+  color: color(display-p3 221 200 209);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  /* text-shadow: 0.2px 0.2px 1px rgba(0, 0, 0, 1); */
+  background: linear-gradient(
+    120deg,
+    rgb(182, 230, 158),
+    rgb(230, 158, 163),
+    rgb(158, 203, 230)
+  );
+  /* background: linear-gradient(120deg, #de8c8c 0%, #daa4a4 100%); */
+
+  background-color: color-mix(
+    in srgb,
+    rgba(0 0 0 / 0.1) 50%,
+    var(--color-normal)
+  );
+}
 /* .elite-ai-flag {
   color: color-mix(in lab, lab(82, 11, 75) 10%, var(--background-color-mix));
   background-color: color-mix(

@@ -1,4 +1,4 @@
-import { memo, useMemo, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useTransition as springTransition, animated } from "@react-spring/web";
 import PartyMon from "./PartyMon";
 import { TrainerPartyMon } from "@/data/map/trainers";
@@ -9,10 +9,6 @@ const PartyMons = memo(function PartyMons({
   party: TrainerPartyMon[];
 }) {
   const [selectedMon, setSelectedMon] = useState<number>(0);
-  const partyNumbers = useMemo(
-    () => new Array(party.length).fill(0).map((_, index) => index),
-    [party.length],
-  );
 
   const shuffleTransition = springTransition(selectedMon, {
     from: {
@@ -34,6 +30,9 @@ const PartyMons = memo(function PartyMons({
     },
     // onRest: handleResizeTrainerInfo,
   });
+  useEffect(() => {
+    setSelectedMon(0);
+  }, [party]);
   if (party.length === 0) {
     return (
       <div className="flex h-full w-full items-center justify-center">

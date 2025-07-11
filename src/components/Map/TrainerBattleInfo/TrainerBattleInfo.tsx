@@ -22,50 +22,48 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
     return null;
   }
   return (
-    <div className="font-calamity flex h-full flex-col rounded rounded-l-lg">
+    <div className="font-calamity flex h-full flex-col rounded rounded-l-lg p-1 pt-2 md:p-3">
       {/* Header */}
-      <h5 className="text-center">UNDER CONSTRUCTION!!!!!</h5>
-      <div className="p-1 pl-2 md:p-3">
+
+      <div className="min-h-40 p-1 pl-2 md:p-3">
         <TrainerInfo trainer={trainer} />
       </div>
 
       <div className="font-pkmnem flex-1 space-y-4 overflow-y-auto text-lg">
-        <div className="p-1 md:p-3">
-          {isRivalTrainer ? (
-            // Rival trainer with multiple parties
-            <div className="space-y-4">
-              {Object.entries(trainer.parties).map(([starter, party]) => (
-                <div key={starter} className="rounded-lg border p-3">
-                  <h4 className="mb-2 font-bold text-gray-700">
-                    If you chose {starter}
-                  </h4>
-                  <div className="grid gap-2">
-                    {party.map((pokemon, index) => (
-                      <Suspense
-                        key={index}
-                        fallback={
-                          <div className="h-24 animate-pulse rounded bg-gray-200" />
-                        }
-                      >
-                        <PartyMon pokemon={pokemon} />
-                      </Suspense>
-                    ))}
-                  </div>
+        {isRivalTrainer ? (
+          // Rival trainer with multiple parties
+          <div className="space-y-4">
+            {Object.entries(trainer.parties).map(([starter, party]) => (
+              <div key={starter} className="rounded-lg border p-3">
+                <h4 className="mb-2 font-bold text-gray-700">
+                  If you chose {starter}
+                </h4>
+                <div className="grid gap-2">
+                  {party.map((pokemon, index) => (
+                    <Suspense
+                      key={index}
+                      fallback={
+                        <div className="h-24 animate-pulse rounded bg-gray-200" />
+                      }
+                    >
+                      <PartyMon pokemon={pokemon} />
+                    </Suspense>
+                  ))}
                 </div>
-              ))}
-            </div>
-          ) : (
-            // Regular trainer party
+              </div>
+            ))}
+          </div>
+        ) : (
+          // Regular trainer party
 
-            <Suspense
-              fallback={
-                <div className="h-24 animate-pulse rounded bg-gray-200" />
-              }
-            >
-              <PartyMons party={trainer.party} />
-            </Suspense>
-          )}
-        </div>
+          <Suspense
+            fallback={
+              <div className="h-24 animate-pulse rounded bg-gray-200" />
+            }
+          >
+            <PartyMons party={trainer.party} />
+          </Suspense>
+        )}
       </div>
     </div>
   );

@@ -79,8 +79,8 @@
   }
   .dexnav-grid {
     grid-area: 4 / 1 / 13 / 6;
-    width: 100%;
-    max-width: 100%;
+    /* width: 100%; */
+    max-width: 525px;
     min-width: auto;
     /* height: 00px; */
   }

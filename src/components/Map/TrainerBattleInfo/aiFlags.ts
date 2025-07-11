@@ -31,13 +31,13 @@ export const aiFlags: Record<string, TrainerAIFlag> = Object.freeze({
 
   STALL: { desc: "Stalling tactics", rarity: 0 },
 
-  SMART_SWITCHING: { desc: "Switches-out Pokémon", rarity: 1 },
+  SMART_SWITCHING: { desc: "Switches & selects Pokémon wisely", rarity: 1 },
 
   SMART_MON_CHOICES: { desc: "Selects Pokémon wisely", rarity: 1 },
 
   ACE_POKEMON: { desc: "Reserves strongest Pokémon", rarity: 2 },
 
-  OMNISCIENT: { desc: "Knows your party", rarity: 1 },
+  OMNISCIENT: { desc: "Knows your party", rarity: 3 },
 
   CONSERVATIVE: { desc: "Assumes minimum damage", rarity: 0 },
 

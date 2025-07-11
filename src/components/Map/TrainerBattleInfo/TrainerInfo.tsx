@@ -6,28 +6,55 @@ import { aiFlags } from "./aiFlags";
 // 'background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);';
 // const superRareColor = "#F2C46D";
 // const eliteColor = "#58238C";
-const rarityColors = ["normal-ai-flag", "rare-ai-flag", "elite-ai-flag"];
+const rarityColors = [
+  "normal-ai-flag",
+  "rare-ai-flag",
+  "elite-ai-flag",
+  "hard-ai-flag",
+];
 
+const AIFlagsLabel = memo(function ({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="min-w-35 shadow-xs relative flex h-full min-h-40 rounded-lg p-1 pt-4 ring-1 ring-gray-300">
+      <div
+        style={{ top: "-0.5rem", left: "0.5rem" }}
+        className="absolute h-5 rounded rounded-sm bg-cyan-900 px-2 text-stone-300 ring-1 ring-zinc-500"
+      >
+        <p style={{ fontSize: 10 }} className="font-calamity leading-5">
+          AI Flags
+        </p>
+      </div>
+      {children}
+    </div>
+  );
+});
 const AIFlags = ({ flags }: { flags: (keyof typeof aiFlags)[] }) => {
   if (flags.length === 0) {
     return "None";
   }
   return (
-    <div className="font-calamity space-y-1 text-xs/4 text-gray-600">
-      {[...flags]
-        .sort((a, b) => aiFlags[b].rarity - aiFlags[a].rarity)
-        .map((flag, index) => {
-          const bg = rarityColors[aiFlags[flag].rarity];
-          return (
-            <p
-              className={`pkmn-types rounded ${bg} px-2 py-0.5 text-gray-700`}
-              key={index}
-            >
-              {aiFlags[flag].desc}
-            </p>
-          );
-        })}
-    </div>
+    <AIFlagsLabel>
+      <div className="font-pkmnem space-y-1 text-sm/4 tracking-wide sm:text-base/4">
+        {flags
+          .sort((a, b) => aiFlags[b].rarity - aiFlags[a].rarity)
+          .filter((flag) => flag !== "SMART_MON_CHOICES")
+          .map((flag, index) => {
+            const bg = rarityColors[aiFlags[flag].rarity];
+            return (
+              <p
+                className={`text-shadow-sm rounded ${bg} px-2 py-0.5`}
+                key={index}
+              >
+                {aiFlags[flag].desc}
+              </p>
+            );
+          })}
+      </div>
+    </AIFlagsLabel>
   );
 };
 const imageStyles: React.CSSProperties = {
@@ -47,10 +74,10 @@ const TrainerInfo = memo(function TrainerInfo({
 }) {
   return (
     <div
-      className={`max-w-100 flex flex-row justify-between gap-2 md:flex-row ${trainer.boss ? "h-40" : "h-35"} ${className}`}
+      className={`max-w-100 h-35 flex flex-row justify-between ${className}`}
     >
       {/* Trainer Image and Name */}
-      <div className="flex w-[45%] items-start gap-2">
+      <div className="sm:max-w-30 flex max-w-20 items-start gap-2">
         <div className="relative flex flex-col">
           <img
             src={`/trainers/${trainer.battlePic}`}
