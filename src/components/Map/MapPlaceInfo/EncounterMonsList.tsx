@@ -32,21 +32,23 @@ const EncounterDescriptor = ({
   types,
 }: any) => {
   return (
-    <div className="font-pkmnem text-sm/1 leading-tight flex flex-row justify-between">
+    <div className="font-pkmnem text-sm/1 flex flex-row justify-between text-nowrap leading-tight">
       <span>
-        <p className={`text-base/5 md:text-base/5 ${zoneToTextColor(zone)} font-bold`}>
+        <p>
+          Lv.{"\u200a"}
+          {minLevel}
+          {"\u200a"}-{"\u200a"}
+          {maxLevel}
+        </p>
+        <EncounterTypeBadge types={types} />
+      </span>
+      <div className="text-sm/1 flex h-3 flex-col">
+        <p
+          className={`text-base/5 md:text-lg/5 ${zoneToTextColor(zone)} font-bold`}
+        >
           {rod ? rod : rate + " %"}
         </p>
-        <div className="text-sm/1 h-3 flex flex-col">
-          <p>
-            Lv.{"\u200a"}
-            {minLevel}
-            {"\u200a"}-{"\u200a"}
-            {maxLevel}
-          </p>
-        </div>
-      </span>
-      <EncounterTypeBadge types={types} />
+      </div>
     </div>
   );
 };
@@ -71,10 +73,10 @@ const EncounterMonsList = React.memo(function EncounterList({
       {encounter.map((mon, index) => (
         <div
           key={`${mon.index}${index}`}
-          className={`align-center w-37 w-full md:pr-2 flex cursor-pointer items-center gap-1 overflow-hidden rounded p-0 pl-2 transition-colors ${zoneToBgColor(zone)}`}
+          className={`align-center w-37 flex w-full cursor-pointer items-center gap-1 overflow-hidden rounded p-0 pl-2 transition-colors md:pr-2 ${zoneToBgColor(zone)}`}
           onMouseDown={() => setSelectedPokemon(mon.index)}
         >
-          <div className="icon-sprite-box mb-1">
+          <div className="icon-sprite-box mb-4 aspect-square">
             <img
               className="pokemon-icon-sprite"
               src={`/icon/${mon.index}/icon.webp`}

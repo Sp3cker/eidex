@@ -71,7 +71,8 @@
   .map-place-info-grid {
     margin-top: 0.25rem;
     grid-area: 1/ 7 / 11 / 12;
-    max-width: 40vw;
+    min-width: 525px; /* Dont touch */
+    max-width: 45vw;
   }
   .selecta-grid {
     grid-area: 10 / 8 / 11 / 10;
