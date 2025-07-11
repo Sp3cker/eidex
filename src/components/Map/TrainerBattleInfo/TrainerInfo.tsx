@@ -60,7 +60,7 @@ const TrainerInfo = memo(function TrainerInfo({
           />
           <div className="flex flex-row justify-between">
             <h3
-              className={`font-calamity ${trainer.boss && "drop-shadow-(--color-rare)"} w-full text-xl font-bold text-gray-800`}
+              className={`font-calamity ${trainer.boss && "drop-shadow-(--color-rare)"} w-full text-sm font-bold text-gray-800 md:text-xl`}
             >
               {trainer.trainerName}
             </h3>
@@ -71,9 +71,9 @@ const TrainerInfo = memo(function TrainerInfo({
             )}
           </div>
           {trainer.boss && (
-            <span className="me-2 rounded-sm bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-              Hard
-            </span>
+            <div className="me-2 rounded-sm bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">
+              <p>Hard</p>
+            </div>
           )}
         </div>
       </div>

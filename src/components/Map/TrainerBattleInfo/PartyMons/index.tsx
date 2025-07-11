@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import { memo, useMemo, useState } from "react";
 import { useTransition as springTransition, animated } from "@react-spring/web";
 import PartyMon from "./PartyMon";
 import { TrainerPartyMon } from "@/data/map/trainers";
@@ -9,7 +9,12 @@ const PartyMons = memo(function PartyMons({
   party: TrainerPartyMon[];
 }) {
   const [selectedMon, setSelectedMon] = useState<number>(0);
-  const shuffleTransition = springTransition(party, {
+  const partyNumbers = useMemo(
+    () => new Array(party.length).fill(0).map((_, index) => index),
+    [party.length],
+  );
+
+  const shuffleTransition = springTransition(selectedMon, {
     from: {
       translateX: "-0%",
       opacity: 0,
@@ -29,22 +34,34 @@ const PartyMons = memo(function PartyMons({
     },
     // onRest: handleResizeTrainerInfo,
   });
-
+  if (party.length === 0) {
+    return (
+      <div className="flex h-full w-full items-center justify-center">
+        <p className="text-center text-lg font-bold text-gray-500">
+          No Pokémon in this party.
+        </p>
+      </div>
+    );
+  }
   return (
-    <div className="relative flex w-full flex-col items-center justify-center gap-2 overflow-hidden rounded-lg bg-neutral-50 p-2 shadow-md">
-      <PartyMonsButtons
-        party={party}
-        selectedMon={selectedMon}
-        setSelectedMon={setSelectedMon}
-      />
-      {shuffleTransition((style, item) => (
-        <animated.div
-          className="absolute bottom-0 left-0 right-0 top-0 overflow-y-auto p-2"
-          style={style}
-        >
-          <PartyMon pokemon={item} />
-        </animated.div>
-      ))}
+    <div className="h-200 relative py-2">
+      <div className="flex h-full w-full flex-col">
+        <PartyMonsButtons
+          party={party}
+          selectedMon={selectedMon}
+          setSelectedMon={setSelectedMon}
+        />
+        <div className="h-200 relative flex w-full">
+          {shuffleTransition((style, item) => (
+            <animated.div
+              className="absolute bottom-0 left-0 right-0 top-0 overflow-y-auto p-2"
+              style={style}
+            >
+              <PartyMon pokemon={party[item]} />
+            </animated.div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 });

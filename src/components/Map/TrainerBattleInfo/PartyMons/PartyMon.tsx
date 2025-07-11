@@ -1,13 +1,10 @@
 import { memo, useCallback, useMemo, useState } from "react";
-import type { PartyMon as PartyMonType } from "@/data/map/trainers";
+import type { TrainerPartyMon } from "@/data/map/trainers";
 import { pokemonDataMap } from "@/data/pokemon";
-import { useSprings } from "@react-spring/web";
+
 import { getPokemonMoveIdsAtLevel, getMoveDetails } from "@/utils/movesByLevel";
 import { calculateStats } from "@/utils/calcStatsByLevel";
 import caps from "@/data/caps.json";
-import { getItemSpriteStyle } from "@/utils/itemSprites";
-import { Items } from "@/data/map";
-import { getAbility } from "@/utils/abilityData";
 
 interface CapLevel {
   desc: string;
@@ -15,33 +12,33 @@ interface CapLevel {
 }
 
 interface PartyMonProps {
-  pokemon: PartyMonType;
+  pokemon: TrainerPartyMon;
 }
 const StatLevels = ["HP", "Atk", "Def", "SpA", "SpD", "Spd"] as const;
 
-
 const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
-  const [currLevelCap, setCurrentLevelCap] = useState(
-    pokemon.lvl > 199 ? 50 : pokemon.lvl,
-  );
+  // Provide sensible defaults for optional properties
+  const level = pokemon.lvl ?? 1;
+  const evs = pokemon.ev ?? [0, 0, 0, 0, 0, 0];
+  const nature = pokemon.nature ?? "";
+  const hasIvs = pokemon.iv === "perfect";
+
+  const [currLevelCap, setCurrentLevelCap] = useState(level > 199 ? 50 : level);
+
   const pokemonInfo = pokemonDataMap.get(pokemon.id.toString());
   const speciesName = pokemonInfo?.nameKey || "Unknown";
+
   const moves = useMemo(
-    () => getPokemonMoveIdsAtLevel(pokemon.id, pokemon.lvl),
-    [pokemon.id, pokemon.lvl],
+    () => getPokemonMoveIdsAtLevel(pokemon.id, level),
+    [pokemon.id, level],
   );
-  const levelIsLevelCap = pokemon.lvl > 199;
+
+  const levelIsLevelCap = level > 199;
   const moveDetails = getMoveDetails(moves);
-  const isDefinedPokemon = pokemon.item || pokemon.ability || pokemon.nature;
+
   const stats = useMemo(() => {
-    return calculateStats(
-      pokemon.id,
-      currLevelCap,
-      pokemon.iv ? true : false,
-      pokemon.ev,
-      pokemon.nature || "",
-    );
-  }, [pokemon.id, currLevelCap, pokemon.iv, pokemon.ev, pokemon.nature]);
+    return calculateStats(pokemon.id, currLevelCap, hasIvs, evs, nature);
+  }, [pokemon.id, currLevelCap, hasIvs, evs, nature]);
   const handleCapChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
       setCurrentLevelCap(Number(e.target.value));
@@ -71,7 +68,7 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
             </label>
           ) : (
             <span className="text-lg/1 pkmn-types text-gray-600">
-              Lv. {levelIsLevelCap ? "Scaling" : pokemon.lvl}
+              Lv. {levelIsLevelCap ? "Scaling" : level}
             </span>
           )}
         </div>
@@ -110,7 +107,6 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
           </div>
         ))}
       </div>
-
 
       <div className="flex items-center space-x-3">
         <div className="flex-1">

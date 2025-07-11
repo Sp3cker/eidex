@@ -4,9 +4,9 @@ let isLoading = false;
 let loadPromise: Promise<Record<string, Trainer[]>> | null = null;
 export type TrainerPartyMon = {
   moves?: number[];
-  lvl: number;
+  lvl?: number;
   id: number;
-  ev: number[];
+  ev?: number[];
   iv?: "perfect";
   nature?: string;
   ability?: number[];
