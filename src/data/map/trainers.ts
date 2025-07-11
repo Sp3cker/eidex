@@ -2,7 +2,7 @@
 let trainersData: Record<string, Trainer[]> | null = null;
 let isLoading = false;
 let loadPromise: Promise<Record<string, Trainer[]>> | null = null;
-export type PartyMon = {
+export type TrainerPartyMon = {
   moves?: number[];
   lvl: number;
   id: number;
@@ -24,7 +24,7 @@ export interface Trainer {
   sprite: string;
   boss?: boolean; // Optional, if this trainer is a boss fight
   level: string; // Can be used to group into level encountered at
-  party: PartyMon[];
+  party: TrainerPartyMon[];
   youPicked?: "Treecko" | "Torchic" | "Mudkip"; // Optional, only for rival trainers
   rematch?: true; // If battle is rematch.
 }
