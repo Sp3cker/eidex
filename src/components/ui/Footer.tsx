@@ -29,7 +29,7 @@ const Footer = memo(function Footer() {
       <div className="flex items-center justify-end gap-5">
         <div className="md:w-full">
           <p className="font-pkmnem leading-xs text-sm/3 text-white">
-            Somewhat endorsed by Emerald Imperium.
+            Not a project from Emerald Imperium team.
           </p>
           <p className="font-pkmnem leading-xs text-sm/3 text-white">
             <DisclaimerModal /> for more details.
