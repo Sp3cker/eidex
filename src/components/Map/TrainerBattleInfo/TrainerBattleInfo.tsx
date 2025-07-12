@@ -21,7 +21,7 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
     return null;
   }
   return (
-    <div className="font-calamity flex h-full flex-col rounded rounded-l-lg p-1 pt-2 md:p-3">
+    <div className="font-calamity flex h-full flex-col rounded rounded-l-lg pt-2 md:p-3">
       <div className="min-h-40 p-1 pl-2 md:p-3">
         <TrainerInfo trainer={trainer} />
       </div>

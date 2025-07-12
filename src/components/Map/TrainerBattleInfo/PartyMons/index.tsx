@@ -70,7 +70,7 @@ const PartyMons = memo(function PartyMons({
           {shuffleTransition((style, item) => (
             <animated.div
               key={item.id}
-              className="absolute bottom-0 left-0 right-0 top-0 overflow-y-auto p-2"
+              className="absolute bottom-0 left-1 right-0 top-0 overflow-y-auto "
               style={style}
             >
               <PartyMon pokemon={item} />
