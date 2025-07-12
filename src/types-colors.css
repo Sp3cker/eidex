@@ -1,5 +1,5 @@
 :root {
-  --normal-type-color: #C6C199;
+  --normal-type-color: #c6c199;
   --fire-type-color: #f08030;
   --water-type-color: #5584f1;
   --grass-type-color: #78c850;
@@ -19,17 +19,41 @@
   --fairy-type-color: #f0b6c0;
   --background-color-mix: var(--color-neutral-100);
 }
+@supports (color: color(display-p3 0.55 0.19 0.71)) {
+  :root {
+    --normal-type-color: color(display-p3 0.78 0.78 0.59);
+    --fire-type-color: color(display-p3 0.95 0.5 0.19);
+    --water-type-color: color(display-p3 0.33 0.52 0.94);
+    --grass-type-color: color(display-p3 0.47 0.78 0.31);
+    --electric-type-color: color(display-p3 0.9711 0.8549 0.2055);
+    --ice-type-color: color(display-p3 0.6 0.85 0.85);
+    --fighting-type-color: color(display-p3 0.75 0.19 0.16);
+    --poison-type-color: color(display-p3 0.5035 0.1907 0.552);
+    --ground-type-color: color(display-p3 0.88 0.78 0.41);
+    --flying-type-color: color(display-p3 0.66 0.56 1);
+    --psychic-type-color: color(display-p3 0.9596 0.4116 0.6009);
+    --bug-type-color: color(display-p3 0.7029 0.7578 0.1629);
+    --rock-type-color: color(display-p3 0.6843 0.5446 0.1546);
+    --ghost-type-color: color(display-p3 0.383 0.3016 0.5433);
+    --dragon-type-color: color(display-p3 0.3183 0.2484 0.9929);
+    --dark-type-color: color(display-p3 0.2511 0.1948 0.1955);
+    --steel-type-color: color(display-p3 0.72 0.72 0.82);
+    --fairy-type-color: color(display-p3 0.94 0.71 0.75);
+    --background-color-mix: var(--color-neutral-100);
+    --opaque-p3: color(display-p3 0.2806 0.2806 0.2806 / 0.1);
+  }
+}
 
 .normal-type {
   /* color: var(--normal-type-color); */
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--normal-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--normal-type-color)
   );
   border-radius: 0.15rem;
@@ -37,26 +61,26 @@
 
 .fire-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--fire-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--fire-type-color)
   );
   border-radius: 0.15rem;
 }
 .water-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--water-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--water-type-color)
   );
   border-radius: 0.15rem;
@@ -66,183 +90,182 @@
 } */
 .grass-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--grass-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--grass-type-color)
   );
   border-radius: 0.15rem;
 }
 .electric-type {
-  
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--electric-type-color) 0%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--electric-type-color)
   );
   border-radius: 0.15rem;
 }
 .ice-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--ice-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--ice-type-color)
   );
   border-radius: 0.15rem;
 }
 .fighting-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--fighting-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--fighting-type-color)
   );
   border-radius: 0.15rem;
 }
 .poison-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--poison-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--poison-type-color)
   );
   border-radius: 0.15rem;
 }
 .ground-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--ground-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--ground-type-color)
   );
   border-radius: 0.15rem;
 }
 .flying-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--flying-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--flying-type-color)
   );
   border-radius: 0.15rem;
 }
 .psychic-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--psychic-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--psychic-type-color)
   );
   border-radius: 0.15rem;
 }
 .bug-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--bug-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--bug-type-color)
   );
   border-radius: 0.15rem;
 }
 .rock-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--rock-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--rock-type-color)
   );
   border-radius: 0.15rem;
 }
 .ghost-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--ghost-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--ghost-type-color)
   );
   border-radius: 0.15rem;
 }
 .dragon-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--dragon-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--dragon-type-color)
   );
   border-radius: 0.15rem;
 }
 .dark-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--dark-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--dark-type-color)
   );
   border-radius: 0.15rem;
 }
 .steel-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--steel-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
-    rgba(0, 0, 0, 0.1) 25%,
+    in oklab,
+    var(--opaque-p3) 25%,
     var(--steel-type-color)
   );
   border-radius: 0.15rem;
@@ -252,12 +275,12 @@
 }
 .fairy-type {
   color: color-mix(
-    in srgb,
+    in oklab,
     var(--fairy-type-color) 10%,
     var(--background-color-mix)
   );
   background-color: color-mix(
-    in srgb,
+    in oklab,
     var(--background-color-mix) 25%,
     var(--fairy-type-color)
   );
