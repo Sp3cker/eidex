@@ -4,7 +4,6 @@ const PartyMon = lazy(() => import("./PartyMons/PartyMon"));
 import TrainerInfo from "./TrainerInfo";
 import useMapStore from "@/stores/useMapStore";
 import PartyMons from "./PartyMons";
-
 const TrainerBattleInfo = memo(function TrainerBattleInfo() {
   const trainer = useDeferredValue(
     useMapStore(
@@ -23,8 +22,6 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
   }
   return (
     <div className="font-calamity flex h-full flex-col rounded rounded-l-lg p-1 pt-2 md:p-3">
-      {/* Header */}
-
       <div className="min-h-40 p-1 pl-2 md:p-3">
         <TrainerInfo trainer={trainer} />
       </div>

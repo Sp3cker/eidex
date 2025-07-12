@@ -41,14 +41,35 @@
   --color-rare: hsl(44, 61%, 50%);
   --color-elite: hsl(275, 41%, 54%);
   --color-normal: hsl(223, 8%, 82%);
+  --color-very-hard: linear-gradient(
+    to right,
+    oklch(0.65 0.2 25),
+    oklch(0.45 0.15 20)
+  );
+  --color-very-hard-start: oklch(0.65 0.2 25);
 }
 
 @supports (color: color(display-p3 0.55 0.19 0.71)) {
   :root {
+    --color-very-hard-p3: linear-gradient(
+      to right,
+      color(display-p3 0.2 0.3 0.7),
+      color(display-p3 0.1 0.15 0.3)
+    );
+    --color-very-hard-start-p3: color(display-p3 0.2 0.3 0.7);
+    --color-sky-100: color(display-p3 0.9001 0.9408 0.9989);
     --color-rare: color(display-p3 0.9218 0.7796 0.0917);
     --color-elite: color(display-p3 0.6312 0.5222 0.99);
-    --color-normal: color(display-p3 var(--color-normal));
+    --color-very-hard: oklch(
+      0.7,
+      0.08,
+      25
+    ); /* or color(display-p3 0.82, 0.61, 0.61) */
+    --color-very-hard-start: color(display-p3 0.2 0.3 0.7);
+
     --color-white: color(display-p3 1 1 1);
+    --color-cyan-500: color(display-p3 0.2741 0.6746 0.9822);
+    --color-mon-select: color(display-p3 0.3764 0.8844 0.9893);
   }
 }
 @custom-variant dark (&:is(.dark *));
@@ -56,6 +77,7 @@
 @theme {
   --color-fieldset: #4a73ac;
   --color-fieldset-border: #414a6a;
+  --color-mon-select: color(display-p3 0.3598 0.8236 0.9628 / 0.36);
 }
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

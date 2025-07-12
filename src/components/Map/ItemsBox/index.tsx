@@ -3,6 +3,7 @@ import { animated, useSpring, useTransition } from "@react-spring/web";
 import useMapStore from "@/stores/useMapStore";
 import { shallow } from "zustand/shallow";
 import { FadeInWAAPI } from "@/components/ui/FadeInWaapi";
+
 const ItemsBox = lazy(() => import("./ItemsBox"));
 const TrainerBattleInfo = lazy(() => import("../TrainerBattleInfo"));
 // const anmfnc = (show: boolean, isSelectedTrainer: boolean) => {
@@ -16,6 +17,7 @@ const TrainerBattleInfo = lazy(() => import("../TrainerBattleInfo"));
 const pages = [
   ({ style }: any) => (
     <animated.div
+      key={"trainer-info"}
       style={style}
       className="absolute bottom-0 left-0 right-0 top-0 overflow-y-auto p-0 sm:pb-10"
     >
@@ -30,6 +32,7 @@ const pages = [
     <animated.div
       className="absolute bottom-0 left-0 right-0 top-0 overflow-y-auto p-2"
       style={style}
+      key={"items-box"}
     >
       <Suspense>
         <FadeInWAAPI>
@@ -40,6 +43,11 @@ const pages = [
   ),
 ];
 const WINDOW_HEIGHT = window.innerHeight;
+const HIDDEN_TRANSLATE = (WINDOW_HEIGHT * 2) / 5;
+
+//@ts-ignore
+const ANIMATE_HEIGHT = navigator.deviceMemory && navigator.deviceMemory > 4;
+
 // const SAFE_PADDING = Object.freeze({
 //   paddingBottom: "calc(env(safe-area-inset-bottom) + 1rem)",
 //   paddingLeft: "env(safe-area-inset-left)",
@@ -54,6 +62,7 @@ export default memo(function MapItemsBox() {
     ],
     shallow,
   );
+
   //   const show = useMapStore((state) => {
   //     return state.selectedMap !== null && state.dragging === false;
   //   });
@@ -61,12 +70,18 @@ export default memo(function MapItemsBox() {
   const [springs] = useSpring(
     {
       from: {
-        translateY: (WINDOW_HEIGHT * 2) / 5,
+        translateY: HIDDEN_TRANSLATE,
         width: "100%",
+        height: "50vh",
       },
       width: selectedTrainer ? "118%" : "100%",
-      translateY: show ? (selectedTrainer ? -90 : 0) : (WINDOW_HEIGHT * 2) / 5,
+      height: show ? (selectedTrainer ? "75vh" : "50vh") : "50vh",
+      translateY: show ? (selectedTrainer ? -90 : 0) : HIDDEN_TRANSLATE,
       opacity: selectedMap ? 1 : 0,
+      immediate: (key: string) => {
+        if (ANIMATE_HEIGHT && key === "height") return true;
+        return false;
+      },
       config: { mass: 1, tension: 220, damping: 0.2 },
     },
     [show, selectedMap, selectedTrainer],
@@ -74,7 +89,11 @@ export default memo(function MapItemsBox() {
 
   const shuffleTransition = useTransition(selectedTrainer, {
     from: {
-      translateX: "-50%",
+      translateX: "-100%",
+      opacity: 0,
+    },
+    initial: {
+      translateX: "-100%",
       opacity: 0,
     },
     enter: {
@@ -97,7 +116,7 @@ export default memo(function MapItemsBox() {
     <div className="dexnav-grid dexnav-z grid-rows-auto pointer-events-none relative grid grid-cols-1">
       <animated.nav
         style={springs}
-        className={`${selectedTrainer ? "h-[70vh] md:h-[75vh]" : "h-[50vh]"} will-translate map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 overflow-x-hidden rounded-lg border border-gray-200 drop-shadow-xl md:row-start-10`}
+        className={`will-translate map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 overflow-x-hidden rounded-lg border border-gray-200 drop-shadow-xl md:row-start-10`}
       >
         <div className="flex overflow-hidden">
           {shuffleTransition((style, isOpen) =>

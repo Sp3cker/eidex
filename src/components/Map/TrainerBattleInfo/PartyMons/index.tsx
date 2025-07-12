@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 import { useTransition as springTransition, animated } from "@react-spring/web";
 import PartyMon from "./PartyMon";
 import { TrainerPartyMon } from "@/data/map/trainers";
@@ -8,30 +8,45 @@ const PartyMons = memo(function PartyMons({
 }: {
   party: TrainerPartyMon[];
 }) {
-  const [selectedMon, setSelectedMon] = useState<number>(0);
+  const [[selectedMon, dir], setSelectedMon] = useState<number[]>([0, 0]);
 
-  const shuffleTransition = springTransition(selectedMon, {
+  const shuffleTransition = springTransition(party[selectedMon], {
+    key: (item: TrainerPartyMon) => item.id,
     from: {
-      translateX: "-0%",
+      translateX: dir > 0 ? "100%" : "-100%",
+      opacity: 0,
+      skewX: 1,
+    },
+    initial: {
+      translateX: "0%",
       opacity: 0,
     },
     enter: {
       translateX: "0%",
+      // skewX: 0,
       opacity: 1,
     },
     leave: {
-      translateX: "-100%",
+      translateX: dir > 0 ? "-100%" : "100%",
+      // skewX: 0.2,
       opacity: 0,
     },
     config: {
-      tension: 380,
+      tension: 280,
       friction: 25,
       mass: 0.8,
     },
     // onRest: handleResizeTrainerInfo,
   });
+
+  const handleSelectMon = useCallback((next: number) => {
+    setSelectedMon((prevState) => [next, next > prevState[0] ? 1 : -1]);
+  }, []);
+
   useEffect(() => {
-    setSelectedMon(0);
+    if (selectedMon >= party.length) {
+      setSelectedMon([0, 0]);
+    }
   }, [party]);
   if (party.length === 0) {
     return (
@@ -42,21 +57,23 @@ const PartyMons = memo(function PartyMons({
       </div>
     );
   }
+
   return (
     <div className="h-200 relative py-2">
       <div className="flex h-full w-full flex-col">
         <PartyMonsButtons
           party={party}
           selectedMon={selectedMon}
-          setSelectedMon={setSelectedMon}
+          setSelectedMon={handleSelectMon}
         />
         <div className="h-200 relative flex w-full">
           {shuffleTransition((style, item) => (
             <animated.div
+              key={item.id}
               className="absolute bottom-0 left-0 right-0 top-0 overflow-y-auto p-2"
               style={style}
             >
-              <PartyMon pokemon={party[item]} />
+              <PartyMon pokemon={item} />
             </animated.div>
           ))}
         </div>

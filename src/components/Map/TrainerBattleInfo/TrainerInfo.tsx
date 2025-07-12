@@ -19,7 +19,7 @@ const AIFlagsLabel = memo(function ({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-w-35 shadow-xs relative flex h-full min-h-40 rounded-lg p-1 pt-4 ring-1 ring-gray-300">
+    <div className="xs:w-40 shadow-xs relative flex h-full min-h-40 rounded-lg p-1 pt-4 ring-1 ring-gray-300">
       <div
         style={{ top: "-0.5rem", left: "0.5rem" }}
         className="absolute h-5 rounded rounded-sm bg-cyan-900 px-2 text-stone-300 ring-1 ring-zinc-500"
@@ -38,7 +38,7 @@ const AIFlags = ({ flags }: { flags: (keyof typeof aiFlags)[] }) => {
   }
   return (
     <AIFlagsLabel>
-      <div className="font-pkmnem space-y-1 text-sm/4 tracking-wide sm:text-base/4">
+      <div className="font-pkmnem pkmnem-types space-y-1 text-base/4 sm:text-base/4 sm:tracking-wide">
         {flags
           .sort((a, b) => aiFlags[b].rarity - aiFlags[a].rarity)
           .filter((flag) => flag !== "SMART_MON_CHOICES")
@@ -82,7 +82,7 @@ const TrainerInfo = memo(function TrainerInfo({
           <img
             src={`/trainers/${trainer.battlePic}`}
             alt={trainer.trainerName}
-            className="md:h-30 md:w-30 h-20 w-20 drop-shadow-md"
+            className="md:h-25 md:w-25 h-20 w-20 drop-shadow-md"
             style={imageStyles}
           />
           <div className="flex flex-row justify-between">
@@ -98,7 +98,7 @@ const TrainerInfo = memo(function TrainerInfo({
             )}
           </div>
           {trainer.boss && (
-            <div className="me-2 hard-ai-flag rounded-sm bg-blue-100 px-2.5 py-0.5 text-xs font-medium dark:bg-blue-900 dark:text-blue-300">
+            <div className="hard-ai-flag me-2 rounded-sm bg-blue-100 px-2.5 py-0.5 text-xs font-medium dark:bg-blue-900 dark:text-blue-300">
               <p>Hard</p>
             </div>
           )}
