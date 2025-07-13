@@ -8,6 +8,13 @@ const rootFontSize = parseFloat(
   getComputedStyle(document.documentElement).fontSize,
 );
 const WINDOW_INNER_WIDTH = window.innerWidth;
+const WINDOW_INNER_HEIGHT = window.innerHeight;
+const DEFAULT_SPRING_CONFIG = Object.freeze({
+  mass: 2,
+  stiffness: 0.5,
+  damping: 0.81,
+  frequency: 0.62,
+});
 const MapContainer = ({ children }: any) => {
   const [selectedCoordinates, setDragging] = useMapStore(
     (state) => [state.selectedCoordinates, state.setDragging],
@@ -18,15 +25,8 @@ const MapContainer = ({ children }: any) => {
   const mapRef = useRef<HTMLDivElement>(null);
 
   const [{ scale, centerOffset }, api] = useSpring(() => {
-    let currentTargetCenterOffset = [30, 40]; // Default if no coordinates or mapRef
-    const currentSpringConfig = {
-      mass: 2,
-      stiffness: 0.5,
-      damping: 0.81,
-      frequency: 0.62,
-      // friction: 100,
-      // precision: 0.2,
-    }; // Default config
+    let currentTargetCenterOffset = [0, 0]; // Default if no coordinates or mapRef
+    // Default config
     let currentSpringDelay = 0; // Default delay
     const xyScales =
       screenWidth === "sm" || screenWidth === "xs"
@@ -36,7 +36,7 @@ const MapContainer = ({ children }: any) => {
       const [x, y] = selectedCoordinates;
       currentTargetCenterOffset = [
         WINDOW_INNER_WIDTH / 2 - x - xyScales[0],
-        WINDOW_INNER_WIDTH / 2 - y - xyScales[1],
+        WINDOW_INNER_HEIGHT / 2 - y - xyScales[1],
       ];
       currentSpringDelay = 160; // Specific delay for this case
     }
@@ -44,7 +44,7 @@ const MapContainer = ({ children }: any) => {
     return {
       scale: 1.32, // Assuming scale remains constant
       centerOffset: currentTargetCenterOffset,
-      config: currentSpringConfig,
+      config: DEFAULT_SPRING_CONFIG,
       delay: currentSpringDelay,
       onRest: () => {
         setDragging(false);
@@ -77,7 +77,7 @@ const MapContainer = ({ children }: any) => {
     {
       target: targetRef,
       filterTaps: true,
-      rubberband: false,
+
       bounds: {
         top: -200 * scale.get(),
         bottom: 200 * scale.get(),
