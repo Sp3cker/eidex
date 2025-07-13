@@ -13,7 +13,7 @@ const rarityColors = [
   "hard-ai-flag",
 ];
 
-const AIFlagsLabel = memo(function ({
+const AIFlagsLabel = memo(function AIFlagsLabel({
   children,
 }: {
   children: React.ReactNode;
@@ -32,17 +32,38 @@ const AIFlagsLabel = memo(function ({
     </div>
   );
 });
+
 const AIFlags = ({ flags }: { flags: (keyof typeof aiFlags)[] }) => {
   if (flags.length === 0) {
     return "None";
   }
+
+  const sortedFlags = flags
+    .sort((a, b) => aiFlags[b].rarity - aiFlags[a].rarity)
+    .filter((flag) => flag !== "SMART_MON_CHOICES");
+
   return (
     <AIFlagsLabel>
-      <div className="font-pkmnem pkmnem-types space-y-1 text-base/4 sm:text-base/4 sm:tracking-wide">
-        {flags
-          .sort((a, b) => aiFlags[b].rarity - aiFlags[a].rarity)
-          .filter((flag) => flag !== "SMART_MON_CHOICES")
-          .map((flag, index) => {
+      {/* Mobile layout - vertical list */}
+      <div className="font-pkmnem pkmnem-types space-y-1 text-base/4 sm:text-base/4 sm:tracking-wide md:hidden">
+        {sortedFlags.map((flag, index) => {
+          const bg = rarityColors[aiFlags[flag].rarity];
+          return (
+            <p
+              className={`text-shadow-sm rounded ${bg} px-2 py-0.5`}
+              key={index}
+            >
+              {aiFlags[flag].desc}
+            </p>
+          );
+        })}
+      </div>
+
+      {/* Desktop layout - columns */}
+      <div className="hidden md:flex md:gap-2">
+        {/* First column - first 4 items */}
+        <div className="font-pkmnem pkmnem-types space-y-1 text-base/4 tracking-wide">
+          {sortedFlags.slice(0, 4).map((flag, index) => {
             const bg = rarityColors[aiFlags[flag].rarity];
             return (
               <p
@@ -53,6 +74,24 @@ const AIFlags = ({ flags }: { flags: (keyof typeof aiFlags)[] }) => {
               </p>
             );
           })}
+        </div>
+        
+        {/* Second column - remaining items (if any) */}
+        {sortedFlags.length > 4 && (
+          <div className="font-pkmnem pkmnem-types space-y-1 text-base/4 tracking-wide">
+            {sortedFlags.slice(4).map((flag, index) => {
+              const bg = rarityColors[aiFlags[flag].rarity];
+              return (
+                <p
+                  className={`text-shadow-sm rounded ${bg} px-2 py-0.5`}
+                  key={index + 4}
+                >
+                  {aiFlags[flag].desc}
+                </p>
+              );
+            })}
+          </div>
+        )}
       </div>
     </AIFlagsLabel>
   );
@@ -74,7 +113,7 @@ const TrainerInfo = memo(function TrainerInfo({
 }) {
   return (
     <div
-      className={`max-w-100 h-35 flex flex-row justify-between ${className}`}
+      className={`md:max-w-120 h-35 flex flex-row justify-between ${className}`}
     >
       {/* Trainer Image and Name */}
       <div className="sm:max-w-30 flex max-w-20 items-start gap-2">
@@ -82,24 +121,24 @@ const TrainerInfo = memo(function TrainerInfo({
           <img
             src={`/trainers/${trainer.battlePic}`}
             alt={trainer.trainerName}
-            className="md:h-25 md:w-25 h-20 w-20 drop-shadow-md"
+            className="md:h-25 md:w-25 h-20 w-20 drop-shadow-md object-cover"
             style={imageStyles}
           />
           <div className="flex flex-row justify-between">
             <h3
-              className={`font-calamity ${trainer.boss && "drop-shadow-(--color-rare)"} w-full text-sm font-bold text-gray-800 md:text-xl`}
+              className={`font-calamity drop-shadow-sm ${trainer.boss && "drop-shadow-(--color-rare)"} w-full text-sm font-bold text-gray-800 md:text-xl`}
             >
               {trainer.trainerName}
             </h3>
             {trainer.trainerName === "X" && (
               <p className="font-pkmnem text-xs/2 inline tracking-tight text-gray-500">
-                His name is really X it's not an error
+                His name is really X it&apos;s not an error
               </p>
             )}
           </div>
           {trainer.boss && (
-            <div className="hard-ai-flag me-2 rounded-sm bg-blue-100 px-2.5 py-0.5 text-xs font-medium dark:bg-blue-900 dark:text-blue-300">
-              <p>Hard</p>
+            <div className="hard-ai-flag  drop-shadow-sm me-2 rounded-sm bg-blue-100 px-2.5 py-0.5 text-xs dark:bg-blue-900 dark:text-blue-300">
+              <p className="font-bold">Hard</p>
             </div>
           )}
         </div>

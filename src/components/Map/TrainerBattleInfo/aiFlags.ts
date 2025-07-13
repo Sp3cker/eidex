@@ -44,4 +44,5 @@ export const aiFlags: Record<string, TrainerAIFlag> = Object.freeze({
   SEQUENCE_SWITCHING: { desc: "Uses Pokémon in fixed order", rarity: 0 },
 
   DOUBLE_ACE_POKEMON: { desc: "Saves strongest 2 Pokémon", rarity: 0 },
+  "0": { desc: "Free", rarity: 0 },
 });

@@ -17,16 +17,16 @@ const TrainerItem = memo(function TrainerItem({
 
   return (
     <div
-      className={`white-box w-full cursor-pointer rounded-sm md:rounded-lg border ${trainer.rematch ? "border-red-500" : "border-gray-600"} text-left transition-colors hover:bg-gray-50`}
+      className={`white-box w-full cursor-pointer rounded-sm border md:rounded-lg ${trainer.rematch ? "border-red-500" : "border-gray-600"} text-left transition-colors hover:bg-gray-50`}
       onClick={handleClick}
     >
       <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <div className="trainer-sprite">
-            <img src={`/trainers/48/${trainer.sprite}`} />
+        <div className="flex items-center space-x-0">
+          <div className="-mt-2 mb-1 size-8 pixelated overflow-hidden drop-shadow-md">
+            <img className="object-cover" src={`/trainers/48/${trainer.sprite}`} />
           </div>
           <div>
-            <h3 className="font-calamity text-xs md:text-sm font-bold leading-tight text-neutral-700">
+            <h3 className="font-calamity text-xs font-bold leading-tight text-neutral-700 md:text-sm">
               {trainer.trainerName}
             </h3>
           </div>
@@ -80,7 +80,7 @@ const TrainersList = memo(function TrainersList() {
   return (
     <nav className="h-full overflow-hidden">
       {/* Trainers List View */}
-      <div className="map-place-info-textbox-gradient max-w-50 absolute bottom-0 right-0 top-0 w-[75%] overflow-y-auto rounded rounded-l-lg md:rounded-lg md:left-0">
+      <div className="map-place-info-textbox-gradient max-w-50 absolute bottom-0 right-0 top-0 w-[75%] overflow-y-auto rounded rounded-l-lg md:left-0 md:rounded-lg">
         <div className="font-pkmnem flex flex-1 flex-col gap-2 p-2 md:gap-1">
           {isLoading ? (
             <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">

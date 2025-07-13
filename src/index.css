@@ -170,6 +170,9 @@ input[type="number"] {
   .neutral-box {
     @apply border border-neutral-600 bg-neutral-900/30;
   }
+  .pixelated {
+    image-rendering: pixelated;
+  }
   .pokemon-sprite {
     /* width: calc(0.25rem * 10); */
     position: absolute;
