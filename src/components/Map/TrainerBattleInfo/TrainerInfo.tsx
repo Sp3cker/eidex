@@ -1,5 +1,4 @@
 import { memo } from "react";
-import type { DisplayTrainer } from "@/data/map/trainers";
 import { aiFlags } from "./aiFlags";
 
 // background:linear-gradient(120deg, #de8c8c 0%, #daa4a4 100%)
