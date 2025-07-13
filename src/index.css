@@ -248,7 +248,6 @@ input[type="number"] {
     animation: fadeIn 0.3s cubic-bezier(0, 0.4, 0.6, 1);
   }
   .fade-out {
-    opacity: 0;
     animation: fadeOut 0.3s cubic-bezier(0, 0.4, 0.6, 1) forwards;
     pointer-events: none;
   }

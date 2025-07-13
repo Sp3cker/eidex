@@ -10,7 +10,8 @@ import EncounterMonsContainer from "./EncounterMonsContainer";
 import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
 import InfoToggleButtons from "./InfoToggleButtons";
-
+const DRAGGING_TRANSLATE = 100;
+const XS_SCREEN = window.innerWidth > 768;
 const EncounterAreaButtons = ({
   handleClick,
   selectedTab,
@@ -117,34 +118,65 @@ const MapPlaceInfoContentAnim = animated(MapPlaceInfoContent);
 const MapPlaceInfo = memo(() => {
   const selectedMap = useMapStore((state) => state.selectedMap);
   const dragging = useMapStore((state) => state.dragging);
+  const isTrainersListOpen = useMapStore((state) => state.isTrainersListOpen);
 
   const [spring] = useSpring(
     {
-      translate: dragging ? 200 : 0,
+      translate: selectedMap
+        ? dragging
+          ? DRAGGING_TRANSLATE
+          : isTrainersListOpen && XS_SCREEN
+            ? DRAGGING_TRANSLATE
+            : 0
+        : 100,
       opacity: selectedMap ? 1 : 0,
       config: (key: string) =>
         key === "opacity"
           ? { duration: 200 }
-          : { frequency: 0.62, damping: 0.81, mass: 0.1, stiffness: 0.5 },
+          : {
+              tension: 280,
+              friction: 25,
+              mass: isTrainersListOpen ? 0.5 : 0.75,
+            },
     },
-    [selectedMap, dragging],
+    [selectedMap, dragging, isTrainersListOpen],
   );
 
   return (
-    <animated.div
-      style={{
-        opacity: spring.opacity,
-        pointerEvents: selectedMap !== null ? "all" : "none",
-        transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
-      }}
-      className={`content-visibility map-place-info-z-3 map-place-info-grid will-translate font-calamity cursor-touch h-full`}
-    >
-      <InfoToggleButtons />
-
-      <MapInfoSwitcher />
-    </animated.div>
+    <div className="map-place-info-z-2 map-place-info-grid font-calamity cursor-touch">
+      <animated.div
+        style={{
+          opacity: spring.opacity,
+          pointerEvents: selectedMap !== null ? "all" : "none",
+          transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
+        }}
+        className={`${!selectedMap && "will-translate-opacity"} h-full`}
+      >
+        <InfoToggleButtons />
+        <MapInfoSwitcher />
+      </animated.div>
+    </div>
   );
 });
+MapPlaceInfo.displayName = "MapPlaceInfo";
+const pages = [
+  ({ style }: any) => (
+    <animated.div style={style} className="absolute inset-0 pl-1 md:p-2">
+      <div className="relative h-full overflow-hidden">
+        <Suspense>
+          <TrainersList />
+        </Suspense>
+      </div>
+    </animated.div>
+  ),
+  ({ style }: any) => (
+    <animated.div style={style} className="absolute inset-0 pl-1 md:p-2">
+      <div className="relative h-full">
+        <MapPlaceInfoContentAnim />
+      </div>
+    </animated.div>
+  ),
+];
 const MapInfoSwitcher = memo(function Switcher() {
   const trainersListOpen = useMapStore((state) => state.isTrainersListOpen);
   // const trainerIsSelected = useMapStore(
@@ -152,11 +184,11 @@ const MapInfoSwitcher = memo(function Switcher() {
   // );
   const springRef = useSpringRef();
 
-  const springs = useSpring({
-    transform: "translateX(0)",
-    config: { duration: 300 },
-    ref: springRef,
-  });
+  // const springs = useSpring({
+  //   transform: "translateX(0)",
+  //   config: { duration: 300 },
+  //   ref: springRef,
+  // });
   const shuffleTransition = useTransition(trainersListOpen, {
     from: {
       translateX: "100%",
@@ -172,11 +204,14 @@ const MapInfoSwitcher = memo(function Switcher() {
     },
     ref: springRef,
     expires: false, // NEED THIS
-    config: {
-      tension: 280,
-      friction: 25,
-      mass: 0.8,
-    },
+    config: (showingTrainers) =>
+      showingTrainers
+        ? { tension: 220, friction: 21, mass: 0.8 }
+        : {
+            tension: 280,
+            friction: 25,
+            mass: 0.8,
+          },
   });
 
   useLayoutEffect(() => {
@@ -184,25 +219,8 @@ const MapInfoSwitcher = memo(function Switcher() {
   }, [springRef, trainersListOpen]);
   return (
     <div className="h-full py-2">
-      <animated.div
-        style={springs}
-        className="absolute bottom-0 left-0 right-0 top-7 py-2"
-      >
-        {shuffleTransition((style, isOpen) => (
-          <animated.div style={style} className="absolute inset-0 pl-1 md:p-2">
-            {isOpen ? (
-              <div className="relative h-full overflow-hidden">
-                <Suspense>
-                  <TrainersList />
-                </Suspense>
-              </div>
-            ) : (
-              <div className="relative h-full">
-                <MapPlaceInfoContentAnim />
-              </div>
-            )}
-          </animated.div>
-        ))}
+      <animated.div className="xs:top-8 absolute bottom-0 left-0 right-0 top-7 py-2">
+        {shuffleTransition((style, isOpen) => pages[isOpen ? 0 : 1]({ style }))}
       </animated.div>
     </div>
   );
