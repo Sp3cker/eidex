@@ -8,7 +8,8 @@ export { Pokemon };
  * Excludes Gmax forms like pokemonData array
  */
 export const pokemonDataMap = new Map<string, Pokemon>(
-  Object.entries(speciesDataJson).filter(
+  Object.entries(speciesDataJson)
+  .filter(
     ([, pokemon]) => !pokemon.nameKey.includes("Gmax")
   )
 );

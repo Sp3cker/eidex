@@ -54,15 +54,15 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
             src={`/icon/${pokemon.id}/icon.webp`}
           />
         </div>
-        <div className="pb-0 pt-1 md:pt-2">
-          <h4 className="font-calamity mb-0 text-xs font-bold text-gray-800 md:text-base">
+        <div className="pb-0 pt-2 md:pt-2">
+          <h4 className="font-calamity mb-0 text-xs/2 font-bold text-gray-800 md:text-base">
             {speciesName}
           </h4>
 
           {levelIsLevelCap ? (
             <label
               htmlFor="level-cap-select"
-              className="font-calamity mt-0 text-xs text-gray-600 md:text-sm"
+              className="font-calamity mt-0 text-xs/2 text-gray-600 md:text-sm"
             >
               Level Cap:
             </label>
