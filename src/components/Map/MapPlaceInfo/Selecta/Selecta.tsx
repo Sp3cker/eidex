@@ -1,8 +1,9 @@
 import useMapStore from "@/stores/useMapStore";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { animated, useSpring } from "@react-spring/web";
 import { shallow } from "zustand/shallow";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
+import { stat } from "fs";
 const translatesTo = {
   lg: 45,
   md: 10,
@@ -13,6 +14,7 @@ const Selecta = () => {
   const screenWidth = useScreenWidth();
 
   const {
+    selectedMap,
     selectedMapEncounterLevels,
     setSelectedEncounterLevel,
     selectedEncounterLevel,
@@ -20,6 +22,7 @@ const Selecta = () => {
     trainerListOpen,
   } = useMapStore(
     (state) => ({
+      selectedMap: state.selectedMap,
       selectedMapEncounterLevels: state.selectedMapEncounterLevels,
       setSelectedEncounterLevel: state.setSelectedEncounterLevel,
       selectedEncounterLevel: state.selectedEncounterLevel,
@@ -28,6 +31,7 @@ const Selecta = () => {
     }),
     shallow,
   );
+
   const shouldShow = !trainerListOpen && selectedMapEncounterLevels.length > 1;
 
   const currentLevelIndex = useMemo(() => {
@@ -64,7 +68,10 @@ const Selecta = () => {
     }),
     [shouldShow, screenWidth],
   );
-
+  if (!selectedMap) {
+    // Special case so it doesn't flash on page load.
+    return null;
+  }
   return (
     <animated.aside
       style={spring}

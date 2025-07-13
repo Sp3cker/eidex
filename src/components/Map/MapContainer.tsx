@@ -7,7 +7,7 @@ import { shallow } from "zustand/shallow";
 const rootFontSize = parseFloat(
   getComputedStyle(document.documentElement).fontSize,
 );
-
+const WINDOW_INNER_WIDTH = window.innerWidth;
 const MapContainer = ({ children }: any) => {
   const [selectedCoordinates, setDragging] = useMapStore(
     (state) => [state.selectedCoordinates, state.setDragging],
@@ -35,8 +35,8 @@ const MapContainer = ({ children }: any) => {
     if (selectedCoordinates && mapRef.current) {
       const [x, y] = selectedCoordinates;
       currentTargetCenterOffset = [
-        window.innerWidth / 2 - x - xyScales[0],
-        window.innerHeight / 2 - y - xyScales[1],
+        WINDOW_INNER_WIDTH / 2 - x - xyScales[0],
+        WINDOW_INNER_WIDTH / 2 - y - xyScales[1],
       ];
       currentSpringDelay = 160; // Specific delay for this case
     }
@@ -52,44 +52,37 @@ const MapContainer = ({ children }: any) => {
     };
   }, [selectedCoordinates, screenWidth]);
 
-  // useWheel(
-  //   ({ movement: [, y] }) => {
-  //     const calcY = Math.abs(Math.min(Math.max(y, 0.75), 2));
-  //     setMapScale(calcY);
-  //     api.start({ scale: calcY }); // Limit: 0.5x to 3x
-  //   },
-  //   {
-  //     target: targetRef,
-  //     bounds: { bottom: 1 },
-  //   },
-  // );
   useDrag(
     ({ offset: [x, y], dragging, velocity: [vx, vy] }) => {
       if (dragging) {
         setDragging(true);
-        
+
         // Apply velocity-based smoothing - higher velocity = more responsive
-        const velocityFactor = Math.min(Math.max(Math.sqrt(vx * vx + vy * vy) / 10, 0.1), 1);
-        const smoothingFactor = 0.7 + (velocityFactor * 0.3); // Range: 0.7 to 1.0
-        
-        api.start({ 
+        const velocityFactor = Math.min(
+          Math.max(Math.sqrt(vx * vx + vy * vy) / 10, 0.1),
+          1,
+        );
+        const smoothingFactor = 0.7 + velocityFactor * 0.3; // Range: 0.7 to 1.0
+
+        api.start({
           centerOffset: [x * smoothingFactor, y * smoothingFactor],
           config: {
             mass: 1,
             tension: velocityFactor > 0.5 ? 200 : 100, // More responsive at higher velocities
             friction: velocityFactor > 0.5 ? 25 : 15,
-          }
+          },
         });
       }
     },
     {
       target: targetRef,
       filterTaps: true,
+      rubberband: false,
       bounds: {
         top: -200 * scale.get(),
         bottom: 200 * scale.get(),
-        left: -400 * scale.get(),
-        right: 500 * scale.get(),
+        left: WINDOW_INNER_WIDTH < 768 ? -3600 : -400 * scale.get(),
+        right: 200 * scale.get(),
       },
       from: () => {
         return [centerOffset.get()[0], centerOffset.get()[1]];
@@ -97,7 +90,7 @@ const MapContainer = ({ children }: any) => {
     },
   );
   useEffect(() => {
-    api.start({ centerOffset: [0, 0] });
+    api.start({ centerOffset: [WINDOW_INNER_WIDTH > 1000 ? 100 : 0, 0] });
   }, []);
   return (
     <div
