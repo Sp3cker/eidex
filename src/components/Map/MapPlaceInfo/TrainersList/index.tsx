@@ -22,8 +22,11 @@ const TrainerItem = memo(function TrainerItem({
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-0">
-          <div className="-mt-2 mb-1 size-8 pixelated overflow-hidden drop-shadow-md">
-            <img className="object-cover" src={`/trainers/48/${trainer.sprite}`} />
+          <div className="pixelated -mt-2 mb-1 size-8 overflow-hidden drop-shadow-md">
+            <img
+              className="object-cover"
+              src={`/trainers/48/${trainer.sprite}`}
+            />
           </div>
           <div>
             <h3 className="font-calamity text-xs font-bold leading-tight text-neutral-700 md:text-sm">
@@ -78,43 +81,38 @@ const TrainersList = memo(function TrainersList() {
   const numTrainers = Object.keys(trainers);
 
   return (
-    <nav className="h-full overflow-hidden">
-      {/* Trainers List View */}
-      <div className="map-place-info-textbox-gradient max-w-50 absolute bottom-0 right-0 top-0 w-[75%] overflow-y-auto rounded rounded-l-lg md:left-0 md:rounded-lg">
-        <div className="font-pkmnem flex flex-1 flex-col gap-2 p-2 md:gap-1">
-          {isLoading ? (
-            <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
-              <p>Loading trainers...</p>
-            </div>
-          ) : error ? (
-            <div className="white-box w-full rounded-lg border p-3 text-center text-red-500">
-              <p>Error loading trainers: {error.message}</p>
-            </div>
-          ) : !selectedMap ? (
-            <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
-              <p>Select a location to view trainers</p>
-            </div>
-          ) : numTrainers.length === 0 ? (
-            <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
-              <p>No trainers found in this location</p>
-            </div>
-          ) : (
-            isTrainersListOpen &&
-            numTrainers.map((level) => (
-              <Suspense key={level} fallback={<div>Loading...</div>}>
-                <TrainersOnLevelList
-                  key={level}
-                  levelLabel={level}
-                  trainers={trainers[level]}
-                />
-              </Suspense>
-            ))
-          )}
-        </div>
+    <div className="map-place-info-textbox-gradient max-w-50 pointer-events-auto absolute bottom-0 right-0 top-0 w-[75%] overflow-y-auto rounded rounded-l-lg md:left-0 md:rounded-lg">
+      <div className="font-pkmnem flex flex-1 flex-col gap-2 p-2 md:gap-1">
+        {isLoading ? (
+          <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
+            <p>Loading trainers...</p>
+          </div>
+        ) : error ? (
+          <div className="white-box w-full rounded-lg border p-3 text-center text-red-500">
+            <p>Error loading trainers: {error.message}</p>
+          </div>
+        ) : !selectedMap ? (
+          <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
+            <p>Select a location to view trainers</p>
+          </div>
+        ) : numTrainers.length === 0 ? (
+          <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
+            <p>No trainers found in this location</p>
+          </div>
+        ) : (
+          isTrainersListOpen &&
+          numTrainers.map((level) => (
+            <Suspense key={level} fallback={<div>Loading...</div>}>
+              <TrainersOnLevelList
+                key={level}
+                levelLabel={level}
+                trainers={trainers[level]}
+              />
+            </Suspense>
+          ))
+        )}
       </div>
-
-      {/* Trainer Battle Info View */}
-    </nav>
+    </div>
   );
 });
 

@@ -48,21 +48,21 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
   return (
     <div className="flex flex-col gap-y-1 rounded-lg bg-neutral-50 drop-shadow-sm">
       <div className="flex flex-row items-center justify-start gap-x-2 rounded bg-stone-100">
-        <div className="md:h-13 md:w-13 relative ml-1 h-10 w-9 overflow-hidden">
+        <div className="md:h-13 md:w-13 relative ml-1 overflow-hidden drop-shadow-md">
           <img
-            className="pokemon-sprite sprite-animation md:size-22 aspect-square size-20 object-contain drop-shadow-md"
+            className="aspect-square size-12 object-contain md:size-12"
             src={`/icon/${pokemon.id}/icon.webp`}
           />
         </div>
         <div className="pb-0 pt-2 md:pt-2">
-          <h4 className="font-calamity mb-0 text-xs/2 font-bold text-gray-800 md:text-base">
+          <h4 className="font-calamity text-xs/2 mb-0 font-bold text-gray-800 md:text-base">
             {speciesName}
           </h4>
 
           {levelIsLevelCap ? (
             <label
               htmlFor="level-cap-select"
-              className="font-calamity mt-0 text-xs/2 text-gray-600 md:text-sm"
+              className="font-calamity text-xs/2 mt-0 text-gray-600 md:text-sm"
             >
               Level Cap:
             </label>
@@ -91,10 +91,7 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
           )}
         </div>
       </div>
-      <PartyMonItemAbility
-        heldItem={pokemon.heldItem}
-        ability={pokemon.ability}
-      />
+      <PartyMonItemAbility heldItem={pokemon.item} ability={pokemon.ability} />
       {/** Ability - Item - Nature */}
       <div className="max-w-120 flex flex-row items-center gap-x-1 text-neutral-800 md:justify-evenly">
         {stats &&

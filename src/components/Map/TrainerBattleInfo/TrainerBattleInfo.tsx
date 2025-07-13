@@ -4,6 +4,8 @@ const PartyMon = lazy(() => import("./PartyMons/PartyMon"));
 import TrainerInfo from "./TrainerInfo";
 import useMapStore from "@/stores/useMapStore";
 import PartyMons from "./PartyMons";
+const rainbowNames = ["Spencer", "iriv24"];
+
 const TrainerBattleInfo = memo(function TrainerBattleInfo() {
   const trainer = useDeferredValue(
     useMapStore(
@@ -17,13 +19,19 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
   }
   // Check if this is a rival trainer with multiple parties
   const isRivalTrainer = "parties" in trainer;
+  const isRainbowName = rainbowNames.includes(trainer.trainerName);
+
   if (trainer === null) {
     return null;
   }
   return (
-    <div className="font-calamity flex h-full flex-col rounded rounded-l-lg pt-2 md:p-3">
+    <div className={`transition-colors font-calamity ${isRainbowName ? "rainbow-bg" : ""} flex h-full flex-col rounded rounded-l-lg pt-2 md:p-3`}>
       <div className="min-h-40 p-1 pl-2 md:p-3">
-        <TrainerInfo trainer={trainer} />
+        <TrainerInfo
+          aiFlags={trainer.aiFlags}
+          trainerName={trainer.trainerName}
+          battlePic={trainer.battlePic}
+        />
       </div>
 
       <div className="font-pkmnem flex-1 space-y-4 overflow-y-auto text-lg">

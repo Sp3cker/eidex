@@ -106,7 +106,7 @@ const InfoToggleButtons = () => {
   });
 
   return (
-    <div className="font-pkmnem pkmnem-face-shadow flex flex-row gap-2 p-1">
+    <div className="pointer-events-auto font-pkmnem pkmnem-face-shadow flex flex-row gap-2 p-1">
       {/* Render animated buttons */}
       {springs.map((spring, idx) => (
         <animated.div

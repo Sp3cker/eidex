@@ -75,7 +75,7 @@ const AIFlags = ({ flags }: { flags: (keyof typeof aiFlags)[] }) => {
             );
           })}
         </div>
-        
+
         {/* Second column - remaining items (if any) */}
         {sortedFlags.length > 4 && (
           <div className="font-pkmnem pkmnem-types space-y-1 text-base/4 tracking-wide">
@@ -105,39 +105,40 @@ const imageStyles: React.CSSProperties = {
     "linear-gradient(to bottom, black 0%, black 50%, transparent 100%)",
 };
 const TrainerInfo = memo(function TrainerInfo({
-  trainer,
-  className = "",
+  trainerName,
+  aiFlags,
+  battlePic,
 }: {
-  trainer: DisplayTrainer;
-  className?: string;
+  trainerName: string;
+  aiFlags: string[];
+  battlePic?: string;
 }) {
+  const boss = aiFlags.includes("OMNISCIENT");
   return (
-    <div
-      className={`md:max-w-120 h-35 flex flex-row justify-between ${className}`}
-    >
+    <div className="md:max-w-120 h-35 flex flex-row justify-between">
       {/* Trainer Image and Name */}
       <div className="sm:max-w-30 flex max-w-20 items-start gap-2">
         <div className="relative flex flex-col">
           <img
-            src={`/trainers/${trainer.battlePic}`}
-            alt={trainer.trainerName}
-            className="md:h-25 md:w-25 h-20 w-20 drop-shadow-md object-cover"
+            src={`/trainers/${battlePic}`}
+            alt={trainerName}
+            className="md:h-25 md:w-25 h-20 w-20 object-cover drop-shadow-md"
             style={imageStyles}
           />
           <div className="flex flex-row justify-between">
             <h3
-              className={`font-calamity drop-shadow-sm ${trainer.boss && "drop-shadow-(--color-rare)"} w-full text-sm font-bold text-gray-800 md:text-xl`}
+              className={`font-calamity drop-shadow-sm ${boss && "drop-shadow-(--color-rare)"} w-full text-sm font-bold text-gray-800 md:text-xl`}
             >
-              {trainer.trainerName}
+              {trainerName}
             </h3>
-            {trainer.trainerName === "X" && (
+            {trainerName === "X" && (
               <p className="font-pkmnem text-xs/2 inline tracking-tight text-gray-500">
                 His name is really X it&apos;s not an error
               </p>
             )}
           </div>
-          {trainer.boss && (
-            <div className="hard-ai-flag  drop-shadow-sm me-2 rounded-sm bg-blue-100 px-2.5 py-0.5 text-xs dark:bg-blue-900 dark:text-blue-300">
+          {boss && (
+            <div className="hard-ai-flag me-2 rounded-sm bg-blue-100 px-2.5 py-0.5 text-xs drop-shadow-sm dark:bg-blue-900 dark:text-blue-300">
               <p className="font-bold">Hard</p>
             </div>
           )}
@@ -146,7 +147,7 @@ const TrainerInfo = memo(function TrainerInfo({
 
       {/* AI Flags - responsive positioning */}
 
-      <AIFlags flags={trainer.aiFlags as (keyof typeof aiFlags)[]} />
+      <AIFlags flags={aiFlags} />
     </div>
   );
 });

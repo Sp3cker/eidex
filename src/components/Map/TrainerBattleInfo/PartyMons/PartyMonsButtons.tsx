@@ -37,9 +37,9 @@ const PartyMonsButtons = memo(
             className={`party-mon-button inset-shadow-xl hover:bg-mon-select cursor-pointer rounded rounded-sm ring-1 ${selectedMon === index ? "bg-mon-select ring-cyan-500" : "bg-stone-200 ring-stone-800"}`}
             onClick={() => setSelectedMon(index)}
           >
-            <div className="relative h-8 w-8 overflow-hidden md:h-12 md:w-12">
+            <div className="relative h-8 w-8 overflow-hidden md:h-10 md:w-10">
               <img
-                className="pokemon-sprite sprite-animation md:size-22 size-16 aspect-square drop-shadow-md"
+                className="aspect-square drop-shadow-lg"
                 src={`/icon/${mon.id}/icon.webp`}
               />
             </div>

@@ -32,7 +32,7 @@ const EncounterDescriptor = ({
   types,
 }: any) => {
   return (
-    <div className="font-pkmnem text-sm/1 flex flex-row justify-between text-nowrap leading-tight">
+    <div className="font-pkmnem text-sm/1 flex flex-row justify-between text-nowrap items-start leading-tight">
       <span>
         <p>
           Lv.{"\u200a"}
@@ -73,12 +73,12 @@ const EncounterMonsList = React.memo(function EncounterList({
       {encounter.map((mon, index) => (
         <div
           key={`${mon.index}${index}`}
-          className={`align-center w-37 flex w-full cursor-pointer items-center gap-1 overflow-hidden rounded p-0 pl-2 transition-colors md:pr-2 ${zoneToBgColor(zone)}`}
+          className={`w-37 flex w-full cursor-pointer items-start gap-1 overflow-hidden rounded p-0 pl-2 transition-colors md:pr-2 ${zoneToBgColor(zone)}`}
           onMouseDown={() => setSelectedPokemon(mon.index)}
         >
-          <div className="icon-sprite-box mb-4 aspect-square">
+          <div className="relative overflow-hidden drop-shadow-md">
             <img
-              className="pokemon-icon-sprite"
+              className="pixelated aspect-square h-8 w-8 "
               src={`/icon/${mon.index}/icon.webp`}
               alt={formatMapString(mon.species)}
             />
