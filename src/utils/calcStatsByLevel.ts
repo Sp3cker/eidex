@@ -38,11 +38,14 @@ type StatArray = [number, number, number, number, number, number]; // [hp, atk, 
  * @param nature - The nature name
  * @returns New array with adjusted stats
  */
-function applyNatureAdjustments(stats: StatArray, nature: string): StatArray {
+function applyNatureAdjustments(
+  stats: StatArray,
+  nature: string,
+): [StatArray, number, number] {
   const adjustment = NATURE_ADJUSTMENTS[nature];
 
   if (!adjustment) {
-    return stats;
+    return [stats, -1, -1];
   }
 
   // Create a copy of the stats array
@@ -63,7 +66,7 @@ function applyNatureAdjustments(stats: StatArray, nature: string): StatArray {
     );
   }
 
-  return adjustedStats;
+  return [adjustedStats, adjustment.boosted, adjustment.reduced];
 }
 
 export function calculateStats(
@@ -72,10 +75,10 @@ export function calculateStats(
   iv: boolean,
   ev: number[] = [0, 0, 0, 0, 0, 0],
   nature: string, // "" on no nature
-): StatArray | null {
+): [StatArray, number, number] | null {
   const species = pokemonDataMap.get(`${speciesId}`);
   if (!species) return null;
-  let scaledLevel = level > 199 ? 50 : level; // Scale level to 50 if above 199
+  const scaledLevel = level > 199 ? 50 : level; // Scale level to 50 if above 199
   const hp =
     Math.floor(
       ((2 * species.stats[0] + (iv ? 31 : 0) + Math.floor(ev[0] / 4)) *

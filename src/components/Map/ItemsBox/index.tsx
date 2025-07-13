@@ -75,8 +75,8 @@ export default memo(function MapItemsBox() {
         height: "50vh",
       },
       width: selectedTrainer ? "118%" : "100%",
-      height: show ? (selectedTrainer ? "75vh" : "50vh") : "50vh",
-      translateY: show ? (selectedTrainer ? -90 : 0) : HIDDEN_TRANSLATE,
+      height: selectedTrainer ? "75vh" : "50vh",
+      translateY: show ? (selectedTrainer ? -100 : 0) : HIDDEN_TRANSLATE,
       opacity: selectedMap ? 1 : 0,
       immediate: (key: string) => {
         if (ANIMATE_HEIGHT && key === "height") return true;

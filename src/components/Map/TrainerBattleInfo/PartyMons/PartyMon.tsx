@@ -5,7 +5,7 @@ import { pokemonDataMap } from "@/data/pokemon";
 import { getPokemonMoveIdsAtLevel, getMoveDetails } from "@/utils/movesByLevel";
 import { calculateStats } from "@/utils/calcStatsByLevel";
 import caps from "@/data/caps.json";
-
+import PartyMonItemAbility from "./PartyMonItemAbility";
 interface CapLevel {
   desc: string;
   cap: number;
@@ -46,8 +46,8 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
     [],
   );
   return (
-    <div className="flex flex-col gap-y-1 rounded-lg bg-neutral-50 drop-shadow-sm md:px-3">
-      <div className="flex flex-row items-center justify-start gap-x-2 rounded bg-stone-200">
+    <div className="flex flex-col gap-y-1 rounded-lg bg-neutral-50 drop-shadow-sm">
+      <div className="flex flex-row items-center justify-start gap-x-2 rounded bg-stone-100">
         <div className="md:h-13 md:w-13 relative ml-1 h-10 w-9 overflow-hidden">
           <img
             className="pokemon-sprite sprite-animation md:size-22 aspect-square size-20 object-contain drop-shadow-md"
@@ -91,58 +91,51 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
           )}
         </div>
       </div>
+      <PartyMonItemAbility
+        heldItem={pokemon.heldItem}
+        ability={pokemon.ability}
+      />
       {/** Ability - Item - Nature */}
       <div className="max-w-120 flex flex-row items-center gap-x-1 text-neutral-800 md:justify-evenly">
-        {stats?.map((stat, index) => (
-          <div
-            className="border-1 md:w-15 flex w-10 flex-col items-center justify-evenly rounded-md border-gray-400 bg-stone-100 p-1"
-            key={index}
-          >
-            <span className="font-calamity text-[0.5rem] font-bold text-neutral-600">
-              {StatLevels[index]}
-            </span>
-            <span className="pkmn-types font-calamity text-xs tracking-tight">
-              {stat}
-            </span>
-          </div>
-        ))}
+        {stats &&
+          stats[0].map((stat, index) => (
+            <div
+              className={`${stats[1] === index ? "border-1 border-green-500 bg-green-500/15" : stats[2] === index ? "border-1 border-red-500 bg-red-500/15" : "border-1 border-gray-400 bg-stone-100"} md:w-15 flex w-10 flex-col items-center justify-evenly rounded-md p-1`}
+              key={index}
+            >
+              <p className="font-calamity text-[8px]/3 font-bold text-neutral-600">
+                {StatLevels[index]}
+              </p>
+              <p className="pkmn-types font-calamity text-xs/4 tracking-tight">
+                {stat}
+              </p>
+            </div>
+          ))}
       </div>
 
-      <div className="flex items-center space-x-3">
-        <div className="flex-1">
-          <div className="text-xs text-gray-500">
-            {pokemon.nature && (
-              <span className="mr-3">
-                Nature: <span className="font-medium">{pokemon.nature}</span>
-              </span>
-            )}
-            {pokemon.ability && (
-              <span className="mr-3">
-                Ability: <span className="font-medium">{pokemon.ability}</span>
-              </span>
-            )}
-          </div>
-          <div className="mt-2 flex flex-col space-y-1">
-            {moveDetails.map((m) => (
-              <div key={m.name}>
-                <h3 className="font-calamity text-xs sm:text-sm/6 font-bold">{m.name}</h3>
-                <div className="flex min-h-[3rem] flex-row overflow-x-hidden">
-                  <div className="min-h-[3rem] w-10 md:w-20">
-                    <p className="text-base/1 py-1">Power</p>
-                    <p>{m.power}</p>
-                  </div>
-                  <div className="w-50 min-h-[2.5rem]">
-                    <p className="leading-4">{m.description}</p>
-                  </div>
-                  <p
-                    className={`w-8 text-center ${m.typeColors} text-md/1 font-pkmnem pkmnem-face-shadow h-5 font-bold`}
-                  >
-                    {m.typeName}
-                  </p>
+      <div className="flex items-center space-x-1 md:px-3">
+        <div className="mt-2 flex flex-col space-y-0">
+          {moveDetails.map((m) => (
+            <div key={m.name}>
+              <h3 className="font-calamity text-xs font-bold sm:text-sm/6">
+                {m.name}
+              </h3>
+              <div className="flex min-h-[3rem] flex-row overflow-x-hidden">
+                <div className="min-h-[3rem] w-10 md:w-20">
+                  <p className="text-base/1 py-1">Power</p>
+                  <p>{m.power}</p>
                 </div>
+                <div className="w-50 min-h-[2.5rem]">
+                  <p className="leading-4">{m.description}</p>
+                </div>
+                <p
+                  className={`w-8 text-center ${m.typeColors} font-pkmnem pkmnem-face-shadow h-4 text-sm/4 font-bold`}
+                >
+                  {m.typeName}
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

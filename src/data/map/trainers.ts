@@ -10,7 +10,7 @@ export type TrainerPartyMon = {
   iv?: "perfect";
   nature?: string;
   ability?: number[];
-  item?: string;
+  heldItem?: string;
 };
 /** Trainer data loaded from `trainers.json` */
 export interface Trainer {

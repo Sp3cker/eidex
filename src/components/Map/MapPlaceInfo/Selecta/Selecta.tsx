@@ -1,9 +1,9 @@
 import useMapStore from "@/stores/useMapStore";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { animated, useSpring } from "@react-spring/web";
 import { shallow } from "zustand/shallow";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
-import { stat } from "fs";
+
 const translatesTo = {
   lg: 45,
   md: 10,

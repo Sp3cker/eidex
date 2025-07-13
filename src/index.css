@@ -69,6 +69,7 @@
 
     --color-white: color(display-p3 1 1 1);
     --color-cyan-500: color(display-p3 0.2741 0.6746 0.9822);
+    --color-green-500: color(display-p3 0.3087 0.7748 0.3743);
     --color-mon-select: color(display-p3 0.3764 0.8844 0.9893);
   }
 }
