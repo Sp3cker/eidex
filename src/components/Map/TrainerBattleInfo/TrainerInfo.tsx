@@ -1,17 +1,13 @@
 import { memo } from "react";
 import { aiFlags } from "./aiFlags";
 
-// background:linear-gradient(120deg, #de8c8c 0%, #daa4a4 100%)
-// 'background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);';
-// const superRareColor = "#F2C46D";
-// const eliteColor = "#58238C";
 const rarityColors = [
   "normal-ai-flag",
   "rare-ai-flag",
   "elite-ai-flag",
   "hard-ai-flag",
 ];
-
+const coolTrainers = ['iriv24', 'Spencer']
 const AIFlagsLabel = memo(function AIFlagsLabel({
   children,
 }: {
@@ -126,7 +122,7 @@ const TrainerInfo = memo(function TrainerInfo({
           />
           <div className="flex flex-row justify-between">
             <h3
-              className={`font-calamity drop-shadow-sm ${boss && "drop-shadow-(--color-rare)"} w-full text-sm font-bold text-gray-800 md:text-xl`}
+              className={`font-calamity ${coolTrainers.includes(trainerName) && 'rainbow-bg-text'} drop-shadow-sm ${boss && "drop-shadow-lg"} w-full text-sm font-bold text-gray-800 md:text-xl`}
             >
               {trainerName}
             </h3>

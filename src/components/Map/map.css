@@ -330,11 +330,22 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     color(display-p3 0.7573 0.8837 0.9974)
   ); */
   background: -webkit-linear-gradient(
-    30deg,
-    /* color(display-p3 0.7733 0.9993 0.7888), */
+    139deg,
+    color(display-p3 0.9998 0.8451 0.3147),
     color(display-p3 0.9973 0.7622 0.7633),
-    color(display-p3 0.7573 0.8837 0.9974)
+    color(display-p3 0.7573 0.8837 0.9974),
+    color(display-p3 0.9994 0.8737 0.4621)
   );
   /* -webkit-background-clip: text; */
   /* -webkit-text-fill-color: transparent; */
+}
+.rainbow-bg-text {
+  background: linear-gradient(
+    20deg,
+    color(display-p3 0.7573 0.8837 0.9974),
+    color(display-p3 0.7733 0.9993 0.7888),
+    color(display-p3 0.9973 0.7622 0.7633)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
