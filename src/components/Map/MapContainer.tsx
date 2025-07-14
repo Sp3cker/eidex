@@ -1,4 +1,5 @@
 import { useScreenWidth } from "@/hooks/useScreenWidth";
+import { useWindowSize } from "@/hooks/useWindowResize";
 import useMapStore from "@/stores/useMapStore";
 import { useSpring, animated, to } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
@@ -7,8 +8,7 @@ import { shallow } from "zustand/shallow";
 const rootFontSize = parseFloat(
   getComputedStyle(document.documentElement).fontSize,
 );
-const WINDOW_INNER_WIDTH = window.innerWidth;
-const WINDOW_INNER_HEIGHT = window.innerHeight;
+
 const DEFAULT_SPRING_CONFIG = Object.freeze({
   mass: 2,
   stiffness: 0.5,
@@ -23,7 +23,8 @@ const MapContainer = ({ children }: any) => {
   const screenWidth = useScreenWidth();
   const targetRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<HTMLDivElement>(null);
-
+  const windowSize = useWindowSize();
+  const { width: WINDOW_WIDTH, height: WINDOW_HEIGHT } = windowSize;
   const [{ scale, centerOffset }, api] = useSpring(() => {
     let currentTargetCenterOffset = [0, 0]; // Default if no coordinates or mapRef
     // Default config
@@ -35,8 +36,8 @@ const MapContainer = ({ children }: any) => {
     if (selectedCoordinates && mapRef.current) {
       const [x, y] = selectedCoordinates;
       currentTargetCenterOffset = [
-        WINDOW_INNER_WIDTH / 2 - x - xyScales[0],
-        WINDOW_INNER_HEIGHT / 2 - y - xyScales[1],
+        WINDOW_WIDTH / 2 - x - xyScales[0],
+        WINDOW_HEIGHT / 2 - y - xyScales[1],
       ];
       currentSpringDelay = 160; // Specific delay for this case
     }
@@ -81,7 +82,7 @@ const MapContainer = ({ children }: any) => {
       bounds: {
         top: -200 * scale.get(),
         bottom: 200 * scale.get(),
-        left: WINDOW_INNER_WIDTH < 768 ? -3600 : -400 * scale.get(),
+        left: WINDOW_WIDTH < 768 ? -3600 : -400 * scale.get(),
         right: 200 * scale.get(),
       },
       from: () => {
@@ -90,7 +91,7 @@ const MapContainer = ({ children }: any) => {
     },
   );
   useEffect(() => {
-    api.start({ centerOffset: [WINDOW_INNER_WIDTH > 1000 ? 100 : 0, 0] });
+    api.start({ centerOffset: [WINDOW_WIDTH > 1000 ? 100 : 0, 0] });
   }, []);
   return (
     <div
