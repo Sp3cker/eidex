@@ -126,7 +126,7 @@ const DisclaimerModal = () => {
         onClick={handleOpen}
         className="text-sm/3 text-white underline transition-colors hover:text-emerald-400"
       >
-        Click here
+        View disclaimer 
       </button>
 
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="z-7">

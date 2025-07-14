@@ -23,16 +23,16 @@ const Footer = memo(function Footer() {
       <div className="flex flex-col sm:w-80">
         <HiddenFileDrop />
         <p className="font-pkmnem leading-xs text-sm/3 text-white">
-          Nah Blaziken is cool.
+        <span>Let me know if u find something</span>
         </p>
       </div>
       <div className="flex items-center justify-end gap-5">
         <div className="md:w-full">
-          <p className="font-pkmnem leading-xs text-sm/3 text-white">
-            Not a project from Emerald Imperium team.
-          </p>
-          <p className="font-pkmnem leading-xs text-sm/3 text-white">
-            <DisclaimerModal /> for more details.
+          {/* <p className="font-pkmnem leading-xs text-sm/3 text-white">
+            Not developed by the Emerald Imperium team.
+          </p> */}
+          <p className="font-pkmnem leading-xs text-sm/3 text-white pr-1">
+            <DisclaimerModal />{" "}
           </p>
         </div>
       </div>

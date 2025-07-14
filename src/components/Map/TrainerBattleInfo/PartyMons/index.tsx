@@ -88,7 +88,7 @@ const PartyMons = memo(function PartyMons({
       }
     },
     {
-      preventDefault: true,
+      // preventDefault: true,
       filterTaps: true,
       axis: "x", // Only horizontal dragging
       pointer: { touch: true }, // Enable touch events
