@@ -46,7 +46,7 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
     [],
   );
   return (
-    <div className="flex flex-col gap-y-1 rounded-lg bg-neutral-50 drop-shadow-sm">
+    <div className="drop-shadow-lgflex flex-col gap-y-1 rounded-lg bg-neutral-50 drop-shadow-sm">
       <div className="flex flex-row items-center justify-start gap-x-2 rounded bg-stone-100">
         <div className="md:h-13 md:w-13 relative ml-1 overflow-hidden drop-shadow-md">
           <img

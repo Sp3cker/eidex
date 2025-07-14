@@ -34,7 +34,7 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
         />
       </div>
 
-      <div className="font-pkmnem flex-1 space-y-4 overflow-y-auto text-lg">
+      <div className="font-pkmnem  space-y-4 overflow-y-auto text-lg">
         {isRivalTrainer ? (
           // Rival trainer with multiple parties
           <div className="space-y-4">
