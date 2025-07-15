@@ -4,20 +4,39 @@ import useBodyScrollLock from "../../hooks/useBodyScrollLock";
 import { useMapStore } from "../../stores/useMapStore";
 import { useSpring, animated, useTrail } from "@react-spring/web";
 import { ErrorBoundary } from "react-error-boundary";
+import CloseButton from "./CloseButton";
 
 const paragraphs = (index: number, springAnim: any) => {
   const pars = [
     <animated.p style={springAnim} key="par1">
-      This project is not officially endorsed by the devs of Emerald Imperium.
+      This project gets it's data from the{" "}
+      <a
+        className="underline hover:text-blue-200"
+        href="https://github.com/iriv24/pokeemerald-expansion"
+        target="_blank"
+      >
+        Emerald Imperium Github repository
+      </a>{" "}
+      using a parser I wrote/vibe-coded called{" "}
+      <a
+        href="https://github.com/Sp3cker/spory-sparser"
+        target="_blank"
+        className="underline hover:text-blue-200"
+      >
+        SporySparser.
+      </a>
+      <br /> If you find an error in the data, please report it in the Discord.
     </animated.p>,
     <animated.p style={springAnim} key="par2">
       I made this map because Gen-3 is best gen and Radical Red is best
-      rom-hack, therefore Emerald Imperium is best Gen-3 rom-hack. It&#39;s not
-      the &quot;official&quot; map or site or anything.{" "}
+      rom-hack, therefore Emerald Imperium is best Gen-3 rom-hack.
     </animated.p>,
     <animated.p style={springAnim} key="par3">
-      The only official site is{" "}
-      <a href="https://emeraldimperium.info" className="underline hover:text-blue-200">
+      The official site for the project is{" "}
+      <a
+        href="https://emeraldimperium.info"
+        className="underline hover:text-blue-200"
+      >
         emeraldimperium.info
       </a>
       .
@@ -112,24 +131,26 @@ const DisclaimerModal = () => {
     clipPath: isOpen ? "inset(0 0% 0 0)" : "inset(0 100% 0 0)",
     delay: 100,
   });
-  
+
   useBodyScrollLock(isOpen);
 
   const handleOpen = () => {
     deselectMap(); // Clear selected map when opening modal
     setIsOpen(true);
   };
-
+  const handleClose = () => {
+    setIsOpen(false);
+  };
   return (
     <span className="z-7">
       <button
         onClick={handleOpen}
         className="text-sm/3 text-white underline transition-colors hover:text-emerald-400"
       >
-        View disclaimer 
+        View disclaimer
       </button>
 
-      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="z-7">
+      <Dialog open={isOpen} onClose={handleClose} className="z-7">
         <div
           style={{
             backdropFilter: "blur(12px) saturate(120%)",
@@ -142,13 +163,17 @@ const DisclaimerModal = () => {
           style={springs}
           className="will-translate z-7 fixed inset-0 flex items-start justify-center overflow-y-auto p-4"
         >
-          <DialogPanel className="z-7 my-8 max-h-[calc(100vh-4rem)] w-full max-w-lg rounded-lg bg-zinc-900 p-6 transition">
+          <DialogPanel className="z-7 relative my-8 max-h-[calc(100vh-4rem)] w-full max-w-lg rounded-lg bg-zinc-900 p-6 transition">
             <div className="z-7 max-h-[calc(100vh-8rem)] overflow-y-auto">
               <DialogTitle className="cool-font mb-4 text-xl font-bold text-gray-200">
                 Disclaimer
               </DialogTitle>
+              <CloseButton
+                onClick={handleClose}
+                className="absolute right-5 top-5"
+              />
               <ErrorBoundary fallback={<p>whoopsie</p>}>
-                <div className="cool-font space-y-2.5 text-sm/5 text-gray-300">
+                <div className="cool-font space-y-2.5 text-xs/5 text-gray-300 sm:text-sm/5">
                   {wordSprings.map((spring, index) =>
                     paragraphs(index, spring),
                   )}
@@ -157,7 +182,7 @@ const DisclaimerModal = () => {
 
               <div className="mt-6 flex justify-end">
                 <Button
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleClose}
                   className="rounded bg-emerald-700 px-4 py-2 text-white transition-colors hover:bg-emerald-600"
                 >
                   Close
