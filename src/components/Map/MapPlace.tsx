@@ -16,7 +16,7 @@ const renderElement = (
         key={elem.id || `g-${Math.random()}`}
         id={elem.id}
         transform={elem.transform}
-        className={`${isSelectedMap ? "selected-place" : "touch-none"} stroke-1 transition-all md:stroke-0`}
+        className={`${isSelectedMap ? "selected-place" : "touch-none"} cursor-pointer stroke-1 transition-all md:stroke-0`}
       >
         {elem.children?.map((child: Record<string, any>, index: number) =>
           renderElement(
@@ -42,7 +42,7 @@ const renderElement = (
         width={elem.width}
         height={elem.height}
         {...elem.style}
-        className={`${isSelectedMap ? "selected-place fill-emerald-800 stroke-amber-600" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow transition-colors`}
+        className={`${isSelectedMap ? "selected-place fill-emerald-800 stroke-amber-600" : "fill-yellow-900/10 hover:fill-yellow-300/50"} cursor-pointer border-yellow transition-colors`}
         ref={ref}
       />
     );
@@ -51,7 +51,7 @@ const renderElement = (
   if (elem.type === "path") {
     return (
       <path
-        className={`${isSelectedMap ? "fill-emerald-600" : ""} transition-colors`}
+        className={`${isSelectedMap ? "fill-emerald-600" : ""} transition-colors cursor-pointer `}
         key={elem.id}
         id={elem.id}
         d={elem.d}
@@ -90,12 +90,12 @@ const MapPlace = memo(
 
     const handleClick = useCallback(() => {
       startTransition(() => {
-        const stored = useMapStore.getState().storedCoordinates;
-        const myCoords = stored.get(item.id);
-        if (myCoords === undefined) {
-          console.error("Error getting coords for MapPlace $s", item.id);
-          return;
-        }
+        // const stored = useMapStore.getState().storedCoordinates;
+        // const myCoords = stored.get(item.id);
+        // if (myCoords === undefined) {
+        //   console.error("Error getting coords for MapPlace $s", item.id);
+        //   return;
+        // }
         setSelectedMap(item.id);
       });
     }, []);

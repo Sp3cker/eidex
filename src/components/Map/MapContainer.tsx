@@ -26,7 +26,7 @@ const MapContainer = ({ children }: any) => {
   const windowSize = useWindowSize();
   const { width: WINDOW_WIDTH, height: WINDOW_HEIGHT } = windowSize;
   const [{ scale, centerOffset }, api] = useSpring(() => {
-    let currentTargetCenterOffset = [0, 0]; // Default if no coordinates or mapRef
+    let currentTargetCenterOffset = [WINDOW_WIDTH > 1000 ? 100 : 0, 0]; // Default if no coordinates or mapRef
     // Default config
     let currentSpringDelay = 0; // Default delay
     const xyScales =
@@ -96,7 +96,7 @@ const MapContainer = ({ children }: any) => {
   return (
     <div
       ref={targetRef}
-      className="fade-in map-grid font-calamity z-0 w-full touch-none overflow-auto bg-[#0082CA]"
+      className="fade-in map-grid font-calamity z-0 w-full touch-none cursor-move overflow-auto bg-[#0082CA]"
     >
       <animated.div
         ref={mapRef}
