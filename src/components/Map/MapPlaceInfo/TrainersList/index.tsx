@@ -14,7 +14,7 @@ const TrainerItem = memo(function TrainerItem({
   const handleClick = () => {
     setSelectedTrainer(trainer);
   };
-
+if (trainer.trainerName === 'Dawn') debugger
   return (
     <div
       className={`white-box w-full cursor-pointer rounded-sm border md:rounded-lg ${trainer.rematch ? "border-red-500" : "border-gray-600"} text-left transition-colors hover:bg-gray-50`}
@@ -36,7 +36,7 @@ const TrainerItem = memo(function TrainerItem({
         </div>
 
         {/* Battle indicator */}
-        {trainer.boss && (
+        {trainer.hard && (
           <div className="pr-5 text-xs font-medium text-amber-800 dark:text-blue-300">
             <h1 className="text-2xl font-bold">Ω</h1>
           </div>

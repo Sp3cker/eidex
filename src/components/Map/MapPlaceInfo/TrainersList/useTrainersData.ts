@@ -63,7 +63,11 @@ export const useTrainersData = () => {
     // Check if we have cached data first
     const cachedTrainers = getCachedTrainersForMap(selectedMap);
     if (cachedTrainers.length > 0) {
-      setTrainers(groupTrainersByLevel(groupRivals(cachedTrainers)));
+      setTrainers(
+        groupTrainersByLevel(
+          determineHardTrainers(groupRivals(cachedTrainers)),
+        ),
+      );
 
       return;
     }
@@ -144,6 +148,19 @@ export function groupTrainersByLevel(
   );
 }
 
+const determineHardTrainers = (
+  trainers: DisplayTrainer[],
+): DisplayTrainer[] => {
+  return trainers.map((trainer) => {
+    // Determine if the trainer is "hard" based on some criteria
+    const hard = trainer.aiFlags && trainer.aiFlags.includes("OMNISCIENT");
+
+    return {
+      ...trainer,
+      hard,
+    };
+  });
+};
 // /**
 //  * Groups trainers by level and sorts both the levels and trainers within each level
 //  * @param trainers - Array of trainers to group and sort

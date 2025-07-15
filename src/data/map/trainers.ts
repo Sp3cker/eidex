@@ -22,7 +22,7 @@ export interface Trainer {
   doubleBattle?: boolean;
   aiFlags: string[];
   sprite: string;
-  boss?: boolean; // Optional, if this trainer is a boss fight
+  hard?: boolean; // Optional, if this trainer is a hard fight
   level: string; // Can be used to group into level encountered at
   party: TrainerPartyMon[];
   youPicked?: "Treecko" | "Torchic" | "Mudkip"; // Optional, only for rival trainers
