@@ -1,11 +1,6 @@
-import {
-  animated,
-  useSpring,
-  useSpringRef,
-  useTransition,
-} from "@react-spring/web";
+import { animated, useSpring, useTransition } from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
-import { useCallback, useState, memo, Suspense, useLayoutEffect } from "react";
+import { useCallback, useState, memo, Suspense } from "react";
 import EncounterMonsContainer from "./EncounterMonsContainer";
 import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
@@ -189,7 +184,6 @@ const MapInfoSwitcher = memo(function Switcher() {
   // const trainerIsSelected = useMapStore(
   //   (state) => state.selectedTrainer !== null,
   // );
-  const springRef = useSpringRef();
 
   // const springs = useSpring({
   //   transform: "translateX(0)",
@@ -209,7 +203,7 @@ const MapInfoSwitcher = memo(function Switcher() {
       translateX: "100%",
       // rotateY: 30,
     },
-    ref: springRef,
+
     expires: false, // NEED THIS
     config: (showingTrainers) =>
       showingTrainers
@@ -221,12 +215,9 @@ const MapInfoSwitcher = memo(function Switcher() {
           },
   });
 
-  useLayoutEffect(() => {
-    springRef.start();
-  }, [springRef, trainersListOpen]);
   return (
-    <div className="h-full py-2 pointer-events-none">
-      <animated.div className="xs:top-8  absolute bottom-0 left-0 right-0 top-7 py-2">
+    <div className="pointer-events-none h-full py-2">
+      <animated.div className="xs:top-8 absolute bottom-0 left-0 right-0 top-7 py-2">
         {shuffleTransition((style, isOpen) => pages[isOpen ? 0 : 1]({ style }))}
       </animated.div>
     </div>

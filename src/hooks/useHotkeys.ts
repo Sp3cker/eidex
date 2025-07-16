@@ -1,17 +1,27 @@
 import { useHotkeys } from "react-hotkeys-hook";
 import { useMapStore } from "@/stores/useMapStore";
 import { HotkeysEvent } from "react-hotkeys-hook/packages/react-hotkeys-hook/dist/types";
+import { shallow } from "zustand/shallow";
 
 const useMapHotkeys = () => {
-  const [isPlaceListOpen, setPlaceList, isTrainersListOpen, setTrainersList, viewingImage, deSelectMap] =
-    useMapStore((state) => [
+  const [
+    isPlaceListOpen,
+    setPlaceList,
+    isTrainersListOpen,
+    setTrainersList,
+    viewingImage,
+    deSelectMap,
+  ] = useMapStore(
+    (state) => [
       state.isPlacesListOpen,
       state.setPlacesListOpen,
       state.isTrainersListOpen,
       state.setTrainersListOpen,
       state.viewingImage,
       state.deselectMap,
-    ]);
+    ],
+    shallow,
+  );
 
   const hotkeyHandler = (e: KeyboardEvent, h: HotkeysEvent) => {
     if (!h.keys || h.keys.length === 0) {
@@ -34,7 +44,7 @@ const useMapHotkeys = () => {
         deSelectMap();
     }
   };
-  useHotkeys(["e", "t", 'escape'], hotkeyHandler);
+  useHotkeys(["e", "t", "escape"], hotkeyHandler);
 };
 
 export { useMapHotkeys };

@@ -1,4 +1,4 @@
-import { memo, Suspense } from "react";
+import { memo, startTransition, Suspense } from "react";
 import { useTrainersData } from "./useTrainersData";
 import useMapStore from "@/stores/useMapStore";
 import { DisplayTrainer } from "@/data/map/trainers";
@@ -12,7 +12,9 @@ const TrainerItem = memo(function TrainerItem({
 }) {
   const setSelectedTrainer = useMapStore((state) => state.setSelectedTrainer);
   const handleClick = () => {
-    setSelectedTrainer(trainer);
+    startTransition(() => {
+      setSelectedTrainer(trainer);
+    });
   };
 
   return (

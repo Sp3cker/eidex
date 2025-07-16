@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useTransition, useCallback } from "react";
 import { useMapStore } from "@/stores/useMapStore";
 import {
   getTrainersForMap,
@@ -51,15 +51,10 @@ export const useTrainersData = () => {
   const [trainers, setTrainers] = useState<Record<string, DisplayTrainer[]>>(
     {},
   );
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, startTransition] = useTransition();
   const [error, setError] = useState<Error | null>(null);
-
-  useEffect(() => {
-    if (!selectedMap) {
-      setTrainers({});
-      return;
-    }
-
+  console.log(isLoading);
+  const handleLoadTrainers = useCallback(async (selectedMap: string) => {
     // Check if we have cached data first
     const cachedTrainers = getCachedTrainersForMap(selectedMap);
     if (cachedTrainers.length > 0) {
@@ -73,19 +68,33 @@ export const useTrainersData = () => {
     }
 
     // Load trainers data
-    setIsLoading(true);
+    // setIsLoading(true);
     setError(null);
 
-    getTrainersForMap(selectedMap)
-      .then((mapTrainers) => {
-        setTrainers(groupTrainersByLevel(groupRivals(mapTrainers)));
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        setError(err);
-        setIsLoading(false);
+    startTransition(async () => {
+      try {
+        const mapTrainers = await getTrainersForMap(selectedMap);
+        startTransition(() => {
+          setTrainers(
+            groupTrainersByLevel(
+              determineHardTrainers(groupRivals(mapTrainers)),
+            ),
+          );
+        });
+      } catch (err) {
+        setError(err as any);
+        // setIsLoading(false);
         setTrainers({});
-      });
+      }
+    });
+  }, []);
+  useEffect(() => {
+    if (!selectedMap) {
+      setTrainers({});
+      return;
+    }
+
+    handleLoadTrainers(selectedMap);
   }, [selectedMap]);
 
   // Group trainers by level using useMemo for performance
