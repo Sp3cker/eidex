@@ -53,7 +53,7 @@ export const useTrainersData = () => {
   );
   const [isLoading, startTransition] = useTransition();
   const [error, setError] = useState<Error | null>(null);
-  console.log(isLoading);
+
   const handleLoadTrainers = useCallback(async (selectedMap: string) => {
     // Check if we have cached data first
     const cachedTrainers = getCachedTrainersForMap(selectedMap);
