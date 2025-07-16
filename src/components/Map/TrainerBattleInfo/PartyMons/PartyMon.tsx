@@ -21,7 +21,7 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
   const level = pokemon.lvl ?? 1;
   const evs = pokemon.ev ?? [0, 0, 0, 0, 0, 0];
   const nature = pokemon.nature ?? "";
-  const hasIvs = pokemon.iv === "perfect";
+  const hasIvs = pokemon.iv !== undefined;
 
   const [currLevelCap, setCurrentLevelCap] = useState(level > 199 ? 50 : level);
 

@@ -7,7 +7,7 @@ export type TrainerPartyMon = {
   lvl?: number;
   id: number;
   ev?: number[];
-  iv?: "perfect";
+  iv?: boolean;
   nature?: string;
   ability?: number[];
   item?: string;

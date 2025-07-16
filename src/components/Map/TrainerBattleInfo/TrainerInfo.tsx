@@ -14,7 +14,7 @@ const AIFlagsLabel = memo(function AIFlagsLabel({
   children: React.ReactNode;
 }) {
   return (
-    <div className="xs:w-40 shadow-xs relative flex h-full min-h-40 rounded-lg p-1 pt-4 ring-1 ring-gray-300">
+    <div className="xs:w-40 min-w-34 shadow-xs sm:mr-8 relative flex h-full min-h-40 rounded-lg p-1 pt-4 ring-1 ring-gray-300">
       <div
         style={{ top: "-0.5rem", left: "0.5rem" }}
         className="absolute h-5 rounded rounded-sm bg-cyan-900 px-2 text-stone-300 ring-1 ring-zinc-500"
@@ -117,7 +117,7 @@ const TrainerInfo = memo(function TrainerInfo({
           <img
             src={`/trainers/${battlePic}`}
             alt={trainerName}
-            className="md:h-25 md:w-25 h-20 w-20 object-cover drop-shadow-md"
+            className="md:h-25 md:w-25 h-21 w-21 object-cover drop-shadow-md"
             style={imageStyles}
           />
           <div className="flex flex-row justify-between">
