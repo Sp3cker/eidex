@@ -225,8 +225,8 @@ const MapInfoSwitcher = memo(function Switcher() {
     springRef.start();
   }, [springRef, trainersListOpen]);
   return (
-    <div className="h-full py-2">
-      <animated.div className="xs:top-8 pointer-events-none absolute bottom-0 left-0 right-0 top-7 py-2">
+    <div className="h-full py-2 pointer-events-none">
+      <animated.div className="xs:top-8  absolute bottom-0 left-0 right-0 top-7 py-2">
         {shuffleTransition((style, isOpen) => pages[isOpen ? 0 : 1]({ style }))}
       </animated.div>
     </div>
