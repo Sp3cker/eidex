@@ -1,4 +1,4 @@
-import { memo, useDeferredValue, lazy, Suspense } from "react";
+import { memo, useDeferredValue, lazy, Suspense, useCallback } from "react";
 const PartyMon = lazy(() => import("./PartyMons/PartyMon"));
 
 import TrainerInfo from "./TrainerInfo";
@@ -14,6 +14,12 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
     ),
     null,
   );
+  const closeTrainer = useMapStore((state) => state.setTrainersListOpen);
+
+  const handleClose = useCallback(() => {
+    closeTrainer(false);
+  }, [closeTrainer]);
+
   if (!trainer) {
     return null;
   }
@@ -21,11 +27,16 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
   const isRivalTrainer = "parties" in trainer;
   const isRainbowName = rainbowNames.includes(trainer.trainerName);
 
-  if (trainer === null) {
-    return null;
-  }
   return (
-    <div className={`transition-colors font-calamity ${isRainbowName ? "rainbow-bg" : ""} flex h-full flex-col rounded rounded-l-lg pt-2 md:p-3`}>
+    <div
+      className={`font-calamity transition-colors ${isRainbowName ? "rainbow-bg" : ""} flex h-full flex-col rounded rounded-l-lg pt-2 md:p-3`}
+    >
+      <button
+        onClick={handleClose}
+        className="font-pkmnem absolute right-2 top-2 hidden cursor-pointer rounded bg-gray-200 p-2 py-1 hover:bg-gray-300 focus:outline-none sm:block"
+      >
+        <p className="text-xl font-bold">↙</p>
+      </button>
       <div className="min-h-40 p-1 pl-2 md:p-3">
         <TrainerInfo
           aiFlags={trainer.aiFlags}
@@ -34,7 +45,7 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
         />
       </div>
 
-      <div className="font-pkmnem  space-y-4 overflow-y-auto text-lg">
+      <div className="font-pkmnem space-y-4 overflow-y-auto text-lg">
         {isRivalTrainer ? (
           // Rival trainer with multiple parties
           <div className="space-y-4">

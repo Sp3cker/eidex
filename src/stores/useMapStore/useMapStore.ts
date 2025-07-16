@@ -230,7 +230,7 @@ export const useMapStore = create<MapStore>()(
       togglePlacesList: () => {
         set((state) => ({ isPlacesListOpen: !state.isPlacesListOpen }));
       },
-      
+
       // TrainersList panel actions
       setTrainersListOpen: (open: boolean) => {
         set({ isTrainersListOpen: open });
@@ -244,43 +244,30 @@ export const useMapStore = create<MapStore>()(
           }
         }
       },
-      toggleTrainersList: () => {
-        set((state) => {
-          const newOpen = !state.isTrainersListOpen;
-          const currentMap = get().selectedMap;
-          
-          // Update URL based on new state
-          if (currentMap) {
-            if (newOpen) {
-              // Opening - keep current trainer if any
-              urlManager.requestURLUpdate(currentMap, state.selectedTrainer?.trainerName || null);
-            } else {
-              // Closing - remove trainer from URL
-              urlManager.requestURLUpdate(currentMap, null);
-            }
-          }
-          
-          return { 
-            isTrainersListOpen: newOpen,
-            // Clear selected trainer when closing trainers list
-            selectedTrainer: newOpen ? state.selectedTrainer : null
-          };
-        });
-      },
+
       setSelectedTrainer: (trainer) => {
         set({ selectedTrainer: trainer });
         // Request URL update (will be delayed if animation is running)
         const currentMap = get().selectedMap;
         if (currentMap) {
           urlManager.requestURLUpdate(currentMap, trainer?.trainerName || null);
+        } // Closing the list
+        if (trainer === null && get().isTrainersListOpen === false) {
+          get().setTrainersListOpen(true);
+        } else {
+          // If trainers list is open, update URL immediately
+          urlManager.updateURLImmediate(
+            currentMap,
+            trainer?.trainerName || null,
+          );
         }
       },
-      
+
       // Animation coordination methods
       setAnimating: (animating: boolean) => {
         urlManager.setAnimating(animating);
       },
-      
+
       getIsAnimating: () => {
         return urlManager.getIsAnimating();
       },
@@ -293,27 +280,29 @@ export default useMapStore;
 // Function to handle URL initialization
 const initializeFromURL = () => {
   const urlState = urlManager.parseCurrentURL();
-  
+
   if (urlState.mapName) {
     const store = useMapStore.getState();
     store.setSelectedMap(urlState.mapName);
-    
+
     if (urlState.trainerName) {
       store.setTrainersListOpen(true);
-      
+
       // Load trainers and find the specific one
       import("@/data/map/trainers").then(({ getTrainersForMap }) => {
-        getTrainersForMap(urlState.mapName!).then((trainers) => {
-          const foundTrainer = trainers.find(
-            (trainer) => trainer.trainerName === urlState.trainerName
-          );
-          
-          if (foundTrainer) {
-            store.setSelectedTrainer(foundTrainer);
-          }
-        }).catch((error) => {
-          console.error("Error loading trainers for URL:", error);
-        });
+        getTrainersForMap(urlState.mapName!)
+          .then((trainers) => {
+            const foundTrainer = trainers.find(
+              (trainer) => trainer.trainerName === urlState.trainerName,
+            );
+
+            if (foundTrainer) {
+              store.setSelectedTrainer(foundTrainer);
+            }
+          })
+          .catch((error) => {
+            console.error("Error loading trainers for URL:", error);
+          });
       });
     }
   }
@@ -363,27 +352,29 @@ useMapStore.subscribe(
 
 window.addEventListener("popstate", () => {
   const urlState = urlManager.parseCurrentURL();
-  
+
   if (urlState.mapName) {
     const store = useMapStore.getState();
     store.setSelectedMap(urlState.mapName);
-    
+
     if (urlState.trainerName) {
       store.setTrainersListOpen(true);
-      
+
       // Load trainers and find the specific one
       import("@/data/map/trainers").then(({ getTrainersForMap }) => {
-        getTrainersForMap(urlState.mapName!).then((trainers) => {
-          const foundTrainer = trainers.find(
-            (trainer) => trainer.trainerName === urlState.trainerName
-          );
-          
-          if (foundTrainer) {
-            store.setSelectedTrainer(foundTrainer);
-          }
-        }).catch((error) => {
-          console.error("Error loading trainers for URL:", error);
-        });
+        getTrainersForMap(urlState.mapName!)
+          .then((trainers) => {
+            const foundTrainer = trainers.find(
+              (trainer) => trainer.trainerName === urlState.trainerName,
+            );
+
+            if (foundTrainer) {
+              store.setSelectedTrainer(foundTrainer);
+            }
+          })
+          .catch((error) => {
+            console.error("Error loading trainers for URL:", error);
+          });
       });
     }
   }

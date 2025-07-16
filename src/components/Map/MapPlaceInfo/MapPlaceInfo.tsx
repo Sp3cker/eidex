@@ -93,7 +93,10 @@ const MapPlaceInfoContent = memo(() => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative flex h-full flex-col pointer-events-auto">
+    <div
+      ref={containerRef}
+      className="pointer-events-auto relative flex h-full flex-col"
+    >
       <div className="map-place-info-textbox-gradient h-full overflow-y-auto rounded-l-lg pb-10 pl-1 pr-3 pt-2 md:rounded-lg lg:h-full">
         <EncounterMonsContainer selectedTab={selectedTab} />
       </div>
@@ -143,14 +146,15 @@ const MapPlaceInfo = memo(() => {
   );
 
   return (
-    <div className="map-place-info-z-2 map-place-info-grid font-calamity cursor-touch">
+    <div
+      className={`${selectedMap !== null ? "pointer-events-auto" : "pointer-events-none"} map-place-info-z-3 map-place-info-grid font-calamity`}
+    >
       <animated.div
         style={{
           opacity: spring.opacity,
-          // pointerEvents: selectedMap !== null ? "all" : "none",
           transform: spring.translate.to((x) => `translate3d(${x}px, 0, 0)`),
         }}
-        className={`${!selectedMap && "will-translate-opacity"} h-full pointer-events-none`}
+        className={`${!selectedMap && "will-translate-opacity"} pointer-events-none h-full`}
       >
         <InfoToggleButtons />
         <MapInfoSwitcher />
@@ -161,7 +165,10 @@ const MapPlaceInfo = memo(() => {
 MapPlaceInfo.displayName = "MapPlaceInfo";
 const pages = [
   ({ style }: any) => (
-    <animated.div style={style} className="absolute inset-0 pl-1 md:p-2 pointer-events-none">
+    <animated.div
+      style={style}
+      className="pointer-events-none absolute inset-0 pl-1 md:p-2"
+    >
       <div className="relative h-full overflow-hidden">
         <Suspense>
           <TrainersList />
@@ -219,7 +226,7 @@ const MapInfoSwitcher = memo(function Switcher() {
   }, [springRef, trainersListOpen]);
   return (
     <div className="h-full py-2">
-      <animated.div className="xs:top-8 absolute bottom-0 left-0 right-0 top-7 py-2 pointer-events-none">
+      <animated.div className="xs:top-8 pointer-events-none absolute bottom-0 left-0 right-0 top-7 py-2">
         {shuffleTransition((style, isOpen) => pages[isOpen ? 0 : 1]({ style }))}
       </animated.div>
     </div>

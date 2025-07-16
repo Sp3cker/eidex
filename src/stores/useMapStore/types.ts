@@ -85,7 +85,7 @@ type MapStore = {
 
   // TrainersList panel actions
   setTrainersListOpen: (open: boolean) => void;
-  toggleTrainersList: () => void;
+
   setSelectedTrainer: (trainer: DisplayTrainer | null) => void;
   
   // Animation coordination

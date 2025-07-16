@@ -57,7 +57,7 @@ export default memo(function MapItemsBox() {
   const [selectedMap, selectedTrainer, show] = useMapStore(
     (state) => [
       state.selectedMap !== null,
-      state.selectedTrainer !== null,
+      state.selectedTrainer,
       state.selectedMap !== null && state.dragging === false,
     ],
     shallow,
@@ -82,6 +82,7 @@ export default memo(function MapItemsBox() {
         if (ANIMATE_HEIGHT && key === "height") return true;
         return false;
       },
+
       config: { mass: 1, tension: 220, damping: 0.2 },
     },
     [show, selectedMap, selectedTrainer],
@@ -92,10 +93,10 @@ export default memo(function MapItemsBox() {
       translateX: "-100%",
       opacity: 0,
     },
-    initial: {
-      translateX: "-100%",
-      opacity: 0,
-    },
+    // initial: {
+    //   translateX: "-100%",
+    //   opacity: 0,
+    // },
     enter: {
       translateX: "0%",
       opacity: 1,
@@ -109,6 +110,11 @@ export default memo(function MapItemsBox() {
       friction: 25,
       mass: 0.8,
     },
+    // onRest: () => {
+    //   if (trainerListOpen === false) {
+    //     useMapStore.getState().setSelectedTrainer(null);
+    //   }
+    // },
     // onRest: handleResizeTrainerInfo,
   });
 
