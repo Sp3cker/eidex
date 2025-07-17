@@ -18,6 +18,45 @@
   --steel-type-color: #b8b8d0;
   --fairy-type-color: #f0b6c0;
   --background-color-mix: var(--color-neutral-100);
+  
+  /* Complementary colors */
+  --normal-type-complementary: #6666c1;
+  --fire-type-complementary: #30c0f0;
+  --water-type-complementary: #f15544;
+  --grass-type-complementary: #c850a0;
+  --electric-type-complementary: #3030f8;
+  --ice-type-complementary: #d89898;
+  --fighting-type-complementary: #28c0c8;
+  --poison-type-complementary: #40a040;
+  --ground-type-complementary: #6868e0;
+  --flying-type-complementary: #f0a850;
+  --psychic-type-complementary: #88f858;
+  --bug-type-complementary: #2020a8;
+  --rock-type-complementary: #3838b8;
+  --ghost-type-complementary: #989870;
+  --dragon-type-complementary: #f8c838;
+  --dark-type-complementary: #487058;
+  --steel-type-complementary: #d0d0b8;
+  --fairy-type-complementary: #c0f0b6;
+  /* 25% darker ring colors */
+  --normal-type-ring: color-mix(in oklab, var(--normal-type-color) 75%, #000000 25%);
+  --fire-type-ring: color-mix(in oklab, var(--fire-type-color) 75%, #000000 25%);
+  --water-type-ring: color-mix(in oklab, var(--water-type-color) 75%, #000000 25%);
+  --grass-type-ring: color-mix(in oklab, var(--grass-type-color) 75%, #000000 25%);
+  --electric-type-ring: color-mix(in oklab, var(--electric-type-color) 75%, #000000 25%);
+  --ice-type-ring: color-mix(in oklab, var(--ice-type-color) 75%, #000000 25%);
+  --fighting-type-ring: color-mix(in oklab, var(--fighting-type-color) 75%, #000000 25%);
+  --poison-type-ring: color-mix(in oklab, var(--poison-type-color) 75%, #000000 25%);
+  --ground-type-ring: color-mix(in oklab, var(--ground-type-color) 75%, #000000 25%);
+  --flying-type-ring: color-mix(in oklab, var(--flying-type-color) 75%, #000000 25%);
+  --psychic-type-ring: color-mix(in oklab, var(--psychic-type-color) 75%, #000000 25%);
+  --bug-type-ring: color-mix(in oklab, var(--bug-type-color) 75%, #000000 25%);
+  --rock-type-ring: color-mix(in oklab, var(--rock-type-color) 75%, #000000 25%);
+  --ghost-type-ring: color-mix(in oklab, var(--ghost-type-color) 75%, #000000 25%);
+  --dragon-type-ring: color-mix(in oklab, var(--dragon-type-color) 75%, #000000 25%);
+  --dark-type-ring: color-mix(in oklab, var(--dark-type-color) 75%, #000000 25%);
+  --steel-type-ring: color-mix(in oklab, var(--steel-type-color) 75%, #000000 25%);
+  --fairy-type-ring: color-mix(in oklab, var(--fairy-type-color) 75%, #000000 25%);
 }
 @supports (color: color(display-p3 0.55 0.19 0.71)) {
   :root {
@@ -41,6 +80,26 @@
     --fairy-type-color: color(display-p3 0.94 0.71 0.75);
     --background-color-mix: var(--color-neutral-100);
     --opaque-p3: color(display-p3 0.2806 0.2806 0.2806 / 0.1);
+    
+    /* Complementary colors in P3 gamut */
+    --normal-type-complementary: color(display-p3 0.22 0.22 0.41);
+    --fire-type-complementary: color(display-p3 0.05 0.5 0.81);
+    --water-type-complementary: color(display-p3 0.67 0.48 0.06);
+    --grass-type-complementary: color(display-p3 0.53 0.22 0.69);
+    --electric-type-complementary: color(display-p3 0.0289 0.1451 0.7945);
+    --ice-type-complementary: color(display-p3 0.4 0.15 0.15);
+    --fighting-type-complementary: color(display-p3 0.25 0.81 0.84);
+    --poison-type-complementary: color(display-p3 0.4965 0.8093 0.448);
+    --ground-type-complementary: color(display-p3 0.12 0.22 0.59);
+    --flying-type-complementary: color(display-p3 0.34 0.44 0);
+    --psychic-type-complementary: color(display-p3 0.0404 0.5884 0.3991);
+    --bug-type-complementary: color(display-p3 0.2971 0.2422 0.8371);
+    --rock-type-complementary: color(display-p3 0.3157 0.4554 0.8454);
+    --ghost-type-complementary: color(display-p3 0.617 0.6984 0.4567);
+    --dragon-type-complementary: color(display-p3 0.6817 0.7516 0.0071);
+    --dark-type-complementary: color(display-p3 0.7489 0.8052 0.8045);
+    --steel-type-complementary: color(display-p3 0.28 0.28 0.18);
+    --fairy-type-complementary: color(display-p3 0.06 0.29 0.25);
   }
 }
 

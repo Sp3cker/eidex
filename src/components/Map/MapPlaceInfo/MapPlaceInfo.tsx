@@ -141,9 +141,7 @@ const MapPlaceInfo = memo(() => {
   );
 
   return (
-    <div
-      className={`${selectedMap !== null ? "pointer-events-auto" : "pointer-events-none"} map-place-info-z-3 map-place-info-grid font-calamity`}
-    >
+    <div className={`map-place-info-z-3 map-place-info-grid font-calamity pointer-events-none`}>
       <animated.div
         style={{
           opacity: spring.opacity,
@@ -160,10 +158,7 @@ const MapPlaceInfo = memo(() => {
 MapPlaceInfo.displayName = "MapPlaceInfo";
 const pages = [
   ({ style }: any) => (
-    <animated.div
-      style={style}
-      className="pointer-events-none absolute inset-0 pl-1 md:p-2"
-    >
+    <animated.div style={style} className="absolute inset-0 pl-1 md:p-2">
       <div className="relative h-full overflow-hidden">
         <Suspense>
           <TrainersList />

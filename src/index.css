@@ -47,6 +47,7 @@
     oklch(0.45 0.15 20)
   );
   --color-very-hard-start: oklch(0.65 0.2 25);
+  --color-blue-text: var(--color-blue-800);
 }
 
 @supports (color: color(display-p3 0.55 0.19 0.71)) {
@@ -71,6 +72,9 @@
     --color-cyan-500: color(display-p3 0.2741 0.6746 0.9822);
     --color-green-500: color(display-p3 0.3087 0.7748 0.3743);
     --color-mon-select: color(display-p3 0.3764 0.8844 0.9893);
+    --color-blue-100: color(display-p3 0.8245 0.8829 0.9987);
+    --color-blue-text: color(display-p3 0.4087 0.5866 0.9826);
+    --color-yellow-100: color(display-p3 0.9991 0.9561 0.6375);
   }
 }
 @custom-variant dark (&:is(.dark *));
