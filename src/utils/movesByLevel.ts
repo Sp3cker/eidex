@@ -15,6 +15,12 @@ export function getPokemonMoveIdsAtLevel(
   level: number,
   customMoves: number[] = [],
 ): number[] {
+  // If mon's level is above 199, we cannot determine proper moves, and assume
+  // custom moves are provided.
+  if (level > 199 || customMoves.length === 4) {
+    return customMoves;
+  }
+
   const pokemon = pokemonDataMap.get(speciesId.toString());
   if (!pokemon?.levelUpMoves) {
     return [];
@@ -28,6 +34,9 @@ export function getPokemonMoveIdsAtLevel(
     number,
   ][]) {
     if (learnLevel <= level) {
+      if (naturalMoves.length >= 4) {
+        naturalMoves.splice(0, 1).push({ moveId, level: learnLevel });
+      }
       naturalMoves.push({ moveId, level: learnLevel });
     }
   }
@@ -36,25 +45,38 @@ export function getPokemonMoveIdsAtLevel(
   naturalMoves.sort((a, b) => a.level - b.level);
 
   // Calculate final move IDs based on custom moves
-  let finalMoveIds: number[] = [];
 
   if (customMoves.length === 0) {
     // No custom moves - use natural moves (last 4)
-    finalMoveIds = naturalMoves.slice(-4).map((move) => move.moveId);
-  } else {
-    // Has custom moves - replace oldest natural moves
-    const naturalMovesToKeep = Math.max(0, 4 - customMoves.length);
-    const keptNaturalMoves = naturalMoves.slice(-naturalMovesToKeep);
-
-    // Add kept natural moves
-    finalMoveIds = keptNaturalMoves.map((move) => move.moveId);
-
-    // Add custom moves (limit to 4 total)
-    const customMovesToAdd = customMoves.slice(0, 4 - finalMoveIds.length);
-    finalMoveIds.push(...customMovesToAdd);
+    return naturalMoves.slice(-4).map((move) => move.moveId);
   }
+  // First, remove custom moves that are already in natural moves
+  for (let i = 0; i < customMoves.length; i++) {
+    const customMoveId = customMoves[i];
+    if (naturalMoves.some((move) => move.moveId === customMoveId)) {
+      customMoves.splice(i, 1); // Remove from custom moves
+    }
+  }
+  // customMoves is now just moves that mon shoulnt have at this lvl.
+  // We replace the earliest natural moves with custom moves
+  if (customMoves.length === 0) {
+    return naturalMoves.map((m) => m.moveId); // No custom moves to add, return natural moves
+  }
+  return naturalMoves
+    .map((m) => m.moveId)
+    .splice(0, customMoves.length, ...customMoves);
+  // Has custom moves - replace oldest natural moves
+  // const naturalMovesToKeep = Math.max(0, 4 - customMoves.length);
+  // const keptNaturalMoves = naturalMoves.slice(-naturalMovesToKeep);
 
-  return finalMoveIds.slice(0, 4);
+  // Add kept natural moves
+  // finalMoveIds = keptNaturalMoves.map((move) => move.moveId);
+
+  // Add custom moves (limit to 4 total)
+  // const customMovesToAdd = customMoves.slice(0, 4 - finalMoveIds.length);
+  // finalMoveIds.push(...customMovesToAdd);
+
+  // return finalMoveIds.slice(0, 4);
 }
 
 /**

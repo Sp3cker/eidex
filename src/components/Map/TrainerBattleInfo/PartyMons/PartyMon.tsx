@@ -56,7 +56,10 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
   const speciesName = pokemonInfo?.nameKey || "Unknown";
 
   const moves = useMemo(
-    () => getPokemonMoveIdsAtLevel(pokemon.id, level, pokemon.moves),
+    () =>
+      getPokemonMoveIdsAtLevel(pokemon.id, level, pokemon.moves).filter(
+        (m) => m !== 0,
+      ),
     [pokemon.id, level],
   );
 
@@ -148,7 +151,7 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
       <div className="flex items-center space-x-1 md:px-3">
         <div className="mt-2 flex flex-col space-y-0">
           {moveDetails.map((m) => (
-            <div key={m.name}>
+            <div key={m.name} title={m.id.toString()}>
               <h3 className="font-calamity text-xs font-bold sm:text-sm/6">
                 {m.name}
               </h3>

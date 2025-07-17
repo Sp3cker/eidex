@@ -19,7 +19,7 @@ const TrainerItem = memo(function TrainerItem({
 
   return (
     <div
-      className={`white-box w-full cursor-pointer rounded-sm border md:rounded-lg ${trainer.rematch ? "border-red-500" : "border-gray-600"} text-left transition-colors hover:bg-gray-50`}
+      className={`white-box h-8 w-full cursor-pointer rounded-sm border md:rounded-lg ${trainer.rematch ? "border-red-500" : "border-gray-600"} text-left transition-colors hover:bg-gray-50`}
       onClick={handleClick}
     >
       <div className="flex items-center justify-between">
@@ -83,7 +83,9 @@ const TrainersList = memo(function TrainersList() {
   const numTrainers = Object.keys(trainers);
 
   return (
-    <div className={`map-place-info-textbox-gradient max-w-50 ${isTrainersListOpen ? 'pointer-events-auto' : 'pointer-events-none'} absolute bottom-0 right-0 top-0 w-[75%] overflow-y-auto rounded rounded-l-lg md:left-0 md:rounded-lg`}>
+    <div
+      className={`map-place-info-textbox-gradient max-w-50 ${isTrainersListOpen ? "pointer-events-auto" : "pointer-events-none"} absolute bottom-0 right-0 top-0 w-[75%] overflow-y-auto rounded rounded-l-lg md:left-0 md:rounded-lg`}
+    >
       <div className="font-pkmnem flex flex-1 flex-col gap-2 p-2 md:gap-1">
         {isLoading ? (
           <div className="white-box w-full rounded-lg border p-3 text-center text-gray-500">
