@@ -102,6 +102,10 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
 
       <div className="flex items-center space-x-1 md:px-3">
         <div className="mt-2 flex flex-col space-y-0">
+          <p className="px-2 text-center font-bold leading-tight ring-1 ring-red-500">
+            Some trainer movesets are not accurate! I'm working on it!
+          </p>
+
           {moveDetails.map((m) => (
             <div key={m.name} title={m.id.toString()}>
               <h3 className="font-calamity text-xs font-bold sm:text-sm/6">
