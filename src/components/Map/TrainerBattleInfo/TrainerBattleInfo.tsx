@@ -4,6 +4,7 @@ const PartyMon = lazy(() => import("./PartyMons/PartyMon"));
 import TrainerInfo from "./TrainerInfo";
 import useMapStore from "@/stores/useMapStore";
 import PartyMons from "./PartyMons";
+
 const rainbowNames = ["Spencer", "iriv24"];
 
 const TrainerBattleInfo = memo(function TrainerBattleInfo() {
@@ -14,6 +15,7 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
     ),
     null,
   );
+
   const closeTrainer = useMapStore((state) => state.setTrainersListOpen);
 
   const handleClose = useCallback(() => {
@@ -43,6 +45,7 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
           trainerName={trainer.trainerName}
           battlePic={trainer.battlePic}
         />
+        <div></div>
       </div>
 
       <div className="font-pkmnem space-y-4 overflow-y-auto text-lg">

@@ -167,6 +167,9 @@ input[type="number"] {
   .ability_badge {
     @apply w-30 font-pixel text-shadow-lg/40 shadow-md/50 select-none items-center rounded-md border border-gray-200 bg-slate-600 px-1 py-0.5 text-center text-white;
   }
+  .cap-selector-container {
+    @apply mb-1 flex w-fit flex-col items-start items-center justify-end md:flex-row;
+  }
 
   .evolution_box {
     @apply font-pixel text-shadow-lg/40 border-3 my-5 flex rounded-sm border-neutral-600 bg-zinc-800 p-2 text-base text-white;

@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect, useState } from "react";
+import { memo, useCallback, useEffect, useMemo, useState } from "react";
 import {
   useTransition as springTransition,
   animated,
@@ -10,13 +10,16 @@ import { useDrag } from "@use-gesture/react";
 import PartyMon from "./PartyMon";
 import { TrainerPartyMon } from "@/data/map/trainers";
 import PartyMonsButtons from "./PartyMonsButtons";
+import CapSelector from "../CapSelector/CapSelector";
 const PartyMons = memo(function PartyMons({
   party,
 }: {
   party: TrainerPartyMon[];
 }) {
   const [[selectedMon, dir], setSelectedMon] = useState<number[]>([0, 0]);
-
+  const hasScaledLevels = useMemo(() => {
+    return party.some((mon) => mon.lvl !== undefined && mon.lvl > 199);
+  }, [party[0].id]);
   // Drag spring for real-time drag offset
   const [dragSpring, dragApi] = useSpring(() => ({
     dragX: 0,
@@ -118,11 +121,14 @@ const PartyMons = memo(function PartyMons({
   // Dont touch this css
   return (
     <div className="flex h-full w-full flex-col">
-      <PartyMonsButtons
-        party={party}
-        selectedMon={selectedMon}
-        setSelectedMon={handleSelectMon}
-      />
+      <div className="relative flex w-full items-center pl-1 sm:justify-evenly sm:p-2">
+        {hasScaledLevels && <CapSelector />}
+        <PartyMonsButtons
+          party={party}
+          selectedMon={selectedMon}
+          setSelectedMon={handleSelectMon}
+        />
+      </div>
       <div className="h-200 relative flex w-full overflow-hidden">
         {shuffleTransition((style, item) => (
           <animated.div

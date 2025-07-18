@@ -22,7 +22,7 @@ const PartyMonsButtons = memo(
     // }, [selectedMon, party.length, setSelectedMon]);
     if (party.length === 0) {
       return (
-        <div className="flex h-full w-full items-center justify-center">
+        <div className="flex-2 flex h-full w-full items-center justify-center">
           <p className="text-center text-lg font-bold text-gray-500">
             No Pokémon in this party.
           </p>
@@ -30,7 +30,7 @@ const PartyMonsButtons = memo(
       );
     }
     return (
-      <div className="h-15 flex flex-row items-center justify-center gap-2 overflow-x-auto">
+      <div className="h-15 flex-2 flex w-fit flex-row items-center justify-end gap-1 overflow-x-auto sm:justify-center sm:gap-2">
         {party.map((mon, index) => (
           <button
             key={index}
