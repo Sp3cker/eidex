@@ -1,0 +1,48 @@
+{
+  "lookups": {
+    "types": {
+      "1": "Normal", "2": "Fighting", "3": "Flying", "4": "Poison", "5": "Ground",
+      "6": "Rock", "7": "Bug", "8": "Ghost", "9": "Steel", "11": "Fire",
+      "12": "Water", "13": "Grass", "14": "Electric", "15": "Psychic",
+      "16": "Ice", "17": "Dragon", "18": "Dark", "19": "Fairy"
+    },
+    "categories": {
+      "0": "Physical", "1": "Special", "2": "Status"
+    },
+    "properties": {
+      "contact": 1, "punching": 2, "wind": 3, "dance": 4, "slicing": 5
+    }
+  },
+  "data": [
+    {
+      "i": 1,
+      "n": "Pound",
+      "t": 1,
+      "d": "Pounds the foe with forelegs or tail.",
+      "p": 40,
+      "a": 100,
+      "c": 0,
+      "pr": [1]
+    },
+    {
+      "i": 2,
+      "n": "Karate Chop",
+      "t": 2,
+      "d": "A chopping attack with a high critical-hit ratio.",
+      "p": 50,
+      "a": 100,
+      "c": 0,
+      "pr": [1]
+    },
+    {
+      "i": 3,
+      "n": "Double Slap",
+      "t": 1,
+      "d": "Repeatedly slaps the foe 2 to 5 times.",
+      "p": 15,
+      "a": 100,
+      "c": 0,
+      "pr": [1]
+    }
+  ]
+}

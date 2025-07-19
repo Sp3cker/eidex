@@ -1,0 +1,42 @@
+{
+  "lookups": {
+    "types": {
+      "1": "Normal", "2": "Fighting", "3": "Flying", "4": "Poison", "5": "Ground",
+      "6": "Rock", "7": "Bug", "8": "Ghost", "9": "Steel", "11": "Fire",
+      "12": "Water", "13": "Grass", "14": "Electric", "15": "Psychic",
+      "16": "Ice", "17": "Dragon", "18": "Dark", "19": "Fairy"
+    },
+    "abilities": {
+      "1": "Stench", "2": "Drizzle", "3": "Speed Boost", "4": "Battle Armor",
+      "5": "Sturdy", "6": "Damp", "7": "Limber", "8": "Sand Veil", "9": "Static",
+      "10": "Volt Absorb", "11": "Water Absorb", "12": "Oblivious", "13": "Cloud Nine",
+      "14": "Compound Eyes", "15": "Insomnia", "16": "Color Change", "17": "Immunity",
+      "18": "Flash Fire", "19": "Shield Dust", "20": "Own Tempo", "21": "Suction Cups",
+      "22": "Intimidate", "23": "Shadow Tag", "24": "Rough Skin", "25": "Wonder Guard",
+      "26": "Levitate", "27": "Effect Spore", "28": "Synchronize", "29": "Clear Body",
+      "30": "Natural Cure", "31": "Lightning Rod", "32": "Serene Grace", "33": "Swift Swim",
+      "34": "Chlorophyll", "35": "Illuminate", "36": "Trace", "37": "Huge Power",
+      "38": "Poison Point", "39": "Inner Focus", "40": "Magma Armor"
+    },
+    "moveProperties": {
+      "contact": 1, "punching": 2, "wind": 3, "dance": 4, "slicing": 5
+    }
+  },
+  "data": {
+    "1": {
+      "n": "Bulbasaur",
+      "t": [13, 4],
+      "s": [45, 49, 49, 45, 65, 65],
+      "a": [65, 0, 34],
+      "h": [0, 0],
+      "l": [[33, 1], [45, 3], [73, 7], [345, 9], [77, 13], [79, 13], [124, 15], [72, 19], [36, 21], [74, 25], [38, 27], [388, 31], [235, 33], [402, 37]],
+      "tm": [402, 331, 113, 202, 311, 91, 115, 188, 412, 731, 474, 282, 447, 15, 70, 148, 249, 526, 14, 34, 241, 76, 438, 117, 218, 237, 102, 363, 182, 99, 216, 290, 164, 779, 92, 263, 156, 214],
+      "e": [130, 204, 80, 345, 320, 174, 275, 267, 133, 437, 438, 124, 203, 202, 580],
+      "d": 1,
+      "ev": [[4, 2, 16]],
+      "f": null,
+      "fi": 0,
+      "nk": "Bulbasaur"
+    }
+  }
+}

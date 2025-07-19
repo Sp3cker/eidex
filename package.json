@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "vite --host",
     "build": "tsc -b && vite build",
+    "build:optimized": "tsc -b && vite build --config vite.config.optimized.ts",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
@@ -16,6 +17,8 @@
     "deploy": "gh-pages -d dist",
     "generate-spritesheet": "tsc scripts/generate-spritesheet.ts --outDir dist/scripts --target ES2022 --module ES2022 --moduleResolution bundler && node dist/scripts/generate-spritesheet.js",
     "generate-pokemon-spritesheet": "tsc scripts/generate-pokemon-spritesheet.ts --outDir dist/scripts --target ES2022 --module ES2022 --moduleResolution bundler && node dist/scripts/generate-pokemon-spritesheet.js",
+    "optimize-data": "tsc scripts/optimizeData.ts --outDir dist/scripts --target ES2022 --module ES2022 --moduleResolution bundler && node dist/scripts/optimizeData.js",
+    "analyze-bundle": "npm run build && npx vite-bundle-analyzer dist/stats.html",
     "scan": "next dev & npx react-scan@latest localhost:3000"
   },
   "dependencies": {
