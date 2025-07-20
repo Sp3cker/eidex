@@ -1,4 +1,4 @@
-import { getItemName } from "./itemData";
+import {Items} from "@/data/map";
 import { getTypeName } from "./typeInfo";
 import { getMoveName } from "./moveData";
 import { getNameKey } from "./speciesData";
@@ -71,7 +71,7 @@ export const parseShortEvolutions: Record<number, (evo: number[]) => string> = {
   3: () => `Lvl + ♥ (Night)`,
   4: (evo) => `Lvl ${evo[2]}`,
   5: () => `Trade`,
-  6: (evo) => `Trade + ${getItemName(evo[2])}`,
+  6: (evo) => `Trade + ${ItemsData.(evo[2])}`,
   7: (evo) => `${getItemName(evo[2])}`,
   8: (evo) => `Lvl ${evo[2]} Atk>Def`,
   9: (evo) => `Lvl ${evo[2]} Atk=Def`,
@@ -89,8 +89,7 @@ export const parseShortEvolutions: Record<number, (evo: number[]) => string> = {
   21: (evo) => `Level up, with ${getItemName(evo[2])} (Day)`,
   22: (evo) => `Level up, with ${getItemName(evo[2])} (Night)`,
   23: (evo) => `Level up, knowing ${getMoveName(evo[2])}`,
-  24: (evo) =>
-    `Lvl + ♥ + ${getTypeName(evo[2])} move`,
+  24: (evo) => `Lvl + ♥ + ${getTypeName(evo[2])} move`,
   25: (evo) => `Lvl + ${evo[2]}`,
   26: (evo) => `${evo[2]} (Male)`,
   27: (evo) => `${evo[2]} (Female)`,
@@ -109,10 +108,8 @@ export const parseShortEvolutions: Record<number, (evo: number[]) => string> = {
   40: (evo) => `use ${evo[2]}, in daytime`,
   41: (evo) => `Level up, with ${evo[2]}`,
   42: (evo) => `Lvl ${evo[2]} during fog in the overworld`,
-  43: (evo) =>
-    `Level up, knows ${getMoveName(evo[2])} and PID % 100 is 0`,
-  44: (evo) =>
-    `Level up, knows ${getMoveName(evo[2])},  PID % 100 is not 0`,
+  43: (evo) => `Level up, knows ${getMoveName(evo[2])} and PID % 100 is 0`,
+  44: (evo) => `Level up, knows ${getMoveName(evo[2])},  PID % 100 is not 0`,
   45: (evo) =>
     `Lvl ${evo[2]} in battle with a personality value with a modulus of 0`,
   46: (evo) =>

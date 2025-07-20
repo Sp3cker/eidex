@@ -1,5 +1,5 @@
 import levels from "./levels.json";
-import items from "./items.json";
+import items from "./merged-items.json";
 
 type EncounterListing = {
   min_level: number;
@@ -17,6 +17,7 @@ export type LevelMart = {
 
 export type Item = {
   id: string;
+  itemId: number;
   name: string;
   description: string;
   price: number | null;
@@ -24,7 +25,7 @@ export type Item = {
 };
 
 export const Items = new Map<string, Item>(
-  items.map((item) => [item.id, item]),
+  items.filter((item) => item.id).map((item) => [item.id!, item]) as [string, Item][],
 );
 
 export type ItemWithAmount = Item & {

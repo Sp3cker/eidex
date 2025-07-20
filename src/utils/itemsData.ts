@@ -27,6 +27,7 @@ class ItemSearch {
    * Search for an item
    */
   trie: TrieSearch<Item>;
+  byId: (id: number) => Item;
   /**
    * Array of places to find items.
    */
