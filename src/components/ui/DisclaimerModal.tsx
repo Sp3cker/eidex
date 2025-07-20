@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import useBodyScrollLock from "../../hooks/useBodyScrollLock";
 import { useMapStore } from "../../stores/useMapStore";
-import { useSpring, animated, useTrail } from "@react-spring/web";
+import { useSpring, animated, useTrail, config } from "@react-spring/web";
 import { ErrorBoundary } from "react-error-boundary";
 import CloseButton from "./CloseButton";
 
-const paragraphs = (index: number, springAnim: any) => {
+const paragraphs = (springAnim: any, index: number) => {
   const pars = [
     <animated.p style={springAnim} key="par1">
-      This project gets it's data from the{" "}
+      This project gets the item locations from the{" "}
       <a
         className="underline hover:text-blue-200"
         href="https://github.com/iriv24/pokeemerald-expansion"
@@ -24,7 +24,15 @@ const paragraphs = (index: number, springAnim: any) => {
         className="underline hover:text-blue-200"
       >
         SporySparser.
+      </a>{" "}
+      Trainer movesets are pulled using{" "}
+      <a
+        className="underline hover:text-blue-200"
+        href="https://github.com/lhearachel/porydex"
+      >
+        LheaRachel's Porydex
       </a>
+      , with some tweaks on the export format.
       <br /> If you find an error in the data, please report it in the Discord.
     </animated.p>,
     <animated.p style={springAnim} key="par2">
@@ -121,15 +129,21 @@ const paragraphs = (index: number, springAnim: any) => {
 const DisclaimerModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const deselectMap = useMapStore((state) => state.deselectMap);
-  const springs = useSpring({
-    opacity: isOpen ? 1 : 0,
-    translateY: isOpen ? 0 : 20,
-  });
+  const [springs] = useSpring(
+    {
+      opacity: isOpen ? 1 : 0,
+      translateY: isOpen ? 0 : 20,
+    },
+    [isOpen],
+  );
 
   const wordSprings = useTrail(8, {
     opacity: isOpen ? 1 : 0,
     clipPath: isOpen ? "inset(0 0% 0 0)" : "inset(0 100% 0 0)",
-    delay: 100,
+    delay: 20,
+
+    config: (key: string) =>
+      key === "opacity" ? { clamp: true } : config.stiff,
   });
 
   useBodyScrollLock(isOpen);
@@ -174,9 +188,7 @@ const DisclaimerModal = () => {
               />
               <ErrorBoundary fallback={<p>whoopsie</p>}>
                 <div className="cool-font space-y-2.5 text-xs/5 text-gray-300 sm:text-sm/5">
-                  {wordSprings.map((spring, index) =>
-                    paragraphs(index, spring),
-                  )}
+                  {wordSprings.map(paragraphs)}
                 </div>
               </ErrorBoundary>
 
