@@ -78,16 +78,17 @@ export function calculateStatsOld(
 ): [number[], number, number] | null {
   const species = pokemonDataMap.get(`${speciesId}`);
   if (!species) return null;
+  debugger
   const scaledLevel = level;
   const ivValue = iv ? 31 : 0;
 
   // Base stats from species with reordered Special Attack and Speed
-  const baseStats = [...species.stats];
+  const baseStats = species.stats;
   // Rotate: Move SpAtk(3) to Speed(5), SpDef(4) to SpAtk(3), Speed(5) to SpDef(4)
-  const temp = baseStats[3];
-  baseStats[3] = baseStats[4];
-  baseStats[4] = baseStats[5];
-  baseStats[5] = temp;
+  // const temp = baseStats[3];
+  // baseStats[3] = baseStats[4];
+  // baseStats[4] = baseStats[5];
+  // baseStats[5] = temp;
 
   const hp =
     Math.floor(
