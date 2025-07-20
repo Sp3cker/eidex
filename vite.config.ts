@@ -70,12 +70,12 @@ export default defineConfig({
 
         // Optimize object property access
         pure_getters: true,
-        unsafe: false,
-        unsafe_comps: false,
+        // unsafe: false,
+        // unsafe_comps: false,
 
-        // Remove unused code
-        dead_code: true,
-        unused: true,
+        // // Remove unused code
+        // dead_code: true,
+        // unused: true,
       },
       mangle: {
         // Mangle property names for smaller bundles
