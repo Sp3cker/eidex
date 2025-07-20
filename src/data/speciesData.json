@@ -20745,7 +20745,7 @@
         "evolutions": null,
         "forms": null,
         "formId": 0,
-        "nameKey": "Farfetch'd",
+        "nameKey": "Farfetchd",
         "baseForm": 83,
         "siblings": [
             979
@@ -20867,7 +20867,7 @@
         ],
         "forms": null,
         "formId": 0,
-        "nameKey": "Farfetch'd-Galar",
+        "nameKey": "Farfetchd-Galar",
         "baseForm": 979,
         "siblings": [
             83
@@ -20875,7 +20875,7 @@
     },
     "865": {
         "speciesId": 865,
-        "speciesName": "Sirfetch'd",
+        "speciesName": "Sirfetchd",
         "types": [
             2
         ],
@@ -21005,7 +21005,7 @@
         "evolutions": null,
         "forms": null,
         "formId": 0,
-        "nameKey": "Sirfetch'd",
+        "nameKey": "Sirfetchd",
         "baseForm": 865
     },
     "84": {
