@@ -8,14 +8,22 @@ export { Pokemon };
  * Excludes Gmax forms like pokemonData array
  */
 export const pokemonDataMap = new Map<string, Pokemon>(
-  Object.entries(speciesDataJson).filter(
-    ([, pokemon]) => !pokemon.nameKey.includes("Gmax"),
-  ),
+  Object.entries(speciesDataJson)
+    .filter(([_, pokemon]) => !pokemon.nameKey.includes("Gmax"))
+    .map(([key, pokemon]) => [key, {
+         ...pokemon,
+         forms: Array.isArray(pokemon.forms) ? pokemon.forms.flat().map(String) : [],
+       }] as [string, Pokemon])
 );
 
-export const pokemonData: Pokemon[] = Object.values(speciesDataJson).filter(
-  (p) => p.nameKey.includes("Gmax") === false,
-);
+export const pokemonData: Pokemon[] = Object.values(speciesDataJson)
+  .filter((p) => p.nameKey.includes("Gmax") === false)
+  .map((p) => ({
+    ...p,
+    forms: Array.isArray(p.forms)
+      ? p.forms.flat().map(String)
+      : [],
+  }));
 
 // --- PRE-EVOLUTION (CHILD -> PARENT) LOOKUP ---
 

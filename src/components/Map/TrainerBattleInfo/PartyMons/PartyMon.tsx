@@ -74,8 +74,9 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
               {speciesName}
             </h4>
 
-            <span className="text-base/1 pkmn-types text-nowrap text-gray-600">
-              Lv. {levelIsLevelCap ? `Cap -${(level - 200).toString()}` : level}{" "}
+            <span className="sm:text-lg/1 pkmn-types text-nowrap text-gray-600">
+              Lv.{" "}
+              {levelIsLevelCap ? `Cap - ${(level - 200).toString()}` : level}{" "}
               {nature ? `(${nature})` : ""}
             </span>
           </div>
@@ -102,8 +103,8 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
 
       <div className="flex items-center space-x-1 md:px-3">
         <div className="mt-2 flex flex-col space-y-0">
-          <p className="px-2 text-center font-bold leading-tight ring-1 ring-red-500">
-            Some trainer movesets are not accurate! I'm working on it!
+          <p className="px-2 text-center font-bold leading-tight ring-1 ring-emerald-200 text-emerald-800">
+            I'm verifying trainer movesets! They're mostly accurate!
           </p>
 
           {moveDetails.map((m) => (

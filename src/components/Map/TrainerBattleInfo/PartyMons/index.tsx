@@ -60,7 +60,7 @@ const PartyMons = memo(function PartyMons({
 
   // Drag handler
   const bind = useDrag(
-    ({ movement: [mx], dragging, direction: [dirX] }) => {
+    ({ movement: [mx], dragging, direction: [dirX], swipe: [swipeX] }) => {
       // Prevent default touch behavior on mobile
       // if (event) {
       //   event.preventDefault();
@@ -77,7 +77,20 @@ const PartyMons = memo(function PartyMons({
         // Reset drag offset
         dragApi.start({ dragX: 0, scaleX: 1 });
 
-        // Check threshold for navigation
+        // Handle swipe gestures first (more responsive for quick gestures)
+        if (swipeX !== 0) {
+          if (swipeX > 0 && selectedMon > 0) {
+            // Swiped right -> previous pokemon (up the list)
+            handleSelectMon(selectedMon - 1);
+            return; // Exit early to avoid duplicate navigation
+          } else if (swipeX < 0 && selectedMon < party.length - 1) {
+            // Swiped left -> next pokemon (down the list)
+            handleSelectMon(selectedMon + 1);
+            return; // Exit early to avoid duplicate navigation
+          }
+        }
+
+        // Fallback to drag threshold for slower drags that weren't detected as swipes
         const THRESHOLD = 100;
         if (Math.abs(mx) > THRESHOLD) {
           if (dirX > 0 && selectedMon > 0) {

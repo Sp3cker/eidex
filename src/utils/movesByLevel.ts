@@ -114,7 +114,7 @@ export function getMoveDetails(moveIds: number[]): Array<{
 
     return {
       id: moveId,
-      description: move?.description ?? "",
+      description: move?.desc ?? "",
       name: move?.name || `Move ${moveId}`,
       power: move?.power || 0,
       typeName: typeNames[index] || "Normal",

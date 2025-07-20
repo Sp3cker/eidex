@@ -5,7 +5,7 @@ import { Move } from "../types";
 const moveDataMap = new Map<number, Move>();
 
 (moveDataArr as Move[])
-  .filter((move) => move.description && move.name)
+  .filter((move) => move.desc && move.name)
   .forEach((move) => moveDataMap.set(move.id, { ...move }));
 
 function getMoveData(id: number): Move | undefined {

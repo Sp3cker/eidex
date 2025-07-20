@@ -1,11 +1,11 @@
 import { getAbility } from "@/utils/abilityData";
-import { Items } from "@/data/map";
+import itemSearch from "@/utils/itemsData";
 import { getItemSpriteStyle } from "@/utils/itemSprites";
 import { ErrorBoundary } from "react-error-boundary";
 
 const HeldItemIcon = ({ heldItem }: { heldItem: string }) => {
-  const spriteStyle = getItemSpriteStyle(heldItem, 24); // Changed from 64 to 32
-  const itemName = Items.get(heldItem);
+  const [{ id }] = itemSearch.trie.get(heldItem);
+  const spriteStyle = id ? getItemSpriteStyle(id, 24) : undefined;
 
   return spriteStyle ? (
     <div className="absolute right-2 top-1 mt-auto flex size-max h-8 flex-row items-center rounded-sm pl-1 pr-2 ring-1 ring-stone-300">
@@ -14,7 +14,7 @@ const HeldItemIcon = ({ heldItem }: { heldItem: string }) => {
         className="shrink-0"
         style={spriteStyle}
       />
-      <p>{itemName?.name}</p>
+      <p>{heldItem}</p>
     </div>
   ) : (
     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded bg-gray-200 text-xs text-gray-500">
@@ -32,8 +32,10 @@ const AbilityDesc = ({ ability }: { ability: number[] }) => {
   return abilityNames.map((a) =>
     a ? (
       <div key={a?.name} className="absolute left-1 h-8 w-max">
-        <h4>{a.name}</h4>
-        <p className="text-sm/1">{a.description}</p>
+        <h4 className="font-calamity text-xs/6 font-bold">{a.name}</h4>
+        <p className="text-sm/1 md:text-base/2 whitespace-nowrap">
+          {a.description}
+        </p>
       </div>
     ) : null,
   );

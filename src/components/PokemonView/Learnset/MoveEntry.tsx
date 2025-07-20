@@ -45,7 +45,7 @@ const MoveEntry: React.FC<MoveEntryProps> = ({ move, level }) => {
         </div>
       </div>
       <span className="font-calamity text-left text-sm font-normal text-neutral-200">
-        {move.description}
+        {move.desc}
       </span>
     </div>
   );

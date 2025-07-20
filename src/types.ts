@@ -67,7 +67,7 @@ export interface FilterOptions {
 export interface Move {
   id: number;
   name: string;
-  description: string | null;
+  desc: string | null;
   power: number;
   type: number;
   cat: number;

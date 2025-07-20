@@ -27,7 +27,7 @@ const PartyMonsStats = memo(function PartyMonsStats({
   if (!stats || stats[0] === undefined) {
     return null;
   }
-  debugger;
+
   return stats[0].map((stat, index) => (
     <div
       key={index}
