@@ -61,29 +61,29 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000, // Increased from default 500KB
 
     // Enable minification
-    minify: "terser",
-    terserOptions: {
-      compress: {
-        // Remove console.log in production
-        drop_console: process.env.NODE_ENV === "production",
-        drop_debugger: process.env.NODE_ENV === "production",
+    // minify: "terser",
+    // terserOptions: {
+    //   compress: {
+    //     // Remove console.log in production
+    //     drop_console: process.env.NODE_ENV === "production",
+    //     drop_debugger: process.env.NODE_ENV === "production",
 
-        // Optimize object property access
-        pure_getters: true,
-        // unsafe: false,
-        // unsafe_comps: false,
+    //     // Optimize object property access
+    //     // pure_getters: true,
+    //     // unsafe: false,
+    //     // unsafe_comps: false,
 
-        // // Remove unused code
-        // dead_code: true,
-        // unused: true,
-      },
-      mangle: {
-        // Mangle property names for smaller bundles
-        properties: {
-          regex: /^_/,
-        },
-      },
-    },
+    //     // // Remove unused code
+    //     // dead_code: true,
+    //     // unused: true,
+    //   },
+    //   mangle: {
+    //     // Mangle property names for smaller bundles
+    //     properties: {
+    //       regex: /^_/,
+    //     },
+    //   },
+    // },
 
     // Target modern browsers for smaller bundles
     target: "es2020",
