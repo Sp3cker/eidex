@@ -27,7 +27,6 @@ class ItemSearch {
    * Search for an item
    */
   trie: TrieSearch<Item>;
-  byId: (id: number) => Item;
   /**
    * Array of places to find items.
    */
@@ -80,6 +79,15 @@ class ItemSearch {
       return null;
     }
     return mapsArr;
+  }
+
+  ByItemId(itemId: number): string | undefined {
+    for (const item of Items.values()) {
+      if (item.itemId === itemId) {
+        return item.name;
+      }
+    }
+    return undefined;
   }
   search(query: string) {
     return this.trie.search(query).slice(0, 5);

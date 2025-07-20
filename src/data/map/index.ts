@@ -28,6 +28,11 @@ export const Items = new Map<string, Item>(
   items.filter((item) => item.id).map((item) => [item.id!, item]) as [string, Item][],
 );
 
+export function ByItemId(id: string): string | undefined {
+  const item = Items.get(id);
+  return item?.name;
+}
+
 export type ItemWithAmount = Item & {
   amount: number;
 };

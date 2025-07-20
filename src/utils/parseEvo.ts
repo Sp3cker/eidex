@@ -1,4 +1,4 @@
-import {Items} from "@/data/map";
+import ItemsData from "@/utils/itemsData";
 import { getTypeName } from "./typeInfo";
 import { getMoveName } from "./moveData";
 import { getNameKey } from "./speciesData";
@@ -71,8 +71,8 @@ export const parseShortEvolutions: Record<number, (evo: number[]) => string> = {
   3: () => `Lvl + ♥ (Night)`,
   4: (evo) => `Lvl ${evo[2]}`,
   5: () => `Trade`,
-  6: (evo) => `Trade + ${ItemsData.(evo[2])}`,
-  7: (evo) => `${getItemName(evo[2])}`,
+  6: (evo) => `Trade + ${ItemsData.ByItemId(evo[2])}`,
+  7: (evo) => `${ItemsData.ByItemId(evo[2])}`,
   8: (evo) => `Lvl ${evo[2]} Atk>Def`,
   9: (evo) => `Lvl ${evo[2]} Atk=Def`,
   10: (evo) => `Lvl ${evo[2]} Atk<Def`,
@@ -86,13 +86,13 @@ export const parseShortEvolutions: Record<number, (evo: number[]) => string> = {
   18: (evo) => `Lvl ${evo[2]} (Night)`,
   19: (evo) => `Lvl ${evo[2]} (Day)`,
   20: (evo) => `Lvl ${evo[2]} (Dusk)`,
-  21: (evo) => `Level up, with ${getItemName(evo[2])} (Day)`,
-  22: (evo) => `Level up, with ${getItemName(evo[2])} (Night)`,
+  21: (evo) => `Level up, with ${ItemsData.ByItemId(evo[2])} (Day)`,
+  22: (evo) => `Level up, with ${ItemsData.ByItemId(evo[2])} (Night)`,
   23: (evo) => `Level up, knowing ${getMoveName(evo[2])}`,
   24: (evo) => `Lvl + ♥ + ${getTypeName(evo[2])} move`,
   25: (evo) => `Lvl + ${evo[2]}`,
-  26: (evo) => `${evo[2]} (Male)`,
-  27: (evo) => `${evo[2]} (Female)`,
+  26: (evo) => `${ItemsData.ByItemId(evo[2])} (Male)`,
+  27: (evo) => `${ItemsData.ByItemId(evo[2])} (Female)`,
   28: (evo) => `Lvl ${evo[2]} with overworld rain`,
   29: (evo) => `Level up with ${getNameKey(evo[2])} in party`,
   30: (evo) => `Lvl ${evo[2]} with a Dark Type in party`,
