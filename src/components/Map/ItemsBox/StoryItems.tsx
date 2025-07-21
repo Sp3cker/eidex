@@ -7,6 +7,7 @@ const StoryItems = ({
 }: {
   scriptedGives: LevelScriptedEvent[];
 }) => {
+
   return (
     <>
       {scriptedGives.map(({ items, pokemon, explanation }) => (

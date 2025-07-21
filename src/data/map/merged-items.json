@@ -1,35 +1,35 @@
 [
   {
     "itemId": 1,
-    "id": "ITEM_POKE_BALL",
+    "id": "ITEM_USE_PARTY_MENU",
     "name": "Poké Ball",
     "price": 200,
     "description": "A tool used for catching wild Pokémon."
   },
   {
     "itemId": 2,
-    "id": "ITEM_GREAT_BALL",
+    "id": "ITEM_USE_FIELD",
     "name": "Great Ball",
     "price": 600,
     "description": "A good Ball with a higher catch rate than a Poké Ball."
   },
   {
     "itemId": 3,
-    "id": "ITEM_ULTRA_BALL",
+    "id": "ITEM_USE_PBLOCK_CASE",
     "name": "Ultra Ball",
     "price": 1200,
     "description": "A better Ball with a higher catch rate than a Great Ball."
   },
   {
     "itemId": 4,
-    "id": "ITEM_MASTER_BALL",
+    "id": "ITEM_USE_BAG_MENU",
     "name": "Master Ball",
     "price": 0,
     "description": "The best Ball that catches a Pokémon without fail."
   },
   {
     "itemId": 5,
-    "id": "ITEM_PREMIER_BALL",
+    "id": "ITEM_USE_PARTY_MENU_MOVES",
     "name": "Premier Ball",
     "price": 200,
     "description": "A rare Ball made in commemoration of some event."
@@ -299,7 +299,7 @@
   },
   {
     "itemId": 39,
-    "id": "ITEM_ENERGYPOWDER",
+    "id": "ITEM_ENERGY_POWDER",
     "name": "Energy Powder",
     "pluralName": "Energy Powder",
     "price": 500,
@@ -346,7 +346,7 @@
   },
   {
     "itemId": 44,
-    "id": "ITEM_PARLYZ_HEAL",
+    "id": "ITEM_PARALYZE_HEAL",
     "name": "Paralyze Heal",
     "price": 200,
     "description": "Heals a paralyzed Pokémon.",
@@ -411,7 +411,7 @@
   },
   {
     "itemId": 51,
-    "id": "ITEM_ELIXER",
+    "id": "ITEM_ELIXIR",
     "name": "Elixir",
     "price": 1,
     "holdEffectParam": 10,
@@ -421,7 +421,7 @@
   },
   {
     "itemId": 52,
-    "id": "ITEM_MAX_ELIXER",
+    "id": "ITEM_MAX_ELIXIR",
     "name": "Max Elixir",
     "price": 1,
     "holdEffectParam": 255,
@@ -483,7 +483,7 @@
   },
   {
     "itemId": 58,
-    "id": "ITEM_RAGECANDYBAR",
+    "id": "ITEM_RAGE_CANDY_BAR",
     "name": "RageCandyBar",
     "price": 300,
     "description": "Heals all the status problems of one Pokémon.",
@@ -621,7 +621,7 @@
   },
   {
     "itemId": 73,
-    "id": "ITEM_HEALTH_WING",
+    "id": "ITEM_HEALTH_FEATHER",
     "name": "HealthFeather",
     "price": 3000,
     "description": "An item that raises the base HP of a Pokémon.",
@@ -630,7 +630,7 @@
   },
   {
     "itemId": 74,
-    "id": "ITEM_MUSCLE_WING",
+    "id": "ITEM_MUSCLE_FEATHER",
     "name": "MuscleFeather",
     "price": 3000,
     "description": "An item that raises the base Attack of a Pokémon.",
@@ -639,7 +639,7 @@
   },
   {
     "itemId": 75,
-    "id": "ITEM_RESIST_WING",
+    "id": "ITEM_RESIST_FEATHER",
     "name": "ResistFeather",
     "price": 3000,
     "description": "An item that raises the base Defense of a Pokémon.",
@@ -648,7 +648,7 @@
   },
   {
     "itemId": 76,
-    "id": "ITEM_GENIUS_WING",
+    "id": "ITEM_GENIUS_FEATHER",
     "name": "GeniusFeather",
     "price": 3000,
     "description": "An item that raises the base Sp. Atk. of a Pokémon.",
@@ -657,7 +657,7 @@
   },
   {
     "itemId": 77,
-    "id": "ITEM_CLEVER_WING",
+    "id": "ITEM_CLEVER_FEATHER",
     "name": "CleverFeather",
     "price": 3000,
     "description": "An item that raises the base Sp. Def. of a Pokémon.",
@@ -666,7 +666,7 @@
   },
   {
     "itemId": 78,
-    "id": "ITEM_SWIFT_WING",
+    "id": "ITEM_SWIFT_FEATHER",
     "name": "SwiftFeather",
     "price": 3000,
     "description": "An item that raises the base Speed of a Pokémon.",
@@ -1057,7 +1057,7 @@
   },
   {
     "itemId": 122,
-    "id": "ITEM_X_DEFEND",
+    "id": "ITEM_X_DEFENSE",
     "name": "X Defense",
     "price": 550,
     "holdEffectParam": 1,
@@ -1067,7 +1067,7 @@
   },
   {
     "itemId": 123,
-    "id": "ITEM_X_SPECIAL",
+    "id": "ITEM_X_SP_ATK",
     "name": "X Sp. Atk",
     "price": 350,
     "holdEffectParam": 1,
@@ -1192,7 +1192,7 @@
   },
   {
     "itemId": 137,
-    "id": "ITEM_TINYMUSHROOM",
+    "id": "ITEM_TINY_MUSHROOM",
     "name": "Tiny Mushroom",
     "price": 500,
     "description": "A plain mushroom that would sell at a cheap price.",
@@ -1208,7 +1208,7 @@
   },
   {
     "itemId": 139,
-    "id": "ITEM_BALMMUSHROOM",
+    "id": "ITEM_BALM_MUSHROOM",
     "name": "Balm Mushroom",
     "price": 12500,
     "description": "A rare mushroom that would sell at a high price.",
@@ -1347,7 +1347,7 @@
   },
   {
     "itemId": 156,
-    "id": "ITEM_PRETTY_WING",
+    "id": "ITEM_PRETTY_FEATHER",
     "name": "PrettyFeather",
     "price": 200,
     "description": "A beautiful yet plain feather that does nothing.",
@@ -1624,42 +1624,42 @@
   },
   {
     "itemId": 189,
-    "id": "ITEM_BLU_APRICORN",
+    "id": "ITEM_BLUE_APRICORN",
     "name": "Blue Apricorn",
     "price": null,
     "description": "A blue apricorn. It smells a bit like grass."
   },
   {
     "itemId": 190,
-    "id": "ITEM_YLW_APRICORN",
+    "id": "ITEM_YELLOW_APRICORN",
     "name": "YellwApricorn",
     "price": null,
     "description": "A yellow apricorn. It has an invigor- ating scent."
   },
   {
     "itemId": 191,
-    "id": "ITEM_GRN_APRICORN",
+    "id": "ITEM_GREEN_APRICORN",
     "name": "GreenApricorn",
     "price": null,
     "description": "A green apricorn."
   },
   {
     "itemId": 192,
-    "id": "ITEM_PNK_APRICORN",
+    "id": "ITEM_PINK_APRICORN",
     "name": "Pink Apricorn",
     "price": null,
     "description": "A pink apricorn."
   },
   {
     "itemId": 193,
-    "id": "ITEM_WHT_APRICORN",
+    "id": "ITEM_WHITE_APRICORN",
     "name": "WhiteApricorn",
     "price": null,
     "description": "A white apricorn. It doesn't smell like anything."
   },
   {
     "itemId": 194,
-    "id": "ITEM_BLK_APRICORN",
+    "id": "ITEM_BLACK_APRICORN",
     "name": "BlackApricorn",
     "price": null,
     "description": "A black apricorn. It has an inde- scribable scent."
@@ -1700,7 +1700,7 @@
   },
   {
     "itemId": 199,
-    "id": "FIRST_MAIL_INDEX",
+    "id": "ITEM_ORANGE_MAIL",
     "name": "Orange Mail",
     "pluralName": "Orange Mail",
     "price": 50,
@@ -1814,7 +1814,7 @@
   },
   {
     "itemId": 213,
-    "id": "ITEM_THUNDERSTONE",
+    "id": "ITEM_THUNDER_STONE",
     "name": "Thunder Stone",
     "price": 500,
     "description": "Makes certain species of Pokémon evolve.",
@@ -1952,7 +1952,7 @@
   },
   {
     "itemId": 228,
-    "id": "ITEM_UP_GRADE",
+    "id": "ITEM_UPGRADE",
     "name": "Upgrade",
     "price": 500,
     "holdEffect": "HOLD_EFFECT_UPGRADE",
@@ -3447,7 +3447,7 @@
   },
   {
     "itemId": 393,
-    "id": "ITEM_STICK",
+    "id": "ITEM_LEEK",
     "name": "Leek",
     "price": 200,
     "holdEffect": "HOLD_EFFECT_LEEK",
@@ -3495,7 +3495,7 @@
   },
   {
     "itemId": 398,
-    "id": "ITEM_DEEPSEASCALE",
+    "id": "ITEM_DEEP_SEA_SCALE",
     "name": "DeepSeaScale",
     "price": 200,
     "holdEffect": "HOLD_EFFECT_DEEP_SEA_SCALE",
@@ -3505,7 +3505,7 @@
   },
   {
     "itemId": 399,
-    "id": "ITEM_DEEPSEATOOTH",
+    "id": "ITEM_DEEP_SEA_TOOTH",
     "name": "DeepSeaTooth",
     "pluralName": "DeepSeaTeeth",
     "price": 200,
@@ -3811,7 +3811,7 @@
   },
   {
     "itemId": 430,
-    "id": "ITEM_NEVERMELTICE",
+    "id": "ITEM_NEVER_MELT_ICE",
     "name": "Never-MeltIce",
     "pluralName": "Never-MeltIce",
     "price": null,
@@ -3822,7 +3822,7 @@
   },
   {
     "itemId": 431,
-    "id": "ITEM_BLACKBELT",
+    "id": "ITEM_BLACK_BELT",
     "name": "Black Belt",
     "price": null,
     "holdEffect": "HOLD_EFFECT_FIGHTING_POWER",
@@ -3863,7 +3863,7 @@
   },
   {
     "itemId": 435,
-    "id": "ITEM_TWISTEDSPOON",
+    "id": "ITEM_TWISTED_SPOON",
     "name": "Twisted Spoon",
     "price": null,
     "holdEffect": "HOLD_EFFECT_PSYCHIC_POWER",
@@ -3873,7 +3873,7 @@
   },
   {
     "itemId": 436,
-    "id": "ITEM_SILVERPOWDER",
+    "id": "ITEM_SILVER_POWDER",
     "name": "Silver Powder",
     "pluralName": "Silver Powder",
     "price": null,
@@ -3914,7 +3914,7 @@
   },
   {
     "itemId": 440,
-    "id": "ITEM_BLACKGLASSES",
+    "id": "ITEM_BLACK_GLASSES",
     "name": "Black Glasses",
     "pluralName": "Black Glasses",
     "price": null,
@@ -4101,7 +4101,7 @@
   },
   {
     "itemId": 459,
-    "id": "ITEM_BRIGHTPOWDER",
+    "id": "ITEM_BRIGHT_POWDER",
     "name": "Bright Powder",
     "pluralName": "Bright Powder",
     "price": null,
@@ -4121,7 +4121,7 @@
   },
   {
     "itemId": 461,
-    "id": "ITEM_EXP_ALL",
+    "id": "ITEM_EXP_SHARE",
     "name": "Exp. Share",
     "holdEffect": "HOLD_EFFECT_EXP_SHARE",
     "price": 3000,
@@ -4635,7 +4635,7 @@
   },
   {
     "itemId": 514,
-    "id": "FIRST_BERRY_MASTER_WIFE_BERRY",
+    "id": "ITEM_CHERI_BERRY",
     "name": "Cheri Berry",
     "pluralName": "Cheri Berries",
     "price": 0,
@@ -4736,7 +4736,7 @@
   },
   {
     "itemId": 523,
-    "id": "LAST_BERRY_MASTER_WIFE_BERRY",
+    "id": "ITEM_SITRUS_BERRY",
     "name": "Sitrus Berry",
     "pluralName": "Sitrus Berries",
     "price": 0,
@@ -4803,7 +4803,7 @@
   },
   {
     "itemId": 529,
-    "id": "FIRST_ROUTE_114_MAN_BERRY",
+    "id": "ITEM_RAZZ_BERRY",
     "name": "Razz Berry",
     "pluralName": "Razz Berries",
     "price": 0,
@@ -4839,7 +4839,7 @@
   },
   {
     "itemId": 533,
-    "id": "LAST_ROUTE_114_MAN_BERRY",
+    "id": "ITEM_PINAP_BERRY",
     "name": "Pinap Berry",
     "pluralName": "Pinap Berries",
     "price": 0,
@@ -4848,7 +4848,7 @@
   },
   {
     "itemId": 534,
-    "id": "FIRST_KIRI_BERRY",
+    "id": "ITEM_POMEG_BERRY",
     "name": "Pomeg Berry",
     "pluralName": "Pomeg Berries",
     "price": 0,
@@ -4935,7 +4935,7 @@
   },
   {
     "itemId": 543,
-    "id": "LAST_KIRI_BERRY",
+    "id": "ITEM_NOMEL_BERRY",
     "name": "Nomel Berry",
     "pluralName": "Nomel Berries",
     "price": 0,
@@ -5264,7 +5264,7 @@
   },
   {
     "itemId": 574,
-    "id": "LAST_BERRY_INDEX",
+    "id": "ITEM_ENIGMA_BERRY_E_READER",
     "name": "Enigma Berry",
     "pluralName": "Enigma Berries",
     "price": 0,
@@ -5335,7 +5335,7 @@
   },
   {
     "itemId": 581,
-    "id": "LAST_BERRY_INDEX",
+    "id": "ITEM_ENIGMA_BERRY_E_READER",
     "name": "Enigma Berry",
     "pluralName": "Enigma Berries",
     "price": 0,
@@ -7522,7 +7522,7 @@
   },
   {
     "itemId": 854,
-    "id": "ITEM_DOWSING_MCHN",
+    "id": "ITEM_DOWSING_MACHINE",
     "name": "Dowsing MCHN",
     "price": 0,
     "description": "A device that signals an invisible item by sound.",
@@ -7681,7 +7681,7 @@
   },
   {
     "itemId": 875,
-    "id": "ITEM_DEVON_GOODS",
+    "id": "ITEM_DEVON_PARTS",
     "name": "Devon Parts",
     "pluralName": "Devon Parts",
     "price": 0,
@@ -7731,7 +7731,7 @@
   },
   {
     "itemId": 881,
-    "id": "ITEM_RM_1_KEY",
+    "id": "ITEM_KEY_TO_ROOM_1",
     "name": "Key to Room 1",
     "pluralName": "Keys to Room 1",
     "price": 0,
@@ -7740,7 +7740,7 @@
   },
   {
     "itemId": 882,
-    "id": "ITEM_RM_2_KEY",
+    "id": "ITEM_KEY_TO_ROOM_2",
     "name": "Key to Room 2",
     "pluralName": "Keys to Room 2",
     "price": 0,
@@ -7749,7 +7749,7 @@
   },
   {
     "itemId": 883,
-    "id": "ITEM_RM_4_KEY",
+    "id": "ITEM_KEY_TO_ROOM_4",
     "name": "Key to Room 4",
     "pluralName": "Keys to Room 4",
     "price": 0,
@@ -7758,7 +7758,7 @@
   },
   {
     "itemId": 884,
-    "id": "ITEM_RM_6_KEY",
+    "id": "ITEM_KEY_TO_ROOM_6",
     "name": "Key to Room 6",
     "pluralName": "Keys to Room 6",
     "price": 0,
@@ -7792,7 +7792,7 @@
   },
   {
     "itemId": 888,
-    "id": "ITEM_OAKS_PARCEL",
+    "id": "ITEM_PARCEL",
     "name": "Parcel",
     "price": 0,
     "description": "A parcel for Prof. Oak from a Pokémon Mart's clerk.",

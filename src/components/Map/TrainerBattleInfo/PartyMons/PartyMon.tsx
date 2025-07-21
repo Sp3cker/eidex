@@ -1,12 +1,13 @@
-import { memo, useMemo } from "react";
+import { lazy, memo, Suspense, useMemo } from "react";
 import type { TrainerPartyMon } from "@/data/map/trainers";
 import { pokemonDataMap } from "@/data/pokemon";
 import SmallTypeBadge from "@/components/ui/SmallTypeBadge";
 import { getPokemonMoveIdsAtLevel, getMoveDetails } from "@/utils/movesByLevel";
 
-import PartyMonItemAbility from "./PartyMonItemAbility";
+const PartyMonsStats = lazy(() => import("./PartyMonsStats"));
+const PartyMonItemAbility = lazy(() => import("./PartyMonItemAbility"));
 import { getTypeCSSColors, getTypeNamesArr } from "@/utils/typeInfo";
-import PartyMonsStats from "./PartyMonsStats";
+import LoadingSpinner from "@/components/ui/LoadingSpinner";
 
 interface PartyMonProps {
   pokemon: TrainerPartyMon;
@@ -45,7 +46,7 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
   const hasIvs = pokemon.iv !== undefined;
 
   const pokemonInfo = pokemonFormattedData(pokemon.id);
-
+  const abilities = pokemon.ability || pokemonInfo.abilities;
   const speciesName = pokemonInfo?.nameKey || "Unknown";
 
   const moves = useMemo(
@@ -89,21 +90,37 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
           />
         </div>
       </div>
-      <PartyMonItemAbility heldItem={pokemon.item} ability={pokemon.ability} />
+      <Suspense
+        fallback={
+          <div className="h-10">
+            <LoadingSpinner />
+          </div>
+        }
+      >
+        <PartyMonItemAbility heldItem={pokemon.item} ability={abilities} />
+      </Suspense>
       {/** Ability - Item - Nature */}
       <div className="max-w-120 flex flex-row items-center gap-x-1 pt-1 text-neutral-800 md:justify-evenly">
-        <PartyMonsStats
-          level={level}
-          id={pokemon.id}
-          hasIvs={hasIvs}
-          evs={evs}
-          nature={nature}
-        />
+        <Suspense
+          fallback={
+            <div className="h-10">
+              <LoadingSpinner />
+            </div>
+          }
+        >
+          <PartyMonsStats
+            level={level}
+            id={pokemon.id}
+            hasIvs={hasIvs}
+            evs={evs}
+            nature={nature}
+          />
+        </Suspense>
       </div>
 
       <div className="flex items-center space-x-1 md:px-3">
         <div className="mt-2 flex flex-col space-y-0">
-          <p className="px-2 text-center font-bold leading-tight ring-1 ring-emerald-200 text-emerald-800">
+          <p className="px-2 text-center font-bold leading-tight text-emerald-800 ring-1 ring-emerald-200">
             I'm verifying trainer movesets! They're mostly accurate!
           </p>
 

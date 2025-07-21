@@ -25,7 +25,15 @@ export type Item = {
 };
 
 export const Items = new Map<string, Item>(
-  items.filter((item) => item.id).map((item) => [item.id!, item]) as [string, Item][],
+  items
+    .filter((item) => item.id)
+    .map((item, index, arr) => {
+      if (item.id === "ITEM_EXP_ALL") {
+        arr[index].id = "ITEM_EXP_SHARE";
+      }
+      return item;
+    })
+    .map((item) => [item.id!, item]) as [string, Item][],
 );
 
 export function ByItemId(id: string): string | undefined {
@@ -135,6 +143,7 @@ function processLevelsInfo(): Record<string, Level[]> {
                 if (itemDetails) {
                   return { ...itemDetails, amount: item.quantity };
                 }
+                console.info("Item not found:", item.name);
                 return null;
               })
               .filter((i): i is ItemWithAmount => i !== null);

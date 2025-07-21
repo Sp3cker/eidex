@@ -29,15 +29,22 @@ const AbilityDesc = ({ ability }: { ability: number[] }) => {
   if (abilityNames.length === 0) {
     return <div className="text-red-500">Unknown Ability \(${ability})</div>;
   }
-  return abilityNames.map((a) =>
-    a ? (
-      <div key={a?.name} className="absolute left-1 h-8 w-max">
-        <h4 className="font-calamity text-xs/6 font-bold">{a.name}</h4>
-        <p className="text-sm/1 md:text-base/2 whitespace-nowrap">
-          {a.description}
-        </p>
-      </div>
-    ) : null,
+  return (
+    <div className="absolute left-1 h-8 w-max flex flex-row items-start justify-center gap-x-2 rounded bg-blue-50 px-2 pt- ">
+      {abilityNames.length > 1 && (
+        <p className="mt-auto text-stone-800 font-calamity text-xs/6">One of:</p>
+      )}
+      {abilityNames.map((a) =>
+        a ? (
+          <div key={a?.name} className="">
+            <h4 className="font-calamity text-xs/6 font-bold">{a.name}</h4>
+            <p className="text-sm/1 md:text-base/2 whitespace-nowrap">
+              {a.description}
+            </p>
+          </div>
+        ) : null,
+      )}
+    </div>
   );
 };
 
