@@ -21,9 +21,9 @@ export default function StatBars({ stats }: StatBarsProps) {
     { label: "HP", stat: stats[0] },
     { label: "ATK", stat: stats[1] },
     { label: "DEF", stat: stats[2] },
-    { label: "SPA", stat: stats[4] },
-    { label: "SPD", stat: stats[5] },
-    { label: "SPE", stat: stats[3] },
+    { label: "SPA", stat: stats[3] },
+    { label: "SPD", stat: stats[4] },
+    { label: "SPE", stat: stats[5] },
   ];
   const highestStat = Math.max(...reorderedStats.map((x) => x.stat), 150);
   const bstValue = reorderedStats.reduce((sum, stat) => sum + stat.stat, 0);
