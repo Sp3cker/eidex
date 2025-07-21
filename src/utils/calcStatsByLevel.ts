@@ -78,7 +78,7 @@ export function calculateStatsOld(
 ): [number[], number, number] | null {
   const species = pokemonDataMap.get(`${speciesId}`);
   if (!species) return null;
-  debugger
+
   const scaledLevel = level;
   const ivValue = iv ? 31 : 0;
 
