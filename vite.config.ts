@@ -95,11 +95,7 @@ export default defineConfig({
         manualChunks: {
           // Vendor chunks - separate large libraries
           "react-vendor": ["react", "react-dom"],
-          "ui-vendor": [
-            "@headlessui/react",
-            "@radix-ui/react-slider",
-            "@radix-ui/react-tooltip",
-          ],
+          "ui-vendor": ["@headlessui/react"],
           "animation-vendor": ["react-spring", "@use-gesture/react"],
           "utility-vendor": ["zustand", "wouter", "clsx", "tailwind-merge"],
           "math-vendor": ["chroma-js"],
