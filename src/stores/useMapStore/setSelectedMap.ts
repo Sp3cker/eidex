@@ -38,18 +38,23 @@ const putIdOnEncounter: (
 ) => asserts enc is EncounterMons[] = (enc, monsNameKeys) => {
   enc.forEach((specie, index) => {
     let specieIndex = monsNameKeys.get(specie.species);
-    if (specie.species === "darmanitan_galar") {
-      // Special case for darmanitan_galar, which is stored as darmanitan in encounters.json
-      specieIndex = 990; // darmanitan_galar is 990 in pokemon.json
+    // Handle special cases with a lookup object instead of multiple if statements
+    const specialCaseIds: Record<string, number> = {
+      darmanitan_galar: 990,
+      mr_mime_galar: 981,
+      mr_mime: 122,
+      mr_rime: 866,
+      mime_jr: 439,
+    };
+
+    // Check for special case first
+    specieIndex = specialCaseIds[specie.species];
+    if (specieIndex === undefined) {
+      // Try standard lookup if not a special cas
+      // Keep this because some mons NEED _ in their name
+      specieIndex = monsNameKeys.get(specie.species);
     }
-    if (specie.species === 'mr_mime_galar'){
-      specieIndex = 981
-    }
-    
-    if (specie.species === 'mr_mime'){
-      specieIndex = 122
-    }
-    
+
     if (specieIndex === undefined) {
       // "iron_valiant" from encounters file -> iron valiant in nameKeys
       specieIndex = monsNameKeys.get(
@@ -70,6 +75,7 @@ const putIdOnEncounter: (
             "Error: %s not found in encounters.json or speciesData.json",
             specie.species,
           );
+          enc[index].index = 0;
           return;
         }
         // We found them, now to use their Baseform if its there

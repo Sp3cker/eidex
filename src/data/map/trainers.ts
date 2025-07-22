@@ -85,19 +85,8 @@ export const getCachedTrainersForMap = (mapId: string): Trainer[] => {
   }
   return trainersData[mapId] || [];
 };
-// Check if trainers data is already loaded (for UI state)
-export const isTrainersDataLoaded = (): boolean => {
-  return trainersData !== null;
-};
 
 // Get all cached data without loading (returns null if not loaded)
 export const getCachedTrainersData = (): Record<string, Trainer[]> | null => {
   return trainersData;
-};
-
-// Reset the cache (for development/testing)
-export const resetTrainersCache = (): void => {
-  trainersData = null;
-  isLoading = false;
-  loadPromise = null;
 };

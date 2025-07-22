@@ -10,7 +10,7 @@ import {
   levelIdToLocationMap,
 } from "./levelIdtoLocationMap";
 import { encounterStore } from "@/data/map/encounters";
-import { urlManager } from "./urlManager";
+import { urlManager } from "@/lib/urlManager";
 
 initializeLevelIdLookup();
 
