@@ -1222,6 +1222,14 @@
       "pickupItems": [
         {
           "coords": [
+            8,
+            3
+          ],
+          "item": "ITEM_TM_TEMPER_FLARE",
+          "type": "object_event"
+        },
+        {
+          "coords": [
             7,
             32
           ],
@@ -1571,6 +1579,14 @@
         },
         {
           "coords": [
+            18,
+            2
+          ],
+          "item": "ITEM_TM_PSYCHIC_NOISE",
+          "type": "object_event"
+        },
+        {
+          "coords": [
             28,
             6
           ],
@@ -1705,6 +1721,14 @@
       "levelLabel": "",
       "shopItems": [],
       "pickupItems": [
+        {
+          "coords": [
+            23,
+            24
+          ],
+          "item": "ITEM_TM_EARTH_POWER",
+          "type": "object_event"
+        },
         {
           "coords": [
             8,
@@ -2051,6 +2075,28 @@
           "pokemon": [],
           "explanation": "Defeat Dawn",
           "scriptName": "LilycoveCity_EventScript_DawnDefeated::"
+        },
+        {
+          "items": [
+            {
+              "name": "ITEM_POKEBLOCK_CASE",
+              "quantity": 1
+            }
+          ],
+          "pokemon": [],
+          "explanation": "Speak to receptionist in Contest Hall",
+          "scriptName": "LilycoveCity_ContestLobby_EventScript_GivePokeblockCase::"
+        },
+        {
+          "items": [
+            {
+              "name": "ITEM_LUXURY_BALL",
+              "quantity": 1
+            }
+          ],
+          "pokemon": [],
+          "explanation": "Won as a prize at the Contest Hall",
+          "scriptName": "LilycoveCity_ContestLobby_EventScript_GiveLuxuryBallAtCounter::"
         }
       ],
       "image": "LilycoveCity",
@@ -3075,6 +3121,14 @@
       "pickupItems": [
         {
           "coords": [
+            3,
+            39
+          ],
+          "item": "ITEM_TM_IRON_TAIL",
+          "type": "object_event"
+        },
+        {
+          "coords": [
             2,
             14
           ],
@@ -3173,6 +3227,14 @@
             15
           ],
           "item": "ITEM_MEWTWONITE_Y",
+          "type": "object_event"
+        },
+        {
+          "coords": [
+            14,
+            21
+          ],
+          "item": "ITEM_TM_DARK_HOLE",
           "type": "object_event"
         }
       ],
@@ -3862,6 +3924,14 @@
         },
         {
           "coords": [
+            19,
+            40
+          ],
+          "item": "ITEM_TM_SLUDGE_WAVE",
+          "type": "object_event"
+        },
+        {
+          "coords": [
             9,
             8
           ],
@@ -4321,10 +4391,26 @@
       "pickupItems": [
         {
           "coords": [
+            32,
+            25
+          ],
+          "item": "ITEM_TM_SUPERPOWER",
+          "type": "object_event"
+        },
+        {
+          "coords": [
             16,
             22
           ],
           "item": "ITEM_ESCAPE_ROPE",
+          "type": "object_event"
+        },
+        {
+          "coords": [
+            39,
+            4
+          ],
+          "item": "ITEM_TM_WILD_CHARGE",
           "type": "object_event"
         },
         {
@@ -4881,6 +4967,14 @@
       "pickupItems": [
         {
           "coords": [
+            50,
+            5
+          ],
+          "item": "ITEM_TM_BULLET_SEED",
+          "type": "object_event"
+        },
+        {
+          "coords": [
             64,
             7
           ],
@@ -4990,6 +5084,14 @@
             53
           ],
           "item": "ITEM_POKE_BALL",
+          "type": "object_event"
+        },
+        {
+          "coords": [
+            37,
+            22
+          ],
+          "item": "ITEM_TM_STOMPING_TANTRUM",
           "type": "object_event"
         },
         {
@@ -5786,6 +5888,14 @@
         },
         {
           "coords": [
+            6,
+            38
+          ],
+          "item": "ITEM_TM_VACUUM_WAVE",
+          "type": "object_event"
+        },
+        {
+          "coords": [
             35,
             39
           ],
@@ -6527,6 +6637,22 @@
       "pickupItems": [
         {
           "coords": [
+            33,
+            104
+          ],
+          "item": "ITEM_HM_SURF",
+          "type": "object_event"
+        },
+        {
+          "coords": [
+            12,
+            54
+          ],
+          "item": "ITEM_TM_SANDSTORM",
+          "type": "object_event"
+        },
+        {
+          "coords": [
             3,
             114
           ],
@@ -6639,6 +6765,17 @@
           ],
           "explanation": "Defeat Black Belt Diasuke",
           "scriptName": "Route111_EventScript_DaisukeGiveTyrogue::"
+        },
+        {
+          "items": [
+            {
+              "name": "ITEM_TM_DEFOG",
+              "quantity": 1
+            }
+          ],
+          "pokemon": [],
+          "explanation": "Speak to NPC",
+          "scriptName": "Route111_EventScript_GiveSecretPower::"
         }
       ],
       "image": "Route111",
@@ -6987,6 +7124,14 @@
       "pickupItems": [
         {
           "coords": [
+            53,
+            7
+          ],
+          "item": "ITEM_TM_X_SCISSOR",
+          "type": "object_event"
+        },
+        {
+          "coords": [
             79,
             5
           ],
@@ -7122,6 +7267,14 @@
             29
           ],
           "item": "ITEM_RARE_CANDY",
+          "type": "object_event"
+        },
+        {
+          "coords": [
+            11,
+            37
+          ],
+          "item": "ITEM_TM_SNOWSCAPE",
           "type": "object_event"
         },
         {
@@ -7272,6 +7425,14 @@
             60
           ],
           "item": "ITEM_SUPER_POTION",
+          "type": "object_event"
+        },
+        {
+          "coords": [
+            18,
+            7
+          ],
+          "item": "ITEM_TM_PHANTOM_FORCE",
           "type": "object_event"
         },
         {
@@ -7719,6 +7880,14 @@
             7
           ],
           "item": "ITEM_HYPER_POTION",
+          "type": "object_event"
+        },
+        {
+          "coords": [
+            9,
+            7
+          ],
+          "item": "ITEM_TM_WATER_PULSE",
           "type": "object_event"
         },
         {
@@ -8210,6 +8379,14 @@
         },
         {
           "coords": [
+            25,
+            63
+          ],
+          "item": "ITEM_TM_PAIN_SPLIT",
+          "type": "object_event"
+        },
+        {
+          "coords": [
             9,
             1
           ],
@@ -8350,6 +8527,14 @@
             10
           ],
           "item": "ITEM_REVIVE",
+          "type": "object_event"
+        },
+        {
+          "coords": [
+            38,
+            13
+          ],
+          "item": "ITEM_TM_RAIN_DANCE",
           "type": "object_event"
         },
         {
@@ -8767,6 +8952,14 @@
             53
           ],
           "item": "ITEM_BLUE_SHARD",
+          "type": "object_event"
+        },
+        {
+          "coords": [
+            37,
+            12
+          ],
+          "item": "ITEM_TM_SUNNY_DAY",
           "type": "object_event"
         }
       ],
@@ -9832,6 +10025,14 @@
             1
           ],
           "item": "ITEM_POKE_BALL",
+          "type": "object_event"
+        },
+        {
+          "coords": [
+            30,
+            2
+          ],
+          "item": "ITEM_TM_ALLURING_VOICE",
           "type": "object_event"
         }
       ],
@@ -11760,6 +11961,14 @@
       "levelLabel": "B 2F",
       "shopItems": [],
       "pickupItems": [
+        {
+          "coords": [
+            13,
+            8
+          ],
+          "item": "ITEM_TM_SCALE_SHOT",
+          "type": "object_event"
+        },
         {
           "coords": [
             28,

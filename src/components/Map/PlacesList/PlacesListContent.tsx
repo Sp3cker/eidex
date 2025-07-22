@@ -23,28 +23,32 @@ const getAllMapIds = () => {
 
 const PlaceItem = memo(
   function PlaceItem({
-    place,
+    id,
+    label,
+    isSelected,
     onClick,
   }: {
-    place: Place;
+    id: string;
+    label: string;
+    isSelected: boolean;
     onClick: (id: string) => void;
   }) {
     return (
       <div
         role="button"
-        className={`white-box w-full cursor-pointer rounded-lg border p-3 text-left transition-colors ${
-          place.isCurrentLevel
+        className={`white-box w-full cursor-pointer rounded-lg border px-3 text-left transition-colors ${
+          isSelected
             ? "border-blue-200 bg-blue-50 text-blue-900"
             : "text-gray-700 hover:bg-gray-50"
         }`}
-        onClick={() => onClick(place.id)}
+        onClick={() => onClick(id)}
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             {/* Map icon */}
             <div
               className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold ${
-                place.isCurrentLevel
+                isSelected
                   ? "bg-blue-100 text-blue-600"
                   : "bg-gray-100 text-gray-500"
               }`}
@@ -72,12 +76,12 @@ const PlaceItem = memo(
 
             {/* Place name */}
             <div>
-              <h3 className="text-lg font-bold leading-tight">{place.label}</h3>
+              <h3 className="text-lg font-bold leading-tight">{label}</h3>
             </div>
           </div>
 
           {/* Selected indicator */}
-          {place.isCurrentLevel && (
+          {isSelected && (
             <div className="text-blue-500">
               <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -92,9 +96,7 @@ const PlaceItem = memo(
       </div>
     );
   },
-  (prev, next) =>
-    prev.place.id === next.place.id &&
-    prev.place.isCurrentLevel !== next.place.isCurrentLevel,
+  (prev, next) => prev.id === next.id && prev.isSelected !== next.isSelected,
 );
 
 const PlacesListContent = ({
@@ -105,7 +107,7 @@ const PlacesListContent = ({
   handlePlaceClick: (mapId: string) => void;
 }) => {
   const { sortMode } = usePlacesListSortStore();
-  
+
   const places: Place[] = useMemo(() => {
     return getAllMapIds().map((mapId: string) => ({
       id: mapId,
@@ -124,13 +126,19 @@ const PlacesListContent = ({
 
   return sortMode === "alphabetical"
     ? (sortedPlaces as Place[]).map((place) => (
-        <PlaceItem key={place.id} place={place} onClick={handlePlaceClick} />
+        <PlaceItem
+          key={place.id}
+          id={place.id}
+          label={place.label}
+          isSelected={selectedMap === place.id}
+          onClick={handlePlaceClick}
+        />
       ))
     : (sortedPlaces as ReturnType<typeof groupPlacesByType>).map((group) => (
         <div key={group.type} className="mb-6">
-          <div className="sticky top-0 z-10 mb-3 flex items-center gap-2 rounded-lg border border-gray-200/50 bg-linear-to-r from-emerald-50 to-white px-3 py-2 backdrop-blur-sm">
+          <div className="bg-linear-to-r sticky top-0 z-10 mb-3 flex items-center gap-2 rounded-lg border border-gray-200/50 from-blue-50 to-white px-3 py-1">
             <span className="text-lg">{group.icon}</span>
-            <h4 className="font-calamity text-sm font-bold  tracking-wide text-gray-700">
+            <h4 className="font-calamity text-sm font-bold tracking-wide text-gray-700">
               {group.label}
             </h4>
             <span className="ml-auto rounded-full bg-gray-100 px-2 py-1 text-xs font-medium text-gray-500">
@@ -141,10 +149,9 @@ const PlacesListContent = ({
             {group.places.map((place) => (
               <PlaceItem
                 key={place.id}
-                place={{
-                  ...place,
-                  isCurrentLevel: selectedMap === place.id,
-                }}
+                id={place.id}
+                label={place.label}
+                isSelected={selectedMap === place.id}
                 onClick={handlePlaceClick}
               />
             ))}
