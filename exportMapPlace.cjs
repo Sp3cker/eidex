@@ -58,6 +58,16 @@ function parseElement($, el) {
       attrs["id"] = attrs["xlinkHref"] + attrs["x"] + attrs["y"];
     }
   }
+  
+  // Apply coordinate adjustment to match the expected coordinate system
+  // Only apply to specific element types, not to 'use' elements with transforms
+  if (attrs.x !== undefined && !(tagName === "use" && attrs.transform)) {
+    attrs.x = attrs.x + 70.481;
+  }
+  if (attrs.y !== undefined && !(tagName === "use" && attrs.transform)) {
+    attrs.y = attrs.y + 31.876;
+  }
+  
   const element = { type: tagName, ...attrs };
   const children = $(el)
     .children()
@@ -112,15 +122,60 @@ function main() {
    */
   const idedElements = elements.filter((e) => {
     if (e.id !== undefined) {
-      return e;
+      // Skip use elements that have transform matrices with negative translation
+      if (e.type === 'use' && e.transform && e.transform.includes('matrix') && e.transform.includes('-')) {
+        return false;
+      }
+      return true;
     }
+    return false;
   });
-  const idedElementsIds = new Set(idedElements.map((e) => e.id));
-  // const uniqueIdedElements = idedElements.filter(e => {
-  //   if (idedElementsIds.has(e.id))
-  // })
+
+  // Remove exact duplicates by creating a global Map
+  const seenElements = new Set();
+
+  function deduplicateElements(elements) {
+    const result = [];
+    
+    for (const element of elements) {
+      // Create a key based on type, id, and essential properties for deduplication
+      let dedupeKey;
+
+      if (element.type === "path" && element.id && element.d) {
+        // For path elements, use id and d attribute (path data) as the key
+        dedupeKey = `${element.type}_${element.id}_${element.d}`;
+      } else if (element.type === "rect" && element.id) {
+        // For rect elements, use id and position/size as key
+        dedupeKey = `${element.type}_${element.id}_${element.x}_${element.y}_${element.width}_${element.height}`;
+      } else if (element.type === "g" && element.id) {
+        // For group elements, just use type and id
+        dedupeKey = `${element.type}_${element.id}`;
+      } else if (element.id) {
+        // For other elements with id, use type, id and key properties
+        dedupeKey = `${element.type}_${element.id}_${JSON.stringify(element.style || {})}_${element.transform || ''}`;
+      } else {
+        // For elements without id, use full serialization
+        dedupeKey = JSON.stringify(element);
+      }
+
+      if (!seenElements.has(dedupeKey)) {
+        seenElements.add(dedupeKey);
+        
+        // If element has children, deduplicate them recursively
+        if (element.children && element.children.length > 0) {
+          element.children = deduplicateElements(element.children);
+        }
+        
+        result.push(element);
+      }
+    }
+    
+    return result;
+  }
+
+  const uniqueElements = deduplicateElements(idedElements);
   try {
-    fs.writeFileSync("mapsvgs.json", JSON.stringify(idedElements, null, 2));
+    fs.writeFileSync("mapsvgs.json", JSON.stringify(uniqueElements, null, 2));
     console.log("Successfully wrote output to output.json");
   } catch (err) {
     console.error(`Error writing output file: ${err.message}`);
