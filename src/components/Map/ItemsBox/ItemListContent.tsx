@@ -19,15 +19,14 @@ const ItemListRender = (showPrice: boolean) => (item: ItemWithAmount) => (
   </hgroup>
 );
 const renderIcon = (item: Item) => {
-  const spriteStyle = getItemSpriteStyle(item.id,24); // Changed from 64 to 32
+  const spriteStyle = getItemSpriteStyle(item.id, 24); // Changed from 64 to 32
 
   return spriteStyle ? (
-      <img
-        src="/spritesheet-items-16.webp"
-        className=" shrink-0"
-        style={spriteStyle}
-      />
-
+    <img
+      src="/spritesheet-items-16.webp"
+      className="shrink-0"
+      style={spriteStyle}
+    />
   ) : (
     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded bg-gray-200 text-xs text-gray-500">
       ?
