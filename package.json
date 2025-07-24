@@ -16,6 +16,7 @@
     "deploy": "gh-pages -d dist",
     "generate-spritesheet": "tsc scripts/generate-spritesheet.ts --outDir dist/scripts --target ES2022 --module ES2022 --moduleResolution bundler && node dist/scripts/generate-spritesheet.js",
     "generate-pokemon-spritesheet": "tsc scripts/generate-pokemon-spritesheet.ts --outDir dist/scripts --target ES2022 --module ES2022 --moduleResolution bundler && node dist/scripts/generate-pokemon-spritesheet.js",
+    "generate-mapsvgs": "tsc scripts/generate-map-svgs.ts --outDir dist/scripts --target ES2022 --module ES2022 --moduleResolution bundler && node dist/scripts/generate-map-svgs.js",
     "scan": "next dev & npx react-scan@latest localhost:3000"
   },
   "dependencies": {
@@ -24,6 +25,7 @@
     "@tailwindcss/vite": "^4.1.11",
     "@types/connect-history-api-fallback": "^1.5.4",
     "@use-gesture/react": "^10.3.1",
+    "@xmldom/xmldom": "^0.9.8",
     "chroma-js": "^3.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
