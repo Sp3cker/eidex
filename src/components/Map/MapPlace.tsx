@@ -13,7 +13,7 @@ const renderElement = (
   if (elem.type === "g") {
     return (
       <g
-        key={elem.id || `g-${Math.random()}`}
+        ke y={elem.id || `g-${Math.random()}`}
         id={elem.id}
         transform={elem.transform}
         className={`${isSelectedMap ? "selected-place" : "touch-none"} cursor-pointer stroke-1 transition-all md:stroke-0`}
@@ -42,7 +42,7 @@ const renderElement = (
         width={elem.width}
         height={elem.height}
         {...elem.style}
-        className={`${isSelectedMap ? "selected-place fill-emerald-800 stroke-amber-600" : "fill-yellow-900/10 hover:fill-yellow-300/50"} cursor-pointer border-yellow transition-colors`}
+        className={`${isSelectedMap ? "selected-place fill-emerald-800 stroke-amber-600" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow cursor-pointer transition-colors`}
         ref={ref}
       />
     );
@@ -51,10 +51,11 @@ const renderElement = (
   if (elem.type === "path") {
     return (
       <path
-        className={`${isSelectedMap ? "fill-emerald-600" : ""} transition-colors cursor-pointer `}
+        className={`${isSelectedMap ? "fill-emerald-600" : ""} cursor-pointer transition-colors`}
         key={elem.id}
         id={elem.id}
         d={elem.d}
+        style={elem.style}
         {...elem.style}
         ref={ref}
       />

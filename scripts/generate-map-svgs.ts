@@ -52,6 +52,7 @@ function canonicalId(id: string): string {
 
 function elementToShape(el: Element): JsonShape | undefined {
   const tag = el.tagName;
+  console.log(el)
   const id = el.getAttribute('id');
   if (!id) return undefined;
 

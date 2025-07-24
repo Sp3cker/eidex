@@ -61,12 +61,12 @@ function parseElement($, el) {
   
   // Apply coordinate adjustment to match the expected coordinate system
   // Only apply to specific element types, not to 'use' elements with transforms
-  if (attrs.x !== undefined && !(tagName === "use" && attrs.transform)) {
-    attrs.x = attrs.x + 70.481;
-  }
-  if (attrs.y !== undefined && !(tagName === "use" && attrs.transform)) {
-    attrs.y = attrs.y + 31.876;
-  }
+  // if (attrs.x !== undefined && !(tagName === "use" && attrs.transform)) {
+  //   attrs.x = attrs.x + 70.481;
+  // }
+  // if (attrs.y !== undefined && !(tagName === "use" && attrs.transform)) {
+  //   attrs.y = attrs.y + 31.876;
+  // }
   
   const element = { type: tagName, ...attrs };
   const children = $(el)
@@ -131,10 +131,23 @@ function main() {
     return false;
   });
 
+  // Find the element with id="DUNGEONS" and lift its children to the top level
+  const dungeonsElement = idedElements.find((e) => e.id === "DUNGEONS" && e.type === "g");
+  if (dungeonsElement && dungeonsElement.children) {
+    // Add the children of the DUNGEONS element to the top level
+    idedElements.push(...dungeonsElement.children);
+    // Remove the DUNGEONS element itself
+    const index = idedElements.indexOf(dungeonsElement);
+    if (index > -1) {
+      idedElements.splice(index, 1);
+    }
+  }
+
   // Remove exact duplicates by creating a global Map
   const seenElements = new Set();
 
   function deduplicateElements(elements) {
+
     const result = [];
     
     for (const element of elements) {

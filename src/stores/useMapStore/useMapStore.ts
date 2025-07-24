@@ -56,6 +56,7 @@ export const useMapStore = create<MapStore>()(
         set({ ...initialState });
       },
       setSelectedMap: (mapName: string) => {
+        console.log(mapName);
         const currentRoute = window.location.href;
         if (!currentRoute.includes(mapName)) {
           urlManager.requestURLUpdate(mapName, null);

@@ -38,7 +38,7 @@ const Map = () => {
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <Suspense>
           <MapPlaceInfo />
-        </Suspens>
+        </Suspense>
       </ErrorBoundary>
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <Suspense>
