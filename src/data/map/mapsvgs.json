@@ -1,15 +1,5 @@
 [
   {
-    "type": "use",
-    "xlink:href": "#_Image1",
-    "id": null,
-    "x": 0,
-    "y": 0,
-    "width": "1920px",
-    "height": "1080px",
-    "transform": "matrix(0.666667,0,0,0.666667,0,0)"
-  },
-  {
     "type": "g",
     "id": "MAP_ROUTE115",
     "children": [

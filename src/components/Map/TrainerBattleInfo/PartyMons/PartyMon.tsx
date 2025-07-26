@@ -61,8 +61,8 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
   const moveDetails = getMoveDetails(moves);
 
   return (
-    <div className="drop-shadow-lgflex flex-col gap-y-1 rounded-lg bg-neutral-50 drop-shadow-sm">
-      <div className="flex cursor-grab flex-row items-center justify-between gap-x-2 rounded bg-stone-100">
+    <div className="pl-1 flex flex-col gap-y-1 bg-neutral-50 drop-shadow-sm">
+      <section className="flex cursor-grab flex-row items-center justify-between gap-x-2 rounded bg-stone-100">
         <div className="flex items-center gap-x-2">
           <div className="md:h-13 md:w-13 relative ml-1 overflow-hidden drop-shadow-md">
             <img
@@ -70,18 +70,17 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
               src={`/icon/${pokemon.id}/icon.webp`}
             />
           </div>
-          <div className="pb-0 pt-2 md:pt-2">
-            <h4 className="font-calamity text-xs/2 mb-0 font-bold text-gray-800 md:text-base">
+          <hgroup className="pb-0 pt-2 md:pt-2">
+            <h4 className="font-calamity text-sm/2 mb-0 font-bold text-stone-800 sm:text-base">
               {speciesName}
             </h4>
 
-            <span className="sm:text-lg/1 pkmn-types text-nowrap text-gray-600">
-              Lv.{" "}
-              {levelIsLevelCap ? `Cap - ${(level - 200).toString()}` : level}{" "}
-              {nature ? `(${nature})` : ""}
-            </span>
-          </div>
-          <div></div>
+            <p className="pkmn-types text-nowrap text-stone-700 sm:mb-2 sm:text-xl/4">
+              {levelIsLevelCap
+                ? `Party Lv. - ${(level - 200).toString()}`
+                : `Lv. ${level} `}
+            </p>
+          </hgroup>
         </div>
         <div className="flex flex-row gap-x-2 pr-2">
           <SmallTypeBadge
@@ -89,7 +88,7 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
             className="md:min-w-15 w-13 h-5 whitespace-nowrap px-1 text-base/5 md:h-6 md:text-xl/6"
           />
         </div>
-      </div>
+      </section>
       <Suspense
         fallback={
           <div className="h-10">
@@ -118,15 +117,11 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
         </Suspense>
       </div>
 
-      <div className="flex items-center space-x-1 md:px-3">
-        <div className="mt-2 flex flex-col space-y-0">
-          <p className="px-2 text-center font-bold leading-tight text-emerald-800 ring-1 ring-emerald-200">
-            I'm verifying trainer movesets! They're mostly accurate!
-          </p>
 
+        <div className="mt-2 flex flex-col space-y-0">
           {moveDetails.map((m) => (
             <div key={m.name} title={m.id.toString()}>
-              <h3 className="font-calamity text-xs font-bold sm:text-sm/6">
+              <h3 className="font-calamity text-xs font-bold sm:text-sm/6 text-stone-800">
                 {m.name}
               </h3>
               <div className="flex min-h-[3rem] flex-row overflow-x-hidden">
@@ -146,7 +141,7 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
             </div>
           ))}
         </div>
-      </div>
+
     </div>
   );
 });

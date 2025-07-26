@@ -15,15 +15,15 @@ const CapSelector = memo(function CapSelector() {
     <div className="cap-selector-container">
       <label
         htmlFor="level-cap-select"
-        className="font-calamity mt-0 text-[0.6rem] text-gray-600 md:text-[0.75rem]"
+        className="font-calamity sm:mt-0.5 text-[0.6rem] text-gray-600 md:text-[0.75rem]"
       >
-        Level Cap: {"\u2006"}
+        Level Caps: {"\u2006"}
       </label>
       <select
         id="level-cap-select"
         value={currentCap}
         onChange={handleCapChange}
-        className="cursor-pointer rounded px-0 py-1 text-base ring-1 ring-stone-500 hover:border-slate-400 focus:border-slate-400 md:px-2 md:text-xl"
+        className="cursor-pointer font-bold rounded px-0 py-1 text-base ring-1 ring-stone-500 hover:border-slate-400 focus:border-slate-400 md:px-2 md:text-xl"
       >
         {caps.map((cap: number, index: number) => (
           <option key={index} value={cap}>

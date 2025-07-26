@@ -28,7 +28,7 @@ export const useMapStore = create<MapStore>()(
       selectedLevelWaterMons: undefined,
       selectedLevelFishingMons: undefined,
       selectedMapItems: null,
-      selectedMapTrainers: null,
+
       selectedImageName: null,
       viewingImage: false,
       selectedLevelId: null,
@@ -56,7 +56,6 @@ export const useMapStore = create<MapStore>()(
         set({ ...initialState });
       },
       setSelectedMap: (mapName: string) => {
-        console.log(mapName);
         const currentRoute = window.location.href;
         if (!currentRoute.includes(mapName)) {
           urlManager.requestURLUpdate(mapName, null);

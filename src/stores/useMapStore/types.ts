@@ -1,5 +1,5 @@
 import { ItemsByMap } from "@/utils/itemsData";
-import { Item, TrainerRef } from "@/data/map";
+import { Item } from "@/data/map";
 import { DisplayTrainer } from "@/data/map/trainers";
 // import { DisplayTrainer } from "@/components/Map/MapPlaceInfo/TrainersList/useTrainersData";
 
@@ -32,7 +32,6 @@ type MapStore = {
   selectedLevelWaterMons: EncounterMons[] | undefined;
   selectedLevelFishingMons: EncounterMons[] | undefined;
   selectedMapItems: ItemsByMap | null;
-  selectedMapTrainers: TrainerRef[] | null;
 
   selectedCoordinates: number[];
   storedCoordinates: Map<string, number[]>;
@@ -87,7 +86,7 @@ type MapStore = {
   setTrainersListOpen: (open: boolean) => void;
 
   setSelectedTrainer: (trainer: DisplayTrainer | null) => void;
-  
+
   // Animation coordination
   setAnimating: (animating: boolean) => void;
   getIsAnimating: () => boolean;

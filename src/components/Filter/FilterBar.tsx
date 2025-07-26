@@ -24,9 +24,6 @@ function FilterBar() {
             <li> Randomizer support</li>
             <li> All forms of Pokémon</li>
           </ul>
-          <p className="text-left">
-            I keep this version so I can play with these buttons :3
-          </p>
         </div>
       </div>
     </div>

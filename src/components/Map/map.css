@@ -355,3 +355,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
 }
+.half-scale {
+  transform: scale(0.85);
+  transform-origin: center;
+}

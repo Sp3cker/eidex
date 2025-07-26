@@ -31,7 +31,7 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
 
   return (
     <div
-      className={`font-calamity transition-colors ${isRainbowName ? "rainbow-bg" : ""} flex h-full flex-col rounded rounded-l-lg pt-2 md:p-3`}
+      className={`font-calamity transition-colors ${isRainbowName ? "rainbow-bg" : ""} flex h-full w-[118%] flex-col pt-2 md:p-3`}
     >
       <button
         onClick={handleClose}
@@ -39,7 +39,7 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
       >
         <p className="text-xl font-bold">↙</p>
       </button>
-      <div className="min-h-40 p-1 pl-2 md:p-3">
+      <div className="min-h-40  p-1 pl-2 md:p-3">
         <TrainerInfo
           aiFlags={trainer.aiFlags}
           trainerName={trainer.trainerName}

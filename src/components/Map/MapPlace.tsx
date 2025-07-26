@@ -13,7 +13,7 @@ const renderElement = (
   if (elem.type === "g") {
     return (
       <g
-        ke y={elem.id || `g-${Math.random()}`}
+        key={elem.id || `g-${Math.random()}`}
         id={elem.id}
         transform={elem.transform}
         className={`${isSelectedMap ? "selected-place" : "touch-none"} cursor-pointer stroke-1 transition-all md:stroke-0`}

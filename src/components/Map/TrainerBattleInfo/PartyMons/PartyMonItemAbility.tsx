@@ -33,11 +33,11 @@ const AbilityDesc = ({ ability }: { ability: number[] }) => {
     <div
       className={`absolute left-1 flex flex-col h-9 w-max rounded bg-blue-50 px-2`}
     >
-      {abilityNames.length > 1 && <p className="font-calamity text-xs/5 text-stone-800">Ability could be:</p>}
+      {abilityNames.length > 1 && <p className="font-pkmnem text-lg/5 text-stone-800">Ability could be:</p>}
       <div className="flex flex-row items-center justify-center gap-x-2 ">
       {abilityNames.map((a, i) =>
         a ? (
-          <div key={a?.name} className="">
+          <div key={a?.name} className="text-stone-700">
             <h4
               className={`${abilityNames.length > 1 ? "font-calamity text-xs font-bold" : "font-calamity text-xs/6 font-bold"}`}
             >

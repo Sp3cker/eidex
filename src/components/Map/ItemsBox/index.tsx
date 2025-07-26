@@ -19,7 +19,7 @@ const pages = [
     <animated.div
       key={"trainer-info"}
       style={style}
-      className="absolute bottom-0 left-0 right-0 top-0 overflow-y-auto p-0 sm:pb-10"
+      className="absolute bottom-0 left-0 right-0 top-0 origin-top-left p-0 sm:pb-10"
     >
       <Suspense>
         <FadeInWAAPI>
@@ -71,60 +71,57 @@ export default memo(function MapItemsBox() {
     {
       from: {
         translateY: HIDDEN_TRANSLATE,
-        width: "100%",
-        height: "50vh",
+        scaleX: 1,
+        scaleY: 1,
+        transformOrigin: "bottom left",
+        // width: "100%",
+        // height: "50vh",
       },
-      width: selectedTrainer ? "118%" : "100%",
-      height: selectedTrainer ? "75vh" : "50vh",
-      translateY: show ? (selectedTrainer ? -100 : 0) : HIDDEN_TRANSLATE,
+      // width: selectedTrainer ? "118%" : "100%",
+      // height: selectedTrainer ? "75vh" : "50vh",
+      scaleX: selectedTrainer ? 1.15 : 1,
+      scaleY: selectedTrainer ? 1.5 : 1,
+      translateY: show ? (selectedTrainer ? 0 : 0) : HIDDEN_TRANSLATE,
       opacity: selectedMap ? 1 : 0,
-      immediate: (key: string) => {
-        if (ANIMATE_HEIGHT && key === "height") return true;
-        return false;
-      },
 
       config: { mass: 1, tension: 220, damping: 0.2 },
     },
     [show, selectedMap, selectedTrainer],
   );
-
+  // Styles for the content.
   const shuffleTransition = useTransition(selectedTrainer, {
-    from: {
+    from: (trainer: any) => ({
       translateX: "-100%",
       opacity: 0,
-    },
-    // initial: {
-    //   translateX: "-100%",
-    //   opacity: 0,
-    // },
-    enter: {
+      scaleX: trainer ? 0.85 : 1,
+      scaleY: trainer ? 0.66 : 1,
+    }),
+    enter: (trainer: any) => ({
       translateX: "0%",
       opacity: 1,
-    },
+      scaleX: trainer ? 0.85 : 1,
+      scaleY: trainer ? 0.66 : 1,
+      // translateY: trainer ? "-30%" : 0,
+    }),
     leave: {
       translateX: "-100%",
       opacity: 0,
+      // scale: trainer ? 0.85 : 1,
     },
     config: {
       tension: 280,
       friction: 25,
       mass: 0.8,
     },
-    // onRest: () => {
-    //   if (trainerListOpen === false) {
-    //     useMapStore.getState().setSelectedTrainer(null);
-    //   }
-    // },
-    // onRest: handleResizeTrainerInfo,
   });
 
   return (
     <div className="dexnav-grid dexnav-z grid-rows-auto pointer-events-none relative grid grid-cols-1">
       <animated.nav
         style={springs}
-        className={`will-translate map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 overflow-x-hidden rounded-lg border border-gray-200 drop-shadow-xl md:row-start-10`}
+        className={`will-translate map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 h-[50vh] overflow-x-hidden rounded-lg border border-gray-200 drop-shadow-xl md:row-start-10`}
       >
-        <div className="flex overflow-hidden">
+        <div className={`flex overflow-hidden`}>
           {shuffleTransition((style, isOpen) =>
             pages[isOpen ? 0 : 1]({ style }),
           )}

@@ -12,14 +12,6 @@ const PartyMonsButtons = memo(
     selectedMon: number;
     setSelectedMon: (next: number) => void;
   }) {
-    // useEffect(() => {
-    //   if (selectedMon >= party.length) {
-    //     setSelectedMon((prevState) => [
-    //       selectedMon,
-    //       selectedMon > prevState[0] ? 1 : -1,
-    //     ]);
-    //   }
-    // }, [selectedMon, party.length, setSelectedMon]);
     if (party.length === 0) {
       return (
         <div className="flex-2 flex h-full w-full items-center justify-center">

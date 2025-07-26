@@ -62,10 +62,10 @@ type RawLevel = {
   baseMap: string;
   levelLabel: string;
   thisLevelsId: string;
-  scriptedGives: RawLevelScriptedEvent[];
-  shopItems: LevelMart[];
-  trainerRefs: TrainerRef[];
-  pickupItems: LevelPickupItem[];
+  scriptedGives?: RawLevelScriptedEvent[];
+  shopItems?: LevelMart[];
+  trainerRefs?: TrainerRef[];
+  pickupItems?: LevelPickupItem[];
   image: string;
 };
 
@@ -135,8 +135,18 @@ function processLevelsInfo(): Record<string, Level[]> {
   for (const mapName in rawLevels) {
     if (Object.prototype.hasOwnProperty.call(rawLevels, mapName)) {
       processed[mapName] = rawLevels[mapName].map((level: RawLevel) => {
-        const processedScriptedGives = level.scriptedGives.map(
-          (give: RawLevelScriptedEvent) => {
+        if (!level.scriptedGives)
+          return {
+            baseMap: level.baseMap,
+            thisLevelsId: level.thisLevelsId,
+            levelLabel: level.levelLabel,
+            scriptedGives: [],
+            shopItems: level.shopItems || [],
+            pickupItems: level.pickupItems || [],
+            image: level.image,
+          };
+        const processedScriptedGives: LevelScriptedEvent[] =
+          level.scriptedGives.map((give: RawLevelScriptedEvent) => {
             const itemsWithAmount = give.items
               .map((item: RawLevelScriptedItem) => {
                 const itemDetails = Items.get(item.name);
@@ -147,10 +157,20 @@ function processLevelsInfo(): Record<string, Level[]> {
                 return null;
               })
               .filter((i): i is ItemWithAmount => i !== null);
+            // This is where i'd dress up eggmons
             return { ...give, items: itemsWithAmount };
-          },
-        );
-        return { ...level, scriptedGives: processedScriptedGives };
+          });
+        return {
+          baseMap: level.baseMap,
+          thisLevelsId: level.thisLevelsId,
+          levelLabel: level.levelLabel,
+          scriptedGives: processedScriptedGives,
+          shopItems: level.shopItems || [],
+          pickupItems: level.pickupItems || [],
+          image: level.image,
+
+          // trainers: level.trainers || [],
+        } as Level;
       });
     }
   }
