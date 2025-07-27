@@ -29,8 +29,7 @@ const PartyMonsStats = memo(function PartyMonsStats({
   return (
     <table
       title="took me 2 hours to pick these colors lol"
-      className="max-w-120 w-full table-fixed border-separate
- text-neutral-800"
+      className="max-w-120 w-full table-fixed border-collapse border-0 text-neutral-800"
     >
       <thead className="font-calamity pkmn-types bg-slate-400">
         <tr className="font-calamity text-center text-[10px]/6 font-bold tracking-wide text-stone-50">
