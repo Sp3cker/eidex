@@ -28,29 +28,6 @@ const InfoToggleButtons = () => {
     [setTrainersListOpen],
   );
 
-  // const handleHover = useCallback(
-  //   (index: number | null) => {
-  //     if (index === selectedIndex) return;
-  //     // hover over selected, return
-  //     // on select, wiggle up 2/2
-  //     api.start((i) => {
-  //       if (i === index) {
-  //         // hover over not selected, wiggle up 1/2
-  //         return {
-  //           y: -0.2,
-  //           config: { tension: 300, mass: 2 },
-  //         };
-  //       } else {
-  //         // Reset to default for non-hovered items OR after cursor leaves hovered
-  //         return {
-  //           y: 0,
-  //           config: { tension: 300, mass: 2 },
-  //         };
-  //       }
-  //     });
-  //   },
-  //   [selectedIndex],
-  // );
   const [springs] = useSprings(
     labels.length,
     (i: number) => ({
@@ -59,54 +36,17 @@ const InfoToggleButtons = () => {
       scale: i === selectedIndex ? 1 : 0.99,
       config: config.stiff,
     }),
-    [trainersListOpen, selectedIndex],
+    [selectedIndex],
   );
-  // useEffect(() => {
-  // Initialize springs based on the selected index
-  // api.start((i) => {
-  //   if (i === selectedIndex) {
-  //     return {
-  //       backgroundColor: gray700,
-  //       y: 0.3,
-  //       config: { tension: 300, mass: 2 },
-  //     };
-  //   } else {
-  //     return {
-  //       filter: ""
-  //       y: 0,
-  //       config: { tension: 300, mass: 2 },
-  //     };
-  //   }
-  // });
-  // }, []);
-
-  // Update springs whenever selection/hover changes
-  // const updateSprings = useCallback(() => {
-  //   api.start((i) => {
-  //     const isSelected = i === selectedIndex;
-  //     const isHovered = i === hoveredIndex;
-  //     return {
-  //       backgroundColor: isSelected ? (isHovered ? gray700 : gray600) : gray500,
-  //       x: isSelected ? 0.4 : isHovered ? 0.2 : 0,
-  //       config: { tension: 300, mass: 2 },
-  //     };
-  //   });
-  // }, [api, selectedIndex, hoveredIndex]);
-
-  // updateSprings();
 
   const bind = useGesture({
-    // onHover: ({ active, args: [index] }) => {
-    //   // setHoveredIndex(active ? index : null);
-    //   handleHover(active ? index : null);
-    // },
     onClick: ({ args: [index] }) => {
       handleSelect(index);
     },
   });
 
   return (
-    <div className="pointer-events-auto font-pkmnem pkmnem-face-shadow flex flex-row gap-2 p-1">
+    <div className="font-pkmnem pkmnem-face-shadow pointer-events-auto flex flex-row gap-2 p-1">
       {/* Render animated buttons */}
       {springs.map((spring, idx) => (
         <animated.div
@@ -116,7 +56,7 @@ const InfoToggleButtons = () => {
           style={{
             transform: spring.y.to((x) => `translateY(${x}rem)`),
           }}
-          className={`cursor-pointer ${selectedIndex == idx ? "ring ring-1 bg-[#C03232]" : "bg-[#9A2828]"} rounded-sm  px-2 py-1 text-sm font-bold leading-none text-neutral-200 md:text-base`}
+          className={`cursor-pointer ${selectedIndex == idx ? "bg-[#C03232] ring ring-1" : "bg-[#9A2828]"} rounded-sm px-2 py-1 text-sm font-bold leading-none text-neutral-200 md:text-base`}
         >
           {labels[idx]}
         </animated.div>

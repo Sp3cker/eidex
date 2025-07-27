@@ -63,10 +63,6 @@ export default memo(function MapItemsBox() {
     shallow,
   );
 
-  //   const show = useMapStore((state) => {
-  //     return state.selectedMap !== null && state.dragging === false;
-  //   });
-  // const showTrainer = useDeferredValue(selectedTrainer);
   const [springs] = useSpring(
     {
       from: {
@@ -74,11 +70,7 @@ export default memo(function MapItemsBox() {
         scaleX: 1,
         scaleY: 1,
         transformOrigin: "bottom left",
-        // width: "100%",
-        // height: "50vh",
       },
-      // width: selectedTrainer ? "118%" : "100%",
-      // height: selectedTrainer ? "75vh" : "50vh",
       scaleX: selectedTrainer ? 1.15 : 1,
       scaleY: selectedTrainer ? 1.5 : 1,
       translateY: show ? (selectedTrainer ? 0 : 0) : HIDDEN_TRANSLATE,
@@ -88,25 +80,22 @@ export default memo(function MapItemsBox() {
     },
     [show, selectedMap, selectedTrainer],
   );
-  // Styles for the content.
   const shuffleTransition = useTransition(selectedTrainer, {
     from: (trainer: any) => ({
       translateX: "-100%",
       opacity: 0,
-      scaleX: trainer ? 0.85 : 1,
-      scaleY: trainer ? 0.66 : 1,
+      scaleX: trainer ? 1 / 1.15 : 1,
+      scaleY: trainer ? 1 / 1.5 : 1,
     }),
     enter: (trainer: any) => ({
       translateX: "0%",
       opacity: 1,
-      scaleX: trainer ? 0.85 : 1,
-      scaleY: trainer ? 0.66 : 1,
-      // translateY: trainer ? "-30%" : 0,
+      scaleX: trainer ? 1 / 1.15 : 1,
+      scaleY: trainer ? 1 / 1.5 : 1,
     }),
     leave: {
       translateX: "-100%",
       opacity: 0,
-      // scale: trainer ? 0.85 : 1,
     },
     config: {
       tension: 280,
