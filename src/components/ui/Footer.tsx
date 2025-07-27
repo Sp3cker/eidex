@@ -13,7 +13,7 @@ const Footer = memo(function Footer() {
         }
         .footer-bg-bgtext {
           position: absolute;
-          top: -5px;
+          top: -6px;
           left: 0;
           width: 100%;
           
@@ -31,7 +31,7 @@ const Footer = memo(function Footer() {
         }
         .footer-bg-bgtext-1 {
           position: absolute;
-          top: -10px;
+          top: -13px;
           left: 0;
           width: 100%;
           line-height: 0.69;
@@ -39,7 +39,7 @@ const Footer = memo(function Footer() {
           font-family: 'NBit', sans-serif;
           font-size: 1.2rem;
           color: var(--color-neutral-100);
-          opacity: 0.06;
+          opacity: 0.05;
           // white-space: nowrap;
           z-index: 0;
           pointer-events: none;
@@ -56,25 +56,28 @@ const Footer = memo(function Footer() {
         className="footer-bg-text fade-in-footer fixed bottom-0 left-0 right-0 z-10 flex w-full items-center justify-between bg-gray-700 px-2 ring md:relative md:bottom-auto"
       >
         <div className="footer-bg-bgtext-1 leading-none">
-          {"  "} LFG 1.3 LFG 1.3 LFG GIVE blaziken speed boost back cmon 1.3 LFG
+          {"  "} LFG 1.3 LFG 1.3 LFG1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
+          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LF G 1.3 LFG 1.3 LFG i heard u
+          can fuck May in 1.4 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
           1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LF G  1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
+          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 GOATDINOLFG 1.3 LFG
           1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG  1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 GOATDINOLFG
-          1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG  1.3   LFG 1.3 LFG 1.  3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LFG 1. 3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG  1.3 LF G 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LFG  1.3 LFG 1.3 LFG 1.3 LF G 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3  LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LFG 1.3 LFG 1.3 LF G 1.3 LF G 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          1.3 LFG 1.  3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
+          LFG 1.3 LFG 1.3 LFG 1. 3 LFG 1.3 LFG GIVE blaziken speed boost back
+          cmon1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1. 3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
+          1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LF G 1.3
+          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LF G 1. 1.3 LFG 1.3 LFG 1.3 LFG 1.3 1.3 LFG 1.3 LFG 1.3 LF G
+          1.3 LF G 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
+          LFG 1.3 LFG 1.3 LFG I HEARD
+          U CAN FUCK DAWN in 1.4 BUT I DONT KNOW I MEAN THATS JUST WHAT THEY'RE
+          TALKING ABOUT I MEAN I THINK ITS DISGUSTING BUT I MEAN I THINK ITD BE
+          SORTA COOL YA KNOW IDK LIKE IN A ART-NEUVO WAY OR MAYBE HES MAKING IT A VISUAL NOVEL OR SOMETHING
+           LFG 1.3 LFG1.3 LFG 1.3 LFG 1.3 LFG 1.3 1.3 LFG 1. 3 LFG 1.3
           LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
           1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
           LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 GOATDINOLFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
+          1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
+          LFG 1.3 LFG 1.3 LFG 1.3 GOATDINOLFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
+          1.3 LFG 1.3 LFjk FUCK BLAZIKEN
         </div>
         {/* ...existing code... */}
         <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">
@@ -100,7 +103,7 @@ const Footer = memo(function Footer() {
         <div className="flex flex-col sm:w-80">
           <HiddenFileDrop />
           <p className="font-pkmnem leading-xs text-sm/3 text-white">
-            Fu*ckiiin 1.3 FRIDAY!!! LETS F*UCKINNN OGGOOOOO! ! ! ! ! ! ! ! ! ! 
+            1.3 FRIDAY!!! LETS F*UCKINNN OGGOOOOO! ! ! ! ! ! ! ! ! !
           </p>
         </div>
         <div className="flex items-center justify-end gap-5">
