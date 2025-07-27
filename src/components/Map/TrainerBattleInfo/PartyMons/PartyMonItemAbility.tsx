@@ -31,24 +31,30 @@ const AbilityDesc = ({ ability }: { ability: number[] }) => {
   }
   return (
     <div
-      className={`absolute left-1 flex flex-col h-9 w-max rounded bg-blue-50 px-2`}
+      className={`absolute left-1 flex h-9 w-max flex-col rounded bg-blue-50 px-2`}
     >
-      {abilityNames.length > 1 && <p className="font-pkmnem text-lg/5 text-stone-800">Ability could be:</p>}
-      <div className="flex flex-row items-center justify-center gap-x-2 ">
-      {abilityNames.map((a, i) =>
-        a ? (
-          <div key={a?.name} className="text-stone-700">
-            <h4
-              className={`${abilityNames.length > 1 ? "font-calamity text-xs font-bold" : "font-calamity text-xs/6 font-bold"}`}
-            >
-              {a.name}
-            </h4>
-            <p className={`text-sm/1 md:text-base/2 whitespace-nowrap ${i === 2 ? "text-fuchsia-600" : "text-gray-800"}`}>
-              {abilityNames.length === 1 && a.description}
-            </p>
-          </div>
-        ) : null,
+      {abilityNames.length > 1 && (
+        <p className="font-pkmnem text-lg/5 text-stone-800">
+          Ability could be:
+        </p>
       )}
+      <div className="flex flex-row items-center justify-center gap-x-2">
+        {abilityNames.map((a, i) =>
+          a ? (
+            <div key={a?.name} className="font-calamity  text-stone-700">
+              <h4
+                className={`${abilityNames.length > 1 ? "text-xs font-bold" : "text-xs/6 mt-0.5 font-bold sm:text-sm/6"}`}
+              >
+                {a.name}
+              </h4>
+              <p
+                className={`font-pkmnem text-sm/1 md:text-base/2 whitespace-nowrap ${i === 2 ? "text-fuchsia-600" : "text-gray-800"}`}
+              >
+                {abilityNames.length === 1 && a.description}
+              </p>
+            </div>
+          ) : null,
+        )}
       </div>
     </div>
   );

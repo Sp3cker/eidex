@@ -8,7 +8,6 @@ type StatsProps = {
   evs: number[];
   nature: string;
 };
-const StatLevels = ["HP", "Atk", "Def", "SpA", "SpD", "Spd"] as const;
 
 const PartyMonsStats = memo(function PartyMonsStats({
   id,
@@ -27,20 +26,58 @@ const PartyMonsStats = memo(function PartyMonsStats({
   if (!stats || stats[0] === undefined) {
     return null;
   }
-
-  return stats[0].map((stat, index) => (
-    <div
-      key={index}
-      className={`${index > 0 && stats[1] === index ? "border-1 border-green-500 bg-green-500/15" : stats[2] === index ? "border-1 border-red-500 bg-red-500/15" : "border-1 border-gray-400 bg-stone-100"} md:w-15 flex w-10 flex-col items-center justify-evenly rounded-md p-1`}
+  return (
+    <table
+      title="took me 2 hours to pick these colors lol"
+      className="max-w-120 w-full table-fixed border-separate
+ text-neutral-800"
     >
-      <p className="font-calamity text-[8px]/3 font-bold text-neutral-600">
-        {StatLevels[index]}
-      </p>
-      <p className="pkmn-types font-calamity text-xs/4 tracking-tight">
-        {stat}
-      </p>
-    </div>
-  ));
+      <thead className="font-calamity pkmn-types bg-slate-400">
+        <tr className="font-calamity text-center text-[10px]/6 font-bold tracking-wide text-stone-50">
+          <th className="w-1/6 rounded-tl-sm pl-2">HP</th>
+          <th className="w-1/6">Attack</th>
+          <th className="w-1/6">Def</th>
+          <th className="w-1/6">Sp.A</th>
+          <th className="w-1/6">Sp.Def</th>
+          <th className="w-1/6 rounded-tr-sm">Speed</th>
+        </tr>
+      </thead>
+      <tbody className="font-pkmnem bg-slate-600 text-center text-lg/6 font-bold tracking-wide sm:text-xl">
+        <tr>
+          <td
+            className={`pl-1 rounded-bl-sm ${stats[1] === 0 ? "text-blue-300" : stats[2] === 0 ? "text-red-300" : "text-stone-200"}`}
+          >
+            {stats[0][0]} {stats[1] === 0 ? "↑" : stats[2] === 0 ? "↓" : ""}
+          </td>
+          <td
+            className={`${stats[1] === 1 ? "text-blue-300" : stats[2] === 1 ? "text-red-300" : "text-stone-200"}`}
+          >
+            {stats[0][1]} {stats[1] === 1 ? "↑" : stats[2] === 1 ? "↓" : ""}
+          </td>
+          <td
+            className={`${stats[1] === 2 ? "text-blue-300" : stats[2] === 2 ? "text-red-300" : "text-stone-200"}`}
+          >
+            {stats[0][2]} {stats[1] === 2 ? "↑" : stats[2] === 2 ? "↓" : ""}
+          </td>
+          <td
+            className={`${stats[1] === 3 ? "text-blue-300" : stats[2] === 3 ? "text-red-300" : "text-stone-200"}`}
+          >
+            {stats[0][3]} {stats[1] === 3 ? "↑" : stats[2] === 3 ? "↓" : ""}
+          </td>
+          <td
+            className={`${stats[1] === 4 ? "text-blue-300" : stats[2] === 4 ? "text-red-300" : "text-stone-200"}`}
+          >
+            {stats[0][4]} {stats[1] === 4 ? "↑" : stats[2] === 4 ? "↓" : ""}
+          </td>
+          <td
+            className={`rounded-br-sm ${stats[1] === 5 ? "text-blue-300" : stats[2] === 5 ? "text-red-300" : "text-stone-200"}`}
+          >
+            {stats[0][5]} {stats[1] === 5 ? "↑" : stats[2] === 5 ? "↓" : ""}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  );
 });
 
 export default PartyMonsStats;

@@ -26,7 +26,7 @@ const PartyMonsButtons = memo(
         {party.map((mon, index) => (
           <button
             key={index}
-            className={`party-mon-button inset-shadow-xl hover:bg-mon-select cursor-pointer rounded rounded-sm ring-1 ${selectedMon === index ? "bg-mon-select ring-cyan-500" : "bg-stone-200 ring-stone-800"}`}
+            className={` hover:bg-mon-select cursor-pointer rounded rounded-sm ring-1 ${selectedMon === index ? "bg-party-mon-selected" : "bg-party-mon "}`}
             onClick={() => setSelectedMon(index)}
           >
             <div className="relative h-8 w-8 overflow-hidden md:h-10 md:w-10">

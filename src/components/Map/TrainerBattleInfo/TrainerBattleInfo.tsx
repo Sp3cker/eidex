@@ -31,7 +31,7 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
 
   return (
     <div
-      className={`font-calamity transition-colors ${isRainbowName ? "rainbow-bg" : ""} h-full w-[110%] pt-2 sm:w-[115%] md:p-3`}
+      className={`font-calamity transition-colors ${isRainbowName ? "rainbow-bg" : ""} h-full w-[115%] pt-2 sm:w-[115%] md:p-3`}
     >
       <button
         onClick={handleClose}

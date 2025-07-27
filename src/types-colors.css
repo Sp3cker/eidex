@@ -161,11 +161,8 @@
   border-radius: 0.15rem;
 }
 .electric-type {
-  color: color-mix(
-    in oklab,
-    var(--electric-type-color) 0%,
-    var(--background-color-mix)
-  );
+  color:
+    var(--color-neutral-50);
   background-color: color-mix(
     in oklab,
     var(--opaque-p3) 25%,
@@ -189,7 +186,7 @@
 .fighting-type {
   color: color-mix(
     in oklab,
-    var(--fighting-type-color) 10%,
+    var(--fighting-type-color) 5%,
     var(--background-color-mix)
   );
   background-color: color-mix(

@@ -16,12 +16,13 @@ const Footer = memo(function Footer() {
           top: -5px;
           left: 0;
           width: 100%;
+          
           // height: 3rem;
           overflow: hidden;
           font-family: 'NBit', sans-serif;
-          font-size: 1rem;
+          font-size: 1.2rem;
           color: var(--color-neutral-100);
-          opacity: 0.05;
+          opacity: 0.69;
           white-space: nowrap;
           z-index: -4;
           pointer-events: none;
@@ -33,11 +34,12 @@ const Footer = memo(function Footer() {
           top: -10px;
           left: 0;
           width: 100%;
+          line-height: 0.69;
           overflow: hidden;
           font-family: 'NBit', sans-serif;
-          font-size: 1rem;
+          font-size: 1.2rem;
           color: var(--color-neutral-100);
-          opacity: 0.05;
+          opacity: 0.06;
           // white-space: nowrap;
           z-index: 0;
           pointer-events: none;
@@ -56,18 +58,18 @@ const Footer = memo(function Footer() {
         <div className="footer-bg-bgtext-1 leading-none">
           {"  "} LFG 1.3 LFG 1.3 LFG GIVE blaziken speed boost back cmon 1.3 LFG
           1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
+          LFG 1.3 LF G  1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
           1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 GOATDINOLFG
+          LFG 1.3 LFG  1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 GOATDINOLFG
           1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
+          LFG 1.3 LFG  1.3   LFG 1.3 LFG 1.  3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
+          1.3 LFG 1. 3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
+          LFG 1.3 LFG 1.3 LFG 1.3 LFG  1.3 LF G 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
+          1.3 LFG  1.3 LFG 1.3 LFG 1.3 LF G 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
+          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3  LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
+          1.3 LFG 1.3 LFG 1.3 LF G 1.3 LF G 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
+          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
+          1.3 LFG 1.  3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
           LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
           1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
           LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
@@ -98,7 +100,7 @@ const Footer = memo(function Footer() {
         <div className="flex flex-col sm:w-80">
           <HiddenFileDrop />
           <p className="font-pkmnem leading-xs text-sm/3 text-white">
-            Fu*ckin 1.3 FRIDAY!!! GET HYPEEÈ!!
+            Fu*ckiiin 1.3 FRIDAY!!! LETS F*UCKINNN OGGOOOOO! ! ! ! ! ! ! ! ! ! 
           </p>
         </div>
         <div className="flex items-center justify-end gap-5">
