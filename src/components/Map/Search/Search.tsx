@@ -1,5 +1,5 @@
 import { useMapStore } from "@/stores/useMapStore";
-import { useItemSearch } from "@/utils/itemsData";
+import itemSearch, { useItemSearch } from "@/utils/itemsData";
 import { animated as a, useSpringValue } from "@react-spring/web";
 import { useCallback, useState, useRef, useEffect } from "react";
 import SearchSelecta from "./SearchSelecta";
@@ -20,7 +20,11 @@ const Search = () => {
     clearSearch,
     getMapsForItem,
   ] = useItemSearch();
-  const [showError, setShowError] = useState(false);
+  const [showToast, setShowToast] = useState<{
+    show: boolean;
+    type: "held" | "error";
+    species?: string[];
+  }>({ show: false, type: "error" });
   const width = useSpringValue("10rem"); // Initialize with CSS value
   // Animate width based on selection state
   useEffect(() => {
@@ -45,10 +49,17 @@ const Search = () => {
         setItemMaps(maps);
         clearSearch();
         setSelectedMap(maps[0]);
-        setShowError(false);
+        setShowToast({ show: false, type: "error" });
+        return;
+      }
+      const pokemons = itemSearch.getMonIdsWithHeldItem(id);
+      if (pokemons && pokemons.length > 0) {
+        setShowToast({ show: true, type: "held", species: pokemons });
+        setTimeout(() => setShowToast({ show: false, type: "held" }), 5000);
+        return;
       } else {
-        setShowError(true);
-        setTimeout(() => setShowError(false), 2000);
+        setShowToast({ show: true, type: "error" });
+        setTimeout(() => setShowToast({ show: false, type: "error" }), 2000);
       }
       // Do NOT clear the search term here!
     },
@@ -59,7 +70,7 @@ const Search = () => {
       setItemMaps,
       clearSearch,
       setSelectedMap,
-      setShowError,
+      setShowToast,
     ],
   );
 
@@ -81,7 +92,11 @@ const Search = () => {
   }, []);
   return (
     <div className="flex flex-col">
-      <ErrorBanner show={showError} />
+      <ErrorBanner
+        show={showToast.show}
+        type={showToast.type}
+        species={showToast.species}
+      />
       <a.input
         ref={inputRef}
         value={searchTerm}

@@ -78,13 +78,17 @@ const MapContainer = ({ children }: any) => {
     {
       target: targetRef,
       filterTaps: true,
-
+      // Use rubber banding for smoother edge behavior
       bounds: {
-        top: -200 * scale.get(),
-        bottom: 200 * scale.get(),
-        left: WINDOW_WIDTH < 768 ? -3600 : -400 * scale.get(),
-        right: 200 * scale.get(),
+        // Allow dragging any corner to center by using map dimensions
+        // Map is 800x667px with scale 1.32, so scaled dimensions are ~1056x880px
+        // To center any corner, we need bounds that allow the map to move by its full dimensions
+        top: -(667 * 1.32), // Allow top edge to reach center
+        bottom: 667 * 1.32, // Allow bottom edge to reach center
+        left: -(800 * 1.32), // Allow left edge to reach center
+        right: 800 * 1.32, // Allow right edge to reach center
       },
+      rubberband: true, // Add rubber banding for smoother edge behavior
       from: () => {
         return [centerOffset.get()[0], centerOffset.get()[1]];
       },
@@ -96,7 +100,7 @@ const MapContainer = ({ children }: any) => {
   return (
     <div
       ref={targetRef}
-      className="fade-in map-grid font-calamity z-0 w-full touch-none cursor-move overflow-auto bg-[#0082CA]"
+      className="fade-in map-grid font-calamity z-0 w-full cursor-move touch-none overflow-auto bg-[#0082CA]"
     >
       <animated.div
         ref={mapRef}

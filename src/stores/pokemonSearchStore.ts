@@ -15,12 +15,12 @@ const encReducer = (acc: string[], curr: any) => {
 class PokemonSearchStore {
   private encounterMap: Map<string, string[]>; // Pokemon name -> array of level IDs
   private allSpeciesNames: string[]; // For quick prefix searching
-  private monNameKeys: Map<string, number> = new Map<string, number>(); // Map of name in `encounters` format to their `speciesId`
+  private monNameKeys: Map<string, number> = new Map<string, number>([]); // Map of name in `encounters` format to their `speciesId`
+
   constructor() {
     this.encounterMap = new Map();
-    this.monNameKeys = new Map<string, number>([]);
     pokemonData.forEach((p) => {
-      if (p.formId !== 0) return;
+      if (typeof p.formId !== "undefined" && p.formId !== 0) return;
       this.monNameKeys.set(
         p.speciesName.toLowerCase().replace(/-/g, "_"),
         p.speciesId,
@@ -54,7 +54,6 @@ class PokemonSearchStore {
       const land = land_mons ? land_mons.mons.reduce(encReducer, []) : [];
       const levelEncounters = [...land, ...water, ...fishing];
 
-      // Or whatever your structure is
       levelEncounters.forEach((encounter: string) => {
         const normalizedSpeciesKeys = this.normalizeName(encounter);
         // Use the first successful normalization as the primary key, or a consistent one
@@ -72,8 +71,8 @@ class PokemonSearchStore {
 
       // Repeat for other encounter types if necessary (water_mons_flat, etc.)
     }
-
-    // 2. Populate allSpeciesNames from pokemonData (speciesData.json)
+    // I dont think i use this but it's late
+    // 2. Build heldItemsMap: itemId (number) -> list of maps where it can be obtained via held Pokémon
   }
 
   /**
@@ -139,6 +138,27 @@ class PokemonSearchStore {
       return;
     }
     return id;
+  }
+
+  /**
+   * Given an `itemId` (numeric), return array of Pokémon species names that can hold this item.
+   */
+  public getPokemonWithHeldItem(itemId: number): string[] {
+    const speciesNames: string[] = [];
+
+    for (const p of pokemonData) {
+      // Ignore alternate forms – only consider default formId === 0 so we do not double-count
+      if (p.formId && p.formId !== 0) continue;
+
+      if (!p.heldItems || p.heldItems.length === 0) continue;
+
+      // Check if this Pokémon can hold the specified item
+      if (p.heldItems.includes(itemId)) {
+        speciesNames.push(p.speciesName);
+      }
+    }
+
+    return speciesNames;
   }
 }
 

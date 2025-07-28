@@ -15,7 +15,15 @@ export const animFn = (active: boolean) =>
   active ? animConfigs.hover : animConfigs.initial;
 // const clickTo = (down: boolean) => down ? {scale}
 
-export const ErrorBanner = ({ show }: { show: boolean }) => {
+export const ErrorBanner = ({
+  show,
+  type,
+  species,
+}: {
+  show: boolean;
+  type: "held" | "error";
+  species?: string[];
+}) => {
   const transitions = useTransition(show, {
     from: { opacity: 0, translateY: -40 },
     enter: { opacity: 1, translateY: 0 },
@@ -26,12 +34,24 @@ export const ErrorBanner = ({ show }: { show: boolean }) => {
     item ? (
       <a.div
         style={style}
-        className="absolute left-0 right-0 z-50 mx-auto mt-2 w-fit rounded border border-red-500 bg-neutral-100/80 px-4 py-2 text-center font-bold text-red-800 shadow-lg backdrop-blur-md"
+        className={`absolute left-0 right-0 z-50 mx-auto mt-2 w-fit rounded border bg-neutral-100/80 px-4 py-2 text-center font-bold shadow-lg backdrop-blur-md ${
+          type === "held"
+            ? "border-blue-500 text-blue-800"
+            : "border-red-500 text-red-800"
+        }`}
       >
-        <div className="flex flex-col">
-          Item not buyable/given. Maybe it&apos;s a held item?
-          <p className="font-pkmnem">I don&apos;t have held items yet!</p>
-        </div>
+        {type === "held" ? (
+          <div className="flex flex-col gap-2">
+            <h3>Item is held by:</h3>
+            <ul>
+              {species?.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          "Item not buyable/given. Maybe it's a held item?"
+        )}
       </a.div>
     ) : null,
   );

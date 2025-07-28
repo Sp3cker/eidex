@@ -12,6 +12,8 @@ import { useCallback, useEffect, useState } from "react";
 
 import TrieSearch from "trie-search";
 
+import { pokemonSearchStore } from "@/stores/pokemonSearchStore";
+
 /**
  * This is the processed version of `LevelScriptedEvent`
  * `items` has an amount, price, etc...
@@ -74,11 +76,21 @@ class ItemSearch {
     this.itemsToMap.set(item, [mapBaseName]);
   }
   getMapsForItem(itemId: string): string[] | null {
+    // First, look in the regular item -> map lookup (pickups, shops, scripted, etc.)
     const mapsArr = this.itemsToMap.get(itemId);
-    if (mapsArr === undefined) {
-      return null;
+    if (mapsArr && mapsArr.length > 0) {
+      return mapsArr;
     }
-    return mapsArr;
+    return null;
+  }
+
+  /**
+   * Returns array of maps for an item that is ONLY obtainable via held Pokémon (helper for external callers).
+   */
+  getMonIdsWithHeldItem(itemId: string) {
+    const itemData = Items.get(itemId);
+    if (!itemData) return null;
+    return pokemonSearchStore.getPokemonWithHeldItem(itemData.itemId);
   }
 
   ByItemId(itemId: number): string | undefined {
@@ -176,7 +188,6 @@ const useItemSearch = (): [
   const getMapsForItem = useCallback((itemId: string) => {
     return itemSearch.getMapsForItem(itemId);
   }, []);
-
   return [
     searchTerm,
     searchResults,
