@@ -88,7 +88,7 @@ function parseElement($, el) {
 
 function main() {
   if (process.argv.length !== 3) {
-    console.error("Usage: node svg_to_json.js <react_svg_file>");
+    console.error("Usage: node svg_to_json.js <svg_file>");
     process.exit(1);
   }
 
@@ -101,6 +101,7 @@ function main() {
     process.exit(1);
   }
 
+  // Extract SVG content
   const svgMatch = data.match(/<svg[^>]*>[\s\S]*<\/svg>/);
   if (!svgMatch) {
     console.error("No <svg> element found in the file");
@@ -108,7 +109,12 @@ function main() {
   }
   let svgContent = svgMatch[0];
 
-  svgContent = preprocessJSX(svgContent);
+  // Detect if this is a React component (has style={{ or JSX braces})
+  const isReactComponent = /style={{|\{.*?\}/.test(svgContent);
+  if (isReactComponent) {
+    svgContent = preprocessJSX(svgContent);
+  }
+  // If not React, use as-is
 
   const $ = cheerio.load(svgContent, { xmlMode: true });
   const elements = $("g, rect, path, circle, use")
