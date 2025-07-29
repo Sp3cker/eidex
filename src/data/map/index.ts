@@ -70,12 +70,14 @@ export type LevelScriptedEvent = {
   scriptName: string;
   items: ItemWithAmount[];
   pokemon: LevelScriptedEventMon[];
+  wildMon?: LevelScriptedEventMon[];
 };
 
 export type LevelScriptedEventMon = {
+  id: number;
   species: string;
   level: number;
-  isRandom: boolean;
+  isRandom?: boolean;
 };
 
 export type LevelPickupItem = {

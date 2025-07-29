@@ -78,47 +78,54 @@ export function getPokemonMoveIdsAtLevel(
 
   // return finalMoveIds.slice(0, 4);
 }
-
+const hiddenPwTypes = [
+  "Fighting",
+  "Flying",
+  "Poison",
+  "Ground",
+  "Rock",
+  "Bug",
+  "Ghost",
+  "Steel",
+];
 /**
  * Gets detailed move information for an array of move IDs
  * @param moveIds - Array of move IDs to get details for
  * @returns Array of move objects with name, power, type name, and type colors
  */
-export function getMoveDetails(moveIds: number[]): Array<{
-  id: number;
-  description: string;
-  name: string;
-  power: number;
-  typeName: string;
-  typeColors: string;
-}> {
+export function getMoveDetails(moveIds: number[], hpType: number) {
   if (!moveIds || moveIds.length === 0) {
     return [];
   }
+  console.log(hpType);
+  // Create a map of move data for efficient lookup
+  const moveDataMap = moveData.reduce(
+    (acc, move) => {
+      acc[move.id] = move;
+
+      return acc;
+    },
+    {} as Record<number, (typeof moveData)[0]>,
+  );
 
   // Get move data for all moves efficiently
-  const moveTypeIds = moveIds.map((moveId) => {
-    const move = moveData.find((m) => m.id === moveId);
-    return move?.type || 1; // Default to Normal type
-  });
-
-  // Get type names and colors efficiently for all moves at once
-  const typeNames = getMoveTypeNames(moveTypeIds).map((tn) =>
-    adjustTypeForDevice(tn, "sm"),
-  );
-  const typeColors = getTypeCSSColors(moveTypeIds);
-
-  // Build final result with all move data
-  return moveIds.map((moveId, index) => {
-    const move = moveData.find((m) => m.id === moveId);
-
+  return moveIds.map((moveId) => {
+    const move = moveDataMap[moveId];
+    if (move.name === "Hidden Power") {
+      debugger;
+      move.name = `Hidden Power (${hiddenPwTypes[hpType - 1]})`;
+    }
     return {
       id: moveId,
       description: move?.desc ?? "",
       name: move?.name || `Move ${moveId}`,
       power: move?.power || 0,
-      typeName: typeNames[index] || "Normal",
-      typeColors: typeColors[index],
+      typeName: move?.type
+        ? adjustTypeForDevice(getMoveTypeNames([move.type])[0], "sm")
+        : "Normal",
+      typeColors: move?.type
+        ? getTypeCSSColors([move.type])[0]
+        : getTypeCSSColors([1])[0], // Default to Normal type colors
     };
   });
 }
