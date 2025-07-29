@@ -29,7 +29,13 @@ const getMap = (map: string) => {
 };
 const MONNAMEKEYS = new Map<string, number>([]); // 'darmanitan_galar' -> 990
 pokemon.forEach((p) => {
-  MONNAMEKEYS.set(p.nameKey.toLowerCase().replace(/-/g, "_"), p.speciesId);
+  MONNAMEKEYS.set(
+    p.nameKey
+      .replace(/_|'/g, (m) => (m === "_" ? " " : ""))
+      .toLowerCase()
+      .replace(/-/g, "_"),
+    p.speciesId,
+  );
   // monsNameKeys.set(p.speciesName.replace("-", "_").toLowerCase(), p.dexId);
 });
 const putIdOnEncounter: (
