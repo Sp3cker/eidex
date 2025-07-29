@@ -72,7 +72,7 @@ export default memo(function MapItemsBox() {
         transformOrigin: "bottom left",
       },
       scaleX: selectedTrainer ? 1.15 : 1,
-      scaleY: selectedTrainer ? 1.5 : 1,
+      scaleY: selectedTrainer ? 1.25 : 1,
       translateY: show ? (selectedTrainer ? 0 : 0) : HIDDEN_TRANSLATE,
       opacity: selectedMap ? 1 : 0,
 
@@ -85,13 +85,13 @@ export default memo(function MapItemsBox() {
       translateX: "-100%",
       opacity: 0,
       scaleX: trainer ? 1 / 1.15 : 1,
-      scaleY: trainer ? 1 / 1.5 : 1,
+      scaleY: trainer ? 1 / 1.25 : 1,
     }),
     enter: (trainer: any) => ({
       translateX: "0%",
       opacity: 1,
       scaleX: trainer ? 1 / 1.15 : 1,
-      scaleY: trainer ? 1 / 1.5 : 1,
+      scaleY: trainer ? 1 / 1.25 : 1,
     }),
     leave: {
       translateX: "-100%",
@@ -108,7 +108,7 @@ export default memo(function MapItemsBox() {
     <div className="dexnav-grid dexnav-z grid-rows-auto pointer-events-none relative grid grid-cols-1">
       <animated.nav
         style={springs}
-        className={`will-translate map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 h-[52vh] overflow-x-hidden rounded-lg border border-gray-200 drop-shadow-xl md:row-start-10`}
+        className={`will-translate map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 h-[55vh] overflow-x-hidden rounded-lg border border-gray-200 drop-shadow-xl md:row-start-10`}
       >
         <div className={`flex overflow-hidden`}>
           {shuffleTransition((style, isOpen) =>

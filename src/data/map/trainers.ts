@@ -11,6 +11,7 @@ export type TrainerPartyMon = {
   nature?: string;
   ability?: number[];
   item?: string;
+  hpType?: number; // Only if they have hidden power move.
 };
 /** Trainer data loaded from `trainers.json` */
 export interface Trainer {

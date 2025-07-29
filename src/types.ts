@@ -73,6 +73,7 @@ export interface Move {
   cat: number;
   acc: number;
   pp?: number;
+  description?: string;
   secondaryEffectChance?: number;
   target?: number;
   priority?: number;

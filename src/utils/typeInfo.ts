@@ -21,7 +21,7 @@ export function getTypeName(typeID: number): string {
 export function getTypeNamesArr(typeIDsArr: number[]): string[] {
   const types: string[] = [];
   if (typeIDsArr.length === 0) return ["Normal"];
-  
+
   for (const typeID of typeIDsArr) {
     if (typeof typeID === "number") {
       types.push(typeDataArray[typeID]?.typeName || "Normal");
@@ -36,7 +36,9 @@ export function getTypeNamesArr(typeIDsArr: number[]): string[] {
  * @returns Array of type names corresponding to each move
  */
 export function getMoveTypeNames(moveTypeIds: number[]): string[] {
-  return moveTypeIds.map(typeId => typeDataArray[typeId]?.typeName || "Normal");
+  return moveTypeIds.map(
+    (typeId) => typeDataArray[typeId]?.typeName || "Normal",
+  );
 }
 
 export function getTypeColor(typeID: number): [string, string] {
@@ -53,10 +55,12 @@ export function getTypeColor(typeID: number): [string, string] {
  * @param moveTypeIds - Array of move type IDs
  * @returns Array of color pairs [startColor, endColor] for each move
  */
-export function getMoveTypeColors(moveTypeIds: number[]): Array<[string, string]> {
-  return moveTypeIds.map(typeId => [
+export function getMoveTypeColors(
+  moveTypeIds: number[],
+): Array<[string, string]> {
+  return moveTypeIds.map((typeId) => [
     typeDataArray[typeId]?.color || "#A8A77A",
-    typeDataArray[typeId]?.colorEnd || "#A8A878"
+    typeDataArray[typeId]?.colorEnd || "#A8A878",
   ]);
 }
 
@@ -137,7 +141,24 @@ export function getTypeSnapColor(typeID: number): string {
  * @returns Array of CSS class names corresponding to each type ID
  */
 export function getTypeCSSColors(typeIDs: number[]): string[] {
-  return typeIDs.map(typeId => 
-    typeDataArray[typeId]?.cssClass || "normal-type"
+  return typeIDs.map(
+    (typeId) => typeDataArray[typeId]?.cssClass || "normal-type",
   );
 }
+
+export const makeTypeObjects = (typeIds: number[]) => {
+  // typeCssColors returns an array of css classes
+  // getTypeNameArr returns an array of type names
+  // I need to return an array of objects with css and name properties
+  // There's a elegant way to do this where I call each function only once.
+  // and not in a map function. Because each function takes an array.
+  const typeCss = getTypeCSSColors(typeIds);
+  const typeNames = getTypeNamesArr(typeIds);
+
+  return typeIds.map((_, index) => {
+    return {
+      css: typeCss[index],
+      name: typeNames[index],
+    };
+  });
+};
