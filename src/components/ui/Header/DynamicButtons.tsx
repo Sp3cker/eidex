@@ -20,12 +20,15 @@ const DynamicButtons = () => {
     );
   } else {
     return (
-      <Link
-        href="/dex"
-        className={`text-xs pkmnem-face-shadow font-calamity hidden cursor-pointer rounded-sm px-5 py-1 text-sm text-neutral-400 transition-colors sm:block`}
+      <a
+        href="https://dex.emeraldimperium.net"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`pkmnem-face-shadow font-calamity cursor-pointer rounded-sm px-5 py-1 text-sm text-neutral-100 transition-colors`}
       >
-        Old Dex
-      </Link>
+       Official Dex ↗️
+      </a>
+
       // <Link href="/roamers">
       //   <button
       //     role="button"

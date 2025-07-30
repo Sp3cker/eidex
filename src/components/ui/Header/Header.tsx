@@ -27,14 +27,9 @@ const HeaderButtons = () => {
       <Link className={getLinkClassName("/map")} href="/map">
         Map
       </Link>
-      <a
-        href="https://dex.emeraldimperium.net"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={getLinkClassName("/")}
-      >
-        Official Dex ↗️
-      </a>
+      <Link href="/dex" className={`${getLinkClassName("/dex")}`}>
+        Dex
+      </Link>
     </div>
   );
 };

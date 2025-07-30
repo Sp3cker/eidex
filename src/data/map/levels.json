@@ -10587,7 +10587,7 @@
             }
           ],
           "pokemon": [],
-          "explanation": "Pick up from ground",
+          "explanation": "Pickup from ground in lower tide room",
           "scriptName": "ShoalCave_LowTideInnerRoom_EventScript_ShoalShell2::"
         }
       ],
@@ -10609,7 +10609,7 @@
             }
           ],
           "pokemon": [],
-          "explanation": "Pickup from ground",
+          "explanation": "Pickup from ground in lower room",
           "scriptName": "ShoalCave_LowTideLowerRoom_EventScript_ShoalSalt4::"
         },
         {
@@ -10651,7 +10651,7 @@
             }
           ],
           "pokemon": [],
-          "explanation": "Pick up from ground",
+          "explanation": "Pick up from ground in Stairs Room",
           "scriptName": "ShoalCave_LowTideStairsRoom_EventScript_ShoalSalt3::"
         }
       ],
