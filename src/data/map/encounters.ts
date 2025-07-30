@@ -1,4 +1,4 @@
-import defaultEncounters from "./encounterGroup.json";
+import defaultEncounters from "./wild_encounters1_3.json";
 import { EncounterGroup } from "./index";
 
 interface Mon {
@@ -23,10 +23,18 @@ export interface WildEncounterData {
 
 class EncounterStore {
   private static readonly USER_ENCOUNTERS_KEY = "userEncounterData";
+  private processedDefaultEncounters: Record<string, EncounterGroup[]>;
 
   public dataSource = "default" as "default" | "next";
-  constructor() {}
+  constructor() {
+    // Process default encounters the same way as user-provided data
+    const processedData = this.parseAndConvertSpecies(
+      defaultEncounters as WildEncounterData,
+    );
+    this.processedDefaultEncounters = this.groupEncounterData(processedData);
+  }
 
+  // TAKES encounter data base label, like `gPetalburgWoods` returns `MAP_PETALBURG_WOODS`
   private baseLabelToMap(baseLabel: string): string {
     return (
       "MAP_" +
@@ -102,7 +110,9 @@ class EncounterStore {
   ): Record<string, EncounterGroup[]> {
     const grouped: Record<string, EncounterGroup[]> = {};
     for (const encounter of flatData) {
-      const key = this.baseLabelToMap(encounter.base_label.split("_")[0]);
+      const key = encounter.base_label.includes("underwater")
+        ? this.baseLabelToMap(encounter.base_label.split("_")[0])
+        : this.baseLabelToMap(encounter.base_label.replace(/_/g, ""));
       if (!grouped[key]) {
         grouped[key] = [];
       }
@@ -120,9 +130,9 @@ class EncounterStore {
   /** Main getter and setter */
   public getEncounterData(): Record<string, EncounterGroup[]> {
     if (this.dataSource === "default") {
-      return defaultEncounters;
+      return this.processedDefaultEncounters;
     }
-    //@ts-ignore
+    //@ts-expect-error - storedEncounterData may be undefined but we're handling it
     return this.storedEncounterData;
   }
   public isStoredEncounterData(): boolean {
