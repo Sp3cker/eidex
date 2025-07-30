@@ -14,7 +14,7 @@ const HeaderButtons = () => {
     }
 
     const baseClasses =
-      "pkmnem-face-shadow font-calamity rounded-sm px-5 py-1 text-sm cursor-pointer  transition-colors";
+      "pkmnem-face-shadow font-calamity rounded-sm px-5 py-1 text-sm cursor-pointer transition-colors";
 
     if (isActive) {
       return `${baseClasses} bg-gray-600 hover:bg-gray-500 text-white`;

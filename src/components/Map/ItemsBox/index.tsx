@@ -108,7 +108,7 @@ export default memo(function MapItemsBox() {
     <div className="dexnav-grid dexnav-z grid-rows-auto pointer-events-none relative grid grid-cols-1">
       <animated.nav
         style={springs}
-        className={`will-translate map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 h-[50vh] overflow-x-hidden rounded-lg border border-gray-200 drop-shadow-xl md:row-start-10`}
+        className={`will-translate map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 h-[52vh] overflow-x-hidden rounded-lg border border-gray-200 drop-shadow-xl md:row-start-10`}
       >
         <div className={`flex overflow-hidden`}>
           {shuffleTransition((style, isOpen) =>
