@@ -1,21 +1,16 @@
-import { SVGProps } from "react";
-import MapPlace from "./MapPlace";
-import objects from "@/data/map/mapsvgs.json";
-
-import { ErrorBoundary } from "react-error-boundary";
+import { SVGProps } from "react"
 const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     xmlSpace="preserve"
-          viewBox="0 0 1280 720"
-
+    xmlns:serif="http://www.serif.com/"
     style={{
       fillRule: "evenodd",
       clipRule: "evenodd",
       strokeLinecap: "round",
       strokeLinejoin: "round",
-      strokeMiterlimit: "1.5",
+      strokeMiterlimit: 1.5,
     }}
     {...props}
   >
@@ -23,8 +18,8 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
       <g>
         <use
           xlinkHref="#_Image1"
-          x="0"
-          y="0"
+          x={0}
+          y={0}
           width="1920px"
           height="1080px"
           transform="matrix(0.666667,0,0,0.666667,0,0.154787)"
@@ -32,239 +27,1123 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
         <use
           id="LABELS"
           xlinkHref="#_Image2"
-          x="2255"
-          y="944"
+          x={2255}
+          y={944}
           width="1058px"
           height="605px"
           transform="matrix(1,0,0,1,-2134.26,-908.051)"
         />
-        {objects.map((ob) => {
-          if (ob.id === undefined) {
-            console.warn("undefined ID on obj", ob);
-            return;
-          }
-          return (
-            <ErrorBoundary key={ob.id} fallback="WHUPS">
-              <MapPlace item={ob} {...ob} />
-            </ErrorBoundary>
-          );
-        })}
+        <rect
+          id="MAP_ROUTE115"
+          x={132.664}
+          y={141.864}
+          width={36.553}
+          height={109.879}
+          style={{ fill: "#ebebeb", fillOpacity: 0.38 }}
+        />
+        <rect
+          id="_MAP_ROUTE113_"
+          serif:id="_MAP_ROUTE113"
+          x={283.229}
+          y={70.112}
+          width={139.495}
+          height={36.744}
+          style={{ fill: "#ebebeb", fillOpacity: 0.38 }}
+        />
+        <rect
+          id="MAP_ROUTE111"
+          x={423.205}
+          y={69.6}
+          width={36.257}
+          height={218.171}
+          style={{ fill: "#ebebeb", fillOpacity: 0.38 }}
+        />
+        <rect
+          id="MAP_ROUTE112"
+          x={346.292}
+          y={177.21}
+          width={77.455}
+          height={33.939}
+          style={{ fill: "#ebebeb", fillOpacity: 0.4 }}
+        />
+        <rect
+          id="MAP_ROUTE117"
+          x={315.287}
+          y={288.094}
+          width={108.627}
+          height={35.414}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE102"
+          x={205.749}
+          y={396.212}
+          width={72.942}
+          height={35.297}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE103"
+          x={278.588}
+          y={360.325}
+          width={145.608}
+          height={35.457}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE110"
+          x={422.579}
+          y={323.293}
+          width={38.204}
+          height={108.745}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE116"
+          x={168.554}
+          y={250.102}
+          width={110.06}
+          height={37.198}
+          style={{ fill: "#ebebeb", fillOpacity: 0.4 }}
+        />
+        <rect
+          id="MAP_ROUTE101"
+          x={278.625}
+          y={433.638}
+          width={37.038}
+          height={27.351}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE104"
+          x={132.954}
+          y={322.748}
+          width={36.285}
+          height={80.762}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE105"
+          x={132.525}
+          y={403.48}
+          width={37.651}
+          height={137.721}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE106"
+          x={133.465}
+          y={540.229}
+          width={107.621}
+          height={35.867}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE119"
+          x={530.725}
+          y={68.901}
+          width={38.979}
+          height={217.992}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE118"
+          x={494.494}
+          y={288.285}
+          width={75.914}
+          height={34.983}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE121"
+          x={641.083}
+          y={177.575}
+          width={145.723}
+          height={36.773}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE120"
+          x={603.398}
+          y={70.569}
+          width={37.969}
+          height={143.877}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE123"
+          x={572.313}
+          y={286.759}
+          width={177.551}
+          height={35.981}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE122"
+          x={694.409}
+          y={216.287}
+          width={70.848}
+          height={68.282}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE107"
+          x={242.48}
+          y={576.738}
+          width={112.979}
+          height={36.049}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE108"
+          x={355.695}
+          y={577.123}
+          width={67.36}
+          height={34.882}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE109"
+          x={423.048}
+          y={505.11}
+          width={35.356}
+          height={107.768}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE134"
+          x={461.635}
+          y={431.088}
+          width={108.19}
+          height={37.339}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <g id="MAP_ROUTE132">
+          <rect
+            x={671.193}
+            y={430.843}
+            width={77.956}
+            height={37.735}
+            style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+          />
+        </g>
+        <rect
+          id="MAP_ROUTE131"
+          x={787.702}
+          y={430.395}
+          width={93.899}
+          height={38.526}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE130"
+          x={881.628}
+          y={432.146}
+          width={84.895}
+          height={36.167}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE129"
+          x={966.783}
+          y={432.055}
+          width={108.846}
+          height={34.882}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE128"
+          x={964.568}
+          y={395.603}
+          width={136.584}
+          height={36.335}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE125"
+          x={964.908}
+          y={180.105}
+          width={109.537}
+          height={117.438}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE127"
+          x={963.304}
+          y={298.142}
+          width={111.552}
+          height={97.282}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE124"
+          x={856.663}
+          y={179.643}
+          width={108.03}
+          height={117.666}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE126"
+          x={857.301}
+          y={297.963}
+          width={105.966}
+          height={97.907}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_ROUTE133"
+          x={569.633}
+          y={430.594}
+          width={101.515}
+          height={37.729}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_PACIFIDLOG_TOWN"
+          x={748.394}
+          y={428.905}
+          width={39.386}
+          height={42}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_RUSTBORO_CITY"
+          x={130.822}
+          y={251.697}
+          width={39.308}
+          height={71.748}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_MAUVILLE_CITY"
+          x={424.242}
+          y={286.549}
+          width={70.848}
+          height={35.195}
+          style={{ fill: "#ebebeb", fillOpacity: 0.4 }}
+        />
+        <rect
+          id="MAP_SLATEPORT_CITY"
+          x={422.357}
+          y={432.719}
+          width={37.799}
+          height={72.489}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <g id="MAP_LAVARIDGE_TOWN">
+          <circle
+            cx={331.24}
+            cy={195.147}
+            r={18.307}
+            style={{ fill: "#fcbbb3", fillOpacity: 0.42 }}
+          />
+        </g>
+        <path
+          id="MAP_MOSSDEEP_CITY"
+          d="M1073.49,260.574l-0,15.997c-0,4.414 -3.585,7.998 -7.997,7.998l-52.617,0c-4.415,0 -7.998,-3.584 -7.998,-7.998l0,-15.997c0,-4.415 3.583,-7.998 7.998,-7.998l52.617,-0c4.412,-0 7.997,3.583 7.997,7.998Z"
+          style={{ fill: "#fcbbb3", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_LITTLEROOT_TOWN"
+          x={276.63}
+          y={459.491}
+          width={41.803}
+          height={47.029}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <rect
+          id="MAP_DEWFORD_TOWN"
+          x={206.066}
+          y={576.496}
+          width={35.474}
+          height={35.673}
+          style={{ fill: "#ebebeb", fillOpacity: 0.42 }}
+        />
+        <g id="MAP_OLDALE_TOWN">
+          <circle
+            cx={295.962}
+            cy={413.504}
+            r={18.872}
+            style={{ fill: "#fcbbb3", fillOpacity: 0.42 }}
+          />
+        </g>
+        <g id="MAP_ROUTE114">
+          <rect
+            x={173.521}
+            y={67.859}
+            width={67.587}
+            height={111.016}
+            style={{ fill: "#fcbbb3", fillOpacity: 0.42 }}
+          />
+        </g>
+        <g id="MAP_PETALBURG_CITY">
+          <circle
+            cx={187.548}
+            cy={413.938}
+            r={17.317}
+            style={{ fill: "#fcbbb3", fillOpacity: 0.42 }}
+          />
+        </g>
+        <g id="MAP_FALLARBOR_TOWN">
+          <circle
+            cx={259.673}
+            cy={88.011}
+            r={18.307}
+            style={{ fill: "#fcbbb3", fillOpacity: 0.42 }}
+          />
+        </g>
+        <g id="MAP_VERDANTURF_TOWN">
+          <circle
+            cx={295.877}
+            cy={304.483}
+            r={18.307}
+            style={{ fill: "#fcbbb3", fillOpacity: 0.42 }}
+          />
+        </g>
+        <g id="MAP_LILYCOVE_CITY">
+          <path
+            d="M855.846,188.654l0,15.997c0,4.414 -3.585,7.999 -7.997,7.999l-52.616,-0c-4.415,-0 -7.998,-3.585 -7.998,-7.999l-0,-15.997c-0,-4.415 3.583,-7.998 7.998,-7.998l52.616,0c4.412,0 7.997,3.583 7.997,7.998Z"
+            style={{ fill: "#fcbbb3", fillOpacity: 0.42 }}
+          />
+        </g>
+        <g id="MAP_SOOTOPOLIS_CITY">
+          <circle
+            cx={910.889}
+            cy={341.122}
+            r={17.649}
+            style={{ fill: "#fcbbb3", fillOpacity: 0.42 }}
+          />
+        </g>
+        <g id="MAP_EVER_GRANDE_CITY">
+          <path
+            d="M1145.12,372.585l0,48.267c0,4.208 -3.42,7.625 -7.625,7.625l-15.251,0c-4.205,0 -7.625,-3.417 -7.625,-7.625l-0,-48.267c-0,-4.21 3.42,-7.627 7.625,-7.627l15.251,0c4.205,0 7.625,3.417 7.625,7.627Z"
+            style={{ fill: "#fcbbb3", fillOpacity: 0.42 }}
+          />
+        </g>
+        <g id="MAP_FORTREE_CITY">
+          <circle
+            cx={586.453}
+            cy={87.689}
+            r={17.812}
+            style={{ fill: "#fcbbb3", fillOpacity: 0.42 }}
+          />
+        </g>
         <use
           xlinkHref="#_Image3"
-          x="2595"
-          y="1252"
+          x={2595}
+          y={1252}
           width="88px"
           height="56px"
           transform="matrix(1,0,0,1,-2134.26,-908.051)"
         />
         <use
           xlinkHref="#_Image4"
-          x="2974"
-          y="1298"
+          x={2974}
+          y={1298}
           width="115px"
           height="27px"
           transform="matrix(1,0,0,1,-2134.26,-908.051)"
         />
         <use
           xlinkHref="#_Image5"
-          x="2588"
-          y="1042"
+          x={2588}
+          y={1042}
           width="57px"
           height="44px"
           transform="matrix(1,0,0,1,-2134.26,-908.051)"
         />
         <use
           xlinkHref="#_Image6"
-          x="3145"
-          y="1063"
+          x={3145}
+          y={1063}
           width="86px"
           height="27px"
           transform="matrix(1,0,0,1,-2134.26,-908.051)"
         />
         <use
           xlinkHref="#_Image7"
-          x="2908"
-          y="1293"
+          x={2908}
+          y={1293}
           width="69px"
           height="39px"
           transform="matrix(1,0,0,1,-2134.26,-908.051)"
         />
         <use
           xlinkHref="#_Image8"
-          x="2204"
-          y="1380"
+          x={2204}
+          y={1380}
           width="85px"
           height="44px"
           transform="matrix(1,0,0,1,-2134.26,-908.051)"
         />
         <use
           xlinkHref="#_Image9"
-          x="246"
-          y="123"
+          x={246}
+          y={123}
           width="76px"
           height="69px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image10"
-          x="2379"
-          y="1136"
+          x={2379}
+          y={1136}
           width="104px"
           height="26px"
           transform="matrix(1,0,0,1,-2134.26,-908.051)"
         />
         <use
           xlinkHref="#_Image11"
-          x="369"
-          y="140"
+          x={369}
+          y={140}
           width="59px"
           height="33px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image11"
-          x="369"
-          y="140"
+          x={369}
+          y={140}
           width="59px"
           height="33px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image12"
-          x="562"
-          y="528"
+          x={562}
+          y={528}
           width="82px"
           height="14px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image12"
-          x="562"
-          y="528"
+          x={562}
+          y={528}
           width="82px"
           height="14px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image13"
-          x="992"
-          y="529"
+          x={992}
+          y={529}
           width="74px"
           height="14px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image13"
-          x="992"
-          y="529"
+          x={992}
+          y={529}
           width="74px"
           height="14px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image14"
-          x="64"
-          y="191"
+          x={64}
+          y={191}
           width="66px"
           height="50px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image14"
-          x="64"
-          y="191"
+          x={64}
+          y={191}
           width="66px"
           height="50px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image15"
-          x="111"
-          y="9"
+          x={111}
+          y={9}
           width="68px"
           height="54px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image15"
-          x="111"
-          y="9"
+          x={111}
+          y={9}
           width="68px"
           height="54px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image16"
-          x="462"
-          y="213"
+          x={462}
+          y={213}
           width="67px"
           height="41px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image16"
-          x="462"
-          y="213"
+          x={462}
+          y={213}
           width="67px"
           height="41px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image17"
-          x="2497"
-          y="1009"
+          x={2497}
+          y={1009}
           width="63px"
           height="45px"
           transform="matrix(1,0,0,1,-2171.11,-907.345)"
         />
         <use
           xlinkHref="#_Image17"
-          x="2497"
-          y="1009"
+          x={2497}
+          y={1009}
           width="63px"
           height="45px"
           transform="matrix(1,0,0,1,-2171.11,-907.345)"
         />
         <use
           xlinkHref="#_Image18"
-          x="2342"
-          y="1257"
+          x={2342}
+          y={1257}
           width="75px"
           height="47px"
           transform="matrix(1,0,0,1,-2134.26,-908.051)"
         />
         <use
           xlinkHref="#_Image19"
-          x="2996"
-          y="1068"
+          x={2996}
+          y={1068}
           width="89px"
           height="17px"
           transform="matrix(1,0,0,1,-2134.26,-908.051)"
         />
         <use
           xlinkHref="#_Image19"
-          x="2996"
-          y="1068"
+          x={2996}
+          y={1068}
           width="89px"
           height="17px"
           transform="matrix(1,0,0,1,-2134.26,-908.051)"
         />
         <use
           xlinkHref="#_Image20"
-          x="378"
-          y="324"
+          x={378}
+          y={324}
           width="42px"
           height="24px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
         <use
           xlinkHref="#_Image21"
-          x="303"
-          y="324"
+          x={303}
+          y={324}
           width="68px"
           height="14px"
           transform="matrix(1,0,0,1,0,0.154787)"
         />
+        <g id="DUNGEONS">
+          <path
+            id="MAP_MT_PYRE"
+            d="M743.454,246.031l0,14.435c0,3.983 -3.234,7.217 -7.217,7.217l-14.435,0c-3.984,0 -7.218,-3.234 -7.218,-7.217l0,-14.435c0,-3.983 3.234,-7.218 7.218,-7.218l14.435,0c3.983,0 7.217,3.235 7.217,7.218Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_MT_PYRE1"
+            serif:id="MAP_MT_PYRE"
+            d="M743.454,246.031l0,14.435c0,3.983 -3.234,7.217 -7.217,7.217l-14.435,0c-3.984,0 -7.218,-3.234 -7.218,-7.217l0,-14.435c0,-3.983 3.234,-7.218 7.218,-7.218l14.435,0c3.983,0 7.217,3.235 7.217,7.218Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_VICTORY_ROAD"
+            d="M1139.26,345.913l-0,14.435c-0,3.984 -3.234,7.218 -7.218,7.218l-14.435,-0c-3.983,-0 -7.217,-3.234 -7.217,-7.218l-0,-14.435c-0,-3.983 3.234,-7.217 7.217,-7.217l14.435,-0c3.984,-0 7.218,3.234 7.218,7.217Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_VICTORY_ROAD1"
+            serif:id="MAP_VICTORY_ROAD"
+            d="M1139.26,345.913l-0,14.435c-0,3.984 -3.234,7.218 -7.218,7.218l-14.435,-0c-3.983,-0 -7.217,-3.234 -7.217,-7.218l-0,-14.435c-0,-3.983 3.234,-7.217 7.217,-7.217l14.435,-0c3.984,-0 7.218,3.234 7.218,7.217Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_SAFARI_ZONE"
+            d="M755.399,120.49l-0,26.718c-0,7.373 -5.986,13.359 -13.359,13.359l-26.718,0c-7.373,0 -13.359,-5.986 -13.359,-13.359l-0,-26.718c-0,-7.373 5.986,-13.359 13.359,-13.359l26.718,0c7.373,0 13.359,5.986 13.359,13.359Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#000",
+              strokeWidth: "1.85px",
+            }}
+          />
+          <path
+            id="MAP_SAFARI_ZONE1"
+            serif:id="MAP_SAFARI_ZONE"
+            d="M755.399,120.49l-0,26.718c-0,7.373 -5.986,13.359 -13.359,13.359l-26.718,0c-7.373,0 -13.359,-5.986 -13.359,-13.359l-0,-26.718c-0,-7.373 5.986,-13.359 13.359,-13.359l26.718,0c7.373,0 13.359,5.986 13.359,13.359Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#000",
+              strokeWidth: "1.85px",
+            }}
+          />
+          <path
+            id="MAP_SCORCHED_SLAB"
+            d="M638.445,81.656l-0,14.435c-0,3.984 -3.234,7.218 -7.218,7.218l-14.435,-0c-3.983,-0 -7.217,-3.234 -7.217,-7.218l-0,-14.435c-0,-3.983 3.234,-7.217 7.217,-7.217l14.435,-0c3.984,-0 7.218,3.234 7.218,7.217Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_SCORCHED_SLAB1"
+            serif:id="MAP_SCORCHED_SLAB"
+            d="M638.445,81.656l-0,14.435c-0,3.984 -3.234,7.218 -7.218,7.218l-14.435,-0c-3.983,-0 -7.217,-3.234 -7.217,-7.218l-0,-14.435c-0,-3.983 3.234,-7.217 7.217,-7.217l14.435,-0c3.984,-0 7.218,3.234 7.218,7.217Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_UNDERWATER_ROUTE124"
+            d="M961.968,251.593l0,17.684c0,4.88 -3.962,8.841 -8.842,8.841l-17.683,0c-4.88,0 -8.842,-3.961 -8.842,-8.841l0,-17.684c0,-4.88 3.962,-8.842 8.842,-8.842l17.683,0c4.88,0 8.842,3.962 8.842,8.842Z"
+            style={{
+              fill: "#0082ca",
+              fillOpacity: 0.86,
+              stroke: "#3d99de",
+              strokeWidth: "1.23px",
+            }}
+          />
+          <path
+            id="MAP_UNDERWATER_ROUTE126"
+            d="M972.045,328.23l0,17.683c0,4.88 -3.962,8.842 -8.842,8.842l-17.683,0c-4.88,0 -8.842,-3.962 -8.842,-8.842l0,-17.683c0,-4.88 3.962,-8.842 8.842,-8.842l17.683,0c4.88,0 8.842,3.962 8.842,8.842Z"
+            style={{
+              fill: "#0082ca",
+              fillOpacity: 0.86,
+              stroke: "#3d99de",
+              strokeWidth: "1.23px",
+            }}
+          />
+          <path
+            id="MAP_SEAFLOOR_CAVERN"
+            d="M924.407,365.301l0,14.435c0,3.984 -3.234,7.218 -7.217,7.218l-14.435,-0c-3.984,-0 -7.218,-3.234 -7.218,-7.218l0,-14.435c0,-3.983 3.234,-7.217 7.218,-7.217l14.435,-0c3.983,-0 7.217,3.234 7.217,7.217Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_NAVEL_ROCK"
+            d="M1036.08,503.089l0,14.435c0,3.984 -3.234,7.218 -7.217,7.218l-14.435,-0c-3.984,-0 -7.218,-3.234 -7.218,-7.218l0,-14.435c0,-3.983 3.234,-7.217 7.218,-7.217l14.435,-0c3.983,-0 7.217,3.234 7.217,7.217Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_NAVEL_ROCK1"
+            serif:id="MAP_NAVEL_ROCK"
+            d="M1036.08,503.089l0,14.435c0,3.984 -3.234,7.218 -7.217,7.218l-14.435,-0c-3.984,-0 -7.218,-3.234 -7.218,-7.218l0,-14.435c0,-3.983 3.234,-7.217 7.218,-7.217l14.435,-0c3.983,-0 7.217,3.234 7.217,7.217Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_SHOAL_CAVE"
+            d="M1071.8,190.306l0,17.86c0,4.929 -4.001,8.93 -8.93,8.93l-17.86,0c-4.928,0 -8.93,-4.001 -8.93,-8.93l0,-17.86c0,-4.928 4.002,-8.93 8.93,-8.93l17.86,0c4.929,0 8.93,4.002 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_SKY_PILLAR"
+            d="M845.973,422.468l-0,17.859c-0,4.929 -4.002,8.93 -8.93,8.93l-17.86,0c-4.929,0 -8.93,-4.001 -8.93,-8.93l-0,-17.859c-0,-4.929 4.001,-8.93 8.93,-8.93l17.86,-0c4.928,-0 8.93,4.001 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_RUSTURF_TUNNEL"
+            d="M316.519,257.65l-0,16.902c-0,4.664 -3.962,8.45 -8.842,8.45l-17.684,0c-4.88,0 -8.841,-3.786 -8.841,-8.45l-0,-16.902c-0,-4.663 3.961,-8.45 8.841,-8.45l17.684,-0c4.88,-0 8.842,3.787 8.842,8.45Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "0.96px",
+            }}
+          />
+          <path
+            id="MAP_RUSTURF_TUNNEL1"
+            serif:id="MAP_RUSTURF_TUNNEL"
+            d="M316.519,257.65l-0,16.902c-0,4.664 -3.962,8.45 -8.842,8.45l-17.684,0c-4.88,0 -8.841,-3.786 -8.841,-8.45l-0,-16.902c-0,-4.663 3.961,-8.45 8.841,-8.45l17.684,-0c4.88,-0 8.842,3.787 8.842,8.45Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "0.96px",
+            }}
+          />
+          <path
+            id="MAP_TERRA_CAVE"
+            d="M531.437,247.743l0,17.86c0,4.929 -4.001,8.93 -8.93,8.93l-17.86,0c-4.928,0 -8.93,-4.001 -8.93,-8.93l0,-17.86c0,-4.928 4.002,-8.93 8.93,-8.93l17.86,0c4.929,0 8.93,4.002 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_ROCKY_SLAB"
+            d="M132.879,180.937l-0,17.86c-0,4.929 -4.002,8.93 -8.93,8.93l-17.86,0c-4.929,0 -8.93,-4.001 -8.93,-8.93l-0,-17.86c-0,-4.928 4.001,-8.93 8.93,-8.93l17.86,0c4.928,0 8.93,4.002 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_MIRAGE_TOWER"
+            d="M456.606,148.367l0,13.907c0,3.838 -3.116,6.953 -6.953,6.953l-13.907,0c-3.837,0 -6.953,-3.115 -6.953,-6.953l-0,-13.907c-0,-3.837 3.116,-6.953 6.953,-6.953l13.907,0c3.837,0 6.953,3.116 6.953,6.953Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "0.96px",
+            }}
+          />
+          <path
+            id="MAP_MIRAGE_TOWER1"
+            serif:id="MAP_MIRAGE_TOWER"
+            d="M456.606,148.367l0,13.907c0,3.838 -3.116,6.953 -6.953,6.953l-13.907,0c-3.837,0 -6.953,-3.115 -6.953,-6.953l-0,-13.907c-0,-3.837 3.116,-6.953 6.953,-6.953l13.907,0c3.837,0 6.953,3.116 6.953,6.953Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "0.96px",
+            }}
+          />
+          <path
+            id="MAP_MT_CHIMNEY"
+            d="M413.471,120.554l-0,13.907c-0,3.837 -3.116,6.953 -6.954,6.953l-13.906,0c-3.838,0 -6.954,-3.116 -6.954,-6.953l0,-13.907c0,-3.837 3.116,-6.953 6.954,-6.953l13.906,-0c3.838,-0 6.954,3.116 6.954,6.953Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "0.96px",
+            }}
+          />
+          <path
+            id="MAP_MT_CHIMNEY1"
+            serif:id="MAP_MT_CHIMNEY"
+            d="M413.471,120.554l-0,13.907c-0,3.837 -3.116,6.953 -6.954,6.953l-13.906,0c-3.838,0 -6.954,-3.116 -6.954,-6.953l0,-13.907c0,-3.837 3.116,-6.953 6.954,-6.953l13.906,-0c3.838,-0 6.954,3.116 6.954,6.953Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "0.96px",
+            }}
+          />
+          <path
+            id="MAP_GRANITE_CAVE"
+            d="M201.502,585.163l0,16.901c0,4.664 -3.962,8.45 -8.842,8.45l-17.683,0c-4.88,0 -8.842,-3.786 -8.842,-8.45l-0,-16.901c-0,-4.664 3.962,-8.451 8.842,-8.451l17.683,0c4.88,0 8.842,3.787 8.842,8.451Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_GRANITE_CAVE1"
+            serif:id="MAP_GRANITE_CAVE"
+            d="M201.502,585.163l0,16.901c0,4.664 -3.962,8.45 -8.842,8.45l-17.683,0c-4.88,0 -8.842,-3.786 -8.842,-8.45l-0,-16.901c-0,-4.664 3.962,-8.451 8.842,-8.451l17.683,0c4.88,0 8.842,3.787 8.842,8.451Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_MARINE_CAVE"
+            d="M622.499,497.952l-0,17.86c-0,4.929 -4.001,8.93 -8.93,8.93l-17.86,-0c-4.929,-0 -8.93,-4.001 -8.93,-8.93l0,-17.86c0,-4.929 4.001,-8.93 8.93,-8.93l17.86,0c4.929,0 8.93,4.001 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_MAGMA_HIDEOUT"
+            d="M368.758,146.656l-0,16.901c-0,4.664 -3.962,8.45 -8.842,8.45l-17.683,0c-4.88,0 -8.842,-3.786 -8.842,-8.45l-0,-16.901c-0,-4.664 3.962,-8.451 8.842,-8.451l17.683,0c4.88,0 8.842,3.787 8.842,8.451Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "0.96px",
+            }}
+          />
+          <path
+            id="MAP_MAGMA_HIDEOUT1"
+            serif:id="MAP_MAGMA_HIDEOUT"
+            d="M368.758,146.656l-0,16.901c-0,4.664 -3.962,8.45 -8.842,8.45l-17.683,0c-4.88,0 -8.842,-3.786 -8.842,-8.45l-0,-16.901c-0,-4.664 3.962,-8.451 8.842,-8.451l17.683,0c4.88,0 8.842,3.787 8.842,8.451Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "0.96px",
+            }}
+          />
+          <path
+            id="MAP_ISLAND_CAVE"
+            d="M150.739,509.441l-0,17.86c-0,4.928 -4.002,8.93 -8.93,8.93l-17.86,-0c-4.929,-0 -8.93,-4.002 -8.93,-8.93l-0,-17.86c-0,-4.929 4.001,-8.93 8.93,-8.93l17.86,-0c4.928,-0 8.93,4.001 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_ARTISAN_CAVE"
+            d="M961.093,503.089l-0,14.435c-0,3.984 -3.234,7.218 -7.218,7.218l-14.435,-0c-3.983,-0 -7.217,-3.234 -7.217,-7.218l-0,-14.435c-0,-3.983 3.234,-7.217 7.217,-7.217l14.435,-0c3.984,-0 7.218,3.234 7.218,7.217Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_ARTISAN_CAVE1"
+            serif:id="MAP_ARTISAN_CAVE"
+            d="M961.093,503.089l-0,14.435c-0,3.984 -3.234,7.218 -7.218,7.218l-14.435,-0c-3.983,-0 -7.217,-3.234 -7.217,-7.218l-0,-14.435c-0,-3.983 3.234,-7.217 7.217,-7.217l14.435,-0c3.984,-0 7.218,3.234 7.218,7.217Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_FIERY_PATH"
+            d="M400.452,204.163l0,13.907c0,3.838 -3.115,6.953 -6.953,6.953l-13.907,0c-3.837,0 -6.953,-3.115 -6.953,-6.953l0,-13.907c0,-3.837 3.116,-6.953 6.953,-6.953l13.907,-0c3.838,-0 6.953,3.116 6.953,6.953Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "0.96px",
+            }}
+          />
+          <path
+            id="MAP_FIERY_PATH1"
+            serif:id="MAP_FIERY_PATH"
+            d="M400.452,204.163l0,13.907c0,3.838 -3.115,6.953 -6.953,6.953l-13.907,0c-3.837,0 -6.953,-3.115 -6.953,-6.953l0,-13.907c0,-3.837 3.116,-6.953 6.953,-6.953l13.907,-0c3.838,-0 6.953,3.116 6.953,6.953Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "0.96px",
+            }}
+          />
+          <path
+            id="MAP_FLOATING_SLAB"
+            d="M372.639,345.729l0,17.86c0,4.928 -4.001,8.93 -8.93,8.93l-17.86,-0c-4.928,-0 -8.93,-4.002 -8.93,-8.93l0,-17.86c0,-4.929 4.002,-8.93 8.93,-8.93l17.86,-0c4.929,-0 8.93,4.001 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_JAGGED_PASS"
+            d="M327.391,117.188l-0,16.901c-0,4.664 -3.826,8.451 -8.538,8.451l-17.075,-0c-4.712,-0 -8.538,-3.787 -8.538,-8.451l-0,-16.901c-0,-4.664 3.826,-8.451 8.538,-8.451l17.075,0c4.712,0 8.538,3.787 8.538,8.451Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "0.96px",
+            }}
+          />
+          <path
+            id="MAP_JAGGED_PASS1"
+            serif:id="MAP_JAGGED_PASS"
+            d="M327.391,117.188l-0,16.901c-0,4.664 -3.826,8.451 -8.538,8.451l-17.075,-0c-4.712,-0 -8.538,-3.787 -8.538,-8.451l-0,-16.901c-0,-4.664 3.826,-8.451 8.538,-8.451l17.075,0c4.712,0 8.538,3.787 8.538,8.451Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "0.96px",
+            }}
+          />
+          <path
+            id="MAP_METEOR_FALLS"
+            d="M197.5,149.171l0,17.86c0,4.928 -4.001,8.929 -8.93,8.929l-17.86,0c-4.928,0 -8.93,-4.001 -8.93,-8.929l0,-17.86c0,-4.929 4.002,-8.93 8.93,-8.93l17.86,-0c4.929,-0 8.93,4.001 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_NEW_MAUVILLE"
+            d="M501.984,339.483l-0,17.86c-0,4.929 -4.001,8.93 -8.93,8.93l-17.86,0c-4.928,0 -8.93,-4.001 -8.93,-8.93l0,-17.86c0,-4.928 4.002,-8.93 8.93,-8.93l17.86,0c4.929,0 8.93,4.002 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_PETALBURG_WOODS"
+            d="M213.488,365.452l-0,17.86c-0,4.928 -4.002,8.93 -8.93,8.93l-17.86,-0c-4.929,-0 -8.93,-4.002 -8.93,-8.93l-0,-17.86c-0,-4.929 4.001,-8.93 8.93,-8.93l17.86,0c4.928,0 8.93,4.001 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_GRASSY_SLAB"
+            d="M186.458,47.649l0,17.86c0,4.928 -4.001,8.93 -8.93,8.93l-17.859,-0c-4.929,-0 -8.93,-4.002 -8.93,-8.93l-0,-17.86c-0,-4.929 4.001,-8.93 8.93,-8.93l17.859,-0c4.929,-0 8.93,4.001 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_DESERT_UNDERPASS"
+            d="M282.474,41.307l0,17.86c0,4.929 -4.001,8.93 -8.93,8.93l-17.86,0c-4.928,0 -8.929,-4.001 -8.929,-8.93l-0,-17.86c-0,-4.928 4.001,-8.93 8.929,-8.93l17.86,0c4.929,0 8.93,4.002 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_DESERT_RUINS"
+            d="M459.125,188.28l0,17.86c0,4.928 -4.001,8.93 -8.93,8.93l-17.86,-0c-4.928,-0 -8.93,-4.002 -8.93,-8.93l0,-17.86c0,-4.929 4.002,-8.93 8.93,-8.93l17.86,-0c4.929,-0 8.93,4.001 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_DESERT_RUINS1"
+            serif:id="MAP_DESERT_RUINS"
+            d="M459.125,188.28l0,17.86c0,4.928 -4.001,8.93 -8.93,8.93l-17.86,-0c-4.928,-0 -8.93,-4.002 -8.93,-8.93l0,-17.86c0,-4.929 4.002,-8.93 8.93,-8.93l17.86,-0c4.929,-0 8.93,4.001 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_CAVE_OF_ORIGIN"
+            d="M924.302,310.622l0,14.435c0,3.984 -3.234,7.218 -7.217,7.218l-14.435,-0c-3.984,-0 -7.218,-3.234 -7.218,-7.218l0,-14.435c0,-3.983 3.234,-7.217 7.218,-7.217l14.435,-0c3.983,-0 7.217,3.234 7.217,7.217Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_AQUA_HIDEOUT"
+            d="M922.448,190.187l0,17.995c0,4.965 -4.031,8.997 -8.997,8.997l-17.995,0c-4.966,0 -8.998,-4.032 -8.998,-8.997l0,-17.995c0,-4.966 4.032,-8.998 8.998,-8.998l17.995,0c4.966,0 8.997,4.032 8.997,8.998Z"
+            style={{ fill: "#db9400", stroke: "#000", strokeWidth: "0.88px" }}
+          />
+          <path
+            id="MAP_ALTERING_CAVE"
+            d="M421.377,357.343l0,17.86c0,4.929 -4.001,8.93 -8.93,8.93l-17.86,0c-4.928,0 -8.93,-4.001 -8.93,-8.93l0,-17.86c0,-4.928 4.002,-8.93 8.93,-8.93l17.86,0c4.929,0 8.93,4.002 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_ANCIENT_TOMB"
+            d="M640.359,142.576l-0,17.86c-0,4.928 -4.002,8.929 -8.93,8.929l-17.86,0c-4.929,0 -8.93,-4.001 -8.93,-8.929l-0,-17.86c-0,-4.929 4.001,-8.93 8.93,-8.93l17.86,-0c4.928,-0 8.93,4.001 8.93,8.93Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: "1.24px",
+            }}
+          />
+          <path
+            id="MAP_ABANDONED_SHIP"
+            d="M379.136,551.361l0,16.901c0,4.664 -3.962,8.45 -8.842,8.45l-17.683,0c-4.88,0 -8.842,-3.786 -8.842,-8.45l0,-16.901c0,-4.664 3.962,-8.451 8.842,-8.451l17.683,0c4.88,0 8.842,3.787 8.842,8.451Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+          <path
+            id="MAP_ABANDONED_SHIP1"
+            serif:id="MAP_ABANDONED_SHIP"
+            d="M379.136,551.361l0,16.901c0,4.664 -3.962,8.45 -8.842,8.45l-17.683,0c-4.88,0 -8.842,-3.786 -8.842,-8.45l0,-16.901c0,-4.664 3.962,-8.451 8.842,-8.451l17.683,0c4.88,0 8.842,3.787 8.842,8.451Z"
+            style={{
+              fill: "#ffa000",
+              fillOpacity: 0.86,
+              stroke: "#251814",
+              strokeWidth: 1,
+            }}
+          />
+        </g>
       </g>
     </g>
     <defs>
@@ -396,6 +1275,5 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
       />
     </defs>
   </svg>
-);
-
-export default SvgComponent;
+)
+export default SvgComponent

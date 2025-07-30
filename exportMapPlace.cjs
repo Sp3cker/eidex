@@ -54,9 +54,6 @@ function parseElement($, el) {
     } else {
       attrs[attr] = value;
     }
-    if (tagName === "use") {
-      attrs["id"] = attrs["xlinkHref"] + attrs["x"] + attrs["y"];
-    }
   }
   
   // Apply coordinate adjustment to match the expected coordinate system
@@ -73,7 +70,7 @@ function parseElement($, el) {
     .children()
     .toArray()
     .filter((child) =>
-      ["g", "rect", "path", "circle", "use"].includes(
+      ["g", "rect", "path", "circle"].includes(
         child.tagName.toLowerCase(),
       ),
     )
@@ -117,9 +114,21 @@ function main() {
   // If not React, use as-is
 
   const $ = cheerio.load(svgContent, { xmlMode: true });
-  const elements = $("g, rect, path, circle, use")
-    .toArray()
-    .map((el) => parseElement($, el));
+  
+  // Find all elements we want to extract and store their jQuery objects
+  const elementsToExtract = $("g, rect, path, circle").toArray();
+  
+  // Parse elements for JSON export
+  const elements = elementsToExtract.map((el) => parseElement($, el));
+
+  // Remove the extracted elements from the SVG DOM
+  elementsToExtract.forEach((el) => {
+    // Only remove elements that have IDs (matching our filter criteria)
+    const $el = $(el);
+    if ($el.attr('id')) {
+      $el.remove();
+    }
+  });
 
   delete elements[0]; // It makes a G object with everything ?
 
@@ -128,10 +137,6 @@ function main() {
    */
   const idedElements = elements.filter((e) => {
     if (e.id !== undefined) {
-      // Skip use elements that have transform matrices with negative translation
-      if (e.type === 'use' && e.transform && e.transform.includes('matrix') && e.transform.includes('-')) {
-        return false;
-      }
       return true;
     }
     return false;
@@ -193,11 +198,49 @@ function main() {
   }
 
   const uniqueElements = deduplicateElements(idedElements);
+  
+  // Get the cleaned SVG content (with extracted elements removed)
+  const cleanedSvgContent = $.html();
+  
+  // Convert the cleaned SVG back to React component format
+  let formattedSvg = cleanedSvgContent
+    .replace(/(\w+)="([^"]+)"/g, (match, attr, value) => {
+      // Convert HTML attributes back to React props
+      if (attr === 'xmlnsxlink') return 'xmlnsXlink="' + value + '"';
+      if (attr === 'xmlspace') return 'xmlSpace="' + value + '"';
+      if (attr === 'xmlns:serif') return 'xmlns:serif="' + value + '"';
+      if (attr === 'xlinkhref') return 'xlinkHref="' + value + '"';
+      if (attr === 'style') {
+        // Convert style string back to style object
+        const styleObj = {};
+        value.split(';').forEach(style => {
+          const [key, val] = style.split(':').map(s => s.trim());
+          if (key && val) {
+            const camelKey = key.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
+            styleObj[camelKey] = val;
+          }
+        });
+        return 'style={' + JSON.stringify(styleObj) + '}';
+      }
+      return match;
+    })
+    .replace(/\{\.\.\.props\}=""/g, '{...props}');
+
+  const reactComponent = `import { SVGProps } from "react";
+
+const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
+  ${formattedSvg}
+);
+
+export default SvgComponent;
+`;
+  
   try {
     fs.writeFileSync("mapsvgs.json", JSON.stringify(uniqueElements, null, 2));
-    console.log("Successfully wrote output to output.json");
+    fs.writeFileSync("cleaned-svg.tsx", reactComponent);
+    console.log("Successfully wrote output to mapsvgs.json and cleaned-svg.tsx");
   } catch (err) {
-    console.error(`Error writing output file: ${err.message}`);
+    console.error(`Error writing output files: ${err.message}`);
     process.exit(1);
   }
 }
