@@ -12,18 +12,6 @@ const ItemsBox = memo(function ItemsBox() {
 
   const headerRef = useRef<HTMLDivElement>(null);
   const firstItemRef = useRef<HTMLDivElement>(null); // Ref for first item in list
-  // const show = useMapStore((state) => {
-  //   return state.selectedMap !== null && state.dragging === false;
-  // });
-
-  // const [springs] = useSpring(
-  //   {
-  //     opacity: selectedMap ? 1 : 0,
-  //     translateY: show ? 0 : (window.innerHeight * 2) / 5 ,
-  //     config: { mass: 1, damping: 0.2 },
-  //   },
-  //   [show, selectedMap],
-  // );
 
   useEffect(() => {
     // Find the actual scrolling container by traversing up the DOM
