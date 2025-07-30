@@ -40,7 +40,7 @@ export function BaseListContent<T>({
       {items.map((item, index) => (
         <div
           key={getKey(item, index)}
-          className={`cool-font mb-1 flex cursor-pointer items-center p-2 gap-3 rounded border shadow-sm transition-colors ${className}`}
+          className={`cool-font mb-1 flex items-center pl-2 p-1 sm:p-2 gap-1 sm:gap-3 rounded border shadow-sm transition-colors ${className}`}
         >
           {renderIcon && renderIcon(item)}
 

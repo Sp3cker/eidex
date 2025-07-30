@@ -4,7 +4,7 @@ import { Item, ItemWithAmount } from "@/data/map";
 const ItemListRender = (showPrice: boolean) => (item: ItemWithAmount) => (
   <hgroup>
     <div className="flex flex-row justify-between">
-      <h3 className="text-xs/4 font-bold md:text-sm">
+      <h3 className="pl-1 text-xs/4 font-bold md:text-sm">
         {(item as { name?: string }).name || "Unnamed"}
       </h3>
       <p className="font-pkmnem text-shadow-xs pr-4 text-lg leading-4">
@@ -12,9 +12,11 @@ const ItemListRender = (showPrice: boolean) => (item: ItemWithAmount) => (
       </p>
     </div>
     {(item as { description?: string }).description && (
-      <p className="font-pkmnem text-shadow-2xs leading-3 md:leading-4">
-        {(item as { description?: string }).description}
-      </p>
+
+        <p className="font-pkmnem pl-1 text-shadow-2xs  leading-3 md:leading-4">
+          {(item as { description?: string }).description}
+        </p>
+
     )}
   </hgroup>
 );
@@ -44,7 +46,7 @@ export const ItemListContent = function ItemListContent<
       renderContent={ItemListRender(showPrice)}
       items={items}
       emptyMessage="No items here"
-      className="items-list-item border-slate-200 text-slate-700 hover:bg-slate-100 md:py-2"
+      className="items-list-item border-slate-200 text-slate-700 md:py-2"
       renderIcon={renderIcon}
       getKey={getKey}
     />

@@ -1,6 +1,7 @@
 .items-list-item {
   background-image: linear-gradient(
     100deg,
+    in oklab,
     var(--color-slate-50),
     var(--color-neutral-50)
   );
