@@ -5,7 +5,7 @@ import { formatSpeciesString } from "@/utils/formatMapString";
 import SmallTypeBadge from "@/components/ui/SmallTypeBadge";
 import { LevelScriptedEventMon } from "@/data/map";
 const WildMonListRender = (wildMon: any) => (
-  <div className="flex flex-row justify-between">
+  <div className="flex flex-row justify-between items-center">
     <hgroup>
       <h3 className="text-xs/4 font-bold text-slate-700 md:text-sm">
         {formatSpeciesString(wildMon.species) || "Unnamed"}
@@ -14,10 +14,10 @@ const WildMonListRender = (wildMon: any) => (
         Lv. {wildMon.level}
       </p>
     </hgroup>
-    <div className="flex flex-row gap-x-2 pr-2">
+    <div className="flex flex-col sm:flex-row gap-x-2 pr-2">
       <SmallTypeBadge
         typeObjects={wildMon.typeObjects}
-        className="w-13 h-5 whitespace-nowrap px-1 text-base/5 md:h-6 md:text-xl/6"
+        className="w-10 sm:w-15 h-5 whitespace-nowrap px-1 text-sm/5 md:h-6 sm:text-xl/6"
       />
     </div>
   </div>

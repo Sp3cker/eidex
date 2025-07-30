@@ -91,7 +91,7 @@ function collectMapGroups(root: Element): ShapeMap {
         const selfShape = elementToChildShape(node);
         if (selfShape) children.push(selfShape);
       }
-      const canId = canonicalId(id);
+      const canId = id;
       if (!shapes[canId]) {
         shapes[canId] = { type: 'g', id: canId, children };
       }
