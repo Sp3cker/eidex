@@ -32,9 +32,9 @@ export const PokemonCard = React.memo(function Card({
     stats[0],
     stats[1],
     stats[2],
+    stats[3],
     stats[4],
     stats[5],
-    stats[3],
   ];
 
   // Calculate the BST (Base Stat Total)

@@ -8,16 +8,14 @@ function FilterBar() {
         <NameCombobox />
         <FilterModal />
         <div className="font-pkmnem mt-auto p-4 text-center text-2xl text-neutral-200">
-          <p>This dex doesn't have all forms of Pokémon.</p>
           <p className="font-pkmnem text-2xl text-neutral-200">
-            Kildemal's{" "}
+            Please use the{" "}
             <a
               className="underline hover:bg-gray-600"
               href="https://dex.emeraldimperium.net/"
             >
               Official Emerald Imperium Pokédex{" "}
             </a>
-            has:
           </p>
           <ul className="list-disc space-y-1 pl-5 text-left text-2xl">
             <li> Better filtering than this one</li>

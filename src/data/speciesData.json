@@ -1,36 +1,5 @@
 {
-    "0": {
-        "speciesId": 0,
-        "speciesName": "MissingNo.",
-        "types": [],
-        "stats": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "abilities": [
-            0,
-            0,
-            0
-        ],
-        "levelUpMoves": [
-            [
-                1,
-                1
-            ]
-        ],
-        "tmMoves": [],
-        "eggMoves": null,
-        "dexId": 0,
-        "evolutions": null,
-        "forms": null,
-        "formId": 0,
-        "nameKey": "MissingNo.",
-        "baseForm": 0
-    },
+  
     "1": {
         "speciesId": 1,
         "speciesName": "Bulbasaur",
