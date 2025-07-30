@@ -1,6 +1,5 @@
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useUIStore } from "@/stores/uiStore";
-
 
 const DynamicButtons = () => {
   const [location] = useLocation();
@@ -21,7 +20,12 @@ const DynamicButtons = () => {
     );
   } else {
     return (
-      null
+      <Link
+        href="/dex"
+        className={`text-xs pkmnem-face-shadow font-calamity hidden cursor-pointer rounded-sm px-5 py-1 text-sm text-neutral-400 transition-colors sm:block`}
+      >
+        Old Dex
+      </Link>
       // <Link href="/roamers">
       //   <button
       //     role="button"

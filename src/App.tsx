@@ -7,6 +7,18 @@ const DrawerContainer = lazy(() => import("./components/Drawer"));
 function App() {
   useEffect(() => {
     document.title = "Emerald Imperium Dex";
+
+    // Check if it's time to show the alert (every 3 days)
+    const lastAlertTimestamp = localStorage.getItem("lastDexAlertTimestamp");
+    const currentTime = Date.now();
+    const threeDaysInMs = 3 * 24 * 60 * 60 * 1000; // 3 days in milliseconds
+
+    if (!lastAlertTimestamp || (currentTime - parseInt(lastAlertTimestamp)) >= threeDaysInMs) {
+      alert(
+        "Hello! Long-story short, don't use this dex. Use the Official Emerald Imperium Dex instead.",
+      );
+      localStorage.setItem("lastDexAlertTimestamp", currentTime.toString());
+    }
   });
   return (
     <div className="flex justify-center bg-zinc-800 md:flex-row">

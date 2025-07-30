@@ -14,23 +14,27 @@ const HeaderButtons = () => {
     }
 
     const baseClasses =
-      "pkmnem-face-shadow font-calamity rounded-sm px-5 py-1 text-sm cursor-pointer hover: transition-colors";
+      "pkmnem-face-shadow font-calamity rounded-sm px-5 py-1 text-sm cursor-pointer  transition-colors";
 
     if (isActive) {
-      return `${baseClasses} bg-gray-600 text-white`;
+      return `${baseClasses} bg-gray-600 hover:bg-gray-500 text-white`;
     }
-    return `${baseClasses}  amber-box text-gray-200`;
+    return `${baseClasses} hover:bg-gray-700 text-gray-200`;
   };
 
   return (
     <div className="flex gap-1">
-      <Link className={getLinkClassName("/dex")} href="/dex">
-        Dex
-      </Link>
-
       <Link className={getLinkClassName("/map")} href="/map">
         Map
       </Link>
+      <a
+        href="https://dex.emeraldimperium.net"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={getLinkClassName("/")}
+      >
+        Official Dex ↗️
+      </a>
     </div>
   );
 };
@@ -41,7 +45,7 @@ const Header = () => {
         <img
           src="/Pokemans_395.webp"
           alt="Emerald Imperium Map & Dexnav"
-          className="h-9  aspect-rect"
+          className="aspect-rect h-9"
           height="36"
         />
         <div className="justify-self-start">
