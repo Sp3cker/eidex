@@ -1,5 +1,5 @@
 const fs = require("fs");
-const file = fs.readFileSync("./src/data/map/encounters.json");
+const file = fs.readFileSync("./wild_encounters1_3.json");
 function parseAndConvertSpecies(jsonData) {
   const parsedData = JSON.parse(jsonData);
 

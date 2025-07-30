@@ -190,6 +190,7 @@ const putEncounterRate = (mons: EncounterMons[]) => {
 
 const getSelectedMapInfo = (id: string, levelId: string) => {
   const Encounters = encounterStore.getEncounterData();
+  debugger
   const targetMapEncounterGroup = Encounters[id];
   if (targetMapEncounterGroup === undefined) {
     console.warn("No encounters for map %s", id);
@@ -297,6 +298,7 @@ const getSelectedLevel = ({
   };
 };
 export const getInitialMapLevelData = (baseMapName: string) => {
+
   const mapDetails = getMap(baseMapName);
   if (!mapDetails || !mapDetails.levels || mapDetails.levels.length === 0) {
     console.error(

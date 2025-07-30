@@ -56,12 +56,14 @@ export const useMapStore = create<MapStore>()(
         set({ ...initialState });
       },
       setSelectedMap: (mapName: string) => {
+        if (get().selectedMap === mapName) {
+          return;
+        }
         const currentRoute = window.location.href;
         if (!currentRoute.includes(mapName)) {
           urlManager.requestURLUpdate(mapName, null);
         }
         // updateMapHelmet(mapName);
-
         const initialMapData = getInitialMapLevelData(mapName);
 
         if (!initialMapData) {
