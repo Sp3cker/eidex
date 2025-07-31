@@ -1,4 +1,4 @@
-import {  useLocation } from "wouter";
+import { useLocation } from "wouter";
 import { useUIStore } from "@/stores/uiStore";
 
 const DynamicButtons = () => {
@@ -19,26 +19,17 @@ const DynamicButtons = () => {
       </button>
     );
   } else {
-    return (
-      <a
-        href="https://dex.emeraldimperium.net"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`pkmnem-face-shadow font-calamity cursor-pointer rounded-sm px-5 py-1 text-sm text-neutral-100 transition-colors`}
-      >
-       Official Dex ↗️
-      </a>
+    return null;
 
-      // <Link href="/roamers">
-      //   <button
-      //     role="button"
-      //     title="Roamers"
-      //     className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 mr-2 cursor-pointer rounded-sm px-5 py-1 text-sm text-gray-200"
-      //   >
-      //     <GiSparkles size={20} />
-      //   </button>
-      // </Link>
-    );
+    // <Link href="/roamers">
+    //   <button
+    //     role="button"
+    //     title="Roamers"
+    //     className="pkmnem-face-shadow bg-fieldset font-calamity hover:bg-fieldset/80 mr-2 cursor-pointer rounded-sm px-5 py-1 text-sm text-gray-200"
+    //   >
+    //     <GiSparkles size={20} />
+    //   </button>
+    // </Link>
   }
 };
 
