@@ -88,8 +88,8 @@ const Selecta = () => {
         ▼
       </button>
 
-      <p className="font-pkmnem text-md flex-1 text-ellipsis text-wrap px-2 text-center font-bold leading-tight text-neutral-100">
-        {selectedLevelLabel || "N/A"}
+      <p className="font-pkmnem text-md flex-1 overflow-hidden text-ellipsis whitespace-nowrap px-2 text-center font-bold leading-tight text-neutral-100">
+        {selectedLevelLabel?.length > 12 ? `${selectedLevelLabel.slice(0, 12)}...` : selectedLevelLabel || "N/A"}
       </p>
 
       <button

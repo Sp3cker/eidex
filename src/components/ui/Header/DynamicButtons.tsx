@@ -1,6 +1,5 @@
-import { useLocation } from "wouter";
+import {  useLocation } from "wouter";
 import { useUIStore } from "@/stores/uiStore";
-
 
 const DynamicButtons = () => {
   const [location] = useLocation();
@@ -21,7 +20,15 @@ const DynamicButtons = () => {
     );
   } else {
     return (
-      null
+      <a
+        href="https://dex.emeraldimperium.net"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`pkmnem-face-shadow font-calamity cursor-pointer rounded-sm px-5 py-1 text-sm text-neutral-100 transition-colors`}
+      >
+       Official Dex ↗️
+      </a>
+
       // <Link href="/roamers">
       //   <button
       //     role="button"
