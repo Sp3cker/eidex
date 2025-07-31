@@ -54,6 +54,9 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250620.0",
     "@eslint/js": "^9.26.0",
+    "@svgr/cli": "^8.1.0",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "@tailwindcss/postcss": "^4.1.4",
     "@testing-library/jest-dom": "^6.6.3",

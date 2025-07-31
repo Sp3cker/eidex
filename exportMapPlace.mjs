@@ -1,5 +1,6 @@
-const fs = require("fs");
-const cheerio = require("cheerio");
+import fs from "fs";
+import * as cheerio from "cheerio";
+import { transform } from "@svgr/core";
 
 function parseStyleObject(styleString) {
   const styleObj = {};
@@ -18,6 +19,7 @@ function parseStyleObject(styleString) {
   }
   return styleObj;
 }
+
 // First we un-make it a React Component :S
 function preprocessJSX(content) {
   content = content.replace(/style={{([^}]+)}}/g, (match, styleContent) => {
@@ -56,15 +58,6 @@ function parseElement($, el) {
     }
   }
   
-  // Apply coordinate adjustment to match the expected coordinate system
-  // Only apply to specific element types, not to 'use' elements with transforms
-  // if (attrs.x !== undefined && !(tagName === "use" && attrs.transform)) {
-  //   attrs.x = attrs.x + 70.481;
-  // }
-  // if (attrs.y !== undefined && !(tagName === "use" && attrs.transform)) {
-  //   attrs.y = attrs.y + 31.876;
-  // }
-  
   const element = { type: tagName, ...attrs };
   const children = $(el)
     .children()
@@ -83,7 +76,7 @@ function parseElement($, el) {
   return element;
 }
 
-function main() {
+async function main() {
   if (process.argv.length !== 3) {
     console.error("Usage: node svg_to_json.js <svg_file>");
     process.exit(1);
@@ -111,7 +104,6 @@ function main() {
   if (isReactComponent) {
     svgContent = preprocessJSX(svgContent);
   }
-  // If not React, use as-is
 
   const $ = cheerio.load(svgContent, { xmlMode: true });
   
@@ -158,7 +150,6 @@ function main() {
   const seenElements = new Set();
 
   function deduplicateElements(elements) {
-
     const result = [];
     
     for (const element of elements) {
@@ -202,47 +193,35 @@ function main() {
   // Get the cleaned SVG content (with extracted elements removed)
   const cleanedSvgContent = $.html();
   
-  // Convert the cleaned SVG back to React component format
-  let formattedSvg = cleanedSvgContent
-    .replace(/(\w+)="([^"]+)"/g, (match, attr, value) => {
-      // Convert HTML attributes back to React props
-      if (attr === 'xmlnsxlink') return 'xmlnsXlink="' + value + '"';
-      if (attr === 'xmlspace') return 'xmlSpace="' + value + '"';
-      if (attr === 'xmlns:serif') return 'xmlns:serif="' + value + '"';
-      if (attr === 'xlinkhref') return 'xlinkHref="' + value + '"';
-      if (attr === 'style') {
-        // Convert style string back to style object
-        const styleObj = {};
-        value.split(';').forEach(style => {
-          const [key, val] = style.split(':').map(s => s.trim());
-          if (key && val) {
-            const camelKey = key.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
-            styleObj[camelKey] = val;
-          }
-        });
-        return 'style={' + JSON.stringify(styleObj) + '}';
-      }
-      return match;
-    })
-    .replace(/\{\.\.\.props\}=""/g, '{...props}');
-
-  const reactComponent = `import { SVGProps } from "react";
-
-const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
-  ${formattedSvg}
-);
-
-export default SvgComponent;
-`;
-  
+  // Use SVGR to convert the cleaned SVG to a proper React component
   try {
+    const reactComponent = await transform(cleanedSvgContent, {
+      plugins: ['@svgr/plugin-jsx'],
+      jsxRuntime: 'automatic',
+      typescript: true,
+      titleProp: true,
+      descProp: true,
+      svgProps: {
+        width: '{width}',
+        height: '{height}',
+        className: '{className}',
+        style: '{style}',
+        onClick: '{onClick}',
+        onMouseOver: '{onMouseOver}',
+        onMouseOut: '{onMouseOut}',
+      },
+    }, {
+      componentName: 'SvgComponent'
+    });
+
+    // Write the files
     fs.writeFileSync("mapsvgs.json", JSON.stringify(uniqueElements, null, 2));
     fs.writeFileSync("cleaned-svg.tsx", reactComponent);
     console.log("Successfully wrote output to mapsvgs.json and cleaned-svg.tsx");
   } catch (err) {
-    console.error(`Error writing output files: ${err.message}`);
+    console.error(`Error converting SVG to React component: ${err.message}`);
     process.exit(1);
   }
 }
 
-main();
+main().catch(console.error);
