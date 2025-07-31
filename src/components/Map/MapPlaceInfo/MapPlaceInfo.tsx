@@ -5,8 +5,13 @@ import EncounterMonsContainer from "./EncounterMonsContainer";
 import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
 import InfoToggleButtons from "./InfoToggleButtons";
+import { selectedEncounterAtom } from "./EncounterDetails/selectedEncounterStore";
+import { useAtom } from "jotai";
+import EncounterDetails from "./EncounterDetails";
+
 const DRAGGING_TRANSLATE = 100;
 const XS_SCREEN = window.innerWidth > 768;
+
 const EncounterAreaButtons = ({
   handleClick,
   selectedTab,
@@ -75,25 +80,79 @@ const EncounterAreaButtons = ({
   );
 };
 
+// Encounter pages array for efficient transitions
+const encounterPages = [
+  // Page 0: EncounterMonsContainer
+  ({ style, selectedTab }: { style: any; selectedTab: string }) => (
+    <animated.div style={style} className="absolute inset-0 overflow-hidden">
+      <div className="h-full overflow-y-auto">
+        <EncounterMonsContainer selectedTab={selectedTab} />
+      </div>
+    </animated.div>
+  ),
+  // Page 1: EncounterDetails
+  ({ style }: { style: any }) => (
+    <animated.div style={style} className="absolute inset-0 overflow-hidden">
+      <div className="h-full overflow-y-auto">
+        <EncounterDetails />
+      </div>
+    </animated.div>
+  ),
+];
+
 const MapPlaceInfoContent = memo(() => {
   const [selectedTab, setSelectedTab] = useState("land");
   const { ref: containerRef, height: containerHeight } = useElementSize();
+  const [selectedMon] = useAtom(selectedEncounterAtom);
 
-  const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
-    const target = e.currentTarget;
-    const title = target.getAttribute("title");
-    if (title) {
-      setSelectedTab(title);
-    }
-  }, []);
+  const handleTabClick = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      const target = e.currentTarget;
+      const title = target.getAttribute("title");
+      if (title) {
+        setSelectedTab(title);
+      }
+    },
+    [],
+  );
+
+  // Determine which page to show (0 for list, 1 for details)
+  const currentPage = selectedMon ? 1 : 0;
+
+  // Use transition for smooth page switching
+  const transition = useTransition(currentPage, {
+    from: {
+      translateX: "100%",
+      opacity: 0,
+    },
+    enter: {
+      translateX: "0%",
+      opacity: 1,
+    },
+    leave: {
+      translateX: "-100%",
+      opacity: 0,
+    },
+    expires: false, // Prevent memory leaks
+    config: {
+      tension: 280,
+      friction: 25,
+      mass: 0.8,
+    },
+  });
 
   return (
     <div
       ref={containerRef}
       className="pointer-events-auto relative flex h-full flex-col"
     >
-      <div className="map-place-info-textbox-gradient h-full overflow-y-auto rounded-l-lg pb-10 pl-1 pr-3 pt-2 md:rounded-lg lg:h-full">
-        <EncounterMonsContainer selectedTab={selectedTab} />
+      <div className="map-place-info-textbox-gradient h-full rounded-l-lg pb-10 pl-1 pr-3 pt-2 md:rounded-lg lg:h-full overflow-hidden">
+        {transition((style, page) => 
+          encounterPages[page]({ 
+            style, 
+            selectedTab: page === 0 ? selectedTab : "" 
+          })
+        )}
       </div>
       <div
         className="absolute bottom-0 left-0 right-0"
@@ -102,7 +161,7 @@ const MapPlaceInfoContent = memo(() => {
         }}
       >
         <EncounterAreaButtons
-          handleClick={handleClick}
+          handleClick={handleTabClick}
           selectedTab={selectedTab}
         />
       </div>
@@ -141,7 +200,9 @@ const MapPlaceInfo = memo(() => {
   );
 
   return (
-    <div className={`map-place-info-z-3 map-place-info-grid font-calamity pointer-events-none`}>
+    <div
+      className={`map-place-info-z-3 map-place-info-grid font-calamity pointer-events-none`}
+    >
       <animated.div
         style={{
           opacity: spring.opacity,
@@ -156,6 +217,7 @@ const MapPlaceInfo = memo(() => {
   );
 });
 MapPlaceInfo.displayName = "MapPlaceInfo";
+
 const pages = [
   ({ style }: any) => (
     <animated.div style={style} className="absolute inset-0 pl-1 md:p-2">
@@ -174,31 +236,20 @@ const pages = [
     </animated.div>
   ),
 ];
+
 const MapInfoSwitcher = memo(function Switcher() {
   const trainersListOpen = useMapStore((state) => state.isTrainersListOpen);
-  // const trainerIsSelected = useMapStore(
-  //   (state) => state.selectedTrainer !== null,
-  // );
 
-  // const springs = useSpring({
-  //   transform: "translateX(0)",
-  //   config: { duration: 300 },
-  //   ref: springRef,
-  // });
   const shuffleTransition = useTransition(trainersListOpen, {
     from: {
       translateX: "100%",
-      // rotateY: -30,
     },
     enter: {
       translateX: "0%",
-      // rotateY: 0,
     },
     leave: {
       translateX: "100%",
-      // rotateY: 30,
     },
-
     expires: false, // NEED THIS
     config: (showingTrainers) =>
       showingTrainers

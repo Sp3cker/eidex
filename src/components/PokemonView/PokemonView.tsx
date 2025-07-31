@@ -11,8 +11,8 @@ import StatBars from "./StatBars";
 const AbilityBox = lazy(() => import("./AbilityBox"));
 const TabbedInterface = lazy(() => import("./TabbedInterface"));
 const TypeMatchup = lazy(() => import("./TypeMatchup"));
-
 const EvolutionView = lazy(() => import("./EvolutionView"));
+
 const EvolutionSkeleton = () => (
   <div className="h-[200px] w-full animate-pulse rounded rounded-lg bg-gray-700" />
 );

@@ -1,8 +1,9 @@
-import { useUIStore } from "@/stores/uiStore";
 import { useEncounter } from "./useEncounter";
 import React from "react";
 import { EncounterTypeBadge } from "./EncounterTypeBadge";
 import { formatMapString } from "@/utils/formatMapString";
+import { useSetAtom } from "jotai";
+import { selectedEncounterAtom } from "./EncounterDetails/selectedEncounterStore";
 // Reads species from pokemon by ID, puts type, ie 'Normal' or 'Fire' on encounter
 // This is used to display the type of the encounter in the UI
 
@@ -32,7 +33,7 @@ const EncounterDescriptor = ({
   types,
 }: any) => {
   return (
-    <div className="font-pkmnem text-sm/1 flex flex-row justify-between text-nowrap items-start leading-tight">
+    <div className="font-pkmnem text-sm/1 flex flex-row items-start justify-between text-nowrap leading-tight">
       <span>
         <p>
           Lv.{"\u200a"}
@@ -57,9 +58,7 @@ const EncounterMonsList = React.memo(function EncounterList({
 }: {
   zone: "water" | "land" | "fishing";
 }) {
-  const setSelectedPokemon = useUIStore(
-    (state) => state.setSelectedPokemonByIndex,
-  );
+  const setSelectedEncounter = useSetAtom(selectedEncounterAtom);
   const encounter = useEncounter(zone);
   if (!encounter || encounter.length === 0) {
     return (
@@ -74,11 +73,11 @@ const EncounterMonsList = React.memo(function EncounterList({
         <div
           key={`${mon.index}${index}`}
           className={`w-37 flex w-full cursor-pointer items-start gap-1 overflow-hidden rounded p-0 pl-2 transition-colors md:pr-2 ${zoneToBgColor(zone)}`}
-          onMouseDown={() => setSelectedPokemon(mon.index)}
+          onMouseDown={() => setSelectedEncounter(mon.index)}
         >
           <div className="relative overflow-hidden drop-shadow-md">
             <img
-              className="pixelated aspect-square h-8 w-8 "
+              className="pixelated aspect-square h-8 w-8"
               src={`/icon/${mon.index}/icon.webp`}
               alt={formatMapString(mon.species)}
             />
