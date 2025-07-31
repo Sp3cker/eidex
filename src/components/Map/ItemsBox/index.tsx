@@ -3,9 +3,15 @@ import { animated, useSpring, useTransition } from "@react-spring/web";
 import useMapStore from "@/stores/useMapStore";
 import { shallow } from "zustand/shallow";
 import { FadeInWAAPI } from "@/components/ui/FadeInWaapi";
+import { useAtom, useAtomValue } from "jotai";
+import {
+  selectedEncounterAtom,
+  showEncounterAtom,
+} from "../EncounterDetails/selectedEncounterStore";
 
 const ItemsBox = lazy(() => import("./ItemsBox"));
 const TrainerBattleInfo = lazy(() => import("../TrainerBattleInfo"));
+const EncounterDetails = lazy(() => import("../EncounterDetails"));
 // const anmfnc = (show: boolean, isSelectedTrainer: boolean) => {
 //   return {
 //     height: show ? (isSelectedTrainer ? "58vh" : "50vh") : "50vh",
@@ -24,6 +30,19 @@ const pages = [
       <Suspense>
         <FadeInWAAPI>
           <TrainerBattleInfo />
+        </FadeInWAAPI>
+      </Suspense>
+    </animated.div>
+  ),
+  ({ style }: any) => (
+    <animated.div
+      key={"encounter-details"}
+      style={style}
+      className="absolute bottom-0 left-0 right-0 top-0 origin-top-left p-2"
+    >
+      <Suspense>
+        <FadeInWAAPI>
+          <EncounterDetails />
         </FadeInWAAPI>
       </Suspense>
     </animated.div>
@@ -62,6 +81,7 @@ export default memo(function MapItemsBox() {
     ],
     shallow,
   );
+  const showEncounter = useAtomValue(showEncounterAtom);
 
   const [springs] = useSpring(
     {
@@ -78,20 +98,23 @@ export default memo(function MapItemsBox() {
 
       config: { mass: 1, tension: 220, damping: 0.2 },
     },
-    [show, selectedMap, selectedTrainer],
+    [show, selectedMap, selectedTrainer, showEncounter],
   );
-  const shuffleTransition = useTransition(selectedTrainer, {
-    from: (trainer: any) => ({
+  // Determine current page index for memory optimization
+  const currentPageIndex = selectedTrainer ? 0 : showEncounter ? 1 : 2;
+
+  const shuffleTransition = useTransition(currentPageIndex, {
+    from: (pageIndex: number) => ({
       translateX: "-100%",
       opacity: 0,
-      scaleX: trainer ? 1 / 1.15 : 1,
-      scaleY: trainer ? 1 / 1.25 : 1,
+      scaleX: pageIndex === 0 ? 1 / 1.15 : 1,
+      scaleY: pageIndex === 0 ? 1 / 1.25 : 1,
     }),
-    enter: (trainer: any) => ({
+    enter: (pageIndex: number) => ({
       translateX: "0%",
       opacity: 1,
-      scaleX: trainer ? 1 / 1.15 : 1,
-      scaleY: trainer ? 1 / 1.25 : 1,
+      scaleX: pageIndex === 0 ? 1 / 1.15 : 1,
+      scaleY: pageIndex === 0 ? 1 / 1.25 : 1,
     }),
     leave: {
       translateX: "-100%",
@@ -111,9 +134,7 @@ export default memo(function MapItemsBox() {
         className={`will-translate map-place-info-textbox-gradient xs:row-start-10 pointer-events-auto relative row-start-10 h-[52vh] overflow-x-hidden rounded-lg border border-gray-200 drop-shadow-xl md:row-start-10`}
       >
         <div className={`flex overflow-hidden`}>
-          {shuffleTransition((style, isOpen) =>
-            pages[isOpen ? 0 : 1]({ style }),
-          )}
+          {shuffleTransition((style, pageIndex) => pages[pageIndex]({ style }))}
         </div>
       </animated.nav>
     </div>

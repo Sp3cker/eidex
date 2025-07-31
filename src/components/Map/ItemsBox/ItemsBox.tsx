@@ -46,12 +46,7 @@ const ItemsBox = memo(function ItemsBox() {
     scrollContainer.addEventListener("scroll", handleScroll, { passive: true });
     return () => scrollContainer.removeEventListener("scroll", handleScroll);
   }, [selectedMap]); // Re-initialize when selected map changes
-  // const handleScroll = (e) => {
-  //   const scrollTop = e.currentTarget.scrollTop;
-  //   console.log(scrollTop);
-  //   // Trigger overlay effect after scrolling past 40px
-  //   setIsHeaderOverlaying(scrollTop > 40);
-  // };
+
   // Web Animations API for header opacity
   useEffect(() => {
     if (!headerRef.current) return;

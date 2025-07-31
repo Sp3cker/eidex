@@ -1,9 +1,14 @@
 import { memo, useMemo } from "react";
-import { useAtom } from "jotai";
-import { selectedEncounterAtom } from "./selectedEncounterStore";
+import { useAtom, useAtomValue, useSetAtom } from "jotai";
+import {
+  selectedEncounterAtom,
+  showEncounterAtom,
+  syncEncounterAtom,
+} from "./selectedEncounterStore";
 import { encounterStore } from "@/data/map/encounters";
 import { pokemonData } from "@/data/pokemon";
 import { getSpeciesName } from "@/utils/speciesData";
+import CloseButton from "@/components/ui/CloseButton";
 
 // Utility function to get species name from ID (reverse of the process in setSelectedMap)
 const getSpeciesNameFromId = (speciesId: number): string => {
@@ -30,8 +35,9 @@ interface EncounterLocation {
 }
 
 const EncounterDetails = memo(() => {
-  const [selectedMon, setSelectedMon] = useAtom(selectedEncounterAtom);
-
+  const selectedMon = useAtomValue(selectedEncounterAtom);
+  const showEncounter = useSetAtom(showEncounterAtom);
+  const closeEncounter = () => showEncounter(false)
   const encounterLocations = useMemo(() => {
     if (!selectedMon) return [];
 
@@ -112,9 +118,10 @@ const EncounterDetails = memo(() => {
   }
 
   const speciesName = getSpeciesName(selectedMon);
-
+  
   return (
     <div className="p-4">
+      <CloseButton className="absolute right-1 top-1 text-neutral-500" onClick={closeEncounter}/>
       <h3 className="mb-4 text-lg font-semibold">
         Encounter Locations for {speciesName}
       </h3>
@@ -149,7 +156,6 @@ const EncounterDetails = memo(() => {
           ))}
         </div>
       )}
-      <button onClick={() => setSelectedMon(null)}>←</button>
     </div>
   );
 });
