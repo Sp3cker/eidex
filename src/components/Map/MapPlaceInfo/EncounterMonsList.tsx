@@ -2,8 +2,8 @@ import { useEncounter } from "./useEncounter";
 import React from "react";
 import { EncounterTypeBadge } from "./EncounterTypeBadge";
 import { formatMapString } from "@/utils/formatMapString";
-import { useSetAtom } from "jotai";
-import { selectedEncounterAtom } from "./EncounterDetails/selectedEncounterStore";
+import { useAtom, useSetAtom } from "jotai";
+import { syncEncounterAtom } from "@/components/Map/EncounterDetails/selectedEncounterStore";
 // Reads species from pokemon by ID, puts type, ie 'Normal' or 'Fire' on encounter
 // This is used to display the type of the encounter in the UI
 
@@ -58,7 +58,7 @@ const EncounterMonsList = React.memo(function EncounterList({
 }: {
   zone: "water" | "land" | "fishing";
 }) {
-  const setSelectedEncounter = useSetAtom(selectedEncounterAtom);
+  const [, setSelectedEncounter] = useAtom(syncEncounterAtom);
   const encounter = useEncounter(zone);
   if (!encounter || encounter.length === 0) {
     return (

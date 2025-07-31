@@ -5,9 +5,6 @@ import EncounterMonsContainer from "./EncounterMonsContainer";
 import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
 import InfoToggleButtons from "./InfoToggleButtons";
-import { selectedEncounterAtom } from "./EncounterDetails/selectedEncounterStore";
-import { useAtom } from "jotai";
-import EncounterDetails from "./EncounterDetails";
 
 const DRAGGING_TRANSLATE = 100;
 const XS_SCREEN = window.innerWidth > 768;
@@ -80,30 +77,10 @@ const EncounterAreaButtons = ({
   );
 };
 
-// Encounter pages array for efficient transitions
-const encounterPages = [
-  // Page 0: EncounterMonsContainer
-  ({ style, selectedTab }: { style: any; selectedTab: string }) => (
-    <animated.div style={style} className="absolute inset-0 overflow-hidden">
-      <div className="h-full overflow-y-auto">
-        <EncounterMonsContainer selectedTab={selectedTab} />
-      </div>
-    </animated.div>
-  ),
-  // Page 1: EncounterDetails
-  ({ style }: { style: any }) => (
-    <animated.div style={style} className="absolute inset-0 overflow-hidden">
-      <div className="h-full overflow-y-auto">
-        <EncounterDetails />
-      </div>
-    </animated.div>
-  ),
-];
 
 const MapPlaceInfoContent = memo(() => {
   const [selectedTab, setSelectedTab] = useState("land");
   const { ref: containerRef, height: containerHeight } = useElementSize();
-  const [selectedMon] = useAtom(selectedEncounterAtom);
 
   const handleTabClick = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -117,42 +94,14 @@ const MapPlaceInfoContent = memo(() => {
   );
 
   // Determine which page to show (0 for list, 1 for details)
-  const currentPage = selectedMon ? 1 : 0;
-
-  // Use transition for smooth page switching
-  const transition = useTransition(currentPage, {
-    from: {
-      translateX: "100%",
-      opacity: 0,
-    },
-    enter: {
-      translateX: "0%",
-      opacity: 1,
-    },
-    leave: {
-      translateX: "-100%",
-      opacity: 0,
-    },
-    expires: false, // Prevent memory leaks
-    config: {
-      tension: 280,
-      friction: 25,
-      mass: 0.8,
-    },
-  });
 
   return (
     <div
       ref={containerRef}
       className="pointer-events-auto relative flex h-full flex-col"
     >
-      <div className="map-place-info-textbox-gradient h-full rounded-l-lg pb-10 pl-1 pr-3 pt-2 md:rounded-lg lg:h-full overflow-hidden">
-        {transition((style, page) => 
-          encounterPages[page]({ 
-            style, 
-            selectedTab: page === 0 ? selectedTab : "" 
-          })
-        )}
+      <div className="map-place-info-textbox-gradient h-full overflow-hidden rounded-l-lg pb-10 pl-1 pr-3 pt-2 md:rounded-lg lg:h-full">
+        <EncounterMonsContainer selectedTab={selectedTab} />
       </div>
       <div
         className="absolute bottom-0 left-0 right-0"
