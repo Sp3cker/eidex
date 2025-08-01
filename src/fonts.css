@@ -1,49 +1,37 @@
 @font-face {
   font-family: "NBit";
-  src: url("/fonts/emerald-pro/nbit-Regular.woff2") format("woff2");
+  src:
+    url("/fonts/emerald-pro/nbit-Regular.ttf") format("truetype"),
+    url("/fonts/emerald-pro/nbit-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "NBit";
-  src: url("/fonts/emerald-pro/nbit-Bold.woff2") format("woff2");
+  src:
+    url("/fonts/emerald-pro/nbit-Bold.ttf") format("truetype"),
+    url("/fonts/emerald-pro/nbit-Bold.woff2") format("woff2");
   font-weight: Bold;
   font-style: normal;
-}
-@font-face {
-  font-family: "NBit";
-  src: url("/fonts/emerald-pro/NeueBit-Regular.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-/* 
-@font-face {
-  font-family: "Calamity";
-  src: url("/fonts/calamity/Calamity-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
   font-display: swap;
-} */
+}
 @font-face {
   font-family: "Calamity";
-  src: url("/fonts/calamity/Calamity-Bold.woff2") format("woff2");
+  src:
+    url("/fonts/calamity/Calamity-Bold.otf") format("opentype"),
+    url("/fonts/calamity/Calamity-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
-/* @font-face {
-  font-family: "Calamity";
-  src: url("/fonts/calamity/Calamity-Bold.otf") format("OpenType");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-} */
+
 @font-face {
   font-family: "Calamity";
   src:
     local("Calamity"),
+    url("/fonts/calamity/Calamity-Regular.otf") format("opentype"),
     url("/fonts/calamity/Calamity-Regular.woff2") format("woff2");
-  /* src: url("/fonts/calamity/Calamity-Regular.otf") format("OpenType"); */
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -70,7 +58,7 @@
     text-shadow:
       0.25px 0 0 currentColor,
       0 0.25px 0 currentColor;
-      /* 0.25px 0.25px 0 currentColor; */
+    /* 0.25px 0.25px 0 currentColor; */
   }
 }
 @layer components {

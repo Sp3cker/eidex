@@ -27,7 +27,7 @@ const EncounterDetails = memo(() => {
 
   const encounterInfo = useMemo(() => {
     if (!selectedEncounter) return ["", 0, []];
-    // Use pokemonSearchStore to get detailed encounter information
+
     return pokemonSearchStore.getDetailedEncounterInfo(selectedEncounter);
   }, [selectedEncounter]) as [string, number, DetailedEncounterLocation[]];
 
