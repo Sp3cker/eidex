@@ -58,6 +58,10 @@ type MapStore = {
   isTrainersListOpen: boolean;
   selectedTrainer: DisplayTrainer | null;
 
+  // EncounterDetails panel state
+  selectedEncounter: number | null;
+  showEncounter: boolean;
+
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
   setSelectedMap: (map: string) => void;
@@ -86,6 +90,10 @@ type MapStore = {
   setTrainersListOpen: (open: boolean) => void;
 
   setSelectedTrainer: (trainer: DisplayTrainer | null) => void;
+
+  // EncounterDetails panel actions
+  setSelectedEncounter: (encounterId: number | null) => void;
+  setShowEncounter: (show: boolean) => void;
 
   // Animation coordination
   setAnimating: (animating: boolean) => void;

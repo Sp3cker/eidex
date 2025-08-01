@@ -1,17 +1,28 @@
 import { pokemonData } from "@/data/pokemon"; // Assuming this is Object.values(speciesDataJson)
 import encountersData from "@/data/map/cleanEncounters.json"; // Or your processed encounter data
+import { superNormalizeName } from "@/utils/normalizeName";
 
 interface EncounterLocationInfo {
   foundInEncounters: boolean;
   levelIDs?: string[]; // Array of map/level string IDs where it's found
   // Undefined or empty if not foundInEncounters
 }
-const encReducer = (acc: string[], curr: any) => {
+const encReducer = (acc: string[], curr: { species?: string }) => {
   if (curr.species && !acc.includes(curr.species)) {
     acc.push(curr.species);
   }
   return acc;
 };
+
+interface DetailedEncounterLocation {
+  mapName: string;
+  encounterType: "land" | "water" | "fishing" | "rock_smash";
+  minLevel: number;
+  maxLevel: number;
+  encounterRate?: number;
+  rod?: string;
+}
+
 class PokemonSearchStore {
   private encounterMap: Map<string, string[]>; // Pokemon name -> array of level IDs
   private allSpeciesNames: string[]; // For quick prefix searching
@@ -21,11 +32,27 @@ class PokemonSearchStore {
     this.encounterMap = new Map();
     pokemonData.forEach((p) => {
       if (typeof p.formId !== "undefined" && p.formId !== 0) return;
-      this.monNameKeys.set(
-        p.speciesName.toLowerCase().replace(/-/g, "_"),
-        p.speciesId,
-      );
+
+      const baseSpeciesKey = superNormalizeName(p.speciesName);
+
+      const nameKey = superNormalizeName(p.nameKey);
+      // if (nameKey.includes("gallade")) {
+      //   debugger;
+      // }
+      this.monNameKeys.set(nameKey, p.baseForm || p.speciesId); // important for not getting mega forms
+      // Sometimes encounter data doesn't specify the form of a mon, ie `Deerling` doesn't exist; its always a specific form
+      // However, we need to have a `Deerling` key for the encounter map
+      if (this.monNameKeys.has(baseSpeciesKey)) {
+        //
+        return;
+      }
+      if (baseSpeciesKey !== nameKey) {
+        // if `Deerling` !== `Deerling_F`
+        // this.monNameKeys.set(baseSpeciesKey, p.speciesId); // More specific, this would only get overwritten
+        this.monNameKeys.set(baseSpeciesKey, p.baseForm || p.speciesId); // important for not getting mega forms
+      }
     });
+
     this.allSpeciesNames = Array.from(this.monNameKeys.keys());
     this._initialize();
   }
@@ -132,6 +159,7 @@ class PokemonSearchStore {
    */
   public getPokemonDexId(pokemonEncounterName: string): number | undefined {
     const lowerName = pokemonEncounterName.toLowerCase();
+
     const id = this.monNameKeys.get(lowerName);
     if (!id) {
       console.error(`pokemonSearchStore: Error getting ID for ${lowerName}`);
@@ -159,6 +187,95 @@ class PokemonSearchStore {
     }
 
     return speciesNames;
+  }
+
+  /**
+   * Get detailed encounter information for a Pokemon species
+   * Returns an array of detailed encounter locations with level ranges and encounter types
+   */
+  public getDetailedEncounterInfo(speciesId: number) {
+    const species = pokemonData.find((p) => p.speciesId === speciesId);
+    if (!species) {
+      console.error("pokemonSearchStore: getDetailedEncounterInfo", speciesId);
+      return [];
+    }
+
+    // Convert species name to the format used in encounter data
+    // Convert the "pretty" species name into the canonical key that our
+    // encounter data now stores (see convertSpecies in src/data/map/encounters.ts)
+    const specificFormOfSpecies = species.nameKey;
+    const formOfNameUsedInEncounters = superNormalizeName(
+      specificFormOfSpecies,
+    );
+
+    const locations: DetailedEncounterLocation[] = [];
+
+    // Search through all encounter data to find this species
+    Object.entries(encountersData).forEach(([, encounterData]) => {
+      const mapName = encounterData.map;
+
+      // Check land encounters
+      if (encounterData.land_mons) {
+        encounterData.land_mons.mons.forEach((mon) => {
+          if (mon.species === formOfNameUsedInEncounters) {
+            locations.push({
+              mapName,
+              encounterType: "land",
+              minLevel: mon.min_level,
+              maxLevel: mon.max_level,
+              encounterRate: encounterData.land_mons.encounter_rate,
+            });
+          }
+        });
+      }
+
+      // Check water encounters
+      if (encounterData.water_mons) {
+        encounterData.water_mons.mons.forEach((mon) => {
+          if (mon.species === formOfNameUsedInEncounters) {
+            locations.push({
+              mapName,
+              encounterType: "water",
+              minLevel: mon.min_level,
+              maxLevel: mon.max_level,
+              encounterRate: encounterData.water_mons.encounter_rate,
+            });
+          }
+        });
+      }
+
+      // Check fishing encounters
+      if (encounterData.fishing_mons) {
+        encounterData.fishing_mons.mons.forEach((mon) => {
+          if (mon.species === formOfNameUsedInEncounters) {
+            locations.push({
+              mapName,
+              encounterType: "fishing",
+              minLevel: mon.min_level,
+              maxLevel: mon.max_level,
+              encounterRate: encounterData.fishing_mons.encounter_rate,
+            });
+          }
+        });
+      }
+
+      // Check rock smash encounters
+      if (encounterData.rock_smash_mons) {
+        encounterData.rock_smash_mons.mons.forEach((mon) => {
+          if (mon.species === formOfNameUsedInEncounters) {
+            locations.push({
+              mapName,
+              encounterType: "rock_smash",
+              minLevel: mon.min_level,
+              maxLevel: mon.max_level,
+              encounterRate: encounterData.rock_smash_mons.encounter_rate,
+            });
+          }
+        });
+      }
+    });
+
+    return [specificFormOfSpecies, speciesId, locations];
   }
 }
 

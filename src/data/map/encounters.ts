@@ -1,5 +1,6 @@
 import defaultEncounters from "./wild_encounters1_3.json";
 import { EncounterGroup } from "./index";
+import { superNormalizeName } from "@/utils/normalizeName";
 
 interface Mon {
   min_level?: number;
@@ -58,14 +59,27 @@ class EncounterStore {
     }
 
     const convertSpecies = (mons: Mon[]): EncounterListing[] => {
+      // Map of edge–case species names coming from the encounters file ➡️ the
+      // canonical keys used inside speciesData.json (and therefore inside
+      // MONNAMEKEYS). Doing this translation once during initialisation means
+      // we don't need to repeat the edge-case logic every time a map is
+      // selected.
+
+
       return mons.map((mon) => {
         if (mon.min_level === undefined || mon.max_level === undefined) {
           throw new Error("Missing min_level or max_level in encounter data");
         }
+
+        // Remove the COMPILER enum prefix and use the shared normalization function
+        const speciesKey = superNormalizeName(mon.species.replace(/^SPECIES_/, ""));
+        // if (speciesKey.includes("sneasel_hisu")) {
+        //   debugger
+        // }
         return {
           min_level: mon.min_level,
           max_level: mon.max_level,
-          species: mon.species.replace(/^SPECIES_/, "").toLowerCase(),
+          species: speciesKey,
         };
       });
     };
@@ -110,9 +124,9 @@ class EncounterStore {
   ): Record<string, EncounterGroup[]> {
     const grouped: Record<string, EncounterGroup[]> = {};
     for (const encounter of flatData) {
-      const key = encounter.base_label.includes("underwater")
-        ? this.baseLabelToMap(encounter.base_label.split("_")[0])
-        : this.baseLabelToMap(encounter.base_label.replace(/_/g, ""));
+      const key = encounter.base_label.includes("Underwater")
+        ? this.baseLabelToMap(encounter.base_label.replace(/_/g, ""))
+        : this.baseLabelToMap(encounter.base_label.split("_")[0]);
       if (!grouped[key]) {
         grouped[key] = [];
       }

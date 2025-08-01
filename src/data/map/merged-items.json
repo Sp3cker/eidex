@@ -8753,5 +8753,12 @@
     "holdEffectParam": 10,
     "description": "A hold item that raises the power of Steel-type moves.",
     "flingPower": 10
+  },
+  {
+    "itemId": 1001,
+    "id": "ITEM_HEX_ORB",
+    "name": "Hex Orb",
+    "price": 0,
+    "description": "A purple orb said to contain a cursed power."
   }
 ]

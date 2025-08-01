@@ -100,7 +100,7 @@ const MapPlaceInfoContent = memo(() => {
       ref={containerRef}
       className="pointer-events-auto relative flex h-full flex-col"
     >
-      <div className="map-place-info-textbox-gradient h-full overflow-hidden rounded-l-lg pb-10 pl-1 pr-3 pt-2 md:rounded-lg lg:h-full">
+      <div className="map-place-info-textbox-gradient h-full overflow-y-auto rounded-l-lg pb-10 pl-1 pr-3 pt-2 md:rounded-lg lg:h-full">
         <EncounterMonsContainer selectedTab={selectedTab} />
       </div>
       <div
