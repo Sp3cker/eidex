@@ -33,11 +33,14 @@ const MapContainer = ({ children }: any) => {
       screenWidth === "sm" || screenWidth === "xs"
         ? [-3 * rootFontSize, 3 * rootFontSize]
         : [3 * rootFontSize, 4 * rootFontSize];
+    
     if (selectedCoordinates && mapRef.current) {
       const [x, y] = selectedCoordinates;
+      // Use center positioning for default coordinates, otherwise offset toward upper-left
+      const offsetFactor = x === 400 && y === 340 ? 0.5 : 0.375; // 0.5 = center, 0.375 = 3/8 toward upper-left
       currentTargetCenterOffset = [
-        WINDOW_WIDTH / 2 - x - xyScales[0],
-        WINDOW_HEIGHT / 2 - y - xyScales[1],
+        WINDOW_WIDTH * offsetFactor - x - xyScales[0],
+        WINDOW_HEIGHT * offsetFactor - y - xyScales[1],
       ];
       currentSpringDelay = 160; // Specific delay for this case
     }
