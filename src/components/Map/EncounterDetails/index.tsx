@@ -59,7 +59,7 @@ const EncounterDetails = memo(() => {
         className="absolute right-1 top-1 text-neutral-500"
         onClick={closeEncounter}
       />
-      <h3 className="mb-4 text-lg font-semibold">
+      <h3 className="mb-4 text-base font-calamity font-semibold">
         Encounter Locations for {speciesName}
       </h3>
 
@@ -73,7 +73,7 @@ const EncounterDetails = memo(() => {
             <div key={index} className="rounded-lg border bg-gray-50 p-3">
               <div className="flex items-start justify-between">
                 <div>
-                  <h4 className="font-medium text-gray-900">
+                  <h4 className="font-bold font-calamity text-stone-800">
                     {location.mapName.replace("MAP_", "").replace(/_/g, " ")}
                   </h4>
                   <p className="text-sm capitalize text-gray-600">
