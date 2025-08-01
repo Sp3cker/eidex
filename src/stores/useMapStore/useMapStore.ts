@@ -11,6 +11,7 @@ import {
 } from "./levelIdtoLocationMap";
 import { encounterStore } from "@/data/map/encounters";
 import { urlManager } from "@/lib/urlManager";
+import type { WildEncounterData } from "@/data/map/encounters";
 
 initializeLevelIdLookup();
 
@@ -37,6 +38,10 @@ export const useMapStore = create<MapStore>()(
       isPlacesListOpen: false,
       isTrainersListOpen: false,
       selectedTrainer: null,
+      
+      // EncounterDetails panel state
+      selectedEncounter: null,
+      showEncounter: false,
     };
     return {
       ...initialState,
@@ -196,7 +201,7 @@ export const useMapStore = create<MapStore>()(
       },
       setEncountersData: (data: unknown) => {
         try {
-          encounterStore.setEncounterData(data as any);
+          encounterStore.setEncounterData(data as WildEncounterData);
           encounterStore.dataSource = "next";
           set({ encounterDataSource: "next", hasEncounterDataStored: true });
           const selectedMap = get().selectedMap;
@@ -239,6 +244,7 @@ export const useMapStore = create<MapStore>()(
         // Clear selected trainer when closing trainers list
         if (!open) {
           set({ selectedTrainer: null });
+          set({ showEncounter: false });
           // Update URL to remove trainer when closing
           const currentMap = get().selectedMap;
           if (currentMap) {
@@ -263,6 +269,19 @@ export const useMapStore = create<MapStore>()(
             trainer?.trainerName || null,
           );
         }
+      },
+
+      // EncounterDetails panel actions
+      setSelectedEncounter: (encounterId: number | null) => {
+        set({ selectedEncounter: encounterId });
+        // Automatically set showEncounter to true when an encounter is selected
+        if (typeof encounterId === "number") {
+          set({ showEncounter: true });
+        }
+      },
+
+      setShowEncounter: (show: boolean) => {
+        set({ showEncounter: show });
       },
 
       // Animation coordination methods

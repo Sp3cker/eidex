@@ -2,17 +2,18 @@ import ItemSearch from "@/utils/itemsData";
 import { LevelsInfo } from "@/data/map";
 
 import { pokemonData as pokemon } from "@/data/pokemon";
+import { superNormalizeName } from "@/utils/normalizeName";
 
 import {
   EncounterMons,
   EncounterMonsFromJSON,
 } from "@/stores/useMapStore/types";
 import { encounterStore } from "@/data/map/encounters";
+import { pokemonSearchStore } from "@/stores/pokemonSearchStore";
 /** Works off of `mapBreakDown`, pass it `MAP_SIMPLE_NAME `
  * IT WILl return the baseName, the `id` of the map, and levels
  */
 const getMap = (map: string) => {
-  //@ts-ignore
   const targetMap = LevelsInfo[map];
   if (targetMap === undefined) {
     console.error("Error selecting map %s", map);
@@ -27,70 +28,63 @@ const getMap = (map: string) => {
   //   (m: { id: string; mapBaseName: string }) => m.mapBaseName === map,
   // );
 };
-const MONNAMEKEYS = new Map<string, number>([]); // 'darmanitan_galar' -> 990
-pokemon.forEach((p) => {
-  MONNAMEKEYS.set(
-    p.nameKey
-      .replace(/_|'/g, (m) => (m === "_" ? " " : ""))
-      .toLowerCase()
-      .replace(/-/g, "_"),
-    p.speciesId,
-  );
-  // monsNameKeys.set(p.speciesName.replace("-", "_").toLowerCase(), p.dexId);
-});
+
+const specialCaseIds: Record<string, number> = {
+  darmanitan_galar: 990,
+  mr_mime_galar: 981,
+  mr_mime: 122,
+  mr_rime: 866,
+  mime_jr: 439,
+};
 const putIdOnEncounter: (
   enc: EncounterMonsFromJSON[],
-  monsNameKeys: Map<string, number>,
-) => asserts enc is EncounterMons[] = (enc, monsNameKeys) => {
+) => asserts enc is EncounterMons[] = (enc) => {
   enc.forEach((specie, index) => {
-    let specieIndex = monsNameKeys.get(specie.species);
+    let specieIndex: number | undefined = specialCaseIds[specie.species];
+    if (specieIndex === undefined) {
+      specieIndex = pokemonSearchStore.getPokemonDexId(specie.species);
+    }
     // Handle special cases with a lookup object instead of multiple if statements
-    const specialCaseIds: Record<string, number> = {
-      darmanitan_galar: 990,
-      mr_mime_galar: 981,
-      mr_mime: 122,
-      mr_rime: 866,
-      mime_jr: 439,
-    };
 
     // Check for special case first
-    specieIndex = specialCaseIds[specie.species];
     if (specieIndex === undefined) {
-      // Try standard lookup if not a special cas
-      // Keep this because some mons NEED _ in their name
-      specieIndex = monsNameKeys.get(specie.species);
+      specieIndex = pokemonSearchStore.getPokemonDexId(
+        specie.species.replace(/_/g, " ").toLowerCase(),
+      );
+    }
+    if (specieIndex === undefined) {
+      specieIndex = pokemonSearchStore.getPokemonDexId(
+        specie.species.replace(/ /g, "_").toLowerCase(),
+      );
     }
 
+    // Ultimate fallback – walk the pokemonData array to find a match based on
+    // the human-readable speciesName. This is slow but only runs for the rare
+    // outliers that slipped through the cracks above.
+
+    // "iron_valiant" from encounters file -> iron valiant in nameKeys
     if (specieIndex === undefined) {
-      // "iron_valiant" from encounters file -> iron valiant in nameKeys
-      specieIndex = monsNameKeys.get(
-        specie.species.replace("_", " ").toLowerCase(),
+      debugger
+      // If it gets this far, the mon in 'Encounters' doesn't specify its form so fuck it
+      const monInJson = pokemon.findIndex(
+        (p) =>
+          superNormalizeName(p.speciesName) === specie.species,
       );
-      if (specieIndex === undefined) {
-        // If it gets this far, the mon in 'Encounters' doesn't specify its form so fuck it
-        const monInJson = pokemon.findIndex(
-          (p) =>
-            p.speciesName
-              .toLowerCase()
-              .replace("flabébé", "flabebe")
-              .replace(/♂/g, "_m")
-              .replace(/♀/g, "_f") === specie.species,
+      if (monInJson === -1) {
+        console.error(
+          "Error: %s not found in encounters.json or speciesData.json",
+          specie.species,
         );
-        if (monInJson === -1) {
-          console.error(
-            "Error: %s not found in encounters.json or speciesData.json",
-            specie.species,
-          );
-          enc[index].index = 0;
-          return;
-        }
-        // We found them, now to use their Baseform if its there
-        if (pokemon[monInJson].baseForm) {
-          specieIndex = pokemon[monInJson].baseForm;
-        }
-        specieIndex = pokemon[monInJson].speciesId;
+        enc[index].index = 0;
+        return;
       }
+      // We found them, now to use their Baseform if its there
+      if (pokemon[monInJson].baseForm) {
+        specieIndex = pokemon[monInJson].baseForm;
+      }
+      specieIndex = pokemon[monInJson].speciesId;
     }
+
     return (enc[index].index = specieIndex);
   });
 };
@@ -190,7 +184,7 @@ const putEncounterRate = (mons: EncounterMons[]) => {
 
 const getSelectedMapInfo = (id: string, levelId: string) => {
   const Encounters = encounterStore.getEncounterData();
-  debugger
+
   const targetMapEncounterGroup = Encounters[id];
   if (targetMapEncounterGroup === undefined) {
     console.warn("No encounters for map %s", id);
@@ -212,15 +206,15 @@ const getSelectedMapInfo = (id: string, levelId: string) => {
      */
     //nameKey cause it probly matches encounter Data
     if (targetMapEncounters && targetMapEncounters.land_mons) {
-      putIdOnEncounter(targetMapEncounters.land_mons.mons, MONNAMEKEYS);
+      putIdOnEncounter(targetMapEncounters.land_mons.mons);
       landEncounters = putEncounterRate(targetMapEncounters.land_mons?.mons);
     }
     if (targetMapEncounters && targetMapEncounters.water_mons) {
-      putIdOnEncounter(targetMapEncounters.water_mons.mons, MONNAMEKEYS);
+      putIdOnEncounter(targetMapEncounters.water_mons.mons);
       waterEncounters = putEncounterRate(targetMapEncounters.water_mons?.mons);
     }
     if (targetMapEncounters && targetMapEncounters.fishing_mons) {
-      putIdOnEncounter(targetMapEncounters.fishing_mons.mons, MONNAMEKEYS);
+      putIdOnEncounter(targetMapEncounters.fishing_mons.mons);
       putRodUsed(targetMapEncounters.fishing_mons.mons); // Add rod information
       fishingEncounters = putEncounterRate(
         targetMapEncounters.fishing_mons.mons,
@@ -298,7 +292,6 @@ const getSelectedLevel = ({
   };
 };
 export const getInitialMapLevelData = (baseMapName: string) => {
-
   const mapDetails = getMap(baseMapName);
   if (!mapDetails || !mapDetails.levels || mapDetails.levels.length === 0) {
     console.error(

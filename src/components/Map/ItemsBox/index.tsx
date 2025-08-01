@@ -3,11 +3,6 @@ import { animated, useSpring, useTransition } from "@react-spring/web";
 import useMapStore from "@/stores/useMapStore";
 import { shallow } from "zustand/shallow";
 import { FadeInWAAPI } from "@/components/ui/FadeInWaapi";
-import { useAtom, useAtomValue } from "jotai";
-import {
-  selectedEncounterAtom,
-  showEncounterAtom,
-} from "../EncounterDetails/selectedEncounterStore";
 
 const ItemsBox = lazy(() => import("./ItemsBox"));
 const TrainerBattleInfo = lazy(() => import("../TrainerBattleInfo"));
@@ -73,15 +68,15 @@ const ANIMATE_HEIGHT = navigator.deviceMemory && navigator.deviceMemory > 4;
 //   paddingRight: "env(safe-area-inset-right)",
 // });
 export default memo(function MapItemsBox() {
-  const [selectedMap, selectedTrainer, show] = useMapStore(
+  const [selectedMap, selectedTrainer, show, showEncounter] = useMapStore(
     (state) => [
       state.selectedMap !== null,
       state.selectedTrainer,
       state.selectedMap !== null && state.dragging === false,
+      state.showEncounter,
     ],
     shallow,
   );
-  const showEncounter = useAtomValue(showEncounterAtom);
 
   const [springs] = useSpring(
     {

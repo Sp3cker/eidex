@@ -2,7 +2,7 @@ import { pokemonData as speciesData } from "../data/pokemon";
 import {Pokemon} from "@/types"
 
 export function getSpeciesName(speciesId: number): string {
-  const species = speciesData.find((species) => species.dexId === speciesId);
+  const species = speciesData.find((species) => species.speciesId === speciesId);
   if (!species) return "None";
   return species.speciesName || "None";
 }
