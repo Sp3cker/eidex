@@ -93,11 +93,11 @@ const hiddenPwTypes = [
  * @param moveIds - Array of move IDs to get details for
  * @returns Array of move objects with name, power, type name, and type colors
  */
-export function getMoveDetails(moveIds: number[], hpType: number) {
+export function getMoveDetails(moveIds: number[], hpType?: number) {
   if (!moveIds || moveIds.length === 0) {
     return [];
   }
-  console.log(hpType);
+
   // Create a map of move data for efficient lookup
   const moveDataMap = moveData.reduce(
     (acc, move) => {
@@ -111,7 +111,7 @@ export function getMoveDetails(moveIds: number[], hpType: number) {
   // Get move data for all moves efficiently
   return moveIds.map((moveId) => {
     const move = moveDataMap[moveId];
-    if (move.name === "Hidden Power") {
+    if (move.name === "Hidden Power" && hpType !== undefined) {
       debugger;
       move.name = `Hidden Power (${hiddenPwTypes[hpType - 1]})`;
     }
