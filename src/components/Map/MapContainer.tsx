@@ -26,7 +26,7 @@ const MapContainer = ({ children }: any) => {
   const windowSize = useWindowSize();
   const { width: WINDOW_WIDTH, height: WINDOW_HEIGHT } = windowSize;
   const [{ scale, centerOffset }, api] = useSpring(() => {
-    let currentTargetCenterOffset = [WINDOW_WIDTH > 1000 ? -100 : 0, 100]; // Default if no coordinates or mapRef
+    let currentTargetCenterOffset = [WINDOW_WIDTH > 1000 ? 200 : 0, 150]; // Default if no coordinates or mapRef
     // Default config
     let currentSpringDelay = 0; // Default delay
     const xyScales =
@@ -95,7 +95,7 @@ const MapContainer = ({ children }: any) => {
     },
   );
   useEffect(() => {
-    api.start({ centerOffset: [WINDOW_WIDTH > 1000 ? 100 : 0, 100] });
+    api.start({ centerOffset: [WINDOW_WIDTH > 1000 ? 200 : 0, 150] });
   }, []);
   return (
     <div
