@@ -55,28 +55,7 @@ const Footer = memo(function Footer() {
         }}
         className="footer-bg-text fade-in-footer  bottom-0 left-0 right-0 z-10 flex w-full items-center justify-between bg-gray-700 ring md:relative md:bottom-auto"
       >
-        <div className="footer-bg-bgtext-1 leading-none">
-          {"  "} LFG 1.3 LFG 1.3 LFG1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LF G 1.3 LFG 1.3 LFG THERES
-          REAL SEX in 1.3 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LFG 1.3 LFG 1.3 LFG ITS REAL ITS NOW 1.3 LFG 1.3 LFG 1.3
-          GOATDINOLFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1. 3 LFG 1.3 LFG GIVE blaziken
-          speed boost back cmon1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1. 3 LFG 1.3 LFG
-          1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LF G 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LF G 1. 1.3 LFG 1.3 LFG 1.3 LFG 1.3 1.3 LFG 1.3 LFG 1.3 LF G 1.3
-          LF G 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LFG 1.3 LFG U CAN DO DRUGS AND SMOKE CIGARETTES IN 1.3 LFG 1.3
-          LFG1.3 LFG 1.3 LFG 1.3 LFG 1.3 1.3 LFG 1. 3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3
-          LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG
-          1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 U CAN FUCK DAWN IN
-          1.3 THERES GUNS AND BALLS IN 1.3 LFG 1.3 LFG 1.3 LFG 1.3 GOATDINOLFG
-          1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFG 1.3 LFjk FUCK BLAZIKEN
-        </div>
+       
         {/* ...existing code... */}
         <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">
           <p>
@@ -101,8 +80,7 @@ const Footer = memo(function Footer() {
         <div className="flex flex-col sm:w-80">
           <HiddenFileDrop />
           <p className="font-pkmnem leading-xs text-sm/3 text-white">
-            1.3 FRIDAY!!! LETS F*UCKINNN OGGOOOOO! ! ! ! ! ! ! ! ! !
-          </p>
+1.3!!!!!!           </p>
         </div>
         <div className="flex items-center justify-end gap-5">
           <div className="md:w-full">

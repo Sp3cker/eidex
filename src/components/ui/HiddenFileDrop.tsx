@@ -74,7 +74,7 @@ const HiddenFileDrop = () => {
         className="font-pkmnem leading-xs cursor-pointer text-left text-sm/3 text-white"
         onClick={openFileSelector}
       >
-        Data&nbsp;for E.I.&nbsp;{hasEncountersStored || "1.2"}
+        Data&nbsp;for E.I.&nbsp;{hasEncountersStored || "1.3"}
       </button>
       {hasEncountersStored && (
         <>
