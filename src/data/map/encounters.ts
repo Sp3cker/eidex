@@ -1,4 +1,4 @@
-import defaultEncounters from "./wild_encounters1_3.json";
+import defaultEncounters from "./wild_encounters.json";
 import { EncounterGroup } from "./index";
 import { superNormalizeName } from "@/utils/normalizeName";
 
