@@ -169,7 +169,7 @@ input[type="number"] {
   .pixelated {
     image-rendering: pixelated;
   }
-  @media (max-resolution: 99dpi) {
+  @media (max-resolution: 125dpi) {
     .pixelated {
       image-rendering: auto;
     }
