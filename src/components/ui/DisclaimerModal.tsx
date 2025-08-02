@@ -105,7 +105,6 @@ const paragraphs = (springAnim: any, index: number) => {
         </strong>
       </h3>
       <ul className="list-disc pl-6">
-        <li>The developers of Pokémon Emerald Imperium</li>
         <li>The Pokémon Company International</li>
         <li>Nintendo Co., Ltd.</li>
         <li>Game Freak Inc.</li>
