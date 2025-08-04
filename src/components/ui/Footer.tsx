@@ -11,7 +11,7 @@ const Footer = memo(function Footer() {
           paddingLeft: "env(safe-area-inset-left)",
           paddingRight: "env(safe-area-inset-right)",
         }}
-        className="footer-bg-text fade-in-footer bottom-0 left-0 right-0 z-10 flex w-full items-center justify-between bg-gray-700 ring md:relative md:bottom-auto"
+        className="footer-bg-text fade-in-footer fixed bottom-0 left-0 right-0 z-10 flex w-full items-center justify-between bg-gray-700 ring md:relative md:bottom-auto"
       >
         {/* ...existing code... */}
         <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">

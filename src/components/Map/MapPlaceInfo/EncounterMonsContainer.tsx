@@ -1,7 +1,7 @@
 import EncounterMonsList from "./EncounterMonsList";
 import { useWindowSize } from "@/hooks/useWindowResize";
 const EncounterHeader = ({ text }: { text: string }) => (
-  <p className="text-shadow-xs pl-2 text-center font-bold text-stone-700">
+  <p className="text-shadow-xs pl-2 text-center text-sm font-bold text-stone-700">
     {text}
   </p>
 );
