@@ -50,7 +50,7 @@ export const ErrorBanner = ({
             </ul>
           </div>
         ) : (
-          "Item not buyable/given. Maybe it's a held item?"
+          <h3>Item not available in game.</h3>
         )}
       </a.div>
     ) : null,

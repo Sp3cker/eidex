@@ -55,11 +55,11 @@ const Search = () => {
       const pokemons = itemSearch.getMonIdsWithHeldItem(id);
       if (pokemons && pokemons.length > 0) {
         setShowToast({ show: true, type: "held", species: pokemons });
-        setTimeout(() => setShowToast({ show: false, type: "held" }), 5000);
+        setTimeout(() => setShowToast({ show: false, type: "held" }), 3300);
         return;
       } else {
         setShowToast({ show: true, type: "error" });
-        setTimeout(() => setShowToast({ show: false, type: "error" }), 2000);
+        setTimeout(() => setShowToast({ show: false, type: "error" }), 3300);
       }
       // Do NOT clear the search term here!
     },
