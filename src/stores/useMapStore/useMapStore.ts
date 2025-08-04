@@ -11,7 +11,6 @@ import {
 } from "./levelIdtoLocationMap";
 import { encounterStore } from "@/data/map/encounters";
 import { urlManager } from "@/lib/urlManager";
-import type { WildEncounterData } from "@/data/map/encounters";
 
 initializeLevelIdLookup();
 
@@ -38,7 +37,7 @@ export const useMapStore = create<MapStore>()(
       isPlacesListOpen: false,
       isTrainersListOpen: false,
       selectedTrainer: null,
-      
+
       // EncounterDetails panel state
       selectedEncounter: null,
       showEncounter: false,
@@ -70,7 +69,6 @@ export const useMapStore = create<MapStore>()(
         }
         // updateMapHelmet(mapName);
         const initialMapData = getInitialMapLevelData(mapName);
-
         if (!initialMapData) {
           console.error(
             `Failed to get initial data for map: ${mapName}. Deselecting map.`,
@@ -201,7 +199,7 @@ export const useMapStore = create<MapStore>()(
       },
       setEncountersData: (data: unknown) => {
         try {
-          encounterStore.setEncounterData(data as WildEncounterData);
+          encounterStore.setEncounterData(data as any);
           encounterStore.dataSource = "next";
           set({ encounterDataSource: "next", hasEncounterDataStored: true });
           const selectedMap = get().selectedMap;

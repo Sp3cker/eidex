@@ -10,6 +10,7 @@ const ItemsList = memo(function ItemsList() {
   const [selectedTab, setSelectedTab] = useState<TabType>("story");
 
   const { whatToShow, items } = useItemsData(selectedTab);
+  
   useEffect(() => {
     if (whatToShow.story) {
       setSelectedTab("story");
@@ -18,7 +19,7 @@ const ItemsList = memo(function ItemsList() {
     } else if (whatToShow.marts) {
       setSelectedTab("marts");
     }
-  }, []);
+  }, [whatToShow]);
 
   return (
     <>

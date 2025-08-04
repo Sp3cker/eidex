@@ -5,7 +5,7 @@ const putTypeOnEncounter = (
   enc: EncounterMons[],
 ): (EncounterMons & { types: [number, number] })[] => {
   return enc.map((encounter) => {
-    const species = pokemonData.find((p) => p.speciesId === encounter.index);
+    const species = pokemonData.find((p) => p.speciesId === encounter.species);
     if (species) {
       Object.defineProperty(encounter, "types", {
         value: species.types,

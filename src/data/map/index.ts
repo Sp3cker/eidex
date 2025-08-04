@@ -4,7 +4,9 @@ import items from "./merged-items.json";
 type EncounterListing = {
   min_level: number;
   max_level: number;
-  species: string;
+  species: number;
+  name: string;
+
 };
 export type TrainerRef = { id: string; script: string };
 export type LevelMart = {
@@ -105,19 +107,19 @@ export type ItemWithCoords = Item & {
 export type EncounterGroup = {
   map: string;
   base_label: string;
-  land_mons?: {
+  land: {
     encounter_rate: number;
     mons: EncounterListing[];
   };
-  water_mons?: {
+  water: {
     encounter_rate: number;
     mons: EncounterListing[];
   };
-  fishing_mons?: {
+  fish: {
     encounter_rate: number;
     mons: EncounterListing[];
   };
-  rock_smash_mons?: {
+  rock: {
     encounter_rate: number;
     mons: EncounterListing[];
   };

@@ -1,8 +1,9 @@
 import { useEncounter } from "./useEncounter";
 import React from "react";
 import { EncounterTypeBadge } from "./EncounterTypeBadge";
-import { formatMapString } from "@/utils/formatMapString";
+
 import { useMapStore } from "@/stores/useMapStore";
+import { EncounterMons } from "@/stores/useMapStore/types";
 // Reads species from pokemon by ID, puts type, ie 'Normal' or 'Fire' on encounter
 // This is used to display the type of the encounter in the UI
 
@@ -52,12 +53,62 @@ const EncounterDescriptor = ({
     </div>
   );
 };
+const EncounterMonListItem = ({
+  mon,
+  zone,
+  setSelectedEncounter,
+}: {
+  mon: EncounterMons & { types: [number, number] };
+  zone: "water" | "land" | "fishing";
+  setSelectedEncounter: (speciesId: number) => void;
+}) => {
+  const isSelected = useMapStore(
+    (state) => state.selectedEncounter === mon.species,
+  );
+  const zoneColor = zoneToTextColor(zone);
+  return (
+    <div
+      key={`${mon.species}`}
+      className={`w-37 flex w-full cursor-pointer items-start gap-1 overflow-hidden rounded p-0 pl-2 transition-colors md:pr-2 ${zoneToBgColor(zone)} ${isSelected ? "bg-emerald-100" : ""}`}
+      onMouseDown={() => setSelectedEncounter(mon.species)}
+    >
+      <div className="relative overflow-hidden drop-shadow-md">
+        <img
+          className="pixelated aspect-square h-8 w-8"
+          src={`/icon/${mon.species}/icon.webp`}
+          alt={mon.name}
+        />
+      </div>
+      <div className="grow pr-0 relative">
+
+          <h3
+            className={`font-bold text-shadow-2xs text-shadow-stone-200 max-w-20 text-xs ${zoneColor}`}
+            >
+            {mon.name}
+          </h3>
+            {isSelected && <p className={`absolute right-2.5 -top-1 text-xl font-bold  fade-scale-rotate ${zoneColor}`}>☼</p>}
+
+
+        <EncounterDescriptor
+          zone={zone}
+          minLevel={mon.min_level}
+          maxLevel={mon.max_level}
+          rate={mon.rate}
+          rod={mon.rod}
+          types={mon.types}
+        />
+      </div>
+    </div>
+  );
+};
 const EncounterMonsList = React.memo(function EncounterList({
   zone,
 }: {
   zone: "water" | "land" | "fishing";
 }) {
-  const setSelectedEncounter = useMapStore((state) => state.setSelectedEncounter);
+  const setSelectedEncounter = useMapStore(
+    (state) => state.setSelectedEncounter,
+  );
   const encounter = useEncounter(zone);
   if (!encounter || encounter.length === 0) {
     return (
@@ -69,35 +120,12 @@ const EncounterMonsList = React.memo(function EncounterList({
   return (
     <div className="flex flex-col gap-0.5">
       {encounter.map((mon, index) => (
-        <div
-          key={`${mon.index}${index}`}
-          className={`w-37 flex w-full cursor-pointer items-start gap-1 overflow-hidden rounded p-0 pl-2 transition-colors md:pr-2 ${zoneToBgColor(zone)}`}
-          onMouseDown={() => setSelectedEncounter(mon.index)}
-        >
-          <div className="relative overflow-hidden drop-shadow-md">
-            <img
-              className="pixelated aspect-square h-8 w-8"
-              src={`/icon/${mon.index}/icon.webp`}
-              alt={formatMapString(mon.species)}
-            />
-          </div>
-          <div className="grow pr-0">
-            <h3
-              className={`font-bold ${zoneToTextColor(zone)} text-shadow-2xs text-shadow-stone-200 max-w-20 text-xs`}
-            >
-              {formatMapString(mon.species)}
-            </h3>
-
-            <EncounterDescriptor
-              zone={zone}
-              minLevel={mon.min_level}
-              maxLevel={mon.max_level}
-              rate={mon.rate}
-              rod={mon.rod}
-              types={mon.types}
-            />
-          </div>
-        </div>
+        <EncounterMonListItem
+          key={`${mon.name}${index}`}
+          mon={mon}
+          zone={zone}
+          setSelectedEncounter={setSelectedEncounter}
+        />
       ))}
     </div>
   );

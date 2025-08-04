@@ -6,19 +6,13 @@ import { DisplayTrainer } from "@/data/map/trainers";
 type EncounterMons = {
   min_level: number;
   max_level: number;
-  species: string;
-  index: number;
+  species: number;
+  name: string;
 
   rate: number;
   rod?: string; // Optional rod type for fishing encounters
 };
-type EncounterMonsFromJSON = {
-  min_level: number;
-  max_level: number;
-  species: string;
 
-  index?: number; // doesn't exist until we derive it
-};
 type Level = {
   /**What the levels indexable by in `cleanEncounters.json */
   id: string;
@@ -100,4 +94,4 @@ type MapStore = {
   getIsAnimating: () => boolean;
 };
 
-export type { EncounterMons, EncounterMonsFromJSON, MapStore, Level };
+export type { EncounterMons, MapStore, Level };

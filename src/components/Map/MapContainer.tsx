@@ -117,7 +117,7 @@ const MapContainer = ({ children }: any) => {
           }),
           transformOrigin: "center",
         }}
-        className="will-transform h-[667px] w-[800px]"
+        className="will-transform h-[405px] w-[720px]"
       >
         {children}
       </animated.div>

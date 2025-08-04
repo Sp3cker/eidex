@@ -1,27 +1,40 @@
-import defaultEncounters from "./wild_encounters.json";
+import defaultEncounters from "./encounters.json";
 import { EncounterGroup } from "./index";
-import { superNormalizeName } from "@/utils/normalizeName";
+import { pokemonDataMap } from "../pokemon";
 
 interface Mon {
   min_level?: number;
   max_level?: number;
-  species: string;
+  species: number;
 }
 // Base types for encounter data
 type EncounterListing = {
   min_level: number;
   max_level: number;
-  species: string;
+  species: number;
+  name: string;
 };
 
-export interface WildEncounterData {
+interface WildEncounterData {
   wild_encounter_groups: Array<{
     label: string;
     for_maps: boolean;
     encounters: EncounterGroup[];
   }>;
 }
-
+/** looks like this
+ * "MAP_ROUTE102" :{
+ *  "land": {
+ *    "encounter_rate": 20,
+ *    "mons": [
+ *      {
+ *        "min_level": 3,
+ *        "max_level": 5,}
+ *      }
+ *    ]
+ *  }
+ * }
+ */
 class EncounterStore {
   private static readonly USER_ENCOUNTERS_KEY = "userEncounterData";
   private processedDefaultEncounters: Record<string, EncounterGroup[]>;
@@ -30,8 +43,9 @@ class EncounterStore {
   constructor() {
     // Process default encounters the same way as user-provided data
     const processedData = this.parseAndConvertSpecies(
-      defaultEncounters as WildEncounterData,
+      defaultEncounters as unknown as WildEncounterData,
     );
+
     this.processedDefaultEncounters = this.groupEncounterData(processedData);
   }
 
@@ -59,27 +73,19 @@ class EncounterStore {
     }
 
     const convertSpecies = (mons: Mon[]): EncounterListing[] => {
-      // Map of edge–case species names coming from the encounters file ➡️ the
-      // canonical keys used inside speciesData.json (and therefore inside
-      // MONNAMEKEYS). Doing this translation once during initialisation means
-      // we don't need to repeat the edge-case logic every time a map is
-      // selected.
-
-
       return mons.map((mon) => {
         if (mon.min_level === undefined || mon.max_level === undefined) {
           throw new Error("Missing min_level or max_level in encounter data");
         }
 
-        // Remove the COMPILER enum prefix and use the shared normalization function
-        const speciesKey = superNormalizeName(mon.species.replace(/^SPECIES_/, ""));
-        // if (speciesKey.includes("sneasel_hisu")) {
-        //   debugger
-        // }
+        const speciesData = pokemonDataMap.get(mon.species.toString());
+        const name = speciesData ? speciesData.nameKey : "Unknown";
+
         return {
           min_level: mon.min_level,
           max_level: mon.max_level,
-          species: speciesKey,
+          species: mon.species, // Directly use the species as a number
+          name, // Add the name property
         };
       });
     };
@@ -87,31 +93,31 @@ class EncounterStore {
     return mainEncounterGroup.encounters.map((mapObj: EncounterGroup) => {
       const newMapObj: EncounterGroup = { ...mapObj };
 
-      if (newMapObj.land_mons) {
-        newMapObj.land_mons = {
-          ...newMapObj.land_mons,
-          mons: convertSpecies(newMapObj.land_mons.mons),
+      if (newMapObj.land) {
+        newMapObj.land = {
+          encounter_rate: newMapObj.land.encounter_rate,
+          mons: convertSpecies(newMapObj.land.mons),
         };
       }
 
-      if (newMapObj.water_mons) {
-        newMapObj.water_mons = {
-          ...newMapObj.water_mons,
-          mons: convertSpecies(newMapObj.water_mons.mons),
+      if (newMapObj.water) {
+        newMapObj.water = {
+          encounter_rate: newMapObj.water.encounter_rate,
+          mons: convertSpecies(newMapObj.water.mons),
         };
       }
 
-      if (newMapObj.fishing_mons) {
-        newMapObj.fishing_mons = {
-          ...newMapObj.fishing_mons,
-          mons: convertSpecies(newMapObj.fishing_mons.mons),
+      if (newMapObj.fish) {
+        newMapObj.fish = {
+          encounter_rate: newMapObj.fish.encounter_rate,
+          mons: convertSpecies(newMapObj.fish.mons),
         };
       }
 
-      if (newMapObj.rock_smash_mons) {
-        newMapObj.rock_smash_mons = {
-          ...newMapObj.rock_smash_mons,
-          mons: convertSpecies(newMapObj.rock_smash_mons.mons),
+      if (newMapObj.rock) {
+        newMapObj.rock = {
+          encounter_rate: newMapObj.rock.encounter_rate,
+          mons: convertSpecies(newMapObj.rock.mons),
         };
       }
 
@@ -142,11 +148,13 @@ class EncounterStore {
     }
   }
   /** Main getter and setter */
-  public getEncounterData(): Record<string, EncounterGroup[]> {
+  public getEncounterData() {
     if (this.dataSource === "default") {
       return this.processedDefaultEncounters;
     }
-    //@ts-expect-error - storedEncounterData may be undefined but we're handling it
+    if (!this.storedEncounterData) {
+      throw new Error("No encounter data found");
+    }
     return this.storedEncounterData;
   }
   public isStoredEncounterData(): boolean {

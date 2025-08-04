@@ -18,6 +18,7 @@ const PokeSearch = () => {
     (state) => state.setSelectedPokemonByIndex,
   );
   const setSelectedMapLevel = useMapStore((state) => state.setSelectedMapLevel);
+  const setSelectedEncounter = useMapStore((state) => state.setSelectedEncounter);
   const deselectMap = useMapStore((state) => state.deselectMap);
   const [query, setQuery] = useState("");
 
@@ -64,13 +65,15 @@ const PokeSearch = () => {
       handleQuery(pokemonNameKey);
 
       const mon = pokemonSearchStore.getPokemonEncounterInfo(pokemonNameKey);
+
       if (!mon) {
         console.error("Error selecting mon search result");
         return;
       }
-      if (mon.foundInEncounters) {
+      if (mon.foundInEncounters && mon.speciesId) {
         if (mon.levelIDs && mon.levelIDs.length > 0) {
           setSelectedMapLevel(mon.levelIDs[0]);
+          setSelectedEncounter(mon.speciesId);
         }
       } else {
         const dexId = pokemonSearchStore.getPokemonDexId(pokemonNameKey);
