@@ -1,0 +1,2106 @@
+{
+  "MAP_PETALBURG_CITY": {
+    "num": 0,
+    "group": 0
+  },
+  "MAP_SLATEPORT_CITY": {
+    "num": 1,
+    "group": 0
+  },
+  "MAP_MAUVILLE_CITY": {
+    "num": 2,
+    "group": 0
+  },
+  "MAP_RUSTBORO_CITY": {
+    "num": 3,
+    "group": 0
+  },
+  "MAP_FORTREE_CITY": {
+    "num": 4,
+    "group": 0
+  },
+  "MAP_LILYCOVE_CITY": {
+    "num": 5,
+    "group": 0
+  },
+  "MAP_MOSSDEEP_CITY": {
+    "num": 6,
+    "group": 0
+  },
+  "MAP_SOOTOPOLIS_CITY": {
+    "num": 7,
+    "group": 0
+  },
+  "MAP_EVER_GRANDE_CITY": {
+    "num": 8,
+    "group": 0
+  },
+  "MAP_LITTLEROOT_TOWN": {
+    "num": 9,
+    "group": 0
+  },
+  "MAP_OLDALE_TOWN": {
+    "num": 10,
+    "group": 0
+  },
+  "MAP_DEWFORD_TOWN": {
+    "num": 11,
+    "group": 0
+  },
+  "MAP_LAVARIDGE_TOWN": {
+    "num": 12,
+    "group": 0
+  },
+  "MAP_FALLARBOR_TOWN": {
+    "num": 13,
+    "group": 0
+  },
+  "MAP_VERDANTURF_TOWN": {
+    "num": 14,
+    "group": 0
+  },
+  "MAP_PACIFIDLOG_TOWN": {
+    "num": 15,
+    "group": 0
+  },
+  "MAP_ROUTE101": {
+    "num": 16,
+    "group": 0
+  },
+  "MAP_ROUTE102": {
+    "num": 17,
+    "group": 0
+  },
+  "MAP_ROUTE103": {
+    "num": 18,
+    "group": 0
+  },
+  "MAP_ROUTE104": {
+    "num": 19,
+    "group": 0
+  },
+  "MAP_ROUTE105": {
+    "num": 20,
+    "group": 0
+  },
+  "MAP_ROUTE106": {
+    "num": 21,
+    "group": 0
+  },
+  "MAP_ROUTE107": {
+    "num": 22,
+    "group": 0
+  },
+  "MAP_ROUTE108": {
+    "num": 23,
+    "group": 0
+  },
+  "MAP_ROUTE109": {
+    "num": 24,
+    "group": 0
+  },
+  "MAP_ROUTE110": {
+    "num": 25,
+    "group": 0
+  },
+  "MAP_ROUTE111": {
+    "num": 26,
+    "group": 0
+  },
+  "MAP_ROUTE112": {
+    "num": 27,
+    "group": 0
+  },
+  "MAP_ROUTE113": {
+    "num": 28,
+    "group": 0
+  },
+  "MAP_ROUTE114": {
+    "num": 29,
+    "group": 0
+  },
+  "MAP_ROUTE115": {
+    "num": 30,
+    "group": 0
+  },
+  "MAP_ROUTE116": {
+    "num": 31,
+    "group": 0
+  },
+  "MAP_ROUTE117": {
+    "num": 32,
+    "group": 0
+  },
+  "MAP_ROUTE118": {
+    "num": 33,
+    "group": 0
+  },
+  "MAP_ROUTE119": {
+    "num": 34,
+    "group": 0
+  },
+  "MAP_ROUTE120": {
+    "num": 35,
+    "group": 0
+  },
+  "MAP_ROUTE121": {
+    "num": 36,
+    "group": 0
+  },
+  "MAP_ROUTE122": {
+    "num": 37,
+    "group": 0
+  },
+  "MAP_ROUTE123": {
+    "num": 38,
+    "group": 0
+  },
+  "MAP_ROUTE124": {
+    "num": 39,
+    "group": 0
+  },
+  "MAP_ROUTE125": {
+    "num": 40,
+    "group": 0
+  },
+  "MAP_ROUTE126": {
+    "num": 41,
+    "group": 0
+  },
+  "MAP_ROUTE127": {
+    "num": 42,
+    "group": 0
+  },
+  "MAP_ROUTE128": {
+    "num": 43,
+    "group": 0
+  },
+  "MAP_ROUTE129": {
+    "num": 44,
+    "group": 0
+  },
+  "MAP_ROUTE130": {
+    "num": 45,
+    "group": 0
+  },
+  "MAP_ROUTE131": {
+    "num": 46,
+    "group": 0
+  },
+  "MAP_ROUTE132": {
+    "num": 47,
+    "group": 0
+  },
+  "MAP_ROUTE133": {
+    "num": 48,
+    "group": 0
+  },
+  "MAP_ROUTE134": {
+    "num": 49,
+    "group": 0
+  },
+  "MAP_UNDERWATER_ROUTE124": {
+    "num": 50,
+    "group": 0
+  },
+  "MAP_UNDERWATER_ROUTE126": {
+    "num": 51,
+    "group": 0
+  },
+  "MAP_UNDERWATER_ROUTE127": {
+    "num": 52,
+    "group": 0
+  },
+  "MAP_UNDERWATER_ROUTE128": {
+    "num": 53,
+    "group": 0
+  },
+  "MAP_UNDERWATER_ROUTE129": {
+    "num": 54,
+    "group": 0
+  },
+  "MAP_UNDERWATER_ROUTE105": {
+    "num": 55,
+    "group": 0
+  },
+  "MAP_UNDERWATER_ROUTE125": {
+    "num": 56,
+    "group": 0
+  },
+  "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F": {
+    "num": 0,
+    "group": 1
+  },
+  "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F": {
+    "num": 1,
+    "group": 1
+  },
+  "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F": {
+    "num": 2,
+    "group": 1
+  },
+  "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F": {
+    "num": 3,
+    "group": 1
+  },
+  "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB": {
+    "num": 4,
+    "group": 1
+  },
+  "MAP_NEW_BIRCHS_LAB": {
+    "num": 5,
+    "group": 1
+  },
+  "MAP_OLDALE_TOWN_HOUSE1": {
+    "num": 0,
+    "group": 2
+  },
+  "MAP_OLDALE_TOWN_HOUSE2": {
+    "num": 1,
+    "group": 2
+  },
+  "MAP_OLDALE_TOWN_POKEMON_CENTER_1F": {
+    "num": 2,
+    "group": 2
+  },
+  "MAP_OLDALE_TOWN_POKEMON_CENTER_2F": {
+    "num": 3,
+    "group": 2
+  },
+  "MAP_OLDALE_TOWN_MART": {
+    "num": 4,
+    "group": 2
+  },
+  "MAP_DEWFORD_TOWN_HOUSE1": {
+    "num": 0,
+    "group": 3
+  },
+  "MAP_DEWFORD_TOWN_POKEMON_CENTER_1F": {
+    "num": 1,
+    "group": 3
+  },
+  "MAP_DEWFORD_TOWN_POKEMON_CENTER_2F": {
+    "num": 2,
+    "group": 3
+  },
+  "MAP_DEWFORD_TOWN_GYM": {
+    "num": 3,
+    "group": 3
+  },
+  "MAP_DEWFORD_TOWN_HALL": {
+    "num": 4,
+    "group": 3
+  },
+  "MAP_DEWFORD_TOWN_HOUSE2": {
+    "num": 5,
+    "group": 3
+  },
+  "MAP_LAVARIDGE_TOWN_HERB_SHOP": {
+    "num": 0,
+    "group": 4
+  },
+  "MAP_LAVARIDGE_TOWN_GYM_1F": {
+    "num": 1,
+    "group": 4
+  },
+  "MAP_LAVARIDGE_TOWN_GYM_B1F": {
+    "num": 2,
+    "group": 4
+  },
+  "MAP_LAVARIDGE_TOWN_HOUSE": {
+    "num": 3,
+    "group": 4
+  },
+  "MAP_LAVARIDGE_TOWN_MART": {
+    "num": 4,
+    "group": 4
+  },
+  "MAP_LAVARIDGE_TOWN_POKEMON_CENTER_1F": {
+    "num": 5,
+    "group": 4
+  },
+  "MAP_LAVARIDGE_TOWN_POKEMON_CENTER_2F": {
+    "num": 6,
+    "group": 4
+  },
+  "MAP_FALLARBOR_TOWN_MART": {
+    "num": 0,
+    "group": 5
+  },
+  "MAP_FALLARBOR_TOWN_BATTLE_TENT_LOBBY": {
+    "num": 1,
+    "group": 5
+  },
+  "MAP_FALLARBOR_TOWN_BATTLE_TENT_CORRIDOR": {
+    "num": 2,
+    "group": 5
+  },
+  "MAP_FALLARBOR_TOWN_BATTLE_TENT_BATTLE_ROOM": {
+    "num": 3,
+    "group": 5
+  },
+  "MAP_FALLARBOR_TOWN_POKEMON_CENTER_1F": {
+    "num": 4,
+    "group": 5
+  },
+  "MAP_FALLARBOR_TOWN_POKEMON_CENTER_2F": {
+    "num": 5,
+    "group": 5
+  },
+  "MAP_FALLARBOR_TOWN_COZMOS_HOUSE": {
+    "num": 6,
+    "group": 5
+  },
+  "MAP_FALLARBOR_TOWN_MOVE_RELEARNERS_HOUSE": {
+    "num": 7,
+    "group": 5
+  },
+  "MAP_VERDANTURF_TOWN_BATTLE_TENT_LOBBY": {
+    "num": 0,
+    "group": 6
+  },
+  "MAP_VERDANTURF_TOWN_BATTLE_TENT_CORRIDOR": {
+    "num": 1,
+    "group": 6
+  },
+  "MAP_VERDANTURF_TOWN_BATTLE_TENT_BATTLE_ROOM": {
+    "num": 2,
+    "group": 6
+  },
+  "MAP_VERDANTURF_TOWN_MART": {
+    "num": 3,
+    "group": 6
+  },
+  "MAP_VERDANTURF_TOWN_POKEMON_CENTER_1F": {
+    "num": 4,
+    "group": 6
+  },
+  "MAP_VERDANTURF_TOWN_POKEMON_CENTER_2F": {
+    "num": 5,
+    "group": 6
+  },
+  "MAP_VERDANTURF_TOWN_WANDAS_HOUSE": {
+    "num": 6,
+    "group": 6
+  },
+  "MAP_VERDANTURF_TOWN_FRIENDSHIP_RATERS_HOUSE": {
+    "num": 7,
+    "group": 6
+  },
+  "MAP_VERDANTURF_TOWN_HOUSE": {
+    "num": 8,
+    "group": 6
+  },
+  "MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_1F": {
+    "num": 0,
+    "group": 7
+  },
+  "MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_2F": {
+    "num": 1,
+    "group": 7
+  },
+  "MAP_PACIFIDLOG_TOWN_HOUSE1": {
+    "num": 2,
+    "group": 7
+  },
+  "MAP_PACIFIDLOG_TOWN_HOUSE2": {
+    "num": 3,
+    "group": 7
+  },
+  "MAP_PACIFIDLOG_TOWN_HOUSE3": {
+    "num": 4,
+    "group": 7
+  },
+  "MAP_PACIFIDLOG_TOWN_HOUSE4": {
+    "num": 5,
+    "group": 7
+  },
+  "MAP_PACIFIDLOG_TOWN_HOUSE5": {
+    "num": 6,
+    "group": 7
+  },
+  "MAP_PETALBURG_CITY_WALLYS_HOUSE": {
+    "num": 0,
+    "group": 8
+  },
+  "MAP_PETALBURG_CITY_GYM": {
+    "num": 1,
+    "group": 8
+  },
+  "MAP_PETALBURG_CITY_HOUSE1": {
+    "num": 2,
+    "group": 8
+  },
+  "MAP_PETALBURG_CITY_HOUSE2": {
+    "num": 3,
+    "group": 8
+  },
+  "MAP_PETALBURG_CITY_POKEMON_CENTER_1F": {
+    "num": 4,
+    "group": 8
+  },
+  "MAP_PETALBURG_CITY_POKEMON_CENTER_2F": {
+    "num": 5,
+    "group": 8
+  },
+  "MAP_PETALBURG_CITY_MART": {
+    "num": 6,
+    "group": 8
+  },
+  "MAP_SLATEPORT_CITY_STERNS_SHIPYARD_1F": {
+    "num": 0,
+    "group": 9
+  },
+  "MAP_SLATEPORT_CITY_STERNS_SHIPYARD_2F": {
+    "num": 1,
+    "group": 9
+  },
+  "MAP_SLATEPORT_CITY_BATTLE_TENT_LOBBY": {
+    "num": 2,
+    "group": 9
+  },
+  "MAP_SLATEPORT_CITY_BATTLE_TENT_CORRIDOR": {
+    "num": 3,
+    "group": 9
+  },
+  "MAP_SLATEPORT_CITY_BATTLE_TENT_BATTLE_ROOM": {
+    "num": 4,
+    "group": 9
+  },
+  "MAP_SLATEPORT_CITY_NAME_RATERS_HOUSE": {
+    "num": 5,
+    "group": 9
+  },
+  "MAP_SLATEPORT_CITY_POKEMON_FAN_CLUB": {
+    "num": 6,
+    "group": 9
+  },
+  "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F": {
+    "num": 7,
+    "group": 9
+  },
+  "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_2F": {
+    "num": 8,
+    "group": 9
+  },
+  "MAP_SLATEPORT_CITY_HARBOR": {
+    "num": 9,
+    "group": 9
+  },
+  "MAP_SLATEPORT_CITY_HOUSE": {
+    "num": 10,
+    "group": 9
+  },
+  "MAP_SLATEPORT_CITY_POKEMON_CENTER_1F": {
+    "num": 11,
+    "group": 9
+  },
+  "MAP_SLATEPORT_CITY_POKEMON_CENTER_2F": {
+    "num": 12,
+    "group": 9
+  },
+  "MAP_SLATEPORT_CITY_MART": {
+    "num": 13,
+    "group": 9
+  },
+  "MAP_MAUVILLE_CITY_GYM": {
+    "num": 0,
+    "group": 10
+  },
+  "MAP_MAUVILLE_CITY_BIKE_SHOP": {
+    "num": 1,
+    "group": 10
+  },
+  "MAP_MAUVILLE_CITY_HOUSE1": {
+    "num": 2,
+    "group": 10
+  },
+  "MAP_MAUVILLE_CITY_GAME_CORNER": {
+    "num": 3,
+    "group": 10
+  },
+  "MAP_MAUVILLE_CITY_HOUSE2": {
+    "num": 4,
+    "group": 10
+  },
+  "MAP_MAUVILLE_CITY_POKEMON_CENTER_1F": {
+    "num": 5,
+    "group": 10
+  },
+  "MAP_MAUVILLE_CITY_POKEMON_CENTER_2F": {
+    "num": 6,
+    "group": 10
+  },
+  "MAP_MAUVILLE_CITY_MART": {
+    "num": 7,
+    "group": 10
+  },
+  "MAP_RUSTBORO_CITY_DEVON_CORP_1F": {
+    "num": 0,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_DEVON_CORP_2F": {
+    "num": 1,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_DEVON_CORP_3F": {
+    "num": 2,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_GYM": {
+    "num": 3,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_POKEMON_SCHOOL": {
+    "num": 4,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_POKEMON_CENTER_1F": {
+    "num": 5,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_POKEMON_CENTER_2F": {
+    "num": 6,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_MART": {
+    "num": 7,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_FLAT1_1F": {
+    "num": 8,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_FLAT1_2F": {
+    "num": 9,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_HOUSE1": {
+    "num": 10,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_CUTTERS_HOUSE": {
+    "num": 11,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_HOUSE2": {
+    "num": 12,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_FLAT2_1F": {
+    "num": 13,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_FLAT2_2F": {
+    "num": 14,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_FLAT2_3F": {
+    "num": 15,
+    "group": 11
+  },
+  "MAP_RUSTBORO_CITY_HOUSE3": {
+    "num": 16,
+    "group": 11
+  },
+  "MAP_FORTREE_CITY_HOUSE1": {
+    "num": 0,
+    "group": 12
+  },
+  "MAP_FORTREE_CITY_GYM": {
+    "num": 1,
+    "group": 12
+  },
+  "MAP_FORTREE_CITY_POKEMON_CENTER_1F": {
+    "num": 2,
+    "group": 12
+  },
+  "MAP_FORTREE_CITY_POKEMON_CENTER_2F": {
+    "num": 3,
+    "group": 12
+  },
+  "MAP_FORTREE_CITY_MART": {
+    "num": 4,
+    "group": 12
+  },
+  "MAP_FORTREE_CITY_HOUSE2": {
+    "num": 5,
+    "group": 12
+  },
+  "MAP_FORTREE_CITY_HOUSE3": {
+    "num": 6,
+    "group": 12
+  },
+  "MAP_FORTREE_CITY_HOUSE4": {
+    "num": 7,
+    "group": 12
+  },
+  "MAP_FORTREE_CITY_HOUSE5": {
+    "num": 8,
+    "group": 12
+  },
+  "MAP_FORTREE_CITY_DECORATION_SHOP": {
+    "num": 9,
+    "group": 12
+  },
+  "MAP_FORTREE_CITY_CREATOR_HOUSE": {
+    "num": 10,
+    "group": 12
+  },
+  "MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_1F": {
+    "num": 0,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_2F": {
+    "num": 1,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_LILYCOVE_MUSEUM_1F": {
+    "num": 2,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_LILYCOVE_MUSEUM_2F": {
+    "num": 3,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_CONTEST_LOBBY": {
+    "num": 4,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_CONTEST_HALL": {
+    "num": 5,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_POKEMON_CENTER_1F": {
+    "num": 6,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_POKEMON_CENTER_2F": {
+    "num": 7,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_UNUSED_MART": {
+    "num": 8,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_POKEMON_TRAINER_FAN_CLUB": {
+    "num": 9,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_HARBOR": {
+    "num": 10,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_MOVE_DELETERS_HOUSE": {
+    "num": 11,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_HOUSE1": {
+    "num": 12,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_HOUSE2": {
+    "num": 13,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_HOUSE3": {
+    "num": 14,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_HOUSE4": {
+    "num": 15,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_1F": {
+    "num": 16,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_2F": {
+    "num": 17,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_3F": {
+    "num": 18,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_4F": {
+    "num": 19,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_5F": {
+    "num": 20,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_ROOFTOP": {
+    "num": 21,
+    "group": 13
+  },
+  "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_ELEVATOR": {
+    "num": 22,
+    "group": 13
+  },
+  "MAP_MOSSDEEP_CITY_GYM": {
+    "num": 0,
+    "group": 14
+  },
+  "MAP_MOSSDEEP_CITY_HOUSE1": {
+    "num": 1,
+    "group": 14
+  },
+  "MAP_MOSSDEEP_CITY_HOUSE2": {
+    "num": 2,
+    "group": 14
+  },
+  "MAP_MOSSDEEP_CITY_POKEMON_CENTER_1F": {
+    "num": 3,
+    "group": 14
+  },
+  "MAP_MOSSDEEP_CITY_POKEMON_CENTER_2F": {
+    "num": 4,
+    "group": 14
+  },
+  "MAP_MOSSDEEP_CITY_MART": {
+    "num": 5,
+    "group": 14
+  },
+  "MAP_MOSSDEEP_CITY_HOUSE3": {
+    "num": 6,
+    "group": 14
+  },
+  "MAP_MOSSDEEP_CITY_STEVENS_HOUSE": {
+    "num": 7,
+    "group": 14
+  },
+  "MAP_MOSSDEEP_CITY_HOUSE4": {
+    "num": 8,
+    "group": 14
+  },
+  "MAP_MOSSDEEP_CITY_SPACE_CENTER_1F": {
+    "num": 9,
+    "group": 14
+  },
+  "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F": {
+    "num": 10,
+    "group": 14
+  },
+  "MAP_MOSSDEEP_CITY_GAME_CORNER_1F": {
+    "num": 11,
+    "group": 14
+  },
+  "MAP_MOSSDEEP_CITY_GAME_CORNER_B1F": {
+    "num": 12,
+    "group": 14
+  },
+  "MAP_MOSSDEEP_CITY_BETA_TESTER_HOUSE": {
+    "num": 13,
+    "group": 14
+  },
+  "MAP_SOOTOPOLIS_CITY_GYM_1F": {
+    "num": 0,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_GYM_B1F": {
+    "num": 1,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_POKEMON_CENTER_1F": {
+    "num": 2,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_POKEMON_CENTER_2F": {
+    "num": 3,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_MART": {
+    "num": 4,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_HOUSE1": {
+    "num": 5,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_HOUSE2": {
+    "num": 6,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_HOUSE3": {
+    "num": 7,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_HOUSE4": {
+    "num": 8,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_HOUSE5": {
+    "num": 9,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_HOUSE6": {
+    "num": 10,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_HOUSE7": {
+    "num": 11,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_LOTAD_AND_SEEDOT_HOUSE": {
+    "num": 12,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_MYSTERY_EVENTS_HOUSE_1F": {
+    "num": 13,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_MYSTERY_EVENTS_HOUSE_B1F": {
+    "num": 14,
+    "group": 15
+  },
+  "MAP_SOOTOPOLIS_CITY_CHAMP_HOUSE": {
+    "num": 15,
+    "group": 15
+  },
+  "MAP_EVER_GRANDE_CITY_SIDNEYS_ROOM": {
+    "num": 0,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_PHOEBES_ROOM": {
+    "num": 1,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_GLACIAS_ROOM": {
+    "num": 2,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_DRAKES_ROOM": {
+    "num": 3,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_CHAMPIONS_ROOM": {
+    "num": 4,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_HALL1": {
+    "num": 5,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_HALL2": {
+    "num": 6,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_HALL3": {
+    "num": 7,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_HALL4": {
+    "num": 8,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_HALL5": {
+    "num": 9,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_1F": {
+    "num": 10,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_HALL_OF_FAME": {
+    "num": 11,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_POKEMON_CENTER_1F": {
+    "num": 12,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_POKEMON_CENTER_2F": {
+    "num": 13,
+    "group": 16
+  },
+  "MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_2F": {
+    "num": 14,
+    "group": 16
+  },
+  "MAP_ROUTE104_MR_BRINEYS_HOUSE": {
+    "num": 0,
+    "group": 17
+  },
+  "MAP_ROUTE104_PRETTY_PETAL_FLOWER_SHOP": {
+    "num": 1,
+    "group": 17
+  },
+  "MAP_ROUTE111_WINSTRATE_FAMILYS_HOUSE": {
+    "num": 0,
+    "group": 18
+  },
+  "MAP_ROUTE111_OLD_LADYS_REST_STOP": {
+    "num": 1,
+    "group": 18
+  },
+  "MAP_ROUTE112_CABLE_CAR_STATION": {
+    "num": 0,
+    "group": 19
+  },
+  "MAP_MT_CHIMNEY_CABLE_CAR_STATION": {
+    "num": 1,
+    "group": 19
+  },
+  "MAP_ROUTE114_FOSSIL_MANIACS_HOUSE": {
+    "num": 0,
+    "group": 20
+  },
+  "MAP_ROUTE114_FOSSIL_MANIACS_TUNNEL": {
+    "num": 1,
+    "group": 20
+  },
+  "MAP_ROUTE114_LANETTES_HOUSE": {
+    "num": 2,
+    "group": 20
+  },
+  "MAP_ROUTE116_TUNNELERS_REST_HOUSE": {
+    "num": 0,
+    "group": 21
+  },
+  "MAP_ROUTE117_POKEMON_DAY_CARE": {
+    "num": 0,
+    "group": 22
+  },
+  "MAP_ROUTE121_SAFARI_ZONE_ENTRANCE": {
+    "num": 0,
+    "group": 23
+  },
+  "MAP_METEOR_FALLS_1F_1R": {
+    "num": 0,
+    "group": 24
+  },
+  "MAP_METEOR_FALLS_1F_2R": {
+    "num": 1,
+    "group": 24
+  },
+  "MAP_METEOR_FALLS_B1F_1R": {
+    "num": 2,
+    "group": 24
+  },
+  "MAP_METEOR_FALLS_B1F_2R": {
+    "num": 3,
+    "group": 24
+  },
+  "MAP_RUSTURF_TUNNEL": {
+    "num": 4,
+    "group": 24
+  },
+  "MAP_UNDERWATER_SOOTOPOLIS_CITY": {
+    "num": 5,
+    "group": 24
+  },
+  "MAP_DESERT_RUINS": {
+    "num": 6,
+    "group": 24
+  },
+  "MAP_GRANITE_CAVE_1F": {
+    "num": 7,
+    "group": 24
+  },
+  "MAP_GRANITE_CAVE_B1F": {
+    "num": 8,
+    "group": 24
+  },
+  "MAP_GRANITE_CAVE_B2F": {
+    "num": 9,
+    "group": 24
+  },
+  "MAP_GRANITE_CAVE_STEVENS_ROOM": {
+    "num": 10,
+    "group": 24
+  },
+  "MAP_PETALBURG_WOODS": {
+    "num": 11,
+    "group": 24
+  },
+  "MAP_MT_CHIMNEY": {
+    "num": 12,
+    "group": 24
+  },
+  "MAP_JAGGED_PASS": {
+    "num": 13,
+    "group": 24
+  },
+  "MAP_FIERY_PATH": {
+    "num": 14,
+    "group": 24
+  },
+  "MAP_MT_PYRE_1F": {
+    "num": 15,
+    "group": 24
+  },
+  "MAP_MT_PYRE_2F": {
+    "num": 16,
+    "group": 24
+  },
+  "MAP_MT_PYRE_3F": {
+    "num": 17,
+    "group": 24
+  },
+  "MAP_MT_PYRE_4F": {
+    "num": 18,
+    "group": 24
+  },
+  "MAP_MT_PYRE_5F": {
+    "num": 19,
+    "group": 24
+  },
+  "MAP_MT_PYRE_6F": {
+    "num": 20,
+    "group": 24
+  },
+  "MAP_MT_PYRE_EXTERIOR": {
+    "num": 21,
+    "group": 24
+  },
+  "MAP_MT_PYRE_SUMMIT": {
+    "num": 22,
+    "group": 24
+  },
+  "MAP_AQUA_HIDEOUT_1F": {
+    "num": 23,
+    "group": 24
+  },
+  "MAP_AQUA_HIDEOUT_B1F": {
+    "num": 24,
+    "group": 24
+  },
+  "MAP_AQUA_HIDEOUT_B2F": {
+    "num": 25,
+    "group": 24
+  },
+  "MAP_UNDERWATER_SEAFLOOR_CAVERN": {
+    "num": 26,
+    "group": 24
+  },
+  "MAP_SEAFLOOR_CAVERN_ENTRANCE": {
+    "num": 27,
+    "group": 24
+  },
+  "MAP_SEAFLOOR_CAVERN_ROOM1": {
+    "num": 28,
+    "group": 24
+  },
+  "MAP_SEAFLOOR_CAVERN_ROOM2": {
+    "num": 29,
+    "group": 24
+  },
+  "MAP_SEAFLOOR_CAVERN_ROOM3": {
+    "num": 30,
+    "group": 24
+  },
+  "MAP_SEAFLOOR_CAVERN_ROOM4": {
+    "num": 31,
+    "group": 24
+  },
+  "MAP_SEAFLOOR_CAVERN_ROOM5": {
+    "num": 32,
+    "group": 24
+  },
+  "MAP_SEAFLOOR_CAVERN_ROOM6": {
+    "num": 33,
+    "group": 24
+  },
+  "MAP_SEAFLOOR_CAVERN_ROOM7": {
+    "num": 34,
+    "group": 24
+  },
+  "MAP_SEAFLOOR_CAVERN_ROOM8": {
+    "num": 35,
+    "group": 24
+  },
+  "MAP_SEAFLOOR_CAVERN_ROOM9": {
+    "num": 36,
+    "group": 24
+  },
+  "MAP_CAVE_OF_ORIGIN_ENTRANCE": {
+    "num": 37,
+    "group": 24
+  },
+  "MAP_CAVE_OF_ORIGIN_1F": {
+    "num": 38,
+    "group": 24
+  },
+  "MAP_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP1": {
+    "num": 39,
+    "group": 24
+  },
+  "MAP_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP2": {
+    "num": 40,
+    "group": 24
+  },
+  "MAP_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP3": {
+    "num": 41,
+    "group": 24
+  },
+  "MAP_CAVE_OF_ORIGIN_B1F": {
+    "num": 42,
+    "group": 24
+  },
+  "MAP_VICTORY_ROAD_1F": {
+    "num": 43,
+    "group": 24
+  },
+  "MAP_VICTORY_ROAD_B1F": {
+    "num": 44,
+    "group": 24
+  },
+  "MAP_VICTORY_ROAD_B2F": {
+    "num": 45,
+    "group": 24
+  },
+  "MAP_SHOAL_CAVE_LOW_TIDE_ENTRANCE_ROOM": {
+    "num": 46,
+    "group": 24
+  },
+  "MAP_SHOAL_CAVE_LOW_TIDE_INNER_ROOM": {
+    "num": 47,
+    "group": 24
+  },
+  "MAP_SHOAL_CAVE_LOW_TIDE_STAIRS_ROOM": {
+    "num": 48,
+    "group": 24
+  },
+  "MAP_SHOAL_CAVE_LOW_TIDE_LOWER_ROOM": {
+    "num": 49,
+    "group": 24
+  },
+  "MAP_SHOAL_CAVE_HIGH_TIDE_ENTRANCE_ROOM": {
+    "num": 50,
+    "group": 24
+  },
+  "MAP_SHOAL_CAVE_HIGH_TIDE_INNER_ROOM": {
+    "num": 51,
+    "group": 24
+  },
+  "MAP_NEW_MAUVILLE_ENTRANCE": {
+    "num": 52,
+    "group": 24
+  },
+  "MAP_NEW_MAUVILLE_INSIDE": {
+    "num": 53,
+    "group": 24
+  },
+  "MAP_ABANDONED_SHIP_DECK": {
+    "num": 54,
+    "group": 24
+  },
+  "MAP_ABANDONED_SHIP_CORRIDORS_1F": {
+    "num": 55,
+    "group": 24
+  },
+  "MAP_ABANDONED_SHIP_ROOMS_1F": {
+    "num": 56,
+    "group": 24
+  },
+  "MAP_ABANDONED_SHIP_CORRIDORS_B1F": {
+    "num": 57,
+    "group": 24
+  },
+  "MAP_ABANDONED_SHIP_ROOMS_B1F": {
+    "num": 58,
+    "group": 24
+  },
+  "MAP_ABANDONED_SHIP_ROOMS2_B1F": {
+    "num": 59,
+    "group": 24
+  },
+  "MAP_ABANDONED_SHIP_UNDERWATER1": {
+    "num": 60,
+    "group": 24
+  },
+  "MAP_ABANDONED_SHIP_ROOM_B1F": {
+    "num": 61,
+    "group": 24
+  },
+  "MAP_ABANDONED_SHIP_ROOMS2_1F": {
+    "num": 62,
+    "group": 24
+  },
+  "MAP_ABANDONED_SHIP_CAPTAINS_OFFICE": {
+    "num": 63,
+    "group": 24
+  },
+  "MAP_ABANDONED_SHIP_UNDERWATER2": {
+    "num": 64,
+    "group": 24
+  },
+  "MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS": {
+    "num": 65,
+    "group": 24
+  },
+  "MAP_ABANDONED_SHIP_HIDDEN_FLOOR_ROOMS": {
+    "num": 66,
+    "group": 24
+  },
+  "MAP_ISLAND_CAVE": {
+    "num": 67,
+    "group": 24
+  },
+  "MAP_ANCIENT_TOMB": {
+    "num": 68,
+    "group": 24
+  },
+  "MAP_UNDERWATER_ROUTE134": {
+    "num": 69,
+    "group": 24
+  },
+  "MAP_UNDERWATER_SEALED_CHAMBER": {
+    "num": 70,
+    "group": 24
+  },
+  "MAP_SEALED_CHAMBER_OUTER_ROOM": {
+    "num": 71,
+    "group": 24
+  },
+  "MAP_SEALED_CHAMBER_INNER_ROOM": {
+    "num": 72,
+    "group": 24
+  },
+  "MAP_SCORCHED_SLAB": {
+    "num": 73,
+    "group": 24
+  },
+  "MAP_AQUA_HIDEOUT_UNUSED_RUBY_MAP1": {
+    "num": 74,
+    "group": 24
+  },
+  "MAP_AQUA_HIDEOUT_UNUSED_RUBY_MAP2": {
+    "num": 75,
+    "group": 24
+  },
+  "MAP_AQUA_HIDEOUT_UNUSED_RUBY_MAP3": {
+    "num": 76,
+    "group": 24
+  },
+  "MAP_SKY_PILLAR_ENTRANCE": {
+    "num": 77,
+    "group": 24
+  },
+  "MAP_SKY_PILLAR_OUTSIDE": {
+    "num": 78,
+    "group": 24
+  },
+  "MAP_SKY_PILLAR_1F": {
+    "num": 79,
+    "group": 24
+  },
+  "MAP_SKY_PILLAR_2F": {
+    "num": 80,
+    "group": 24
+  },
+  "MAP_SKY_PILLAR_3F": {
+    "num": 81,
+    "group": 24
+  },
+  "MAP_SKY_PILLAR_4F": {
+    "num": 82,
+    "group": 24
+  },
+  "MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM": {
+    "num": 83,
+    "group": 24
+  },
+  "MAP_SKY_PILLAR_5F": {
+    "num": 84,
+    "group": 24
+  },
+  "MAP_SKY_PILLAR_TOP": {
+    "num": 85,
+    "group": 24
+  },
+  "MAP_MAGMA_HIDEOUT_1F": {
+    "num": 86,
+    "group": 24
+  },
+  "MAP_MAGMA_HIDEOUT_2F_1R": {
+    "num": 87,
+    "group": 24
+  },
+  "MAP_MAGMA_HIDEOUT_2F_2R": {
+    "num": 88,
+    "group": 24
+  },
+  "MAP_MAGMA_HIDEOUT_3F_1R": {
+    "num": 89,
+    "group": 24
+  },
+  "MAP_MAGMA_HIDEOUT_3F_2R": {
+    "num": 90,
+    "group": 24
+  },
+  "MAP_MAGMA_HIDEOUT_4F": {
+    "num": 91,
+    "group": 24
+  },
+  "MAP_MAGMA_HIDEOUT_3F_3R": {
+    "num": 92,
+    "group": 24
+  },
+  "MAP_MAGMA_HIDEOUT_2F_3R": {
+    "num": 93,
+    "group": 24
+  },
+  "MAP_MIRAGE_TOWER_1F": {
+    "num": 94,
+    "group": 24
+  },
+  "MAP_MIRAGE_TOWER_2F": {
+    "num": 95,
+    "group": 24
+  },
+  "MAP_MIRAGE_TOWER_3F": {
+    "num": 96,
+    "group": 24
+  },
+  "MAP_MIRAGE_TOWER_4F": {
+    "num": 97,
+    "group": 24
+  },
+  "MAP_DESERT_UNDERPASS": {
+    "num": 98,
+    "group": 24
+  },
+  "MAP_ARTISAN_CAVE_B1F": {
+    "num": 99,
+    "group": 24
+  },
+  "MAP_ARTISAN_CAVE_1F": {
+    "num": 100,
+    "group": 24
+  },
+  "MAP_UNDERWATER_MARINE_CAVE": {
+    "num": 101,
+    "group": 24
+  },
+  "MAP_MARINE_CAVE_ENTRANCE": {
+    "num": 102,
+    "group": 24
+  },
+  "MAP_MARINE_CAVE_END": {
+    "num": 103,
+    "group": 24
+  },
+  "MAP_TERRA_CAVE_ENTRANCE": {
+    "num": 104,
+    "group": 24
+  },
+  "MAP_TERRA_CAVE_END": {
+    "num": 105,
+    "group": 24
+  },
+  "MAP_ALTERING_CAVE": {
+    "num": 106,
+    "group": 24
+  },
+  "MAP_METEOR_FALLS_STEVENS_CAVE": {
+    "num": 107,
+    "group": 24
+  },
+  "MAP_FLOATING_SLAB": {
+    "num": 108,
+    "group": 24
+  },
+  "MAP_ROCKY_SLAB": {
+    "num": 109,
+    "group": 24
+  },
+  "MAP_GRASSY_SLAB": {
+    "num": 110,
+    "group": 24
+  },
+  "MAP_FIERY_PATH_BACK_ROOM": {
+    "num": 111,
+    "group": 24
+  },
+  "MAP_SECRET_BASE_RED_CAVE1": {
+    "num": 0,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_BROWN_CAVE1": {
+    "num": 1,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_BLUE_CAVE1": {
+    "num": 2,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_YELLOW_CAVE1": {
+    "num": 3,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_TREE1": {
+    "num": 4,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_SHRUB1": {
+    "num": 5,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_RED_CAVE2": {
+    "num": 6,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_BROWN_CAVE2": {
+    "num": 7,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_BLUE_CAVE2": {
+    "num": 8,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_YELLOW_CAVE2": {
+    "num": 9,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_TREE2": {
+    "num": 10,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_SHRUB2": {
+    "num": 11,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_RED_CAVE3": {
+    "num": 12,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_BROWN_CAVE3": {
+    "num": 13,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_BLUE_CAVE3": {
+    "num": 14,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_YELLOW_CAVE3": {
+    "num": 15,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_TREE3": {
+    "num": 16,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_SHRUB3": {
+    "num": 17,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_RED_CAVE4": {
+    "num": 18,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_BROWN_CAVE4": {
+    "num": 19,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_BLUE_CAVE4": {
+    "num": 20,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_YELLOW_CAVE4": {
+    "num": 21,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_TREE4": {
+    "num": 22,
+    "group": 25
+  },
+  "MAP_SECRET_BASE_SHRUB4": {
+    "num": 23,
+    "group": 25
+  },
+  "MAP_BATTLE_COLOSSEUM_2P": {
+    "num": 24,
+    "group": 25
+  },
+  "MAP_TRADE_CENTER": {
+    "num": 25,
+    "group": 25
+  },
+  "MAP_RECORD_CORNER": {
+    "num": 26,
+    "group": 25
+  },
+  "MAP_BATTLE_COLOSSEUM_4P": {
+    "num": 27,
+    "group": 25
+  },
+  "MAP_CONTEST_HALL": {
+    "num": 28,
+    "group": 25
+  },
+  "MAP_UNUSED_CONTEST_HALL1": {
+    "num": 29,
+    "group": 25
+  },
+  "MAP_UNUSED_CONTEST_HALL2": {
+    "num": 30,
+    "group": 25
+  },
+  "MAP_UNUSED_CONTEST_HALL3": {
+    "num": 31,
+    "group": 25
+  },
+  "MAP_UNUSED_CONTEST_HALL4": {
+    "num": 32,
+    "group": 25
+  },
+  "MAP_UNUSED_CONTEST_HALL5": {
+    "num": 33,
+    "group": 25
+  },
+  "MAP_UNUSED_CONTEST_HALL6": {
+    "num": 34,
+    "group": 25
+  },
+  "MAP_CONTEST_HALL_BEAUTY": {
+    "num": 35,
+    "group": 25
+  },
+  "MAP_CONTEST_HALL_TOUGH": {
+    "num": 36,
+    "group": 25
+  },
+  "MAP_CONTEST_HALL_COOL": {
+    "num": 37,
+    "group": 25
+  },
+  "MAP_CONTEST_HALL_SMART": {
+    "num": 38,
+    "group": 25
+  },
+  "MAP_CONTEST_HALL_CUTE": {
+    "num": 39,
+    "group": 25
+  },
+  "MAP_INSIDE_OF_TRUCK": {
+    "num": 40,
+    "group": 25
+  },
+  "MAP_SS_TIDAL_CORRIDOR": {
+    "num": 41,
+    "group": 25
+  },
+  "MAP_SS_TIDAL_LOWER_DECK": {
+    "num": 42,
+    "group": 25
+  },
+  "MAP_SS_TIDAL_ROOMS": {
+    "num": 43,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE01": {
+    "num": 44,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE02": {
+    "num": 45,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE03": {
+    "num": 46,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE04": {
+    "num": 47,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE05": {
+    "num": 48,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE06": {
+    "num": 49,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE07": {
+    "num": 50,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE08": {
+    "num": 51,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE09": {
+    "num": 52,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE10": {
+    "num": 53,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE11": {
+    "num": 54,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE12": {
+    "num": 55,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE13": {
+    "num": 56,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE14": {
+    "num": 57,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE15": {
+    "num": 58,
+    "group": 25
+  },
+  "MAP_BATTLE_PYRAMID_SQUARE16": {
+    "num": 59,
+    "group": 25
+  },
+  "MAP_UNION_ROOM": {
+    "num": 60,
+    "group": 25
+  },
+  "MAP_SAFARI_ZONE_NORTHWEST": {
+    "num": 0,
+    "group": 26
+  },
+  "MAP_SAFARI_ZONE_NORTH": {
+    "num": 1,
+    "group": 26
+  },
+  "MAP_SAFARI_ZONE_SOUTHWEST": {
+    "num": 2,
+    "group": 26
+  },
+  "MAP_SAFARI_ZONE_SOUTH": {
+    "num": 3,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_OUTSIDE_WEST": {
+    "num": 4,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY": {
+    "num": 5,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_TOWER_ELEVATOR": {
+    "num": 6,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_TOWER_CORRIDOR": {
+    "num": 7,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_TOWER_BATTLE_ROOM": {
+    "num": 8,
+    "group": 26
+  },
+  "MAP_SOUTHERN_ISLAND_EXTERIOR": {
+    "num": 9,
+    "group": 26
+  },
+  "MAP_SOUTHERN_ISLAND_INTERIOR": {
+    "num": 10,
+    "group": 26
+  },
+  "MAP_SAFARI_ZONE_REST_HOUSE": {
+    "num": 11,
+    "group": 26
+  },
+  "MAP_SAFARI_ZONE_NORTHEAST": {
+    "num": 12,
+    "group": 26
+  },
+  "MAP_SAFARI_ZONE_SOUTHEAST": {
+    "num": 13,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_OUTSIDE_EAST": {
+    "num": 14,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_PARTNER_ROOM": {
+    "num": 15,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_CORRIDOR": {
+    "num": 16,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_BATTLE_ROOM": {
+    "num": 17,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY": {
+    "num": 18,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_DOME_CORRIDOR": {
+    "num": 19,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_DOME_PRE_BATTLE_ROOM": {
+    "num": 20,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_DOME_BATTLE_ROOM": {
+    "num": 21,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_PALACE_LOBBY": {
+    "num": 22,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_PALACE_CORRIDOR": {
+    "num": 23,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_PALACE_BATTLE_ROOM": {
+    "num": 24,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_LOBBY": {
+    "num": 25,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR": {
+    "num": 26,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_TOP": {
+    "num": 27,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_ARENA_LOBBY": {
+    "num": 28,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_ARENA_CORRIDOR": {
+    "num": 29,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_ARENA_BATTLE_ROOM": {
+    "num": 30,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY": {
+    "num": 31,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_FACTORY_PRE_BATTLE_ROOM": {
+    "num": 32,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_FACTORY_BATTLE_ROOM": {
+    "num": 33,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_PIKE_LOBBY": {
+    "num": 34,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_PIKE_CORRIDOR": {
+    "num": 35,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_PIKE_THREE_PATH_ROOM": {
+    "num": 36,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_NORMAL": {
+    "num": 37,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_FINAL": {
+    "num": 38,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS": {
+    "num": 39,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_RANKING_HALL": {
+    "num": 40,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_LOUNGE1": {
+    "num": 41,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER": {
+    "num": 42,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_LOUNGE2": {
+    "num": 43,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_LOUNGE3": {
+    "num": 44,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_LOUNGE4": {
+    "num": 45,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_SCOTTS_HOUSE": {
+    "num": 46,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_LOUNGE5": {
+    "num": 47,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_LOUNGE6": {
+    "num": 48,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_LOUNGE7": {
+    "num": 49,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_RECEPTION_GATE": {
+    "num": 50,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_LOUNGE8": {
+    "num": 51,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_LOUNGE9": {
+    "num": 52,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_POKEMON_CENTER_1F": {
+    "num": 53,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_POKEMON_CENTER_2F": {
+    "num": 54,
+    "group": 26
+  },
+  "MAP_BATTLE_FRONTIER_MART": {
+    "num": 55,
+    "group": 26
+  },
+  "MAP_FARAWAY_ISLAND_ENTRANCE": {
+    "num": 56,
+    "group": 26
+  },
+  "MAP_FARAWAY_ISLAND_INTERIOR": {
+    "num": 57,
+    "group": 26
+  },
+  "MAP_BIRTH_ISLAND_EXTERIOR": {
+    "num": 58,
+    "group": 26
+  },
+  "MAP_BIRTH_ISLAND_HARBOR": {
+    "num": 59,
+    "group": 26
+  },
+  "MAP_TRAINER_HILL_ENTRANCE": {
+    "num": 60,
+    "group": 26
+  },
+  "MAP_TRAINER_HILL_1F": {
+    "num": 61,
+    "group": 26
+  },
+  "MAP_TRAINER_HILL_2F": {
+    "num": 62,
+    "group": 26
+  },
+  "MAP_TRAINER_HILL_3F": {
+    "num": 63,
+    "group": 26
+  },
+  "MAP_TRAINER_HILL_4F": {
+    "num": 64,
+    "group": 26
+  },
+  "MAP_TRAINER_HILL_ROOF": {
+    "num": 65,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_EXTERIOR": {
+    "num": 66,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_HARBOR": {
+    "num": 67,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_ENTRANCE": {
+    "num": 68,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_B1F": {
+    "num": 69,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_FORK": {
+    "num": 70,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_UP1": {
+    "num": 71,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_UP2": {
+    "num": 72,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_UP3": {
+    "num": 73,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_UP4": {
+    "num": 74,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_TOP": {
+    "num": 75,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_DOWN01": {
+    "num": 76,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_DOWN02": {
+    "num": 77,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_DOWN03": {
+    "num": 78,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_DOWN04": {
+    "num": 79,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_DOWN05": {
+    "num": 80,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_DOWN06": {
+    "num": 81,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_DOWN07": {
+    "num": 82,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_DOWN08": {
+    "num": 83,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_DOWN09": {
+    "num": 84,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_DOWN10": {
+    "num": 85,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_DOWN11": {
+    "num": 86,
+    "group": 26
+  },
+  "MAP_NAVEL_ROCK_BOTTOM": {
+    "num": 87,
+    "group": 26
+  },
+  "MAP_TRAINER_HILL_ELEVATOR": {
+    "num": 88,
+    "group": 26
+  },
+  "MAP_ROUTE104_PROTOTYPE": {
+    "num": 0,
+    "group": 27
+  },
+  "MAP_ROUTE104_PROTOTYPE_PRETTY_PETAL_FLOWER_SHOP": {
+    "num": 1,
+    "group": 27
+  },
+  "MAP_ROUTE109_SEASHORE_HOUSE": {
+    "num": 0,
+    "group": 28
+  },
+  "MAP_ROUTE110_TRICK_HOUSE_ENTRANCE": {
+    "num": 0,
+    "group": 29
+  },
+  "MAP_ROUTE110_TRICK_HOUSE_END": {
+    "num": 1,
+    "group": 29
+  },
+  "MAP_ROUTE110_TRICK_HOUSE_CORRIDOR": {
+    "num": 2,
+    "group": 29
+  },
+  "MAP_ROUTE110_TRICK_HOUSE_PUZZLE1": {
+    "num": 3,
+    "group": 29
+  },
+  "MAP_ROUTE110_TRICK_HOUSE_PUZZLE2": {
+    "num": 4,
+    "group": 29
+  },
+  "MAP_ROUTE110_TRICK_HOUSE_PUZZLE3": {
+    "num": 5,
+    "group": 29
+  },
+  "MAP_ROUTE110_TRICK_HOUSE_PUZZLE4": {
+    "num": 6,
+    "group": 29
+  },
+  "MAP_ROUTE110_TRICK_HOUSE_PUZZLE5": {
+    "num": 7,
+    "group": 29
+  },
+  "MAP_ROUTE110_TRICK_HOUSE_PUZZLE6": {
+    "num": 8,
+    "group": 29
+  },
+  "MAP_ROUTE110_TRICK_HOUSE_PUZZLE7": {
+    "num": 9,
+    "group": 29
+  },
+  "MAP_ROUTE110_TRICK_HOUSE_PUZZLE8": {
+    "num": 10,
+    "group": 29
+  },
+  "MAP_ROUTE110_SEASIDE_CYCLING_ROAD_SOUTH_ENTRANCE": {
+    "num": 11,
+    "group": 29
+  },
+  "MAP_ROUTE110_SEASIDE_CYCLING_ROAD_NORTH_ENTRANCE": {
+    "num": 12,
+    "group": 29
+  },
+  "MAP_ROUTE113_GLASS_WORKSHOP": {
+    "num": 0,
+    "group": 30
+  },
+  "MAP_ROUTE123_BERRY_MASTERS_HOUSE": {
+    "num": 0,
+    "group": 31
+  },
+  "MAP_ROUTE119_WEATHER_INSTITUTE_1F": {
+    "num": 0,
+    "group": 32
+  },
+  "MAP_ROUTE119_WEATHER_INSTITUTE_2F": {
+    "num": 1,
+    "group": 32
+  },
+  "MAP_ROUTE119_HOUSE": {
+    "num": 2,
+    "group": 32
+  },
+  "MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE": {
+    "num": 0,
+    "group": 33
+  }
+}
