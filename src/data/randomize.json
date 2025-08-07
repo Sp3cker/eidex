@@ -1,0 +1,9196 @@
+{
+  "modes": {
+    "RANDOMIZE_WILD_MON": 0,
+    "RANDOMIZE_TRAINER_MON": 1,
+    "RANDOMIZE_FIELD_ITEMS": 2,
+    "RANDOMIZE_BASE_STATS": 3,
+    "RANDOMIZE_MON_TYPES": 4,
+    "RANDOMIZE_LEARNSET": 5,
+    "RANDOMIZE_FIXED_MON": 6,
+    "RANDOMIZE_STARTERS_AND_GIFTS": 7,
+    "RANDOMIZE_EGG_MON": 8,
+    "RANDOMIZE_ABILITIES": 9
+  },
+  "species": [
+    {
+      "id": 0,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 0
+    },
+    {
+      "id": 1,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 318
+    },
+    {
+      "id": 2,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 3,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 906,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 625
+    },
+    {
+      "id": 1494,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 525
+    },
+    {
+      "id": 4,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 309
+    },
+    {
+      "id": 5,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 6,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 534
+    },
+    {
+      "id": 907,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 634
+    },
+    {
+      "id": 908,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 634
+    },
+    {
+      "id": 1496,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 534
+    },
+    {
+      "id": 7,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 314
+    },
+    {
+      "id": 8,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 9,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 909,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 630
+    },
+    {
+      "id": 1495,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 530
+    },
+    {
+      "id": 10,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 195
+    },
+    {
+      "id": 11,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 205
+    },
+    {
+      "id": 12,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 400
+    },
+    {
+      "id": 1497,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 525
+    },
+    {
+      "id": 13,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 195
+    },
+    {
+      "id": 14,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 205
+    },
+    {
+      "id": 15,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 395
+    },
+    {
+      "id": 910,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 16,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 251
+    },
+    {
+      "id": 17,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 349
+    },
+    {
+      "id": 18,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 479
+    },
+    {
+      "id": 911,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 579
+    },
+    {
+      "id": 19,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 253
+    },
+    {
+      "id": 20,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 428
+    },
+    {
+      "id": 956,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 253
+    },
+    {
+      "id": 957,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 428
+    },
+    {
+      "id": 1476,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 413
+    },
+    {
+      "id": 21,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 262
+    },
+    {
+      "id": 22,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 467
+    },
+    {
+      "id": 23,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 288
+    },
+    {
+      "id": 24,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 469
+    },
+    {
+      "id": 172,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 205
+    },
+    {
+      "id": 1023,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 205
+    },
+    {
+      "id": 25,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 1009,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 1010,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 1011,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 1012,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 1013,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 1014,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 1533,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 1534,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 1015,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 320
+    },
+    {
+      "id": 1016,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 320
+    },
+    {
+      "id": 1017,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 320
+    },
+    {
+      "id": 1018,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 320
+    },
+    {
+      "id": 1019,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 320
+    },
+    {
+      "id": 1020,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 320
+    },
+    {
+      "id": 1021,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 320
+    },
+    {
+      "id": 1022,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 320
+    },
+    {
+      "id": 1498,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 320
+    },
+    {
+      "id": 1487,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 430
+    },
+    {
+      "id": 26,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 515
+    },
+    {
+      "id": 958,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 27,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 28,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 460
+    },
+    {
+      "id": 959,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 960,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 460
+    },
+    {
+      "id": 29,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 275
+    },
+    {
+      "id": 30,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 365
+    },
+    {
+      "id": 31,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 32,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 273
+    },
+    {
+      "id": 33,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 365
+    },
+    {
+      "id": 34,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 173,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 218
+    },
+    {
+      "id": 35,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 323
+    },
+    {
+      "id": 36,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 483
+    },
+    {
+      "id": 37,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 299
+    },
+    {
+      "id": 38,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 961,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 299
+    },
+    {
+      "id": 962,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 174,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 210
+    },
+    {
+      "id": 39,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 270
+    },
+    {
+      "id": 40,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 435
+    },
+    {
+      "id": 41,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 245
+    },
+    {
+      "id": 42,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 455
+    },
+    {
+      "id": 169,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 555
+    },
+    {
+      "id": 43,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 44,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 395
+    },
+    {
+      "id": 45,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 182,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 46,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 285
+    },
+    {
+      "id": 47,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 460
+    },
+    {
+      "id": 48,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 49,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 460
+    },
+    {
+      "id": 50,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 265
+    },
+    {
+      "id": 51,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 425
+    },
+    {
+      "id": 963,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 265
+    },
+    {
+      "id": 964,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 435
+    },
+    {
+      "id": 52,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 290
+    },
+    {
+      "id": 53,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 445
+    },
+    {
+      "id": 965,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 280
+    },
+    {
+      "id": 966,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 974,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 290
+    },
+    {
+      "id": 863,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 440
+    },
+    {
+      "id": 1499,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 290
+    },
+    {
+      "id": 54,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 55,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 520
+    },
+    {
+      "id": 56,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 57,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 455
+    },
+    {
+      "id": 1370,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 535
+    },
+    {
+      "id": 58,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 350
+    },
+    {
+      "id": 59,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 555
+    },
+    {
+      "id": 993,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 350
+    },
+    {
+      "id": 994,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 555
+    },
+    {
+      "id": 60,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 61,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 385
+    },
+    {
+      "id": 62,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 186,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 63,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 64,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 400
+    },
+    {
+      "id": 65,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 912,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 66,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 67,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 68,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 1500,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 69,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 70,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 390
+    },
+    {
+      "id": 71,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 72,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 335
+    },
+    {
+      "id": 73,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 74,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 75,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 390
+    },
+    {
+      "id": 76,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 967,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 968,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 390
+    },
+    {
+      "id": 969,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 77,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 78,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 520
+    },
+    {
+      "id": 975,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 976,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 520
+    },
+    {
+      "id": 79,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 315
+    },
+    {
+      "id": 80,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 199,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 913,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 590
+    },
+    {
+      "id": 977,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 315
+    },
+    {
+      "id": 978,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 985,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 81,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 325
+    },
+    {
+      "id": 82,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 465
+    },
+    {
+      "id": 462,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 535
+    },
+    {
+      "id": 83,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 435
+    },
+    {
+      "id": 979,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 377
+    },
+    {
+      "id": 865,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 527
+    },
+    {
+      "id": 84,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 85,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 470
+    },
+    {
+      "id": 86,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 325
+    },
+    {
+      "id": 87,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 88,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 325
+    },
+    {
+      "id": 89,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 970,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 325
+    },
+    {
+      "id": 971,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 90,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 91,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 92,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 93,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 94,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 914,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1501,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 500
+    },
+    {
+      "id": 95,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 400
+    },
+    {
+      "id": 208,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 922,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 610
+    },
+    {
+      "id": 96,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 328
+    },
+    {
+      "id": 97,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 483
+    },
+    {
+      "id": 98,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 325
+    },
+    {
+      "id": 99,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 475
+    },
+    {
+      "id": 1502,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 570
+    },
+    {
+      "id": 100,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 101,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 515
+    },
+    {
+      "id": 995,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 996,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 102,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 325
+    },
+    {
+      "id": 103,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 972,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 104,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 105,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 425
+    },
+    {
+      "id": 973,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 425
+    },
+    {
+      "id": 1483,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 425
+    },
+    {
+      "id": 236,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 210
+    },
+    {
+      "id": 106,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 455
+    },
+    {
+      "id": 107,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 465
+    },
+    {
+      "id": 237,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 455
+    },
+    {
+      "id": 108,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 385
+    },
+    {
+      "id": 463,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 109,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 340
+    },
+    {
+      "id": 110,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 980,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 111,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 345
+    },
+    {
+      "id": 112,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 464,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 535
+    },
+    {
+      "id": 440,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 220
+    },
+    {
+      "id": 113,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 450
+    },
+    {
+      "id": 242,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 540
+    },
+    {
+      "id": 114,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 435
+    },
+    {
+      "id": 465,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 535
+    },
+    {
+      "id": 115,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 915,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 590
+    },
+    {
+      "id": 116,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 295
+    },
+    {
+      "id": 117,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 440
+    },
+    {
+      "id": 230,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 540
+    },
+    {
+      "id": 118,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 119,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 450
+    },
+    {
+      "id": 120,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 340
+    },
+    {
+      "id": 121,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 520
+    },
+    {
+      "id": 439,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 122,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 470
+    },
+    {
+      "id": 981,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 460
+    },
+    {
+      "id": 866,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 520
+    },
+    {
+      "id": 123,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 212,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 923,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 900,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 238,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 124,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 475
+    },
+    {
+      "id": 239,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 360
+    },
+    {
+      "id": 125,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 466,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 540
+    },
+    {
+      "id": 240,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 365
+    },
+    {
+      "id": 126,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 467,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 540
+    },
+    {
+      "id": 127,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 916,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 128,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 520
+    },
+    {
+      "id": 1402,
+      "isLegendary": false,
+      "mode": 2,
+      "baseStat": 520
+    },
+    {
+      "id": 1403,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 520
+    },
+    {
+      "id": 1404,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 520
+    },
+    {
+      "id": 129,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 200
+    },
+    {
+      "id": 130,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 540
+    },
+    {
+      "id": 917,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 640
+    },
+    {
+      "id": 131,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 535
+    },
+    {
+      "id": 1503,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 615
+    },
+    {
+      "id": 132,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 288
+    },
+    {
+      "id": 133,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 325
+    },
+    {
+      "id": 1504,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 325
+    },
+    {
+      "id": 1488,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 435
+    },
+    {
+      "id": 134,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 135,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 136,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 196,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 197,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 470,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 471,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 700,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 137,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 395
+    },
+    {
+      "id": 233,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 515
+    },
+    {
+      "id": 474,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 535
+    },
+    {
+      "id": 138,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 355
+    },
+    {
+      "id": 139,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 140,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 355
+    },
+    {
+      "id": 141,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 142,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 515
+    },
+    {
+      "id": 918,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 615
+    },
+    {
+      "id": 446,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 390
+    },
+    {
+      "id": 143,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 540
+    },
+    {
+      "id": 1505,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 640
+    },
+    {
+      "id": 144,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 982,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 145,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 983,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 146,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 984,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 147,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 148,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 149,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 150,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 919,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 780
+    },
+    {
+      "id": 920,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 780
+    },
+    {
+      "id": 151,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 152,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 318
+    },
+    {
+      "id": 153,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 154,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 155,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 309
+    },
+    {
+      "id": 156,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 157,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 534
+    },
+    {
+      "id": 997,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 534
+    },
+    {
+      "id": 158,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 314
+    },
+    {
+      "id": 159,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 160,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 161,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 215
+    },
+    {
+      "id": 162,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 425
+    },
+    {
+      "id": 163,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 262
+    },
+    {
+      "id": 164,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 462
+    },
+    {
+      "id": 165,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 265
+    },
+    {
+      "id": 166,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 415
+    },
+    {
+      "id": 167,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 250
+    },
+    {
+      "id": 168,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 435
+    },
+    {
+      "id": 170,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 171,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 460
+    },
+    {
+      "id": 175,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 245
+    },
+    {
+      "id": 176,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 468,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 545
+    },
+    {
+      "id": 177,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 178,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 179,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 280
+    },
+    {
+      "id": 180,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 365
+    },
+    {
+      "id": 181,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 921,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 610
+    },
+    {
+      "id": 298,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 190
+    },
+    {
+      "id": 183,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 250
+    },
+    {
+      "id": 184,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 438,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 290
+    },
+    {
+      "id": 185,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 430
+    },
+    {
+      "id": 187,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 250
+    },
+    {
+      "id": 188,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 340
+    },
+    {
+      "id": 189,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 470
+    },
+    {
+      "id": 190,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 360
+    },
+    {
+      "id": 424,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 191,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 180
+    },
+    {
+      "id": 192,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 193,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 390
+    },
+    {
+      "id": 469,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 515
+    },
+    {
+      "id": 194,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 210
+    },
+    {
+      "id": 195,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 440
+    },
+    {
+      "id": 1405,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 210
+    },
+    {
+      "id": 1371,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 430
+    },
+    {
+      "id": 198,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 430,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 200,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 435
+    },
+    {
+      "id": 429,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 515
+    },
+    {
+      "id": 201,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 384
+    },
+    {
+      "id": 1024,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1025,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1026,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1027,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1028,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1029,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1030,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1031,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1032,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1033,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1034,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1035,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1036,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1037,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1038,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1039,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1040,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1041,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1042,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1043,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1044,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1045,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1046,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1047,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1048,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1049,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 1050,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 384
+    },
+    {
+      "id": 360,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 260
+    },
+    {
+      "id": 202,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 203,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 455
+    },
+    {
+      "id": 1372,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 520
+    },
+    {
+      "id": 204,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 290
+    },
+    {
+      "id": 205,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 465
+    },
+    {
+      "id": 206,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 435
+    },
+    {
+      "id": 1373,
+      "isLegendary": false,
+      "mode": 2,
+      "baseStat": 520
+    },
+    {
+      "id": 1374,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 520
+    },
+    {
+      "id": 207,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 430
+    },
+    {
+      "id": 472,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 209,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 210,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 460
+    },
+    {
+      "id": 211,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 465
+    },
+    {
+      "id": 998,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 440
+    },
+    {
+      "id": 904,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 213,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 214,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 924,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 215,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 430
+    },
+    {
+      "id": 461,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 999,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 430
+    },
+    {
+      "id": 903,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 216,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 217,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 901,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 550
+    },
+    {
+      "id": 1424,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 560
+    },
+    {
+      "id": 218,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 250
+    },
+    {
+      "id": 219,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 430
+    },
+    {
+      "id": 220,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 250
+    },
+    {
+      "id": 221,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 450
+    },
+    {
+      "id": 473,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 222,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 440
+    },
+    {
+      "id": 986,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 864,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 535
+    },
+    {
+      "id": 223,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 224,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 225,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 458,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 345
+    },
+    {
+      "id": 226,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 227,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 465
+    },
+    {
+      "id": 228,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 229,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 925,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 620
+    },
+    {
+      "id": 231,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 232,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 234,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 465
+    },
+    {
+      "id": 899,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 235,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 250
+    },
+    {
+      "id": 241,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 243,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 244,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 245,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 246,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 247,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 248,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 926,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 700
+    },
+    {
+      "id": 249,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 250,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 251,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 252,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 253,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 254,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 927,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 620
+    },
+    {
+      "id": 255,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 256,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 257,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 928,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 630
+    },
+    {
+      "id": 258,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 259,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 260,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 535
+    },
+    {
+      "id": 929,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 635
+    },
+    {
+      "id": 261,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 220
+    },
+    {
+      "id": 262,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 425
+    },
+    {
+      "id": 263,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 240
+    },
+    {
+      "id": 264,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 442
+    },
+    {
+      "id": 987,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 240
+    },
+    {
+      "id": 988,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 862,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 520
+    },
+    {
+      "id": 265,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 195
+    },
+    {
+      "id": 266,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 205
+    },
+    {
+      "id": 267,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 400
+    },
+    {
+      "id": 268,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 205
+    },
+    {
+      "id": 269,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 270,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 220
+    },
+    {
+      "id": 271,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 340
+    },
+    {
+      "id": 272,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 273,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 220
+    },
+    {
+      "id": 274,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 340
+    },
+    {
+      "id": 275,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 520
+    },
+    {
+      "id": 276,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 270
+    },
+    {
+      "id": 277,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 455
+    },
+    {
+      "id": 278,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 270
+    },
+    {
+      "id": 279,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 440
+    },
+    {
+      "id": 280,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 198
+    },
+    {
+      "id": 281,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 278
+    },
+    {
+      "id": 282,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 518
+    },
+    {
+      "id": 930,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 618
+    },
+    {
+      "id": 475,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 518
+    },
+    {
+      "id": 950,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 618
+    },
+    {
+      "id": 283,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 269
+    },
+    {
+      "id": 284,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 464
+    },
+    {
+      "id": 285,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 295
+    },
+    {
+      "id": 286,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 460
+    },
+    {
+      "id": 287,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 280
+    },
+    {
+      "id": 288,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 440
+    },
+    {
+      "id": 289,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 670
+    },
+    {
+      "id": 290,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 266
+    },
+    {
+      "id": 291,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 456
+    },
+    {
+      "id": 292,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 236
+    },
+    {
+      "id": 293,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 240
+    },
+    {
+      "id": 294,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 360
+    },
+    {
+      "id": 295,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 296,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 237
+    },
+    {
+      "id": 297,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 474
+    },
+    {
+      "id": 299,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 375
+    },
+    {
+      "id": 476,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 300,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 260
+    },
+    {
+      "id": 301,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 302,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 380
+    },
+    {
+      "id": 931,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 480
+    },
+    {
+      "id": 303,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 380
+    },
+    {
+      "id": 932,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 480
+    },
+    {
+      "id": 304,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 305,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 430
+    },
+    {
+      "id": 306,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 933,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 630
+    },
+    {
+      "id": 307,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 280
+    },
+    {
+      "id": 308,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 934,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 510
+    },
+    {
+      "id": 309,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 295
+    },
+    {
+      "id": 310,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 475
+    },
+    {
+      "id": 935,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 575
+    },
+    {
+      "id": 311,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 312,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 313,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 314,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 406,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 280
+    },
+    {
+      "id": 315,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 400
+    },
+    {
+      "id": 407,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 515
+    },
+    {
+      "id": 316,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 302
+    },
+    {
+      "id": 317,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 477
+    },
+    {
+      "id": 318,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 319,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 460
+    },
+    {
+      "id": 936,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 560
+    },
+    {
+      "id": 320,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 400
+    },
+    {
+      "id": 321,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 515
+    },
+    {
+      "id": 322,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 323,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 937,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 580
+    },
+    {
+      "id": 324,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 470
+    },
+    {
+      "id": 325,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 326,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 327,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 328,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 290
+    },
+    {
+      "id": 329,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 340
+    },
+    {
+      "id": 330,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 560
+    },
+    {
+      "id": 331,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 335
+    },
+    {
+      "id": 332,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 333,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 334,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 938,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 335,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 488
+    },
+    {
+      "id": 336,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 534
+    },
+    {
+      "id": 337,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 338,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 339,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 288
+    },
+    {
+      "id": 340,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 468
+    },
+    {
+      "id": 341,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 308
+    },
+    {
+      "id": 342,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 468
+    },
+    {
+      "id": 343,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 344,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 345,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 355
+    },
+    {
+      "id": 346,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 347,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 355
+    },
+    {
+      "id": 348,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 349,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 200
+    },
+    {
+      "id": 350,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 550
+    },
+    {
+      "id": 351,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 1051,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 510
+    },
+    {
+      "id": 1052,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 510
+    },
+    {
+      "id": 1053,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 510
+    },
+    {
+      "id": 352,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 475
+    },
+    {
+      "id": 353,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 295
+    },
+    {
+      "id": 354,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 455
+    },
+    {
+      "id": 939,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 555
+    },
+    {
+      "id": 355,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 295
+    },
+    {
+      "id": 356,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 455
+    },
+    {
+      "id": 477,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 357,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 433,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 285
+    },
+    {
+      "id": 358,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 359,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 465
+    },
+    {
+      "id": 940,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 565
+    },
+    {
+      "id": 361,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 362,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 941,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 580
+    },
+    {
+      "id": 478,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 363,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 290
+    },
+    {
+      "id": 364,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 365,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 366,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 345
+    },
+    {
+      "id": 367,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 368,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 475
+    },
+    {
+      "id": 369,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 370,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 390
+    },
+    {
+      "id": 371,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 372,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 373,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 942,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 700
+    },
+    {
+      "id": 374,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 375,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 376,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 943,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 700
+    },
+    {
+      "id": 377,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 378,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 379,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 380,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 944,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 700
+    },
+    {
+      "id": 381,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 945,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 700
+    },
+    {
+      "id": 382,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 670
+    },
+    {
+      "id": 954,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 770
+    },
+    {
+      "id": 383,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 670
+    },
+    {
+      "id": 955,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 770
+    },
+    {
+      "id": 384,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 953,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 780
+    },
+    {
+      "id": 385,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 386,
+      "isLegendary": true,
+      "mode": 1,
+      "baseStat": 600
+    },
+    {
+      "id": 1054,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1055,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1056,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 387,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 318
+    },
+    {
+      "id": 388,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 389,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 390,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 309
+    },
+    {
+      "id": 391,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 392,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 551
+    },
+    {
+      "id": 393,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 314
+    },
+    {
+      "id": 394,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 395,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 396,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 245
+    },
+    {
+      "id": 397,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 340
+    },
+    {
+      "id": 398,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 399,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 250
+    },
+    {
+      "id": 400,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 429
+    },
+    {
+      "id": 401,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 224
+    },
+    {
+      "id": 402,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 449
+    },
+    {
+      "id": 403,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 263
+    },
+    {
+      "id": 404,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 363
+    },
+    {
+      "id": 405,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 523
+    },
+    {
+      "id": 408,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 350
+    },
+    {
+      "id": 409,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 410,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 350
+    },
+    {
+      "id": 411,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 412,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 224
+    },
+    {
+      "id": 1057,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 224
+    },
+    {
+      "id": 1058,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 224
+    },
+    {
+      "id": 413,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 424
+    },
+    {
+      "id": 1059,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 424
+    },
+    {
+      "id": 1060,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 424
+    },
+    {
+      "id": 414,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 428
+    },
+    {
+      "id": 1436,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 428
+    },
+    {
+      "id": 1437,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 428
+    },
+    {
+      "id": 415,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 244
+    },
+    {
+      "id": 416,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 489
+    },
+    {
+      "id": 417,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 425
+    },
+    {
+      "id": 418,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 419,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 420,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 275
+    },
+    {
+      "id": 421,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 463
+    },
+    {
+      "id": 1061,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 463
+    },
+    {
+      "id": 422,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 325
+    },
+    {
+      "id": 1062,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 325
+    },
+    {
+      "id": 423,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 475
+    },
+    {
+      "id": 1063,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 475
+    },
+    {
+      "id": 425,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 348
+    },
+    {
+      "id": 426,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 498
+    },
+    {
+      "id": 427,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 350
+    },
+    {
+      "id": 428,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 946,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 580
+    },
+    {
+      "id": 431,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 432,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 501
+    },
+    {
+      "id": 434,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 329
+    },
+    {
+      "id": 435,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 499
+    },
+    {
+      "id": 436,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 437,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 441,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 421
+    },
+    {
+      "id": 442,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 443,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 444,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 445,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 947,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 700
+    },
+    {
+      "id": 447,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 285
+    },
+    {
+      "id": 448,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 948,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 625
+    },
+    {
+      "id": 449,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 450,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 451,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 452,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 453,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 454,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 455,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 454
+    },
+    {
+      "id": 456,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 457,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 459,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 334
+    },
+    {
+      "id": 460,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 494
+    },
+    {
+      "id": 949,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 624
+    },
+    {
+      "id": 479,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 440
+    },
+    {
+      "id": 1064,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 520
+    },
+    {
+      "id": 1065,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 520
+    },
+    {
+      "id": 1066,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 520
+    },
+    {
+      "id": 1067,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 520
+    },
+    {
+      "id": 1068,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 520
+    },
+    {
+      "id": 480,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 481,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 482,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 483,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 1069,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 680
+    },
+    {
+      "id": 484,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 1070,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 680
+    },
+    {
+      "id": 485,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 486,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 670
+    },
+    {
+      "id": 487,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 1071,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 680
+    },
+    {
+      "id": 488,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 489,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 490,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 491,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 492,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 1072,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 493,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 720
+    },
+    {
+      "id": 1073,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1074,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1075,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1076,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1077,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1078,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1079,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1080,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1081,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1082,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1083,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1084,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1085,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1086,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1087,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1088,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 1089,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 720
+    },
+    {
+      "id": 494,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 495,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 308
+    },
+    {
+      "id": 496,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 413
+    },
+    {
+      "id": 497,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 528
+    },
+    {
+      "id": 498,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 308
+    },
+    {
+      "id": 499,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 418
+    },
+    {
+      "id": 500,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 528
+    },
+    {
+      "id": 501,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 308
+    },
+    {
+      "id": 502,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 413
+    },
+    {
+      "id": 503,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 543
+    },
+    {
+      "id": 1000,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 543
+    },
+    {
+      "id": 504,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 255
+    },
+    {
+      "id": 505,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 460
+    },
+    {
+      "id": 506,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 275
+    },
+    {
+      "id": 507,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 370
+    },
+    {
+      "id": 508,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 509,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 281
+    },
+    {
+      "id": 510,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 446
+    },
+    {
+      "id": 511,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 316
+    },
+    {
+      "id": 512,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 498
+    },
+    {
+      "id": 513,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 316
+    },
+    {
+      "id": 514,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 498
+    },
+    {
+      "id": 515,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 316
+    },
+    {
+      "id": 516,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 498
+    },
+    {
+      "id": 517,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 292
+    },
+    {
+      "id": 518,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 487
+    },
+    {
+      "id": 519,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 264
+    },
+    {
+      "id": 520,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 358
+    },
+    {
+      "id": 521,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 503
+    },
+    {
+      "id": 522,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 295
+    },
+    {
+      "id": 523,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 497
+    },
+    {
+      "id": 524,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 280
+    },
+    {
+      "id": 525,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 390
+    },
+    {
+      "id": 526,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 515
+    },
+    {
+      "id": 527,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 323
+    },
+    {
+      "id": 528,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 443
+    },
+    {
+      "id": 529,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 328
+    },
+    {
+      "id": 530,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 508
+    },
+    {
+      "id": 531,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 445
+    },
+    {
+      "id": 951,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 545
+    },
+    {
+      "id": 532,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 533,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 534,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 535,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 294
+    },
+    {
+      "id": 536,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 384
+    },
+    {
+      "id": 537,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 509
+    },
+    {
+      "id": 538,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 539,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 465
+    },
+    {
+      "id": 540,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 541,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 380
+    },
+    {
+      "id": 542,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 543,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 260
+    },
+    {
+      "id": 544,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 360
+    },
+    {
+      "id": 545,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 546,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 280
+    },
+    {
+      "id": 547,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 548,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 280
+    },
+    {
+      "id": 549,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 1001,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 550,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 460
+    },
+    {
+      "id": 1090,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 460
+    },
+    {
+      "id": 1091,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 460
+    },
+    {
+      "id": 902,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 1234,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 551,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 292
+    },
+    {
+      "id": 552,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 351
+    },
+    {
+      "id": 553,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 519
+    },
+    {
+      "id": 554,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 315
+    },
+    {
+      "id": 555,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 1092,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 540
+    },
+    {
+      "id": 989,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 315
+    },
+    {
+      "id": 990,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 1093,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 540
+    },
+    {
+      "id": 556,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 460
+    },
+    {
+      "id": 557,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 325
+    },
+    {
+      "id": 558,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 559,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 348
+    },
+    {
+      "id": 560,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 488
+    },
+    {
+      "id": 561,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 562,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 303
+    },
+    {
+      "id": 563,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 483
+    },
+    {
+      "id": 991,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 303
+    },
+    {
+      "id": 867,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 483
+    },
+    {
+      "id": 564,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 355
+    },
+    {
+      "id": 565,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 566,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 401
+    },
+    {
+      "id": 567,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 567
+    },
+    {
+      "id": 568,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 329
+    },
+    {
+      "id": 569,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 479
+    },
+    {
+      "id": 1506,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 605
+    },
+    {
+      "id": 570,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 571,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 1002,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 1003,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 572,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 573,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 470
+    },
+    {
+      "id": 574,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 290
+    },
+    {
+      "id": 575,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 390
+    },
+    {
+      "id": 576,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 577,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 290
+    },
+    {
+      "id": 578,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 370
+    },
+    {
+      "id": 579,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 580,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 581,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 483
+    },
+    {
+      "id": 582,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 583,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 395
+    },
+    {
+      "id": 584,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 535
+    },
+    {
+      "id": 585,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 335
+    },
+    {
+      "id": 1094,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 335
+    },
+    {
+      "id": 1095,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 335
+    },
+    {
+      "id": 1096,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 335
+    },
+    {
+      "id": 586,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 495
+    },
+    {
+      "id": 1097,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1098,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1099,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 587,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 428
+    },
+    {
+      "id": 588,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 315
+    },
+    {
+      "id": 589,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 590,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 294
+    },
+    {
+      "id": 591,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 464
+    },
+    {
+      "id": 592,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 335
+    },
+    {
+      "id": 593,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 594,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 470
+    },
+    {
+      "id": 595,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 319
+    },
+    {
+      "id": 596,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 472
+    },
+    {
+      "id": 597,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 598,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 489
+    },
+    {
+      "id": 599,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 600,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 440
+    },
+    {
+      "id": 601,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 520
+    },
+    {
+      "id": 602,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 275
+    },
+    {
+      "id": 603,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 604,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 515
+    },
+    {
+      "id": 605,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 335
+    },
+    {
+      "id": 606,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 607,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 275
+    },
+    {
+      "id": 608,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 370
+    },
+    {
+      "id": 609,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 520
+    },
+    {
+      "id": 610,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 611,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 612,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 540
+    },
+    {
+      "id": 613,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 614,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 515
+    },
+    {
+      "id": 615,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 616,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 617,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 618,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 471
+    },
+    {
+      "id": 992,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 471
+    },
+    {
+      "id": 619,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 350
+    },
+    {
+      "id": 620,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 621,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 491
+    },
+    {
+      "id": 622,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 303
+    },
+    {
+      "id": 623,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 514
+    },
+    {
+      "id": 624,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 340
+    },
+    {
+      "id": 625,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 1375,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 550
+    },
+    {
+      "id": 626,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 627,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 350
+    },
+    {
+      "id": 628,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 1004,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 629,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 370
+    },
+    {
+      "id": 630,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 631,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 512
+    },
+    {
+      "id": 632,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 484
+    },
+    {
+      "id": 633,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 634,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 635,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 636,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 360
+    },
+    {
+      "id": 637,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 550
+    },
+    {
+      "id": 638,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 639,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 640,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 641,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 1100,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 580
+    },
+    {
+      "id": 642,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 1101,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 580
+    },
+    {
+      "id": 643,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 644,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 645,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 1102,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 646,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 660
+    },
+    {
+      "id": 1104,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 700
+    },
+    {
+      "id": 1105,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 700
+    },
+    {
+      "id": 647,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 1106,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 580
+    },
+    {
+      "id": 648,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 1107,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 649,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 1108,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1109,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1110,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1111,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 650,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 313
+    },
+    {
+      "id": 651,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 652,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 653,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 307
+    },
+    {
+      "id": 654,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 409
+    },
+    {
+      "id": 655,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 534
+    },
+    {
+      "id": 656,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 314
+    },
+    {
+      "id": 657,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 405
+    },
+    {
+      "id": 658,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 1113,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 640
+    },
+    {
+      "id": 659,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 237
+    },
+    {
+      "id": 660,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 423
+    },
+    {
+      "id": 661,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 278
+    },
+    {
+      "id": 662,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 382
+    },
+    {
+      "id": 663,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 509
+    },
+    {
+      "id": 664,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 200
+    },
+    {
+      "id": 1438,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1439,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1440,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1441,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1442,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1443,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1444,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1445,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1446,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1447,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1448,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1449,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1450,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1451,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1452,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1453,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1454,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1455,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 1456,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 200
+    },
+    {
+      "id": 665,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 213
+    },
+    {
+      "id": 1457,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1458,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1459,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1460,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1461,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1462,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1463,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1464,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1465,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1466,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1467,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1468,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1469,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1470,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1471,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1472,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1473,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1474,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 1475,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 213
+    },
+    {
+      "id": 666,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 411
+    },
+    {
+      "id": 1114,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1115,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1116,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1117,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1118,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1119,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1120,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1121,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1122,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1123,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1124,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1125,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1126,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1127,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1128,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1129,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1130,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1131,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 1132,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 411
+    },
+    {
+      "id": 667,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 369
+    },
+    {
+      "id": 668,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 507
+    },
+    {
+      "id": 669,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 303
+    },
+    {
+      "id": 1133,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 303
+    },
+    {
+      "id": 1134,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 303
+    },
+    {
+      "id": 1135,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 303
+    },
+    {
+      "id": 1136,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 303
+    },
+    {
+      "id": 670,
+      "isLegendary": false,
+      "mode": 2,
+      "baseStat": 371
+    },
+    {
+      "id": 1137,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 371
+    },
+    {
+      "id": 1138,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 371
+    },
+    {
+      "id": 1139,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 371
+    },
+    {
+      "id": 1140,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 371
+    },
+    {
+      "id": 1141,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 551
+    },
+    {
+      "id": 671,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 552
+    },
+    {
+      "id": 1142,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 552
+    },
+    {
+      "id": 1143,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 552
+    },
+    {
+      "id": 1144,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 552
+    },
+    {
+      "id": 1145,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 552
+    },
+    {
+      "id": 672,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 350
+    },
+    {
+      "id": 673,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 523
+    },
+    {
+      "id": 674,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 348
+    },
+    {
+      "id": 675,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 676,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 1146,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 1147,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 1148,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 1149,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 1150,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 1151,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 1152,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 1153,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 1154,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 677,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 355
+    },
+    {
+      "id": 678,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 446
+    },
+    {
+      "id": 1155,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 446
+    },
+    {
+      "id": 679,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 325
+    },
+    {
+      "id": 680,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 448
+    },
+    {
+      "id": 681,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 1156,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 682,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 341
+    },
+    {
+      "id": 683,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 462
+    },
+    {
+      "id": 684,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 341
+    },
+    {
+      "id": 685,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 686,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 288
+    },
+    {
+      "id": 687,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 482
+    },
+    {
+      "id": 688,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 306
+    },
+    {
+      "id": 689,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 690,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 691,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 494
+    },
+    {
+      "id": 692,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 693,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 513
+    },
+    {
+      "id": 694,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 289
+    },
+    {
+      "id": 695,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 481
+    },
+    {
+      "id": 696,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 362
+    },
+    {
+      "id": 697,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 521
+    },
+    {
+      "id": 698,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 362
+    },
+    {
+      "id": 699,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 521
+    },
+    {
+      "id": 701,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 702,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 441
+    },
+    {
+      "id": 703,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 704,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 705,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 452
+    },
+    {
+      "id": 706,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 1005,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 452
+    },
+    {
+      "id": 1006,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 707,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 470
+    },
+    {
+      "id": 708,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 309
+    },
+    {
+      "id": 709,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 710,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 335
+    },
+    {
+      "id": 1157,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 335
+    },
+    {
+      "id": 1158,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 335
+    },
+    {
+      "id": 1159,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 335
+    },
+    {
+      "id": 711,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 494
+    },
+    {
+      "id": 1160,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 494
+    },
+    {
+      "id": 1161,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 494
+    },
+    {
+      "id": 1162,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 494
+    },
+    {
+      "id": 712,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 304
+    },
+    {
+      "id": 713,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 514
+    },
+    {
+      "id": 1007,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 514
+    },
+    {
+      "id": 714,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 245
+    },
+    {
+      "id": 715,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 540
+    },
+    {
+      "id": 716,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 1163,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 717,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 718,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1166,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1164,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 486
+    },
+    {
+      "id": 1167,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 708
+    },
+    {
+      "id": 719,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 952,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 700
+    },
+    {
+      "id": 720,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 1168,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 680
+    },
+    {
+      "id": 721,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 722,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 723,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 724,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 540
+    },
+    {
+      "id": 1008,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 540
+    },
+    {
+      "id": 725,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 726,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 727,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 728,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 729,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 730,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 731,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 265
+    },
+    {
+      "id": 732,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 355
+    },
+    {
+      "id": 733,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 734,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 253
+    },
+    {
+      "id": 735,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 428
+    },
+    {
+      "id": 1477,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 418
+    },
+    {
+      "id": 736,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 737,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 400
+    },
+    {
+      "id": 738,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 1478,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 500
+    },
+    {
+      "id": 739,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 338
+    },
+    {
+      "id": 740,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 478
+    },
+    {
+      "id": 741,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 476
+    },
+    {
+      "id": 1169,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 476
+    },
+    {
+      "id": 1170,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 476
+    },
+    {
+      "id": 1171,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 476
+    },
+    {
+      "id": 742,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 304
+    },
+    {
+      "id": 743,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 464
+    },
+    {
+      "id": 1484,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 464
+    },
+    {
+      "id": 744,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 280
+    },
+    {
+      "id": 1172,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 280
+    },
+    {
+      "id": 745,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 487
+    },
+    {
+      "id": 1173,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 487
+    },
+    {
+      "id": 1174,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 487
+    },
+    {
+      "id": 746,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 185
+    },
+    {
+      "id": 1175,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 630
+    },
+    {
+      "id": 747,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 748,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 749,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 385
+    },
+    {
+      "id": 750,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 751,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 269
+    },
+    {
+      "id": 752,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 454
+    },
+    {
+      "id": 1485,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 454
+    },
+    {
+      "id": 753,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 250
+    },
+    {
+      "id": 754,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 1479,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 480
+    },
+    {
+      "id": 755,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 285
+    },
+    {
+      "id": 756,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 757,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 1480,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 480
+    },
+    {
+      "id": 759,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 340
+    },
+    {
+      "id": 760,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 761,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 210
+    },
+    {
+      "id": 762,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 350
+    },
+    {
+      "id": 763,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 764,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 765,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 766,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 767,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 230
+    },
+    {
+      "id": 768,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 769,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 770,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 771,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 772,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 534
+    },
+    {
+      "id": 773,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 1176,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1177,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1178,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1179,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1180,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1181,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1182,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1183,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1184,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1185,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1186,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1187,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1188,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1189,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1190,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1191,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 1192,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 774,
+      "isLegendary": false,
+      "mode": 2,
+      "baseStat": 440
+    },
+    {
+      "id": 1193,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 440
+    },
+    {
+      "id": 1194,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 440
+    },
+    {
+      "id": 1195,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 440
+    },
+    {
+      "id": 1196,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 440
+    },
+    {
+      "id": 1197,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 440
+    },
+    {
+      "id": 1198,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 440
+    },
+    {
+      "id": 1199,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 500
+    },
+    {
+      "id": 1200,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 500
+    },
+    {
+      "id": 1201,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 500
+    },
+    {
+      "id": 1202,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 500
+    },
+    {
+      "id": 1203,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 500
+    },
+    {
+      "id": 1204,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 500
+    },
+    {
+      "id": 1205,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 500
+    },
+    {
+      "id": 775,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 776,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 475
+    },
+    {
+      "id": 777,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 445
+    },
+    {
+      "id": 1486,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 435
+    },
+    {
+      "id": 778,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 476
+    },
+    {
+      "id": 1206,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 476
+    },
+    {
+      "id": 1481,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 476
+    },
+    {
+      "id": 1535,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 476
+    },
+    {
+      "id": 779,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 475
+    },
+    {
+      "id": 780,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 781,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 517
+    },
+    {
+      "id": 782,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 783,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 784,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 1482,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 785,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 786,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 787,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 788,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 789,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 200
+    },
+    {
+      "id": 790,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 400
+    },
+    {
+      "id": 791,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 792,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 680
+    },
+    {
+      "id": 793,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 794,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 795,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 796,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 565
+    },
+    {
+      "id": 797,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 798,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 799,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 800,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 1207,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 680
+    },
+    {
+      "id": 1208,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 680
+    },
+    {
+      "id": 1209,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 754
+    },
+    {
+      "id": 801,
+      "isLegendary": true,
+      "mode": 1,
+      "baseStat": 600
+    },
+    {
+      "id": 1210,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 802,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 803,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 804,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 540
+    },
+    {
+      "id": 805,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 806,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 807,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 808,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 809,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 1507,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 810,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 811,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 812,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 1508,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 530
+    },
+    {
+      "id": 813,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 814,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 815,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 1509,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 530
+    },
+    {
+      "id": 816,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 817,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 420
+    },
+    {
+      "id": 818,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 1510,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 530
+    },
+    {
+      "id": 819,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 275
+    },
+    {
+      "id": 820,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 460
+    },
+    {
+      "id": 821,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 245
+    },
+    {
+      "id": 822,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 365
+    },
+    {
+      "id": 823,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 1511,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 824,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 180
+    },
+    {
+      "id": 825,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 335
+    },
+    {
+      "id": 826,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 1512,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 595
+    },
+    {
+      "id": 827,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 245
+    },
+    {
+      "id": 828,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 829,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 250
+    },
+    {
+      "id": 830,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 831,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 270
+    },
+    {
+      "id": 832,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 833,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 284
+    },
+    {
+      "id": 834,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 1513,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 601
+    },
+    {
+      "id": 835,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 270
+    },
+    {
+      "id": 836,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 837,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 240
+    },
+    {
+      "id": 838,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 839,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 1514,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 590
+    },
+    {
+      "id": 840,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 260
+    },
+    {
+      "id": 841,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 1515,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 615
+    },
+    {
+      "id": 842,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 1516,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 590
+    },
+    {
+      "id": 1408,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 1426,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 540
+    },
+    {
+      "id": 843,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 315
+    },
+    {
+      "id": 844,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 1517,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 628
+    },
+    {
+      "id": 845,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 535
+    },
+    {
+      "id": 1211,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 535
+    },
+    {
+      "id": 1212,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 535
+    },
+    {
+      "id": 846,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 280
+    },
+    {
+      "id": 847,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 848,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 242
+    },
+    {
+      "id": 849,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 502
+    },
+    {
+      "id": 1518,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 621
+    },
+    {
+      "id": 1213,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 502
+    },
+    {
+      "id": 850,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 851,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 1519,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 615
+    },
+    {
+      "id": 852,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 853,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 854,
+      "isLegendary": false,
+      "mode": 2,
+      "baseStat": 308
+    },
+    {
+      "id": 1214,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 308
+    },
+    {
+      "id": 855,
+      "isLegendary": false,
+      "mode": 2,
+      "baseStat": 508
+    },
+    {
+      "id": 1215,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 508
+    },
+    {
+      "id": 856,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 265
+    },
+    {
+      "id": 857,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 370
+    },
+    {
+      "id": 858,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 1520,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 510
+    },
+    {
+      "id": 859,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 265
+    },
+    {
+      "id": 860,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 370
+    },
+    {
+      "id": 861,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 1521,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 610
+    },
+    {
+      "id": 868,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 270
+    },
+    {
+      "id": 869,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 495
+    },
+    {
+      "id": 1216,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1217,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1218,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1219,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1220,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1221,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1222,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1223,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1235,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1236,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1237,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1238,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1239,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1240,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1241,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1242,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1243,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1244,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1245,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1246,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1247,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1248,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1249,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1250,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1251,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1252,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1253,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1254,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1255,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1256,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1257,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1258,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1259,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1260,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1261,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1262,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1263,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1264,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1265,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1266,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1267,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1268,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1269,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1270,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1271,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1272,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1273,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1274,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1275,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1276,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1277,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1278,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1279,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1280,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1281,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1282,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1283,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1284,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1285,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1286,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1287,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1288,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1522,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 870,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 470
+    },
+    {
+      "id": 871,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 435
+    },
+    {
+      "id": 872,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 185
+    },
+    {
+      "id": 873,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 874,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 875,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 470
+    },
+    {
+      "id": 1224,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 470
+    },
+    {
+      "id": 876,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 475
+    },
+    {
+      "id": 1225,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 475
+    },
+    {
+      "id": 877,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 451
+    },
+    {
+      "id": 1226,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 451
+    },
+    {
+      "id": 878,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 330
+    },
+    {
+      "id": 879,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 520
+    },
+    {
+      "id": 1523,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 585
+    },
+    {
+      "id": 880,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 881,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 882,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 883,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 884,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 550
+    },
+    {
+      "id": 1524,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 535
+    },
+    {
+      "id": 1425,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 885,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 270
+    },
+    {
+      "id": 886,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 887,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 888,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 660
+    },
+    {
+      "id": 1227,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 700
+    },
+    {
+      "id": 889,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 660
+    },
+    {
+      "id": 1228,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 700
+    },
+    {
+      "id": 890,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 690
+    },
+    {
+      "id": 1229,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 790
+    },
+    {
+      "id": 891,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 385
+    },
+    {
+      "id": 892,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 550
+    },
+    {
+      "id": 1525,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 550
+    },
+    {
+      "id": 1230,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 550
+    },
+    {
+      "id": 1526,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 550
+    },
+    {
+      "id": 893,
+      "isLegendary": true,
+      "mode": 1,
+      "baseStat": 600
+    },
+    {
+      "id": 1231,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 600
+    },
+    {
+      "id": 894,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 895,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 896,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 897,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 898,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 1232,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 680
+    },
+    {
+      "id": 1233,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 680
+    },
+    {
+      "id": 905,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 580
+    },
+    {
+      "id": 1103,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 580
+    },
+    {
+      "id": 1289,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 1290,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 1291,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 1292,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 1293,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 411
+    },
+    {
+      "id": 1294,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 1295,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 310
+    },
+    {
+      "id": 1296,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 410
+    },
+    {
+      "id": 1297,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 1298,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 254
+    },
+    {
+      "id": 1299,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 489
+    },
+    {
+      "id": 1300,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 489
+    },
+    {
+      "id": 1301,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 210
+    },
+    {
+      "id": 1302,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 419
+    },
+    {
+      "id": 1303,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 210
+    },
+    {
+      "id": 1304,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 450
+    },
+    {
+      "id": 1305,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 240
+    },
+    {
+      "id": 1306,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 350
+    },
+    {
+      "id": 1307,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 1308,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 305
+    },
+    {
+      "id": 1309,
+      "isLegendary": false,
+      "mode": 2,
+      "baseStat": 470
+    },
+    {
+      "id": 1310,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 470
+    },
+    {
+      "id": 1311,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 312
+    },
+    {
+      "id": 1312,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 477
+    },
+    {
+      "id": 1313,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 260
+    },
+    {
+      "id": 1314,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 354
+    },
+    {
+      "id": 1315,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 510
+    },
+    {
+      "id": 1316,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 417
+    },
+    {
+      "id": 1317,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 417
+    },
+    {
+      "id": 1318,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 417
+    },
+    {
+      "id": 1319,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 417
+    },
+    {
+      "id": 1320,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 280
+    },
+    {
+      "id": 1321,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 355
+    },
+    {
+      "id": 1322,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 1323,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 255
+    },
+    {
+      "id": 1324,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 1325,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 1326,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 272
+    },
+    {
+      "id": 1327,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 495
+    },
+    {
+      "id": 1328,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 280
+    },
+    {
+      "id": 1329,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 490
+    },
+    {
+      "id": 1330,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 340
+    },
+    {
+      "id": 1331,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 505
+    },
+    {
+      "id": 1332,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 290
+    },
+    {
+      "id": 1333,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 485
+    },
+    {
+      "id": 1334,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 275
+    },
+    {
+      "id": 1335,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 1336,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 335
+    },
+    {
+      "id": 1337,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 1338,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 450
+    },
+    {
+      "id": 1339,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 306
+    },
+    {
+      "id": 1340,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 486
+    },
+    {
+      "id": 1341,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 270
+    },
+    {
+      "id": 1342,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 470
+    },
+    {
+      "id": 1343,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 255
+    },
+    {
+      "id": 1344,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 481
+    },
+    {
+      "id": 1345,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 297
+    },
+    {
+      "id": 1346,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 380
+    },
+    {
+      "id": 1347,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 526
+    },
+    {
+      "id": 1348,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 245
+    },
+    {
+      "id": 1349,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 425
+    },
+    {
+      "id": 1350,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 1351,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 315
+    },
+    {
+      "id": 1352,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 457
+    },
+    {
+      "id": 1353,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 650
+    },
+    {
+      "id": 1354,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 1355,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 500
+    },
+    {
+      "id": 1356,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 501
+    },
+    {
+      "id": 1357,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 480
+    },
+    {
+      "id": 1358,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 350
+    },
+    {
+      "id": 1359,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 525
+    },
+    {
+      "id": 1360,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 290
+    },
+    {
+      "id": 1361,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 488
+    },
+    {
+      "id": 1362,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 520
+    },
+    {
+      "id": 1363,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 334
+    },
+    {
+      "id": 1364,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 521
+    },
+    {
+      "id": 1365,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 503
+    },
+    {
+      "id": 1366,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 530
+    },
+    {
+      "id": 1367,
+      "isLegendary": false,
+      "mode": 1,
+      "baseStat": 495
+    },
+    {
+      "id": 1368,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1369,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 495
+    },
+    {
+      "id": 1376,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1377,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 590
+    },
+    {
+      "id": 1378,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1379,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1380,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1381,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1382,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1383,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1384,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1385,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1386,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1387,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1388,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 320
+    },
+    {
+      "id": 1389,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 423
+    },
+    {
+      "id": 1390,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 1391,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 1392,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 300
+    },
+    {
+      "id": 1393,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 550
+    },
+    {
+      "id": 1394,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1395,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1396,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1397,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 570
+    },
+    {
+      "id": 1398,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 590
+    },
+    {
+      "id": 1399,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 590
+    },
+    {
+      "id": 1400,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 670
+    },
+    {
+      "id": 1401,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 670
+    },
+    {
+      "id": 1406,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 590
+    },
+    {
+      "id": 1407,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 590
+    },
+    {
+      "id": 1410,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 308
+    },
+    {
+      "id": 1412,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 508
+    },
+    {
+      "id": 1413,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 555
+    },
+    {
+      "id": 1414,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 555
+    },
+    {
+      "id": 1415,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 555
+    },
+    {
+      "id": 1416,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 550
+    },
+    {
+      "id": 1417,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 550
+    },
+    {
+      "id": 1418,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 550
+    },
+    {
+      "id": 1419,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 550
+    },
+    {
+      "id": 1420,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 550
+    },
+    {
+      "id": 1421,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 550
+    },
+    {
+      "id": 1422,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 550
+    },
+    {
+      "id": 1423,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 550
+    },
+    {
+      "id": 1427,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 590
+    },
+    {
+      "id": 1428,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 590
+    },
+    {
+      "id": 1429,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 590
+    },
+    {
+      "id": 1430,
+      "isLegendary": false,
+      "mode": 0,
+      "baseStat": 590
+    },
+    {
+      "id": 1431,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 470
+    },
+    {
+      "id": 1432,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 615
+    },
+    {
+      "id": 1433,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 700
+    },
+    {
+      "id": 1434,
+      "isLegendary": true,
+      "mode": 0,
+      "baseStat": 600
+    },
+    {
+      "id": 1489,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 623
+    },
+    {
+      "id": 1490,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 625
+    },
+    {
+      "id": 1491,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 630
+    },
+    {
+      "id": 1492,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 630
+    },
+    {
+      "id": 1493,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 634
+    },
+    {
+      "id": 1527,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 700
+    },
+    {
+      "id": 1531,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 615
+    },
+    {
+      "id": 1532,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 625
+    },
+    {
+      "id": 1528,
+      "isLegendary": false,
+      "mode": 3,
+      "baseStat": 540
+    },
+    {
+      "id": 1529,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 775
+    },
+    {
+      "id": 1530,
+      "isLegendary": true,
+      "mode": 3,
+      "baseStat": 775
+    }
+  ]
+}

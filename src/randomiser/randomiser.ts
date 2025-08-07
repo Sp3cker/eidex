@@ -2,17 +2,34 @@ import { useRandomiserStore } from "@/stores/randomiserStore";
 import { isAbilityAvialable } from "@/utils/abilityData";
 import { getSpeciesData } from "@/utils/speciesUtils";
 
+interface Sfc32StateParams {
+  a: number;
+  b: number;
+  c: number;
+  ctr: number;
+}
+
+function sfc32NextStream(state: Sfc32State): number {
+  // This MUST replicate the C code's 32-bit integer behavior
+  const t = (state.a + state.b + state.ctr) | 0;
+  state.ctr = (state.ctr + 1) | 0;
+  state.a = (state.b ^ (state.b >>> 9)) | 0;
+  state.b = (state.c + (state.c << 3)) | 0;
+  state.c = (t + ((state.c << 21) | (state.c >>> 11))) | 0;
+  return t;
+}
+
 class Sfc32State {
   a: number;
   b: number;
   c: number;
   ctr: number;
 
-  constructor(a: number, b: number, c: number, ctr: number) {
-    this.a = a >>> 0; // Force to 32-bit unsigned
-    this.b = b >>> 0;
-    this.c = c >>> 0;
-    this.ctr = ctr >>> 0;
+  constructor(params: Sfc32StateParams) {
+    this.a = params.a >>> 0; // Force to 32-bit unsigned
+    this.b = params.b >>> 0;
+    this.c = params.c >>> 0;
+    this.ctr = params.ctr >>> 0;
   }
 
   nextStream(stream: number): number {
@@ -34,12 +51,12 @@ function randomizerRandSeed(
   data2: number,
   trainerId: number,
 ): Sfc32State {
-  const state = new Sfc32State(
-    (trainerId + reason) >>> 0,
-    (trainerId ^ data2) >>> 0,
-    data1 >>> 0,
-    RANDOMIZER_STREAM,
-  );
+  const state = new Sfc32State({
+    a: (trainerId + reason) >>> 0,
+    b: (trainerId ^ data2) >>> 0,
+    c: data1 >>> 0,
+    ctr: RANDOMIZER_STREAM,
+  });
 
   // Warm up the generator
   for (let i = 0; i < 10; i++) {
@@ -74,41 +91,10 @@ function randomizerNextRange(state: Sfc32State, range: number): number {
   return result;
 }
 
-function randomizeAbility(
-  species: number,
-  abilityNum: number,
-  abilityWhitelist: number[],
-  isRandomiserActive: boolean,
-): [number, boolean] {
-  // Check if randomiser is active
-  if (!isRandomiserActive) {
-    return [getSpeciesData(species).abilities[abilityNum], true]
-  }
-
-  const trainerId = useRandomiserStore.getState().trainerIdInfo?.fullId ?? 0;
-
-  // Generate seed
-  const seed = ((species << 8) | abilityNum) >>> 0;
-
-  // Initialize RNG
-  const state = randomizerRandSeed(
-    RANDOMIZER_REASON_ABILITIES,
-    seed,
-    species,
-    trainerId,
-  );
-
-  // Pick random ability from whitelist
-  const newAbility =
-    abilityWhitelist[randomizerNextRange(state, abilityWhitelist.length)];
-
-  const isAvailable: boolean = isAbilityAvialable(species, abilityNum, isRandomiserActive)
-
-  const result: [number, boolean] = [newAbility, isAvailable]
-
-  return result;
-}
-
-export { Sfc32State, RANDOMIZER_STREAM, randomizerRandSeed, randomizerNextRange };
+export {
+  Sfc32State,
+  RANDOMIZER_STREAM,
+  randomizerRandSeed,
+  randomizerNextRange,
+};
 export const RANDOMIZER_REASON_WILD_ENCOUNTER = 0;
-export { randomizeAbility };
