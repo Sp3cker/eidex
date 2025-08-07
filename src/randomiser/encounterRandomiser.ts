@@ -13,9 +13,11 @@ import {
   randomizerRandSeed,
   randomizerNextRange,
   RANDOMIZER_REASON_WILD_ENCOUNTER,
+  Sfc32State,
 } from "./randomiser";
 import { EncounterGroup, encounterStore } from "@/data/map/encounters";
 import mapConstants from "@/data/map/map_constants.json";
+import { buildSpeciesTable, SpeciesDataTable } from "./buildSpeciesTable";
 // We're using the trainerId already parsed by the randomiser store.
 // import { useRandomiserStore } from "@/stores/randomiserStore";
 const trainerId = {
@@ -87,7 +89,7 @@ const enum RandomizerSpeciesMode {
   MON_RANDOM_LEGEND_AWARE = 1,
   MON_RANDOM_BST = 2,
   MON_EVOLUTION = 3,
-};
+}
 // export interface EncounterLists {
 //   land_mons: string[];
 //   water_mons: string[];
@@ -111,113 +113,209 @@ const enum RandomizerSpeciesMode {
  * Needs the trainer see
  *
  */
+/**
+ * Main function to calculate a randomized wild encounter.
+ * @param originalSpecies The species that would have appeared originally.
+ * @param seed The unique seed calculated from map, area, and slot.
+ * @returns The new, randomized species ID.
+ */
+function calculateRandomizedEncounter(
+  originalSpecies: number,
+  seed: number,
+  trainerId: number,
+): number {
+  const mode = RandomizerSpeciesMode.MON_RANDOM_BST;
 
-const randomizeAreaMons = (
-  mapNum: number,
-  mapGroup: number,
-  area: number,
-  slot: number,
-) => {
-  let seed = mapGroup << 24;
-  seed |= mapNum << 16;
-  seed |= area << 8;
-  seed |= slot;
-
+  // 1. Seed the RNG
   const state = randomizerRandSeed(
     RANDOMIZER_REASON_WILD_ENCOUNTER,
-    seed,
-    speciesId,
+    seed, // In this context, the map/slot seed is `data1`
+    originalSpecies, // The original species is `data2`
     trainerId,
   );
-  const randomized =
-    allSpecies[randomizerNextRange(state, allSpecies.length)];
-};
 
-
-export function randomizeEncounters(
-  encounterData: Record<string, EncounterGroup[]>,
-) {
-  const trainerSeed = trainerId.fullId;
-
-  const output: EncounterDictionary = {};
-
-  // The JSON structure: wild_encounter_groups[0].encounters[]
-const mapKeys = Object.keys(mapConstants);
-const encounters = encounterStore.getEncounterData();
-  mapKeys.forEach((mapKey) => {
-    //@ts-ignore
-    const mapNumAndGroup = mapConstants[mapKey];
-    const encountersForMap = encounters[mapKey];
-    // for each encounterLevel, there could be water, land, fishing – each area will match one of the  WildArea enums
-    for (const area of ['water', 'land', 'fishing']) {
-      let areaEnum: WildArea;
-
-      switch (area) {
-        case 'water':
-          areaEnum = WildArea.WATER;
-          break;
-        case 'land':
-          areaEnum = WildArea.LAND;
-          break;
-        case 'fishing':
-          areaEnum = WildArea.FISHING;
-          break;
-      }
-      encountersForMap.forEach((level) => {
-        if (areaEnum === WildArea.FISHING && !level.fish?.mons?.length) {
-          const randomFishingMons = randomizeAreaMons(mapNumAndGroup.num, mapNumAndGroup.group, areaEnum, level.fish.mons);
-          const seed = makeSeedFromMapDeets(mapNumAndGroup.num, mapNumAndGroup.group, areaEnum, level.);
-        }
-        if (areaEnum === WildArea.LAND && !level.land?.mons?.length) {
-          return;
-        }
-        if (areaEnum === WildArea.WATER && !level.water?.mons?.length) {
-          return;
-        }
-      }
-// need to derive the `area` 
-
-    
-    // Helper to process an array of mons from JSON
-    const processMons = (area: WildArea, mons: any[], pushTo: string[]) => {
-      mons.forEach((mon: any, slot: number) => {
-        const originalSpeciesName: string = mon.species;
-        const speciesId = speciesNameToId(originalSpeciesName, idMap);
-        const seed = makeSeedFromMapDeets(mapNum, mapGroup, area, slot);
-        const state = randomizerRandSeed(
-          RANDOMIZER_REASON_WILD_ENCOUNTER,
-          seed,
-          speciesId,
-          trainerId,
-        );
-        const randomized =
-          allSpecies[randomizerNextRange(state, allSpecies.length)];
-        pushTo.push(randomized);
-      });
-    };
-
-    if (enc.land_mons?.mons?.length) {
-      processMons(WildArea.LAND, enc.land_mons.mons, lists.land_mons);
-    }
-    if (enc.water_mons?.mons?.length) {
-      processMons(WildArea.WATER, enc.water_mons.mons, lists.water_mons);
-    }
-    if (enc.fishing_mons?.mons?.length) {
-      // The JSON nests fishing mons under old/good/super rod groups, flatten them.
-      const flatFishMons: any[] = [];
-      if (Array.isArray(enc.fishing_mons.mons)) {
-        flatFishMons.push(...enc.fishing_mons.mons);
-      } else {
-        // Structure is { old_rod:[indexes], good_rod:[...], super_rod:[...] }
-        Object.values(enc.fishing_mons).forEach((v: any) => {
-          if (Array.isArray(v)) flatFishMons.push(...v);
-        });
-      }
-      processMons(WildArea.FISHING, flatFishMons, lists.fishing_mons);
-    }
-
-    output[mapName] = lists;
-  });
-
-  return output;
+  // 2. Perform the lookup
+  return randomizeMonTableLookup(state, mode, originalSpecies);
 }
+
+function randomizeMonTableLookup(
+  state: Sfc32State,
+  mode: RandomizerSpeciesMode,
+  species: number,
+): number {
+  // In a real app, you'd cache this table
+  const table = buildSpeciesTable(mode);
+
+  // Get the group (BST) of the original species
+  const originalGroup = table.groupData[table.speciesToGroupIndex[species]];
+  if (originalGroup === 0xffff) return species; // GROUP_INVALID
+
+  // Calculate the valid BST range (+/- ~10%)
+  const base = originalGroup * 1024;
+  const minGroup = Math.max(0, Math.floor((base - originalGroup * 100) / 1024));
+  const maxGroup = Math.min(
+    0xfffe,
+    Math.floor((base + originalGroup * 100) / 1024),
+  );
+
+  // Find the start/end indices in the sorted table for this BST range
+  const { start, end } = getIndicesFromGroupRange(table, minGroup, maxGroup);
+  const count = end - start + 1;
+  if (count <= 0) return species; // No valid species found in range
+
+  // Pick a random index from that slice
+  const randomIndex = randomizerNextRange(state, count);
+  const finalIndex = start + randomIndex;
+
+  // Return the new species
+  return table.groupIndexToSpecies[finalIndex];
+}
+
+function getIndicesFromGroupRange(
+  table: SpeciesDataTable,
+  minGroup: number,
+  maxGroup: number,
+): { start: number; end: number } {
+  // This would be a binary search implementation to find the first index >= minGroup
+  // and the last index <= maxGroup in the `table.groupData` array.
+  const start = table.groupData.findIndex((group) => group >= minGroup);
+  let end = start;
+  while (
+    end + 1 < table.groupData.length &&
+    table.groupData[end + 1] <= maxGroup
+  ) {
+    end++;
+  }
+  return { start, end };
+}
+
+function randomizerNextRange(state: Sfc32State, range: number): number {
+  if (range < 2) return 0;
+
+  // Fast way to get the next power of two
+  let nextPowerOfTwo = range - 1;
+  nextPowerOfTwo |= nextPowerOfTwo >> 1;
+  nextPowerOfTwo |= nextPowerOfTwo >> 2;
+  nextPowerOfTwo |= nextPowerOfTwo >> 4;
+  nextPowerOfTwo |= nextPowerOfTwo >> 8;
+  nextPowerOfTwo |= nextPowerOfTwo >> 16;
+  nextPowerOfTwo += 1;
+
+  const mask = nextPowerOfTwo - 1;
+  let result;
+
+  // Rejection sampling: keep trying until we get a number in the desired range
+  do {
+    result = state.nextStream() & mask;
+  } while (result >= range);
+
+  return result;
+}
+// const randomizeAreaMons = (
+//   mapNum: number,
+//   mapGroup: number,
+//   area: number,
+//   slot: number,
+// ) => {
+//   let seed = mapGroup << 24;
+//   seed |= mapNum << 16;
+//   seed |= area << 8;
+//   seed |= slot;
+
+//   const state = randomizerRandSeed(
+//     RANDOMIZER_REASON_WILD_ENCOUNTER,
+//     seed,
+//     speciesId,
+//     trainerId,
+//   );
+//   const randomized = allSpecies[randomizerNextRange(state, allSpecies.length)];
+// };
+
+// export function randomizeEncounters(
+//   encounterData: Record<string, EncounterGroup[]>,
+// ) {
+//   const trainerSeed = trainerId.fullId;
+
+//   const output: EncounterDictionary = {};
+
+//   // The JSON structure: wild_encounter_groups[0].encounters[]
+// const mapKeys = Object.keys(mapConstants);
+// const encounters = encounterStore.getEncounterData();
+//   mapKeys.forEach((mapKey) => {
+//     //@ts-ignore
+//     const mapNumAndGroup = mapConstants[mapKey];
+//     const encountersForMap = encounters[mapKey];
+//     // for each encounterLevel, there could be water, land, fishing – each area will match one of the  WildArea enums
+//     for (const area of ['water', 'land', 'fishing']) {
+//       let areaEnum: WildArea;
+
+//       switch (area) {
+//         case 'water':
+//           areaEnum = WildArea.WATER;
+//           break;
+//         case 'land':
+//           areaEnum = WildArea.LAND;
+//           break;
+//         case 'fishing':
+//           areaEnum = WildArea.FISHING;
+//           break;
+//       }
+//       encountersForMap.forEach((level) => {
+//         if (areaEnum === WildArea.FISHING && !level.fish?.mons?.length) {
+//           const randomFishingMons = randomizeAreaMons(mapNumAndGroup.num, mapNumAndGroup.group, areaEnum, level.fish.mons);
+//           const seed = makeSeedFromMapDeets(mapNumAndGroup.num, mapNumAndGroup.group, areaEnum, level.);
+//         }
+//         if (areaEnum === WildArea.LAND && !level.land?.mons?.length) {
+//           return;
+//         }
+//         if (areaEnum === WildArea.WATER && !level.water?.mons?.length) {
+//           return;
+//         }
+//       }
+// // need to derive the `area`
+
+//     // Helper to process an array of mons from JSON
+//     const processMons = (area: WildArea, mons: any[], pushTo: string[]) => {
+//       mons.forEach((mon: any, slot: number) => {
+//         const originalSpeciesName: string = mon.species;
+//         const speciesId = speciesNameToId(originalSpeciesName, idMap);
+//         const seed = makeSeedFromMapDeets(mapNum, mapGroup, area, slot);
+//         const state = randomizerRandSeed(
+//           RANDOMIZER_REASON_WILD_ENCOUNTER,
+//           seed,
+//           speciesId,
+//           trainerId,
+//         );
+//         const randomized =
+//           allSpecies[randomizerNextRange(state, allSpecies.length)];
+//         pushTo.push(randomized);
+//       });
+//     };
+
+//     if (enc.land_mons?.mons?.length) {
+//       processMons(WildArea.LAND, enc.land_mons.mons, lists.land_mons);
+//     }
+//     if (enc.water_mons?.mons?.length) {
+//       processMons(WildArea.WATER, enc.water_mons.mons, lists.water_mons);
+//     }
+//     if (enc.fishing_mons?.mons?.length) {
+//       // The JSON nests fishing mons under old/good/super rod groups, flatten them.
+//       const flatFishMons: any[] = [];
+//       if (Array.isArray(enc.fishing_mons.mons)) {
+//         flatFishMons.push(...enc.fishing_mons.mons);
+//       } else {
+//         // Structure is { old_rod:[indexes], good_rod:[...], super_rod:[...] }
+//         Object.values(enc.fishing_mons).forEach((v: any) => {
+//           if (Array.isArray(v)) flatFishMons.push(...v);
+//         });
+//       }
+//       processMons(WildArea.FISHING, flatFishMons, lists.fishing_mons);
+//     }
+
+//     output[mapName] = lists;
+//   });
+
+//   return output;
+// }
+
+export { calculateRandomizedEncounter };
