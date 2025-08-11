@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+import { useSpring, animated, useTrail, config } from "@react-spring/web";
 import useBodyScrollLock from "@/hooks/useBodyScrollLock";
 import { useMapStore } from "@/stores/useMapStore";
 
-import { useSpring, animated, useTrail, config } from "@react-spring/web";
 import { ErrorBoundary } from "react-error-boundary";
 import CloseButton from "../CloseButton";
 import { useRandomizerStore } from "@/stores/randomizerStore";
@@ -158,6 +158,7 @@ const Disclaimer = () => {
 };
 const UploadSave = () => {
   const {
+    isRandomiserActive,
     handleUpload,
     isUploading,
     isProcessing,
@@ -222,7 +223,7 @@ const UploadSave = () => {
           </div>
         )}
 
-        {uploadSuccess && trainerIdInfo && (
+        {isRandomiserActive && trainerIdInfo && (
           <div className="font-pkmnem space-y-2 rounded-md border border-green-500 bg-green-900/50 p-3 text-xl">
             <p className="font-bold text-green-200">
               Save file processed successfully!
@@ -233,7 +234,7 @@ const UploadSave = () => {
               <p>Full ID: {trainerIdInfo.fullId}</p>
               <p>Randomizer Mode: {trainerIdInfo.randomizerMode}</p>
             </div>
-            <p className=" text-green-200">
+            <p className="text-green-200">
               Encounters have been randomized based on your save data.
             </p>
           </div>

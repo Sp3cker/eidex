@@ -1,7 +1,7 @@
+import { lazy, memo, Suspense, useState } from "react";
 import Modal from "./Modal";
-import HiddenFileDrop from "./HiddenFileDrop";
-import { memo, useState } from "react";
-
+// import HiddenFileDrop from "./HiddenFileDrop";
+const SaveFileUploadButton = lazy(() => import("./SaveFileUploadButton"));
 const Footer = memo(function Footer() {
   const [isOpen, setIsOpen] = useState<string | null>(null);
   const handleClick = (to: string) => {
@@ -23,15 +23,20 @@ const Footer = memo(function Footer() {
       >
         {/* ...existing code... */}
         <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">
-          <button
-            onClick={() => handleClick("upload")}
-            className="rounded-xs m-1 cursor-pointer bg-gray-600 p-1 hover:bg-gray-500 active:bg-zinc-600"
+          <Suspense
+            fallback={
+              <button className="rounded-xs m-1 cursor-pointer bg-gray-600 p-1 hover:bg-gray-500 active:bg-zinc-600">
+                <p>⚗ Upload Save File</p>
+              </button>
+            }
           >
-            <p>⚗ Upload Save File</p>
-          </button>
+            <SaveFileUploadButton onClick={() => handleClick("upload")} />
+          </Suspense>
         </div>
         <div className="flex flex-col sm:w-80">
-          <HiddenFileDrop />
+          <p className="font-pkmnem leading-xs text-sm/3 text-white">
+            Data for EI 1.3
+          </p>
           <p className="font-pkmnem leading-xs text-sm/3 text-white">
             hows it goin man
           </p>

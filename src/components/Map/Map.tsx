@@ -11,7 +11,7 @@ import { lazy, Suspense, useLayoutEffect } from "react";
 import SearchContainer from "./Search/SearchContainer";
 import PlacesList from "./PlacesList";
 import { useMapHotkeys } from "@/hooks/useHotkeys";
-
+import { useRandomizerStore } from "@/stores/randomizerStore";
 document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
 const MapPlaceInfo = lazy(() => import("./MapPlaceInfo/MapPlaceInfo"));
@@ -19,6 +19,7 @@ const PokemonModal = lazy(() => import("@/components/PokemonModal"));
 const ImageViewer = lazy(() => import("./ImageViewer"));
 const Dexnav = lazy(() => import("./ItemsBox"));
 const Map = () => {
+  useRandomizerStore(); // this is here to ensure the store is initialized
   const setStateFromURL = useMapStore((state) => state.setStateFromURL);
   useMapHotkeys();
   useLayoutEffect(() => {
@@ -28,6 +29,7 @@ const Map = () => {
       setStateFromURL(route, param);
     }
   }, []);
+
   return (
     <div className="parent">
       <MapContainer>

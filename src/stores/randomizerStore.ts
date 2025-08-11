@@ -55,6 +55,8 @@ export const randomizerStore = createStore<RandomiserStore>()(
           error: null,
           uploadSuccess: false,
           trainerIdInfo: null,
+          didRunInit: false,
+          isRandomiserActive: false,
         });
         window.indexedDB.databases().then((dbs) => {
           dbs.forEach((db) => {
@@ -108,6 +110,7 @@ export const randomizerStore = createStore<RandomiserStore>()(
             isProcessing: false,
             uploadSuccess: true,
             trainerIdInfo: trainerData,
+            isRandomiserActive: true,
             error: null,
           });
         } catch (error) {
@@ -124,6 +127,7 @@ export const randomizerStore = createStore<RandomiserStore>()(
           error: null,
           uploadSuccess: false,
           trainerIdInfo: null,
+          didRunInit: false,
         }),
 
       onInit: async () => {
