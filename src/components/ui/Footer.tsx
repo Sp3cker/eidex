@@ -1,8 +1,16 @@
-import DisclaimerModal from "./DisclaimerModal";
+import Modal from "./Modal";
 import HiddenFileDrop from "./HiddenFileDrop";
-import { memo } from "react";
+import { memo, useState } from "react";
 
 const Footer = memo(function Footer() {
+  const [isOpen, setIsOpen] = useState<string | null>(null);
+  const handleClick = (to: string) => {
+    if (to === "upload") {
+      setIsOpen("upload");
+    } else {
+      setIsOpen("disclaimer");
+    }
+  };
   return (
     <>
       <div
@@ -15,29 +23,17 @@ const Footer = memo(function Footer() {
       >
         {/* ...existing code... */}
         <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">
-          <p>
-            {" "}
-            Dex by{" "}
-            <a
-              className="underline hover:bg-gray-600"
-              href="https://dex.emeraldimperium.net/"
-            >
-              Kildemal
-            </a>
-          </p>
-          <p>
-            <a
-              href="https://www.youtube.com/watch?v=Vhh_GeBPOhs"
-              target="_blank"
-            >
-              Map by Specker ☻
-            </a>
-          </p>
+          <button
+            onClick={() => handleClick("upload")}
+            className="rounded-xs m-1 cursor-pointer bg-gray-600 p-1 hover:bg-gray-500 active:bg-zinc-600"
+          >
+            <p>⚗ Upload Save File</p>
+          </button>
         </div>
         <div className="flex flex-col sm:w-80">
           <HiddenFileDrop />
           <p className="font-pkmnem leading-xs text-sm/3 text-white">
-           Dude beat E4 with just Pichus man...
+            hows it goin man
           </p>
         </div>
         <div className="flex items-center justify-end gap-5">
@@ -46,7 +42,13 @@ const Footer = memo(function Footer() {
               Not developed by the Emerald Imperium team.
             </p> */}
             <p className="font-pkmnem leading-xs pr-1 text-sm/3 text-white">
-              <DisclaimerModal />
+              <button
+                onClick={() => handleClick("disclaimer")}
+                className="text-sm/3 text-white underline transition-colors hover:text-emerald-400"
+              >
+                View disclaimer
+              </button>
+              <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
             </p>
           </div>
         </div>

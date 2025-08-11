@@ -1,0 +1,229 @@
+import { loadSpeciesData } from "./data";
+
+// Per-species randomizer mode constants (from C enum)
+export enum RandomizerPerSpeciesMode {
+  MON_RANDOMIZER_NORMAL = 0,
+  MON_RANDOMIZER_RANDOM_FORM = 1,
+  MON_RANDOMIZER_SPECIAL_FORM = 2,
+  MON_RANDOMIZER_INVALID = 3,
+}
+
+const RANDOMIZER_SPECIES_COUNT = 1535;
+const GROUP_INVALID = 0xffff;
+
+export enum RandomizerSpeciesMode {
+  MON_RANDOM = 0,
+  MON_RANDOM_LEGEND_AWARE = 1,
+  MON_RANDOM_BST = 2,
+  MON_EVOLUTION = 3,
+  MAX_MON_MODE = 4,
+}
+
+// const speciesById: SpeciesRandomizations[] = (() => {
+//   const arr: SpeciesRandomizations[] = new Array(RANDOMIZER_SPECIES_COUNT);
+//   const sentinel: SpeciesRandomizations = {
+//     id: 0,
+//     isLegendary: false,
+//     mode: RandomizerPerSpeciesMode.MON_RANDOMIZER_INVALID,
+//     baseStat: 0,
+//   };
+//   for (let i = 0; i < RANDOMIZER_SPECIES_COUNT; i++)
+//     arr[i] = { ...sentinel, id: i };
+//   const src: RandomizeJsonEntry[] =
+//     randoSeeds as unknown as RandomizeJsonEntry[];
+//   for (const entry of src) {
+//     const speciesId = entry.ID;
+//     if (speciesId >= 0 && speciesId < RANDOMIZER_SPECIES_COUNT) {
+//       arr[speciesId] = {
+//         id: speciesId,
+//         isLegendary: entry.isLegendary,
+//         mode: entry.mode,
+//         baseStat: entry.baseStat,
+//       };
+//     }
+//   }
+//   return arr;
+// })();
+
+export interface SpeciesDataTable {
+  groupData: number[]; // Sorted groups (after heap sort)
+  groupIndexToSpecies: number[]; // Maps sorted index -> species ID
+  speciesToGroupIndex: number[]; // Maps species ID -> sorted index
+}
+export class SpeciesTable implements SpeciesDataTable {
+  groupData: number[];
+  groupIndexToSpecies: number[];
+  speciesToGroupIndex: number[];
+  private speciesInfo: Array<{
+    isLegendary?: boolean;
+    baseStat: number;
+    mode: RandomizerPerSpeciesMode;
+  }> = [];
+  constructor() {
+    this.groupData = new Array(RANDOMIZER_SPECIES_COUNT);
+    this.groupIndexToSpecies = new Array(RANDOMIZER_SPECIES_COUNT);
+    this.speciesToGroupIndex = new Array(RANDOMIZER_SPECIES_COUNT).fill(0);
+  }
+  async buildSpeciesTable(
+    mode: RandomizerSpeciesMode,
+  ): Promise<SpeciesDataTable> {
+    const speciesById = await loadSpeciesData();
+
+    this.speciesInfo = speciesById;
+    // Clamp invalid modes to MON_RANDOM as C does
+    if (mode >= RandomizerSpeciesMode.MAX_MON_MODE)
+      mode = RandomizerSpeciesMode.MON_RANDOM;
+
+    if (speciesById.length !== RANDOMIZER_SPECIES_COUNT) {
+      throw new Error(
+        `Expected ${RANDOMIZER_SPECIES_COUNT} species, got ${speciesById.length}`,
+      );
+    }
+
+    // initialize arrays
+    this.groupData = new Array(RANDOMIZER_SPECIES_COUNT);
+    this.groupIndexToSpecies = new Array(RANDOMIZER_SPECIES_COUNT);
+    this.speciesToGroupIndex = new Array(RANDOMIZER_SPECIES_COUNT).fill(0);
+
+    switch (mode) {
+      case RandomizerSpeciesMode.MON_RANDOM_LEGEND_AWARE:
+        this.fillSpeciesGroupsLegendary();
+        break;
+      case RandomizerSpeciesMode.MON_RANDOM_BST:
+        this.fillSpeciesGroupsBST();
+        break;
+      case RandomizerSpeciesMode.MON_EVOLUTION:
+        this.fillSpeciesGroupsEvolution(); // TODO real evolution stage grouping
+        break;
+      case RandomizerSpeciesMode.MON_RANDOM:
+      default:
+        this.fillSpeciesGroupsRandom();
+    }
+
+    // Heap sort (descending by group value) – mirrors C implementation
+    let start = Math.floor(RANDOMIZER_SPECIES_COUNT / 2);
+    let end = RANDOMIZER_SPECIES_COUNT - 1;
+    while (end > 1) {
+      if (start > 0) {
+        start -= 1;
+      } else {
+        end -= 1;
+        this.swapSpeciesAndGroup(end, 0);
+      }
+      let root = start;
+      while (this.leftChildIndex(root) < end) {
+        let child = this.leftChildIndex(root);
+        if (
+          child + 1 < end &&
+          this.groupData[child] < this.groupData[child + 1]
+        ) {
+          child += 1;
+        }
+        if (this.groupData[root] < this.groupData[child]) {
+          this.swapSpeciesAndGroup(root, child);
+          root = child;
+        } else {
+          break;
+        }
+      }
+    }
+
+    // Build reverse lookup
+    for (let i = 0; i < RANDOMIZER_SPECIES_COUNT; i++) {
+      const speciesId = this.groupIndexToSpecies[i];
+      if (speciesId >= 0 && speciesId < RANDOMIZER_SPECIES_COUNT) {
+        this.speciesToGroupIndex[speciesId] = i;
+      }
+    }
+
+    return {
+      groupData: this.groupData,
+      groupIndexToSpecies: this.groupIndexToSpecies,
+      speciesToGroupIndex: this.speciesToGroupIndex,
+    };
+  }
+
+  fillSpeciesGroupsLegendary(): void {
+    for (let i = 0; i < RANDOMIZER_SPECIES_COUNT; i++) {
+      this.groupIndexToSpecies[i] = i;
+      this.groupData[i] = this.isSpeciesPermitted(i)
+        ? this.speciesInfo[i]?.isLegendary
+          ? 1
+          : 0
+        : GROUP_INVALID;
+    }
+  }
+
+  fillSpeciesGroupsBST(): void {
+    for (let i = 0; i < RANDOMIZER_SPECIES_COUNT; i++) {
+      this.groupIndexToSpecies[i] = i;
+      this.groupData[i] = this.isSpeciesPermitted(i)
+        ? (this.speciesInfo[i]?.baseStat ?? 0)
+        : GROUP_INVALID;
+    }
+  }
+
+  fillSpeciesGroupsEvolution(): void {
+    for (let i = 0; i < RANDOMIZER_SPECIES_COUNT; i++) {
+      this.groupIndexToSpecies[i] = i;
+      this.groupData[i] = this.isSpeciesPermitted(i) ? 0 : GROUP_INVALID;
+    }
+  }
+  isSpeciesPermitted(speciesId: number): boolean {
+    if (speciesId === 0) return false; // SPECIES_NONE
+    const info = this.speciesInfo[speciesId];
+    if (!info) return false;
+    if (info.mode === RandomizerPerSpeciesMode.MON_RANDOMIZER_INVALID)
+      return false;
+    if (info.baseStat === 0) return false; // disabled placeholder
+    return true;
+  }
+
+  private leftChildIndex(index: number): number {
+    return 2 * index + 1;
+  }
+
+  swapSpeciesAndGroup(indexA: number, indexB: number): void {
+    const tempGroup = this.groupData[indexA];
+    this.groupData[indexA] = this.groupData[indexB];
+    this.groupData[indexB] = tempGroup;
+    const tempSpecies = this.groupIndexToSpecies[indexA];
+    this.groupIndexToSpecies[indexA] = this.groupIndexToSpecies[indexB];
+    this.groupIndexToSpecies[indexB] = tempSpecies;
+  }
+
+  // Fillers replicating C logic
+  fillSpeciesGroupsRandom(): void {
+    for (let i = 0; i < RANDOMIZER_SPECIES_COUNT; i++) {
+      this.groupIndexToSpecies[i] = i;
+      this.groupData[i] = this.isSpeciesPermitted(i) ? 0 : GROUP_INVALID;
+    }
+  }
+}
+
+// Cache: ensure we only build once per mode and reuse thereafter
+const speciesTablePromiseByMode = new Map<
+  RandomizerSpeciesMode,
+  Promise<SpeciesDataTable>
+>();
+
+export async function getSpeciesTable(
+  mode: RandomizerSpeciesMode,
+  options?: { refresh?: boolean },
+): Promise<SpeciesDataTable> {
+  if (!options?.refresh) {
+    const existing = speciesTablePromiseByMode.get(mode);
+    if (existing) return existing;
+  }
+  const buildPromise = new SpeciesTable().buildSpeciesTable(mode);
+  speciesTablePromiseByMode.set(mode, buildPromise);
+  return buildPromise;
+}
+
+export function clearSpeciesTableCache(mode?: RandomizerSpeciesMode): void {
+  if (mode === undefined) {
+    speciesTablePromiseByMode.clear();
+  } else {
+    speciesTablePromiseByMode.delete(mode);
+  }
+}

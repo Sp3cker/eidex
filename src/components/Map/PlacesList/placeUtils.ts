@@ -1,4 +1,4 @@
-import mapsData from "@/data/map/maps copy.json";
+import mapsData from "./maps copy.json";
 
 export type PlaceType = "route" | "city" | "town" | "dungeon" | "other";
 

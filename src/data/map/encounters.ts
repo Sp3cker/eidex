@@ -1,5 +1,7 @@
-import defaultEncounters from "./encounters.json";
-import { EncounterGroup } from "./index";
+import defaultEncounters from "./encounters.json" with { type: "json" };
+import mapConstants from "./map_constants.json" with { type: "json" };
+import { randomizeSpeciesForSlot } from "@/lib/randomiser/engine.ts";
+import { RandomizerSpeciesMode } from "@/lib/randomiser/buildSpeciesTable.ts";
 import { pokemonDataMap } from "../pokemon";
 
 interface Mon {
@@ -7,7 +9,27 @@ interface Mon {
   max_level?: number;
   species: number;
 }
-// Base types for encounter data
+type EncounterGroup = {
+  map: string;
+  base_label: string;
+  land: {
+    encounter_rate: number;
+    mons: EncounterListing[];
+  };
+  water: {
+    encounter_rate: number;
+    mons: EncounterListing[];
+  };
+  fish: {
+    encounter_rate: number;
+    mons: EncounterListing[];
+  };
+  rock: {
+    encounter_rate: number;
+    mons: EncounterListing[];
+  };
+};
+
 type EncounterListing = {
   min_level: number;
   max_level: number;
@@ -77,14 +99,13 @@ class EncounterStore {
         if (mon.min_level === undefined || mon.max_level === undefined) {
           throw new Error("Missing min_level or max_level in encounter data");
         }
-
         const speciesData = pokemonDataMap.get(mon.species.toString());
         const name = speciesData ? speciesData.nameKey : "Unknown";
 
         return {
           min_level: mon.min_level,
           max_level: mon.max_level,
-          species: mon.species, // Directly use the species as a number
+          species: mon.species,
           name, // Add the name property
         };
       });
@@ -141,13 +162,14 @@ class EncounterStore {
     return grouped;
   }
 
-  get storedEncounterData() {
+  get storedEncounterData(): Record<string, EncounterGroup[]> | null {
     const storedData = localStorage.getItem(EncounterStore.USER_ENCOUNTERS_KEY);
     if (storedData) {
       return JSON.parse(storedData) as Record<string, EncounterGroup[]>;
     }
+    return null;
   }
-  /** Main getter and setter */
+
   public getEncounterData() {
     if (this.dataSource === "default") {
       return this.processedDefaultEncounters;
@@ -181,6 +203,100 @@ class EncounterStore {
 
   public clearEncounterData() {
     localStorage.removeItem(EncounterStore.USER_ENCOUNTERS_KEY);
+  }
+
+  /**
+   * Randomize all encounters in-place using trainerSeed (full 32-bit seed) & species mode.
+
+   * @param trainerSeed full 32-bit randomizer seed (trainer fullId)
+   * @param mode species randomization mode
+   * @param options optional flags 
+   */
+  public async randomizeEncountersWithTrainerSeed(
+    trainerSeed: number,
+    mode: number,
+  ) {
+    const MAX_SPECIES = 1535;
+    const encounterData = this.getEncounterData();
+    // Only iterate maps that actually have encounter data
+    const encounterBaseMapKeys: string[] = Object.keys(encounterData);
+
+    const AREA_KEYS: Array<"land" | "water" | "fish" | "rock"> = [
+      "land",
+      "water",
+      "fish",
+      "rock",
+    ];
+
+    const mapConstIndexed = mapConstants as Record<
+      string,
+      { group: number; num: number }
+    >;
+    for (const baseMapKey of encounterBaseMapKeys) {
+      const mapEncounterLevels = encounterData[baseMapKey];
+      if (!mapEncounterLevels || mapEncounterLevels.length === 0) {
+        console.warn(
+          `[encounterStore.randomize] Base map ${baseMapKey} has 0 encounter groups.`,
+        );
+        continue;
+      }
+      for (const group of mapEncounterLevels) {
+        const levelMapName = group.map; // This is the actual level map constant key
+        const levelMapMeta = mapConstIndexed[levelMapName];
+        if (!levelMapMeta) {
+          console.warn(
+            `[encounterStore.randomize] No mapConstants entry for level map ${levelMapName} (base ${baseMapKey}), skipping this group.`,
+          );
+          continue;
+        }
+        for (const areaKey of AREA_KEYS) {
+          // @ts-ignore index access
+          const areaBlock = group[areaKey] as
+            | { encounter_rate: number; mons: EncounterListing[] }
+            | undefined;
+          if (
+            !areaBlock ||
+            !Array.isArray(areaBlock.mons) ||
+            areaBlock.mons.length === 0
+          ) {
+            continue; // skip silently
+          }
+          // Determine area enum (must mirror C ordering)
+          const areaEnum = (() => {
+            switch (areaKey) {
+              case "land":
+                return 0; // WildArea.LAND
+              case "water":
+                return 1; // WildArea.WATER
+              case "fish":
+                return 2; // WildArea.FISHING
+              case "rock":
+                return 3; // custom extension (not in original C subset used earlier)
+            }
+          })();
+          const mons = areaBlock.mons;
+          for (let slot = 0; slot < mons.length; slot++) {
+            const mon = mons[slot];
+            if (mon.species >= MAX_SPECIES) {
+              throw new Error(
+                `Species id ${mon.species} out of bounds at ${levelMapName}:${areaKey}[${slot}]`,
+              );
+            }
+            const original = mon.species;
+            const randomized = await randomizeSpeciesForSlot(
+              original,
+              mode as RandomizerSpeciesMode,
+              trainerSeed,
+              levelMapName,
+              areaEnum,
+              slot,
+            );
+            mon.species = randomized;
+            mon.name = pokemonDataMap.get(randomized.toString())?.nameKey;
+          }
+        }
+      }
+    }
   }
 }
 
