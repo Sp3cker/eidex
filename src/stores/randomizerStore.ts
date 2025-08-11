@@ -7,6 +7,7 @@ import {
   getTrainerIdFromSectors,
   getRandomizerModeFromSectors,
 } from "@/lib/randomiser/trainerIdExtractor";
+import { pokemonSearchStore } from "./pokemonSearchStore";
 
 export type TrainerIdInfo = {
   trainerId: number;
@@ -32,6 +33,27 @@ interface RandomiserStore {
   clearEverything: () => void;
   reset: () => void;
   onInit: () => Promise<void>;
+}
+
+// A simple readiness gate so other modules can wait until encounters are ready
+let encountersReadyResolve: (() => void) | null = null;
+let encountersReadyPromise: Promise<void> | null = null;
+function resetEncountersReady() {
+  encountersReadyPromise = new Promise<void>((resolve) => {
+    encountersReadyResolve = resolve;
+  });
+}
+// initialize gate on first import
+resetEncountersReady();
+
+export function waitForEncountersReady(): Promise<void> {
+  // Safety: always return a promise
+  return encountersReadyPromise ?? Promise.resolve();
+}
+function markEncountersReady() {
+  // Resolve the current promise if pending
+  encountersReadyResolve?.();
+  encountersReadyResolve = null;
 }
 
 export const randomizerStore = createStore<RandomiserStore>()(
@@ -104,7 +126,11 @@ export const randomizerStore = createStore<RandomiserStore>()(
             trainerData.fullId,
             trainerData.randomizerMode,
           );
-
+          requestAnimationFrame(() => {
+            pokemonSearchStore._initialize();
+          });
+          // Encounters are now randomized and ready
+          markEncountersReady();
           set({
             isUploading: false,
             isProcessing: false,
@@ -131,24 +157,33 @@ export const randomizerStore = createStore<RandomiserStore>()(
         }),
 
       onInit: async () => {
-
         const { trainerIdInfo, didRunInit } = get();
         if (didRunInit) {
+          // If we've already initialized, assume encounters are ready
+          markEncountersReady();
           return;
         }
         if (!trainerIdInfo) {
+          // No trainer data means nothing to wait for
+          markEncountersReady();
           return;
         }
         if (trainerIdInfo.randomizerMode === undefined) {
           get().clearEverything();
+          markEncountersReady();
           return;
         }
         const { fullId, randomizerMode } = trainerIdInfo;
 
-        await encounterStore.randomizeEncountersWithTrainerSeed(
-          fullId,
-          randomizerMode,
-        );
+        requestAnimationFrame(async () => {
+          await encounterStore.randomizeEncountersWithTrainerSeed(
+            fullId,
+            randomizerMode,
+          );
+          pokemonSearchStore._initialize();
+          // Signal that randomized encounters are ready for consumers
+          markEncountersReady();
+        });
         set({ isRandomiserActive: true, didRunInit: true });
       },
     }),

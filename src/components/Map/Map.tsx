@@ -19,7 +19,7 @@ const PokemonModal = lazy(() => import("@/components/PokemonModal"));
 const ImageViewer = lazy(() => import("./ImageViewer"));
 const Dexnav = lazy(() => import("./ItemsBox"));
 const Map = () => {
-  useRandomizerStore(); // this is here to ensure the store is initialized
+  const {} = useRandomizerStore(); // this is here to ensure the store is initialized
   const setStateFromURL = useMapStore((state) => state.setStateFromURL);
   useMapHotkeys();
   useLayoutEffect(() => {

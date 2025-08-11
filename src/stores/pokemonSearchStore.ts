@@ -37,12 +37,13 @@ class PokemonSearchStore {
     this._initialize();
   }
 
-  private _initialize() {
+  _initialize() {
     // 1. Build the encounterMap from encountersStore
     //    Key: Normalized Pokémon species name (e.g., "gligar")
     //    Value: Array of levelID strings (e.g., ["MAP_GRANITE_CAVE_B1F", ...])
+    this.encounterMap.clear(); // Clear previous data
     const levels = encounterStore.getEncounterData();
-    console.log(levels);
+
     for (const mapBaseName in levels) {
       const encountersOnthisMap = levels[mapBaseName];
       for (const encounter of encountersOnthisMap) {

@@ -163,7 +163,6 @@ const UploadSave = () => {
     isUploading,
     isProcessing,
     error,
-    uploadSuccess,
     trainerIdInfo,
     clearError,
     clearEverything,
@@ -177,13 +176,13 @@ const UploadSave = () => {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 font-calamity">
       <DialogTitle className="cool-font mb-4 text-xl font-bold text-gray-200">
         Upload Save File
       </DialogTitle>
       <button onClick={clearEverything}>Clear Everything</button>
       <div className="space-y-3">
-        <p className="text-sm text-gray-300">
+        <p className="font-calamity text-sm text-gray-300">
           Upload your Emerald Imperium save file to randomize encounters based
           on your trainer ID and randomizer settings.
         </p>
@@ -194,7 +193,7 @@ const UploadSave = () => {
             accept=".sav,.save"
             onChange={handleFileChange}
             disabled={isUploading || isProcessing}
-            className="block w-full text-sm text-gray-300 file:mr-4 file:cursor-pointer file:rounded-md file:border-0 file:bg-emerald-700 file:px-4 file:py-2 file:text-sm file:font-medium file:text-white hover:file:bg-emerald-600 disabled:opacity-50"
+            className="font-pkmnem font-bold text-lg block w-full text-gray-300 file:mr-4 file:cursor-pointer file:rounded-sm file:border-0 file:bg-emerald-700 file:px-4 file:py-2 file:font-bold file:text-neutral-50 hover:file:bg-emerald-600 disabled:opacity-50"
           />
         </div>
 

@@ -185,6 +185,8 @@ export const useMapStore = create<MapStore>()(
       },
       setStateFromURL: (route: string, routeParam: string) => {
         if (route === "map") {
+          // Defer map selection until encounters are ready
+
           get().setSelectedMap(routeParam);
         }
       },
@@ -297,11 +299,13 @@ export const useMapStore = create<MapStore>()(
 export default useMapStore;
 
 // Function to handle URL initialization
-const initializeFromURL = () => {
+const initializeFromURL = async () => {
   const urlState = urlManager.parseCurrentURL();
 
   if (urlState.mapName) {
     const store = useMapStore.getState();
+    // Ensure randomizer/encounters are ready before selecting to get correct data
+    // await waitForEncountersReady();
     store.setSelectedMap(urlState.mapName);
 
     if (urlState.trainerName) {
@@ -329,6 +333,7 @@ const initializeFromURL = () => {
 
 // Initialize on page load
 if (typeof window !== "undefined") {
+  // Kick off async init, but don't block module load
   initializeFromURL();
 }
 
@@ -369,11 +374,13 @@ useMapStore.subscribe(
   },
 );
 
-window.addEventListener("popstate", () => {
+window.addEventListener("popstate", async () => {
+  return
   const urlState = urlManager.parseCurrentURL();
 
   if (urlState.mapName) {
     const store = useMapStore.getState();
+    // await waitForEncountersReady();
     store.setSelectedMap(urlState.mapName);
 
     if (urlState.trainerName) {
