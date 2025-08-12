@@ -21,6 +21,7 @@ function getGroupRange(
 ): { minGroup: number; maxGroup: number } {
   if (originalGroup === 0xffff) return { minGroup: 0xffff, maxGroup: 0xffff };
   if (mode === RandomizerSpeciesMode.MON_RANDOM_BST) {
+    debugger
     const base = originalGroup * 1024;
     const minScaled = (base - originalGroup * 100) / 1024;
     const maxScaled = (base + originalGroup * 100) / 1024;

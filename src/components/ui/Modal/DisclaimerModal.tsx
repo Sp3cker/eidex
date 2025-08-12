@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { lazy, useEffect } from "react";
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { useSpring, animated, useTrail, config } from "@react-spring/web";
 import useBodyScrollLock from "@/hooks/useBodyScrollLock";
@@ -6,8 +6,8 @@ import { useMapStore } from "@/stores/useMapStore";
 
 import { ErrorBoundary } from "react-error-boundary";
 import CloseButton from "../CloseButton";
-import { useRandomizerStore } from "@/stores/randomizerStore";
 
+const UploadSave = lazy(() => import("./UploadSaveFile.tsx"));
 // THESE ARE REVERSED BECAUSE REACT-SPRING IS BUGGY
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const paragraphs = (springAnim: any, index: number) => {
@@ -156,92 +156,7 @@ const Disclaimer = () => {
     </>
   );
 };
-const UploadSave = () => {
-  const {
-    isRandomiserActive,
-    handleUpload,
-    isUploading,
-    isProcessing,
-    error,
-    trainerIdInfo,
-    clearError,
-    clearEverything,
-  } = useRandomizerStore();
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      handleUpload(file);
-    }
-  };
-
-  return (
-    <div className="space-y-4 font-calamity">
-      <DialogTitle className="cool-font mb-4 text-xl font-bold text-gray-200">
-        Upload Save File
-      </DialogTitle>
-      <button onClick={clearEverything}>Clear Everything</button>
-      <div className="space-y-3">
-        <p className="font-calamity text-sm text-gray-300">
-          Upload your Emerald Imperium save file to randomize encounters based
-          on your trainer ID and randomizer settings.
-        </p>
-
-        <div className="space-y-2">
-          <input
-            type="file"
-            accept=".sav,.save"
-            onChange={handleFileChange}
-            disabled={isUploading || isProcessing}
-            className="font-pkmnem font-bold text-lg block w-full text-gray-300 file:mr-4 file:cursor-pointer file:rounded-sm file:border-0 file:bg-emerald-700 file:px-4 file:py-2 file:font-bold file:text-neutral-50 hover:file:bg-emerald-600 disabled:opacity-50"
-          />
-        </div>
-
-        {(isUploading || isProcessing) && (
-          <div className="flex items-center space-x-2 text-sm text-blue-400">
-            <div className="h-4 w-4 animate-spin rounded-full border-2 border-blue-400 border-t-transparent"></div>
-            <span>
-              {isUploading
-                ? "Reading save file..."
-                : "Processing data and randomizing encounters..."}
-            </span>
-          </div>
-        )}
-
-        {error && (
-          <div className="rounded-md border border-red-500 bg-red-900/50 p-3">
-            <div className="flex items-start justify-between">
-              <p className="text-sm text-red-200">{error}</p>
-              <button
-                onClick={clearError}
-                className="ml-2 text-red-400 hover:text-red-300"
-              >
-                ×
-              </button>
-            </div>
-          </div>
-        )}
-
-        {isRandomiserActive && trainerIdInfo && (
-          <div className="font-pkmnem space-y-2 rounded-md border border-green-500 bg-green-900/50 p-3 text-xl">
-            <p className="font-bold text-green-200">
-              Save file processed successfully!
-            </p>
-            <div className="space-y-1 text-green-300">
-              <p>Trainer ID: {trainerIdInfo.trainerId}</p>
-              <p>Secret ID: {trainerIdInfo.secretId}</p>
-              <p>Full ID: {trainerIdInfo.fullId}</p>
-              <p>Randomizer Mode: {trainerIdInfo.randomizerMode}</p>
-            </div>
-            <p className="text-green-200">
-              Encounters have been randomized based on your save data.
-            </p>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
 const Modal = ({
   isOpen,
   setIsOpen,
@@ -292,8 +207,14 @@ const Modal = ({
               onClick={handleClose}
               className="absolute right-5 top-5"
             />
-            {isOpen === "disclaimer" && <Disclaimer />}
-            {isOpen === "upload" && <UploadSave />}
+            <ErrorBoundary
+              fallback={
+                <div className="text-red-500">Something went wrong</div>
+              }
+            >
+              {isOpen === "disclaimer" && <Disclaimer />}
+              {isOpen === "upload" && <UploadSave />}
+            </ErrorBoundary>
             <div className="z-7 max-h-[calc(100vh-8rem)] overflow-y-auto">
               <div className="mt-6 flex justify-end">
                 <Button

@@ -5,7 +5,6 @@ import { encounterStore } from "@/data/map/encounters";
 import {
   splitSaveIntoChunks,
   getTrainerIdFromSectors,
-  getRandomizerModeFromSectors,
 } from "@/lib/randomiser/trainerIdExtractor";
 import { pokemonSearchStore } from "./pokemonSearchStore";
 
@@ -24,8 +23,10 @@ interface RandomiserStore {
   didRunInit: boolean;
   isRandomiserActive: boolean;
   trainerIdInfo: TrainerIdInfo | null;
+  userRandomizerMode: RandomizerSpeciesMode;
 
   setTrainerIdInfo: (info: TrainerIdInfo | null | undefined) => void;
+  setUserRandomizerMode: (mode: RandomizerSpeciesMode) => void;
   toggleRandomiserActive: () => void;
   disableRandomiserActive: () => void;
   handleUpload: (file: File) => Promise<void>;
@@ -64,9 +65,11 @@ export const randomizerStore = createStore<RandomiserStore>()(
       error: null,
       uploadSuccess: false,
       trainerIdInfo: null,
+      userRandomizerMode: RandomizerSpeciesMode.MON_RANDOM,
       didRunInit: false,
       isRandomiserActive: false,
       setTrainerIdInfo: (info) => set({ trainerIdInfo: info }),
+      setUserRandomizerMode: (mode) => set({ userRandomizerMode: mode }),
       toggleRandomiserActive: () =>
         set((state) => ({ isRandomiserActive: !state.isRandomiserActive })),
       disableRandomiserActive: () => set(() => ({ isRandomiserActive: false })),
@@ -113,13 +116,12 @@ export const randomizerStore = createStore<RandomiserStore>()(
           const sectors = splitSaveIntoChunks(arrayBuffer);
 
           const trainerIdData = getTrainerIdFromSectors(sectors);
-          const randomizerData = getRandomizerModeFromSectors(sectors);
 
           const trainerData = {
             trainerId: trainerIdData.trainerId,
             secretId: trainerIdData.secretId,
             fullId: trainerIdData.fullId,
-            randomizerMode: randomizerData.mappedMode,
+            randomizerMode: get().userRandomizerMode,
           };
 
           await encounterStore.randomizeEncountersWithTrainerSeed(
@@ -168,12 +170,8 @@ export const randomizerStore = createStore<RandomiserStore>()(
           markEncountersReady();
           return;
         }
-        if (trainerIdInfo.randomizerMode === undefined) {
-          get().clearEverything();
-          markEncountersReady();
-          return;
-        }
-        const { fullId, randomizerMode } = trainerIdInfo;
+        const { fullId } = trainerIdInfo;
+        const randomizerMode = get().userRandomizerMode;
 
         requestAnimationFrame(async () => {
           await encounterStore.randomizeEncountersWithTrainerSeed(
@@ -192,6 +190,7 @@ export const randomizerStore = createStore<RandomiserStore>()(
       storage: createJSONStorage(() => localStorage),
       partialize: (state) => ({
         trainerIdInfo: state.trainerIdInfo,
+        userRandomizerMode: state.userRandomizerMode,
         isRandomiserActive: state.isRandomiserActive,
       }),
       onRehydrateStorage: () => (state, error) => {

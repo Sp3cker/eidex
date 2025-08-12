@@ -1,0 +1,22 @@
+{
+  "tasks": {
+    "dump:bst": "deno run -A scripts/dumpSpeciesTable.ts --mode 1 --pretty",
+    "dump": "deno run -A scripts/dumpSpeciesTable.ts"
+  },
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["dom", "dom.iterable", "deno.window"]
+  },
+  "nodeModulesDir": "auto",
+  "imports": {
+    "fake-indexeddb/auto": "npm:fake-indexeddb/auto",
+    "fake-indexeddb": "npm:fake-indexeddb"
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 100,
+    "indentWidth": 2,
+    "singleQuote": false,
+    "proseWrap": "preserve"
+  }
+}
