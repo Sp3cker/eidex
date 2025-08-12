@@ -1,4 +1,4 @@
-import { loadSpeciesData } from "./data";
+import { loadSpeciesData } from "./data.ts";
 
 // Per-species randomizer mode constants (from C enum)
 export enum RandomizerPerSpeciesMode {

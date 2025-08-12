@@ -3,7 +3,7 @@ export const MGBA_SIZE = 0x20010; // 131088
 export const TOTAL_SIZE = 0x20000; // 131072
 const NUM_CHUNKS = 32;
 const SIGNATURE = 0x08012025;
-
+// const RANDOMIZER_MODE = 0x4052;
 type SectorInfo = {
   id: number;
   checksum: number;
@@ -74,10 +74,10 @@ export async function extractTrainerIdFromFile(path: string) {
 // Utilities for logical sector selection
 function getLatestValidSectorById(
   sectors: SectorInfo[],
-  logicalId: number
+  logicalId: number,
 ): SectorInfo | undefined {
   const candidates = sectors.filter(
-    (s) => s.validSignature && s.id === logicalId
+    (s) => s.validSignature && s.id === logicalId,
   );
   if (candidates.length === 0) return undefined;
   // Choose the one with the highest counter
@@ -97,16 +97,53 @@ export function getRandomizerModeFromSectors(sectors: SectorInfo[]): {
   mappedMode: RandomizerSpeciesMode;
   sectorIndex: number;
 } {
-  const sector = getLatestValidSectorById(sectors, 2);
-  if (!sector) throw new Error("No valid sector with logical id = 2");
+  // Compute sector/id for RANDOMIZER_MODE (0x4052) stored in SaveBlock1.vars
+  // const VARS_START = 0x4000;
+  const VARS_BASE_IN_SB1 = 0x139c; // offset of vars[] within SaveBlock1 (see global.h)
+  const SECTOR_DATA_SIZE = 0x0ff4; // 4084 bytes of data per sector
+  const VAR_SIZE_BYTES = 2; // u16
 
-  const dataOffset = 0x044c;
+  const varIndex = 0x52;
+  const byteOffsetInSB1 = VARS_BASE_IN_SB1 + varIndex * VAR_SIZE_BYTES;
+  const sectorId = 1 + Math.floor(byteOffsetInSB1 / SECTOR_DATA_SIZE); // SaveBlock1 spans logical ids 1..16
+  const dataOffset = byteOffsetInSB1 % SECTOR_DATA_SIZE;
+
+  const sector = getLatestValidSectorById(sectors, sectorId);
+  if (!sector) throw new Error(`No valid sector with logical id = ${sectorId}`);
+
   const data = sector.raw;
+  // Debug logs around computed address
+  try {
+    console.log(
+      `[RandomizerMode] varId=0x${RANDOMIZER_MODE.toString(16)} index=${varIndex} byteOffsetInSB1=0x${byteOffsetInSB1.toString(16)} sectorId=${sectorId} dataOffset=0x${dataOffset.toString(16)} (dec ${dataOffset}) counter=${sector.counter}`,
+    );
+    const windowRadius = 500;
+    const windowStart = Math.max(0, dataOffset - windowRadius);
+    const windowEnd = Math.min(data.length, dataOffset + windowRadius);
+    const windowBytes = Array.from(data.slice(windowStart, windowEnd)).map(
+      (b) => b.toString(16).padStart(2, "0"),
+    );
+    console.log(
+      `[RandomizerMode] bytes[0x${windowStart.toString(16)}..0x${(windowEnd - 1).toString(16)}]: ${windowBytes.join(" ")}`,
+    );
+    const sectorPhysicalIndex = sectors.indexOf(sector);
+    const absoluteOffset = sectorPhysicalIndex * 0x1000 + (dataOffset + 1);
+    console.log(
+      `[RandomizerMode] nearest 0x01 absolute=0x${absoluteOffset.toString(16)} (${absoluteOffset}) at sector phys=${sectorPhysicalIndex}, within=0x${(dataOffset + 1).toString(16)}`,
+    );
+  } catch {
+    // ignore logging errors
+  }
   const rawMode = data[dataOffset] | (data[dataOffset + 1] << 8);
+  try {
+    console.log(
+      `[RandomizerMode] raw @0x${dataOffset.toString(16)}: ${data[dataOffset]?.toString(16).padStart(2, "0")} ${data[dataOffset + 1]?.toString(16).padStart(2, "0")} -> rawMode=${rawMode}`,
+    );
+  } catch {}
 
   // Clamp to known enum range; default to MON_RANDOM when out of range
   const mappedMode =
-    rawMode in RandomizerSpeciesMode
+    rawMode >= 0 && rawMode < RandomizerSpeciesMode.MAX_MON_MODE
       ? (rawMode as unknown as RandomizerSpeciesMode)
       : RandomizerSpeciesMode.MON_RANDOM;
 
@@ -136,14 +173,14 @@ export async function readTrainerIdFromFile(path: string): Promise<number> {
 }
 
 export function getRandomizerModeOnlyFromSectors(
-  sectors: SectorInfo[]
+  sectors: SectorInfo[],
 ): RandomizerSpeciesMode {
   const { mappedMode } = getRandomizerModeFromSectors(sectors);
   return mappedMode;
 }
 
 export async function readRandomizerModeFromFile(
-  path: string
+  path: string,
 ): Promise<RandomizerSpeciesMode> {
   const data = await Deno.readFile(path);
   const sectors = splitSaveIntoChunks(data.buffer);
