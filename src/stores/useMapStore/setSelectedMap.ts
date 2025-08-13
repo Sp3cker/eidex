@@ -1,11 +1,9 @@
 import ItemSearch from "@/utils/itemsData";
 import { LevelsInfo } from "@/data/map";
 
-import {
-  EncounterMons,
-} from "@/stores/useMapStore/types";
+import { EncounterMons } from "@/stores/useMapStore/types";
 import { encounterStore } from "@/data/map/encounters";
-/** Works off of `mapBreakDown`, pass it `MAP_SIMPLE_NAME `
+/**  pass it `MAP_SIMPLE_NAME `
  * IT WILl return the baseName, the `id` of the map, and levels
  */
 const getMap = (map: string) => {
@@ -28,12 +26,10 @@ const putRodUsed = (mons: EncounterMons[]) => {
   // First pass: assign rod type based on slot
   mons.forEach((mon, slot) => {
     let rod: string;
-    if (slot === 0 || slot === 1) {
+    if (slot <= 2) {// 0, 1, 2
       rod = "Old Rod";
-    } else if (slot >= 2 && slot <= 4) {
+    } else if (slot >= 3 && slot <= 5) { // 3, 4, 5
       rod = "Good Rod";
-    } else if (slot >= 5 && slot <= 9) {
-      rod = "Super Rod";
     } else {
       rod = "Super Rod"; // Default for higher indices
     }
@@ -130,7 +126,9 @@ const getSelectedMapInfo = (id: string, levelId: string) => {
     (enc) => enc.map === levelId,
   );
   if (targetMapEncounters === undefined) {
-    console.error("Error selecting encounters %s, level %s", id, levelId);
+    queueMicrotask(() => {
+      console.error("Error selecting encounters %s, level %s", id, levelId);
+    });
     return;
   }
 
@@ -141,11 +139,14 @@ const getSelectedMapInfo = (id: string, levelId: string) => {
      */
     //nameKey cause it probly matches encounter Data
     if (targetMapEncounters && targetMapEncounters.land) {
-
-      landEncounters = putEncounterRate(targetMapEncounters.land?.mons as EncounterMons[]);
+      landEncounters = putEncounterRate(
+        targetMapEncounters.land?.mons as EncounterMons[],
+      );
     }
     if (targetMapEncounters && targetMapEncounters.water) {
-      waterEncounters = putEncounterRate(targetMapEncounters.water?.mons as EncounterMons[]);
+      waterEncounters = putEncounterRate(
+        targetMapEncounters.water?.mons as EncounterMons[],
+      );
     }
     if (targetMapEncounters && targetMapEncounters.fish) {
       putRodUsed(targetMapEncounters.fish.mons as EncounterMons[]); // Add rod information
@@ -179,7 +180,7 @@ const getSelectedLevel = ({
     console.error("Error selecting map level %s, %s", levelIndex, baseMapName);
     return;
   }
-  
+
   const { levels, mapBaseName } = targetMap;
   const targetLevel = levels[levelIndex]; // Use ID to get map information from Encounters
   if (!targetLevel) {

@@ -51,17 +51,6 @@ async function fetchJsonFromPublic<T>(
   }
 }
 
-// export async function loadOptionalJson<T>(
-//   relativePath: string,
-//   cacheKey: string,
-// ): Promise<T> {
-//   const cached = (await get(cacheKey)) as T | undefined;
-//   if (cached !== undefined) return cached;
-
-//   await set(cacheKey, data);
-//   return data;
-// }
-
 async function loadRandomiserData(): Promise<RandoJson> {
   const data = await fetchJsonFromPublic<RandoJson>("mapsandspecies.json");
   if (!data || typeof data !== "object" || (data as { maps?: unknown }).maps === undefined) {

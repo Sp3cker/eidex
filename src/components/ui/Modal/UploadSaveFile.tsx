@@ -15,6 +15,7 @@ const RandomizationModesList = [
     mode: 2,
   },
 ];
+
 const UploadSave = () => {
   const {
     isRandomiserActive,
@@ -39,7 +40,7 @@ const UploadSave = () => {
     // setRandomizationMode(mode);
     setUserRandomizerMode(mode);
   };
-
+debugger
   return (
     <div className="font-calamity space-y-4">
       <DialogTitle className="cool-font mb-4 text-xl font-bold text-gray-200">
@@ -61,7 +62,7 @@ const UploadSave = () => {
                   type="radio"
                   id={`mode-${mode.mode}`}
                   name="randomizationMode"
-                  value={mode.mode}
+                  value={mode.mode ?? undefined}
                   checked={userRandomizerMode === mode.mode}
                   onChange={() => handleModeChange(mode.mode)}
                   className="cursor-pointer"

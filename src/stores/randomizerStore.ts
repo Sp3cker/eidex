@@ -65,7 +65,7 @@ export const randomizerStore = createStore<RandomiserStore>()(
       error: null,
       uploadSuccess: false,
       trainerIdInfo: null,
-      userRandomizerMode: RandomizerSpeciesMode.MON_RANDOM,
+      userRandomizerMode: null as unknown as RandomizerSpeciesMode, // default to null
       didRunInit: false,
       isRandomiserActive: false,
       setTrainerIdInfo: (info) => set({ trainerIdInfo: info }),
@@ -167,8 +167,9 @@ export const randomizerStore = createStore<RandomiserStore>()(
           markEncountersReady();
           return;
         }
-        if (!trainerIdInfo) {
+        if (!trainerIdInfo || !trainerIdInfo.fullId) {
           // No trainer data means nothing to wait for
+          // This also avoids setting encounters with bad randos
           markEncountersReady();
           return;
         }
