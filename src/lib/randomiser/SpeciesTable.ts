@@ -17,32 +17,6 @@ export enum RandomizerSpeciesMode {
   MAX_MON_MODE = 4,
 }
 
-// const speciesById: SpeciesRandomizations[] = (() => {
-//   const arr: SpeciesRandomizations[] = new Array(RANDOMIZER_SPECIES_COUNT);
-//   const sentinel: SpeciesRandomizations = {
-//     id: 0,
-//     isLegendary: false,
-//     mode: RandomizerPerSpeciesMode.MON_RANDOMIZER_INVALID,
-//     baseStat: 0,
-//   };
-//   for (let i = 0; i < RANDOMIZER_SPECIES_COUNT; i++)
-//     arr[i] = { ...sentinel, id: i };
-//   const src: RandomizeJsonEntry[] =
-//     randoSeeds as unknown as RandomizeJsonEntry[];
-//   for (const entry of src) {
-//     const speciesId = entry.ID;
-//     if (speciesId >= 0 && speciesId < RANDOMIZER_SPECIES_COUNT) {
-//       arr[speciesId] = {
-//         id: speciesId,
-//         isLegendary: entry.isLegendary,
-//         mode: entry.mode,
-//         baseStat: entry.baseStat,
-//       };
-//     }
-//   }
-//   return arr;
-// })();
-
 export interface SpeciesDataTable {
   groupData: number[]; // Sorted groups (after heap sort)
   groupIndexToSpecies: number[]; // Maps sorted index -> species ID
@@ -73,7 +47,7 @@ class SpeciesTable implements SpeciesDataTable {
     this.speciesToGroupIndex = new Array(RANDOMIZER_SPECIES_COUNT).fill(0);
   }
   buildSpeciesTable(mode: RandomizerSpeciesMode): SpeciesDataTable {
-    // initialize arrays
+
     this.groupData = new Array(RANDOMIZER_SPECIES_COUNT);
     this.groupIndexToSpecies = new Array(RANDOMIZER_SPECIES_COUNT);
     this.speciesToGroupIndex = new Array(RANDOMIZER_SPECIES_COUNT).fill(0);

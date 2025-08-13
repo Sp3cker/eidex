@@ -35,7 +35,7 @@ function randomizerRandSeed(
   reason: number,
   data1: number,
   data2: number,
-  randomizerSeed: number // Changed from trainerId to match C
+  randomizerSeed: number 
 ): Sfc32State {
   const state = new Sfc32State({
     a: (randomizerSeed + reason) >>> 0,

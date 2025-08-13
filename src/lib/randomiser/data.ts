@@ -82,7 +82,7 @@ async function loadRandomiserData(): Promise<RandoJson> {
     species: data.species,
   };
 }
-export async function loadSpeciesData(): Promise<RandomizeJsonEntry[]> {
+export async function getSpeciesData(): Promise<RandomizeJsonEntry[]> {
   const randomSpecies = await get("randomspecies");
   if (Array.isArray(randomSpecies) && randomSpecies.length) return randomSpecies as RandomizeJsonEntry[];
   const data = await loadRandomiserData();

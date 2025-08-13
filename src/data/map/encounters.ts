@@ -1,6 +1,6 @@
 import defaultEncounters from "./encounters.json" with { type: "json" };
 import mapConstants from "./map_constants.json" with { type: "json" };
-import { randomizeSpeciesForSlot } from "../../lib/randomiser/randomizeSpeciesForSlot.ts";
+import { randomizeSpeciesForSlot } from "../../lib/randomiser/engine.ts";
 import { RandomizerSpeciesMode } from "../../lib/randomiser/SpeciesTable.ts";
 import { pokemonDataMap } from "../pokemon.ts";
 
