@@ -26,11 +26,11 @@ const Footer = memo(function Footer() {
           <Suspense
             fallback={
               <button className="rounded-xs m-1 cursor-pointer bg-gray-600 p-1 hover:bg-gray-500 active:bg-zinc-600">
-                <p>⚗ Upload Save File</p>
+                <p>⚗ Coming soon...</p>
               </button>
             }
           >
-            <SaveFileUploadButton onClick={() => handleClick("upload")} />
+            <SaveFileUploadButton/>
           </Suspense>
         </div>
         <div className="flex flex-col sm:w-80">
@@ -49,7 +49,7 @@ const Footer = memo(function Footer() {
             <p className="font-pkmnem leading-xs pr-1 text-sm/3 text-white">
               <button
                 onClick={() => handleClick("disclaimer")}
-                className="text-sm/3 text-white underline transition-colors hover:text-emerald-400"
+                className="text-sm/3 text-white underline transition-colors hover:text-emerald-400 cursor-pointer"
               >
                 View disclaimer
               </button>

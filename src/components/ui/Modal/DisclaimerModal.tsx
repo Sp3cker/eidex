@@ -87,17 +87,14 @@ const paragraphs = (springAnim: any, index: number) => {
     <animated.p style={springAnim} key="par3">
       The official site for the project is{" "}
       <a
-        href="https://emeraldimperium.info"
+        href="https://emeraldimperium.net"
         className="underline hover:text-blue-200"
       >
-        emeraldimperium.info
+        emeraldimperium.net
       </a>
       .
     </animated.p>,
-    <animated.p style={springAnim} key="par2">
-      I made this map because Gen-3 is best gen and Radical Red is best
-      rom-hack, therefore Emerald Imperium is best Gen-3 rom-hack.
-    </animated.p>,
+
     <animated.p style={springAnim} key="par1">
       This project gets the item locations from the{" "}
       <a
@@ -108,7 +105,7 @@ const paragraphs = (springAnim: any, index: number) => {
       >
         Emerald Imperium Github repository
       </a>{" "}
-      using a parser I wrote/vibe-coded called{" "}
+      using a parser called{" "}
       <a
         href="https://github.com/Sp3cker/spory-sparser"
         target="_blank"
@@ -117,15 +114,17 @@ const paragraphs = (springAnim: any, index: number) => {
       >
         SporySparser.
       </a>{" "}
-      Trainer movesets are pulled using{" "}
+      <br />
+      Species & Trainer data is pulled using a fork of
+      <br />
       <a
         className="underline hover:text-blue-200"
         href="https://github.com/lhearachel/porydex"
       >
         LheaRachel&apos;s Porydex
       </a>
-      , with some tweaks on the export format.
-      <br /> If you find an error in the data, please report it in the Discord.
+      .
+      <br /> If you find an error in the data, please report it in the EI Discord.
     </animated.p>,
   ];
   return pars[index];
@@ -136,6 +135,7 @@ const Disclaimer = () => {
     to: { opacity: 1, clipPath: "inset(0 0% 0 0)" },
     delay: 20,
     reverse: false,
+
     config: (key: string) =>
       key === "opacity" ? { clamp: true } : config.stiff,
   });

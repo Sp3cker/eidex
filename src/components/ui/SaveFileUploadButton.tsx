@@ -1,16 +1,16 @@
 import { useRandomizerStore } from "@/stores/randomizerStore";
 
-const SaveFileUploadButton = ({ onClick }: { onClick: () => void }) => {
+const SaveFileUploadButton = () => {
   const { isRandomiserActive } = useRandomizerStore();
 
   return (
     <button
-      onClick={onClick}
+      onClick={() =>console.log("Randomization is coming soon!")}
       className={`rounded-xs m-1 cursor-pointer ${
         isRandomiserActive ? "bg-yellow-600" : "bg-gray-500"
       } p-1 hover:bg-gray-500 active:bg-zinc-600`}
     >
-      <p>{isRandomiserActive ? "✨ Randomized!" : "⚗ Upload Save File"}</p>
+      <p>{isRandomiserActive ? "✨ Randomized!" : "⚗ Coming soon..."}</p>
     </button>
   );
 };
