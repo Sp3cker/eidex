@@ -11,6 +11,8 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run",
+    "test:encounters": "vitest run src/test/randomizedEncounters.test.ts",
+    "test:species-table": "vitest run src/test/SpeciesTable.test.ts",
     "test:ui": "vitest --ui",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",

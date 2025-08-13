@@ -381,7 +381,7 @@ window.addEventListener("popstate", async () => {
   if (urlState.mapName) {
     const store = useMapStore.getState();
     // await waitForEncountersReady();
-    store.setSelectedMap(urlState.mapName);
+    // store.setSelectedMap(urlState.mapName);
 
     if (urlState.trainerName) {
       store.setTrainersListOpen(true);

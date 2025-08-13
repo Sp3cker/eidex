@@ -1,8 +1,8 @@
 import defaultEncounters from "./encounters.json" with { type: "json" };
 import mapConstants from "./map_constants.json" with { type: "json" };
-import { randomizeSpeciesForSlot } from "@/lib/randomiser/engine.ts";
-import { RandomizerSpeciesMode } from "@/lib/randomiser/buildSpeciesTable.ts";
-import { pokemonDataMap } from "../pokemon";
+import { randomizeSpeciesForSlot } from "../../lib/randomiser/randomizeSpeciesForSlot.ts";
+import { RandomizerSpeciesMode } from "../../lib/randomiser/SpeciesTable.ts";
+import { pokemonDataMap } from "../pokemon.ts";
 
 interface Mon {
   min_level?: number;
@@ -70,7 +70,13 @@ class EncounterStore {
 
     this.processedDefaultEncounters = this.groupEncounterData(processedData);
   }
+  resetEncounterData() {
+    const processedData = this.parseAndConvertSpecies(
+      defaultEncounters as unknown as WildEncounterData,
+    );
 
+    this.processedDefaultEncounters = this.groupEncounterData(processedData);
+  }
   // TAKES encounter data base label, like `gPetalburgWoods` returns `MAP_PETALBURG_WOODS`
   private baseLabelToMap(baseLabel: string): string {
     return (
@@ -250,7 +256,7 @@ class EncounterStore {
           continue;
         }
         for (const areaKey of AREA_KEYS) {
-          // @ts-ignore index access
+
           const areaBlock = group[areaKey] as
             | { encounter_rate: number; mons: EncounterListing[] }
             | undefined;
@@ -291,7 +297,9 @@ class EncounterStore {
               areaEnum,
               slot,
             );
+
             mon.species = randomized;
+            //@ts-ignore
             mon.name = pokemonDataMap.get(randomized.toString())?.nameKey;
           }
         }

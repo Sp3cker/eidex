@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, lazy } from "react";
+import React from "react";
 import { DialogTitle } from "@headlessui/react";
 
 import { useRandomizerStore } from "@/stores/randomizerStore";
@@ -16,7 +16,6 @@ const RandomizationModesList = [
   },
 ];
 const UploadSave = () => {
-//   const [randomizationMode, setRandomizationMode] = React.useState(0);
   const {
     isRandomiserActive,
     handleUpload,
@@ -46,7 +45,6 @@ const UploadSave = () => {
       <DialogTitle className="cool-font mb-4 text-xl font-bold text-gray-200">
         Upload Save File
       </DialogTitle>
-      <button onClick={clearEverything}>Clear Everything</button>
       <div className="space-y-3">
         <p className="font-calamity text-sm text-gray-300">
           Upload your Emerald Imperium save file to randomize encounters based
@@ -83,15 +81,21 @@ const UploadSave = () => {
             </p>
           </article>
         </section>
-        <div className="space-y-2">
+        <div className="flex flex-row space-y-2">
           <input
             type="file"
             accept=".sav,.save"
             onChange={handleFileChange}
             disabled={isUploading || isProcessing}
-            className="font-pkmnem block w-full text-lg font-bold text-gray-300 file:mr-4 file:font-pkmnem file:cursor-pointer file:rounded-sm file:border-0 file:bg-emerald-700 file:px-4 file:py-2 file:font-bold file:text-neutral-50 hover:file:bg-emerald-600 disabled:opacity-50"
+            className="font-pkmnem file:font-pkmnem block w-full text-lg font-bold text-gray-300 file:mr-4 file:cursor-pointer file:rounded-sm file:border-0 file:bg-emerald-700 file:px-2 file:py-1 file:font-bold file:text-neutral-50 hover:file:bg-emerald-600 disabled:opacity-50"
           />
         </div>
+        <button
+          onClick={clearEverything}
+          className="font-pkmnem rounded-xs block cursor-pointer text-nowrap px-2 py-0 font-bold text-stone-200 ring-1 ring-amber-500 hover:bg-amber-900"
+        >
+          Clear Save
+        </button>
 
         {(isUploading || isProcessing) && (
           <div className="flex items-center space-x-2 text-sm text-blue-400">

@@ -1,7 +1,8 @@
 {
   "tasks": {
     "dump:bst": "deno run -A scripts/dumpSpeciesTable.ts --mode 1 --pretty",
-    "dump": "deno run -A scripts/dumpSpeciesTable.ts"
+    "dump": "deno run -A scripts/dumpSpeciesTable.ts",
+    "test": "deno test src/test/SpeciesTable.test.ts"
   },
   "compilerOptions": {
     "strict": true,

@@ -5,10 +5,11 @@ import tailwindcss from "@tailwindcss/postcss";
 import tailwindcsssafearea from "tailwindcss-safe-area";
 import path from "path";
 import { fetchAssetsPlugin } from "./vite-plugin-fetch-assets.ts";
+import process from "node:process";
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [
+export default defineConfig(({ mode }) => {
+  const plugins = [
     tailwindcsssafearea,
     react({
       babel: {
@@ -20,12 +21,18 @@ export default defineConfig({
       persistState: true,
       experimental: { headersAndRedirectsDevModeSupport: true },
     }),
-    fetchAssetsPlugin({
-      baseUrl: "https://asset.imperiummap.com",
-      files: ["nbit-Regular.woff2", "nbit-Bold.woff2", "nbit-Regular.ttf", "nbit-Bold.ttf"], // Replace with your actual file names
-      outputDir: "public/fonts/emerald-pro", // Will be included in build
-    }),
-  ],
+  ];
+  if (mode !== "test" && !process.env.VITEST) {
+    plugins.push(
+      fetchAssetsPlugin({
+        baseUrl: "https://asset.imperiummap.com",
+        files: ["nbit-Regular.woff2", "nbit-Bold.woff2", "nbit-Regular.ttf", "nbit-Bold.ttf"],
+        outputDir: "public/fonts/emerald-pro",
+      }),
+    );
+  }
+  return {
+    plugins,
   server: {
     open: true,
     port: 3000,
@@ -160,4 +167,5 @@ export default defineConfig({
       transformMixedEsModules: true,
     },
   },
+  };
 });

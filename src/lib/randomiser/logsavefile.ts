@@ -4,7 +4,10 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const Deno: any;
 
-import { splitSaveIntoChunks, getTrainerIdFromSectors } from "./trainerIdExtractor.ts";
+import {
+  splitSaveIntoChunks,
+  getTrainerIdFromSectors,
+} from "./trainerIdExtractor.ts";
 
 function fmtPath(p: string) {
   try {
@@ -16,16 +19,17 @@ function fmtPath(p: string) {
 }
 
 async function main() {
-  const defaultA = new URL("./pokeemerald.sav", import.meta.url);
-  const defaultB = new URL("./pokeemerald-BST.sav", import.meta.url);
-  const fileA = Deno.args[0] ?? defaultA;
-  const fileB = Deno.args[1] ?? defaultB;
+  const fileA = Deno.args[0] ?? "./pokeemerald.sav"
+  const fileB =
+    Deno.args[1] ?? "./pokeemerald-BST.sav"
 
   console.log(`[Info] Reading Trainer IDs using trainerIdExtractor.ts`);
 
   const [aBuf, bBuf] = await Promise.all([
-    (async () => new Uint8Array(await (await fetch(String(fileA))).arrayBuffer()))(),
-    (async () => new Uint8Array(await (await fetch(String(fileB))).arrayBuffer()))(),
+    (async () =>
+      new Uint8Array(await (await fetch((fileA))).arrayBuffer()))(),
+    (async () =>
+      new Uint8Array(await (await fetch((fileB))).arrayBuffer()))(),
   ]);
   const aSectors = splitSaveIntoChunks(aBuf);
   const bSectors = splitSaveIntoChunks(bBuf);
@@ -33,10 +37,14 @@ async function main() {
   const bIds = getTrainerIdFromSectors(bSectors);
 
   console.log(`\nA) ${fmtPath(String(fileA))}`);
-  console.log(`  trainerId=${aIds.trainerId} secretId=${aIds.secretId} full=${aIds.fullId}`);
+  console.log(
+    `  trainerId=${aIds.trainerId} secretId=${aIds.secretId} full=${aIds.fullId}`,
+  );
 
   console.log(`\nB) ${fmtPath(String(fileB))}`);
-  console.log(`  trainerId=${bIds.trainerId} secretId=${bIds.secretId} full=${bIds.fullId}`);
+  console.log(
+    `  trainerId=${bIds.trainerId} secretId=${bIds.secretId} full=${bIds.fullId}`,
+  );
 }
 
 main().catch((err) => {

@@ -1,12 +1,12 @@
 import { createStore, useStore } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import { RandomizerSpeciesMode } from "@/lib/randomiser/buildSpeciesTable";
-import { encounterStore } from "@/data/map/encounters";
+import { RandomizerSpeciesMode } from "../lib/randomiser/SpeciesTable.ts";
+import { encounterStore } from "../data/map/encounters.ts";
 import {
   splitSaveIntoChunks,
   getTrainerIdFromSectors,
-} from "@/lib/randomiser/trainerIdExtractor";
-import { pokemonSearchStore } from "./pokemonSearchStore";
+} from "../lib/randomiser/trainerIdExtractor.ts";
+import { pokemonSearchStore } from "./pokemonSearchStore.ts";
 
 export type TrainerIdInfo = {
   trainerId: number;
@@ -83,6 +83,8 @@ export const randomizerStore = createStore<RandomiserStore>()(
           didRunInit: false,
           isRandomiserActive: false,
         });
+        encounterStore.clearEncounterData();
+        encounterStore.resetEncounterData();
         window.indexedDB.databases().then((dbs) => {
           dbs.forEach((db) => {
             if (db.name) {

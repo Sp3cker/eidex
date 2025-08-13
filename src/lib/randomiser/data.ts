@@ -1,8 +1,8 @@
 import { get, set } from "idb-keyval";
 
 type RandoJson = {
-  maps: any;
-  species: any;
+  maps: Record<string, MapConstant>;
+  species: Array<RandomizeJsonEntry | (RandomizeJsonEntry & { ID?: number })>;
 };
 type MapConstant = {
   group: number;
@@ -64,14 +64,17 @@ async function fetchJsonFromPublic<T>(
 
 async function loadRandomiserData(): Promise<RandoJson> {
   const data = await fetchJsonFromPublic<RandoJson>("mapsandspecies.json");
-  if (!data || typeof data !== "object" || (data as any).maps === undefined) {
+  if (!data || typeof data !== "object" || (data as { maps?: unknown }).maps === undefined) {
     throw new Error("Could not fetch mapsandspecies.json");
   }
   if (data.species) {
-    data.species.forEach((species: RandomizeJsonEntry) => {
-      //@ts-ignore
-      species.id = species.ID;
-    });
+    for (let i = 0; i < data.species.length; i++) {
+      const s = data.species[i] as RandomizeJsonEntry & { ID?: number };
+      if (typeof s.id !== "number" && typeof s.ID === "number") {
+        // populate id from source ID if present
+        (s as { id: number }).id = s.ID;
+      }
+    }
   }
   Promise.all([set("mapsdata", data.maps), set("randomspecies", data.species)]);
   return {
@@ -81,10 +84,18 @@ async function loadRandomiserData(): Promise<RandoJson> {
 }
 export async function loadSpeciesData(): Promise<RandomizeJsonEntry[]> {
   const randomSpecies = await get("randomspecies");
-  if (randomSpecies !== undefined) return randomSpecies;
+  if (Array.isArray(randomSpecies) && randomSpecies.length) return randomSpecies as RandomizeJsonEntry[];
   const data = await loadRandomiserData();
-
-  return data.species;
+  // Ensure each entry has numeric id populated from ID, to support consumers that expect id
+  if (Array.isArray(data.species)) {
+    for (let i = 0; i < data.species.length; i++) {
+      const s = data.species[i] as unknown as { id?: number; ID?: number } & RandomizeJsonEntry;
+      if (typeof s.id !== "number" && typeof s.ID === "number") {
+        (s as { id: number }).id = s.ID;
+      }
+    }
+  }
+  return data.species as RandomizeJsonEntry[];
 }
 
 export async function loadMapsData(): Promise<Record<string, MapConstant>> {

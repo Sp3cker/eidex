@@ -15,7 +15,7 @@ import {
   type SpeciesInfoEntry,
 } from "../src/lib/randomiser/buildSpeciesTable.ts";
 function parseArgs(args: string[]) {
-  const opts: { mode?: number; pretty?: boolean; dump?: boolean } = {};
+  const opts: { mode?: number; pretty?: boolean; dump?: boolean; assoc?: boolean; csv?: boolean } = {};
   for (let i = 0; i < args.length; i++) {
     const a = args[i];
     if (a === "--mode" && i + 1 < args.length) {
@@ -25,6 +25,10 @@ function parseArgs(args: string[]) {
       opts.pretty = true;
     } else if (a === "--dump") {
       opts.dump = true;
+    } else if (a === "--assoc" || a === "--associations") {
+      opts.assoc = true;
+    } else if (a === "--csv") {
+      opts.csv = true;
     }
   }
   return opts;
@@ -75,9 +79,11 @@ const validation = validateSpeciesTable(
 console.error(`validateSpeciesTable ok=${validation.ok} errors=${validation.errors.length}`);
 if (!validation.ok) for (const e of validation.errors) console.error(e);
 
-// Optionally build and dump the table
+// Build once (used by dump and associations)
+const table = buildSpeciesTableFromSpecies(mode as RandomizerSpeciesMode, speciesInfo);
+
+// Optionally dump raw arrays
 if (opts.dump) {
-  const table = buildSpeciesTableFromSpecies(mode as RandomizerSpeciesMode, speciesInfo);
   const out = {
     mode,
     groupData: table.groupData,
@@ -86,6 +92,71 @@ if (opts.dump) {
   };
   const json = JSON.stringify(out, null, opts.pretty ? 1 : 0);
   console.log(json);
+}
+
+// Optionally emit per-species association triples to verify BST indexing
+if (opts.assoc) {
+  type AssocRow = {
+    species: number;
+    groupDataIndex: number; // equals speciesToGroupIndex[species]
+    speciesToGroupIndex: number;
+    groupIndexToSpecies: number; // should equal species
+    bstFromTable: number; // table.groupData[groupDataIndex]
+    bstFromSource: number; // speciesInfo[species].baseStat
+    bstMatches: boolean;
+    consistentMapping: boolean; // groupIndexToSpecies[groupDataIndex] === species
+  };
+  const rows: AssocRow[] = [];
+  for (let s = 0; s < speciesInfo.length; s++) {
+    const gdi = table.speciesToGroupIndex[s];
+    const gis = gdi >= 0 && gdi < table.groupIndexToSpecies.length
+      ? table.groupIndexToSpecies[gdi]
+      : -1;
+    const bstTable = gdi >= 0 && gdi < table.groupData.length ? table.groupData[gdi] : -1;
+    const bstSource = speciesInfo[s]?.baseStat ?? 0;
+    rows.push({
+      species: s,
+      groupDataIndex: gdi,
+      speciesToGroupIndex: gdi,
+      groupIndexToSpecies: gis,
+      bstFromTable: bstTable,
+      bstFromSource: bstSource,
+      bstMatches: bstTable === bstSource,
+      consistentMapping: gis === s,
+    });
+  }
+
+  if (opts.csv) {
+    console.log(
+      [
+        "species",
+        "groupDataIndex",
+        "speciesToGroupIndex",
+        "groupIndexToSpecies",
+        "bstFromTable",
+        "bstFromSource",
+        "bstMatches",
+        "consistentMapping",
+      ].join(","),
+    );
+    for (const r of rows) {
+      console.log(
+        [
+          r.species,
+          r.groupDataIndex,
+          r.speciesToGroupIndex,
+          r.groupIndexToSpecies,
+          r.bstFromTable,
+          r.bstFromSource,
+          r.bstMatches ? 1 : 0,
+          r.consistentMapping ? 1 : 0,
+        ].join(","),
+      );
+    }
+  } else {
+    const json = JSON.stringify(rows, null, opts.pretty ? 1 : 0);
+    console.log(json);
+  }
 }
 
 if (mode !== RandomizerSpeciesMode.MON_RANDOM_BST) {
