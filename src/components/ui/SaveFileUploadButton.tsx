@@ -6,7 +6,7 @@ const SaveFileUploadButton = () => {
   return (
     <button
       onClick={() =>console.log("Randomization is coming soon!")}
-      className={`rounded-xs m-1 cursor-pointer ${
+      className={`rounded-xs m-1 font-bold cursor-pointer ${
         isRandomiserActive ? "bg-yellow-600" : "bg-gray-500"
       } p-1 hover:bg-gray-500 active:bg-zinc-600`}
     >

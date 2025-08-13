@@ -25,7 +25,7 @@ const Footer = memo(function Footer() {
         <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">
           <Suspense
             fallback={
-              <button className="rounded-xs m-1 cursor-pointer bg-gray-600 p-1 hover:bg-gray-500 active:bg-zinc-600">
+              <button className="rounded-xs m-1 font-bold cursor-pointer bg-gray-600 p-1 hover:bg-gray-500 active:bg-zinc-600">
                 <p>⚗ Coming soon...</p>
               </button>
             }
