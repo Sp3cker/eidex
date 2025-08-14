@@ -23,17 +23,26 @@ const getMap = (map: string) => {
 };
 
 const putRodUsed = (mons: EncounterMons[]) => {
+  // Good Rod mons: []
+  //Old Rod Mons: []
+  // Super Rod mons: []
+  // If a mon appears in multiple rod types, it will be combined into a single string like "Old/Good Rod" or "Good/Super Rod"
+
+  if (!mons || mons.length === 0) {
+    return mons; // Return early if no mons are provided
+  }
+
+ const rodsByIndex = []
   // First pass: assign rod type based on slot
-  mons.forEach((mon, slot) => {
+  mons.forEach((mon, slot, arr) => {
     let rod: string;
     if (slot <= 2) {// 0, 1, 2
-      rod = "Old Rod";
+      rodsByIndex.push("Old");
     } else if (slot >= 3 && slot <= 5) { // 3, 4, 5
-      rod = "Good Rod";
+      rodsByIndex.push("Good")
     } else {
-      rod = "Super Rod"; // Default for higher indices
+      rodsByIndex.push("Super")
     }
-    mon.rod = rod;
   });
 
   // Second pass: determine chance level for each species within each rod type
