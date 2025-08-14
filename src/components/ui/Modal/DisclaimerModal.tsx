@@ -2,7 +2,6 @@ import { lazy, useEffect } from "react";
 import {
   Button,
   Dialog,
-  DialogBackdrop,
   DialogPanel,
   DialogTitle,
 } from "@headlessui/react";
