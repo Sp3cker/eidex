@@ -27,17 +27,16 @@
     "@tailwindcss/vite": "^4.1.11",
     "@types/connect-history-api-fallback": "^1.5.4",
     "@use-gesture/react": "^10.3.1",
-    "@xmldom/xmldom": "^0.9.8",
     "chroma-js": "^3.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "connect-history-api-fallback": "^2.0.0",
-    "fake-indexeddb": "^6.1.0",
+
     "idb": "^8.0.3",
     "idb-keyval": "^6.2.2",
-    "jotai": "^2.12.5",
+
     "lucide-react": "^0.507.0",
-    "mathjs": "^14.5.3",
+
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-error-boundary": "^6.0.0",
@@ -50,12 +49,13 @@
     "tailwindcss-safe-area": "^0.6.0",
     "trie-search": "^2.2.0",
     "use-sync-external-store": "^1.5.0",
-    "use-valtio": "^0.2.0",
-    "valtio": "^2.1.5",
+
+
     "wouter": "^3.7.1",
     "zustand": "^5.0.6"
   },
   "devDependencies": {
+    "@xmldom/xmldom": "^0.9.8",
     "@cloudflare/workers-types": "^4.20250620.0",
     "@eslint/js": "^9.26.0",
     "@svgr/cli": "^8.1.0",
