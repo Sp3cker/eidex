@@ -78,7 +78,7 @@ debugger
           </div>
           <article className="rounded-xs bg-slate-600 p-1">
             <p className="font-pkmnem bg-slate-600 p-1 text-xl/5 text-stone-200 antialiased">
-              {RandomizationModesList[userRandomizerMode].desc}
+              {RandomizationModesList[userRandomizerMode ?? 0].desc}
             </p>
           </article>
         </section>
