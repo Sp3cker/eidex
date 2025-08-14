@@ -40,7 +40,7 @@ const UploadSave = () => {
     // setRandomizationMode(mode);
     setUserRandomizerMode(mode);
   };
-debugger
+
   return (
     <div className="font-calamity space-y-4">
       <DialogTitle className="cool-font mb-4 text-xl font-bold text-gray-200">
@@ -54,19 +54,31 @@ debugger
         <p className="leading-0 pb-0 pt-1 text-xs font-bold text-neutral-300">
           Select your Randomization Mode:
         </p>
-        <section className="flex flex-col justify-evenly space-x-2 rounded-sm p-2 ring-1 ring-gray-600">
-          <div className="flex flex-row justify-evenly space-x-2 rounded-sm py-2 ring-1 ring-gray-800">
+        <section className="flex flex-col flex-1 justify-evenly rounded-sm p-2 ring-1 w-full ring-gray-600">
+          <div className="flex flex-row flex-grow bg-slate-700 justify-evenly space-x-2 ">
             {RandomizationModesList.map((mode) => (
-              <div key={mode.mode} className="flex items-center space-x-2">
+              <div
+                key={mode.mode}
+                className={`relative flex items-center space-x-2`}
+              >
                 <input
                   type="radio"
+                  disabled={mode.mode === 2}
                   id={`mode-${mode.mode}`}
                   name="randomizationMode"
                   value={mode.mode ?? undefined}
                   checked={userRandomizerMode === mode.mode}
                   onChange={() => handleModeChange(mode.mode)}
-                  className="cursor-pointer"
+                  className={`cursor-pointer ${mode.mode === 2 ? 'before:content-["Coming Soon"]' : ""}`}
                 />
+                {mode.mode == 2 && (
+                  <div
+                    id="coming-soon"
+                    className="frosted-glass absolute h-full w-full text-red-500 ring-1 ring-orange-600"
+                  >
+                    <p>Coming Soon</p>
+                  </div>
+                )}
                 <label
                   htmlFor={`mode-${mode.mode}`}
                   className="font-pkmnem cursor-pointer font-bold text-gray-300"
@@ -76,7 +88,7 @@ debugger
               </div>
             ))}
           </div>
-          <article className="rounded-xs bg-slate-600 p-1">
+          <article className="bg-slate-600 p-1 rounded-b-xs">
             <p className="font-pkmnem bg-slate-600 p-1 text-xl/5 text-stone-200 antialiased">
               {RandomizationModesList[userRandomizerMode ?? 0].desc}
             </p>
@@ -87,7 +99,7 @@ debugger
             type="file"
             accept=".sav,.save"
             onChange={handleFileChange}
-            disabled={isUploading || isProcessing}
+            disabled={userRandomizerMode === null || isUploading || isProcessing}
             className="font-pkmnem file:font-pkmnem block w-full text-lg font-bold text-gray-300 file:mr-4 file:cursor-pointer file:rounded-sm file:border-0 file:bg-emerald-700 file:px-2 file:py-1 file:font-bold file:text-neutral-50 hover:file:bg-emerald-600 disabled:opacity-50"
           />
         </div>

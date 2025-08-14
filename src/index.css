@@ -149,11 +149,12 @@ input[type="number"] {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
-  
+
   .fade-scale-rotate {
-    animation: fadeScaleRotate 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    animation: fadeScaleRotate 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+      forwards;
   }
-  
+
   @keyframes fadeScaleRotate {
     from {
       opacity: 0;
@@ -219,32 +220,30 @@ input[type="number"] {
     position: relative;
   }
 
-.bg-party-mon {
-  background: linear-gradient(
-    to bottom,
-     var(--color-sky-500) 0%,
-    var(--color-sky-500) 70%,
-    var(--color-sky-300) 70%,
-    var(--color-sky-600) 80%,
-    var(--color-sky-300) 80%,
-    var(--color-sky-300) 100%
-  );
-  border-color: var(--color-blue-600);
-}
-.bg-party-mon-selected {
-  background: linear-gradient(
-    to bottom,
-    var(--color-cyan-400) 0%,
-    var(--color-cyan-400) 75%,
-    var(--color-cyan-200) 75%,
-    var(--color-cyan-400) 80%,
-    var(--color-cyan-200) 80%,
-    var(--color-cyan-200) 100%
-  );
-  @apply ring-orange-500;
-
-}
-
+  .bg-party-mon {
+    background: linear-gradient(
+      to bottom,
+      var(--color-sky-500) 0%,
+      var(--color-sky-500) 70%,
+      var(--color-sky-300) 70%,
+      var(--color-sky-600) 80%,
+      var(--color-sky-300) 80%,
+      var(--color-sky-300) 100%
+    );
+    border-color: var(--color-blue-600);
+  }
+  .bg-party-mon-selected {
+    background: linear-gradient(
+      to bottom,
+      var(--color-cyan-400) 0%,
+      var(--color-cyan-400) 75%,
+      var(--color-cyan-200) 75%,
+      var(--color-cyan-400) 80%,
+      var(--color-cyan-200) 80%,
+      var(--color-cyan-200) 100%
+    );
+    @apply ring-orange-500;
+  }
 }
 
 /* --- Trainer Sprite Animation (spritesheet: 128x40) with Custom Size --- */
@@ -369,11 +368,11 @@ input[type="number"] {
 }
 
 .fade-in-background {
-  animation: fadeInFrostedGlass 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: fadeInFrostedGlass 0.3s cubic-bezier(0.32, 0.72, 0, 1) forwards;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .fade-out-background {
-  animation: fadeOutFrostedGlass 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: fadeOutFrostedGlass 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes fadeInFooter {
@@ -396,7 +395,18 @@ input[type="number"] {
     @apply bg-background text-foreground;
   }
 }
+#coming-soon {
+  @apply rounded-md p-2;  
+    backdrop-filter: blur(12px) saturate(120%);
+    background: rgba(104, 60, 2, 0.8);
 
+    p {
+      @apply text-sm text-orange-400 text-center text-shadow-lg;
+    }
+    + label {
+      @apply p-2 text-sm text-gray-200 opacity-30;
+    }
+}
 @keyframes fadeInFrostedGlass {
   from {
     opacity: 0;

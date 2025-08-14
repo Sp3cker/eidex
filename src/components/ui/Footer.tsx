@@ -4,12 +4,19 @@ import Modal from "./Modal";
 const SaveFileUploadButton = lazy(() => import("./SaveFileUploadButton"));
 const Footer = memo(function Footer() {
   const [isOpen, setIsOpen] = useState<string | null>(null);
+  const [isHoveringButton, setIsHoveringButton] = useState(false);
   const handleClick = (to: string) => {
     if (to === "upload") {
       setIsOpen("upload");
     } else {
       setIsOpen("disclaimer");
     }
+  };
+  const handleUploadButtonHover = () => {
+    setIsHoveringButton(true);
+  };
+  const handleUploadButtonHoverExit = () => {
+    setIsHoveringButton(false);
   };
   return (
     <>
@@ -23,15 +30,20 @@ const Footer = memo(function Footer() {
       >
         {/* ...existing code... */}
         <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">
-          <Suspense
-            fallback={
-              <button className="rounded-xs m-1 font-bold cursor-pointer bg-gray-600 p-1 hover:bg-gray-500 active:bg-zinc-600">
-                <p>⚗ Coming soon...</p>
-              </button>
-            }
+          <div
+            onMouseEnter={handleUploadButtonHover}
+            onMouseLeave={handleUploadButtonHoverExit}
           >
-            <SaveFileUploadButton onClick={handleClick}/>
-          </Suspense>
+            <Suspense
+              fallback={
+                <button className="rounded-xs m-1 font-bold cursor-pointer bg-gray-600 p-1 hover:bg-gray-500 active:bg-zinc-600">
+                  <p>⚗ Coming soon...</p>
+                </button>
+              }
+            >
+              <SaveFileUploadButton onClick={handleClick} />
+            </Suspense>
+          </div>
         </div>
         <div className="flex flex-col sm:w-80">
           <p className="font-pkmnem leading-xs text-sm/3 text-white">
@@ -53,7 +65,7 @@ const Footer = memo(function Footer() {
               >
                 View disclaimer
               </button>
-              <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
+              <Modal isOpen={isOpen} setIsOpen={setIsOpen} isHoveringOpenButton={isHoveringButton} />
             </p>
           </div>
         </div>
