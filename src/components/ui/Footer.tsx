@@ -30,7 +30,7 @@ const Footer = memo(function Footer() {
               </button>
             }
           >
-            <SaveFileUploadButton/>
+            <SaveFileUploadButton onClick={handleClick}/>
           </Suspense>
         </div>
         <div className="flex flex-col sm:w-80">
