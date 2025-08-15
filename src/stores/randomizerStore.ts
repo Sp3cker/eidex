@@ -12,7 +12,6 @@ export type TrainerIdInfo = {
   trainerId: number;
   secretId: number;
   fullId: number;
-  randomizerMode: RandomizerSpeciesMode;
 };
 
 interface RandomiserStore {
@@ -26,13 +25,13 @@ interface RandomiserStore {
   userRandomizerMode: RandomizerSpeciesMode;
 
   setTrainerIdInfo: (info: TrainerIdInfo | null | undefined) => void;
-  setUserRandomizerMode: (mode: RandomizerSpeciesMode) => void;
   toggleRandomiserActive: () => void;
   disableRandomiserActive: () => void;
   handleUpload: (file: File) => Promise<void>;
   clearError: () => void;
   reset: () => void;
   onInit: () => Promise<void>;
+  setUserRandomizerMode: (mode: RandomizerSpeciesMode) => void;
 }
 
 // A simple readiness gate so other modules can wait until encounters are ready
@@ -96,9 +95,9 @@ export const randomizerStore = createStore<RandomiserStore>()(
       },
       // Actions
       handleUpload: async (file: File) => {
-        const { reset } = get();
+        // const { reset } = get();
         try {
-          reset();
+          // reset();
           set({ isUploading: true });
           if (!file) {
             throw new Error("No file provided");
@@ -123,12 +122,16 @@ export const randomizerStore = createStore<RandomiserStore>()(
             trainerId: trainerIdData.trainerId,
             secretId: trainerIdData.secretId,
             fullId: trainerIdData.fullId,
-            randomizerMode: get().userRandomizerMode,
           };
+          const randomizerMode = get().userRandomizerMode;
+          if (randomizerMode === null) {
+            console.error("No randomizer mode set");
+            return;
+          }
 
           await encounterStore.randomizeEncountersWithTrainerSeed(
             trainerData.fullId,
-            trainerData.randomizerMode,
+            randomizerMode,
           );
           requestAnimationFrame(() => {
             pokemonSearchStore._initialize();
@@ -150,9 +153,8 @@ export const randomizerStore = createStore<RandomiserStore>()(
       },
       clearError: () => set({ error: null }),
 
- 
       onInit: async () => {
-        const { trainerIdInfo, didRunInit } = get();
+        const { trainerIdInfo, didRunInit, userRandomizerMode } = get();
         if (didRunInit) {
           // If we've already initialized, assume encounters are ready
           markEncountersReady();
@@ -166,12 +168,11 @@ export const randomizerStore = createStore<RandomiserStore>()(
           return;
         }
         const { fullId } = trainerIdInfo;
-        const randomizerMode = get().userRandomizerMode;
 
         requestAnimationFrame(async () => {
           await encounterStore.randomizeEncountersWithTrainerSeed(
             fullId,
-            randomizerMode,
+            userRandomizerMode,
           );
           pokemonSearchStore._initialize();
           // Signal that randomized encounters are ready for consumers

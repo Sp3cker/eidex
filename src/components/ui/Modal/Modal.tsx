@@ -12,34 +12,7 @@ import { useSpring, animated } from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
 import { ErrorBoundary } from "react-error-boundary";
 import CloseButton from "../CloseButton";
-
 import { FadeInWAAPI } from "../FadeInWaapi";
-
-const getAnimationFromValues = (isOpen: "upload" | "disclaimer" | null) => {
-  const viewportWidth = window.innerWidth;
-  const viewportHeight = window.innerHeight;
-
-  switch (isOpen) {
-    case null:
-      return { translateX: 0, translateY: 0, scale: 0.95, opacity: 0 };
-    case "upload":
-      return {
-        translateX: -viewportWidth,
-        translateY: viewportHeight,
-        scale: 0.3,
-        opacity: 0,
-      };
-    case "disclaimer":
-      return {
-        translateX: viewportWidth,
-        translateY: viewportHeight,
-        scale: 0.3,
-        opacity: 0,
-      };
-    default:
-      return { translateX: 0, translateY: 0, scale: 1, opacity: 0 };
-  }
-};
 
 const importDisclaimer = () => import("./Disclaimer");
 const importUploadSave = () => import("./UploadSaveFile");
@@ -55,16 +28,40 @@ interface ModalProps {
 type ModalHandle = {
   preload: (which: "upload" | "disclaimer") => void;
 };
+
+const getAnimationFromValues = (isOpen: "upload" | "disclaimer" | null) => {
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+  if (isOpen === "upload") {
+    return {
+      translateX: -viewportWidth,
+      translateY: viewportHeight,
+      scale: 0.7,
+      skewX: -50,
+      opacity: 0,
+    };
+  } else
+    return {
+      translateX: viewportWidth,
+      translateY: viewportHeight,
+      skewX: 50,
+      scale: 0.7,
+      opacity: 0,
+    };
+};
+
 const openState = {
   translateX: 0,
   translateY: 0,
   scale: 1,
+  skewX: 0,
   opacity: 1,
 };
 const closedState = {
   translateX: 0,
   translateY: 0,
-  scale: 0.95,
+  scale: 0.3,
+  skewX: 0,
   opacity: 0,
 };
 const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
@@ -77,7 +74,7 @@ const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
   );
   const [springs] = useSpring(
     () => ({
-      from: getAnimationFromValues(null), // Start from closed state
+      from: isOpen ? getAnimationFromValues(isOpen) : closedState, // Start from closed state
       to: isOpen ? openState : closedState,
       delay: 10,
       config: {
