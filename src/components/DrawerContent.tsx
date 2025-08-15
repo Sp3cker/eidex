@@ -2,7 +2,7 @@ import { useTransition, animated } from "@react-spring/web";
 import { useUIStore } from "@/stores/uiStore";
 import FilterBar from "./Filter/FilterBar"; // Adjust path as needed
 import { useWindowSize } from "@/hooks/useWindowResize";
-import PokemonView from "./PokemonView/PokemonView";
+// import PokemonView from "./PokemonView/PokemonView";
 import CloseButton from "./ui/CloseButton";
 const AnimatedArea = () => {
   const selectedPokemon = useUIStore((state) => state.selectedPokemon);
@@ -43,7 +43,7 @@ const AnimatedArea = () => {
                   onClick={closeModal}
                   className=" z-99 sticky right-4 top-4 "
                 />
-                {selectedPokemon && <PokemonView pokemon={selectedPokemon} />}
+                {/* {selectedPokemon && <PokemonView pokemon={selectedPokemon} />} */}
               </div>
             </animated.div>
           );

@@ -168,6 +168,24 @@ input[type="number"] {
 }
 
 @layer components {
+  /* SimpleBar theme used in MapPlaceInfo */
+  .simplebar-theme-map .simplebar-track.simplebar-vertical {
+    width: 10px;
+    right: 2px; /* tuck in slightly */
+    background: transparent;
+  }
+  .simplebar-theme-map .simplebar-scrollbar:before {
+    background: color-mix(in oklch, var(--color-blue-text) 45%, black 0%);
+    opacity: 0.6;
+    border-radius: 8px;
+  }
+  .simplebar-theme-map:hover .simplebar-scrollbar:before,
+  .simplebar-theme-map .simplebar-scrollbar.simplebar-visible:before {
+    opacity: 0.9;
+  }
+  .simplebar-theme-map .simplebar-track.simplebar-horizontal {
+    height: 0; /* hidden; we disable X scrolling */
+  }
   .ability_badge {
     @apply w-30 font-pixel text-shadow-lg/40 shadow-md/50 select-none items-center rounded-md border border-gray-200 bg-slate-600 px-1 py-0.5 text-center text-white;
   }
@@ -330,14 +348,51 @@ input[type="number"] {
   .rendering-crisp-edges {
     image-rendering: crisp-edges;
   }
-  /* Disabled state utility for elements with the disabled attribute */
-  [disabled] {
+
+  :is(button, input, textarea, select)[disabled] {
     opacity: 0.5;
     pointer-events: none;
     filter: grayscale(0.7);
-    background-color: #d1d5db !important; /* Tailwind gray-300 */
-    color: #6b7280 !important; /* Tailwind gray-500 */
-    cursor: not-allowed !important;
+    background-color: #d1d5db; /*  gray-300 */
+    color: #444851; /*  gray-500 */
+    cursor: not-allowed;
+  }
+  /* For scrollable containers: keep gutter + auto-hide visuals
+  USED ON ELEMENTS THAT OVERFLOW, LIKE MAPPLACEINFO AND ITEMSBOX */
+  /* .scroll-auto-gutter {
+    overflow: auto;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  .scroll-auto-gutter:hover,
+  .scroll-auto-gutter:focus-within,
+  .scroll-auto-gutter.is-scrolling {
+    scrollbar-color: rgba(120, 120, 120, 0.6) transparent;
+  }
+
+  .scroll-auto-gutter::-webkit-scrollbar {
+    width: 12px; 
+    background: transparent;
+  }
+  .scroll-auto-gutter::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 8px;
+  }
+  .scroll-auto-gutter:hover::-webkit-scrollbar-thumb,
+  .scroll-auto-gutter:focus-within::-webkit-scrollbar-thumb,
+  .scroll-auto-gutter.is-scrolling::-webkit-scrollbar-thumb {
+    background-color: rgba(120, 120, 120, 0.6);
+  }
+  .scroll-gutter-pad {
+    padding-inline-end: var(--scrollbar-size, 12px);
+  } */
+  html {
+    /* scrollbar-gutter: stable; */
+    /* ::-webkit-scrollbar height:0; */
+    scrollbar-width: none;
+    scrollbar-color: transparent transparent;
   }
 }
 @keyframes pokemon-icon-animation {
@@ -377,7 +432,7 @@ input[type="number"] {
 }
 
 .fade-in-background {
-  animation: fadeInFrostedGlass 0.3s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+  animation: fadeInFrostedGlass 0.37s cubic-bezier(0.32, 0.72, 0, 1) forwards;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .fade-out-background {
@@ -403,6 +458,12 @@ input[type="number"] {
   body {
     @apply bg-background text-foreground;
   }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  html {
+    /* reserve scrollbar gutter so layout doesn't shift, and hide horizontal scrollbar */
+    scrollbar-gutter: stable;
+    overflow-x: hidden;
+  }
 }
 #coming-soon {
   @apply rounded-md p-2;
@@ -421,10 +482,12 @@ input[type="number"] {
     opacity: 0;
     backdrop-filter: blur(0px) saturate(100%);
     background: rgba(0, 0, 0, 0);
+    -webkit-backdrop-filter: blur(0px) saturate(100%);
   }
   to {
-    opacity: 1;
+    opacity: 0.7;
     backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
     background: rgba(0, 0, 0, 0.4);
   }
 }
@@ -440,14 +503,14 @@ input[type="number"] {
     background: rgba(0, 0, 0, 0);
   }
 }
-
+/* 
 .fade-in-background {
   animation: fadeInFrostedGlass 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .fade-out-background {
   animation: fadeOutFrostedGlass 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
+} */
 
 @keyframes fadeInFooter {
   from {

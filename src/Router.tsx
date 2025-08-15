@@ -3,7 +3,7 @@ import { Route, Router, Switch, useLocation } from "wouter";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import "./types-colors.css";
 const Map = lazy(() => import("./components/Map/Map"));
-const App = lazy(() => import("./App"));
+
 import Header from "@/components/ui/Header";
 import Footer from "./components/ui/Footer";
 
@@ -29,24 +29,15 @@ const RouterWrapper = () => {
 const AppRouter = () => {
   const scrollClase = useLocToScroll();
 
-
   return (
     <main className={`flex-1 ${scrollClase}`}>
       <Router>
         <Switch>
-          <Route
-            path="/dex"
-            component={() => (
-              <Suspense fallback={<LoadingSpinner />}>
-                <App />
-              </Suspense>
-            )}
-          />
           <Route path="/map/*" component={MapComponent} />
           <Route path="/map" component={MapComponent} />
           <Route path="/roamers" component={MapComponent} />
 
-          <Route path="/" component={MapComponent} />
+          <Route path="/*" component={MapComponent} />
         </Switch>
       </Router>
     </main>

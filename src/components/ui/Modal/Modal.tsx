@@ -1,10 +1,19 @@
-import { lazy, useEffect, ReactNode } from "react";
+import {
+  lazy,
+  useEffect,
+  ReactNode,
+  Suspense,
+  useState,
+  forwardRef,
+  useImperativeHandle,
+} from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { useSpring, animated } from "@react-spring/web";
-import useBodyScrollLock from "@/hooks/useBodyScrollLock";
 import { useMapStore } from "@/stores/useMapStore";
 import { ErrorBoundary } from "react-error-boundary";
 import CloseButton from "../CloseButton";
+
+import { FadeInWAAPI } from "../FadeInWaapi";
 
 const getAnimationFromValues = (isOpen: "upload" | "disclaimer" | null) => {
   const viewportWidth = window.innerWidth;
@@ -32,15 +41,20 @@ const getAnimationFromValues = (isOpen: "upload" | "disclaimer" | null) => {
   }
 };
 
-// Lazy load modal content components
-const Disclaimer = lazy(() => import("./Disclaimer"));
-const UploadSave = lazy(() => import("./UploadSaveFile"));
+const importDisclaimer = () => import("./Disclaimer");
+const importUploadSave = () => import("./UploadSaveFile");
+// Seperate out so i can lazy-load imperatively
+const Disclaimer = lazy(importDisclaimer);
+const UploadSave = lazy(importUploadSave);
 
 interface ModalProps {
   isOpen: "upload" | "disclaimer" | null;
   setIsOpen: (isOpen: "upload" | "disclaimer" | null) => void;
-  isHoveringOpenButton: boolean;
+  isHoveringButton?: boolean;
 }
+type ModalHandle = {
+  preload: (which: "upload" | "disclaimer") => void;
+};
 const openState = {
   translateX: 0,
   translateY: 0,
@@ -53,30 +67,27 @@ const closedState = {
   scale: 0.95,
   opacity: 0,
 };
-const Modal = ({ isOpen, setIsOpen, isHoveringOpenButton }: ModalProps) => {
+const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
+  { isOpen, setIsOpen }: ModalProps,
+  ref,
+) {
   const deselectMap = useMapStore((state) => state.deselectMap);
-
+  const [isHovering, setIsHovering] = useState<"upload" | "disclaimer" | null>(
+    null,
+  );
   const [springs] = useSpring(
-    {
+    () => ({
       from: getAnimationFromValues(null), // Start from closed state
       to: isOpen ? openState : closedState,
+      delay: 10,
       config: {
         tension: 220,
         damping: 0.2,
         mass: isOpen === "upload" ? 0.5 : 0.75,
       },
-    },
+    }),
     [isOpen],
   );
-
-  useBodyScrollLock(typeof isOpen === "string");
-
-  useEffect(() => {
-    if (typeof isOpen === "string") {
-      deselectMap();
-    }
-  }, [isOpen, deselectMap]);
-
   const handleClose = () => {
     setIsOpen(null);
   };
@@ -91,17 +102,46 @@ const Modal = ({ isOpen, setIsOpen, isHoveringOpenButton }: ModalProps) => {
         return null;
     }
   };
+  useImperativeHandle(
+    ref,
+    () => ({
+      preload(which) {
+        if (which) {
+          setIsHovering(which);
+          if (which === "upload") {
+            importUploadSave();
+          }
+          if (which === "disclaimer") {
+            importDisclaimer();
+          }
+        }
+      },
+    }),
+    [],
+  );
+
+  useEffect(() => {
+    if (typeof isOpen === "string") {
+      deselectMap();
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen, deselectMap]);
 
   return (
-    <Dialog open={typeof isOpen === "string"} onClose={handleClose}>
+    <Dialog open={isOpen !== null} onClose={handleClose}>
       <div
-        className="fade-in-background fixed inset-0 z-[2] bg-black/80"
+        className={`fade-in-background fixed inset-0 z-[2] bg-black/80 ${isHovering && "will-opacity"}`}
         aria-hidden="true"
       />
 
       <animated.div
         style={springs}
-        className={`${isHoveringOpenButton && "will-transform"} z-3 absolute inset-0 flex items-start justify-center overflow-y-auto p-4 ${
+        className={`${isHovering && "will-transform"} z-3 absolute inset-0 flex items-start justify-center overflow-y-auto p-4 ${
           isOpen === "disclaimer" ? "origin-bottom-right" : "origin-bottom-left"
         }`}
       >
@@ -113,7 +153,13 @@ const Modal = ({ isOpen, setIsOpen, isHoveringOpenButton }: ModalProps) => {
           <ErrorBoundary
             fallback={<div className="text-red-500">Something went wrong</div>}
           >
-            {renderModalContent()}
+            <section className="min-h-[50vh]">
+              {isOpen ? (
+                <Suspense>
+                  <FadeInWAAPI>{renderModalContent()}</FadeInWAAPI>
+                </Suspense>
+              ) : null}
+            </section>
           </ErrorBoundary>
           <div className="max-h-[calc(100vh-8rem)] overflow-y-auto">
             <div className="flex justify-end">
@@ -129,6 +175,6 @@ const Modal = ({ isOpen, setIsOpen, isHoveringOpenButton }: ModalProps) => {
       </animated.div>
     </Dialog>
   );
-};
+});
 
 export default Modal;

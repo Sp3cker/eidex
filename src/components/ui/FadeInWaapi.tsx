@@ -1,27 +1,26 @@
-import { useRef, useEffect, ReactNode } from "react";
-const styleOpacity = Object.freeze({
-  opacity: 0,
-});
-export function FadeInWAAPI({ children }: { children: ReactNode }) {
-  const ref = useRef<HTMLDivElement>(null);
+import { useEffect, ReactNode, useState } from "react";
 
+const SuspendedChildProbe = ({
+  onReady,
+  children,
+}: {
+  onReady: () => void;
+  children: ReactNode;
+}) => {
   useEffect(() => {
-    if (ref.current) {
-      // Only animate if we detect we're mounting after an async boundary
-      const frame = requestAnimationFrame(() => {
-        ref.current?.animate([{ opacity: 0 }, { opacity: 1 }], {
-          duration: 130,
-          easing: "ease",
-          fill: "forwards",
-        });
-      });
-      return () => cancelAnimationFrame(frame);
-    }
-  }, []);
+    onReady();
+  }, [onReady]);
+
+  return children;
+};
+export function FadeInWAAPI({ children }: { children: ReactNode }) {
+  const [ready, setReady] = useState(false);
 
   return (
-    <div ref={ref} style={styleOpacity}>
-      {children}
+    <div className="fade-in" data-ready={ready ? "true" : undefined}>
+      <SuspendedChildProbe onReady={() => setReady(true)}>
+        {children}
+      </SuspendedChildProbe>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { animated, useSpring, useTransition } from "@react-spring/web";
 import useMapStore from "@/stores/useMapStore";
 import { shallow } from "zustand/shallow";
 import { FadeInWAAPI } from "@/components/ui/FadeInWaapi";
+import ScrollArea from "@/components/ui/ScrollArea";
 
 const ItemsBox = lazy(() => import("./ItemsBox"));
 const TrainerBattleInfo = lazy(() => import("../TrainerBattleInfo"));
@@ -44,15 +45,17 @@ const pages = [
   ),
   ({ style }: any) => (
     <animated.div
-      className="absolute bottom-0 left-0 right-0 top-0 overflow-y-auto p-2"
+      className="absolute bottom-0 left-0 right-0 top-0 p-2"
       style={style}
       key={"items-box"}
     >
-      <Suspense>
-        <FadeInWAAPI>
-          <ItemsBox />
-        </FadeInWAAPI>
-      </Suspense>
+  <ScrollArea className="h-full min-w-0" noX>
+        <Suspense>
+          <FadeInWAAPI>
+            <ItemsBox />
+          </FadeInWAAPI>
+        </Suspense>
+      </ScrollArea>
     </animated.div>
   ),
 ];

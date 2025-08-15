@@ -2,7 +2,6 @@ import { getTypeSnapColor } from "../../utils/typeInfo";
 import { TypeBadge } from "../TypeBadges/TypeBadge";
 import { getAbilityName } from "../../utils/abilityData";
 import { Pokemon } from "../../types";
-import chroma from "chroma-js";
 import { useUIStore } from "@/stores/uiStore";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
 import React from "react";
@@ -46,8 +45,8 @@ export const PokemonCard = React.memo(function Card({
   let adjustedBg = adjustedBgCache[types[0]];
   if (!adjustedBg) {
     const snapColor = getTypeSnapColor(types[0]);
-    const bgColor = chroma(snapColor);
-    adjustedBg = bgColor.darken(1.2).mix("black", 0.7).alpha(0.13).css();
+
+    adjustedBg = snapColor;
     adjustedBgCache[types[0]] = adjustedBg;
   }
 
@@ -109,7 +108,7 @@ export const PokemonCard = React.memo(function Card({
 
           {/* Stats here */}
           <div className="flex flex-col">
-            <div className="flex items-start gap-2 text-center ">
+            <div className="flex items-start gap-2 text-center">
               {reorderedStats.map((statValue, index) => (
                 <div
                   key={index}

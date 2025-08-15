@@ -1,7 +1,13 @@
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import { lazy, Suspense, useEffect } from "react";
 import { ErrorBoundary } from "react-error-boundary";
-
+const root = document.documentElement;
+const measure = () => {
+  const w = window.innerWidth - root.clientWidth; // body scrollbar width
+  if (w > 0) root.style.setProperty("--scrollbar-size", `${w}px`);
+};
+measure();
+window.addEventListener("resize", measure, { passive: true });
 const PokemonList = lazy(() => import("./components/PokemonList/PokemonList"));
 const DrawerContainer = lazy(() => import("./components/Drawer"));
 function App() {

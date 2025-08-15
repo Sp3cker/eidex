@@ -1,28 +1,28 @@
-import "./map.css";
+import { lazy, Suspense, useEffect } from "react";
 import { ErrorBoundary } from "react-error-boundary";
-import NewMap from "./ReactSvg";
-
 import MapContainer from "./MapContainer";
 import Selecta from "./MapPlaceInfo/Selecta";
-import "./grid.css";
 import useMapStore from "@/stores/useMapStore";
-import { lazy, Suspense, useLayoutEffect } from "react";
 
-import SearchContainer from "./Search/SearchContainer";
 import PlacesList from "./PlacesList";
 import { useMapHotkeys } from "@/hooks/useHotkeys";
 import { useRandomizerStore } from "@/stores/randomizerStore";
+import LoadingSpinner from "../ui/LoadingSpinner";
+import "./map.css";
+import "./grid.css";
 document.addEventListener("gesturestart", (e) => e.preventDefault());
 document.addEventListener("gesturechange", (e) => e.preventDefault());
 const MapPlaceInfo = lazy(() => import("./MapPlaceInfo/MapPlaceInfo"));
-const PokemonModal = lazy(() => import("@/components/PokemonModal"));
+
 const ImageViewer = lazy(() => import("./ImageViewer"));
 const Dexnav = lazy(() => import("./ItemsBox"));
+const NewMap = lazy(() => import("./ReactSvg"));
+const Search = lazy(() => import("./Search/SearchContainer"));
 const Map = () => {
   const {} = useRandomizerStore(); // this is here to ensure the store is initialized
   const setStateFromURL = useMapStore((state) => state.setStateFromURL);
   useMapHotkeys();
-  useLayoutEffect(() => {
+  useEffect(() => {
     const segments = window.location.pathname.split("/");
     const [, route, param] = segments;
     if (route && param) {
@@ -33,9 +33,20 @@ const Map = () => {
   return (
     <div className="parent">
       <MapContainer>
-        <NewMap />
+        <Suspense
+          fallback={
+            <div className="flex h-full w-full items-center justify-center">
+              <LoadingSpinner />
+            </div>
+          }
+        >
+          <NewMap />
+        </Suspense>
       </MapContainer>
-      <SearchContainer />
+      <Suspense>
+        <Search />
+      </Suspense>
+
       <Selecta />
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <Suspense>
@@ -64,10 +75,6 @@ const Map = () => {
       <ErrorBoundary
         fallback={<div>something went wrong with trainers list </div>}
       ></ErrorBoundary>
-
-      <Suspense>
-        <PokemonModal />
-      </Suspense>
     </div>
   );
 };

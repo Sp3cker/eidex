@@ -5,6 +5,7 @@ import EncounterMonsContainer from "./EncounterMonsContainer";
 import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
 import InfoToggleButtons from "./InfoToggleButtons";
+import ScrollArea from "@/components/ui/ScrollArea";
 
 const DRAGGING_TRANSLATE = 100;
 const XS_SCREEN = window.innerWidth > 768;
@@ -100,9 +101,12 @@ const MapPlaceInfoContent = memo(() => {
       ref={containerRef}
       className="pointer-events-auto relative flex h-full flex-col"
     >
-      <div className="map-place-info-textbox-gradient h-full overflow-y-auto rounded-l-lg pb-10 pl-1 pr-3 pt-2 md:rounded-lg lg:h-full">
+      <ScrollArea
+        className="map-place-info-textbox-gradient h-full rounded-l-lg pb-10 pl-1 pr-3 pt-2 md:rounded-lg lg:h-full simplebar-theme-map"
+        noX
+      >
         <EncounterMonsContainer selectedTab={selectedTab} />
-      </div>
+      </ScrollArea>
       <div
         className="absolute bottom-0 left-0 right-0"
         style={{

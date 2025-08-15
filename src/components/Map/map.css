@@ -93,6 +93,9 @@
 .will-transform-opacity {
   will-change: transform opacity;
 }
+.will-opacity {
+  will-change: opacity;
+}
 .selected-place {
   animation: selected-place-animation 1s infinite;
 }

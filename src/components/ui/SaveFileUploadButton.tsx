@@ -18,7 +18,7 @@ const SaveFileUploadButton = ({
       } p-1`}
     >
       <p>
-        {isRandomiserActive ? "✨ Randomized!" : "⚗ Coming soon..."}
+        {isRandomiserActive ? "✨ Randomized!" : "⚗ Upload Save File"}
       </p>
     </button>
   );

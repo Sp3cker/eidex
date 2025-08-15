@@ -12,8 +12,6 @@ import { useScreenWidth } from "../hooks/useScreenWidth";
 import { useSpring, animated } from "@react-spring/web";
 import { useUIStore } from "@/stores/uiStore";
 import LoadingSpinner from "./ui/LoadingSpinner";
-import PokemonModal from "./PokemonModal";
-import { ErrorBoundary } from "react-error-boundary";
 const DrawerContent = lazy(() => import("./DrawerContent"));
 
 const Drawer = ({ currOpen, toggleOpen, currTailwindSize, ...props }: any) => {
@@ -105,9 +103,6 @@ const DrawerContainer = (props: any) => {
               <DrawerContent />
             </Suspense>
           </Drawer>
-          <ErrorBoundary fallback={<p>Whups</p>}>
-            <PokemonModal />
-          </ErrorBoundary>
         </>
       ) : (
         <div className="flex h-full flex-col">

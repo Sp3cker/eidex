@@ -5,6 +5,7 @@ import { formatMapString } from "@/utils/formatMapString";
 
 import ItemsList from "./ItemsList";
 import CameraIcon from "./CameraIcon";
+
 const ItemsBox = memo(function ItemsBox() {
   const selectedMap = useMapStore((state) => state.selectedMap);
   const setViewingImage = useMapStore((state) => state.setViewingImage);
@@ -86,17 +87,19 @@ const ItemsBox = memo(function ItemsBox() {
       animation.cancel();
     };
   }, [isHeaderOverlaying]);
+
   const mapLabel =
     typeof selectedMap === "string" ? formatMapString(selectedMap) : "";
+
   return (
-    <div className="flex h-full flex-col rounded rounded-l-lg">
+    <div className="flex h-full min-w-0 flex-col rounded rounded-l-lg">
       <div
         ref={headerRef}
-        className="sticky top-0 z-10 flex items-center justify-between"
+        className="sticky top-0 z-10 flex min-w-0 items-center justify-between overflow-hidden"
       >
-        <span className="flex flex-row items-center justify-center gap-3">
+        <span className="flex min-w-0 flex-row items-center justify-center gap-3">
           {mapLabel && (
-            <h2 className="cool-font md:text-md cursor-pointer text-left text-sm font-bold text-neutral-700 transition-colors">
+            <h2 className="cool-font md:text-md min-w-0 truncate pr-2 text-left text-sm font-bold text-neutral-700 transition-colors">
               {mapLabel}
             </h2>
           )}
@@ -105,7 +108,7 @@ const ItemsBox = memo(function ItemsBox() {
       </div>
       <div
         ref={firstItemRef}
-        className="font-pkmnem flex flex-1 flex-col rounded-sm"
+        className="font-pkmnem flex min-w-0 flex-1 flex-col rounded-sm"
       >
         <ItemsList />
       </div>

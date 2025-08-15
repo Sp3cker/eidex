@@ -26,10 +26,9 @@ const CameraIcon = React.memo(function CameraIcon({
       className="cursor-pointer rounded-md transition-all hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 active:bg-gray-300"
     >
       <animated.img
-        onClick={handleImageClick}
         src="/camera.webp"
-        alt={`View image of selected level`}
-        className="h-10 w-10"
+        alt=""
+        className="block h-10 w-10"
         style={{
           transform: buttonSpring.rotate
             .to({

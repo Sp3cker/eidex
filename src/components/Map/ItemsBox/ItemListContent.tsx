@@ -2,21 +2,19 @@ import { getItemSpriteStyle } from "@/utils/itemSprites";
 import { BaseListContent } from "./BaseListContent";
 import { Item, ItemWithAmount } from "@/data/map";
 const ItemListRender = (showPrice: boolean) => (item: ItemWithAmount) => (
-  <hgroup>
-    <div className="flex flex-row justify-between">
-      <h3 className="pl-1 text-xs/4 font-bold md:text-sm">
+  <hgroup className="min-w-0">
+    <div className="flex min-w-0 flex-row items-start justify-between gap-2">
+      <h3 className="min-w-0 flex-1 break-words pl-1 text-xs/4 font-bold md:text-sm">
         {(item as { name?: string }).name || "Unnamed"}
       </h3>
-      <p className="font-pkmnem text-shadow-xs pr-4 text-lg leading-4">
+      <p className="font-pkmnem text-shadow-xs shrink-0 pr-4 text-lg leading-4">
         {showPrice ? "$" + item.price : "x" + item.amount}
       </p>
     </div>
     {(item as { description?: string }).description && (
-
-        <p className="font-pkmnem pl-1 text-shadow-2xs  leading-3 md:leading-4">
-          {(item as { description?: string }).description}
-        </p>
-
+      <p className="font-pkmnem text-shadow-2xs break-words pl-1 leading-3 md:leading-4">
+        {(item as { description?: string }).description}
+      </p>
     )}
   </hgroup>
 );

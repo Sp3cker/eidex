@@ -36,15 +36,15 @@ export function BaseListContent<T>({
   }
 
   return (
-    <div>
+    <div className="min-w-0">
       {items.map((item, index) => (
         <div
           key={getKey(item, index)}
-          className={`cool-font mb-1 flex items-center pl-2 p-1 sm:p-2 gap-1 sm:gap-3 rounded border shadow-sm transition-colors ${className}`}
+          className={`cool-font mb-1 flex min-w-0  items-center gap-1 rounded border p-1 pl-2 shadow-sm transition-colors sm:gap-3 sm:p-2 ${className}`}
         >
           {renderIcon && renderIcon(item)}
 
-          <div className="flex min-w-0 flex-1 flex-col">
+          <div className="flex min-w-0 flex-1 flex-col break-words">
             {renderContent(item)}
           </div>
         </div>

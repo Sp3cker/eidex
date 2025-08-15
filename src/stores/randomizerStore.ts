@@ -31,7 +31,6 @@ interface RandomiserStore {
   disableRandomiserActive: () => void;
   handleUpload: (file: File) => Promise<void>;
   clearError: () => void;
-  clearEverything: () => void;
   reset: () => void;
   onInit: () => Promise<void>;
 }
@@ -73,7 +72,7 @@ export const randomizerStore = createStore<RandomiserStore>()(
       toggleRandomiserActive: () =>
         set((state) => ({ isRandomiserActive: !state.isRandomiserActive })),
       disableRandomiserActive: () => set(() => ({ isRandomiserActive: false })),
-      clearEverything: () => {
+      reset: () => {
         set({
           isUploading: false,
           isProcessing: false,
@@ -82,6 +81,7 @@ export const randomizerStore = createStore<RandomiserStore>()(
           trainerIdInfo: null,
           didRunInit: false,
           isRandomiserActive: false,
+          userRandomizerMode: null as unknown as RandomizerSpeciesMode,
         });
         encounterStore.clearEncounterData();
         encounterStore.resetEncounterData();
@@ -145,21 +145,12 @@ export const randomizerStore = createStore<RandomiserStore>()(
           });
         } catch (error) {
           console.error("Upload processing error:", error);
-          get().clearEverything();
+          get().reset();
         }
       },
       clearError: () => set({ error: null }),
 
-      reset: () =>
-        set({
-          isUploading: false,
-          isProcessing: false,
-          error: null,
-          uploadSuccess: false,
-          trainerIdInfo: null,
-          didRunInit: false,
-        }),
-
+ 
       onInit: async () => {
         const { trainerIdInfo, didRunInit } = get();
         if (didRunInit) {
@@ -171,6 +162,7 @@ export const randomizerStore = createStore<RandomiserStore>()(
           // No trainer data means nothing to wait for
           // This also avoids setting encounters with bad randos
           markEncountersReady();
+          get().reset();
           return;
         }
         const { fullId } = trainerIdInfo;

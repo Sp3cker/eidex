@@ -1,4 +1,4 @@
-import { lazy, memo, Suspense, useState } from "react";
+import { lazy, memo, Suspense, useCallback, useRef, useState } from "react";
 import { Modal } from "./Modal";
 // import HiddenFileDrop from "./HiddenFileDrop";
 const PaddingStyles = Object.freeze({
@@ -9,26 +9,30 @@ const PaddingStyles = Object.freeze({
 const SaveFileUploadButton = lazy(() => import("./SaveFileUploadButton"));
 const Footer = memo(function Footer() {
   const [isOpen, setIsOpen] = useState<"upload" | "disclaimer" | null>(null);
-  const [isHoveringButton, setIsHoveringButton] = useState(false);
-  const handleClick = (to: string) => {
-    if (to === "upload") {
-      setIsOpen("upload");
-    } else {
-      setIsOpen("disclaimer");
-    }
-  };
-  const handleUploadButtonHover = () => {
-    setIsHoveringButton(true);
-  };
-  const handleUploadButtonHoverExit = () => {
-    setIsHoveringButton(false);
-  };
+
+  const modalRef = useRef<{
+    preload: (s: "upload" | "disclaimer" | null) => void;
+  } | null>(null);
+
+  const handleUploadButtonHover = useCallback(() => {
+    modalRef.current?.preload("upload");
+  }, [modalRef]);
+  const handleUploadButtonHoverExit = useCallback(() => {}, []);
+  const handleUploadClick = useCallback(() => {
+    setIsOpen("upload");
+  }, []);
+  const handleDisclosureButtonHover = useCallback(() => {
+    modalRef.current?.preload("disclaimer");
+  }, []);
+  const handleDisclosureButtonHoverExit = useCallback(() => {}, []);
+  const handleDisclosureClick = useCallback(() => {
+    setIsOpen("disclaimer");
+  }, []);
   return (
     <div
       style={PaddingStyles}
       className="footer-bg-text fade-in-footer fixed bottom-0 left-0 right-0 z-10 flex w-full items-center justify-between bg-gray-700 ring md:relative md:bottom-auto"
     >
-      {/* ...existing code... */}
       <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">
         <div
           onMouseEnter={handleUploadButtonHover}
@@ -37,11 +41,11 @@ const Footer = memo(function Footer() {
           <Suspense
             fallback={
               <button className="rounded-xs m-1 cursor-pointer bg-gray-600 p-1 font-bold hover:bg-gray-500 active:bg-zinc-600">
-                <p>⚗ Coming soon...</p>
+                <p>⚗ Upload Save File</p>
               </button>
             }
           >
-            <SaveFileUploadButton isOpen={isOpen} onClick={handleClick} />
+            <SaveFileUploadButton isOpen={isOpen} onClick={handleUploadClick} />
           </Suspense>
         </div>
       </div>
@@ -60,16 +64,14 @@ const Footer = memo(function Footer() {
             </p> */}
           <p className="font-pkmnem leading-xs pr-1 text-sm/3 text-white">
             <button
-              onClick={() => handleClick("disclaimer")}
+              onClick={handleDisclosureClick}
+              onMouseEnter={handleDisclosureButtonHover}
+              onMouseLeave={handleDisclosureButtonHoverExit}
               className="cursor-pointer text-sm/3 text-white underline transition-colors hover:text-emerald-400"
             >
               View disclaimer
             </button>
-            <Modal
-              isOpen={isOpen}
-              setIsOpen={setIsOpen}
-              isHoveringOpenButton={isHoveringButton}
-            />
+            <Modal isOpen={isOpen} setIsOpen={setIsOpen} ref={modalRef} />
           </p>
         </div>
       </div>

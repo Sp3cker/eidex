@@ -29,7 +29,7 @@ const UploadSave = () => {
     error,
     trainerIdInfo,
     clearError,
-    clearEverything,
+    reset,
     userRandomizerMode,
     setUserRandomizerMode,
   } = useRandomizerStore();
@@ -58,15 +58,16 @@ const UploadSave = () => {
           Upload your Emerald Imperium save file to randomize encounters based
           on your trainer ID and randomizer settings.
         </p>
-        <p className="leading-0 pb-0 pt-1 text-xs font-bold text-neutral-300">
-          Select your Randomization Mode:
+        <p className="leading-0 pb-0 pt-1 text-xs text-neutral-300">
+          1. Select the <span className="font-bold">Randomization Mode</span>{" "}
+          you chose for your game:
         </p>
         <section>
           <div className="space-2 flex flex-row justify-evenly rounded-t-sm bg-slate-700">
             {RandomizationModesList.map((mode) => (
               <div
                 key={mode.mode}
-                className={`relative flex items-center space-x-2`}
+                className={`relative flex items-center space-x-2 bg-slate-700`}
               >
                 <input
                   type="radio"
@@ -76,7 +77,7 @@ const UploadSave = () => {
                   value={mode.mode ?? undefined}
                   checked={userRandomizerMode === mode.mode}
                   onChange={() => handleModeChange(mode.mode)}
-                  className="cursor-pointer"
+                  className="-mt-0.75 cursor-pointer disabled:bg-zinc-600 sm:-mt-1"
                 />
                 {mode.mode == 2 && (
                   <div
@@ -88,7 +89,7 @@ const UploadSave = () => {
                 )}
                 <label
                   htmlFor={`mode-${mode.mode}`}
-                  className={`font-pkmnem cursor-pointer text-sm/3 font-bold text-gray-300 md:text-base/6 ${isRadioDisabled(mode.mode) ? "cursor-default text-gray-600" : ""}`}
+                  className={`font-pkmnem cursor-pointer text-sm/3 font-bold text-gray-300 sm:text-base/6 ${isRadioDisabled(mode.mode) ? "cursor-default text-gray-600" : ""}`}
                 >
                   {mode.label}
                 </label>
@@ -104,21 +105,38 @@ const UploadSave = () => {
         <div className="flex flex-row space-y-2">
           {isRandomiserActive ? (
             <button
-              onClick={clearEverything}
+              onClick={reset}
               className="font-pkmnem rounded-xs block cursor-pointer text-nowrap px-2 py-0 font-bold text-stone-200 ring-1 ring-amber-500 hover:bg-amber-900"
             >
               Clear Save
             </button>
           ) : (
-            <input
-              type="file"
-              accept=".sav,.save"
-              onChange={handleFileChange}
-              disabled={
-                userRandomizerMode === null || isUploading || isProcessing
-              }
-              className="hover-active-button font-pkmnem file:font-pkmnem block w-full text-base text-lg font-bold text-gray-300 file:mr-4 file:cursor-pointer file:rounded-sm file:border-0 file:bg-emerald-700 file:px-2 file:py-0 file:text-base file:font-bold file:text-neutral-50 disabled:opacity-50 sm:text-lg file:sm:text-lg"
-            />
+            <section className="min-h-10">
+              <input
+                type="button"
+                className="hover-active-button font-pkmnem block mx-auto px-2 py-1 rounded-sm text-center bg-emerald-700 text-base font-bold text-slate-100 disabled:bg-slate-900 sm:text-lg"
+                id="loadFileXml"
+                value={userRandomizerMode === null ? "" : "Upload Save File"}
+                disabled={
+                  userRandomizerMode === null || isUploading || isProcessing
+                }
+                onTouchStart={() =>
+                  document.getElementById("upload-save")!.click()
+                }
+                onClickCapture={() =>
+                  document.getElementById("upload-save")!.click()
+                }
+              />
+
+              <input
+                type="file"
+                id="upload-save"
+                accept=".sav,.save"
+                onChange={handleFileChange}
+                placeholder="Upload Save File please"
+                className="hidden"
+              />
+            </section>
           )}
         </div>
 
