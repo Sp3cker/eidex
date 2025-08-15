@@ -100,7 +100,7 @@ const ImageViewer = () => {
       {showImage && (
         <div className="image-viewer-overlay">
           <button
-            className="image-viewer-close-button"
+            className="hover-active-button image-viewer-close-button"
             onClick={handleClose}
             aria-label="Close full screen image"
           >

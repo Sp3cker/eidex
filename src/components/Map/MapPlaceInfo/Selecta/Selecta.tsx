@@ -80,7 +80,7 @@ const Selecta = () => {
       }`}
     >
       <button
-        className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 shrink-0 rounded-lg text-xs text-neutral-100 shadow-md"
+        className="hover-active-button selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 shrink-0 rounded-lg text-xs text-neutral-100 shadow-md"
         onClick={handleDownClick}
         disabled={currentLevelIndex <= 0}
         title="Go down one floor"
@@ -95,7 +95,7 @@ const Selecta = () => {
       </p>
 
       <button
-        className="selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 shrink-0 rounded-lg text-xs text-neutral-100 shadow-md disabled:opacity-50"
+        className="hover-active-button selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 shrink-0 rounded-lg text-xs text-neutral-100 shadow-md disabled:opacity-50"
         onClick={handleUpClick}
         disabled={
           currentLevelIndex === -1 ||

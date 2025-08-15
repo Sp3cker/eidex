@@ -119,7 +119,6 @@ const MapPlaceInfoContent = memo(() => {
 });
 
 MapPlaceInfoContent.displayName = "MapPlaceInfoContent";
-const MapPlaceInfoContentAnim = animated(MapPlaceInfoContent);
 
 const MapPlaceInfo = memo(() => {
   const selectedMap = useMapStore((state) => state.selectedMap);
@@ -180,7 +179,7 @@ const pages = [
   ({ style }: any) => (
     <animated.div style={style} className="absolute inset-0 pl-1 md:p-2">
       <div className="relative h-full">
-        <MapPlaceInfoContentAnim />
+        <MapPlaceInfoContent />
       </div>
     </animated.div>
   ),

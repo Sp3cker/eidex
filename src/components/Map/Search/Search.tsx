@@ -38,8 +38,8 @@ const Search = () => {
   }, [itemSearchSelected, width]);
 
   const handleClick = useCallback(
-    (_: any, index: number) => {
-      const { name, id } = searchResults[index];
+    (item: { name: string; id?: string }) => {
+      const { name, id } = item;
       setSearchName(name);
 
       if (!id) return;
@@ -100,7 +100,7 @@ const Search = () => {
       <a.input
         ref={inputRef}
         value={searchTerm}
-        className="search-input mb-2 w-full rounded-sm border border-neutral-100 p-1 py-1 pl-1 pr-2 text-sm/6 text-neutral-50 shadow-inner shadow-xl"
+        className="search-input mb-2 w-full rounded-sm border border-neutral-100 p-1 py-1 pl-1 pr-2 text-sm/6 text-stone-100 shadow-xl placeholder:text-stone-400 placeholder:opacity-70"
         style={{
           width: width,
         }}

@@ -244,6 +244,15 @@ input[type="number"] {
     );
     @apply ring-orange-500;
   }
+  /* .normal-button {
+    @apply duration-130 hover:saturate-120 active:brightness-70 active:saturate-130 transition-[filter] hover:brightness-90;
+  } */
+  .hover-active-button {
+    @apply duration-130 font-pkmnem hover:saturate-120 active:saturate-130 hover:brightness-85 cursor-pointer font-bold transition-[filter] active:brightness-75;
+  }
+  .hover-active-button:hover * {
+    filter: brightness(150%) saturate(0%);
+  }
 }
 
 /* --- Trainer Sprite Animation (spritesheet: 128x40) with Custom Size --- */
@@ -396,16 +405,16 @@ input[type="number"] {
   }
 }
 #coming-soon {
-  @apply rounded-md p-2;  
-    backdrop-filter: blur(12px) saturate(120%);
-    background: rgba(104, 60, 2, 0.8);
+  @apply rounded-md p-2;
+  backdrop-filter: blur(12px) saturate(120%);
+  background: rgba(104, 60, 2, 0.8);
 
-    p {
-      @apply text-sm text-orange-400 text-center text-shadow-lg;
-    }
-    + label {
-      @apply p-2 text-sm text-gray-200 opacity-30;
-    }
+  p {
+    @apply text-shadow-lg text-center text-sm text-orange-400;
+  }
+  + label {
+    @apply p-2 text-sm text-gray-200 opacity-30;
+  }
 }
 @keyframes fadeInFrostedGlass {
   from {
