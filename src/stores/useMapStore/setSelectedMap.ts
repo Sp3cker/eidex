@@ -25,10 +25,6 @@ const getMap = (map: string) => {
 const putRodUsed = (mons: EncounterMons[]) => {
   // If a mon appears in multiple rod types, it will be combined into a single string like "Old/Good Rod" or "Good/Super Rod"
 
-  if (!mons || mons.length === 0) {
-    return mons; // Return early if no mons are provided
-  }
-
   const rodsByIndex: string[] = [];
   const speciesByIndex: number[] = [];
   // First pass: assign rod type based on slot
