@@ -97,6 +97,10 @@ export const randomizerStore = createStore<RandomiserStore>()(
       handleUpload: async (file: File) => {
         // const { reset } = get();
         try {
+          const randomizerMode = get().userRandomizerMode;
+          if (randomizerMode === null) {
+            throw new Error("No randomizer mode set");
+          }
           // reset();
           set({ isUploading: true });
           if (!file) {
@@ -110,43 +114,42 @@ export const randomizerStore = createStore<RandomiserStore>()(
           if (file.size > 132 * 1024) {
             throw new Error("Save file is too large (max 132KB)");
           }
-          const arrayBuffer = await file.arrayBuffer();
-
-          set({ isProcessing: true });
-
-          const sectors = splitSaveIntoChunks(arrayBuffer);
-
-          const trainerIdData = getTrainerIdFromSectors(sectors);
-
-          const trainerData = {
-            trainerId: trainerIdData.trainerId,
-            secretId: trainerIdData.secretId,
-            fullId: trainerIdData.fullId,
+          const trainerData: TrainerIdInfo = {
+            trainerId: 0,
+            secretId: 0,
+            fullId: 0,
           };
-          const randomizerMode = get().userRandomizerMode;
-          if (randomizerMode === null) {
-            console.error("No randomizer mode set");
-            return;
-          }
+          requestAnimationFrame(async () => {
+            const arrayBuffer = await file.arrayBuffer();
 
-          await encounterStore.randomizeEncountersWithTrainerSeed(
-            trainerData.fullId,
-            randomizerMode,
-          );
-          requestAnimationFrame(() => {
+            set({ isProcessing: true });
+
+            const sectors = splitSaveIntoChunks(arrayBuffer);
+
+            const trainerIdData = getTrainerIdFromSectors(sectors);
+
+            trainerData.trainerId = trainerIdData.trainerId;
+            trainerData.secretId = trainerIdData.secretId;
+            trainerData.fullId = trainerIdData.fullId;
+
+            await encounterStore.randomizeEncountersWithTrainerSeed(
+              trainerData.fullId,
+              randomizerMode,
+            );
             pokemonSearchStore._initialize();
+            markEncountersReady();
+            set({
+              isUploading: false,
+              isProcessing: false,
+              uploadSuccess: true,
+              trainerIdInfo: trainerData,
+              isRandomiserActive: true,
+              error: null,
+            });
           });
           // Encounters are now randomized and ready
-          markEncountersReady();
-          set({
-            isUploading: false,
-            isProcessing: false,
-            uploadSuccess: true,
-            trainerIdInfo: trainerData,
-            isRandomiserActive: true,
-            error: null,
-          });
         } catch (error) {
+          set({ error: error as string });
           console.error("Upload processing error:", error);
           get().reset();
         }
