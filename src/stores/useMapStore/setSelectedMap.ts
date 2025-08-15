@@ -23,77 +23,47 @@ const getMap = (map: string) => {
 };
 
 const putRodUsed = (mons: EncounterMons[]) => {
-  // Good Rod mons: []
-  //Old Rod Mons: []
-  // Super Rod mons: []
   // If a mon appears in multiple rod types, it will be combined into a single string like "Old/Good Rod" or "Good/Super Rod"
 
   if (!mons || mons.length === 0) {
     return mons; // Return early if no mons are provided
   }
 
- const rodsByIndex = []
+  const rodsByIndex: string[] = [];
+  const speciesByIndex: number[] = [];
   // First pass: assign rod type based on slot
-  mons.forEach((mon, slot, arr) => {
-    let rod: string;
-    if (slot <= 2) {// 0, 1, 2
-      rodsByIndex.push("Old");
-    } else if (slot >= 3 && slot <= 5) { // 3, 4, 5
-      rodsByIndex.push("Good")
-    } else {
-      rodsByIndex.push("Super")
-    }
-  });
-
-  // Second pass: determine chance level for each species within each rod type
-  const rodGroups: { [rodType: string]: { [species: string]: number[] } } = {};
-
-  // Group by rod type and species, tracking slot indices
   mons.forEach((mon, slot) => {
-    if (!mon.rod) return;
-
-    if (!rodGroups[mon.rod]) {
-      rodGroups[mon.rod] = {};
+    speciesByIndex.push(mon.species);
+    if (slot <= 2) {
+      // 0, 1, 2
+      rodsByIndex.push("Old");
+    } else if (slot >= 3 && slot <= 5) {
+      // 3, 4, 5
+      rodsByIndex.push("Good");
+    } else {
+      rodsByIndex.push("Super");
     }
-    if (!rodGroups[mon.rod][mon.species]) {
-      rodGroups[mon.rod][mon.species] = [];
+  });
+  // look through speciesByIndex, match each index to it's rodsByIndex
+  // If a species appears in multiple rod types, combine them into a single string like "Old/Good Rod" or "Good/Super Rod"
+  const speciesByRod = new Map<number, string>();
+  speciesByIndex.forEach((species, index) => {
+    const rod = rodsByIndex[index];
+    const currentRod = speciesByRod.get(species);
+    if (!currentRod) {
+      speciesByRod.set(species, rod);
+      return;
     }
-    rodGroups[mon.rod][mon.species].push(slot);
+    if (currentRod.includes(rod)) {
+      // Don't want Old/Old/Old Rod
+      return;
+    }
+    // If a species appears in multiple rod types, combine them into a single string like "Old/Good Rod" or "Good/Super Rod"
+    speciesByRod.set(species, currentRod + "/" + rod);
   });
-
-  // Third pass: combine rod types for species that appear across multiple rods
-  const speciesRodSummary: { [species: string]: { rods: Set<string> } } = {};
-
-  // Collect all rod types for each species
-  Object.keys(rodGroups).forEach((rodType) => {
-    Object.keys(rodGroups[rodType]).forEach((species) => {
-      if (!speciesRodSummary[species]) {
-        speciesRodSummary[species] = { rods: new Set() };
-      }
-      speciesRodSummary[species].rods.add(rodType);
-    });
+  mons.forEach((mon, index) => {
+    mon.rod = speciesByRod.get(speciesByIndex[index]) + " Rod";
   });
-
-  // Assign combined rod strings
-  mons.forEach((mon) => {
-    if (!mon.rod) return;
-
-    const summary = speciesRodSummary[mon.species];
-    if (!summary) return;
-
-    // Create combined rod string
-    const rodArray = Array.from(summary.rods);
-    const rodOrder = ["Old Rod", "Good Rod", "Super Rod"];
-    const sortedRods = rodArray.sort(
-      (a, b) => rodOrder.indexOf(a) - rodOrder.indexOf(b),
-    );
-    const combinedRodString =
-      sortedRods.join("/").replace(/ Rod/g, "").replace(/\//g, "/") + " Rod";
-
-    mon.rod = combinedRodString;
-  });
-
-  return mons;
 };
 
 const putEncounterRate = (mons: EncounterMons[]) => {
