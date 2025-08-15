@@ -1,103 +1,67 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import DisclaimerModal from "../DisclaimerModal";
-
-// Mock the useMapStore
-const mockDeselectMap = vi.fn();
-vi.mock("../../../stores/useMapStore", () => ({
-  useMapStore: vi.fn(() => mockDeselectMap),
-}));
-
-// Mock the body scroll lock hook
-vi.mock("../../../hooks/useBodyScrollLock", () => ({
-  default: vi.fn(),
-}));
+import DisclaimerModal from "../Modal/DisclaimerModal";
 
 describe("DisclaimerModal", () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
-  it("should render the trigger button", () => {
+  it("should render disclaimer title", () => {
     render(<DisclaimerModal />);
-    
-    const triggerButton = screen.getByRole("button", { name: /click here/i });
-    expect(triggerButton).toBeInTheDocument();
-  });
-
-  it("should open modal when trigger button is clicked", async () => {
-    const user = userEvent.setup();
-    render(<DisclaimerModal />);
-    
-    const triggerButton = screen.getByRole("button", { name: /click here/i });
-    await user.click(triggerButton);
     
     expect(screen.getByText("Disclaimer")).toBeInTheDocument();
-    expect(screen.getByText(/I made this map because Gen-3 is best gen/)).toBeInTheDocument();
   });
 
-  it("should call deselectMap when modal is opened", async () => {
-    const user = userEvent.setup();
+  it("should display all disclaimer content sections", () => {
     render(<DisclaimerModal />);
-    
-    const triggerButton = screen.getByRole("button", { name: /click here/i });
-    await user.click(triggerButton);
-    
-    expect(mockDeselectMap).toHaveBeenCalledTimes(1);
-  });
-
-  it("should close modal when close button is clicked", async () => {
-    const user = userEvent.setup();
-    render(<DisclaimerModal />);
-    
-    // Open modal
-    const triggerButton = screen.getByRole("button", { name: /click here/i });
-    await user.click(triggerButton);
-    
-    // Close modal
-    const closeButton = screen.getByRole("button", { name: /close/i });
-    await user.click(closeButton);
-    
-    expect(screen.queryByText("Disclaimer")).not.toBeInTheDocument();
-  });
-
-  it("should display all disclaimer content sections", async () => {
-    const user = userEvent.setup();
-    render(<DisclaimerModal />);
-    
-    const triggerButton = screen.getByRole("button", { name: /click here/i });
-    await user.click(triggerButton);
     
     // Check for key sections
-    expect(screen.getByText(/I made this map because Gen-3 is best gen/)).toBeInTheDocument();
     expect(screen.getByText(/Pokémon and all related characters/)).toBeInTheDocument();
     expect(screen.getByText(/Nintendo Co., Ltd./)).toBeInTheDocument();
     expect(screen.getByText(/Game Freak Inc./)).toBeInTheDocument();
     expect(screen.getByText("The Pokémon Company International")).toBeInTheDocument();
+    expect(screen.getByText(/Creatures Inc./)).toBeInTheDocument();
   });
 
-  it("should have proper styling classes on trigger button", () => {
+  it("should display project information", () => {
     render(<DisclaimerModal />);
     
-    const triggerButton = screen.getByRole("button", { name: /click here/i });
-    expect(triggerButton).toHaveClass(
-      "text-sm/3",
-      "text-white",
-      "underline",
-      "transition-colors",
-      "hover:text-emerald-400"
-    );
+    expect(screen.getByText(/This project gets the item locations/)).toBeInTheDocument();
+    expect(screen.getByText(/Emerald Imperium Github repository/)).toBeInTheDocument();
+    expect(screen.getByText(/SporySparser/)).toBeInTheDocument();
+    expect(screen.getByText(/LheaRachel's Porydex/)).toBeInTheDocument();
   });
 
-  it("should be scrollable when content overflows", async () => {
-    const user = userEvent.setup();
+  it("should display official site information", () => {
     render(<DisclaimerModal />);
     
-    const triggerButton = screen.getByRole("button", { name: /click here/i });
-    await user.click(triggerButton);
+    expect(screen.getByText(/The official site for the project is/)).toBeInTheDocument();
+    expect(screen.getByText(/emeraldimperium.net/)).toBeInTheDocument();
+  });
+
+  it("should display warning about fake sites", () => {
+    render(<DisclaimerModal />);
     
-    const scrollableContent = screen.getByText("Disclaimer").closest("div");
-    expect(scrollableContent).toHaveClass("overflow-y-auto");
+    expect(screen.getByText(/Anyone else claiming to be the official site is/)).toBeInTheDocument();
+    expect(screen.getByText(/lying/)).toBeInTheDocument();
+  });
+
+  it("should display recommended projects", () => {
+    render(<DisclaimerModal />);
+    
+    expect(screen.getByText(/For projects I'd endorse/)).toBeInTheDocument();
+    expect(screen.getByText(/Official Pokédex/)).toBeInTheDocument();
+    expect(screen.getByText(/Pokémon Emerald Imperium Homepage/)).toBeInTheDocument();
+  });
+
+  it("should display attribution for map image", () => {
+    render(<DisclaimerModal />);
+    
+    expect(screen.getByText(/I got the map image from/)).toBeInTheDocument();
+    expect(screen.getByText(/Jamie07's DeviantArt/)).toBeInTheDocument();
+  });
+
+  it("should display community information", () => {
+    render(<DisclaimerModal />);
+    
+    expect(screen.getByText(/The source of truth is the Discord and the Pokecommunity post/)).toBeInTheDocument();
+    expect(screen.getByText(/If you find an error in the data, please report it in the EI Discord/)).toBeInTheDocument();
   });
 });

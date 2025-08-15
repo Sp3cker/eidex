@@ -29,12 +29,13 @@ export const ErrorBanner = ({
     enter: { opacity: 1, translateY: 0 },
     leave: { opacity: 0, translateY: -40 },
     config: { tension: 300, friction: 30 },
+    expires: true,
   });
   return transitions((style, item) =>
     item ? (
       <a.div
         style={style}
-        className={`absolute left-0 right-0 z-50 mx-auto mt-2 w-fit rounded border bg-neutral-100/80 px-4 py-2 text-center font-bold shadow-lg backdrop-blur-md ${
+        className={`absolute left-0 right-0 z-8 mx-auto mt-2 w-fit rounded border bg-neutral-100/80 px-4 py-2 text-center font-bold shadow-lg backdrop-blur-md ${
           type === "held"
             ? "border-blue-500 text-blue-800"
             : "border-red-500 text-red-800"

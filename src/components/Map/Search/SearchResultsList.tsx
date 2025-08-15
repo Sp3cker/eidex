@@ -50,6 +50,7 @@ export const SearchResultsList = ({
         translateX: 0,
       };
     },
+    expires: true,
     config: { frequency: 0.21, damping: 1.2 },
     trail: 21,
   });

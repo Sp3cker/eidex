@@ -106,16 +106,16 @@
   z-index: 2;
 }
 .places-list-z {
-  z-index: 7;
+  z-index: 9;
 }
 .places-list-button-z {
-  z-index: 5;
+  z-index: 0;
 }
 .places-list-backdrop-z {
   z-index: 6;
 }
 .trainers-list-z {
-  z-index: 7;
+  z-index: 8;
 }
 .trainers-list-button-z {
   z-index: 5;
@@ -175,13 +175,13 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   background: rgba(0, 0, 0, 0.8);
   background-color: rgba(255, 255, 255, 0.2);
   outline-color: var(--color-blue-500);
-  z-index: 6;
+  z-index: 2;
 }
 .search-result {
   animation: searchResultAnimation 0.21s linear;
 }
 .search-selecta {
-  z-index: 5;
+  z-index: 1;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {

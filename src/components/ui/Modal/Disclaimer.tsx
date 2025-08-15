@@ -1,18 +1,8 @@
-import { lazy, useEffect } from "react";
-import {
-  Button,
-  Dialog,
-  DialogPanel,
-  DialogTitle,
-} from "@headlessui/react";
-import { useSpring, animated, useTrail, config } from "@react-spring/web";
-import useBodyScrollLock from "@/hooks/useBodyScrollLock";
-import { useMapStore } from "@/stores/useMapStore";
+import { DialogTitle } from "@headlessui/react";
+import { animated, useTrail, config } from "@react-spring/web";
 
 import { ErrorBoundary } from "react-error-boundary";
-import CloseButton from "../CloseButton";
 
-const UploadSave = lazy(() => import("./UploadSaveFile.tsx"));
 // THESE ARE REVERSED BECAUSE REACT-SPRING IS BUGGY
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const paragraphs = (springAnim: any, index: number) => {
@@ -163,77 +153,4 @@ const Disclaimer = () => {
   );
 };
 
-const Modal = ({
-  isOpen,
-  setIsOpen,
-  isHoveringOpenButton,
-}: {
-  isOpen: string | null;
-  setIsOpen: (isOpen: string | null) => void;
-  isHoveringOpenButton: boolean;
-}) => {
-  const deselectMap = useMapStore((state) => state.deselectMap);
-  const [springs] = useSpring(
-    {
-      opacity: isOpen ? 1 :  0,
-      translateY: isOpen ? 0 : 20,
-
-      scale: isOpen ? 1 : 0.95,
-      config: { mass: 1, tension: 210, friction: 20 },
-    },
-    [isOpen],
-  );
-
-  useBodyScrollLock(typeof isOpen === "string");
-
-  useEffect(() => {
-    if (typeof isOpen === "string") {
-      deselectMap();
-    }
-  }, [isOpen]);
-  const handleClose = () => {
-    setIsOpen(null);
-  };
-  return (
-    <Dialog open={typeof isOpen === "string"} onClose={handleClose}>
-      <div
-        style={{
-          backdropFilter: "blur(12px) saturate(120%)",
-          WebkitBackdropFilter: "blur(12px) saturate(120%)", // Safari support
-        }}
-        className="fade-in-background fixed inset-0 bg-black/80"
-        aria-hidden="true"
-      />
-
-      <animated.div
-        style={springs}
-        className={`${isHoveringOpenButton && "will-transform"} ${isOpen === "disclaimer" ? "origin-right" : "origin-left"} absolute inset-0 flex items-start justify-center overflow-y-auto p-4`}
-      >
-        <DialogPanel className="relative my-8 max-h-[calc(100vh-4rem)] w-full max-w-lg rounded-lg bg-zinc-900 p-6 transition">
-          <CloseButton
-            onClick={handleClose}
-            className="absolute right-5 top-5"
-          />
-          <ErrorBoundary
-            fallback={<div className="text-red-500">Something went wrong</div>}
-          >
-            {isOpen === "disclaimer" && <Disclaimer />}
-            {isOpen === "upload" && <UploadSave />}
-          </ErrorBoundary>
-          <div className="max-h-[calc(100vh-8rem)] overflow-y-auto">
-            <div className="mt-6 flex justify-end">
-              <Button
-                onClick={handleClose}
-                className="rounded bg-emerald-700 px-4 py-2 text-white transition-colors hover:bg-emerald-600"
-              >
-                Close
-              </Button>
-            </div>
-          </div>
-        </DialogPanel>
-      </animated.div>
-    </Dialog>
-  );
-};
-
-export default Modal;
+export default Disclaimer;

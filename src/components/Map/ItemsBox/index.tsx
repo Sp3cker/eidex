@@ -111,6 +111,7 @@ export default memo(function MapItemsBox() {
       scaleX: pageIndex === 0 ? 1 / 1.15 : 1,
       scaleY: pageIndex === 0 ? 1 / 1.25 : 1,
     }),
+    expires: true,
     leave: {
       translateX: "-100%",
       opacity: 0,

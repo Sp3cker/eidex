@@ -4,74 +4,75 @@ import React, { useEffect } from "react";
 import { MapStore } from "@/stores/useMapStore/types";
 import { animated, useSpring } from "@react-spring/web";
 
-const SearchSelecta = React.memo(function SSelecta({
-  maps,
-}: {
-  maps: string[];
-}) {
-  const setSelectedMap = useMapStore((state: MapStore) => state.setSelectedMap);
-  const handleUpClick = () => {
+const SearchSelecta = React.memo(
+  function SSelecta({ maps }: { maps: string[] }) {
+    const setSelectedMap = useMapStore(
+      (state: MapStore) => state.setSelectedMap,
+    );
+    const handleUpClick = () => {
+      const { selectedMap } = useMapStore.getState();
+      if (!selectedMap) {
+        return;
+      }
+      const currMapInd = maps.indexOf(selectedMap);
+      if (maps[currMapInd + 1]) {
+        // if map next in arr
 
-    const { selectedMap } = useMapStore.getState();
-    if (!selectedMap) {
-      return;
-    }
-    const currMapInd = maps.indexOf(selectedMap);
-    if (maps[currMapInd + 1]) { // if map next in arr
+        setSelectedMap(maps[currMapInd + 1]);
+      } else {
+        setSelectedMap(maps[0]);
+      }
+    };
+    const handleDownClick = () => {
+      const { selectedMap } = useMapStore.getState();
+      if (!selectedMap) {
+        return;
+      }
 
-      setSelectedMap(maps[currMapInd + 1]);
-    } else {
-      setSelectedMap(maps[0]);
-    }
-  };
-  const handleDownClick = () => {
-    const { selectedMap } = useMapStore.getState();
-    if (!selectedMap) {
-      return;
-    }
+      const currMapInd = maps.indexOf(selectedMap);
+      if (maps[currMapInd - 1]) {
+        setSelectedMap(maps[currMapInd - 1]);
+      } else {
+        setSelectedMap(maps[maps.length - 1]);
+      }
+    };
+    const [spring, api] = useSpring(
+      () => ({
+        opacity: 0,
+        translateY: -50,
+      }),
+      [],
+    );
+    useEffect(() => {
+      if (maps && maps.length > 1) {
+        api.start({ translateY: 0, opacity: 1 });
+      } else if (maps.length === 0) {
+        api.start({ translateY: -50, opacity: 0 });
+      }
+    }, [maps.length]);
 
-    const currMapInd = maps.indexOf(selectedMap);
-    if (maps[currMapInd - 1]) {
-      setSelectedMap(maps[currMapInd - 1]);
-    } else {
-      setSelectedMap(maps[maps.length - 1]);
-    }
-  };
-  const [spring, api] = useSpring(() => ({
-    opacity: 0,
-    translateY: -50,
-  }),[]);
-  useEffect(() => {
-    if (maps && maps.length > 1) {
-      api.start({ translateY: 10, opacity: 1 });
-    } else if (maps.length === 0) {
-      api.start({ translateY: -50, opacity: 0 });
-    }
-  }, [maps.length]);
-
-  return (
-    <animated.aside
-      style={spring}
-      className="selecta-grid selecta-z flex w-7 flex-row"
-    >
-      <div className={`flex flex-row`}>
-        <animated.button
-          className="selecta-button-animation font-pkmnem m-auto rounded-sm bg-neutral-300 px-2 text-xl shadow-lg"
-          onClick={handleDownClick}
-        >
-          ↓
-        </animated.button>
-        <p className="font-pkmnem pl-0.25 text-shadow-sm text-xl font-bold text-neutral-50">
-          Location
-        </p>
-        <animated.button
-          className="selecta-button-animation font-pkmnem m-auto rounded-sm bg-neutral-300 px-2 text-xl shadow-lg"
-          onClick={handleUpClick}
-        >
-          ↑
-        </animated.button>
-      </div>
-    </animated.aside>
-  );
-}, (prev, next) => prev.maps.length === next.maps.length);
+    return (
+      <animated.aside style={spring} className="ml-7 flex w-7 flex-row">
+        <div className={`flex flex-row`}>
+          <animated.button
+            className="hover-active-button selecta-button-animation font-pkmnem m-auto rounded-sm bg-neutral-300 px-2 text-xl shadow-lg"
+            onClick={handleDownClick}
+          >
+            ←
+          </animated.button>
+          <p className="font-pkmnem pl-0.25 text-shadow-sm pointer-events-none text-xl font-bold text-neutral-50">
+            &nbsp;Location&nbsp;
+          </p>
+          <animated.button
+            className="hover-active-button selecta-button-animation font-pkmnem m-auto rounded-sm bg-neutral-300 px-2 text-xl shadow-lg"
+            onClick={handleUpClick}
+          >
+            →
+          </animated.button>
+        </div>
+      </animated.aside>
+    );
+  },
+  (prev, next) => prev.maps.length === next.maps.length,
+);
 export default SearchSelecta;

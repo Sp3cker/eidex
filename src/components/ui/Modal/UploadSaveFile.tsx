@@ -3,10 +3,14 @@ import { DialogTitle } from "@headlessui/react";
 
 import { useRandomizerStore } from "@/stores/randomizerStore";
 const RandomizationModesList = [
-  { label: "Normal Species", desc: "All species are randomized.", mode: 0 },
+  {
+    label: "Normal Species",
+    desc: "Species can randomize to any other species (except legendaries).",
+    mode: 0,
+  },
   {
     label: "Scaled Species",
-    desc: "Species randomize to another species 10.24% of their BST.",
+    desc: "Species can randomize to another species within 10.24% of their BST.",
     mode: 1,
   },
   {
@@ -40,7 +44,10 @@ const UploadSave = () => {
     // setRandomizationMode(mode);
     setUserRandomizerMode(mode);
   };
-
+  const isRadioDisabled = (mode: number) => {
+    // If the selected mode is NOT your mode, disable the radio button
+    return mode === 2 || (isRandomiserActive && userRandomizerMode !== mode);
+  };
   return (
     <div className="font-calamity space-y-4">
       <DialogTitle className="cool-font mb-4 text-xl font-bold text-gray-200">
@@ -54,8 +61,8 @@ const UploadSave = () => {
         <p className="leading-0 pb-0 pt-1 text-xs font-bold text-neutral-300">
           Select your Randomization Mode:
         </p>
-        <section className="flex flex-col flex-1 justify-evenly rounded-sm p-2 ring-1 w-full ring-gray-600">
-          <div className="flex flex-row flex-grow bg-slate-700 justify-evenly space-x-2 ">
+        <section>
+          <div className="space-2 flex flex-row justify-evenly rounded-t-sm bg-slate-700">
             {RandomizationModesList.map((mode) => (
               <div
                 key={mode.mode}
@@ -63,52 +70,57 @@ const UploadSave = () => {
               >
                 <input
                   type="radio"
-                  disabled={mode.mode === 2}
+                  disabled={mode.mode === 2 || isRadioDisabled(mode.mode)}
                   id={`mode-${mode.mode}`}
                   name="randomizationMode"
                   value={mode.mode ?? undefined}
                   checked={userRandomizerMode === mode.mode}
                   onChange={() => handleModeChange(mode.mode)}
-                  className={`cursor-pointer ${mode.mode === 2 ? 'before:content-["Coming Soon"]' : ""}`}
+                  className="cursor-pointer"
                 />
                 {mode.mode == 2 && (
                   <div
                     id="coming-soon"
-                    className="frosted-glass absolute h-full w-full text-red-500 ring-1 ring-orange-600"
+                    className="frosted-glass absolute h-full w-full text-center text-red-500 ring-1 ring-orange-600"
                   >
                     <p>Coming Soon</p>
                   </div>
                 )}
                 <label
                   htmlFor={`mode-${mode.mode}`}
-                  className="font-pkmnem cursor-pointer font-bold text-gray-300"
+                  className={`font-pkmnem cursor-pointer text-sm/3 font-bold text-gray-300 md:text-base/6 ${isRadioDisabled(mode.mode) ? "cursor-default text-gray-600" : ""}`}
                 >
                   {mode.label}
                 </label>
               </div>
             ))}
           </div>
-          <article className="bg-slate-600 p-1 rounded-b-xs">
+          <article className="rounded-b-sm bg-slate-600 p-1">
             <p className="font-pkmnem bg-slate-600 p-1 text-xl/5 text-stone-200 antialiased">
               {RandomizationModesList[userRandomizerMode ?? 0].desc}
             </p>
           </article>
         </section>
         <div className="flex flex-row space-y-2">
-          <input
-            type="file"
-            accept=".sav,.save"
-            onChange={handleFileChange}
-            disabled={userRandomizerMode === null || isUploading || isProcessing}
-            className="font-pkmnem file:font-pkmnem block w-full text-lg font-bold text-gray-300 file:mr-4 file:cursor-pointer file:rounded-sm file:border-0 file:bg-emerald-700 file:px-2 file:py-1 file:font-bold file:text-neutral-50 hover:file:bg-emerald-600 disabled:opacity-50"
-          />
+          {isRandomiserActive ? (
+            <button
+              onClick={clearEverything}
+              className="font-pkmnem rounded-xs block cursor-pointer text-nowrap px-2 py-0 font-bold text-stone-200 ring-1 ring-amber-500 hover:bg-amber-900"
+            >
+              Clear Save
+            </button>
+          ) : (
+            <input
+              type="file"
+              accept=".sav,.save"
+              onChange={handleFileChange}
+              disabled={
+                userRandomizerMode === null || isUploading || isProcessing
+              }
+              className="hover-active-button font-pkmnem file:font-pkmnem block w-full text-base text-lg font-bold text-gray-300 file:mr-4 file:cursor-pointer file:rounded-sm file:border-0 file:bg-emerald-700 file:px-2 file:py-0 file:text-base file:font-bold file:text-neutral-50 disabled:opacity-50 sm:text-lg file:sm:text-lg"
+            />
+          )}
         </div>
-        <button
-          onClick={clearEverything}
-          className="font-pkmnem rounded-xs block cursor-pointer text-nowrap px-2 py-0 font-bold text-stone-200 ring-1 ring-amber-500 hover:bg-amber-900"
-        >
-          Clear Save
-        </button>
 
         {(isUploading || isProcessing) && (
           <div className="flex items-center space-x-2 text-sm text-blue-400">
