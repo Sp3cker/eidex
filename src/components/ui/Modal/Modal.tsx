@@ -38,7 +38,6 @@ const getAnimationFromValues = (isOpen: "upload" | "disclaimer" | null) => {
       translateY: viewportHeight,
       scale: 0.7,
       skewX: -50,
-      opacity: 0,
     };
   } else
     return {
@@ -46,7 +45,6 @@ const getAnimationFromValues = (isOpen: "upload" | "disclaimer" | null) => {
       translateY: viewportHeight,
       skewX: 50,
       scale: 0.7,
-      opacity: 0,
     };
 };
 
@@ -55,14 +53,12 @@ const openState = {
   translateY: 0,
   scale: 1,
   skewX: 0,
-  opacity: 1,
 };
 const closedState = {
   translateX: 0,
   translateY: 0,
   scale: 0.3,
   skewX: 0,
-  opacity: 0,
 };
 const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
   { isOpen, setIsOpen }: ModalProps,
@@ -138,7 +134,7 @@ const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
 
       <animated.div
         style={springs}
-        className={`${isHovering && "will-transform"} z-3 absolute inset-0 flex items-start justify-center overflow-y-auto p-4 ${
+        className={`${isHovering && "will-transform"} ${isOpen ? "fade-in-opacity" : ""} z-3 absolute inset-0 flex items-start justify-center overflow-y-auto p-4 ${
           isOpen === "disclaimer" ? "origin-bottom-right" : "origin-bottom-left"
         }`}
       >

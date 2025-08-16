@@ -411,13 +411,25 @@ input[type="number"] {
     opacity: 0;
     backdrop-filter: blur(0px) saturate(100%);
     background: rgba(0, 0, 0, 0);
+    -webkit-backdrop-filter: blur(0px) saturate(100%);
   }
   to {
-    opacity: 1;
+    opacity: 0.7;
     backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
     background: rgba(0, 0, 0, 0.4);
   }
 }
+
+@keyframes fadeInOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeOutFrostedGlass {
   from {
     opacity: 1;
@@ -435,6 +447,11 @@ input[type="number"] {
   animation: fadeInFrostedGlass 0.37s cubic-bezier(0.32, 0.72, 0, 1) forwards;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.fade-in-opacity {
+  animation: fadeInOpacity 0.37s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
+
 .fade-out-background {
   animation: fadeOutFrostedGlass 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }

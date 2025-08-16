@@ -78,7 +78,7 @@ export const randomizerStore = createStore<RandomiserStore>()(
           error: null,
           uploadSuccess: false,
           trainerIdInfo: null,
-          didRunInit: false,
+          // didRunInit: false,
           isRandomiserActive: false,
           userRandomizerMode: null as unknown as RandomizerSpeciesMode,
         });
@@ -102,7 +102,7 @@ export const randomizerStore = createStore<RandomiserStore>()(
             throw new Error("No randomizer mode set");
           }
           // reset();
-          set({ isUploading: true });
+          set({ isUploading: true, error: null });
           if (!file) {
             throw new Error("No file provided");
           }
@@ -119,10 +119,10 @@ export const randomizerStore = createStore<RandomiserStore>()(
             secretId: 0,
             fullId: 0,
           };
+
+          set({ isProcessing: true });
           requestAnimationFrame(async () => {
             const arrayBuffer = await file.arrayBuffer();
-
-            set({ isProcessing: true });
 
             const sectors = splitSaveIntoChunks(arrayBuffer);
 
@@ -136,15 +136,15 @@ export const randomizerStore = createStore<RandomiserStore>()(
               trainerData.fullId,
               randomizerMode,
             );
-            pokemonSearchStore._initialize();
             markEncountersReady();
+            pokemonSearchStore._initialize();
             set({
               isUploading: false,
               isProcessing: false,
               uploadSuccess: true,
               trainerIdInfo: trainerData,
               isRandomiserActive: true,
-              error: null,
+              // error: null,
             });
           });
           // Encounters are now randomized and ready

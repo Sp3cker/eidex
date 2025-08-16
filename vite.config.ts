@@ -77,8 +77,8 @@ export default defineConfig(({ mode }) => {
       sourcemap: process.env.NODE_ENV === "development",
       chunkSizeWarningLimit: 1000, // Increased from default 500KB
       // Enable minification
-      minify: "esbuild",
-      target: "es2021",
+      // minify: "esbuild",
+      target: "es2022",
 
       // terserOptions: {
       //   compress: {
@@ -126,7 +126,7 @@ export default defineConfig(({ mode }) => {
           },
           treeshake: {
             // moduleSideEffects: false, // treat modules as side-effect free by default
-            propertyReadSideEffects: false,
+            // propertyReadSideEffects: false,
             tryCatchDeoptimization: false,
           },
           // Manual chunk splitting for better caching and loading
