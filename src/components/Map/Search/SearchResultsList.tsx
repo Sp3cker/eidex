@@ -1,7 +1,6 @@
 import { useSprings, useTransition, animated as a } from "@react-spring/web";
 import { useGesture } from "@use-gesture/react";
 import { animConfigs, animFn as fn } from "./misc";
-import { formatMapString } from "@/utils/formatMapString";
 import { useMemo } from "react";
 interface SearchResult {
   name: string;
@@ -94,9 +93,9 @@ export const SearchResultsList = ({
             {monStyling && (
               <p className="font-pkmnem">
                 {item.maps && item.maps.length > 0 ? (
-                  <strong>{item.maps.map(formatMapString).join(",")}</strong>
+                  <strong>{item.maps.length} Locations</strong>
                 ) : (
-                  "View in Dex"
+                  "Not Encouterable"
                 )}
               </p>
             )}

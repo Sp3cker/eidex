@@ -78,7 +78,7 @@ const PokeSearch = () => {
           setSelectedEncounter(mon.speciesId);
         }
       } else {
-        const dexId = pokemonSearchStore.getPokemonDexId(pokemonNameKey);
+        const dexId = pokemonSearchStore.getPokemonDexId(item.name);
         if (dexId) {
           setSelectedPokemonByIndex(dexId); // Your existing logic
         }

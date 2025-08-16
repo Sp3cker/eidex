@@ -28,7 +28,7 @@ class PokemonSearchStore {
     pokemonData.forEach((p) => {
       if (typeof p.formId !== "undefined" && p.formId !== 0) return;
 
-      const baseSpeciesKey = superNormalizeName(p.speciesName);
+      const baseSpeciesKey = superNormalizeName(p.nameKey);
 
       this.monNameKeys.set(baseSpeciesKey, p.baseForm || p.speciesId); // important for not getting mega forms
     });
@@ -90,14 +90,19 @@ class PokemonSearchStore {
     }
 
     const lowerPrefix = prefix.toLowerCase();
+
     return this.allSpeciesNames
       .filter((name) => name.toLowerCase().startsWith(lowerPrefix))
       .slice(0, 6)
-      .map((result) => ({
-        id: this.monNameKeys.get(result), // name not `speciesName` to match what search result uses
-        name: result, // name not `speciesName` to match what search result uses
-        maps: this.encounterMap.get(this.monNameKeys.get(result) ?? 0) ?? [],
-      }));
+      .map((result) => {
+        const id = this.monNameKeys.get(result);
+        debugger
+        return {
+          id, // name not `speciesName` to match what search result uses
+          name: result, // name not `speciesName` to match what search result uses
+          maps: this.encounterMap.get(id ?? 0) ?? [],
+        };
+      });
   }
 
   /**
