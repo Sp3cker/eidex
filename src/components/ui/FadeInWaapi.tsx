@@ -1,4 +1,4 @@
-import { useEffect, ReactNode, useState } from "react";
+import { useEffect, ReactNode, useState, useReducer } from "react";
 
 const SuspendedChildProbe = ({
   onReady,
@@ -14,13 +14,11 @@ const SuspendedChildProbe = ({
   return children;
 };
 export function FadeInWAAPI({ children }: { children: ReactNode }) {
-  const [ready, setReady] = useState(false);
+  const [ready, setReady] = useReducer((state: boolean) => !state, false);
 
   return (
     <div className="fade-in" data-ready={ready ? "true" : undefined}>
-      <SuspendedChildProbe onReady={() => setReady(true)}>
-        {children}
-      </SuspendedChildProbe>
+      <SuspendedChildProbe onReady={setReady}>{children}</SuspendedChildProbe>
     </div>
   );
 }

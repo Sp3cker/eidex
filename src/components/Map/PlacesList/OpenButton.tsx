@@ -44,7 +44,9 @@ const OpenButton = memo(function OpenButton({ className }: OpenButtonProps) {
     (state) => state.itemSearchFocused,
   );
   const buttonRef = useRef<HTMLButtonElement>(null);
-
+  const handleClick = () => {
+    setPlacesListOpen(true);
+  };
   useEffect(() => {
     if (!buttonRef.current) return;
 
@@ -59,7 +61,7 @@ const OpenButton = memo(function OpenButton({ className }: OpenButtonProps) {
     <button
       ref={buttonRef}
       className={`places-list-button-z top-1/5 content-visibilty bg-linear-to-br fixed left-0 -translate-y-1/2 cursor-pointer rounded-r-lg border border-l-0 border-gray-200 from-emerald-50 via-white to-gray-100 px-2 py-4 shadow-lg transition-all duration-200 hover:bg-emerald-100 ${className || ""}`}
-      onClick={() => setPlacesListOpen(true)}
+      onClick={handleClick}
     >
       Ξ
     </button>

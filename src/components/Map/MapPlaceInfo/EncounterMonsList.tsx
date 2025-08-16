@@ -66,11 +66,14 @@ const EncounterMonListItem = ({
     (state) => state.selectedEncounter === mon.species,
   );
   const zoneColor = zoneToTextColor(zone);
+  const handleClick = () => {
+    setSelectedEncounter(mon.species);
+  };
   return (
     <div
       key={`${mon.species}`}
       className={`w-37 flex w-full cursor-pointer items-start gap-1 overflow-hidden rounded p-0 pl-2 transition-colors md:pr-2 ${zoneToBgColor(zone)} ${isSelected ? "bg-emerald-100" : ""}`}
-      onMouseDown={() => setSelectedEncounter(mon.species)}
+      onMouseDown={handleClick}
     >
       <div className="relative overflow-hidden drop-shadow-md">
         <img

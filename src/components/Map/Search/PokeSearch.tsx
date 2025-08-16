@@ -18,7 +18,9 @@ const PokeSearch = () => {
     (state) => state.setSelectedPokemonByIndex,
   );
   const setSelectedMapLevel = useMapStore((state) => state.setSelectedMapLevel);
-  const setSelectedEncounter = useMapStore((state) => state.setSelectedEncounter);
+  const setSelectedEncounter = useMapStore(
+    (state) => state.setSelectedEncounter,
+  );
   const deselectMap = useMapStore((state) => state.deselectMap);
   const [query, setQuery] = useState("");
 
@@ -60,11 +62,11 @@ const PokeSearch = () => {
   }, [setSearchSelected]);
 
   const handleClick = useCallback(
-    (pokemonNameKey: string) => {
+    (item: { name: string; maps?: string[] }) => {
       // Set the query to the selected pokemon's name (like Search component does)
-      handleQuery(pokemonNameKey);
+      handleQuery(item.name);
 
-      const mon = pokemonSearchStore.getPokemonEncounterInfo(pokemonNameKey);
+      const mon = pokemonSearchStore.getPokemonEncounterInfo(item.name);
 
       if (!mon) {
         console.error("Error selecting mon search result");
@@ -113,7 +115,8 @@ const PokeSearch = () => {
       <SearchResultsList
         monStyling={true}
         results={searchResults}
-        onItemClick={(item) => handleClick(item.name)}
+        // Change onItemClick to pass the full item object to handleClick, and update handleClick to accept the item type.
+        onItemClick={(item) => handleClick(item)}
         getItemKey={(item) => item.name}
         getItemDisplayName={(item) => item.name}
         visible={true}
