@@ -37,13 +37,13 @@ const getAnimationFromValues = (isOpen: "upload" | "disclaimer" | null) => {
       translateX: -viewportWidth,
       translateY: viewportHeight,
       scale: 0.7,
-      skewX: -50,
+      skewX: -10,
     };
   } else
     return {
       translateX: viewportWidth,
       translateY: viewportHeight,
-      skewX: 50,
+      skewX: 10,
       scale: 0.7,
     };
 };
