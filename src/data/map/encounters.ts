@@ -117,39 +117,37 @@ class EncounterStore {
       });
     };
 
-    return mainEncounterGroup.encounters.map((mapObj: EncounterGroup) => {
-      const newMapObj: EncounterGroup = { ...mapObj };
-
-      if (newMapObj.land) {
-        newMapObj.land = {
-          encounter_rate: newMapObj.land.encounter_rate,
-          mons: convertSpecies(newMapObj.land.mons),
+    mainEncounterGroup.encounters.forEach((mapObj: EncounterGroup) => {
+      if (mapObj.land) {
+        mapObj.land = {
+          encounter_rate: mapObj.land.encounter_rate,
+          mons: convertSpecies(mapObj.land.mons),
         };
       }
 
-      if (newMapObj.water) {
-        newMapObj.water = {
-          encounter_rate: newMapObj.water.encounter_rate,
-          mons: convertSpecies(newMapObj.water.mons),
+      if (mapObj.water) {
+        mapObj.water = {
+          encounter_rate: mapObj.water.encounter_rate,
+          mons: convertSpecies(mapObj.water.mons),
         };
       }
 
-      if (newMapObj.fish) {
-        newMapObj.fish = {
-          encounter_rate: newMapObj.fish.encounter_rate,
-          mons: convertSpecies(newMapObj.fish.mons),
+      if (mapObj.fish) {
+        mapObj.fish = {
+          encounter_rate: mapObj.fish.encounter_rate,
+          mons: convertSpecies(mapObj.fish.mons),
         };
       }
 
-      if (newMapObj.rock) {
-        newMapObj.rock = {
-          encounter_rate: newMapObj.rock.encounter_rate,
-          mons: convertSpecies(newMapObj.rock.mons),
+      if (mapObj.rock) {
+        mapObj.rock = {
+          encounter_rate: mapObj.rock.encounter_rate,
+          mons: convertSpecies(mapObj.rock.mons),
         };
       }
-
-      return newMapObj;
     });
+
+    return mainEncounterGroup.encounters;
   }
 
   private groupEncounterData(
@@ -256,7 +254,6 @@ class EncounterStore {
           continue;
         }
         for (const areaKey of AREA_KEYS) {
-
           const areaBlock = group[areaKey] as
             | { encounter_rate: number; mons: EncounterListing[] }
             | undefined;

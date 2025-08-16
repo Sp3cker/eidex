@@ -139,7 +139,7 @@ const PlacesList = memo(function PlacesList() {
       <div
         ref={backdropRef}
         style={{ display: "none" }}
-        className="places-list-backdrop-z fixed inset-0 bg-black bg-opacity-50"
+        className="places-list-backdrop-z hidden fixed inset-0 bg-black bg-opacity-50"
         onClick={handleClose}
       />
 

@@ -15,6 +15,15 @@ const DEFAULT_SPRING_CONFIG = Object.freeze({
   damping: 0.81,
   frequency: 0.62,
 });
+// Allow dragging any corner to center by using map dimensions
+// Map is 800x667px with scale 1.32, so scaled dimensions are ~1056x880px
+// To center any corner, we need bounds that allow the map to move by its full dimensions
+const BOUNDS = {
+  top: -(667 * 1.32),
+  bottom: 667 * 1.32,
+  left: -(800 * 1.32),
+  right: 800 * 1.32,
+};
 const MapContainer = ({ children }: any) => {
   const [selectedCoordinates, setDragging] = useMapStore(
     (state) => [state.selectedCoordinates, state.setDragging],
@@ -26,27 +35,27 @@ const MapContainer = ({ children }: any) => {
   const windowSize = useWindowSize();
   const { width: WINDOW_WIDTH, height: WINDOW_HEIGHT } = windowSize;
   const [{ scale, centerOffset }, api] = useSpring(() => {
-    let currentTargetCenterOffset = [WINDOW_WIDTH > 1000 ? 200 : 0, 150]; // Default if no coordinates or mapRef
+    const currentTargetCenterOffset = [WINDOW_WIDTH > 1000 ? 200 : 0, 150]; // Default if no coordinates or mapRef
     // Default config
     let currentSpringDelay = 0; // Default delay
     const xyScales =
       screenWidth === "sm" || screenWidth === "xs"
         ? [-3 * rootFontSize, 3 * rootFontSize]
         : [3 * rootFontSize, 4 * rootFontSize];
-    
+
     if (selectedCoordinates && mapRef.current) {
       const [x, y] = selectedCoordinates;
       // Use center positioning for default coordinates, otherwise offset toward upper-left
       const offsetFactor = x === 400 && y === 340 ? 0.5 : 0.375; // 0.5 = center, 0.375 = 3/8 toward upper-left
-      currentTargetCenterOffset = [
-        WINDOW_WIDTH * offsetFactor - x - xyScales[0],
-        WINDOW_HEIGHT * offsetFactor - y - xyScales[1],
-      ];
+      currentTargetCenterOffset[0] =
+        WINDOW_WIDTH * offsetFactor - x - xyScales[0];
+      currentTargetCenterOffset[1] =
+        WINDOW_HEIGHT * offsetFactor - y - xyScales[1];
       currentSpringDelay = 160; // Specific delay for this case
     }
 
     return {
-      scale: 1.32, // Assuming scale remains constant
+      scale: 1.32,
       centerOffset: currentTargetCenterOffset,
       config: DEFAULT_SPRING_CONFIG,
       delay: currentSpringDelay,
@@ -81,22 +90,19 @@ const MapContainer = ({ children }: any) => {
     {
       target: targetRef,
       filterTaps: true,
-      // Use rubber banding for smoother edge behavior
-      bounds: {
-        // Allow dragging any corner to center by using map dimensions
-        // Map is 800x667px with scale 1.32, so scaled dimensions are ~1056x880px
-        // To center any corner, we need bounds that allow the map to move by its full dimensions
-        top: -(667 * 1.32), // Allow top edge to reach center
-        bottom: 667 * 1.32, // Allow bottom edge to reach center
-        left: -(800 * 1.32), // Allow left edge to reach center
-        right: 800 * 1.32, // Allow right edge to reach center
-      },
-      rubberband: true, // Add rubber banding for smoother edge behavior
+      bounds: BOUNDS,
+      rubberband: true,
       from: () => {
         return [centerOffset.get()[0], centerOffset.get()[1]];
       },
     },
   );
+  const mapStyle = {
+    // @ts-expect-error - React Spring transform typing issue
+    transform: to([centerOffset, scale], ([x, y], scale) => {
+      return `translate3d(${x}px,${y}px, 0) scale(${scale})`;
+    }),
+  };
   useEffect(() => {
     api.start({ centerOffset: [WINDOW_WIDTH > 1000 ? 200 : 0, 150] });
   }, []);
@@ -108,16 +114,8 @@ const MapContainer = ({ children }: any) => {
       <animated.div
         ref={mapRef}
         id="map"
-        style={{
-          touchAction: "none",
-          cursor: "move",
-          // @ts-expect-error - React Spring transform typing issue
-          transform: to([centerOffset, scale], ([x, y], scale) => {
-            return `translate3d(${x}px,${y}px, 0) scale(${scale})`;
-          }),
-          transformOrigin: "center",
-        }}
-        className="will-transform h-[405px] w-[720px]"
+        style={mapStyle}
+        className="will-transform h-[405px] w-[720px] origin-center cursor-move touch-none"
       >
         {children}
       </animated.div>

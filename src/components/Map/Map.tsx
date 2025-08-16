@@ -19,7 +19,7 @@ const Dexnav = lazy(() => import("./ItemsBox"));
 const NewMap = lazy(() => import("./ReactSvg"));
 const Search = lazy(() => import("./Search/SearchContainer"));
 const Map = () => {
-  const {} = useRandomizerStore(); // this is here to ensure the store is initialized
+  useRandomizerStore(); // this is here to ensure the store is initialized
   const setStateFromURL = useMapStore((state) => state.setStateFromURL);
   useMapHotkeys();
   useEffect(() => {

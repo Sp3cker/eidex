@@ -31,8 +31,7 @@ const InfoToggleButtons = () => {
   const [springs] = useSprings(
     labels.length,
     (i: number) => ({
-      filter: i === selectedIndex ? 2 : 0,
-      y: i === selectedIndex ? 0 : 0.2,
+      transform: `translateY(${i === selectedIndex ? 0 : 0.2}rem)`,
       scale: i === selectedIndex ? 1 : 0.99,
       config: config.stiff,
     }),
@@ -53,9 +52,7 @@ const InfoToggleButtons = () => {
           role="button"
           key={labels[idx]}
           {...bind(idx)}
-          style={{
-            transform: spring.y.to((x) => `translateY(${x}rem)`),
-          }}
+          style={spring}
           className={`cursor-pointer ${selectedIndex == idx ? "bg-[#C03232] ring ring-1" : "bg-[#9A2828]"} rounded-sm px-2 py-1 text-sm font-bold leading-none text-neutral-200 md:text-base`}
         >
           {labels[idx]}

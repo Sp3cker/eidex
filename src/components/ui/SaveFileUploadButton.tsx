@@ -8,11 +8,13 @@ const SaveFileUploadButton = ({
   isOpen: "upload" | "disclaimer" | null;
 }) => {
   const { isRandomiserActive } = useRandomizerStore();
-
+  const handleUpload = () => {
+    onClick("upload");
+  };
   return (
     <button
       disabled={isOpen === "disclaimer"}
-      onClick={() => onClick("upload")}
+      onClick={handleUpload}
       className={`hover-active-button rounded-xs m-1 cursor-pointer font-bold disabled:cursor-not-allowed ${
         isRandomiserActive ? "bg-yellow-600" : "bg-gray-500"
       } p-1`}

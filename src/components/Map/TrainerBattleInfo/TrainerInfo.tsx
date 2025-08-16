@@ -7,19 +7,21 @@ const rarityColors = [
   "elite-ai-flag",
   "hard-ai-flag",
 ];
-const coolTrainers = ['iriv24', 'Spencer']
+const ittyFontStyle = Object.freeze({ fontSize: 10 });
+const ittyTopStyle = Object.freeze({ top: "-0.5rem", left: "0.5rem" });
+const coolTrainers = ["iriv24", "Spencer"];
 const AIFlagsLabel = memo(function AIFlagsLabel({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <div className="xs:w-40 min-w-34 shadow-xs sm:mr-8 relative flex h-full min-h-40 rounded-lg p-1 pt-4 ring-1 ring-gray-300">
+    <div className="xs:w-40 min-w-34 shadow-xs relative flex h-full min-h-40 rounded-lg p-1 pt-4 ring-1 ring-gray-300 sm:mr-8">
       <div
-        style={{ top: "-0.5rem", left: "0.5rem" }}
+        style={ittyTopStyle}
         className="absolute h-5 rounded rounded-sm bg-cyan-900 px-2 text-stone-300 ring-1 ring-zinc-500"
       >
-        <p style={{ fontSize: 10 }} className="font-calamity leading-5">
+        <p style={ittyFontStyle} className="font-calamity leading-5">
           AI Flags
         </p>
       </div>
@@ -122,7 +124,7 @@ const TrainerInfo = memo(function TrainerInfo({
           />
           <div className="flex flex-row justify-between">
             <h3
-              className={`font-calamity ${coolTrainers.includes(trainerName) && 'rainbow-bg-text'} drop-shadow-sm ${boss && "drop-shadow-lg"} w-full text-sm font-bold text-gray-800 md:text-xl`}
+              className={`font-calamity ${coolTrainers.includes(trainerName) && "rainbow-bg-text"} drop-shadow-sm ${boss && "drop-shadow-lg"} w-full text-sm font-bold text-gray-800 md:text-xl`}
             >
               {trainerName}
             </h3>

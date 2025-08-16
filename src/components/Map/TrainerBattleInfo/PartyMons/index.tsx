@@ -147,15 +147,13 @@ const PartyMons = memo(function PartyMons({
           <animated.div
             key={item.id}
             {...bind()}
-            className="absolute bottom-0 left-1 right-0 top-0 touch-pan-y overflow-y-auto"
+            className="absolute bottom-0 left-1 right-0 top-0 touch-pan-y select-none overflow-y-auto"
             style={{
-              ...style,
+              opacity: style.opacity,
               transform: to(
                 [style.translateX, dragSpring.dragX, dragSpring.scaleX],
                 transform,
               ),
-              touchAction: "pan-y", // Allow vertical scrolling, prevent horizontal
-              userSelect: "none", // Prevent text selection during drag
             }}
           >
             <PartyMon pokemon={item} />

@@ -93,7 +93,9 @@ const MapPlaceInfoContent = memo(() => {
     },
     [],
   );
-
+  const topStyle = {
+    top: `${containerHeight - 64}px`,
+  };
   // Determine which page to show (0 for list, 1 for details)
 
   return (
@@ -109,9 +111,7 @@ const MapPlaceInfoContent = memo(() => {
       </ScrollArea>
       <div
         className="absolute bottom-0 left-0 right-0"
-        style={{
-          top: `${containerHeight - 64}px`,
-        }}
+        style={topStyle}
       >
         <EncounterAreaButtons
           handleClick={handleTabClick}

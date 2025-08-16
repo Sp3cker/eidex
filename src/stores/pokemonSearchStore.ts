@@ -45,19 +45,22 @@ class PokemonSearchStore {
     const levels = encounterStore.getEncounterData();
 
     for (const mapBaseName in levels) {
-      const encountersOnthisMap = levels[mapBaseName];
-      for (const encounter of encountersOnthisMap) {
+      if (!levels[mapBaseName]) continue;
+      levels[mapBaseName].forEach((encounter) => {
         const { fish, land, water, rock } = encounter;
-        const fishing_mons = fish ? fish.mons.reduce(encReducer, []) : [];
-        const water_mons = water ? water.mons.reduce(encReducer, []) : [];
-        const land_mons = land ? land.mons.reduce(encReducer, []) : [];
-        const rock_mons = rock ? rock.mons.reduce(encReducer, []) : [];
-        const levelEncounters = [
-          ...land_mons,
-          ...water_mons,
-          ...fishing_mons,
-          ...rock_mons,
-        ];
+        const levelEncounters = [];
+        if (land) {
+          levelEncounters.push(...land.mons.reduce(encReducer, []));
+        }
+        if (water) {
+          levelEncounters.push(...water.mons.reduce(encReducer, []));
+        }
+        if (fish) {
+          levelEncounters.push(...fish.mons.reduce(encReducer, []));
+        }
+        if (rock) {
+          levelEncounters.push(...rock.mons.reduce(encReducer, []));
+        }
 
         levelEncounters.forEach((speciesId: number) => {
           if (!this.encounterMap.has(speciesId)) {
@@ -66,10 +69,9 @@ class PokemonSearchStore {
 
           this.encounterMap.get(speciesId)!.push(encounter.map);
         });
-      }
-
-      // Repeat for other encounter types if necessary (water_mons_flat, etc.)
+      });
     }
+    // Repeat for other encounter types if necessary (water_mons_flat, etc.)
     // I dont think i use this but it's late
     // 2. Build heldItemsMap: itemId (number) -> list of maps where it can be obtained via held Pokémon
   }

@@ -97,7 +97,10 @@
   will-change: opacity;
 }
 .selected-place {
-  animation: selected-place-animation 1s infinite;
+  animation: selected-place-animation 0.68s cubic-bezier(0.32, 0.72, 0, 1)
+    alternate infinite;
+  stroke: var(--color-amber-500);
+  stroke-width: 3px;
 }
 .dexnav-z {
   z-index: 4;
@@ -215,17 +218,17 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 @keyframes selected-place-animation {
   from {
     /* first frame */
-    filter: brightness(100%) blur(0px) saturate(2);
-    -webkit-filter: blur(0px);
-    -moz-filter: blur(15px);
-    -ms-filter: blur(15px);
+    filter: brightness(100%) blur(1px) saturate(-100%);
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -ms-filter: blur(1px);
   }
   to {
     /* last frame */
-    filter: brightness(255%) blur(10px) saturate(0);
-    -webkit-filter: blur(15px);
-    -moz-filter: blur(15px);
-    -ms-filter: blur(15px);
+    filter: brightness(150%) blur(2px) saturate(-100%);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);
   }
 }
 @-webkit-keyframes searchResultAnimation {

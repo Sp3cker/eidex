@@ -16,7 +16,7 @@ const renderElement = (
         key={elem.id || `g-${Math.random()}`}
         id={elem.id}
         transform={elem.transform}
-        className={`${isSelectedMap ? "selected-place" : "touch-none"} cursor-pointer stroke-1 transition-all md:stroke-0`}
+        className={`${isSelectedMap ? "selected-place" : "touch-none"} cursor-pointer stroke-1 transition-colors md:stroke-0`}
       >
         {elem.children?.map((child: Record<string, any>, index: number) =>
           renderElement(
@@ -41,9 +41,8 @@ const renderElement = (
         y={elem.y}
         width={elem.width}
         height={elem.height}
-        {...elem.style}
-        className={`${isSelectedMap ? "selected-place fill-emerald-800 stroke-amber-600" : "fill-yellow-900/10 hover:fill-yellow-300/50"} border-yellow cursor-pointer transition-colors`}
-        ref={ref}
+        className={`${isSelectedMap ? "selected-place fill-yellow-300/65 stroke-amber-700" : "fill-yellow-900/10 hover:fill-yellow-300/50"} cursor-pointer transition-colors`}
+        ref={ref as React.Ref<SVGRectElement>}
       />
     );
   }
@@ -56,8 +55,9 @@ const renderElement = (
         id={elem.id}
         d={elem.d}
         style={elem.style}
-        {...elem.style}
-        ref={ref}
+        stroke={isSelectedMap ? "var(--color-amber-700)" : elem.style.stroke}
+        strokeWidth={isSelectedMap ? "2px" : elem.style.strokeWidth}
+        ref={ref as React.Ref<SVGPathElement>}
       />
     );
   }
@@ -70,8 +70,8 @@ const renderElement = (
         cx={elem.cx}
         cy={elem.cy}
         r={elem.r}
-        {...elem.style}
-        ref={ref}
+        style={elem.style}
+        ref={ref as React.Ref<SVGCircleElement>}
       />
     );
   }
@@ -91,12 +91,6 @@ const MapPlace = memo(
 
     const handleClick = useCallback(() => {
       startTransition(() => {
-        // const stored = useMapStore.getState().storedCoordinates;
-        // const myCoords = stored.get(item.id);
-        // if (myCoords === undefined) {
-        //   console.error("Error getting coords for MapPlace $s", item.id);
-        //   return;
-        // }
         setSelectedMap(item.id);
       });
     }, []);
