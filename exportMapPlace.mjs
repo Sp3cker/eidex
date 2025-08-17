@@ -1,6 +1,9 @@
+/* eslint-env node */
 import fs from "fs";
-import * as cheerio from "cheerio";
+import { load } from "cheerio";
 import { transform } from "@svgr/core";
+import process from 'node:process';
+import { Buffer } from 'node:buffer';
 
 function parseStyleObject(styleString) {
   const styleObj = {};
@@ -18,19 +21,6 @@ function parseStyleObject(styleString) {
     }
   }
   return styleObj;
-}
-
-// First we un-make it a React Component :S
-function preprocessJSX(content) {
-  content = content.replace(/style={{([^}]+)}}/g, (match, styleContent) => {
-    const styleObj = parseStyleObject(styleContent);
-    const styleString = Object.entries(styleObj)
-      .map(([k, v]) => `${k.replace(/([A-Z])/g, "-$1").toLowerCase()}:${v}`)
-      .join(";");
-    return `style="${styleString}"`;
-  });
-  content = content.replace(/(\w+)={([^}]+)}/g, '$1="$2"');
-  return content;
 }
 
 function parseElement($, el) {
@@ -76,13 +66,66 @@ function parseElement($, el) {
   return element;
 }
 
+// -----------------------------
+// Single image extraction logic
+// -----------------------------
+function extractSingleImage({ file, idNumber = "2", outDir, out }) {
+  const svgPath = file;
+  const targetId = `_Image${String(idNumber)}`;
+  const content = fs.readFileSync(svgPath, "utf8");
+
+  // Try to find the image element with id and data URI in various attribute forms
+  const patterns = [
+    new RegExp(`<image\\s[\\s\\S]*?id=(?:\\"|\\')${targetId}(?:\\"|\\')[\\s\\S]*?(?:xlink:href|xlinkHref)=(?:\\"|\\')([^\\"\\']+)(?:\\"|\\')[\\s\\S]*?>`, 'i'),
+    new RegExp(`<image\\s[\\s\\S]*?id=(?:\\"|\\')${targetId}(?:\\"|\\')[\\s\\S]*?href=(?:\\"|\\')([^\\"\\']+)(?:\\"|\\')[\\s\\S]*?>`, 'i'),
+  ];
+
+  let match = null;
+  for (const re of patterns) {
+    match = content.match(re);
+    if (match) break;
+  }
+
+  if (!match) {
+    throw new Error(`Could not find an <image> with id="${targetId}" and a data URI in ${svgPath}`);
+  }
+
+  const href = match[1];
+  if (!href || !href.startsWith('data:image/')) {
+    throw new Error(`Found id="${targetId}", but href is not a data URI. Found: ${href}`);
+  }
+
+  const dataMatch = href.match(/data:image\/([^;]+);base64,(.+)/);
+  if (!dataMatch) {
+    throw new Error('Failed to parse data URI.');
+  }
+
+  const mime = dataMatch[1].toLowerCase();
+  const base64 = dataMatch[2];
+  const ext = mime === 'png' ? 'png' : mime === 'webp' ? 'webp' : mime === 'jpeg' ? 'jpg' : mime;
+
+  if (!fs.existsSync(outDir)) {
+    fs.mkdirSync(outDir, { recursive: true });
+  }
+
+  const outFile = out || `${outDir}/${idNumber}.${ext}`;
+  fs.writeFileSync(outFile, Buffer.from(base64, 'base64'));
+  return outFile;
+}
+
 async function main() {
   if (process.argv.length !== 3) {
-    console.error("Usage: node svg_to_json.js <svg_file>");
+    console.error("Usage:\n  node exportMapPlace.mjs <input.svg>");
     process.exit(1);
   }
 
   const filePath = process.argv[2];
+  if (!filePath.toLowerCase().endsWith('.svg')) {
+    console.error('Input must be an .svg file');
+    process.exit(1);
+  }
+
+  // Read input
   let data;
   try {
     data = fs.readFileSync(filePath, "utf8");
@@ -97,15 +140,9 @@ async function main() {
     console.error("No <svg> element found in the file");
     process.exit(1);
   }
-  let svgContent = svgMatch[0];
+  const svgContent = svgMatch[0];
 
-  // Detect if this is a React component (has style={{ or JSX braces})
-  const isReactComponent = /style={{|\{.*?\}/.test(svgContent);
-  if (isReactComponent) {
-    svgContent = preprocessJSX(svgContent);
-  }
-
-  const $ = cheerio.load(svgContent, { xmlMode: true });
+  const $ = load(svgContent, { xmlMode: true });
   
   // Find all elements we want to extract and store their jQuery objects
   const elementsToExtract = $("g, rect, path, circle").toArray();
@@ -149,10 +186,10 @@ async function main() {
   // Remove exact duplicates by creating a global Map
   const seenElements = new Set();
 
-  function deduplicateElements(elements) {
+  function deduplicateElements(elementsArr) {
     const result = [];
     
-    for (const element of elements) {
+    for (const element of elementsArr) {
       // Create a key based on type, id, and essential properties for deduplication
       let dedupeKey;
 
@@ -214,7 +251,7 @@ async function main() {
       componentName: 'SvgComponent'
     });
 
-    // Write the files
+    // Write the files to current working directory
     fs.writeFileSync("mapsvgs.json", JSON.stringify(uniqueElements, null, 2));
     fs.writeFileSync("cleaned-svg.tsx", reactComponent);
     console.log("Successfully wrote output to mapsvgs.json and cleaned-svg.tsx");
@@ -222,6 +259,18 @@ async function main() {
     console.error(`Error converting SVG to React component: ${err.message}`);
     process.exit(1);
   }
+
+  // Always extract _Image2 to public/map-images/2.(ext)
+  try {
+    const outFile = extractSingleImage({ file: filePath, idNumber: '2', outDir: 'public/map-images' });
+    console.log(`Extracted _Image2 -> ${outFile}`);
+  } catch (err) {
+    console.error(err.message || String(err));
+    process.exit(1);
+  }
 }
 
-main().catch(console.error);
+main().catch((err) => {
+  console.error(err && err.message ? err.message : String(err));
+  process.exit(1);
+});
