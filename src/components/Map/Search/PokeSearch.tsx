@@ -12,7 +12,7 @@ type PokeSearchResult = {
 const PokeSearch = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const { itemSearchSelected, setSearchSelected } = useSearchSelectionStore();
-  const width = useSpringValue("1rem"); // Initialize with smaller width
+  const width = useSpringValue(window.innerWidth < 640 ? "1rem" : "10.75rem"); // Initialize with smaller width
   const [searchResults, setSearchResults] = useState<PokeSearchResult[]>([]);
   const setSelectedPokemonByIndex = useUIStore(
     (state) => state.setSelectedPokemonByIndex,
@@ -28,8 +28,10 @@ const PokeSearch = () => {
   useEffect(() => {
     if (itemSearchSelected) {
       setSearchResults([]);
-      // Shrink when item search is selected
-      width.start("1rem", { config: config.gentle });
+      if (window.innerWidth < 640) {
+        // Shrink when item search is selected
+        width.start("1rem", { config: config.gentle });
+      }
     } else {
       // Expand when pokemon search is selected
       width.start("10.75rem");
@@ -100,10 +102,10 @@ const PokeSearch = () => {
             width: width,
           }}
           className="search-input mb-2 w-full rounded-sm border border-neutral-100 p-1 py-1 pl-8 pr-2 text-sm/6 text-neutral-50 shadow-inner shadow-xl"
-          placeholder={itemSearchSelected ? "" : "Search Pokemon"}
+          placeholder={itemSearchSelected && window.innerWidth < 640 ? "" : "Search Pokemon"}
         />
         <div
-          className={`absolute ${itemSearchSelected ? "left-3" : "left-2"} pointer-events-none top-1/2 -translate-y-1/2 transform`}
+          className={`absolute ${itemSearchSelected ? "left-2" : "left-2"} pointer-events-none top-1/2 -translate-y-1/2 transform`}
         >
           <img
             src="/pokeball.svg"

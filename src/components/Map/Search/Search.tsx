@@ -28,10 +28,10 @@ const Search = () => {
   const width = useSpringValue("10rem"); // Initialize with CSS value
   // Animate width based on selection state
   useEffect(() => {
-    if (itemSearchSelected) {
+    if ( itemSearchSelected) {
       // Expand to full width when selected
       width.start("10rem");
-    } else {
+    } else if (window.innerWidth < 640) {
       // Shrink to a smaller width when not selected
       width.start("4rem");
     }
