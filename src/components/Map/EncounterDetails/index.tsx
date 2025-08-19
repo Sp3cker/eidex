@@ -3,7 +3,7 @@ import { memo, useMemo } from "react";
 import CloseButton from "@/components/ui/CloseButton";
 import { useMapStore } from "@/stores/useMapStore";
 import { pokemonSearchStore } from "@/stores/pokemonSearchStore";
-
+import { formatMapString } from "@/utils/formatMapString";
 // Import the type from pokemonSearchStore
 type DetailedEncounterLocation = {
   mapName: string;
@@ -13,7 +13,30 @@ type DetailedEncounterLocation = {
   encounterRate?: number;
   rod?: string;
 };
-
+const LocationCard = ({ location }: { location: DetailedEncounterLocation }) => {
+  return (
+    <div className="rounded-lg border bg-gray-50 p-3">
+      <div className="flex items-start justify-between">
+        <div>
+          <h4 className="font-calamity text-sm font-bold text-stone-800">
+            {formatMapString(location.mapName)}
+          </h4>
+          <p className="font-calamity text-sm capitalize text-gray-600">
+            {location.encounterType.replace("_", " ")} Encounter
+          </p>
+        </div>
+        <div className="text-right">
+          <p className="font-pkmnem text-lg font-bold">
+            Lv. {location.minLevel}-{location.maxLevel}
+          </p>
+          {location.rod && (
+            <p className="text-xs text-gray-500">{location.rod}</p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
 const EncounterDetails = memo(() => {
   const [selectedEncounter, setSelectedEncounter, setShowEncounter]: [
     number | null,
@@ -46,20 +69,18 @@ const EncounterDetails = memo(() => {
     );
   }
 
-  // const speciesName = getSpeciesName(selectedEncounter);
-
   const closeEncounter = () => {
     setSelectedEncounter(null);
     setShowEncounter(false);
   };
 
   return (
-    <div className="p-4">
+    <div className="p-2">
       <CloseButton
         className="absolute right-1 top-1 text-neutral-500"
         onClick={closeEncounter}
       />
-      <h3 className="mb-4 text-base font-calamity font-semibold">
+      <h3 className="font-calamity mb-4 text-sm font-semibold">
         Encounter Locations for {speciesName}
       </h3>
 
@@ -70,26 +91,7 @@ const EncounterDetails = memo(() => {
       ) : (
         <div className="space-y-3">
           {encounterLocations.map((location, index) => (
-            <div key={index} className="rounded-lg border bg-gray-50 p-3">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h4 className="font-bold font-calamity text-stone-800">
-                    {location.mapName.replace("MAP_", "").replace(/_/g, " ")}
-                  </h4>
-                  <p className="text-sm capitalize text-gray-600">
-                    {location.encounterType.replace("_", " ")} Encounter
-                  </p>
-                </div>
-                <div className="text-right">
-                  <p className="text-sm font-medium">
-                    Level {location.minLevel}-{location.maxLevel}
-                  </p>
-                  {location.rod && (
-                    <p className="text-xs text-gray-500">{location.rod}</p>
-                  )}
-                </div>
-              </div>
-            </div>
+            <LocationCard key={index} location={location} />
           ))}
         </div>
       )}

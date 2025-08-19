@@ -3,7 +3,7 @@ import { useInView } from "@react-spring/web";
 import { lazy, Suspense } from "react";
 import { buildPokemonMoveTabs } from "./Learnset/learnsetTabs";
 import LoadingSpinner from "../ui/LoadingSpinner";
-import PokemonSprite from "./PokemonSprite";
+import PokemonSprite from "../ui/PokemonSprite";
 import { TypeBadge } from "../TypeBadges/TypeBadge";
 import StatBars from "./StatBars";
 

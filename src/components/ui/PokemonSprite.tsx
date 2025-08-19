@@ -52,6 +52,9 @@ const PokemonSprite = React.memo(function PSprite({
         if (isMounted) setIsRunning(false); // End sequence
         return;
       }
+      if (!isRunning) {
+        return;
+      }
       const [nextState, holdDuration] = animeFrames[index];
       setFrame(nextState);
       timeoutId = setTimeout(
@@ -71,7 +74,7 @@ const PokemonSprite = React.memo(function PSprite({
   }, [isRunning, animeFrames, imageLoaded]);
 
   return (
-    <div className="sprite-box" onClick={handleClick}>
+    <div className="sprite-box ring-1 rounded-sm bg-stone-400 ring-stone-500" onClick={handleClick}>
       <animated.img
         src={displaySprite}
         alt={alt}

@@ -232,8 +232,8 @@ input[type="number"] {
     position: relative;
   }
   .sprite-box {
-    width: calc(32px * 5);
-    height: calc(32px * 5);
+    width: calc(32px );
+    height: calc(32px );
     overflow: hidden;
     position: relative;
   }

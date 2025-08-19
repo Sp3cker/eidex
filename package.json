@@ -22,9 +22,9 @@
     "scan": "next dev & npx react-scan@latest localhost:3000"
   },
   "dependencies": {
-    "@cloudflare/vite-plugin": "^1.9.0",
-    "@headlessui/react": "^2.2.4",
-    "@tailwindcss/vite": "^4.1.11",
+    "@cloudflare/vite-plugin": "^1.11.6",
+    "@headlessui/react": "^2.2.7",
+    "@tailwindcss/vite": "^4.1.12",
     "@types/connect-history-api-fallback": "^1.5.4",
     "@use-gesture/react": "^10.3.1",
     "class-variance-authority": "^0.7.1",
@@ -32,7 +32,7 @@
     "connect-history-api-fallback": "^2.0.0",
     "idb": "^8.0.3",
     "idb-keyval": "^6.2.2",
-    "lucide-react": "^0.507.0",
+    "lucide-react": "^0.540.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-error-boundary": "^6.0.0",
