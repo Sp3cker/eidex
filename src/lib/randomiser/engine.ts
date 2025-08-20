@@ -26,34 +26,27 @@ const speciesTablePromiseByMode = new Map<
 export async function getSpeciesTable(
   mode: RandomizerSpeciesMode,
 ): Promise<SpeciesDataTable> {
-
   const raw = (await getSpeciesData()) as unknown as ReadonlyArray<
     Partial<SpeciesInfoEntry> & { ID?: number; id?: number }
   >;
   const MAX = RANDOMIZER_SPECIES_COUNT - 1;
   const speciesById: SpeciesInfoEntry[] = new Array(MAX);
-  // Initialize all entries as invalid placeholders
-  for (let i = 0; i < MAX; i++) {
-    speciesById[i] = {
-      id: i,
-      baseStat: 0,
-      isLegendary: false,
-      mode: RandomizerPerSpeciesMode.MON_RANDOMIZER_INVALID,
-    };
-  }
+
   // Place provided entries at their ID indices
   for (let i = 0; i < raw.length; i++) {
     const e = raw[i] ?? {};
     const id = (typeof e.id === "number" ? e.id : e.ID) as number | undefined;
-    if (typeof id === "number" && id >= 0 && id < MAX) {
-      speciesById[id] = {
-        id,
-        baseStat: (e.baseStat as number) ?? 0,
-        isLegendary: (e.isLegendary as boolean) ?? false,
-        mode: ((e.mode as number) ??
-          RandomizerPerSpeciesMode.MON_RANDOMIZER_NORMAL) as RandomizerPerSpeciesMode,
-      };
+    if (id === undefined || id < 0 || id >= MAX) {
+      console.warn(`Invalid species entry at index ${i}: ${JSON.stringify(e)}`);
+      continue; // Skip invalid entries
     }
+    speciesById[id] = {
+      id,
+      baseStat: (e.baseStat as number) ?? 0,
+      isLegendary: (e.isLegendary as boolean) ?? false,
+      mode: ((e.mode as number) ??
+        RandomizerPerSpeciesMode.MON_RANDOMIZER_NORMAL) as RandomizerPerSpeciesMode,
+    };
   }
   const table = new SpeciesTable(speciesById).buildSpeciesTable(mode);
   speciesTablePromiseByMode.set(mode, table);

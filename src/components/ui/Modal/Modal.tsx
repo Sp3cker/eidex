@@ -74,10 +74,10 @@ const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
       to: isOpen ? openState : closedState,
       // delay: 10,
       config: {
-        tension: 260,
+        tension: 180,
         friction: 23,
         // damping: 0.9,
-        mass: isOpen === "upload" ? 1.5 : 2.75,
+        mass: isOpen === "upload" ? 1.0 : 1.75,
       },
     }),
     [isOpen],
