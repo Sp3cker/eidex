@@ -1,4 +1,4 @@
-import { memo, useMemo } from "react";
+import { memo, useCallback, useMemo } from "react";
 
 import CloseButton from "@/components/ui/CloseButton";
 import { useMapStore } from "@/stores/useMapStore";
@@ -13,18 +13,28 @@ type DetailedEncounterLocation = {
   encounterRate?: number;
   rod?: string;
 };
-const LocationCard = ({ location }: { location: DetailedEncounterLocation }) => {
+const LocationCard = ({
+  location,
+  onClick,
+}: {
+  location: DetailedEncounterLocation;
+  onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
+}) => {
   return (
-    <div className="rounded-lg border bg-gray-50 p-3">
-      <div className="flex items-start justify-between">
-        <div>
+    <div
+      className="hover-active-button pointer-events-all cursor-pointer rounded-lg border bg-gray-50 p-3"
+      data-map={location.mapName}
+      onClick={onClick}
+    >
+      <div className="flex cursor-pointer items-start justify-between">
+        <hgroup>
           <h4 className="font-calamity text-sm font-bold text-stone-800">
             {formatMapString(location.mapName)}
           </h4>
-          <p className="font-calamity text-sm capitalize text-gray-600">
+          <p className="font-pkmnem text-lg capitalize text-gray-600">
             {location.encounterType.replace("_", " ")} Encounter
           </p>
-        </div>
+        </hgroup>
         <div className="text-right">
           <p className="font-pkmnem text-lg font-bold">
             Lv. {location.minLevel}-{location.maxLevel}
@@ -38,14 +48,21 @@ const LocationCard = ({ location }: { location: DetailedEncounterLocation }) => 
   );
 };
 const EncounterDetails = memo(() => {
-  const [selectedEncounter, setSelectedEncounter, setShowEncounter]: [
+  const [
+    selectedEncounter,
+    setSelectedEncounter,
+    setShowEncounter,
+    setSelectedMapLevel,
+  ]: [
     number | null,
     (encounter: number | null) => void,
     (show: boolean) => void,
+    (level: string) => void,
   ] = useMapStore((state) => [
     state.selectedEncounter,
     state.setSelectedEncounter,
     state.setShowEncounter,
+    state.setSelectedMapLevel,
   ]);
 
   const encounterInfo = useMemo(() => {
@@ -53,6 +70,16 @@ const EncounterDetails = memo(() => {
 
     return pokemonSearchStore.getDetailedEncounterInfo(selectedEncounter);
   }, [selectedEncounter]) as [string, number, DetailedEncounterLocation[]];
+  const closeEncounter = () => {
+    setSelectedEncounter(null);
+    setShowEncounter(false);
+  };
+  const handleMapClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const map = e.currentTarget.dataset.map;
+    if (map) {
+      setSelectedMapLevel(map);
+    }
+  }, []);
 
   const [speciesName, speciesIndex, encounterLocations] = encounterInfo;
 
@@ -68,11 +95,6 @@ const EncounterDetails = memo(() => {
       </div>
     );
   }
-
-  const closeEncounter = () => {
-    setSelectedEncounter(null);
-    setShowEncounter(false);
-  };
 
   return (
     <div className="p-2">
@@ -91,7 +113,11 @@ const EncounterDetails = memo(() => {
       ) : (
         <div className="space-y-3">
           {encounterLocations.map((location, index) => (
-            <LocationCard key={index} location={location} />
+            <LocationCard
+              key={index}
+              location={location}
+              onClick={handleMapClick}
+            />
           ))}
         </div>
       )}

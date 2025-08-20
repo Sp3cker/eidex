@@ -41,7 +41,7 @@ export default defineConfig(({ mode }) => {
           "nbit-Bold.ttf",
         ],
         outputDir: "public/fonts/emerald-pro",
-      }),
+      }) as any,
     );
   }
   return {

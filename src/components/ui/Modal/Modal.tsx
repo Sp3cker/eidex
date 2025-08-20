@@ -57,7 +57,7 @@ const openState = {
 const closedState = {
   translateX: 0,
   translateY: 0,
-  scale: 0.3,
+  scale: 0.7,
   skewX: 0,
 };
 const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
@@ -72,11 +72,12 @@ const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
     () => ({
       from: isOpen ? getAnimationFromValues(isOpen) : closedState, // Start from closed state
       to: isOpen ? openState : closedState,
-      delay: 10,
+      // delay: 10,
       config: {
-        tension: 220,
-        damping: 0.2,
-        mass: isOpen === "upload" ? 0.5 : 0.75,
+        tension: 260,
+        friction: 23,
+        // damping: 0.9,
+        mass: isOpen === "upload" ? 1.5 : 2.75,
       },
     }),
     [isOpen],

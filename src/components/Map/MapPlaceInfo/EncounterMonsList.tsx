@@ -72,7 +72,7 @@ const EncounterMonListItem = ({
   return (
     <div
       key={`${mon.species}`}
-      className={`w-37 flex w-full cursor-pointer items-start gap-1 overflow-hidden rounded p-0 pl-2 transition-colors md:pr-2 ${zoneToBgColor(zone)} ${isSelected ? "bg-emerald-100" : ""}`}
+      className={`w-37 flex w-full  cursor-pointer items-start gap-1 duration-65 overflow-hidden rounded p-0 pl-2 transition-colors md:pr-2 ${zoneToBgColor(zone)} ${isSelected ? "bg-emerald-100" : ""}`}
       onMouseDown={handleClick}
     >
       <div className="relative overflow-hidden drop-shadow-md">

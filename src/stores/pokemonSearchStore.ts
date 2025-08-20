@@ -96,7 +96,7 @@ class PokemonSearchStore {
       .slice(0, 6)
       .map((result) => {
         const id = this.monNameKeys.get(result);
-        debugger
+        debugger;
         return {
           id, // name not `speciesName` to match what search result uses
           name: result, // name not `speciesName` to match what search result uses
@@ -176,9 +176,6 @@ class PokemonSearchStore {
       return [];
     }
 
-    // Convert species name to the format used in encounter data
-    // Convert the "pretty" species name into the canonical key that our
-    // encounter data now stores (see convertSpecies in src/data/map/encounters.ts)
     const specificFormOfSpecies = species.nameKey;
 
     const locations: DetailedEncounterLocation[] = [];
@@ -192,62 +189,66 @@ class PokemonSearchStore {
 
         // Check land encounters
         if (encounterData.land) {
-          encounterData.land.mons.forEach((mon) => {
-            if (mon.species === speciesId) {
-              locations.push({
-                mapName,
-                encounterType: "land",
-                minLevel: mon.min_level,
-                maxLevel: mon.max_level,
-                encounterRate: encounterData.land.encounter_rate,
-              });
-            }
-          });
+          const landEncounter = encounterData.land.mons.find(
+            (mon) => mon.species === speciesId,
+          );
+
+          if (landEncounter) {
+            locations.push({
+              mapName,
+              encounterType: "land",
+              minLevel: landEncounter.min_level,
+              maxLevel: landEncounter.max_level,
+            });
+          }
         }
 
         // Check water encounters
         if (encounterData.water) {
-          encounterData.water.mons.forEach((mon) => {
-            if (mon.species === speciesId) {
-              locations.push({
-                mapName,
-                encounterType: "water",
-                minLevel: mon.min_level,
-                maxLevel: mon.max_level,
-                encounterRate: encounterData.water.encounter_rate,
-              });
-            }
-          });
+          const waterEncounter = encounterData.water.mons.find(
+            (mon) => mon.species === speciesId,
+          );
+
+          if (waterEncounter) {
+            locations.push({
+              mapName,
+              encounterType: "water",
+              minLevel: waterEncounter.min_level,
+              maxLevel: waterEncounter.max_level,
+            });
+          }
         }
 
         // Check fishing encounters
         if (encounterData.fish) {
-          encounterData.fish.mons.forEach((mon) => {
-            if (mon.species === speciesId) {
-              locations.push({
-                mapName,
-                encounterType: "fishing",
-                minLevel: mon.min_level,
-                maxLevel: mon.max_level,
-                encounterRate: encounterData.fish.encounter_rate,
-              });
-            }
-          });
+          const fishingEncounter = encounterData.fish.mons.find(
+            (mon) => mon.species === speciesId,
+          );
+
+          if (fishingEncounter) {
+            locations.push({
+              mapName,
+              encounterType: "fishing",
+              minLevel: fishingEncounter.min_level,
+              maxLevel: fishingEncounter.max_level,
+            });
+          }
         }
 
         // Check rock smash encounters
         if (encounterData.rock) {
-          encounterData.rock.mons.forEach((mon) => {
-            if (mon.species === speciesId) {
-              locations.push({
-                mapName,
-                encounterType: "rock_smash",
-                minLevel: mon.min_level,
-                maxLevel: mon.max_level,
-                encounterRate: encounterData.rock.encounter_rate,
-              });
-            }
-          });
+          const rockEncounter = encounterData.rock.mons.find(
+            (mon) => mon.species === speciesId,
+          );
+
+          if (rockEncounter) {
+            locations.push({
+              mapName,
+              encounterType: "rock_smash",
+              minLevel: rockEncounter.min_level,
+              maxLevel: rockEncounter.max_level,
+            });
+          }
         }
       });
     });

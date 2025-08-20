@@ -27,7 +27,6 @@ const PokeSearch = () => {
   // Animate width based on selection state (opposite of Search component)
   useEffect(() => {
     if (itemSearchSelected) {
-      setSearchResults([]);
       if (window.innerWidth < 640) {
         // Shrink when item search is selected
         width.start("1rem", { config: config.gentle });
@@ -65,6 +64,9 @@ const PokeSearch = () => {
 
   const handleClick = useCallback(
     (item: { name: string; maps?: string[] }) => {
+      // Clear search results immediately
+      setSearchResults([]);
+      
       // Set the query to the selected pokemon's name (like Search component does)
       handleQuery(item.name);
 

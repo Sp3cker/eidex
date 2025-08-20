@@ -64,28 +64,25 @@ const putRodUsed = (mons: EncounterMons[]) => {
 
 const putEncounterRate = (mons: EncounterMons[]) => {
   const rates = [20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1];
-  const encounterRates = new Map<number, number>();
-  const monsterProps = new Map<number, EncounterMons>();
-  // Calculate total rates for each monster
-  mons.forEach((encounter, index) => {
-    if (index < rates.length) {
-      // let currentRate = arr[index].rate || 0
-      // currentRate += rates[index];
-      const currentRate = encounterRates.get(encounter.species) || 0;
-      encounterRates.set(encounter.species, currentRate + rates[index]);
-      const monsNewRate = encounterRates.get(encounter.species) || 0;
-      monsterProps.set(encounter.species, {
-        species: encounter.species,
-        max_level: encounter.max_level,
-        min_level: encounter.min_level,
-        rate: monsNewRate,
-        name: encounter.name,
-        rod: encounter.rod, // Preserve rod property if it exists
-      });
-    }
-  });
 
-  return Array.from(monsterProps.values()) as EncounterMons[];
+  // Calculate total rates for each monster
+  const encounterRates = mons.reduce((currRatesMap, encounter, index) => {
+    if (index >= rates.length) return currRatesMap;
+    const prev = currRatesMap.get(encounter.species);
+    const newRate =
+      prev?.rate === undefined ? rates[index] : prev.rate + rates[index];
+    currRatesMap.set(encounter.species, {
+      species: encounter.species,
+      max_level: encounter.max_level,
+      min_level: encounter.min_level,
+      rate: newRate,
+      name: encounter.name,
+      rod: encounter.rod,
+    });
+    return currRatesMap;
+  }, new Map<number, EncounterMons>());
+
+  return Array.from(encounterRates.values()) as EncounterMons[];
 };
 
 const getSelectedMapInfo = (id: string, levelId: string) => {
