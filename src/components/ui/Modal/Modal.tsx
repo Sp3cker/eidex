@@ -77,7 +77,7 @@ const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
         tension: 180,
         friction: 23,
         // damping: 0.9,
-        mass: isOpen === "upload" ? 1.0 : 1.75,
+        mass: isOpen === "upload" ? 1.0 : 1.2,
       },
     }),
     [isOpen],
