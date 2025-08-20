@@ -2,7 +2,7 @@ import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import { cloudflare } from "@cloudflare/vite-plugin";
 import tailwindcss from "@tailwindcss/postcss";
-import tailwindcsssafearea from "tailwindcss-safe-area";
+
 import path from "path";
 import { fetchAssetsPlugin } from "./vite-plugin-fetch-assets.ts";
 import process from "node:process";
@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
     //   gzipSize: true,
     //   brotliSize: true,
     // }),
-    tailwindcsssafearea,
+
     react({
       babel: {
         plugins: [["babel-plugin-react-compiler", { target: "19" }]],
