@@ -3069,7 +3069,7 @@
               "level": 70
             }
           ],
-          "explanation": "After Elite Four, find Marine Cave, Route 105, 125, 127, or 129 (it moves around)",
+          "explanation": "After Elite Four, find Marine Cave, Route 105, Route 125, Route 127, or Route 129",
           "scriptName": "MarineCave_End_EventScript_Kyogre::"
         }
       ],
@@ -3863,7 +3863,7 @@
             }
           ],
           "wildMon": [],
-          "explanation": "Gift from Steven",
+          "explanation": "Gift from Steven (postgame)",
           "scriptName": "MossdeepCity_StevensHouse_EventScript_GiveMeltan::"
         }
       ],
@@ -11838,7 +11838,7 @@
               "level": 70
             }
           ],
-          "explanation": "After Elite Four, find Terra Cave, Route 114, 115, 116, or 118 (it moves around)",
+          "explanation": "After Elite Four, find Terra Cave, Route 114, Route 115, Route 116, or Route 118",
           "scriptName": "TerraCave_End_EventScript_Groudon::"
         }
       ],
