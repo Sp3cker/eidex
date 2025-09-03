@@ -54,7 +54,7 @@ const Footer = memo(function Footer() {
           Data for EI 1.3
         </p>
         <p className="font-pkmnem leading-xs text-sm/3 text-white">
-          hows it goin man
+            bottom text
         </p>
       </div>
       <div className="flex items-center justify-end gap-5">

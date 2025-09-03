@@ -60,7 +60,7 @@ const OpenButton = memo(function OpenButton({ className }: OpenButtonProps) {
   return (
     <button
       ref={buttonRef}
-      className={`places-list-button-z top-1/5 content-visibilty bg-linear-to-br fixed left-0 -translate-y-1/2 cursor-pointer rounded-r-lg border border-l-0 border-gray-200 from-emerald-50 via-white to-gray-100 px-2 py-4 shadow-lg transition-all duration-200 hover:bg-emerald-100 ${className || ""}`}
+      className={`hover-active-button places-list-button-z top-1/5 content-visibilty bg-linear-to-br px-1.75 fixed left-0 -translate-y-1/2 cursor-pointer rounded-r-lg border border-l-0 border-gray-200 from-emerald-50 via-white to-gray-100 py-4 shadow-lg sm:px-2 ${className || ""}`}
       onClick={handleClick}
     >
       Ξ

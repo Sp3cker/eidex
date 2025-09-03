@@ -28,7 +28,7 @@ const Search = () => {
   const width = useSpringValue("10rem"); // Initialize with CSS value
   // Animate width based on selection state
   useEffect(() => {
-    if ( itemSearchSelected) {
+    if (itemSearchSelected) {
       // Expand to full width when selected
       width.start("10rem");
     } else if (window.innerWidth < 640) {
@@ -100,7 +100,7 @@ const Search = () => {
       <a.input
         ref={inputRef}
         value={searchTerm}
-        className="search-input mb-2 w-full rounded-sm border border-neutral-100 p-1 py-1 pl-1 pr-2 text-sm/6 text-stone-100 shadow-xl placeholder:text-stone-400 placeholder:opacity-70"
+        className="font-pkmnem search-input py-0.75 sm: mb-2 w-full rounded-sm border border-neutral-100 p-1 pr-2 text-base/6 sm:text-lg/6 font-bold text-stone-50 shadow-inner shadow-xl placeholder:text-gray-500 sm:py-1 "
         style={{
           width: width,
         }}

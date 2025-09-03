@@ -5,7 +5,7 @@ import { useRandomizerStore } from "@/stores/randomizerStore";
 const RandomizationModesList = [
   {
     label: "Normal Species",
-    desc: "Species can randomize to any other species (except legendaries).",
+    desc: "Species can randomize to any other species.",
     mode: 0,
   },
   {
@@ -58,7 +58,7 @@ const UploadSave = () => {
           Upload your Emerald Imperium save file to randomize encounters based
           on your trainer ID and randomizer settings.
         </p>
-        <p className="leading-0 pb-0 pt-1 text-xs text-neutral-300">
+        <p className=" pb-0 pt-1 text-xs text-neutral-300">
           1. Select the <span className="font-bold">Randomization Mode</span>{" "}
           you chose for your game:
         </p>
@@ -98,7 +98,8 @@ const UploadSave = () => {
           </div>
           <article className="rounded-b-sm bg-slate-600 p-1">
             <p className="font-pkmnem bg-slate-600 p-1 text-xl/5 text-stone-200 antialiased">
-              {RandomizationModesList[userRandomizerMode ?? 0].desc}
+              {userRandomizerMode !== null &&
+                RandomizationModesList[userRandomizerMode ?? 0].desc}
             </p>
           </article>
         </section>
@@ -111,10 +112,10 @@ const UploadSave = () => {
               Clear Save
             </button>
           ) : (
-            <section className="min-h-10">
+            <section className="space-evenly flex min-h-10 flex-row items-center">
               <input
                 type="button"
-                className="hover-active-button font-pkmnem block mx-auto px-2 py-1 rounded-sm text-center bg-emerald-700 text-base font-bold text-slate-100 disabled:bg-slate-900 sm:text-lg"
+                className="hover-active-button font-pkmnem mx-auto block h-10 rounded-sm bg-emerald-700 px-2 py-1 text-center text-base font-bold text-slate-100 disabled:bg-slate-900 sm:text-lg"
                 id="loadFileXml"
                 value={userRandomizerMode === null ? "" : "Upload Save File"}
                 disabled={
@@ -136,6 +137,20 @@ const UploadSave = () => {
                 placeholder="Upload Save File please"
                 className="hidden"
               />
+              <div>
+                <p
+                  className={`font-calamity fade-in w-full px-10 text-center text-xs text-gray-300 sm:text-sm ${userRandomizerMode === null ? "hidden" : "block"}`}
+                >
+                  If you notice the randomizer not matching what's in your game,
+                  let me know!!!
+                </p>
+
+                <p
+                  className={`font-calamity fade-in w-full px-10 text-center text-xs text-gray-300 sm:text-sm ${userRandomizerMode === null ? "hidden" : "block"}`}
+                >
+                  Thanks vStripxz!
+                </p>
+              </div>
             </section>
           )}
         </div>

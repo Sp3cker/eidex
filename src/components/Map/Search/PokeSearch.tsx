@@ -12,7 +12,7 @@ type PokeSearchResult = {
 const PokeSearch = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const { itemSearchSelected, setSearchSelected } = useSearchSelectionStore();
-  const width = useSpringValue(window.innerWidth < 640 ? "1rem" : "10.75rem"); // Initialize with smaller width
+  const width = useSpringValue(window.innerWidth < 640 ? "1rem" : "10rem"); // Initialize with smaller width
   const [searchResults, setSearchResults] = useState<PokeSearchResult[]>([]);
   const setSelectedPokemonByIndex = useUIStore(
     (state) => state.setSelectedPokemonByIndex,
@@ -33,7 +33,7 @@ const PokeSearch = () => {
       }
     } else {
       // Expand when pokemon search is selected
-      width.start("10.75rem");
+      width.start("10rem");
     }
   }, [itemSearchSelected, width]);
 
@@ -103,11 +103,11 @@ const PokeSearch = () => {
           style={{
             width: width,
           }}
-          className="search-input mb-2 w-full rounded-sm border border-neutral-100 p-1 py-1 pl-8 pr-2 text-sm/6 text-neutral-50 shadow-inner shadow-xl"
-          placeholder={itemSearchSelected && window.innerWidth < 640 ? "" : "Search Pokemon"}
+          className="font-pkmnem font-bold search-input mb-2 w-full rounded-sm border border-neutral-100 p-1  py-0.75 sm:py-1 pl-8 pr-2 sm:text-lg/6 text-stone-50 shadow-inner shadow-xl text-base/6"
+          placeholder={itemSearchSelected && window.innerWidth < 640 ? "" : "Find Pokemon"}
         />
         <div
-          className={`absolute ${itemSearchSelected ? "left-2" : "left-2"} pointer-events-none top-1/2 -translate-y-1/2 transform`}
+          className={`absolute ${itemSearchSelected ? "translate-x-3 sm:translate-x-2" : "translate-x-2 sm:translate-x-2"} pointer-events-none top-1/2 -translate-y-2.25 transform`}
         >
           <img
             src="/pokeball.svg"
