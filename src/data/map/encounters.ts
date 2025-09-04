@@ -271,9 +271,9 @@ class EncounterStore {
                 return 0; // WildArea.LAND
               case "water":
                 return 1; // WildArea.WATER
-              case "fish":
-                return 2; // WildArea.FISHING
               case "rock":
+                return 2; // WildArea.FISHING
+              case "fish":
                 return 3; // custom extension (not in original C subset used earlier)
             }
           })();
