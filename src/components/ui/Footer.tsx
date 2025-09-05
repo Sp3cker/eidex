@@ -51,10 +51,10 @@ const Footer = memo(function Footer() {
       </div>
       <div className="flex flex-col sm:w-80">
         <p className="font-pkmnem leading-xs text-sm/3 text-white">
-          Data for EI 1.3
+          Data for EI 1.3.1
         </p>
         <p className="font-pkmnem leading-xs text-sm/3 text-white">
-            bottom text
+          Missing some Pokémart changes – coming soon!
         </p>
       </div>
       <div className="flex items-center justify-end gap-5">

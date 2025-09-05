@@ -58,7 +58,7 @@ const UploadSave = () => {
           Upload your Emerald Imperium save file to randomize encounters based
           on your trainer ID and randomizer settings.
         </p>
-        <p className=" pb-0 pt-1 text-xs text-neutral-300">
+        <p className="pb-0 pt-1 text-xs text-neutral-300">
           1. Select the <span className="font-bold">Randomization Mode</span>{" "}
           you chose for your game:
         </p>
@@ -128,28 +128,27 @@ const UploadSave = () => {
                   document.getElementById("upload-save")!.click()
                 }
               />
-
-              <input
-                type="file"
-                id="upload-save"
-                accept=".sav,.save"
-                onChange={handleFileChange}
-                placeholder="Upload Save File please"
-                className="hidden"
-              />
               <div>
-                <p
-                  className={`font-calamity fade-in w-full px-10 text-center text-xs text-gray-300 sm:text-sm ${userRandomizerMode === null ? "hidden" : "block"}`}
+                <input
+                  type="file"
+                  id="upload-save"
+                  accept=".sav,.save"
+                  onChange={handleFileChange}
+                  placeholder="Upload Save File please"
+                  className="hidden"
+                />
+                <div
+                  className={`font-calamity fade-in w-full px-10 text-left text-xs text-gray-300 sm:text-sm ${userRandomizerMode === null ? "hidden" : "block"}`}
                 >
-                  If you notice the randomizer not matching what's in your game,
-                  let me know!!!
-                </p>
-
-                <p
-                  className={`font-calamity fade-in w-full px-10 text-center text-xs text-gray-300 sm:text-sm ${userRandomizerMode === null ? "hidden" : "block"}`}
-                >
-                  Thanks vStripxz!
-                </p>
+                  <p className="text-center">
+                    If you notice the randomizer not matching what's in your
+                    game, let me know!!!
+                  </p>
+                  <p>Shout-out for reporting bugs:</p>
+                  <span className="font-pkmnem text-right text-xl/4 font-bold">
+                    <p>vStripxz</p> <p>Đuck</p>
+                  </span>
+                </div>
               </div>
             </section>
           )}
