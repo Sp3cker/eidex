@@ -80,7 +80,7 @@ const paragraphs = (springAnim: any, index: number) => {
       bad names!
     </animated.p>,
     <animated.p style={springAnim} key="par3">
-      The official site for the project is{" "}
+      The official site for Emerald Imperium is{" "}
       <a
         href="https://emeraldimperium.net"
         className="underline hover:text-blue-200"
