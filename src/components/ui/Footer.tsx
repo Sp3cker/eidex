@@ -54,14 +54,11 @@ const Footer = memo(function Footer() {
           Data for EI 1.3.1
         </p>
         <p className="font-pkmnem leading-xs text-sm/3 text-white">
-         Gotta catch 'em all!®
+          Gotta catch 'em all!®
         </p>
       </div>
       <div className="flex items-center justify-end gap-5">
         <div className="md:w-full">
-          {/* <p className="font-pkmnem leading-xs text-sm/3 text-white">
-              Not developed by the Emerald Imperium team.
-            </p> */}
           <p className="font-pkmnem leading-xs pr-1 text-sm/3 text-white">
             <button
               onClick={handleDisclosureClick}

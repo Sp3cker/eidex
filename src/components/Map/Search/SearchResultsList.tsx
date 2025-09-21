@@ -1,7 +1,7 @@
 import { useSprings, useTransition, animated as a } from "@react-spring/web";
 import { useGesture } from "@use-gesture/react";
 import { animConfigs, animFn as fn } from "./misc";
-import { useMemo } from "react";
+import { useMemo, useRef } from "react";
 interface SearchResult {
   name: string;
   id?: string;
@@ -25,6 +25,7 @@ export const SearchResultsList = ({
   getItemDisplayName,
   visible = true,
 }: SearchResultsListProps) => {
+  const listRef = useRef<HTMLUListElement>(null);
   const [springs, api] = useSprings(
     results.length,
     () => ({ ...animConfigs.initial, config: { friction: 50, tension: 500 } }),
@@ -54,6 +55,40 @@ export const SearchResultsList = ({
     trail: 21,
   });
 
+  const handleKeyDown = (e: React.KeyboardEvent, index: number) => {
+    const buttons = listRef.current?.querySelectorAll<HTMLButtonElement>(
+      "button.search-result",
+    );
+    if (!buttons || buttons.length === 0) return;
+
+    switch (e.key) {
+      case "ArrowDown": {
+        e.preventDefault();
+        const nextIndex = Math.min(results.length - 1, index + 1);
+        buttons[nextIndex]?.focus();
+        break;
+      }
+      case "ArrowUp": {
+        e.preventDefault();
+        const prevIndex = Math.max(0, index - 1);
+        buttons[prevIndex]?.focus();
+        break;
+      }
+      case "Home": {
+        e.preventDefault();
+        buttons[0]?.focus();
+        break;
+      }
+      case "End": {
+        e.preventDefault();
+        buttons[results.length - 1]?.focus();
+        break;
+      }
+      default:
+        break;
+    }
+  };
+
   const bind = useGesture({
     onClick: ({ args: [item, index] }) => {
       onItemClick(item, index);
@@ -75,10 +110,12 @@ export const SearchResultsList = ({
   if (!visible) return null;
 
   return (
-    <ul className="relative">
+    <ul ref={listRef} className="relative">
       {transitions((styles, item, _, index) => (
         <a.button
           {...bind(item, index)}
+          type="button"
+          onKeyDown={(e) => handleKeyDown(e, index)}
           className={`search-result will-translate my-dib absolute w-full cursor-pointer rounded-sm bg-neutral-100 p-2`}
           style={{
             scale: springs[index]?.scale,
