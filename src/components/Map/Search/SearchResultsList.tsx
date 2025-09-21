@@ -77,7 +77,7 @@ export const SearchResultsList = ({
   return (
     <ul className="relative">
       {transitions((styles, item, _, index) => (
-        <a.li
+        <a.button
           {...bind(item, index)}
           className={`search-result will-translate my-dib absolute w-full cursor-pointer rounded-sm bg-neutral-100 p-2`}
           style={{
@@ -100,7 +100,7 @@ export const SearchResultsList = ({
               </p>
             )}
           </span>
-        </a.li>
+        </a.button>
       ))}
     </ul>
   );

@@ -36,11 +36,14 @@ const Search = () => {
       width.start("4rem");
     }
   }, [itemSearchSelected, width]);
-
+  const refocusSearch = useCallback(() => {
+    inputRef.current?.focus();
+  }, [inputRef]);
   const handleClick = useCallback(
     (item: { name: string; id?: string }) => {
       const { name, id } = item;
       setSearchName(name);
+      refocusSearch();
 
       if (!id) return;
 
