@@ -30,21 +30,20 @@ type ModalHandle = {
 };
 
 const getAnimationFromValues = (isOpen: "upload" | "disclaimer" | null) => {
-  const viewportWidth = window.innerWidth;
-  const viewportHeight = window.innerHeight;
+
   if (isOpen === "upload") {
     return {
-      translateX: -viewportWidth,
-      translateY: viewportHeight,
+      translateX: -10,
+      translateY: 10,
       scale: 0.7,
-      skewX: -10,
+      skewX: -1,
     };
   } else
     return {
-      translateX: viewportWidth,
-      translateY: viewportHeight,
-      skewX: 10,
+      translateX: 10,
+      translateY: 10,
       scale: 0.7,
+      skewX: 1,
     };
 };
 
@@ -57,8 +56,8 @@ const openState = {
 const closedState = {
   translateX: 0,
   translateY: 0,
-  scale: 0.7,
   skewX: 0,
+  scale: 0.7,
 };
 const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
   { isOpen, setIsOpen }: ModalProps,
@@ -70,8 +69,8 @@ const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
   );
   const [springs] = useSpring(
     () => ({
-      from: isOpen ? getAnimationFromValues(isOpen) : closedState, // Start from closed state
-      to: isOpen ? openState : closedState,
+      from: isOpen !== null ? getAnimationFromValues(isOpen) : closedState, // Start from closed state
+      to: isOpen !== null ? openState : closedState,
       // delay: 10,
       config: {
         tension: 180,
