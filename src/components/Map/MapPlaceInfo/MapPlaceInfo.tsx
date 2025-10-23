@@ -155,6 +155,7 @@ const MapPlaceInfo = memo(() => {
     <div
       className={`map-place-info-z-3 map-place-info-grid font-calamity pointer-events-none`}
     >
+      <InfoToggleButtons />
       <animated.div
         style={{
           opacity: spring.opacity,
@@ -162,7 +163,6 @@ const MapPlaceInfo = memo(() => {
         }}
         className={`${!selectedMap && "will-translate-opacity"} pointer-events-none h-full`}
       >
-        <InfoToggleButtons />
         <MapInfoSwitcher />
       </animated.div>
     </div>
@@ -215,7 +215,7 @@ const MapInfoSwitcher = memo(function Switcher() {
 
   return (
     <div className="pointer-events-none h-full py-2">
-      <animated.div className="xs:top-8 absolute bottom-0 left-0 right-0 top-7 py-2">
+      <animated.div className="absolute bottom-0 left-0 right-0 top-0 py-2">
         {shuffleTransition((style, isOpen) => pages[isOpen ? 0 : 1]({ style }))}
       </animated.div>
     </div>
