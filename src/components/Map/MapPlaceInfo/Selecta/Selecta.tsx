@@ -5,10 +5,10 @@ import { shallow } from "zustand/shallow";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
 
 const translatesTo = {
-  lg: 45,
-  md: 10,
-  sm: 110,
-  xs: 70,
+  lg: 55,
+  md: 15,
+  sm: 14*9,
+  xs: 75,
 };
 const Selecta = () => {
   const screenWidth = useScreenWidth();

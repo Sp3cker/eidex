@@ -51,7 +51,7 @@ const MapContainer = ({ children }: any) => {
         WINDOW_WIDTH * offsetFactor - x - xyScales[0];
       currentTargetCenterOffset[1] =
         WINDOW_HEIGHT * offsetFactor - y - xyScales[1];
-      currentSpringDelay = 160; // Specific delay for this case
+      currentSpringDelay = 113; // Specific delay for this case
     }
 
     return {

@@ -78,7 +78,6 @@ const EncounterAreaButtons = ({
   );
 };
 
-
 const MapPlaceInfoContent = memo(() => {
   const [selectedTab, setSelectedTab] = useState("land");
   const { ref: containerRef, height: containerHeight } = useElementSize();
@@ -104,15 +103,12 @@ const MapPlaceInfoContent = memo(() => {
       className="pointer-events-auto relative flex h-full flex-col"
     >
       <ScrollArea
-        className="map-place-info-textbox-gradient h-full rounded-l-lg pb-10 pl-1 pr-3 pt-2 md:rounded-lg lg:h-full simplebar-theme-map"
+        className="map-place-info-textbox-gradient simplebar-theme-map h-full rounded-l-lg pb-10 pl-1 pr-3 pt-2 md:rounded-lg lg:h-full"
         noX
       >
         <EncounterMonsContainer selectedTab={selectedTab} />
       </ScrollArea>
-      <div
-        className="absolute bottom-0 left-0 right-0"
-        style={topStyle}
-      >
+      <div className="absolute bottom-0 left-0 right-0" style={topStyle}>
         <EncounterAreaButtons
           handleClick={handleTabClick}
           selectedTab={selectedTab}
@@ -155,9 +151,8 @@ const MapPlaceInfo = memo(() => {
     <div
       className={`map-place-info-z-3 map-place-info-grid font-calamity pointer-events-none`}
     >
-      <div className={!selectedMap && "invisible"}>
-
-      <InfoToggleButtons />
+      <div className={selectedMap ? "visible" : "invisible"}>
+        <InfoToggleButtons />
       </div>
       <animated.div
         style={{
