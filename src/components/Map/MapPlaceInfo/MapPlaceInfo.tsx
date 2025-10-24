@@ -155,7 +155,10 @@ const MapPlaceInfo = memo(() => {
     <div
       className={`map-place-info-z-3 map-place-info-grid font-calamity pointer-events-none`}
     >
+      <div className={!selectedMap && "invisible"}>
+
       <InfoToggleButtons />
+      </div>
       <animated.div
         style={{
           opacity: spring.opacity,
