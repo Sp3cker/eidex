@@ -56,7 +56,7 @@ const TrainersOnLevelList = ({
 }) => {
   return (
     <section>
-      <h3 className="cool-font md:text-md py-2 pb-1 text-xs/4 font-bold tracking-tight text-stone-800">
+      <h3 className="font-calamity md:text-md py-2 pb-1 text-xs/4 font-bold tracking-tight text-stone-800">
         {levelLabel}
       </h3>
       <div className="h-full space-y-2">

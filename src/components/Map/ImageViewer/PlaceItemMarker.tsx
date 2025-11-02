@@ -27,7 +27,7 @@ export const PickupItemMarker: React.FC<PickupItemMarkerProps> = ({
         top: (item.coords[1] * 16 + 8) * scaleY, // Apply scale to Y coordinate, +8 for center of 16px tile
       }}
     >
-      <div className="pickup-item-tooltip cool-font">
+      <div className="pickup-item-tooltip font-calamity">
         <img
           src="/spritesheet-items-16.webp"
           className="rendering-pixelated"

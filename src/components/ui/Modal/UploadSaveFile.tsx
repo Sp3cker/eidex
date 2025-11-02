@@ -50,7 +50,7 @@ const UploadSave = () => {
   };
   return (
     <div className="font-calamity space-y-4">
-      <DialogTitle className="cool-font mb-4 text-xl font-bold text-gray-200">
+      <DialogTitle className="font-calamity mb-4 text-xl font-bold text-gray-200">
         Upload Save File
       </DialogTitle>
       <div className="space-y-3">

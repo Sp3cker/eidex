@@ -3,7 +3,7 @@ import Search from "./Search";
 
 const SearchContainer = () => {
   return (
-    <div className="fade-in cool-font search-bar-grid flex flex-row gap-2 items-start">
+    <div className="fade-in font-calamity search-bar-grid flex flex-row items-start gap-2">
       <Search />
       <PokeSearch />
     </div>

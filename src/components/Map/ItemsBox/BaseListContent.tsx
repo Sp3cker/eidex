@@ -6,7 +6,7 @@ export const EmptyState = React.memo(function EmptyState({
   message: string;
 }) {
   return (
-    <p className="cool-font py-2 text-center text-sm text-gray-500">
+    <p className="font-calamity py-2 text-center text-sm text-gray-500">
       {message}
     </p>
   );
@@ -40,7 +40,7 @@ export function BaseListContent<T>({
       {items.map((item, index) => (
         <div
           key={getKey(item, index)}
-          className={`cool-font mb-1 flex min-w-0  items-center gap-1 rounded border p-1 pl-2 shadow-sm transition-colors sm:gap-3 sm:p-2 ${className}`}
+          className={`font-calamity mb-1 flex min-w-0 items-center gap-1 rounded border p-1 pl-2 shadow-sm transition-colors sm:gap-3 sm:p-2 ${className}`}
         >
           {renderIcon && renderIcon(item)}
 

@@ -139,7 +139,7 @@ const PlacesList = memo(function PlacesList() {
       <div
         ref={backdropRef}
         style={{ display: "none" }}
-        className="places-list-backdrop-z hidden fixed inset-0 bg-black bg-opacity-50"
+        className="places-list-backdrop-z fixed inset-0 hidden bg-black bg-opacity-50"
         onClick={handleClose}
       />
 
@@ -148,9 +148,9 @@ const PlacesList = memo(function PlacesList() {
 
       <animated.nav
         style={slideAnimation}
-        className="places-list-z pb-safe-or-8 fixed bottom-6 left-0 top-0 w-80 max-w-[80vw] overflow-hidden border-r border-gray-200 bg-linear-to-br from-emerald-50 via-white to-gray-100 shadow-2xl"
+        className="places-list-z pb-safe-or-8 bg-linear-to-br fixed bottom-6 left-0 top-0 w-80 max-w-[80vw] overflow-hidden border-r border-gray-200 from-emerald-50 via-white to-gray-100 shadow-2xl"
       >
-        <div className="sticky top-0 z-10 flex flex-col items-center justify-between border-b border-gray-200 bg-linear-to-br from-neutral-50 via-white to-neutral-100 p-2">
+        <div className="bg-linear-to-br sticky top-0 z-10 flex flex-col items-center justify-between border-b border-gray-200 from-neutral-50 via-white to-neutral-100 p-2">
           <div className="flex w-full justify-end">
             <CloseButton
               onClick={handleClose}
@@ -162,7 +162,9 @@ const PlacesList = memo(function PlacesList() {
           <div className="flex w-full flex-row items-start justify-between pl-1">
             <div>
               <div className="flex flex-col items-start justify-between pb-1">
-                <h3 className="cool-font font-bold text-neutral-700">Hoenn</h3>
+                <h3 className="font-calamity font-bold text-neutral-700">
+                  Hoenn
+                </h3>
                 <p className="font-pkmnem text-md text-neutral-500">74 areas</p>
               </div>
             </div>

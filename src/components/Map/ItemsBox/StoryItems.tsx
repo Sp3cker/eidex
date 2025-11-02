@@ -16,7 +16,7 @@ const StoryItems = ({
           itemScope
           itemType="https://schema.org/gameItem"
         >
-          <h3 className="cool-font md:text-md border-b-2 border-stone-400 py-2 pb-1 text-xs/3 font-bold tracking-tight text-stone-700">
+          <h3 className="font-calamity md:text-md border-b-2 border-stone-400 py-2 pb-1 text-xs/3 font-bold tracking-tight text-stone-700">
             {explanation}
           </h3>
           {items.length > 0 && (

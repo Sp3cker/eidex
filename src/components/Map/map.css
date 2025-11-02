@@ -15,9 +15,6 @@
   position: absolute;
   touch-action: none;
 }
-.cool-font {
-  font-family: "Calamity";
-}
 
 .map-place-info-textbox-gradient {
   background-image: linear-gradient(

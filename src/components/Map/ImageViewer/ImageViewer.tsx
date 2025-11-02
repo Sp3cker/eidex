@@ -139,30 +139,7 @@ const ImageViewer = () => {
                 })}
             </div>
           </div>
-          {/* Example: show dimensions for debugging */}
-          {/* {imgDimensions && displayedSize && (
-            <div className="debug-info">
-              <div>
-                Original: {imgDimensions.width} x {imgDimensions.height}
-              </div>
-              <div>
-                Displayed: {Math.round(displayedSize.width)} x{" "}
-                {Math.round(displayedSize.height)}
-              </div>
-              <div>
-                Scale: {(displayedSize.width / imgDimensions.width).toFixed(3)}{" "}
-                x {(displayedSize.height / imgDimensions.height).toFixed(3)}
-              </div>
-            </div>
-          )} */}
-          <p className="status-text cool-font">
-            {" "}
-            Image viewer isn&apos;t done yet, ok...
-          </p>
-          <p className="status-text cool-font">
-            {" "}
-            Some things are not where they should be.
-          </p>
+          font-calamityfont-calamity{" "}
         </div>
       )}
     </div>

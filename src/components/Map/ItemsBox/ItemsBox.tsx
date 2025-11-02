@@ -99,7 +99,7 @@ const ItemsBox = memo(function ItemsBox() {
       >
         <span className="flex min-w-0 flex-row items-center justify-center gap-3">
           {mapLabel && (
-            <h2 className="cool-font md:text-md min-w-0 truncate pr-2 text-left text-sm font-bold text-neutral-700 transition-colors">
+            <h2 className="font-calamity md:text-md min-w-0 truncate pr-2 text-left text-sm font-bold text-neutral-700 transition-colors">
               {mapLabel}
             </h2>
           )}
@@ -108,7 +108,7 @@ const ItemsBox = memo(function ItemsBox() {
       </div>
       <div
         ref={firstItemRef}
-        className="font-pkmnem flex min-w-0 flex-1 flex-col rounded-sm"
+        className="flex min-w-0 flex-1 flex-col rounded-sm"
       >
         <ItemsList />
       </div>

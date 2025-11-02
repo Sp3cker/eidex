@@ -28,7 +28,7 @@ const LocationCard = ({
     >
       <div className="flex cursor-pointer items-start justify-between">
         <hgroup>
-          <h4 className="font-calamity text-sm font-bold text-stone-800">
+          <h4 className="font-calamity text-sm font-semibold text-stone-800">
             {formatMapString(location.mapName)}
           </h4>
           <p className="font-pkmnem text-lg capitalize text-gray-600">
@@ -102,7 +102,7 @@ const EncounterDetails = memo(() => {
         className="absolute right-1 top-1 text-neutral-500"
         onClick={closeEncounter}
       />
-      <h3 className="font-calamity mb-4 text-sm font-semibold">
+      <h3 className="font-calamity mb-4 text-sm font-bold ">
         Encounter Locations for {speciesName}
       </h3>
 

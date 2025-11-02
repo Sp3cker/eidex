@@ -63,7 +63,7 @@ const paragraphs = (springAnim: any, index: number) => {
       </p>
     </animated.div>,
     <animated.div style={springAnim} key="par6">
-      <p className="cool-font text-sm">
+      <p className="font-calamity text-sm">
         The source of truth is the Discord and the Pokecommunity post. Stay
         sharp.
       </p>
@@ -138,11 +138,11 @@ const Disclaimer = () => {
 
   return (
     <>
-      <DialogTitle className="cool-font mb-4 text-xl font-bold text-gray-200">
+      <DialogTitle className="font-calamity mb-4 text-xl font-bold text-gray-200">
         Disclaimer
       </DialogTitle>
       <ErrorBoundary fallback={<p>whoopsie</p>}>
-        <div className="cool-font space-y-2.5 text-xs/5 text-gray-300 sm:text-sm/5">
+        <div className="font-calamity space-y-2.5 text-xs/5 text-gray-300 sm:text-sm/5">
           {wordSprings
             .slice()
             .reverse()

@@ -25,12 +25,10 @@ const RoamersInfoContent = ({ info }: { info: LegendaryInfo }) => {
 
 const RoamersInfo = ({ selectedRoamer }: { selectedRoamer: string | null }) => {
   const selectedRInfo = legendaries.find((le) => le.nameKey === selectedRoamer);
-  
+
   return (
-    <div className="content-visibility fade-in-background roamers-info-grid border cool-font text-neutral-50 rounded-md border-amber-200 p-2">
-      <h3>
-        {selectedRoamer ? selectedRoamer : ""}
-      </h3>
+    <div className="content-visibility fade-in-background roamers-info-grid font-calamity rounded-md border border-amber-200 p-2 text-neutral-50">
+      <h3>{selectedRoamer ? selectedRoamer : ""}</h3>
       {selectedRInfo ? <RoamersInfoContent info={selectedRInfo} /> : null}
     </div>
   );
@@ -38,12 +36,14 @@ const RoamersInfo = ({ selectedRoamer }: { selectedRoamer: string | null }) => {
 
 const Roamers = React.memo(function Roamers() {
   const [location] = useLocation();
-  const { deselectMap, setSelectedRoamer, selectedRoamer } = useMapStore((state) => ({
-    deselectMap: state.deselectMap,
-    setSelectedRoamer: state.setSelectedRoamer,
-    selectedRoamer: state.selectedRoamer,
-  }));
-  
+  const { deselectMap, setSelectedRoamer, selectedRoamer } = useMapStore(
+    (state) => ({
+      deselectMap: state.deselectMap,
+      setSelectedRoamer: state.setSelectedRoamer,
+      selectedRoamer: state.selectedRoamer,
+    }),
+  );
+
   const legendaryRoamers = legendaries
     .filter((l) => l.mapBasename === "MAP_HOENN")
     .map((p) => {
@@ -66,9 +66,12 @@ const Roamers = React.memo(function Roamers() {
     e.stopPropagation();
   }, []);
 
-  const handleClick = React.useCallback((nameKey: string) => {
-    setSelectedRoamer(nameKey);
-  }, [setSelectedRoamer]);
+  const handleClick = React.useCallback(
+    (nameKey: string) => {
+      setSelectedRoamer(nameKey);
+    },
+    [setSelectedRoamer],
+  );
 
   // Only render when on legendaries route
   if (location !== "/roamers") {
@@ -85,8 +88,8 @@ const Roamers = React.memo(function Roamers() {
           <div
             onClick={() => handleClick(l.nameKey)}
             key={l.speciesName}
-            className={`border mb-2 flex flex-row items-center rounded-md border-amber-200 p-2 ${
-              selectedRoamer === l.nameKey ? 'bg-amber-100/20' : ''
+            className={`mb-2 flex flex-row items-center rounded-md border border-amber-200 p-2 ${
+              selectedRoamer === l.nameKey ? "bg-amber-100/20" : ""
             }`}
           >
             <div className="icon-sprite-box">
@@ -96,7 +99,9 @@ const Roamers = React.memo(function Roamers() {
                 alt={l.Pokémon}
               />
             </div>
-            <h3 className="cool-font text-xs text-neutral-50">{l.Pokémon}</h3>
+            <h3 className="font-calamity text-xs text-neutral-50">
+              {l.Pokémon}
+            </h3>
           </div>
         ))}
       </div>
