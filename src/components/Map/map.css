@@ -17,11 +17,7 @@
 }
 
 .map-place-info-textbox-gradient {
-  background-image: linear-gradient(
-    in oklab 129deg,
-    var(--color-neutral-50),
-    var(--color-sky-100)
-  );
+  background-image: linear-gradient(in oklab 129deg, #f8efe7, #dfd6ce);
 }
 
 .tab-list {

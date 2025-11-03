@@ -1,6 +1,7 @@
 @font-face {
   font-family: "NBit";
   src:
+    local("PP Mondwest"),
     url("/fonts/emerald-pro/nbit-Regular.ttf") format("truetype"),
     url("/fonts/emerald-pro/nbit-Regular.woff2") format("woff2");
   font-weight: normal;
@@ -37,14 +38,32 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Kaisho";
+  src: url("/fonts/HOT-TKaishoPr5-B.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* https://j-font.com/font/detail?font_id=45
+PR5 is smooth, girly
+*/
+@font-face {
+  font-family: "Kaisho";
+  src: url("/fonts/HOT-TKaishoPr5-U.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
-  --font-pixel: "Calamity", sans-serif;
-  --font-pkmnem: "NBit", sans-serif;
+  --font-pixel: "Kaisho", sans-serif;
+  --font-calamity: "Kaisho", sans-serif;
+  --font-pkmnem: "PP Mondwest", sans-serif;
   --font-pkmnem-short: "Emerald-Short", sans-serif;
-  --font-calamity: "Calamity", sans-serif;
 }
 .font-pkmnem {
-  font-family: "NBit", sans-serif;
+  font-family: "PP Mondwest", sans-serif;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
