@@ -1,7 +1,7 @@
 @font-face {
   font-family: "NBit";
   src:
-    local("PP Mondwest"),
+    /*local("Neuebit"),*/
     url("/fonts/emerald-pro/nbit-Regular.ttf") format("truetype"),
     url("/fonts/emerald-pro/nbit-Regular.woff2") format("woff2");
   font-weight: normal;
@@ -40,7 +40,9 @@
 
 @font-face {
   font-family: "Kaisho";
-  src: url("/fonts/HOT-TKaishoPr5-B.woff2") format("woff2");
+  /*src: url("/fonts/epgyobld.ttf") format("truetype");*/
+  src: url("/fonts/epgyobld.woff") format("woff");
+  /*src: url("/fonts/HOT-TKaishoPr5-B.woff2") format("woff2");*/
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -50,7 +52,7 @@ PR5 is smooth, girly
 */
 @font-face {
   font-family: "Kaisho";
-  src: url("/fonts/HOT-TKaishoPr5-U.woff2") format("woff2");
+  src: url("/fonts/epgyosho.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -59,7 +61,7 @@ PR5 is smooth, girly
 @theme {
   --font-pixel: "Kaisho", sans-serif;
   --font-calamity: "Kaisho", sans-serif;
-  --font-pkmnem: "PP Mondwest", sans-serif;
+  --font-pkmnem: "NBit", sans-serif;
   --font-pkmnem-short: "Emerald-Short", sans-serif;
 }
 .font-pkmnem {
