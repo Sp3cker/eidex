@@ -92,9 +92,9 @@ export const useMapStore = create<MapStore>()(
         } = initialMapData;
 
         const storedCoords = get().storedCoordinates.get(mapName) || [400, 340];
-
+        set({ selectedMap: mapName });
         set({
-          selectedMap: mapName,
+          // selectedMap: mapName,
           selectedMapLevel: chosenLevelIndex, // Use the index returned by the utility
           selectedLevelLandMons: landEncounters,
           selectedLevelWaterMons: waterEncounters,
@@ -375,7 +375,7 @@ useMapStore.subscribe(
 );
 
 window.addEventListener("popstate", async () => {
-  return
+  return;
   const urlState = urlManager.parseCurrentURL();
 
   if (urlState.mapName) {

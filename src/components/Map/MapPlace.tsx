@@ -1,10 +1,11 @@
 import useMapStore from "@/stores/useMapStore";
 import { useGesture } from "@use-gesture/react";
-import { useCallback, useEffect, useRef, memo, startTransition } from "react";
+import { useCallback, useEffect, useRef, memo } from "react";
 
 interface MapPlaceProps {
   item: Record<string, any>;
 }
+
 const renderElement = (
   elem: Record<string, any>,
   isSelectedMap: boolean,
@@ -84,20 +85,18 @@ const renderElement = (
 };
 const MapPlace = memo(
   function MapPlace({ item }: MapPlaceProps) {
-    const mapScale = useMapStore((state) => state.mapScale);
     const setSelectedMap = useMapStore((state) => state.setSelectedMap);
     const isSelectedMap = useMapStore((state) => state.selectedMap === item.id);
     const ref = useRef<any>(null);
 
     const handleClick = useCallback(() => {
-      startTransition(() => {
-        setSelectedMap(item.id);
-      });
+      setSelectedMap(item.id);
     }, []);
 
     useGesture(
       {
-        onClick: () => handleClick(),
+        // onClick: () => handleClick(),
+        onPointerDown: handleClick,
       },
       { target: ref },
     );
@@ -108,11 +107,11 @@ const MapPlace = memo(
       const rect = ref.current.getBoundingClientRect();
       const mapRect = document.getElementById("map")?.getBoundingClientRect();
       if (!mapRect) return;
-      const centerX = (rect.left + rect.width / 2 - mapRect.left) / mapScale;
-      const centerY = (rect.top + rect.height / 2 - mapRect.top) / mapScale;
+      const centerX = rect.left + rect.width / 2 - mapRect.left;
+      const centerY = rect.top + rect.height / 2 - mapRect.top;
       // Register coordinates in your global store here
       useMapStore.getState().storedCoordinates.set(item.id, [centerX, centerY]);
-    }, [mapScale, item.id]);
+    }, [item.id]);
     // Render function for individual elements
 
     return renderElement(item, isSelectedMap, ref);
