@@ -99,7 +99,7 @@ const ItemsBox = memo(function ItemsBox() {
       >
         <span className="flex min-w-0 flex-row items-center justify-center gap-3">
           {mapLabel && (
-            <h2 className="font-calamity md:text-md min-w-0 truncate pr-2 text-left font-bold text-neutral-700 transition-colors">
+            <h2 className="font-jap min-w-0 truncate pr-2 text-left font-bold text-neutral-700 transition-colors md:text-lg">
               {mapLabel}
             </h2>
           )}
