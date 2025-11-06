@@ -62,13 +62,6 @@ PR5 is smooth, girly
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Heliotrope";
-  src: url("/fonts/heliotrope_4_regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 @theme {
   --font-pixel: "Kaisho", sans-serif;
@@ -76,14 +69,15 @@ PR5 is smooth, girly
   --font-pkmnem: "NBit", sans-serif;
   --font-pkmnem-short: "Emerald-Short", sans-serif;
 }
-/*.font-pkmnem {
-  font-family: "Kaisho", sans-serif;
+.font-pkmnem {
   font-weight: 400;
-  /*text-rendering: optimizeSpeed;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: grayscale;*/
-/*opacity: 0.99;*/
-/*font-smooth: always;*/
+  text-rendering: optimizeLegibility;
+  /*-webkit-font-smoothing: antialiased;*/
+  -moz-osx-font-smoothing: grayscale;
+  /*opacity: 0.99;*/
+  font-smooth: never;
+} /*font-smooth: always;
+}
 
 /* Apply text shadow only on Windows */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

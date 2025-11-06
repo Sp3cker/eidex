@@ -24,7 +24,7 @@ const EncounterAreaButtons = ({
   ]);
   return (
     <div
-      className="font-pkmnem tab-list flex w-full justify-evenly text-nowrap bg-neutral-200 text-slate-900 lg:hidden"
+      className="font-pkmnem tab-list rounded-bl-xs rounded-br-xs flex w-full justify-evenly text-nowrap bg-neutral-200 text-slate-900 lg:hidden"
       style={{
         position: "absolute",
         bottom: 0,
@@ -100,10 +100,10 @@ const MapPlaceInfoContent = memo(() => {
   return (
     <div
       ref={containerRef}
-      className="pointer-events-auto relative flex h-full flex-col"
+      className="map-place-info-textbox-gradient pointer-events-auto relative flex h-full flex-col rounded-l-lg md:rounded-lg"
     >
       <ScrollArea
-        className="map-place-info-textbox-gradient simplebar-theme-map h-full rounded-l-lg pb-10 pl-1 pr-3 pt-2 md:rounded-lg lg:h-full"
+        className="simplebar-theme-map h-full pb-10 pl-1 pr-3 pt-2 lg:h-full"
         noX
       >
         <EncounterMonsContainer selectedTab={selectedTab} />
