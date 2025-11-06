@@ -63,29 +63,27 @@ PR5 is smooth, girly
   font-display: swap;
 }
 @font-face {
-  font-family: "Kaisho-Bold";
-  src: url("/fonts/HOT-TKaishoPr5-U.woff2") format("woff2");
-  /*font-weight: 600;*/
+  font-family: "Heliotrope";
+  src: url("/fonts/heliotrope_4_regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @theme {
-  --font-jap: "bailufeiyunshouxieti", sans-serif;
   --font-pixel: "Kaisho", sans-serif;
-  --font-calamity: "Kaisho-Bold", sans-serif;
-  --font-pkmnem: "Kaisho", sans-serif;
+  --font-calamity: "Kaisho", sans-serif;
+  --font-pkmnem: "NBit", sans-serif;
   --font-pkmnem-short: "Emerald-Short", sans-serif;
 }
-.font-pkmnem {
+/*.font-pkmnem {
   font-family: "Kaisho", sans-serif;
   font-weight: 400;
   /*text-rendering: optimizeSpeed;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;*/
-  /*opacity: 0.99;*/
-  font-smooth: always;
-}
+/*opacity: 0.99;*/
+/*font-smooth: always;*/
 
 /* Apply text shadow only on Windows */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
