@@ -52,39 +52,47 @@ const ItemsBox = memo(function ItemsBox() {
   useEffect(() => {
     if (!headerRef.current) return;
 
-    const headerElement = headerRef.current; // The sticky div container
-    if (!headerElement) return;
+    const headerElement = headerRef.current;
 
     // Cancel any existing animation
     const existingAnimations = headerElement.getAnimations();
     existingAnimations.forEach((animation) => animation.cancel());
 
-    // Target opacity based on overlay state
-    const targetOpacity = isHeaderOverlaying ? 0.1 : 1;
-    const targetBackdropFilter = isHeaderOverlaying ? "blur(8px)" : "blur(0px)";
+    // Use rAF to ensure animation starts on next frame
+    const animationFrame = requestAnimationFrame(() => {
+      const targetOpacity = isHeaderOverlaying ? 0.1 : 1;
+      const targetBackdropFilter = isHeaderOverlaying
+        ? "blur(8px)"
+        : "blur(0px)";
 
-    // Animate opacity and backdrop blur
-    const animation = headerElement.animate(
-      [
-        {
-          opacity: headerElement.style.opacity || "1",
-          backdropFilter: headerElement.style.backdropFilter || "blur(0px)",
-        },
-        {
-          opacity: targetOpacity.toString(),
-          backdropFilter: targetBackdropFilter,
-        },
-      ],
-      {
-        duration: 200,
-        easing: "cubic-bezier(0.2, 0, 0, 1)",
-        fill: "forwards",
-      },
-    );
+      const currentOpacity = window.getComputedStyle(headerElement).opacity;
+      const currentBackdropFilter =
+        window.getComputedStyle(headerElement).backdropFilter;
 
-    // Clean up on unmount
+      headerElement.animate(
+        [
+          {
+            opacity: currentOpacity,
+            backdropFilter:
+              currentBackdropFilter === "none"
+                ? "blur(0px)"
+                : currentBackdropFilter,
+          },
+          {
+            opacity: targetOpacity.toString(),
+            backdropFilter: targetBackdropFilter,
+          },
+        ],
+        {
+          duration: 200,
+          easing: "cubic-bezier(0.2, 0, 0, 1)",
+          fill: "forwards",
+        },
+      );
+    });
+
     return () => {
-      animation.cancel();
+      cancelAnimationFrame(animationFrame);
     };
   }, [isHeaderOverlaying]);
 
@@ -99,7 +107,7 @@ const ItemsBox = memo(function ItemsBox() {
       >
         <span className="flex min-w-0 flex-row items-center justify-center gap-3">
           {mapLabel && (
-            <h2 className="font-calamity min-w-0 truncate pr-2 text-left font-bold text-neutral-700 transition-colors">
+            <h2 className="font-calamity pb-2 min-w-0 truncate pr-2 text-left font-bold text-stone-50 text-shadow-xs transition-colors">
               {mapLabel}
             </h2>
           )}

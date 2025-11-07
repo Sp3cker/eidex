@@ -5,39 +5,7 @@
 :root {
   --trainer-size: 2rem;
   --scale: calc(var(--trainer-size) / 32px);
-
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
   --color-rare: hsl(44, 61%, 50%);
   --color-elite: hsl(275, 41%, 54%);
   --color-normal: hsl(223, 8%, 82%);
@@ -48,6 +16,8 @@
   );
   --color-very-hard-start: oklch(0.65 0.2 25);
   --color-blue-text: var(--color-blue-800);
+
+  /* Hearth */
 }
 
 @supports (color: color(display-p3 0.55 0.19 0.71)) {
@@ -89,37 +59,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  
 }
 
 body {
@@ -381,37 +321,7 @@ input[type="number"] {
     color: #444851; /*  gray-500 */
     cursor: not-allowed;
   }
-  /* For scrollable containers: keep gutter + auto-hide visuals
-  USED ON ELEMENTS THAT OVERFLOW, LIKE MAPPLACEINFO AND ITEMSBOX */
-  /* .scroll-auto-gutter {
-    overflow: auto;
-    scrollbar-gutter: stable;
-    scrollbar-width: thin;
-    scrollbar-color: transparent transparent;
-  }
 
-  .scroll-auto-gutter:hover,
-  .scroll-auto-gutter:focus-within,
-  .scroll-auto-gutter.is-scrolling {
-    scrollbar-color: rgba(120, 120, 120, 0.6) transparent;
-  }
-
-  .scroll-auto-gutter::-webkit-scrollbar {
-    width: 12px; 
-    background: transparent;
-  }
-  .scroll-auto-gutter::-webkit-scrollbar-thumb {
-    background-color: transparent;
-    border-radius: 8px;
-  }
-  .scroll-auto-gutter:hover::-webkit-scrollbar-thumb,
-  .scroll-auto-gutter:focus-within::-webkit-scrollbar-thumb,
-  .scroll-auto-gutter.is-scrolling::-webkit-scrollbar-thumb {
-    background-color: rgba(120, 120, 120, 0.6);
-  }
-  .scroll-gutter-pad {
-    padding-inline-end: var(--scrollbar-size, 12px);
-  } */
   html {
     /* scrollbar-gutter: stable; */
     /* ::-webkit-scrollbar height:0; */
@@ -497,7 +407,7 @@ input[type="number"] {
     @apply border-border outline-ring/50;
   } */
   body {
-    @apply bg-background text-foreground;
+
   }
   /* Hide scrollbar for Chrome, Safari and Opera */
   html {

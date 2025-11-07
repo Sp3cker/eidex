@@ -17,19 +17,38 @@
 }
 
 .map-place-info-textbox-gradient {
-  background-image: linear-gradient(in oklab 129deg, #f8efe7, #dfd6ce);
-  /*box-shadow:
-    -0.15em -0.15em 0.15em -0.075em rgba(5, 5, 5, 0.25),
-    0.0375em 0.0375em 0.0675em 0 rgba(5, 5, 5, 0.1);*/
+  position: relative;
+  background-image:
+    radial-gradient(in oklab ellipse 174% 55% at center 30%, #f9ece0 75%, #f9ece0 35.5%, transparent 35.5%),
+    radial-gradient(in oklab ellipse 174% 55% at center 36%, #f8e9d8 80%, #f8e9d8 50.5%, transparent 50.5%),
+    radial-gradient(in oklab ellipse 174% 55% at center 50%, #f7e7d1 65%, #f7e7d1 70.5%, transparent 70.5%),
+    radial-gradient(in oklab ellipse 150% 60% at center 50%, #f8e9d8 75%, #D1B587 100%);
+    /* radial-gradient(in oklab ellipse 174% 75% at center 74%, #e7d3b1 85%, #e7d3b1 100%); */
   background-clip: padding-box;
-  border-width: 0.5px;
+  border-width: 0.5px;  
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 8px 16px -4px rgba(0, 0, 0, 0.15),
+    inset 0 -20px 30px -10px rgba(180, 150, 120, 1);
   border-color: rgba(117, 87, 74, 0.2);
+}
+
+.map-place-info-textbox-gradient::before {
+  content: '';
+  position: absolute;
+  box-shadow: inset -1px -2px 0 -1px rgba(255, 255, 255, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3rem; /* Adjust bar height */
+  background: linear-gradient(in oklab to bottom, #8CA59C 0%, #8CA59C 100%);
+  pointer-events: none;
 }
 
 .tab-list {
   padding-top: 0.2rem;
   padding-bottom: 0.1rem;
-  border-top: 1px solid #ccc;
+  /* border-top: 1px solid #ccc; */
 }
 .tab-label {
   font-weight: bold;

@@ -43,16 +43,16 @@ const MapContainer = ({ children }: any) => {
         ? [-3 * rootFontSize, 3 * rootFontSize]
         : [3 * rootFontSize, 4 * rootFontSize];
 
-    if (selectedCoordinates && mapRef.current) {
-      const [x, y] = selectedCoordinates;
-      // Use center positioning for default coordinates, otherwise offset toward upper-left
-      const offsetFactor = x === 400 && y === 340 ? 0.5 : 0.375; // 0.5 = center, 0.375 = 3/8 toward upper-left
-      currentTargetCenterOffset[0] =
-        WINDOW_WIDTH * offsetFactor - x - xyScales[0];
-      currentTargetCenterOffset[1] =
-        WINDOW_HEIGHT * offsetFactor - y - xyScales[1];
-      currentSpringDelay = 113; // Specific delay for this case
-    }
+    // if (selectedCoordinates && mapRef.current) {
+    //   const [x, y] = selectedCoordinates;
+    //   // Use center positioning for default coordinates, otherwise offset toward upper-left
+    //   const offsetFactor = x === 400 && y === 340 ? 0.5 : 0.375; // 0.5 = center, 0.375 = 3/8 toward upper-left
+    //   currentTargetCenterOffset[0] =
+    //     WINDOW_WIDTH * offsetFactor - x - xyScales[0];
+    //   currentTargetCenterOffset[1] =
+    //     WINDOW_HEIGHT * offsetFactor - y - xyScales[1];
+    //   currentSpringDelay = 113; // Specific delay for this case
+    // }
 
     return {
       scale: 1.32,
