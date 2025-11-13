@@ -26,11 +26,11 @@ export interface Trainer {
   hard?: boolean; // Optional, if this trainer is a hard fight
   level: string; // Can be used to group into level encountered at
   party: TrainerPartyMon[];
-  youPicked?: "Treecko" | "Torchic" | "Mudkip"; // Optional, only for rival trainers
+  youPicked?: "Froakie" | "Cyndaquil" | "Snivy"; // Optional, only for rival trainers
   rematch?: true; // If battle is rematch.
 }
 export type RivalTrainer = Omit<Trainer, "party" | "youPicked"> & {
-  parties: Record<"Treecko" | "Torchic" | "Mudkip", any[]>;
+  parties: Record<"Froakie" | "Cyndaquil" | "Snivy", any[]>;
 };
 
 export type DisplayTrainer = Trainer | RivalTrainer;

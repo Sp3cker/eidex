@@ -1,4 +1,4 @@
-import defaultEncounters from "./encounters.json" with { type: "json" };
+import defaultEncounters from "./wild_encounters.json" with { type: "json" };
 import mapConstants from "./map_constants.json" with { type: "json" };
 import { randomizeSpeciesForSlot } from "../../lib/randomiser/engine.ts";
 import { RandomizerSpeciesMode } from "../../lib/randomiser/SpeciesTable.ts";

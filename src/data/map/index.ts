@@ -1,5 +1,5 @@
 import levels from "./levels.json";
-import items from "./merged-items.json";
+import items from "./items.json";
 
 type EncounterListing = {
   min_level: number;
