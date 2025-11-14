@@ -3,48 +3,8 @@ import { useMapStore } from "@/stores/useMapStore";
 import {
   getTrainersForMap,
   getCachedTrainersForMap,
-  type Trainer,
-  type RivalTrainer,
   DisplayTrainer,
 } from "@/data/map/trainers";
-
-function groupRivals(trainers: Trainer[]): DisplayTrainer[] {
-  const result = trainers.reduce(
-    (acc, trainer) => {
-      if (trainer.youPicked) {
-        // Build parties object for rival trainers
-        acc.rivalParties[trainer.youPicked] = trainer.party;
-
-        // Store the first rival as base for consolidation
-        if (!acc.baseRival) {
-          acc.baseRival = trainer;
-        }
-      } else {
-        // Add regular trainers directly
-        acc.regularTrainers.push(trainer);
-      }
-      return acc;
-    },
-    {
-      regularTrainers: [] as DisplayTrainer[],
-      rivalParties: {} as Record<"Treecko" | "Torchic" | "Mudkip", unknown[]>,
-      baseRival: null as Trainer | null,
-    },
-  );
-
-  // Return regular trainers with consolidated rival if any rivals were found
-  return result.baseRival
-    ? [
-        ...result.regularTrainers,
-        {
-          ...result.baseRival,
-          trainerName: "Rival",
-          sprite: "may.webp",
-          parties: result.rivalParties,
-        } as RivalTrainer,
-      ]
-    : result.regularTrainers;
-}
 
 export const useTrainersData = () => {
   const selectedMap = useMapStore((state) => state.selectedMap);
@@ -58,11 +18,7 @@ export const useTrainersData = () => {
     // Check if we have cached data first
     const cachedTrainers = getCachedTrainersForMap(selectedMap);
     if (cachedTrainers.length > 0) {
-      setTrainers(
-        groupTrainersByLevel(
-          determineHardTrainers(groupRivals(cachedTrainers)),
-        ),
-      );
+      setTrainers(groupTrainersByLevel(determineHardTrainers(cachedTrainers)));
 
       return;
     }
@@ -76,9 +32,7 @@ export const useTrainersData = () => {
         const mapTrainers = await getTrainersForMap(selectedMap);
         startTransition(() => {
           setTrainers(
-            groupTrainersByLevel(
-              determineHardTrainers(groupRivals(mapTrainers)),
-            ),
+            groupTrainersByLevel(determineHardTrainers(mapTrainers)),
           );
         });
       } catch (err) {
@@ -125,30 +79,15 @@ export function groupTrainersByLevel(
         groups[level] = [];
       }
 
-      // Insert trainer in sorted position (Rival first, then alphabetical)
-      if (trainer.trainerName === "Rival") {
-        // Rival always goes first - find first non-Rival position
-        const firstNonRivalIndex = groups[level].findIndex(
-          (existing) => existing.trainerName !== "Rival",
-        );
-        if (firstNonRivalIndex === -1) {
-          groups[level].push(trainer);
-        } else {
-          groups[level].splice(firstNonRivalIndex, 0, trainer);
-        }
-      } else {
-        // For non-Rivals, find correct alphabetical position after any Rivals
-        const insertIndex = groups[level].findIndex(
-          (existing) =>
-            existing.trainerName !== "Rival" &&
-            existing.trainerName > trainer.trainerName,
-        );
+      const insertIndex = groups[level].findIndex(
+        (existing) =>
+          existing.trainerName.localeCompare(trainer.trainerName) > 0,
+      );
 
-        if (insertIndex === -1) {
-          groups[level].push(trainer);
-        } else {
-          groups[level].splice(insertIndex, 0, trainer);
-        }
+      if (insertIndex === -1) {
+        groups[level].push(trainer);
+      } else {
+        groups[level].splice(insertIndex, 0, trainer);
       }
 
       return groups;
@@ -160,9 +99,17 @@ export function groupTrainersByLevel(
 const determineHardTrainers = (
   trainers: DisplayTrainer[],
 ): DisplayTrainer[] => {
+  const hardFlags = new Set([
+    "OMNISCIENT",
+    "ACE_POKEMON",
+    "SMART_TRAINER",
+    "SMARTISH_TRAINER",
+  ]);
+
   return trainers.map((trainer) => {
     // Determine if the trainer is "hard" based on some criteria
-    const hard = trainer.aiFlags && trainer.aiFlags.includes("OMNISCIENT");
+    const hard =
+      trainer.aiFlags && trainer.aiFlags.some((flag) => hardFlags.has(flag));
 
     return {
       ...trainer,

@@ -36,6 +36,9 @@ export const aiFlags: Record<string, TrainerAIFlag> = Object.freeze({
   SMART_MON_CHOICES: { desc: "Selects Pokémon wisely", rarity: 1 },
 
   ACE_POKEMON: { desc: "Reserves strongest Pokémon", rarity: 2 },
+  SMART_TRAINER: { desc: "Adapts to your team", rarity: 2 },
+  SMARTISH_TRAINER: { desc: "Occasionally plans ahead", rarity: 1 },
+  BASIC_TRAINER: { desc: "Standard AI routine", rarity: 0 },
 
   OMNISCIENT: { desc: "Knows your party", rarity: 3 },
 

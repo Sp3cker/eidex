@@ -115,7 +115,7 @@ const EncounterMonsList = React.memo(function EncounterList({
   const encounter = useEncounter(zone);
   if (!encounter || encounter.length === 0) {
     return (
-      <h4 className="font-pkmnem py-2 text-center text-sm/3 font-bold text-gray-500">
+      <h4 className="font-pkmnem py-2 text-center text-sm/3 font-bold text-[var(--color-misc-error)]">
         No {zone} encounters in this area.
       </h4>
     );

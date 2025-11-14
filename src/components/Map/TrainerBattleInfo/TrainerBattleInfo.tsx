@@ -1,6 +1,4 @@
-import { memo, useDeferredValue, lazy, Suspense, useCallback } from "react";
-const PartyMon = lazy(() => import("./PartyMons/PartyMon"));
-
+import { memo, useDeferredValue, useCallback } from "react";
 import TrainerInfo from "./TrainerInfo";
 import useMapStore from "@/stores/useMapStore";
 import PartyMons from "./PartyMons";
@@ -25,8 +23,6 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
   if (!trainer) {
     return null;
   }
-  // Check if this is a rival trainer with multiple parties
-  const isRivalTrainer = "parties" in trainer;
   const isRainbowName = rainbowNames.includes(trainer.trainerName);
 
   return (
@@ -49,40 +45,7 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
       </div>
 
       <div className="font-pkmnem space-y-4 overflow-y-auto text-lg">
-        {isRivalTrainer ? (
-          // Rival trainer with multiple parties
-          <div className="space-y-4">
-            {Object.entries(trainer.parties).map(([starter, party]) => (
-              <div key={starter} className="rounded-lg border p-3">
-                <h4 className="mb-2 font-bold text-gray-700">
-                  If you chose {starter}
-                </h4>
-                <div className="grid gap-2">
-                  {party.map((pokemon, index) => (
-                    <Suspense
-                      key={index}
-                      fallback={
-                        <div className="h-24 animate-pulse rounded bg-gray-200" />
-                      }
-                    >
-                      <PartyMon pokemon={pokemon} />
-                    </Suspense>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          // Regular trainer party
-
-          <Suspense
-            fallback={
-              <div className="h-24 animate-pulse rounded bg-gray-200" />
-            }
-          >
-            <PartyMons party={trainer.party} />
-          </Suspense>
-        )}
+        <PartyMons party={trainer.party} />
       </div>
     </div>
   );

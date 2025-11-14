@@ -1,41 +1,174 @@
+import { pokemonData } from "@/data/pokemon";
+import moveData from "@/data/moveData.json";
+import abilityData from "@/data/abilityData.json";
+
 // Lazy-loaded trainers data store
 let trainersData: Record<string, Trainer[]> | null = null;
 let isLoading = false;
 let loadPromise: Promise<Record<string, Trainer[]>> | null = null;
-export type TrainerPartyMon = {
-  moves?: number[];
-  lvl?: number;
-  id: number;
-  ev?: number[];
-  iv?: boolean;
-  nature?: string;
-  ability?: number[];
-  item?: string;
-  hpType?: number; // Only if they have hidden power move.
+
+const DEFAULT_EVS = [0, 0, 0, 0, 0, 0];
+
+type RawTrainerPokemon = {
+  species: string;
+  nickname?: string | null;
+  gender?: string;
+  level: number;
+  item?: string | null;
+  ability?: string | null;
+  nature?: string | null;
+  ball?: string | null;
+  friendship?: number | null;
+  shiny?: boolean;
+  dynamaxLevel?: number | null;
+  gigantamaxFactor?: boolean;
+  teraType?: string | null;
+  evs?: number[];
+  ivs?: number[];
+  moves?: string[];
+  tags?: string[];
+  hpType?: number | null;
 };
+
+type RawTrainer = {
+  battlePic: string;
+  id: string;
+  name: string;
+  sprite: string;
+  aiFlags: string[];
+  items: string[];
+  level: string;
+  party: RawTrainerPokemon[];
+};
+
+type RawTrainerData = Record<string, RawTrainer[]>;
+
+export type TrainerPartyMon = {
+  id: number;
+  lvl: number;
+  moves: number[];
+  ev: number[];
+  ivs?: number[];
+  iv?: boolean;
+  nature: string;
+  ability?: number[];
+  item?: string | null;
+  hpType?: number;
+  gender?: string;
+  shiny?: boolean;
+  tags?: string[];
+  ball?: string | null;
+  nickname?: string | null;
+};
+
 /** Trainer data loaded from `trainers.json` */
 export interface Trainer {
   id: string;
   trainerName: string;
-  script: string;
-  coords: [number, number];
   battlePic: string;
-  doubleBattle?: boolean;
   aiFlags: string[];
   sprite: string;
-  hard?: boolean; // Optional, if this trainer is a hard fight
-  level: string; // Can be used to group into level encountered at
+  hard?: boolean;
+  level: string;
   party: TrainerPartyMon[];
-  youPicked?: "Froakie" | "Cyndaquil" | "Snivy"; // Optional, only for rival trainers
-  rematch?: true; // If battle is rematch.
+  items: string[];
 }
-export type RivalTrainer = Omit<Trainer, "party" | "youPicked"> & {
-  parties: Record<"Froakie" | "Cyndaquil" | "Snivy", any[]>;
+
+export type DisplayTrainer = Trainer;
+
+const pokemonLookup = new Map<string, number>();
+for (const mon of pokemonData) {
+  if (mon.speciesName) {
+    pokemonLookup.set(mon.speciesName.toLowerCase(), mon.speciesId);
+  }
+  if (mon.nameKey) {
+    pokemonLookup.set(mon.nameKey.toLowerCase(), mon.speciesId);
+  }
+}
+
+const moveLookup = new Map<string, number>();
+for (const move of moveData) {
+  moveLookup.set(move.name.toLowerCase(), move.id);
+}
+
+const abilityLookup = new Map<string, number>();
+for (const ability of abilityData) {
+  abilityLookup.set(ability.name.toLowerCase(), ability.id);
+}
+
+const normalizeAiFlag = (flag: string): string => {
+  if (!flag) return "0";
+  return flag
+    .trim()
+    .toUpperCase()
+    .replace(/[^A-Z0-9]+/g, "_");
 };
 
-export type DisplayTrainer = Trainer | RivalTrainer;
+const toAbsoluteSpritePath = (relativePath: string): string => {
+  if (!relativePath) return "";
+  if (relativePath.startsWith("/")) {
+    return relativePath;
+  }
+  return `/icon/generated/${relativePath}`.replace(/\/{2,}/g, "/");
+};
 
-// Add more trainer properties as needed
+const toAbsoluteBattlePic = (relativePath: string): string => {
+  if (!relativePath) return "";
+  return relativePath.startsWith("/")
+    ? relativePath
+    : `/${relativePath}`.replace(/\/{2,}/g, "/");
+};
+
+const normalizePartyMon = (mon: RawTrainerPokemon): TrainerPartyMon => {
+  const speciesId =
+    pokemonLookup.get(mon.species?.toLowerCase?.() ?? "") ?? 0;
+  const moves =
+    mon.moves
+      ?.map((move) => moveLookup.get(move.toLowerCase()) || 0)
+      .filter((id): id is number => id > 0) ?? [];
+  const abilityId = mon.ability
+    ? abilityLookup.get(mon.ability.toLowerCase())
+    : undefined;
+
+  return {
+    id: speciesId,
+    lvl: mon.level ?? 1,
+    moves,
+    ev: mon.evs && mon.evs.length === 6 ? mon.evs : DEFAULT_EVS.slice(),
+    ivs: mon.ivs && mon.ivs.length === 6 ? mon.ivs : undefined,
+    nature: (mon.nature ?? "").toLowerCase(),
+    ability: abilityId ? [abilityId] : undefined,
+    item: mon.item ?? null,
+    hpType: mon.hpType ?? undefined,
+    gender: mon.gender,
+    shiny: mon.shiny ?? false,
+    tags: mon.tags ?? [],
+    ball: mon.ball ?? null,
+    nickname: mon.nickname ?? null,
+  };
+};
+
+const normalizeTrainer = (trainer: RawTrainer): Trainer => {
+  return {
+    id: trainer.id,
+    trainerName: trainer.name,
+    battlePic: toAbsoluteBattlePic(trainer.battlePic),
+    sprite: toAbsoluteSpritePath(trainer.sprite),
+    aiFlags: trainer.aiFlags?.map(normalizeAiFlag) ?? [],
+    items: trainer.items ?? [],
+    level: trainer.level ?? "Unknown",
+    party: trainer.party?.map(normalizePartyMon) ?? [],
+  };
+};
+
+const normalizeTrainerData = (
+  data: RawTrainerData,
+): Record<string, Trainer[]> => {
+  return Object.entries(data).reduce((acc, [mapId, trainers]) => {
+    acc[mapId] = trainers.map(normalizeTrainer);
+    return acc;
+  }, {} as Record<string, Trainer[]>);
+};
 
 // Lazy load trainers data only when first requested
 export const getTrainersData = async (): Promise<Record<string, Trainer[]>> => {
@@ -58,8 +191,8 @@ export const getTrainersData = async (): Promise<Record<string, Trainer[]>> => {
       }
       return response.json();
     })
-    .then((data: Record<string, Trainer[]>) => {
-      trainersData = data;
+    .then((data: RawTrainerData) => {
+      trainersData = normalizeTrainerData(data);
       isLoading = false;
       return trainersData;
     })

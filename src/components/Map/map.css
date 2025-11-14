@@ -19,17 +19,17 @@
 .map-place-info-textbox-gradient {
   position: relative;
   background-image:
-    radial-gradient(in oklab ellipse 174% 55% at center 30%, #f9ece0 75%, #f9ece0 35.5%, transparent 35.5%),
-    radial-gradient(in oklab ellipse 174% 55% at center 36%, #f8e9d8 80%, #f8e9d8 50.5%, transparent 50.5%),
-    radial-gradient(in oklab ellipse 174% 55% at center 50%, #f7e7d1 65%, #f7e7d1 70.5%, transparent 70.5%),
-    radial-gradient(in oklab ellipse 150% 60% at center 50%, #f8e9d8 75%, #D1B587 100%);
+    radial-gradient(in oklab ellipse 174% 55% at center 30%, #f9ece0 35%, #f8e9d8 85.5%,#f7e7d1 100%);
+    /* radial-gradient(in oklab ellipse 174% 55% at center 36%, #f8e9d8 80%, #f8e9d8 50.5%, transparent 50.5%),
+    radial-gradient(in oklab ellipse 174% 55% at center 50%, #f7e7d1 65%, #f7e7d1 70.5%, transparent 50.5%), */
+    /* radial-gradient(in oklab ellipse 150% 60% at center 50%, ); */
     /* radial-gradient(in oklab ellipse 174% 75% at center 74%, #e7d3b1 85%, #e7d3b1 100%); */
   background-clip: padding-box;
   border-width: 0.5px;  
-  box-shadow:
+  /* box-shadow:
     0 2px 4px rgba(0, 0, 0, 0.1),
     0 8px 16px -4px rgba(0, 0, 0, 0.15),
-    inset 0 -20px 30px -10px rgba(180, 150, 120, 1);
+    inset 0 -20px 30px -10px rgba(180, 150, 120, 1); */
   border-color: rgba(117, 87, 74, 0.2);
 }
 
@@ -41,7 +41,7 @@
   left: 0;
   right: 0;
   height: 3rem; /* Adjust bar height */
-  background: linear-gradient(in oklab to bottom, #8CA59C 0%, #8CA59C 100%);
+  background: linear-gradient(in oklab to bottom, #F7F0E7 0%, #F7F0E7 100%);
   pointer-events: none;
 }
 

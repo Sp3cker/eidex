@@ -109,7 +109,7 @@ const MapContainer = ({ children }: any) => {
   return (
     <div
       ref={targetRef}
-      className="fade-in map-grid font-calamity z-0 w-full cursor-move touch-none overflow-auto bg-[#0082CA]"
+      className="fade-in map-grid font-calamity z-0 w-full cursor-move touch-none overflow-auto bg-[var(--hearth-gray-2)]"
     >
       <animated.div
         ref={mapRef}

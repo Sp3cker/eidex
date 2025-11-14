@@ -12,11 +12,9 @@ export const updateTrainerHelmet = (
   const trainerTitle = `${selectedTrainer.trainerName} - ${mapName || 'Map'} Trainer Battle`;
   
   // Handle both regular trainers and rival trainers
-  const partyCount = 'party' in selectedTrainer 
-    ? selectedTrainer.party.length 
-    : Object.keys(selectedTrainer.parties).length;
+  const partyCount = selectedTrainer.party.length;
   
-  const trainerDescription = `Battle against ${selectedTrainer.trainerName} with ${partyCount} Pokémon. ${selectedTrainer.rematch ? 'Rematch battle available.' : ''}`;
+  const trainerDescription = `Battle against ${selectedTrainer.trainerName} with ${partyCount} Pokémon.`;
 
   // Update document head directly
   document.title = trainerTitle;

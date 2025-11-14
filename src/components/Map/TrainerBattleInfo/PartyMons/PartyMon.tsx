@@ -29,7 +29,8 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
   const level = pokemon.lvl ?? 1;
   const evs = pokemon.ev ?? [0, 0, 0, 0, 0, 0];
   const nature = pokemon.nature ?? "";
-  const hasIvs = pokemon.iv !== undefined;
+  const ivs =
+    pokemon.ivs ?? (pokemon.iv ? [31, 31, 31, 31, 31, 31] : undefined);
 
   const pokemonInfo = pokemonFormattedData(pokemon.id);
   const abilities = pokemon.ability || pokemonInfo.abilities;
@@ -40,9 +41,10 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
       getMoveDetails(
         getPokemonMoveIdsAtLevel(pokemon.id, level, pokemon.moves).filter(
           (m) => m !== 0,
-        ), pokemon.hpType 
+        ),
+        pokemon.hpType,
       ),
-    [pokemon.id, level],
+    [pokemon.id, level, pokemon.moves, pokemon.hpType],
   );
 
   const levelIsLevelCap = level > 199;
@@ -96,7 +98,7 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
         <PartyMonsStats
           level={level}
           id={pokemon.id}
-          hasIvs={hasIvs}
+          ivs={ivs}
           evs={evs}
           nature={nature}
         />

@@ -72,7 +72,7 @@ function applyNatureAdjustments(
 export function calculateStatsOld(
   speciesId: number,
   level: number,
-  iv: boolean,
+  iv: boolean | number[] | undefined,
   ev: number[] = [0, 0, 0, 0, 0, 0],
   nature: string, // "" on no nature
 ): [number[], number, number] | null {
@@ -80,7 +80,9 @@ export function calculateStatsOld(
   if (!species) return null;
 
   const scaledLevel = level;
-  const ivValue = iv ? 31 : 0;
+  const ivValues = Array.isArray(iv)
+    ? iv
+    : Array(6).fill(iv ? 31 : 0);
 
   // Base stats from species with reordered Special Attack and Speed
   const baseStats = species.stats;
@@ -92,28 +94,29 @@ export function calculateStatsOld(
 
   const hp =
     Math.floor(
-      ((2 * baseStats[0] + ivValue + Math.floor(ev[0] / 4)) * scaledLevel) /
+      ((2 * baseStats[0] + (ivValues[0] ?? 0) + Math.floor(ev[0] / 4)) *
+        scaledLevel) /
         100,
     ) +
     scaledLevel +
     10;
 
   // Other stats (attack, defense, etc.)
-  const calcStat = (base: number, ivValue: number, ev: number) =>
+  const calcStat = (base: number, ivValue: number, evValue: number) =>
     Math.floor(
       Math.floor(
-        ((2 * base + ivValue + Math.floor(ev / 4)) * scaledLevel) / 100,
+        ((2 * base + ivValue + Math.floor(evValue / 4)) * scaledLevel) / 100,
       ) + 5,
     );
 
   return applyNatureAdjustments(
     [
       hp,
-      calcStat(baseStats[1], ivValue, ev[1]),
-      calcStat(baseStats[2], ivValue, ev[2]),
-      calcStat(baseStats[3], ivValue, ev[3]),
-      calcStat(baseStats[4], ivValue, ev[4]),
-      calcStat(baseStats[5], ivValue, ev[5]),
+      calcStat(baseStats[1], ivValues[1] ?? 0, ev[1]),
+      calcStat(baseStats[2], ivValues[2] ?? 0, ev[2]),
+      calcStat(baseStats[3], ivValues[3] ?? 0, ev[3]),
+      calcStat(baseStats[4], ivValues[4] ?? 0, ev[4]),
+      calcStat(baseStats[5], ivValues[5] ?? 0, ev[5]),
     ],
     nature,
   );

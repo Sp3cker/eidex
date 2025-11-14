@@ -51,6 +51,7 @@ PR5 is smooth, girly
 @font-face {
   font-family: "Kaisho";
   src: url("/fonts/HOT-TKaishoPr5-U.woff2") format("woff2");
+  /* src: url("/fonts/KouzanBrushFontSousyo.ttf") format("truetype"); */
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -64,8 +65,8 @@ PR5 is smooth, girly
 }
 
 @theme {
-  --font-pixel: "PP Mondwest", sans-serif;
-  --font-calamity: "Kaisho", sans-serif;
+  --font-pixel: "Hatto", sans-serif;
+  --font-calamity: "Hatto", sans-serif;
   --font-pkmnem: "PP Mondwest", sans-serif;
   --font-pkmnem-short: "Emerald-Short", sans-serif;
 }
@@ -73,9 +74,9 @@ PR5 is smooth, girly
   font-weight: 400;
   text-rendering: optimizeLegibility;
   /*-webkit-font-smoothing: antialiased;*/
-  -moz-osx-font-smoothing: grayscale;
+  /* -moz-osx-font-smoothing: grayscale; */
   /*opacity: 0.99;*/
-  font-smooth: never;
+  /* font-smooth: never; */
 } /*font-smooth: always;
 }
 

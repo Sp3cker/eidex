@@ -40,7 +40,7 @@ const HeaderButtons = () => {
 };
 const Header = () => {
   return (
-    <div className="content-visibility relative flex w-full items-center justify-between bg-gray-800 px-1 py-1">
+    <div className="content-visibility relative flex w-full items-center justify-between bg-[#4A494A] px-1 py-1">
       <div className="flex flex-row items-center gap-1">
         <img
           src="/Pokemans_395.webp"

@@ -4,7 +4,7 @@ import { Item, ItemWithAmount } from "@/data/map";
 const ItemListRender = (showPrice: boolean) => (item: ItemWithAmount) => (
   <hgroup className="min-w-0">
     <div className="flex min-w-0 flex-row items-start justify-between gap-2">
-      <h3 className="font-pixel text-shadow-2xs min-w-0 flex-1 break-words pl-1 font-light md:text-sm">
+      <h3 className="font-pixel text-shadow-2xs min-w-0 flex-1 break-words pl-1 font-light text-xs md:text-sm">
         {(item as { name?: string }).name || "Unnamed"}
       </h3>
       <p className="font-pkmnem text-shadow-xs shrink-0 pr-4 leading-4">
@@ -12,7 +12,7 @@ const ItemListRender = (showPrice: boolean) => (item: ItemWithAmount) => (
       </p>
     </div>
     {(item as { description?: string }).description && (
-      <p className="font-pkmnem text-shadow-2xs break-words pl-1 text-sm leading-3 md:leading-4">
+      <p className="font-pkmnem text-shadow-2xs break-words pl-1 text-sm md:text-base leading-3 md:leading-4">
         {(item as { description?: string }).description}
       </p>
     )}

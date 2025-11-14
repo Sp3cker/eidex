@@ -6,14 +6,13 @@ type EncounterListing = {
   max_level: number;
   species: number;
   name: string;
-
 };
 export type TrainerRef = { id: string; script: string };
 export type LevelMart = {
   label: string;
   mart: string;
   items: string[];
-  levelLabel: string;
+
   scriptname: string;
 };
 
@@ -130,7 +129,7 @@ export type PickupItem = Level["pickupItems"][number];
 function processLevelsInfo(): Record<string, Level[]> {
   const rawLevels = levels as Record<string, RawLevel[]>;
   const processed: Record<string, Level[]> = {};
-// PREPROCESS SCRIPTED GIVES, ASSIGN DESCRIPTION
+  // PREPROCESS SCRIPTED GIVES, ASSIGN DESCRIPTION
   for (const mapName in rawLevels) {
     if (Object.prototype.hasOwnProperty.call(rawLevels, mapName)) {
       processed[mapName] = rawLevels[mapName].map((level: RawLevel) => {

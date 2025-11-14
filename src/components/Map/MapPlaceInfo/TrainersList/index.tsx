@@ -19,7 +19,7 @@ const TrainerItem = memo(function TrainerItem({
 
   return (
     <div
-      className={`white-box h-8 w-full cursor-pointer rounded-sm border md:rounded-lg ${trainer.rematch ? "border-red-500" : "border-gray-600"} text-left transition-colors hover:bg-gray-50`}
+      className="white-box h-8 w-full cursor-pointer rounded-sm border border-gray-600 text-left transition-colors hover:bg-gray-50 md:rounded-lg"
       onClick={handleClick}
     >
       <div className="flex items-center justify-between">
@@ -27,7 +27,7 @@ const TrainerItem = memo(function TrainerItem({
           <div className="pixelated -mt-2 mb-1 size-8 overflow-hidden drop-shadow-md">
             <img
               className="object-cover"
-              src={`/trainers/48/${trainer.sprite}`}
+              src={trainer.sprite}
             />
           </div>
           <div>
@@ -63,7 +63,7 @@ const TrainersOnLevelList = ({
         {trainers.length > 0 &&
           trainers.map((trainer) => (
             <TrainerItem
-              key={trainer.trainerName + trainer.script}
+              key={trainer.id}
               trainer={trainer}
             />
           ))}

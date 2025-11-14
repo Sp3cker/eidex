@@ -4,16 +4,16 @@ import { calculateStatsOld } from "@/utils/calcStatsByLevel";
 type StatsProps = {
   id: number;
   level: number;
-  hasIvs: boolean;
   evs: number[];
+  ivs?: number[];
   nature: string;
 };
 
 const PartyMonsStats = memo(function PartyMonsStats({
   id,
   level,
-  hasIvs,
   evs,
+  ivs,
   nature,
 }: StatsProps) {
   const currLevelCap = capStore.use.currentCap();
@@ -21,8 +21,9 @@ const PartyMonsStats = memo(function PartyMonsStats({
     // If mon is above level cap, scale it down to the cap and
     // apply delta to calc its level.
     const scaledLevel = level > 199 ? currLevelCap - (200 - level) : level;
-    return calculateStatsOld(id, scaledLevel, hasIvs, evs, nature);
-  }, [id, currLevelCap, hasIvs, evs, nature]);
+    const ivInput = ivs && ivs.length === 6 ? ivs : undefined;
+    return calculateStatsOld(id, scaledLevel, ivInput, evs, nature);
+  }, [id, currLevelCap, evs, ivs, level, nature]);
   if (!stats || stats[0] === undefined) {
     return null;
   }

@@ -117,7 +117,7 @@ const TrainerInfo = memo(function TrainerInfo({
       <div className="sm:max-w-30 flex max-w-20 items-start gap-2">
         <div className="relative flex flex-col">
           <img
-            src={`/trainers/${battlePic}`}
+            src={battlePic}
             alt={trainerName}
             className="md:h-25 md:w-25 h-21 w-21 object-cover drop-shadow-md"
             style={imageStyles}
