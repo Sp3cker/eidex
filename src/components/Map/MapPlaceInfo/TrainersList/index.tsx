@@ -2,6 +2,7 @@ import { memo, startTransition, Suspense } from "react";
 import { useTrainersData } from "./useTrainersData";
 import useMapStore from "@/stores/useMapStore";
 import { DisplayTrainer } from "@/data/map/trainers";
+import { formatMapString } from "@/utils/formatMapString";
 // import TrainerBattleInfo from "../../TrainerBattleInfo";
 
 // Component to render individual trainer item
@@ -25,10 +26,7 @@ const TrainerItem = memo(function TrainerItem({
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-0">
           <div className="pixelated -mt-2 mb-1 size-8 overflow-hidden drop-shadow-md">
-            <img
-              className="object-cover"
-              src={trainer.sprite}
-            />
+            <img className="object-cover" src={trainer.sprite} />
           </div>
           <div>
             <h3 className="font-calamity text-xs font-bold leading-tight text-neutral-700 md:text-sm">
@@ -56,16 +54,13 @@ const TrainersOnLevelList = ({
 }) => {
   return (
     <section>
-      <h3 className="font-calamity md:text-md py-2 pb-1 text-xs/4 font-bold tracking-tight text-stone-800">
-        {levelLabel}
+      <h3 className="font-calamity py-1 pb-2 text-sm font-bold tracking-tight text-stone-800">
+        {formatMapString(levelLabel)}
       </h3>
       <div className="h-full space-y-2">
         {trainers.length > 0 &&
           trainers.map((trainer) => (
-            <TrainerItem
-              key={trainer.id}
-              trainer={trainer}
-            />
+            <TrainerItem key={trainer.id} trainer={trainer} />
           ))}
       </div>
     </section>

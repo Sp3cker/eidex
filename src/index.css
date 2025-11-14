@@ -23,10 +23,11 @@
   --hearth-orange-3: color(display-p3 0.906 0.612 0.29 / 1.0);
   --hearth-brown-1: color(display-p3 0.482 0.388 0.29 / 1.0);
   --hearth-brown-2: color(display-p3 0.388 0.29 0.224 / 1.0);
-  --color-stone-800: color(display-p3 0.184 0.196 0.157 / 1.0);
-  --color-stone-700: #464F45;
-  --color-stone-600: color(display-p3 0.306 0.345 0.31 / 1.0);
-  --color-stone-500: color(display-p3 0.427 0.498 0.459 / 1.0);
+  --color-stone-800: #2F3228;
+  --color-stone-700: #3e4137;
+  --color-stone-600: #464F45;
+  --color-stone-500: color(display-p3 0.306 0.345 0.31 / 1.0);
+  --color-stone-400: color(display-p3 0.427 0.498 0.459 / 1.0);
   --color-gray-700: var(--color-stone-700);
   --color-gray-600: var(--color-stone-600);
   --color-gray-500: var(--color-stone-500);
@@ -153,7 +154,7 @@ input[type="number"] {
     @apply border border-neutral-600 bg-neutral-900/30;
   }
   .pixelated {
-    image-rendering: pixelated;
+    image-rendering: crisp-edges;
   }
   @media (max-resolution: 125dpi) {
     .pixelated {
