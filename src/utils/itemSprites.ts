@@ -2,12 +2,12 @@
 import spritesheetCoords from "@/data/spritesheet-coords-16.json";
 
 interface SpriteCoordinate {
-  item: string;
+  item: number;
   coords: number[]; // JSON has number[] not tuple
 }
 
 // Create a map for O(1) lookups
-const coordsMap = new Map<string, [number, number]>();
+const coordsMap = new Map<number, [number, number]>();
 spritesheetCoords.forEach((coord: SpriteCoordinate) => {
   // Convert to tuple
   coordsMap.set(coord.item, [coord.coords[0], coord.coords[1]]);
@@ -20,7 +20,7 @@ spritesheetCoords.forEach((coord: SpriteCoordinate) => {
  * @param itemId - The item ID in ITEM_ format (e.g., "ITEM_POKE_BALL")
  * @returns [x, y] coordinates or null if not found
  */
-export function getItemSpriteCoords(itemId: string): [number, number] | null {
+export function getItemSpriteCoords(itemId: number): [number, number] | null {
   const coords = coordsMap.get(itemId);
   return coords || null;
 }
@@ -32,7 +32,7 @@ export function getItemSpriteCoords(itemId: string): [number, number] | null {
  * @returns CSS background-position string or null if not found
  */
 export function getItemSpriteStyle(
-  itemId: string,
+  itemId: number,
   spriteSize: number,
 ): React.CSSProperties | null {
   const coords = getItemSpriteCoords(itemId);
@@ -60,11 +60,11 @@ export function getItemSpriteStyle(
 /**
  * Convenience functions for common sprite sizes
  */
-export const getItemSpriteStyle32 = (itemId: string) =>
+export const getItemSpriteStyle32 = (itemId: number) =>
   getItemSpriteStyle(itemId, 16);
-export const getItemSpriteStyle48 = (itemId: string) =>
+export const getItemSpriteStyle48 = (itemId: number) =>
   getItemSpriteStyle(itemId, 48);
-export const getItemSpriteStyle64 = (itemId: string) =>
+export const getItemSpriteStyle64 = (itemId: number) =>
   getItemSpriteStyle(itemId, 64);
 
 // /**
@@ -105,27 +105,27 @@ export const getItemSpriteStyle64 = (itemId: string) =>
  * )}
  */
 
-/**
- * Check if an item has a sprite available
- * @param itemId - The item ID in ITEM_ format
- * @returns true if sprite exists
- */
-export function hasItemSprite(itemId: string): boolean {
-  return getItemSpriteCoords(itemId) !== null;
-}
+// /**
+//  * Check if an item has a sprite available
+//  * @param itemId - The item ID in ITEM_ format
+//  * @returns true if sprite exists
+//  */
+// export function hasItemSprite(itemId: string): boolean {
+//   return getItemSpriteCoords(itemId) !== null;
+// }
 
-/**
- * Get all available item IDs in the spritesheet (for debugging)
- */
-export function getAvailableItemIds(): string[] {
-  return Array.from(coordsMap.keys()).sort();
-}
+// /**
+//  * Get all available item IDs in the spritesheet (for debugging)
+//  */
+// export function getAvailableItemIds(): string[] {
+//   return Array.from(coordsMap.keys()).sort();
+// }
 
 /**
  * Debug function to log sprite information
  * @param itemId - The item ID to debug
  */
-export function debugSprite(itemId: string): void {
+export function debugSprite(itemId: number): void {
   const coords = getItemSpriteCoords(itemId);
   const style32 = getItemSpriteStyle32(itemId);
   const style64 = getItemSpriteStyle64(itemId);

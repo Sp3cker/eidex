@@ -17,24 +17,19 @@ export type LevelMart = {
 };
 
 export type Item = {
-  id: string;
-  itemId: number;
+  id: number;
+  constantName: string;
   name: string;
   description: string;
   price: number | null;
   [key: string]: unknown;
 };
-
-export const Items = new Map<string, Item>(
+/** Map of item ID to Item details */
+export const Items = new Map<number, Item>(
   items
-    .filter((item) => item.id)
-    .map((item, index, arr) => {
-      if (item.id === "ITEM_EXP_ALL") {
-        arr[index].id = "ITEM_EXP_SHARE";
-      }
-      return item;
-    })
-    .map((item) => [item.id!, item]) as [string, Item][],
+    .filter((item) => item.constantName)
+
+    .map((item) => [item.id, item]),
 );
 
 export type ItemWithAmount = Item & {
@@ -86,14 +81,13 @@ export type LevelPickupItem = {
   item: string;
   type: string;
 };
-
+/* After we massage json data */
 export type Level = {
   baseMap: string;
   levelLabel: string;
   thisLevelsId: string;
   scriptedGives: LevelScriptedEvent[];
   shopItems: LevelMart[];
-  // trainers: LevelTrainer[];
   pickupItems: LevelPickupItem[];
   image: string;
 };

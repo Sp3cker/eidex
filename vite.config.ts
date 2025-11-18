@@ -11,14 +11,6 @@ import process from "node:process";
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const plugins = [
-    // visualizer({
-    //   filename: "report.html",
-    //   open: true,
-    //   template: "treemap", // or 'sunburst'
-    //   gzipSize: true,
-    //   brotliSize: true,
-    // }),
-
     react({
       babel: {
         plugins: [["babel-plugin-react-compiler", { target: "19" }]],
@@ -29,21 +21,25 @@ export default defineConfig(({ mode }) => {
       persistState: true,
       experimental: { headersAndRedirectsDevModeSupport: true },
     }),
+    fetchAssetsPlugin({
+      baseUrl: "https://asset.imperiummap.com",
+      files: [
+        "nbit-Regular.woff2",
+        "nbit-Bold.woff2",
+        "nbit-Regular.ttf",
+        "nbit-Bold.ttf",
+      ],
+      outputDir: "public/fonts/emerald-pro",
+    }) as any,
+    // visualizer({
+    //   filename: "report.html",
+    //   open: true,
+    //   template: "treemap", // or 'sunburst'
+    //   gzipSize: true,
+    //   brotliSize: true,
+    // }),
   ];
-  if (mode !== "test" && !process.env.VITEST) {
-    plugins.push(
-      fetchAssetsPlugin({
-        baseUrl: "https://asset.imperiummap.com",
-        files: [
-          "nbit-Regular.woff2",
-          "nbit-Bold.woff2",
-          "nbit-Regular.ttf",
-          "nbit-Bold.ttf",
-        ],
-        outputDir: "public/fonts/emerald-pro",
-      }) as any,
-    );
-  }
+
   return {
     plugins,
     server: {
