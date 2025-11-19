@@ -20,18 +20,18 @@
   --hearth-gray-2: color(display-p3 0.482 0.451 0.388 / 1) /* Hearth */;
   --hearth-orange-1: color(display-p3 1 0.906 0.71 / 1);
   --hearth-orange-2: color(display-p3 1 0.839 0.549 / 1);
-  --hearth-orange-3: color(display-p3 0.906 0.612 0.29 / 1.0);
-  --hearth-brown-1: color(display-p3 0.482 0.388 0.29 / 1.0);
-  --hearth-brown-2: color(display-p3 0.388 0.29 0.224 / 1.0);
-  --color-stone-800: #2F3228;
+  --hearth-orange-3: color(display-p3 0.906 0.612 0.29 / 1);
+  --hearth-brown-1: color(display-p3 0.482 0.388 0.29 / 1);
+  --hearth-brown-2: color(display-p3 0.388 0.29 0.224 / 1);
+  --color-stone-800: #2f3228;
   --color-stone-700: #3e4137;
-  --color-stone-600: #464F45;
-  --color-stone-500: color(display-p3 0.306 0.345 0.31 / 1.0);
-  --color-stone-400: color(display-p3 0.427 0.498 0.459 / 1.0);
+  --color-stone-600: #464f45;
+  --color-stone-500: color(display-p3 0.306 0.345 0.31 / 1);
+  --color-stone-400: color(display-p3 0.427 0.498 0.459 / 1);
   --color-gray-700: var(--color-stone-700);
   --color-gray-600: var(--color-stone-600);
   --color-gray-500: var(--color-stone-500);
-  --color-misc-error: #7A6660;
+  --color-misc-error: #7a6660;
 }
 
 @supports (color: color(display-p3 0.55 0.19 0.71)) {
@@ -160,6 +160,10 @@ input[type="number"] {
     .pixelated {
       image-rendering: auto;
     }
+  }
+  .squircle {
+    corner-shape: superellipse(-1.2);
+
   }
   .pokemon-sprite {
     /* width: calc(0.25rem * 10); */

@@ -20,12 +20,14 @@ const ItemListRender = (showPrice: boolean) => (item: ItemWithAmount) => (
 );
 ItemListRender.displayName = "ItemListRender";
 const renderIcon = (item: Item) => {
-  const spriteStyle = getItemSpriteStyle(item.id, 24); // Changed from 64 to 32
+  const spriteStyle = getItemSpriteStyle(item.id, 32
+    
+  ); // Changed from 64 to 32
 
   return spriteStyle ? (
     <img
       src="/spritesheet-items-16.webp"
-      className="shrink-0"
+      className="rounded squircle bg-[var(--hearth-orange-1)] h-2 w-2 p-1"
       style={spriteStyle}
     />
   ) : (

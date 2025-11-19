@@ -22,6 +22,7 @@ spritesheetCoords.forEach((coord: SpriteCoordinate) => {
  */
 export function getItemSpriteCoords(itemId: number): [number, number] | null {
   const coords = coordsMap.get(itemId);
+  debugger
   return coords || null;
 }
 
@@ -49,7 +50,7 @@ export function getItemSpriteStyle(
     objectPosition: `-${x}px -${y}px`,
     width: `${spriteSize}px`,
     height: `${spriteSize}px`,
-    display: "inline-block",
+    // display: "inline-block",
     imageRendering: "pixelated",
     filter: `drop-shadow(0 0 2px rgba(0, 0, 0, 0.3))`,
   };

@@ -7,7 +7,13 @@ type EncounterListing = {
   species: number;
   name: string;
 };
-export type TrainerRef = { id: string; script: string };
+export type BattleRef = {
+  script: string;
+  battleType: string;
+  trainerIds: string[];
+  battlePicPaths: string[];
+  rematch?: boolean;
+};
 export type LevelMart = {
   label: string;
   mart: string;
@@ -32,13 +38,20 @@ export const Items = new Map<number, Item>(
     .map((item) => [item.id, item]),
 );
 
+export const ItemsByConstantName = new Map<string, Item>(
+  items
+    .filter((item) => item.constantName)
+    .map((item) => [item.constantName, item]),
+);
+
 export type ItemWithAmount = Item & {
   amount: number;
 };
 
 /** Raw types from JSON */
 type RawLevelScriptedItem = {
-  name: string;
+  id?: number;
+  name?: string;
   quantity: number;
 };
 
@@ -47,6 +60,7 @@ type RawLevelScriptedEvent = {
   scriptName: string;
   items: RawLevelScriptedItem[];
   pokemon: LevelScriptedEventMon[];
+  wildMon?: LevelScriptedEventMon[];
 };
 
 type RawLevel = {
@@ -55,9 +69,9 @@ type RawLevel = {
   thisLevelsId: string;
   scriptedGives?: RawLevelScriptedEvent[];
   shopItems?: LevelMart[];
-  trainerRefs?: TrainerRef[];
   pickupItems?: LevelPickupItem[];
   image: string;
+  battleRefs?: BattleRef[];
 };
 
 /** Level Types */
@@ -90,6 +104,7 @@ export type Level = {
   shopItems: LevelMart[];
   pickupItems: LevelPickupItem[];
   image: string;
+  battleRefs: BattleRef[];
 };
 /** End Level Types */
 
@@ -136,16 +151,21 @@ function processLevelsInfo(): Record<string, Level[]> {
             shopItems: level.shopItems || [],
             pickupItems: level.pickupItems || [],
             image: level.image,
+            battleRefs: level.battleRefs || [],
           };
         const processedScriptedGives: LevelScriptedEvent[] =
           level.scriptedGives.map((give: RawLevelScriptedEvent) => {
             const itemsWithAmount = give.items
               .map((item: RawLevelScriptedItem) => {
-                const itemDetails = Items.get(item.name);
+                const itemDetails =
+                  (typeof item.id === "number" ? Items.get(item.id) : undefined) ||
+                  (item.name ? ItemsByConstantName.get(item.name) : undefined);
                 if (itemDetails) {
                   return { ...itemDetails, amount: item.quantity };
                 }
-                console.info("Item not found:", item.name);
+                const missingIdentifier =
+                  typeof item.id === "number" ? item.id : item.name;
+                console.info("Item not found:", missingIdentifier);
                 return null;
               })
               .filter((i): i is ItemWithAmount => i !== null);
@@ -160,6 +180,7 @@ function processLevelsInfo(): Record<string, Level[]> {
           shopItems: level.shopItems || [],
           pickupItems: level.pickupItems || [],
           image: level.image,
+          battleRefs: level.battleRefs || [],
 
           // trainers: level.trainers || [],
         } as Level;

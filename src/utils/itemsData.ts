@@ -2,6 +2,7 @@ import {
   LevelsInfo,
   Item,
   Items,
+  ItemsByConstantName,
   ItemWithCoords,
   LevelScriptedEvent,
   LevelScriptedEventMon,
@@ -22,6 +23,20 @@ export type ItemsByMap = {
   scriptedGives: LevelScriptedEvent[];
   shopItems: Item[];
   pickupItems: ItemWithCoords[];
+};
+
+const getItemDetails = (identifier: string | number): Item | undefined => {
+  if (typeof identifier === "number") {
+    return Items.get(identifier);
+  }
+
+  if (/^\d+$/.test(identifier)) {
+    const asNumber = Number(identifier);
+    const viaId = Items.get(asNumber);
+    if (viaId) return viaId;
+  }
+
+  return ItemsByConstantName.get(identifier);
 };
 
 class ItemSearch {
@@ -51,7 +66,7 @@ class ItemSearch {
         });
         map.scriptedGives.forEach((script) => {
           script.items.forEach((item: ItemWithAmount) =>
-            this.throwOnPile(item.id, map.baseMap),
+            this.throwOnPile(item.constantName ?? item.id, map.baseMap),
           );
           script.pokemon.forEach((pokemon: LevelScriptedEventMon) =>
             this.throwOnPile(pokemon.species, map.baseMap),
@@ -66,20 +81,30 @@ class ItemSearch {
       });
     }
   }
-  private throwOnPile(item: string, mapBaseName: string) {
-    if (this.itemsToMap.has(item)) {
-      const currPlacesToGetItem = this.itemsToMap.get(item);
+  private throwOnPile(item: string | number, mapBaseName: string) {
+    const key = String(item);
+    if (this.itemsToMap.has(key)) {
+      const currPlacesToGetItem = this.itemsToMap.get(key);
       if (currPlacesToGetItem?.includes(mapBaseName)) return;
       currPlacesToGetItem?.push(mapBaseName);
       return;
     }
-    this.itemsToMap.set(item, [mapBaseName]);
+    this.itemsToMap.set(key, [mapBaseName]);
   }
   getMapsForItem(itemId: string): string[] | null {
     // First, look in the regular item -> map lookup (pickups, shops, scripted, etc.)
     const mapsArr = this.itemsToMap.get(itemId);
     if (mapsArr && mapsArr.length > 0) {
       return mapsArr;
+    }
+    const itemDetails = getItemDetails(itemId);
+    if (itemDetails) {
+      const viaId = this.itemsToMap.get(String(itemDetails.id));
+      if (viaId && viaId.length > 0) return viaId;
+      if (itemDetails.constantName) {
+        const viaConst = this.itemsToMap.get(itemDetails.constantName);
+        if (viaConst && viaConst.length > 0) return viaConst;
+      }
     }
     return null;
   }
@@ -88,14 +113,14 @@ class ItemSearch {
    * Returns array of maps for an item that is ONLY obtainable via held Pokémon (helper for external callers).
    */
   getMonIdsWithHeldItem(itemId: string) {
-    const itemData = Items.get(itemId);
+    const itemData = getItemDetails(itemId);
     if (!itemData) return null;
-    return pokemonSearchStore.getPokemonWithHeldItem(itemData.itemId);
+    return pokemonSearchStore.getPokemonWithHeldItem(itemData.id);
   }
 
   ByItemId(itemId: number): string | undefined {
     for (const item of Items.values()) {
-      if (item.itemId === itemId) {
+      if (item.id === itemId) {
         return item.name;
       }
     }
@@ -122,13 +147,13 @@ class ItemSearch {
 
       level.shopItems.forEach((shop) => {
         const shopItems = shop.items
-          .map((i) => Items.get(i))
+          .map((i) => getItemDetails(i))
           .filter((i): i is Item => i !== undefined);
         returnObj.shopItems.push(...shopItems);
       });
 
       level.pickupItems.forEach((item) => {
-        const pickupItem = Items.get(item.item);
+        const pickupItem = getItemDetails(item.item);
         if (pickupItem) {
           returnObj.pickupItems.push({
             ...pickupItem,
@@ -147,7 +172,7 @@ class ItemSearch {
       if (level) {
         return level.pickupItems
           .map((item) => {
-            const itemData = Items.get(item.item);
+            const itemData = getItemDetails(item.item);
             if (itemData) {
               return {
                 ...itemData,
