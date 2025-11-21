@@ -40,14 +40,14 @@
 
 @font-face {
   font-family: "Kaisho";
-  src: url("/fonts/Hatto-Regular.otf") format("OpenType");
+  src: url("/fonts/emerald-pro/Hatto-Regular.otf") format("OpenType");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Kaisho";
-  src: url("/fonts/Hatto-Bold.otf") format("OpenType");
+  src: url("/fonts/emerald-pro/Hatto-Bold.otf") format("OpenType");
   font-weight: 600;
   font-style: normal;
   font-display: swap;

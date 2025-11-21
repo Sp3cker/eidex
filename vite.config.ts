@@ -28,6 +28,8 @@ export default defineConfig(() => {
         "nbit-Bold.woff2",
         "nbit-Regular.ttf",
         "nbit-Bold.ttf",
+        "Hatto-Regular.otf",
+        "Hatto-Bold.otf",
       ],
       outputDir: "public/fonts/emerald-pro",
     }) as any,
