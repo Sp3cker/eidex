@@ -1,8 +1,8 @@
 {
-  "MAP_BEACHBOUNDROUTE": [
+  "MAP_BEACHBOUND_ROUTE": [
     {
       "thisLevelsId": "MAP_BEACHBOUND_ROUTE",
-      "baseMap": "MAP_BEACHBOUNDROUTE",
+      "baseMap": "MAP_BEACHBOUND_ROUTE",
       "levelLabel": "",
       "pickupItems": [
         {
@@ -117,13 +117,13 @@
           "label": "MAP_CHII_TOWN",
           "mart": "ChiiTown_Mart",
           "items": [
-            "ITEM_POKE_BALL",
-            "ITEM_OINTMENT",
-            "ITEM_REVIVAL_POWDER",
-            "ITEM_PARALYZE_HEAL",
-            "ITEM_ANTIDOTE",
-            "ITEM_AWAKENING",
-            "ITEM_BURN_HEAL"
+            1,
+            863,
+            872,
+            44,
+            43,
+            47,
+            45
           ]
         }
       ],
@@ -433,46 +433,46 @@
           "label": "MAP_INCENSE_SHOP",
           "mart": "IncenseShop_Mart_1",
           "items": [
-            "ITEM_ROSE_INCENSE",
-            "ITEM_SEA_INCENSE",
-            "ITEM_ROCK_INCENSE"
+            410,
+            404,
+            407
           ]
         },
         {
           "label": "MAP_INCENSE_SHOP",
           "mart": "IncenseShop_Mart_2",
           "items": [
-            "ITEM_ROSE_INCENSE",
-            "ITEM_SEA_INCENSE",
-            "ITEM_ROCK_INCENSE",
-            "ITEM_PURE_INCENSE",
-            "ITEM_LUCK_INCENSE"
+            410,
+            404,
+            407,
+            412,
+            411
           ]
         },
         {
           "label": "MAP_INCENSE_SHOP",
           "mart": "IncenseShop_Mart_3",
           "items": [
-            "ITEM_ROSE_INCENSE",
-            "ITEM_SEA_INCENSE",
-            "ITEM_ROCK_INCENSE",
-            "ITEM_PURE_INCENSE",
-            "ITEM_LUCK_INCENSE",
-            "ITEM_ODD_INCENSE"
+            410,
+            404,
+            407,
+            412,
+            411,
+            406
           ]
         },
         {
           "label": "MAP_INCENSE_SHOP",
           "mart": "IncenseShop_Mart_4",
           "items": [
-            "ITEM_ROSE_INCENSE",
-            "ITEM_SEA_INCENSE",
-            "ITEM_ROCK_INCENSE",
-            "ITEM_PURE_INCENSE",
-            "ITEM_LUCK_INCENSE",
-            "ITEM_ODD_INCENSE",
-            "ITEM_LAX_INCENSE",
-            "ITEM_FULL_INCENSE"
+            410,
+            404,
+            407,
+            412,
+            411,
+            406,
+            405,
+            408
           ]
         }
       ],
@@ -635,15 +635,15 @@
           "label": "MAP_MAGURO_HARBOR",
           "mart": "MaguroHarbor_Mart",
           "items": [
-            "ITEM_POKE_BALL",
-            "ITEM_OINTMENT",
-            "ITEM_SUPER_OINTMENT",
-            "ITEM_REVIVAL_POWDER",
-            "ITEM_PARALYZE_HEAL",
-            "ITEM_ANTIDOTE",
-            "ITEM_AWAKENING",
-            "ITEM_BURN_HEAL",
-            "ITEM_ESCAPE_ROPE"
+            1,
+            863,
+            864,
+            872,
+            44,
+            43,
+            47,
+            45,
+            120
           ]
         }
       ],
@@ -863,14 +863,14 @@
           "label": "MAP_SAKU_TOWN",
           "mart": "SakuTown_Mart",
           "items": [
-            "ITEM_POKE_BALL",
-            "ITEM_OINTMENT",
-            "ITEM_REVIVAL_POWDER",
-            "ITEM_PARALYZE_HEAL",
-            "ITEM_ANTIDOTE",
-            "ITEM_AWAKENING",
-            "ITEM_BURN_HEAL",
-            "ITEM_ESCAPE_ROPE"
+            1,
+            863,
+            872,
+            44,
+            43,
+            47,
+            45,
+            120
           ]
         }
       ],
@@ -1114,13 +1114,13 @@
           "label": "MAP_SILVERIDGE",
           "mart": "Silveridge_Mart",
           "items": [
-            "ITEM_POKE_BALL",
-            "ITEM_OINTMENT",
-            "ITEM_REVIVAL_POWDER",
-            "ITEM_PARALYZE_HEAL",
-            "ITEM_ANTIDOTE",
-            "ITEM_AWAKENING",
-            "ITEM_BURN_HEAL"
+            1,
+            863,
+            872,
+            44,
+            43,
+            47,
+            45
           ]
         }
       ],
@@ -1232,22 +1232,30 @@
           "label": "MAP_SOULKEEP",
           "mart": "Soulkeep_Mart",
           "items": [
-            "ITEM_POKE_BALL",
-            "ITEM_GREAT_BALL",
-            "ITEM_OINTMENT",
-            "ITEM_SUPER_OINTMENT",
-            "ITEM_REVIVAL_POWDER",
-            "ITEM_REVIVAL_BALM",
-            "ITEM_PARALYZE_HEAL",
-            "ITEM_ANTIDOTE",
-            "ITEM_AWAKENING",
-            "ITEM_BURN_HEAL",
-            "ITEM_ICE_HEAL",
-            "ITEM_ESCAPE_ROPE"
+            1,
+            2,
+            863,
+            864,
+            872,
+            873,
+            44,
+            43,
+            47,
+            45,
+            46,
+            120
           ]
         }
       ],
       "image": "Soulkeep"
+    }
+  ],
+  "MAP_SOULKEEP_GRAVEYARD": [
+    {
+      "thisLevelsId": "MAP_SOULKEEP_GRAVEYARD",
+      "baseMap": "MAP_SOULKEEP_GRAVEYARD",
+      "levelLabel": "",
+      "image": "SoulkeepGraveyard"
     }
   ],
   "MAP_SUNRISE_CAVE": [
@@ -1288,6 +1296,12 @@
         }
       ],
       "image": "SunriseVillage"
+    },
+    {
+      "thisLevelsId": "MAP_SUNRISE_VILLAGE_BEACH",
+      "baseMap": "MAP_SUNRISE_VILLAGE",
+      "levelLabel": "Beach",
+      "image": "SunriseVillage_Beach"
     },
     {
       "thisLevelsId": "MAP_SUNRISE_VILLAGE_ELDERS_HOUSE",
@@ -1383,10 +1397,10 @@
       "image": "SunriseVillage_PlayersHouse_LR"
     }
   ],
-  "MAP_TRANQUILROUTE": [
+  "MAP_TRANQUIL_ROUTE": [
     {
       "thisLevelsId": "MAP_TRANQUIL_ROUTE",
-      "baseMap": "MAP_TRANQUILROUTE",
+      "baseMap": "MAP_TRANQUIL_ROUTE",
       "levelLabel": "",
       "pickupItems": [
         {
@@ -1494,7 +1508,7 @@
     },
     {
       "thisLevelsId": "MAP_TRANQUIL_ROUTE_CUT_HOUSE",
-      "baseMap": "MAP_TRANQUILROUTE",
+      "baseMap": "MAP_TRANQUIL_ROUTE",
       "levelLabel": "Cuthouse",
       "scriptedGives": [
         {
@@ -1529,10 +1543,10 @@
       "image": "TranquilRoute_CutHouse"
     }
   ],
-  "MAP_WHITESLATEROUTE": [
+  "MAP_WHITESLATE_ROUTE": [
     {
       "thisLevelsId": "MAP_WHITESLATE_ROUTE",
-      "baseMap": "MAP_WHITESLATEROUTE",
+      "baseMap": "MAP_WHITESLATE_ROUTE",
       "levelLabel": "",
       "pickupItems": [
         {
@@ -1689,10 +1703,10 @@
       ]
     }
   ],
-  "MAP_WINDSWEPTROUTE": [
+  "MAP_WINDSWEPT_ROUTE": [
     {
       "thisLevelsId": "MAP_WINDSWEPT_ROUTE",
-      "baseMap": "MAP_WINDSWEPTROUTE",
+      "baseMap": "MAP_WINDSWEPT_ROUTE",
       "levelLabel": "",
       "pickupItems": [
         {
@@ -1798,18 +1812,18 @@
           "label": "MAP_WINDY_CAPE_2",
           "mart": "WindyCape_Mart",
           "items": [
-            "ITEM_POKE_BALL",
-            "ITEM_GREAT_BALL",
-            "ITEM_OINTMENT",
-            "ITEM_SUPER_OINTMENT",
-            "ITEM_REVIVAL_POWDER",
-            "ITEM_REVIVAL_BALM",
-            "ITEM_PARALYZE_HEAL",
-            "ITEM_ANTIDOTE",
-            "ITEM_AWAKENING",
-            "ITEM_BURN_HEAL",
-            "ITEM_ICE_HEAL",
-            "ITEM_ESCAPE_ROPE"
+            1,
+            2,
+            863,
+            864,
+            872,
+            873,
+            44,
+            43,
+            47,
+            45,
+            46,
+            120
           ]
         }
       ],
@@ -1871,26 +1885,26 @@
           "label": "MAP_YIFU_CITY",
           "mart": "Crobat_Mart",
           "items": [
-            "ITEM_OINTMENT",
-            "ITEM_SUPER_OINTMENT",
-            "ITEM_REVIVAL_POWDER",
-            "ITEM_REVIVAL_BALM",
-            "ITEM_ULTRA_BALL_KNOCKOFF",
-            "ITEM_ESCAPE_ROPE_KNOCKOFF",
-            "ITEM_SLOWPOKE_TAIL"
+            863,
+            864,
+            872,
+            873,
+            869,
+            870,
+            868
           ]
         },
         {
           "label": "MAP_YIFU_CITY",
           "mart": "Legit_Mart",
           "items": [
-            "ITEM_OINTMENT",
-            "ITEM_SUPER_OINTMENT",
-            "ITEM_REVIVAL_POWDER",
-            "ITEM_REVIVAL_BALM",
-            "ITEM_POKE_BALL",
-            "ITEM_GREAT_BALL",
-            "ITEM_ESCAPE_ROPE"
+            863,
+            864,
+            872,
+            873,
+            1,
+            2,
+            120
           ]
         },
         {

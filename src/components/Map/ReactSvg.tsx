@@ -5,19 +5,28 @@ import hearthMaps from "@/data/map/hearth-map.json";
 // import { ErrorBoundary } from "react-error-boundary";
 // import { useCallback } from "react";
 import { LevelsInfo } from "@/data/map";
-const toRender = hearthMaps.filter((name) =>{
+import { encounterStore } from "@/data/map/encounters";
+const encounterData = encounterStore.getEncounterData();
+const toRender = hearthMaps.filter((name) => {
+
   if (LevelsInfo[name]) {
-    return name
+    return name;
   }
-})
+  if (encounterData[name]) {
+    return name;
+  }
+});
 const MapItemRQ = ({ name }: { name: string }) => {
   const setSelectedMap = useMapStore((state) => state.setSelectedMap);
   const isSelectedMap = useMapStore((state) => state.selectedMap === name);
 
   // In parent component
-  
+
   return (
-    <div className={`mb-4 break-inside-avoid ${isSelectedMap ? `map-place-info-textbox-gradient` : ``}`} onClick={() => setSelectedMap(name)}>
+    <div
+      className={`mb-4 break-inside-avoid ${isSelectedMap ? `map-place-info-textbox-gradient` : ``}`}
+      onClick={() => setSelectedMap(name)}
+    >
       <p>{name}</p>
     </div>
   );
@@ -26,7 +35,7 @@ export default function ReactSvg() {
   return (
     <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
       {toRender.map((item: string) => (
-        <MapItemRQ name={item} key={item}/>
+        <MapItemRQ name={item} key={item} />
       ))}
     </div>
   );

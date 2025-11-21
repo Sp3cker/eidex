@@ -22,7 +22,7 @@ spritesheetCoords.forEach((coord: SpriteCoordinate) => {
  */
 export function getItemSpriteCoords(itemId: number): [number, number] | null {
   const coords = coordsMap.get(itemId);
-  debugger
+
   return coords || null;
 }
 

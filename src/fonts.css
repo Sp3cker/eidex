@@ -45,24 +45,14 @@
   font-style: normal;
   font-display: swap;
 }
-/* https://j-font.com/font/detail?font_id=45
-PR5 is smooth, girly
-*/
 @font-face {
   font-family: "Kaisho";
-  /* src: url("/fonts/HOT-TKaishoPr5-U.woff2") format("woff2"); */
   src: url("/fonts/Hatto-Bold.otf") format("OpenType");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Bit";
-  src: url("/fonts/rounded-mgenplus-1cp-regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+
 
 @theme {
   --font-pixel: "Kaisho", sans-serif;
@@ -72,7 +62,7 @@ PR5 is smooth, girly
 }
 .font-pkmnem {
   font-weight: 400;
-  text-rendering: optimizeLegibility;
+  /* text-rendering: optimizeLegibility; */
   /*-webkit-font-smoothing: antialiased;*/
   /* -moz-osx-font-smoothing: grayscale; */
   /*opacity: 0.99;*/
