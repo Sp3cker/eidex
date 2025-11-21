@@ -6,6 +6,7 @@ import { animated as a, useSpringValue, config } from "@react-spring/web";
 import { useSearchSelectionStore } from "./selectedSearchStore";
 import { SearchResultsList } from "./SearchResultsList";
 type PokeSearchResult = {
+  id: number
   name: string;
   maps: string[];
 };
@@ -49,9 +50,9 @@ const PokeSearch = () => {
     if (results) {
       setSearchResults(
         results.map((r) => ({
-          ...r,
-          type: "mon",
+          id: r.id ?? -1,
           name: r.name.charAt(0).toUpperCase() + r.name.slice(1),
+          maps: r.maps ?? [],
         })),
       );
     }

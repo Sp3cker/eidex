@@ -64,7 +64,7 @@ const PartyMonItemAbility = ({
   heldItem,
   ability,
 }: {
-  heldItem?: string;
+  heldItem: string | null;
   ability?: number[];
 }) => {
   const show = heldItem || ability;

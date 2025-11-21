@@ -9,7 +9,7 @@ import process from "node:process";
 // import { visualizer } from "rollup-plugin-visualizer";
 
 // https://vite.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(() => {
   const plugins = [
     react({
       babel: {

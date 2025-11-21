@@ -82,10 +82,9 @@ class PokemonSearchStore {
    */
   public getSearchSuggestions(
     prefix: string,
-  ): { name: string; maps: string[] }[] {
+  ) {
     if (!prefix || prefix.trim().length < 1) {
       // Or a min length like 2 or 3
-
       return [];
     }
 

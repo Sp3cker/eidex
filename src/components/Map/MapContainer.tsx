@@ -5,9 +5,9 @@ import { useSpring, animated, to } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
 import { useEffect, useRef } from "react";
 import { shallow } from "zustand/shallow";
-const rootFontSize = parseFloat(
-  getComputedStyle(document.documentElement).fontSize,
-);
+// const rootFontSize = parseFloat(
+//   getComputedStyle(document.documentElement).fontSize,
+// );
 
 const DEFAULT_SPRING_CONFIG = Object.freeze({
   mass: 2,
@@ -33,15 +33,15 @@ const MapContainer = ({ children }: any) => {
   const targetRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<HTMLDivElement>(null);
   const windowSize = useWindowSize();
-  const { width: WINDOW_WIDTH, height: WINDOW_HEIGHT } = windowSize;
+  const { width: WINDOW_WIDTH,  } = windowSize;
   const [{ scale, centerOffset }, api] = useSpring(() => {
     const currentTargetCenterOffset = [WINDOW_WIDTH > 1000 ? 200 : 0, 150]; // Default if no coordinates or mapRef
     // Default config
     let currentSpringDelay = 0; // Default delay
-    const xyScales =
-      screenWidth === "sm" || screenWidth === "xs"
-        ? [-3 * rootFontSize, 3 * rootFontSize]
-        : [3 * rootFontSize, 4 * rootFontSize];
+    // const xyScales =
+    //   screenWidth === "sm" || screenWidth === "xs"
+    //     ? [-3 * rootFontSize, 3 * rootFontSize]
+    //     : [3 * rootFontSize, 4 * rootFontSize];
 
     // if (selectedCoordinates && mapRef.current) {
     //   const [x, y] = selectedCoordinates;

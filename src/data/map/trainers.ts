@@ -52,7 +52,7 @@ export type TrainerPartyMon = {
   iv?: boolean;
   nature: string;
   ability?: number[];
-  item?: string | null;
+  item: string | null;
   hpType?: number;
   gender?: string;
   shiny?: boolean;

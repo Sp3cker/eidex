@@ -11,15 +11,14 @@ export type BattleRef = {
   script: string;
   battleType: string;
   trainerIds: string[];
-  battlePicPaths: string[];
-  rematch?: boolean;
+  mugshotOverworldId: string | string[];
+  canRematch?: boolean;
 };
 export type LevelMart = {
   label: string;
   mart: string;
-  items: string[];
+  items: number[];
 
-  scriptname: string;
 };
 
 export type Item = {
@@ -50,8 +49,7 @@ export type ItemWithAmount = Item & {
 
 /** Raw types from JSON */
 type RawLevelScriptedItem = {
-  id?: number;
-  name?: string;
+  id: number;
   quantity: number;
 };
 
@@ -92,7 +90,7 @@ export type LevelScriptedEventMon = {
 
 export type LevelPickupItem = {
   coords: number[];
-  item: string;
+  item: number;
   type: string;
 };
 /* After we massage json data */
@@ -157,15 +155,11 @@ function processLevelsInfo(): Record<string, Level[]> {
           level.scriptedGives.map((give: RawLevelScriptedEvent) => {
             const itemsWithAmount = give.items
               .map((item: RawLevelScriptedItem) => {
-                const itemDetails =
-                  (typeof item.id === "number" ? Items.get(item.id) : undefined) ||
-                  (item.name ? ItemsByConstantName.get(item.name) : undefined);
+                const itemDetails = Items.get(item.id);
                 if (itemDetails) {
                   return { ...itemDetails, amount: item.quantity };
                 }
-                const missingIdentifier =
-                  typeof item.id === "number" ? item.id : item.name;
-                console.info("Item not found:", missingIdentifier);
+                console.info("Item not found:", item.id);
                 return null;
               })
               .filter((i): i is ItemWithAmount => i !== null);

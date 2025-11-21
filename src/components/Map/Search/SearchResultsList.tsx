@@ -4,7 +4,7 @@ import { animConfigs, animFn as fn } from "./misc";
 import { useMemo, useRef } from "react";
 interface SearchResult {
   name: string;
-  id?: string;
+  id: number;
   maps?: string[];
 }
 

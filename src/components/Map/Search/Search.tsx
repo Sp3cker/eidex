@@ -40,7 +40,7 @@ const Search = () => {
     inputRef.current?.focus();
   }, [inputRef]);
   const handleClick = useCallback(
-    (item: { name: string; id?: string }) => {
+    (item: { name: string; id: number }) => {
       const { name, id } = item;
       setSearchName(name);
       refocusSearch();

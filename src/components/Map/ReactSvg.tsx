@@ -1,9 +1,9 @@
-import MapPlace from "./MapPlace";
-import objects from "@/data/map/mapsvgs.json";
+// import MapPlace from "./MapPlace";
+// import objects from "@/data/map/mapsvgs.json";
 import { useMapStore } from "@/stores/useMapStore";
 import hearthMaps from "@/data/map/hearth-map.json";
-import { ErrorBoundary } from "react-error-boundary";
-import { useCallback } from "react";
+// import { ErrorBoundary } from "react-error-boundary";
+// import { useCallback } from "react";
 import { LevelsInfo } from "@/data/map";
 const toRender = hearthMaps.filter((name) =>{
   if (LevelsInfo[name]) {
@@ -15,12 +15,7 @@ const MapItemRQ = ({ name }: { name: string }) => {
   const isSelectedMap = useMapStore((state) => state.selectedMap === name);
 
   // In parent component
-  const getParentCoords = useCallback((node: SVGGElement) => {
-    if (node) {
-      const rect = node.getBoundingClientRect();
-      return { x: rect.x, y: rect.y };
-    }
-  }, []);
+  
   return (
     <div className={`mb-4 break-inside-avoid ${isSelectedMap ? `map-place-info-textbox-gradient` : ``}`} onClick={() => setSelectedMap(name)}>
       <p>{name}</p>

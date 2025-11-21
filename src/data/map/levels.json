@@ -10,7 +10,7 @@
             16,
             6
           ],
-          "item": "ITEM_HP_UP",
+          "item": 65,
           "type": "object_event"
         },
         {
@@ -18,48 +18,8 @@
             33,
             27
           ],
-          "item": "ITEM_ETHER",
+          "item": 49,
           "type": "object_event"
-        },
-        {
-          "coords": [
-            23,
-            23
-          ],
-          "item": "ITEM_SUPER_OINTMENT",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            67,
-            5
-          ],
-          "item": "ITEM_SUPER_OINTMENT",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            45,
-            14
-          ],
-          "item": "ITEM_ANTIDOTE",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            19,
-            4
-          ],
-          "item": "ITEM_RARE_CANDY",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            19,
-            20
-          ],
-          "item": "ITEM_HEART_SCALE",
-          "type": "hidden_item"
         }
       ],
       "scriptedGives": [
@@ -84,9 +44,11 @@
           "trainerIds": [
             "TRAINER_KARU"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_KARU.webp"
-          ]
+          "trainerNames": [
+            "Karu"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_LASS",
+          "canRematch": false
         },
         {
           "script": "BeachboundRoute_EventScript_Kin",
@@ -94,9 +56,11 @@
           "trainerIds": [
             "TRAINER_KIN"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_KIN.webp"
-          ]
+          "trainerNames": [
+            "Kin"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_SUNRISE_LITTLE_GIRL",
+          "canRematch": false
         },
         {
           "script": "BeachboundRoute_EventScript_Kouta",
@@ -104,9 +68,11 @@
           "trainerIds": [
             "TRAINER_KOUTA"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_KOUTA.webp"
-          ]
+          "trainerNames": [
+            "Kouta"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_YOUNGSTER",
+          "canRematch": false
         },
         {
           "script": "BeachboundRoute_EventScript_Masato",
@@ -114,32 +80,24 @@
           "trainerIds": [
             "TRAINER_MASATO_1"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_MASATO_1.webp"
-          ]
-        },
-        {
-          "script": "BeachboundRoute_EventScript_Masato",
-          "battleType": "single",
-          "trainerIds": [
-            "TRAINER_MASATO_1",
-            "format"
+          "trainerNames": [
+            "Masato"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_MASATO_1.webp",
-            ""
-          ],
-          "rematch": true
+          "mugshotOverworldId": "OBJ_EVENT_GFX_BUG_CATCHER",
+          "canRematch": true
         },
         {
           "script": "BeachboundRoute_EventScript_Mugging",
           "battleType": "double",
           "trainerIds": [
-            "TRAINER_GRUNT_BEACHBOUND_ROUTE_1"
+            "TRAINER_GRUNT_BEACHBOUND_ROUTE_1",
+            "TRAINER_GRUNT_BEACHBOUND_ROUTE_2"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_GRUNT_BEACHBOUND_ROUTE_1.webp"
-          ]
+          "trainerNames": [
+            "Grunt",
+            "Grunt"
+          ],
+          "canRematch": false
         }
       ]
     }
@@ -152,13 +110,12 @@
       "shopItems": [
         {
           "label": "MAP_CHII_TOWN",
-          "mart": "",
-          "items": [],
-          "scriptname": "ChiiTown_MartDecors"
+          "mart": "ChiiTown_MartDecors",
+          "items": []
         },
         {
           "label": "MAP_CHII_TOWN",
-          "mart": "",
+          "mart": "ChiiTown_Mart",
           "items": [
             "ITEM_POKE_BALL",
             "ITEM_OINTMENT",
@@ -167,8 +124,7 @@
             "ITEM_ANTIDOTE",
             "ITEM_AWAKENING",
             "ITEM_BURN_HEAL"
-          ],
-          "scriptname": "ChiiTown_Mart"
+          ]
         }
       ],
       "image": "ChiiTown",
@@ -177,21 +133,27 @@
           "script": "ChiiTown_EventScript_BattlingGirl",
           "battleType": "double",
           "trainerIds": [
-            "TRAINER_MINORI"
+            "TRAINER_MINORI",
+            "TRAINER_KAITO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_MINORI.webp"
-          ]
+          "trainerNames": [
+            "Minori",
+            "Kaito"
+          ],
+          "canRematch": false
         },
         {
           "script": "ChiiTown_EventScript_BattlingBoy",
           "battleType": "double",
           "trainerIds": [
-            "TRAINER_MINORI"
+            "TRAINER_MINORI",
+            "TRAINER_KAITO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_MINORI.webp"
-          ]
+          "trainerNames": [
+            "Minori",
+            "Kaito"
+          ],
+          "canRematch": false
         }
       ]
     },
@@ -227,7 +189,7 @@
             57,
             8
           ],
-          "item": "ITEM_STOLEN_MONS",
+          "item": 871,
           "type": "object_event"
         },
         {
@@ -235,7 +197,7 @@
             48,
             5
           ],
-          "item": "ITEM_TM_WATER_PULSE",
+          "item": 584,
           "type": "object_event"
         },
         {
@@ -243,7 +205,7 @@
             57,
             9
           ],
-          "item": "ITEM_NUGGET",
+          "item": 135,
           "type": "object_event"
         },
         {
@@ -251,7 +213,7 @@
             56,
             9
           ],
-          "item": "ITEM_RARE_CANDY",
+          "item": 102,
           "type": "object_event"
         },
         {
@@ -259,24 +221,8 @@
             56,
             8
           ],
-          "item": "ITEM_PEARL",
+          "item": 140,
           "type": "object_event"
-        },
-        {
-          "coords": [
-            28,
-            9
-          ],
-          "item": "ITEM_SUPERGIRI",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            18,
-            2
-          ],
-          "item": "ITEM_ULTRA_BALL_KNOCKOFF",
-          "type": "hidden_item"
         }
       ],
       "image": "CrobatHideout_1F",
@@ -287,9 +233,11 @@
           "trainerIds": [
             "TRAINER_GRUNT_CROBAT_HIDEOUT_1"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_GRUNT_CROBAT_HIDEOUT_1.webp"
-          ]
+          "trainerNames": [
+            "Grunt"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_CROBAT_SHADOWS_GRUNT_M",
+          "canRematch": false
         },
         {
           "script": "CrobatHideout_1F_EventScript_GruntPaintingPokeballs",
@@ -297,9 +245,11 @@
           "trainerIds": [
             "TRAINER_GRUNT_CROBAT_HIDEOUT_2"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_GRUNT_CROBAT_HIDEOUT_2.webp"
-          ]
+          "trainerNames": [
+            "Grunt"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_CROBAT_SHADOWS_GRUNT_M",
+          "canRematch": false
         },
         {
           "script": "CrobatHideout_1F_EventScript_GruntLaundryRoom",
@@ -307,9 +257,11 @@
           "trainerIds": [
             "TRAINER_GRUNT_CROBAT_HIDEOUT_3"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_GRUNT_CROBAT_HIDEOUT_3.webp"
-          ]
+          "trainerNames": [
+            "Grunt"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_CROBAT_SHADOWS_GRUNT_M",
+          "canRematch": false
         },
         {
           "script": "CrobatHideout_1F_EventScript_GruntDoubleGirl",
@@ -317,9 +269,11 @@
           "trainerIds": [
             "TRAINER_GRUNT_CROBAT_HIDEOUT_4"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_GRUNT_CROBAT_HIDEOUT_4.webp"
-          ]
+          "trainerNames": [
+            "Grunt"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_CROBAT_SHADOWS_GRUNT_M",
+          "canRematch": false
         },
         {
           "script": "CrobatHideout_1F_EventScript_GruntDoubleGuy",
@@ -327,9 +281,11 @@
           "trainerIds": [
             "TRAINER_GRUNT_CROBAT_HIDEOUT_5"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_GRUNT_CROBAT_HIDEOUT_5.webp"
-          ]
+          "trainerNames": [
+            "Grunt"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_CROBAT_SHADOWS_GRUNT_M",
+          "canRematch": false
         },
         {
           "script": "CrobatHideout_1F_EventScript_GruntNearReunionRoom",
@@ -337,19 +293,24 @@
           "trainerIds": [
             "TRAINER_GRUNT_CROBAT_HIDEOUT_6"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_GRUNT_CROBAT_HIDEOUT_6.webp"
-          ]
+          "trainerNames": [
+            "Grunt"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_CROBAT_SHADOWS_GRUNT_M",
+          "canRematch": false
         },
         {
           "script": "CrobatHideout_1F_BattleSamuraiBackToBack",
           "battleType": "double",
           "trainerIds": [
-            "TRAINER_GRUNT_CROBAT_HIDEOUT_7"
+            "TRAINER_GRUNT_CROBAT_HIDEOUT_7",
+            "TRAINER_GRUNT_CROBAT_HIDEOUT_8"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_GRUNT_CROBAT_HIDEOUT_7.webp"
-          ]
+          "trainerNames": [
+            "Grunt",
+            "Grunt"
+          ],
+          "canRematch": false
         }
       ]
     }
@@ -365,7 +326,7 @@
             32,
             12
           ],
-          "item": "ITEM_OINTMENT",
+          "item": 863,
           "type": "object_event"
         },
         {
@@ -373,7 +334,7 @@
             27,
             40
           ],
-          "item": "ITEM_PARALYZE_HEAL",
+          "item": 44,
           "type": "object_event"
         },
         {
@@ -381,32 +342,8 @@
             50,
             11
           ],
-          "item": "ITEM_GREAT_BALL",
+          "item": 2,
           "type": "object_event"
-        },
-        {
-          "coords": [
-            18,
-            24
-          ],
-          "item": "ITEM_POKE_BALL",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            50,
-            45
-          ],
-          "item": "ITEM_TINY_MUSHROOM",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            34,
-            10
-          ],
-          "item": "ITEM_TINY_MUSHROOM",
-          "type": "hidden_item"
         }
       ],
       "image": "GinkoWoods",
@@ -417,9 +354,11 @@
           "trainerIds": [
             "TRAINER_TOSHIKI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_TOSHIKI.webp"
-          ]
+          "trainerNames": [
+            "Toshiki"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_BUG_CATCHER",
+          "canRematch": false
         },
         {
           "script": "GinkoWoods_EventScript_Toshio",
@@ -427,22 +366,11 @@
           "trainerIds": [
             "TRAINER_TOSHIO_1"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_TOSHIO_1.webp"
-          ]
-        },
-        {
-          "script": "GinkoWoods_EventScript_Toshio",
-          "battleType": "single",
-          "trainerIds": [
-            "TRAINER_TOSHIO_1",
-            "format"
+          "trainerNames": [
+            "Toshio"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_TOSHIO_1.webp",
-            ""
-          ],
-          "rematch": true
+          "mugshotOverworldId": "OBJ_EVENT_GFX_YOUNGSTER",
+          "canRematch": true
         },
         {
           "script": "GinkoWoods_EventScript_Eiji",
@@ -450,9 +378,11 @@
           "trainerIds": [
             "TRAINER_EIJI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_EIJI.webp"
-          ]
+          "trainerNames": [
+            "Eiji"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_BUG_CATCHER",
+          "canRematch": false
         }
       ]
     }
@@ -484,9 +414,11 @@
           "trainerIds": [
             "TRAINER_KOUGA"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_KOUGA.webp"
-          ]
+          "trainerNames": [
+            "Kouga"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_MONK",
+          "canRematch": false
         }
       ]
     }
@@ -499,29 +431,27 @@
       "shopItems": [
         {
           "label": "MAP_INCENSE_SHOP",
-          "mart": "",
+          "mart": "IncenseShop_Mart_1",
           "items": [
             "ITEM_ROSE_INCENSE",
             "ITEM_SEA_INCENSE",
             "ITEM_ROCK_INCENSE"
-          ],
-          "scriptname": "IncenseShop_Mart_1"
+          ]
         },
         {
           "label": "MAP_INCENSE_SHOP",
-          "mart": "",
+          "mart": "IncenseShop_Mart_2",
           "items": [
             "ITEM_ROSE_INCENSE",
             "ITEM_SEA_INCENSE",
             "ITEM_ROCK_INCENSE",
             "ITEM_PURE_INCENSE",
             "ITEM_LUCK_INCENSE"
-          ],
-          "scriptname": "IncenseShop_Mart_2"
+          ]
         },
         {
           "label": "MAP_INCENSE_SHOP",
-          "mart": "",
+          "mart": "IncenseShop_Mart_3",
           "items": [
             "ITEM_ROSE_INCENSE",
             "ITEM_SEA_INCENSE",
@@ -529,12 +459,11 @@
             "ITEM_PURE_INCENSE",
             "ITEM_LUCK_INCENSE",
             "ITEM_ODD_INCENSE"
-          ],
-          "scriptname": "IncenseShop_Mart_3"
+          ]
         },
         {
           "label": "MAP_INCENSE_SHOP",
-          "mart": "",
+          "mart": "IncenseShop_Mart_4",
           "items": [
             "ITEM_ROSE_INCENSE",
             "ITEM_SEA_INCENSE",
@@ -544,8 +473,7 @@
             "ITEM_ODD_INCENSE",
             "ITEM_LAX_INCENSE",
             "ITEM_FULL_INCENSE"
-          ],
-          "scriptname": "IncenseShop_Mart_4"
+          ]
         }
       ],
       "image": "IncenseShop"
@@ -556,24 +484,6 @@
       "thisLevelsId": "MAP_KURA_TOWN",
       "baseMap": "MAP_KURA_TOWN",
       "levelLabel": "",
-      "pickupItems": [
-        {
-          "coords": [
-            9,
-            20
-          ],
-          "item": "ITEM_REVIVAL_HERB",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            26,
-            14
-          ],
-          "item": "ITEM_SITRUS_BERRY",
-          "type": "hidden_item"
-        }
-      ],
       "scriptedGives": [
         {
           "items": [
@@ -614,9 +524,11 @@
           "trainerIds": [
             "TRAINER_MATSU"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_MATSU.webp"
-          ]
+          "trainerNames": [
+            "Matsu"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_SAKURA_OLD_MAN",
+          "canRematch": false
         },
         {
           "script": "KuraTown_Dojo_EventScript_Kiku",
@@ -624,9 +536,11 @@
           "trainerIds": [
             "TRAINER_KIKU"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_KIKU.webp"
-          ]
+          "trainerNames": [
+            "Kiku"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_AROMA_LADY",
+          "canRematch": false
         },
         {
           "script": "KuraTown_Dojo_EventScript_Laura",
@@ -634,9 +548,11 @@
           "trainerIds": [
             "TRAINER_AYAME"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_AYAME.webp"
-          ]
+          "trainerNames": [
+            "Ayame"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_GARDENER",
+          "canRematch": false
         },
         {
           "script": "KuraTown_Dojo_EventScript_Brenden",
@@ -644,9 +560,11 @@
           "trainerIds": [
             "TRAINER_TSUBAKI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_TSUBAKI.webp"
-          ]
+          "trainerNames": [
+            "Tsubaki"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_LASS",
+          "canRematch": false
         },
         {
           "script": "KuraTown_Dojo_EventScript_Cristian",
@@ -654,9 +572,11 @@
           "trainerIds": [
             "TRAINER_AJISAI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_AJISAI.webp"
-          ]
+          "trainerNames": [
+            "Ajisai"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_SAKURA_OLD_WOMAN",
+          "canRematch": false
         },
         {
           "script": "KuraTown_Dojo_EventScript_Lilith",
@@ -664,9 +584,11 @@
           "trainerIds": [
             "TRAINER_SUMIRE"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_SUMIRE.webp"
-          ]
+          "trainerNames": [
+            "Sumire"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_GARDENER",
+          "canRematch": false
         },
         {
           "script": "KuraTown_Dojo_EventScript_Hana",
@@ -674,19 +596,11 @@
           "trainerIds": [
             "TRAINER_HANA_1"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_HANA_1.webp"
-          ]
-        },
-        {
-          "script": "KuraTown_Dojo_EventScript_Hana",
-          "battleType": "single",
-          "trainerIds": [
-            "TRAINER_HANA_1"
+          "trainerNames": [
+            "Hana"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_HANA_1.webp"
-          ]
+          "mugshotOverworldId": "OBJ_EVENT_GFX_HANA",
+          "canRematch": false
         }
       ]
     },
@@ -719,7 +633,7 @@
       "shopItems": [
         {
           "label": "MAP_MAGURO_HARBOR",
-          "mart": "",
+          "mart": "MaguroHarbor_Mart",
           "items": [
             "ITEM_POKE_BALL",
             "ITEM_OINTMENT",
@@ -730,8 +644,7 @@
             "ITEM_AWAKENING",
             "ITEM_BURN_HEAL",
             "ITEM_ESCAPE_ROPE"
-          ],
-          "scriptname": "MaguroHarbor_Mart"
+          ]
         }
       ],
       "scriptedGives": [
@@ -800,9 +713,11 @@
           "trainerIds": [
             "TRAINER_KOISHI_1"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_KOISHI_1.webp"
-          ]
+          "trainerNames": [
+            "Koishi"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_KOISHI",
+          "canRematch": false
         },
         {
           "script": "MaguroHarbor_Dojo_EventScript_Izumi",
@@ -810,9 +725,11 @@
           "trainerIds": [
             "TRAINER_IZUMI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_IZUMI.webp"
-          ]
+          "trainerNames": [
+            "Izumi"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_SUNRISE_LITTLE_GIRL",
+          "canRematch": false
         },
         {
           "script": "MaguroHarbor_Dojo_EventScript_Ren",
@@ -820,9 +737,10 @@
           "trainerIds": [
             "TRAINER_REN"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_REN.webp"
-          ]
+          "trainerNames": [
+            "Ren"
+          ],
+          "canRematch": false
         },
         {
           "script": "MaguroHarbor_Dojo_EventScript_Mizu",
@@ -830,9 +748,11 @@
           "trainerIds": [
             "TRAINER_MIZU"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_MIZU.webp"
-          ]
+          "trainerNames": [
+            "Mizu"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN",
+          "canRematch": false
         }
       ]
     },
@@ -862,9 +782,10 @@
           "trainerIds": [
             "TRAINER_HARIKO_MAGURO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_HARIKO_MAGURO.webp"
-          ]
+          "trainerNames": [
+            "Hariko"
+          ],
+          "canRematch": false
         }
       ]
     }
@@ -900,9 +821,11 @@
           "trainerIds": [
             "TRAINER_JUNKO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_JUNKO.webp"
-          ]
+          "trainerNames": [
+            "Junko"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_LASS",
+          "canRematch": false
         },
         {
           "script": "OrchardPath_EventScript_Mami",
@@ -910,9 +833,11 @@
           "trainerIds": [
             "TRAINER_MAMI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_MAMI.webp"
-          ]
+          "trainerNames": [
+            "Mami"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_HEX_MANIAC",
+          "canRematch": false
         },
         {
           "script": "OrchardPath_EventScript_RockSmashBrokeMyRocks",
@@ -920,9 +845,10 @@
           "trainerIds": [
             "TRAINER_ROCK_SMASH_GUY"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_ROCK_SMASH_GUY.webp"
-          ]
+          "trainerNames": [
+            "Smasher"
+          ],
+          "canRematch": false
         }
       ]
     }
@@ -935,7 +861,7 @@
       "shopItems": [
         {
           "label": "MAP_SAKU_TOWN",
-          "mart": "",
+          "mart": "SakuTown_Mart",
           "items": [
             "ITEM_POKE_BALL",
             "ITEM_OINTMENT",
@@ -945,8 +871,7 @@
             "ITEM_AWAKENING",
             "ITEM_BURN_HEAL",
             "ITEM_ESCAPE_ROPE"
-          ],
-          "scriptname": "SakuTown_Mart"
+          ]
         }
       ],
       "pickupItems": [
@@ -955,16 +880,8 @@
             39,
             3
           ],
-          "item": "ITEM_STARDUST",
+          "item": 143,
           "type": "object_event"
-        },
-        {
-          "coords": [
-            18,
-            36
-          ],
-          "item": "ITEM_CHERI_BERRY",
-          "type": "hidden_item"
         }
       ],
       "scriptedGives": [
@@ -987,37 +904,12 @@
           "script": "SakuTown_EventScript_RivalAtSakuWall",
           "battleType": "single",
           "trainerIds": [
-            "TRAINER_RIVAL_SAKU_SNIVY",
-            "SakuTown_Text_RivalDefeat"
+            "TRAINER_RIVAL_SAKU_SNIVY"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_RIVAL_SAKU_SNIVY.webp",
-            ""
-          ]
-        },
-        {
-          "script": "SakuTown_EventScript_RivalAtSakuWall",
-          "battleType": "single",
-          "trainerIds": [
-            "TRAINER_RIVAL_SAKU_FROAKIE",
-            "SakuTown_Text_RivalDefeat"
+          "trainerNames": [
+            "Natsuki"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_RIVAL_SAKU_FROAKIE.webp",
-            ""
-          ]
-        },
-        {
-          "script": "SakuTown_EventScript_RivalAtSakuWall",
-          "battleType": "single",
-          "trainerIds": [
-            "TRAINER_RIVAL_SAKU_CYNDAQUIL",
-            "SakuTown_Text_RivalDefeat"
-          ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_RIVAL_SAKU_CYNDAQUIL.webp",
-            ""
-          ]
+          "canRematch": false
         },
         {
           "script": "SakuTown_EventScript_TamaArgument",
@@ -1025,9 +917,10 @@
           "trainerIds": [
             "TRAINER_TAMAS_DAD"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_TAMAS_DAD.webp"
-          ]
+          "trainerNames": [
+            "Kiyosumi"
+          ],
+          "canRematch": false
         }
       ]
     },
@@ -1039,8 +932,7 @@
         {
           "label": "MAP_SAKU_TOWN",
           "mart": "BonsaiShop",
-          "items": [],
-          "scriptname": "BonsaiShop"
+          "items": []
         }
       ],
       "scriptedGives": [
@@ -1115,7 +1007,7 @@
             14,
             17
           ],
-          "item": "ITEM_PROTEIN",
+          "item": 66,
           "type": "object_event"
         },
         {
@@ -1123,24 +1015,8 @@
             28,
             11
           ],
-          "item": "ITEM_MAX_ETHER",
+          "item": 50,
           "type": "object_event"
-        },
-        {
-          "coords": [
-            19,
-            1
-          ],
-          "item": "ITEM_HYPER_OINTMENT",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            6,
-            11
-          ],
-          "item": "ITEM_SUPER_OINTMENT",
-          "type": "hidden_item"
         }
       ],
       "image": "SilverTunnel_1F",
@@ -1151,9 +1027,11 @@
           "trainerIds": [
             "TRAINER_KENTO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_KENTO.webp"
-          ]
+          "trainerNames": [
+            "Kento"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_MINER",
+          "canRematch": false
         },
         {
           "script": "SilverTunnel_1F_EventScript_Shuya",
@@ -1161,9 +1039,11 @@
           "trainerIds": [
             "TRAINER_SHUYA"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_SHUYA.webp"
-          ]
+          "trainerNames": [
+            "Shuya"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_MINER",
+          "canRematch": false
         },
         {
           "script": "SilverTunnel_1F_EventScript_Yoru",
@@ -1171,9 +1051,11 @@
           "trainerIds": [
             "TRAINER_YORU"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_YORU.webp"
-          ]
+          "trainerNames": [
+            "Yoru"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_HEX_MANIAC",
+          "canRematch": false
         }
       ]
     },
@@ -1187,32 +1069,8 @@
             7,
             17
           ],
-          "item": "ITEM_SOFT_SAND",
+          "item": 433,
           "type": "object_event"
-        },
-        {
-          "coords": [
-            24,
-            5
-          ],
-          "item": "ITEM_MOON_STONE",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            32,
-            23
-          ],
-          "item": "ITEM_FRESH_WATER",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            17,
-            19
-          ],
-          "item": "ITEM_STAR_PIECE",
-          "type": "hidden_item"
         }
       ],
       "image": "SilverTunnel_2F",
@@ -1223,9 +1081,13 @@
           "trainerIds": [
             "TRAINER_TAMA"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_TAMA.webp"
-          ]
+          "trainerNames": [
+            "Tama"
+          ],
+          "mugshotOverworldId": [
+            "OBJ_EVENT_GFX_GEM_MANIAC"
+          ],
+          "canRematch": false
         },
         {
           "script": "SilverTunnel_2F_EventScript_Kansaku",
@@ -1233,9 +1095,11 @@
           "trainerIds": [
             "TRAINER_IKUTO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_IKUTO.webp"
-          ]
+          "trainerNames": [
+            "Ikuto"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_MINER",
+          "canRematch": false
         }
       ]
     }
@@ -1248,7 +1112,7 @@
       "shopItems": [
         {
           "label": "MAP_SILVERIDGE",
-          "mart": "",
+          "mart": "Silveridge_Mart",
           "items": [
             "ITEM_POKE_BALL",
             "ITEM_OINTMENT",
@@ -1257,8 +1121,7 @@
             "ITEM_ANTIDOTE",
             "ITEM_AWAKENING",
             "ITEM_BURN_HEAL"
-          ],
-          "scriptname": "Silveridge_Mart"
+          ]
         }
       ],
       "pickupItems": [
@@ -1267,7 +1130,7 @@
             39,
             6
           ],
-          "item": "ITEM_HARD_STONE",
+          "item": 437,
           "type": "object_event"
         }
       ],
@@ -1327,7 +1190,7 @@
           ],
           "pokemon": [],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Inside the Pokémon Refuge, speak to The Firebringer",
           "scriptName": "Silveridge_Refuge_EventScript_Firebringer"
         },
         {
@@ -1339,7 +1202,7 @@
           ],
           "pokemon": [],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Defeat the clown lady inside the Pokemon Refuge",
           "scriptName": "Silveridge_Refuge_EventScript_Shamisen"
         }
       ],
@@ -1349,13 +1212,12 @@
           "script": "Silveridge_Refuge_EventScript_Shamisen",
           "battleType": "single",
           "trainerIds": [
-            "TRAINER_SHAMISEN",
-            "format"
+            "TRAINER_SHAMISEN"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_SHAMISEN.webp",
-            ""
-          ]
+          "trainerNames": [
+            "Kyoku"
+          ],
+          "canRematch": false
         }
       ]
     }
@@ -1368,7 +1230,7 @@
       "shopItems": [
         {
           "label": "MAP_SOULKEEP",
-          "mart": "",
+          "mart": "Soulkeep_Mart",
           "items": [
             "ITEM_POKE_BALL",
             "ITEM_GREAT_BALL",
@@ -1382,19 +1244,10 @@
             "ITEM_BURN_HEAL",
             "ITEM_ICE_HEAL",
             "ITEM_ESCAPE_ROPE"
-          ],
-          "scriptname": "Soulkeep_Mart"
+          ]
         }
       ],
       "image": "Soulkeep"
-    }
-  ],
-  "MAP_SOULKEEP_GRAVEYARD": [
-    {
-      "thisLevelsId": "MAP_SOULKEEP_GRAVEYARD",
-      "baseMap": "MAP_SOULKEEP_GRAVEYARD",
-      "levelLabel": "",
-      "image": "SoulkeepGraveyard"
     }
   ],
   "MAP_SUNRISE_CAVE": [
@@ -1408,7 +1261,7 @@
             5,
             13
           ],
-          "item": "ITEM_HEART_SCALE",
+          "item": 152,
           "type": "object_event"
         }
       ],
@@ -1435,12 +1288,6 @@
         }
       ],
       "image": "SunriseVillage"
-    },
-    {
-      "thisLevelsId": "MAP_SUNRISE_VILLAGE_BEACH",
-      "baseMap": "MAP_SUNRISE_VILLAGE",
-      "levelLabel": "Beach",
-      "image": "SunriseVillage_Beach"
     },
     {
       "thisLevelsId": "MAP_SUNRISE_VILLAGE_ELDERS_HOUSE",
@@ -1472,7 +1319,7 @@
             }
           ],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Choose a starter",
           "scriptName": "SunriseVillage_EldersHouse_Event_Common_Pokeball_Starter"
         }
       ],
@@ -1482,37 +1329,12 @@
           "script": "SunriseVillage_EldersHouse_EventScript_RivalBattle",
           "battleType": "single",
           "trainerIds": [
-            "TRAINER_RIVAL_FIRST_BATTLE_FROAKIE",
-            "format"
+            "TRAINER_RIVAL_FIRST_BATTLE_FROAKIE"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_RIVAL_FIRST_BATTLE_FROAKIE.webp",
-            ""
-          ]
-        },
-        {
-          "script": "SunriseVillage_EldersHouse_EventScript_RivalBattle",
-          "battleType": "single",
-          "trainerIds": [
-            "TRAINER_RIVAL_FIRST_BATTLE_SNIVY",
-            "format"
+          "trainerNames": [
+            "Natsuki"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_RIVAL_FIRST_BATTLE_SNIVY.webp",
-            ""
-          ]
-        },
-        {
-          "script": "SunriseVillage_EldersHouse_EventScript_RivalBattle",
-          "battleType": "single",
-          "trainerIds": [
-            "TRAINER_RIVAL_FIRST_BATTLE_CYNDAQUIL",
-            "format"
-          ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_RIVAL_FIRST_BATTLE_CYNDAQUIL.webp",
-            ""
-          ]
+          "canRematch": false
         }
       ]
     },
@@ -1534,7 +1356,7 @@
           ],
           "pokemon": [],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Open your lunchbox in your room",
           "scriptName": "SunriseVillage_PlayersHouse_Bedroom_Stuff"
         }
       ],
@@ -1572,24 +1394,8 @@
             35,
             7
           ],
-          "item": "ITEM_GREAT_BALL",
+          "item": 2,
           "type": "object_event"
-        },
-        {
-          "coords": [
-            47,
-            68
-          ],
-          "item": "ITEM_RARE_CANDY",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            23,
-            8
-          ],
-          "item": "ITEM_REVIVAL_HERB",
-          "type": "hidden_item"
         }
       ],
       "scriptedGives": [
@@ -1602,7 +1408,7 @@
           ],
           "pokemon": [],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Mow the Cut Master's lawn",
           "scriptName": "TranquilRoute_EventScript_GrassCutscene"
         },
         {
@@ -1618,7 +1424,7 @@
           ],
           "pokemon": [],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Learn how to tend a berry garden",
           "scriptName": "TranquilRoute_EventScript_BerryWoman"
         }
       ],
@@ -1630,9 +1436,11 @@
           "trainerIds": [
             "TRAINER_CHIKAO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_CHIKAO.webp"
-          ]
+          "trainerNames": [
+            "Chikao"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+          "canRematch": false
         },
         {
           "script": "TranquilRoute_EventScript_Kodomo",
@@ -1640,9 +1448,11 @@
           "trainerIds": [
             "TRAINER_KODOMO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_KODOMO.webp"
-          ]
+          "trainerNames": [
+            "Kodomo"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_YOUNGSTER",
+          "canRematch": false
         },
         {
           "script": "TranquilRoute_EventScript_Takeshi",
@@ -1650,9 +1460,11 @@
           "trainerIds": [
             "TRAINER_TAKESHI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_TAKESHI.webp"
-          ]
+          "trainerNames": [
+            "Takeshi"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_NINJA_BOY",
+          "canRematch": false
         },
         {
           "script": "TranquilRoute_EventScript_Hana",
@@ -1660,9 +1472,11 @@
           "trainerIds": [
             "TRAINER_HIINA"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_HIINA.webp"
-          ]
+          "trainerNames": [
+            "Hiina"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_SUNRISE_LITTLE_GIRL",
+          "canRematch": false
         },
         {
           "script": "TranquilRoute_EventScript_Kenji",
@@ -1670,9 +1484,11 @@
           "trainerIds": [
             "TRAINER_KENJI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_KENJI.webp"
-          ]
+          "trainerNames": [
+            "Kenji"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_ARTIST",
+          "canRematch": false
         }
       ]
     },
@@ -1681,18 +1497,6 @@
       "baseMap": "MAP_TRANQUILROUTE",
       "levelLabel": "Cuthouse",
       "scriptedGives": [
-        {
-          "items": [
-            {
-              "id": 305,
-              "quantity": 1
-            }
-          ],
-          "pokemon": [],
-          "wildMon": [],
-          "explanation": "Play \"Whomst is that Pokémon!\" with the 14 yr old.",
-          "scriptName": "TranquilRoute_CutHouse_EventScript_RandomCryGuy"
-        },
         {
           "items": [
             {
@@ -1706,8 +1510,20 @@
           ],
           "pokemon": [],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Speak to the Cut Master",
           "scriptName": "TranquilRoute_CutHouse_EventScript_CutMaster"
+        },
+        {
+          "items": [
+            {
+              "id": 305,
+              "quantity": 1
+            }
+          ],
+          "pokemon": [],
+          "wildMon": [],
+          "explanation": "Play \"Whomst is that Pokémon!\" with the 14 yr old.",
+          "scriptName": "TranquilRoute_CutHouse_EventScript_RandomCryGuy"
         }
       ],
       "image": "TranquilRoute_CutHouse"
@@ -1724,7 +1540,7 @@
             33,
             88
           ],
-          "item": "ITEM_TM_ROCK_TOMB",
+          "item": 620,
           "type": "object_event"
         },
         {
@@ -1732,48 +1548,8 @@
             10,
             63
           ],
-          "item": "ITEM_CARBOS",
+          "item": 70,
           "type": "object_event"
-        },
-        {
-          "coords": [
-            26,
-            40
-          ],
-          "item": "ITEM_NONE",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            36,
-            63
-          ],
-          "item": "ITEM_LEFTOVERS",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            8,
-            53
-          ],
-          "item": "ITEM_ZINC",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            12,
-            48
-          ],
-          "item": "ITEM_LUM_BERRY",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            30,
-            73
-          ],
-          "item": "ITEM_MAX_ETHER",
-          "type": "hidden_item"
         }
       ],
       "scriptedGives": [
@@ -1786,7 +1562,7 @@
           ],
           "pokemon": [],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Fuckle with the Shuckle",
           "scriptName": "WhiteslateRoute_EventScript_Shuckle"
         },
         {
@@ -1798,7 +1574,7 @@
           ],
           "pokemon": [],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Catch the hat-man terraforming",
           "scriptName": "WhiteslateRoute_Trigger_SecretBase"
         }
       ],
@@ -1810,9 +1586,11 @@
           "trainerIds": [
             "TRAINER_ITSUMI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_ITSUMI.webp"
-          ]
+          "trainerNames": [
+            "Itsumi"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_BREEDER_F",
+          "canRematch": false
         },
         {
           "script": "WhiteslateRoute_EventScript_Ryosuke",
@@ -1820,9 +1598,11 @@
           "trainerIds": [
             "TRAINER_RYOSUKE"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_RYOSUKE.webp"
-          ]
+          "trainerNames": [
+            "Ryosuke"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_BREEDER_M",
+          "canRematch": false
         },
         {
           "script": "WhiteslateRoute_EventScript_Riku",
@@ -1830,9 +1610,11 @@
           "trainerIds": [
             "TRAINER_RIKU"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_RIKU.webp"
-          ]
+          "trainerNames": [
+            "Riku"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_NINJA_BOY",
+          "canRematch": false
         },
         {
           "script": "WhiteslateRoute_EventScript_Tomomi",
@@ -1840,9 +1622,10 @@
           "trainerIds": [
             "TRAINER_TOMOMI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_TOMOMI.webp"
-          ]
+          "trainerNames": [
+            "Tomomi"
+          ],
+          "canRematch": false
         },
         {
           "script": "WhiteslateRoute_EventScript_Yono",
@@ -1850,9 +1633,10 @@
           "trainerIds": [
             "TRAINER_YONO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_YONO.webp"
-          ]
+          "trainerNames": [
+            "Yono"
+          ],
+          "canRematch": false
         },
         {
           "script": "WhiteslateRoute_EventScript_Sumi",
@@ -1860,9 +1644,11 @@
           "trainerIds": [
             "TRAINER_SUMI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_SUMI.webp"
-          ]
+          "trainerNames": [
+            "Sumi"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_HEX_MANIAC",
+          "canRematch": false
         },
         {
           "script": "WhiteslateRoute_EventScript_Tomiko",
@@ -1870,9 +1656,11 @@
           "trainerIds": [
             "TRAINER_TOMIKO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_TOMIKO.webp"
-          ]
+          "trainerNames": [
+            "Tomiko"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_LASS",
+          "canRematch": false
         },
         {
           "script": "WhiteslateRoute_EventScript_Utaro",
@@ -1880,9 +1668,11 @@
           "trainerIds": [
             "TRAINER_UTARO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_UTARO.webp"
-          ]
+          "trainerNames": [
+            "Utaro"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_YOUNGSTER",
+          "canRematch": false
         },
         {
           "script": "WhiteslateRoute_EventScript_Asagao",
@@ -1890,9 +1680,11 @@
           "trainerIds": [
             "TRAINER_UTARO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_UTARO.webp"
-          ]
+          "trainerNames": [
+            "Utaro"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_AROMA_LADY",
+          "canRematch": false
         }
       ]
     }
@@ -1908,7 +1700,7 @@
             33,
             32
           ],
-          "item": "ITEM_ULTRA_BALL",
+          "item": 3,
           "type": "object_event"
         }
       ],
@@ -1920,9 +1712,11 @@
           "trainerIds": [
             "TRAINER_MUSASHI_1"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_MUSASHI_1.webp"
-          ]
+          "trainerNames": [
+            "Musashi"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_SUNRISE_FAT_GUY",
+          "canRematch": false
         },
         {
           "script": "WindsweptRoute_EventScript_Itamae",
@@ -1930,9 +1724,11 @@
           "trainerIds": [
             "TRAINER_ITAMAE"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_ITAMAE.webp"
-          ]
+          "trainerNames": [
+            "Itamae"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_COOK",
+          "canRematch": false
         },
         {
           "script": "WindsweptRoute_EventScript_Trainer3",
@@ -1940,9 +1736,10 @@
           "trainerIds": [
             "TRAINER_MAKOTO_1"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_MAKOTO_1.webp"
-          ]
+          "trainerNames": [
+            "Makoto"
+          ],
+          "canRematch": false
         },
         {
           "script": "WindsweptRoute_EventScript_Roku",
@@ -1950,9 +1747,10 @@
           "trainerIds": [
             "TRAINER_ROKU"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_ROKU.webp"
-          ]
+          "trainerNames": [
+            "Roku"
+          ],
+          "canRematch": false
         },
         {
           "script": "WindsweptRoute_EventScript_Trainer4",
@@ -1960,9 +1758,10 @@
           "trainerIds": [
             "TRAINER_MUSASHI_1"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_MUSASHI_1.webp"
-          ]
+          "trainerNames": [
+            "Musashi"
+          ],
+          "canRematch": false
         },
         {
           "script": "WindsweptRoute_EventScript_Trainer5",
@@ -1970,9 +1769,10 @@
           "trainerIds": [
             "TRAINER_MUSASHI_1"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_MUSASHI_1.webp"
-          ]
+          "trainerNames": [
+            "Musashi"
+          ],
+          "canRematch": false
         },
         {
           "script": "WindsweptRoute_EventScript_Trainer6",
@@ -1980,9 +1780,10 @@
           "trainerIds": [
             "TRAINER_MUSASHI_1"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_MUSASHI_1.webp"
-          ]
+          "trainerNames": [
+            "Musashi"
+          ],
+          "canRematch": false
         }
       ]
     }
@@ -1995,7 +1796,7 @@
       "shopItems": [
         {
           "label": "MAP_WINDY_CAPE_2",
-          "mart": "",
+          "mart": "WindyCape_Mart",
           "items": [
             "ITEM_POKE_BALL",
             "ITEM_GREAT_BALL",
@@ -2009,8 +1810,7 @@
             "ITEM_BURN_HEAL",
             "ITEM_ICE_HEAL",
             "ITEM_ESCAPE_ROPE"
-          ],
-          "scriptname": "WindyCape_Mart"
+          ]
         }
       ],
       "image": "WindyCape2"
@@ -2021,40 +1821,6 @@
       "thisLevelsId": "MAP_YIFU_CITY",
       "baseMap": "MAP_YIFU_CITY",
       "levelLabel": "",
-      "pickupItems": [
-        {
-          "coords": [
-            24,
-            41
-          ],
-          "item": "ITEM_POKE_DOLL",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            64,
-            45
-          ],
-          "item": "ITEM_ESCAPE_ROPE",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            33,
-            62
-          ],
-          "item": "ITEM_RARE_CANDY",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            1,
-            62
-          ],
-          "item": "ITEM_DUSK_BALL",
-          "type": "hidden_item"
-        }
-      ],
       "scriptedGives": [
         {
           "items": [
@@ -2065,7 +1831,7 @@
           ],
           "pokemon": [],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Return the stolen pokemon",
           "scriptName": "YifuCity_EventScript_RobberyVictim"
         },
         {
@@ -2078,7 +1844,7 @@
             }
           ],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Purchasable from the Shiny Seller, western-part of Yifu City",
           "scriptName": "YifuCity_ShinySellerChoice"
         },
         {
@@ -2090,7 +1856,7 @@
           ],
           "pokemon": [],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "learn canonical Pokémon lore from the nurse in the Refuge",
           "scriptName": "YifuCity_EventScript_Nurse"
         }
       ],
@@ -2103,7 +1869,7 @@
       "shopItems": [
         {
           "label": "MAP_YIFU_CITY",
-          "mart": "CrobatShop",
+          "mart": "Crobat_Mart",
           "items": [
             "ITEM_OINTMENT",
             "ITEM_SUPER_OINTMENT",
@@ -2112,12 +1878,11 @@
             "ITEM_ULTRA_BALL_KNOCKOFF",
             "ITEM_ESCAPE_ROPE_KNOCKOFF",
             "ITEM_SLOWPOKE_TAIL"
-          ],
-          "scriptname": "Crobat_Mart"
+          ]
         },
         {
           "label": "MAP_YIFU_CITY",
-          "mart": "CrobatShop",
+          "mart": "Legit_Mart",
           "items": [
             "ITEM_OINTMENT",
             "ITEM_SUPER_OINTMENT",
@@ -2126,14 +1891,12 @@
             "ITEM_POKE_BALL",
             "ITEM_GREAT_BALL",
             "ITEM_ESCAPE_ROPE"
-          ],
-          "scriptname": "Legit_Mart"
+          ]
         },
         {
           "label": "MAP_YIFU_CITY",
-          "mart": "CrobatShop",
-          "items": [],
-          "scriptname": "Legit_Mart_TM"
+          "mart": "Legit_Mart_TM",
+          "items": []
         }
       ],
       "image": "YifuCity_CrobatShop"
@@ -2162,31 +1925,40 @@
           "script": "YifuCity_Dojo_EventScript_Dance1",
           "battleType": "double",
           "trainerIds": [
-            "TRAINER_AKARI"
+            "TRAINER_AKARI",
+            "TRAINER_YUKA"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_AKARI.webp"
-          ]
+          "trainerNames": [
+            "Akari",
+            "Yuka"
+          ],
+          "canRematch": false
         },
         {
           "script": "YifuCity_Dojo_EventScript_Dance2",
           "battleType": "double",
           "trainerIds": [
-            "TRAINER_KARIN"
+            "TRAINER_KARIN",
+            "TRAINER_MIIKA"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_KARIN.webp"
-          ]
+          "trainerNames": [
+            "Karin",
+            "Miika"
+          ],
+          "canRematch": false
         },
         {
           "script": "YifuCity_Dojo_EventScript_Dance3",
           "battleType": "double",
           "trainerIds": [
-            "TRAINER_NANAMI"
+            "TRAINER_NANAMI",
+            "TRAINER_KANAE"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_NANAMI.webp"
-          ]
+          "trainerNames": [
+            "Nanami",
+            "Kanae"
+          ],
+          "canRematch": false
         },
         {
           "script": "YifuCity_Dojo_EventScript_Akari",
@@ -2194,9 +1966,10 @@
           "trainerIds": [
             "TRAINER_AKARI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_AKARI.webp"
-          ]
+          "trainerNames": [
+            "Akari"
+          ],
+          "canRematch": false
         },
         {
           "script": "YifuCity_Dojo_EventScript_Yuka",
@@ -2204,9 +1977,10 @@
           "trainerIds": [
             "TRAINER_YUKA"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_YUKA.webp"
-          ]
+          "trainerNames": [
+            "Yuka"
+          ],
+          "canRematch": false
         },
         {
           "script": "YifuCity_Dojo_EventScript_Nanami",
@@ -2214,9 +1988,10 @@
           "trainerIds": [
             "TRAINER_NANAMI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_NANAMI.webp"
-          ]
+          "trainerNames": [
+            "Nanami"
+          ],
+          "canRematch": false
         },
         {
           "script": "YifuCity_Dojo_EventScript_Kanae",
@@ -2224,9 +1999,10 @@
           "trainerIds": [
             "TRAINER_KANAE"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_KANAE.webp"
-          ]
+          "trainerNames": [
+            "Kanae"
+          ],
+          "canRematch": false
         },
         {
           "script": "YifuCity_Dojo_EventScript_Karin",
@@ -2234,9 +2010,10 @@
           "trainerIds": [
             "TRAINER_KARIN"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_KARIN.webp"
-          ]
+          "trainerNames": [
+            "Karin"
+          ],
+          "canRematch": false
         },
         {
           "script": "YifuCity_Dojo_EventScript_Miika",
@@ -2244,9 +2021,10 @@
           "trainerIds": [
             "TRAINER_MIIKA"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_MIIKA.webp"
-          ]
+          "trainerNames": [
+            "Miika"
+          ],
+          "canRematch": false
         },
         {
           "script": "YifuCity_Dojo_EventScript_Yutaka",
@@ -2254,9 +2032,10 @@
           "trainerIds": [
             "TRAINER_YUTAKA_1"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_YUTAKA_1.webp"
-          ]
+          "trainerNames": [
+            "Yutaka"
+          ],
+          "canRematch": false
         }
       ]
     },
@@ -2272,9 +2051,11 @@
           "trainerIds": [
             "TRAINER_SACHIKO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_SACHIKO.webp"
-          ]
+          "trainerNames": [
+            "Sachiko"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_UUME_OLD_WOMAN",
+          "canRematch": false
         },
         {
           "script": "YifuCity_HotSprings_EventScript_HotSpringM",
@@ -2282,9 +2063,11 @@
           "trainerIds": [
             "TRAINER_FUTOSHI"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_FUTOSHI.webp"
-          ]
+          "trainerNames": [
+            "Futoshi"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN",
+          "canRematch": false
         },
         {
           "script": "YifuCity_HotSprings_EventScript_HotSpringF",
@@ -2292,9 +2075,11 @@
           "trainerIds": [
             "TRAINER_WAKAE"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_WAKAE.webp"
-          ]
+          "trainerNames": [
+            "Wakae"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN",
+          "canRematch": false
         },
         {
           "script": "YifuCity_HotSprings_EventScript_Firebringer",
@@ -2302,9 +2087,10 @@
           "trainerIds": [
             "TRAINER_LIHUO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_LIHUO.webp"
-          ]
+          "trainerNames": [
+            "Lihuo"
+          ],
+          "canRematch": false
         }
       ]
     },
@@ -2322,7 +2108,7 @@
           ],
           "pokemon": [],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Speak to the cosplayer inside the house, south of the Refuge",
           "scriptName": "YifuCity_House2_Model"
         },
         {
@@ -2334,7 +2120,7 @@
           ],
           "pokemon": [],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Speak to the cosplayer's Tarountula",
           "scriptName": "YifuCity_House2_Tarountula"
         }
       ],
@@ -2354,7 +2140,7 @@
           ],
           "pokemon": [],
           "wildMon": [],
-          "explanation": "",
+          "explanation": "Tell the shamisen the truth...",
           "scriptName": "YifuCity_Refuge_EventScript_RouteShamisen"
         }
       ],
@@ -2364,24 +2150,6 @@
       "thisLevelsId": "MAP_YIFU_CITY_REFUGE_2F",
       "baseMap": "MAP_YIFU_CITY",
       "levelLabel": "Refuge 2F",
-      "pickupItems": [
-        {
-          "coords": [
-            30,
-            7
-          ],
-          "item": "ITEM_LAVA_COOKIE",
-          "type": "hidden_item"
-        },
-        {
-          "coords": [
-            22,
-            7
-          ],
-          "item": "ITEM_SITRUS_BERRY",
-          "type": "hidden_item"
-        }
-      ],
       "image": "YifuCity_Refuge_2F",
       "battleRefs": [
         {
@@ -2390,9 +2158,11 @@
           "trainerIds": [
             "TRAINER_YAMATO"
           ],
-          "battlePicPaths": [
-            "trainers/processed/TRAINER_YAMATO.webp"
-          ]
+          "trainerNames": [
+            "Yamato"
+          ],
+          "mugshotOverworldId": "OBJ_EVENT_GFX_UUME_OLD_MAN",
+          "canRematch": false
         }
       ]
     }

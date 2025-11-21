@@ -47,7 +47,7 @@ class ItemSearch {
   /**
    * Array of places to find items.
    */
-  itemsToMap: Map<string, string[]>;
+  itemsToMap: Map<string | number, string[]>;
   constructor() {
     this.trie = new TrieSearch<Item>("name", {
       min: 2,
@@ -66,7 +66,7 @@ class ItemSearch {
         });
         map.scriptedGives.forEach((script) => {
           script.items.forEach((item: ItemWithAmount) =>
-            this.throwOnPile(item.constantName ?? item.id, map.baseMap),
+            this.throwOnPile(item.id, map.baseMap),
           );
           script.pokemon.forEach((pokemon: LevelScriptedEventMon) =>
             this.throwOnPile(pokemon.species, map.baseMap),
@@ -74,45 +74,32 @@ class ItemSearch {
         });
 
         map.shopItems.forEach((shop: LevelMart) => {
-          shop.items.forEach((item: string) =>
+          shop.items.forEach((item: number) =>
             this.throwOnPile(item, map.baseMap),
           );
         });
       });
     }
   }
-  private throwOnPile(item: string | number, mapBaseName: string) {
-    const key = String(item);
-    if (this.itemsToMap.has(key)) {
-      const currPlacesToGetItem = this.itemsToMap.get(key);
+  private throwOnPile(itemId: number | string, mapBaseName: string) {
+    if (this.itemsToMap.has(itemId)) {
+      const currPlacesToGetItem = this.itemsToMap.get(itemId);
       if (currPlacesToGetItem?.includes(mapBaseName)) return;
       currPlacesToGetItem?.push(mapBaseName);
       return;
     }
-    this.itemsToMap.set(key, [mapBaseName]);
+    this.itemsToMap.set(itemId, [mapBaseName]);
   }
-  getMapsForItem(itemId: string): string[] | null {
+  getMapsForItem(itemId: number): string[] | null {
     // First, look in the regular item -> map lookup (pickups, shops, scripted, etc.)
     const mapsArr = this.itemsToMap.get(itemId);
-    if (mapsArr && mapsArr.length > 0) {
-      return mapsArr;
-    }
-    const itemDetails = getItemDetails(itemId);
-    if (itemDetails) {
-      const viaId = this.itemsToMap.get(String(itemDetails.id));
-      if (viaId && viaId.length > 0) return viaId;
-      if (itemDetails.constantName) {
-        const viaConst = this.itemsToMap.get(itemDetails.constantName);
-        if (viaConst && viaConst.length > 0) return viaConst;
-      }
-    }
-    return null;
+    return mapsArr && mapsArr.length > 0 ? mapsArr : null;
   }
 
   /**
    * Returns array of maps for an item that is ONLY obtainable via held Pokémon (helper for external callers).
    */
-  getMonIdsWithHeldItem(itemId: string) {
+  getMonIdsWithHeldItem(itemId: number) {
     const itemData = getItemDetails(itemId);
     if (!itemData) return null;
     return pokemonSearchStore.getPokemonWithHeldItem(itemData.id);
@@ -194,7 +181,7 @@ const useItemSearch = (): [
   Item[],
   React.Dispatch<React.SetStateAction<string>>,
   () => void,
-  (itemId: string) => string[] | null,
+  (itemId: number) => string[] | null,
 ] => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState<Item[]>([]);
@@ -210,7 +197,7 @@ const useItemSearch = (): [
     setSearchResults(results);
   }, [searchTerm]);
 
-  const getMapsForItem = useCallback((itemId: string) => {
+  const getMapsForItem = useCallback((itemId: number) => {
     return itemSearch.getMapsForItem(itemId);
   }, []);
   return [

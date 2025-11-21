@@ -78,7 +78,7 @@ const EncounterMonListItem = ({
       <div className="relative overflow-hidden drop-shadow-md">
         <img
           className="pixelated aspect-square h-8 w-8"
-          src={`/icon/${mon.species}/icon.webp`}
+          src={`/icon/generated/species_overworld/animated/${mon.species}.webp`}
           alt={mon.name}
         />
       </div>

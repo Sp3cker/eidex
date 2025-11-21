@@ -1,7 +1,41 @@
 @import "tailwindcss";
 @import "./fonts.css";
 @import "tw-animate-css";
+:root, .hearth-2 {
+    --peach: hsl(41, 100%, 85%);
+    --goldenrod: hsl(40, 93%, 74%);
+    --golden-tainoi: hsl(40, 100%, 67%);
+    --my-sin: hsl(40, 100%, 58%);
+    --tan: hsl(40, 42%, 68%);
+    --pablo: hsl(40, 11%, 44%);
+    --fuscous-gray: hsl(42, 9%, 28%);
+    --roman-coffee: hsl(31, 25%, 39%);
+    --millbrook: hsl(24, 27%, 31%);
+    --heavy-metal: hsl(78, 11%, 18%);
+    --nandor: hsl(126, 6%, 33%);
+    --xanadu: hsl(147, 8%, 46%);
+    --cascade: hsl(159, 12%, 60%);
+    --sand-dune: hsl(13, 12%, 43%);
+}
 
+@supports (color: color(display-p3 1 1 1)) {
+    :root, .hearth-2 {
+        --peach: color(display-p3 1.0 0.906 0.71 / 1.0);
+        --goldenrod: color(display-p3 0.98 0.816 0.49 / 1.0);
+        --golden-tainoi: color(display-p3 1.0 0.776 0.333 / 1.0);
+        --my-sin: color(display-p3 1.0 0.722 0.169 / 1.0);
+        --tan: color(display-p3 0.812 0.722 0.541 / 1.0);
+        --pablo: color(display-p3 0.482 0.451 0.388 / 1.0);
+        --fuscous-gray: color(display-p3 0.31 0.294 0.259 / 1.0);
+        --roman-coffee: color(display-p3 0.482 0.388 0.29 / 1.0);
+        --millbrook: color(display-p3 0.388 0.29 0.224 / 1.0);
+        --heavy-metal: color(display-p3 0.184 0.196 0.157 / 1.0);
+        --nandor: color(display-p3 0.306 0.345 0.31 / 1.0);
+        --xanadu: color(display-p3 0.427 0.498 0.459 / 1.0);
+        --cascade: color(display-p3 0.548 0.647 0.614 / 1.0);
+        --sand-dune: color(display-p3 0.48 0.399 0.377 / 1.0);
+    }
+}
 :root {
   --trainer-size: 2rem;
   --scale: calc(var(--trainer-size) / 32px);
@@ -16,10 +50,14 @@
   );
   --color-very-hard-start: oklch(0.65 0.2 25);
   --color-blue-text: var(--color-blue-800);
+   --peach: hsl(41, 100%, 85%);
+
   --hearth-gray-1: color(display-p3 0.58 0.549 0.451 / 1);
   --hearth-gray-2: color(display-p3 0.482 0.451 0.388 / 1) /* Hearth */;
-  --hearth-orange-1: color(display-p3 1 0.906 0.71 / 1);
-  --hearth-orange-2: color(display-p3 1 0.839 0.549 / 1);
+  /* --hearth-orange-1: color(display-p3 1 0.906 0.71 / 1); */
+  --hearth-orange-1: hsl(40, 93%, 74%);
+  --hearth-orange-2:hsl(40, 100%, 67%);
+  /* --hearth-orange-2: color(display-p3 1 0.839 0.549 / 1); */
   --hearth-orange-3: color(display-p3 0.906 0.612 0.29 / 1);
   --hearth-brown-1: color(display-p3 0.482 0.388 0.29 / 1);
   --hearth-brown-2: color(display-p3 0.388 0.29 0.224 / 1);
