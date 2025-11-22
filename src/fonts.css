@@ -1,7 +1,6 @@
 @font-face {
   font-family: "NBit";
   src:
-    local("PP Mondwest"),
     url("/fonts/emerald-pro/nbit-Regular.ttf") format("truetype"),
     url("/fonts/emerald-pro/nbit-Regular.woff2") format("woff2");
   font-weight: normal;
