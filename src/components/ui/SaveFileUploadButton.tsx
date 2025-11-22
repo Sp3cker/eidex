@@ -2,7 +2,7 @@ import { useRandomizerStore } from "@/stores/randomizerStore";
 
 const SaveFileUploadButton = ({
   onClick,
-  isOpen,
+  // isOpen,
 }: {
   onClick: (to: string) => void;
   isOpen: "upload" | "disclaimer" | null;
@@ -13,7 +13,7 @@ const SaveFileUploadButton = ({
   };
   return (
     <button
-      disabled={isOpen === "disclaimer"}
+      disabled
       onClick={handleUpload}
       className={`hover-active-button rounded-xs m-1 cursor-pointer font-bold disabled:cursor-not-allowed ${
         isRandomiserActive ? "bg-yellow-600" : "bg-gray-500"
