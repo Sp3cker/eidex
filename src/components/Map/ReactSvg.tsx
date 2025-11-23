@@ -63,7 +63,7 @@ export default React.memo(function ReactSvg() {
         className="h-auto max-h-screen w-full"
         preserveAspectRatio="xMidYMid meet"
       >
-        <image href="/hearth-map.png" width="1200" height="800" />
+        <image href="/HEARTH-MAP.webp" width="1200" height="800" />
         {toRender && toRender.map((section) => (
           <rect
             key={section.id}

@@ -15,14 +15,19 @@ const DEFAULT_SPRING_CONFIG = Object.freeze({
   damping: 0.81,
   frequency: 0.62,
 });
+
+const MAP_WIDTH = 1200;
+const MAP_HEIGHT = 800;
+const DAMPING_FACTOR = 0.1;
+
 // Allow dragging any corner to center by using map dimensions
-// Map is 800x667px with scale 1.32, so scaled dimensions are ~1056x880px
+// Map is 1440x600px with scale 0.5, so scaled dimensions are ~720x300px
 // To center any corner, we need bounds that allow the map to move by its full dimensions
 const BOUNDS = {
-  top: -(667 * 1.32),
-  bottom: 667 * 1.32,
-  left: -(800 * 1.32),
-  right: 800 * 1.32,
+  top: -(600 * 0.5),
+  bottom: 600 * 0.5,
+  left: -(1440 * 0.5),
+  right: 1440 * 0.5,
 };
 const MapContainer = ({ children }: any) => {
   const [selectedCoordinates, setDragging] = useMapStore(
@@ -35,35 +40,44 @@ const MapContainer = ({ children }: any) => {
   const windowSize = useWindowSize();
   const { width: WINDOW_WIDTH, height: WINDOW_HEIGHT } = windowSize;
   const [{ scale, centerOffset }, api] = useSpring(() => {
-    // Booleans as 0/1 so the rest of the math can stay branchless
-    const isSmallScreen = Number(screenWidth === "sm" || screenWidth === "xs");
+    // Booleans and clearer names for readability
+    const isSmallScreen = screenWidth === "sm" || screenWidth === "xs";
     const xyScales: [number, number] = [
-      3 * rootFontSize * (1 - 2 * isSmallScreen),
-      (3 + (1 - isSmallScreen)) * rootFontSize,
+      3 * rootFontSize * (isSmallScreen ? -1 : 1),
+      (isSmallScreen ? 3 : 4) * rootFontSize,
     ];
     // Default center translation before any coordinate selection kicks in
     const baseTargetCenterOffset: [number, number] = [
-      200 * Number(WINDOW_WIDTH > 1000),
+      WINDOW_WIDTH > 1000 ? -400 : 0,
       150,
     ];
-    const hasSelection = Number(Boolean(selectedCoordinates && mapRef.current));
+    const hasSelection = !!(selectedCoordinates && mapRef.current);
     const [x = 0, y = 0] = selectedCoordinates ?? [];
     // When the special 400x340 point is active, nudge toward center instead of upper-left
-    const isDefaultCoordinate = Number(x === 400 && y === 340);
-    const offsetFactorHorizontal = 0.1 + isDefaultCoordinate * (1.75 - 0.1);
-    const offsetFactorVertical = 0.2 + isDefaultCoordinate * (1.5 - 0.2);
+    const isDefaultCoordinate = x === 400 && y === 340;
+    const horizontalOffsetFactor = isDefaultCoordinate
+      ? 1.75
+      : isSmallScreen
+        ? -0.21
+        : 0.1;
+    const verticalOffsetFactor = isDefaultCoordinate
+      ? 1.5
+      : isSmallScreen
+        ? 0.15
+        : 0.2;
+
+    const dampingX = (x / MAP_WIDTH - 0.5) * MAP_WIDTH * DAMPING_FACTOR;
+    const dampingY = (y / MAP_HEIGHT - 0.5) * MAP_HEIGHT * DAMPING_FACTOR;
+
     const selectionTargetCenterOffset: [number, number] = [
-      WINDOW_WIDTH * offsetFactorHorizontal - x - xyScales[0],
-      WINDOW_HEIGHT * offsetFactorVertical - y - xyScales[1],
+      WINDOW_WIDTH * horizontalOffsetFactor - x - xyScales[0] + dampingX,
+      WINDOW_HEIGHT * verticalOffsetFactor - y - xyScales[1] + dampingY,
     ];
-    // Blend between the base offset and the selection-driven offset with the hasSelection flag
-    const currentTargetCenterOffset: [number, number] = [
-      baseTargetCenterOffset[0] +
-        hasSelection * (selectionTargetCenterOffset[0] - baseTargetCenterOffset[0]),
-      baseTargetCenterOffset[1] +
-        hasSelection * (selectionTargetCenterOffset[1] - baseTargetCenterOffset[1]),
-    ];
-    const currentSpringDelay = 113 * hasSelection;
+    // Choose the appropriate target offset
+    const currentTargetCenterOffset: [number, number] = hasSelection
+      ? selectionTargetCenterOffset
+      : baseTargetCenterOffset;
+    const currentSpringDelay = hasSelection ? 113 : 0;
 
     return {
       scale: 1.32,
@@ -86,10 +100,9 @@ const MapContainer = ({ children }: any) => {
           Math.max(Math.sqrt(vx * vx + vy * vy) / 10, 0.1),
           1,
         );
-        const smoothingFactor = 0.7 + velocityFactor * 0.3; // Range: 0.7 to 1.0
 
         api.start({
-          centerOffset: [x * smoothingFactor, y * smoothingFactor],
+          centerOffset: [x, y],
           config: {
             mass: 1,
             tension: velocityFactor > 0.5 ? 200 : 100, // More responsive at higher velocities
@@ -115,7 +128,9 @@ const MapContainer = ({ children }: any) => {
     }),
   };
   useEffect(() => {
-    api.start({ centerOffset: [WINDOW_WIDTH > 1000 ? 200 : 0, 150] });
+    if (!selectedCoordinates) {
+      api.start({ centerOffset: [WINDOW_WIDTH > 1000 ? 200 : 0, 150] });
+    }
   }, []);
   return (
     <div
