@@ -79,7 +79,7 @@ const TrainersList = memo(function TrainersList() {
 
   return (
     <div
-      className={`map-place-info-textbox-gradient max-w-50 ${isTrainersListOpen ? "pointer-events-auto" : "pointer-events-none"} absolute bottom-0 right-0 top-0 w-[75%] overflow-y-auto rounded rounded-l-lg md:left-0 md:rounded-lg`}
+      className={`map-place-info-textbox-gradient max-w-50 ${isTrainersListOpen ? "pointer-events-auto" : "pointer-events-none"}  bottom-0 right-0 top-0 w-[75%] overflow-y-auto rounded rounded-l-lg md:left-0 md:rounded-lg`}
     >
       <div className="font-pkmnem flex flex-1 flex-col gap-2 p-2 md:gap-1">
         {isLoading ? (

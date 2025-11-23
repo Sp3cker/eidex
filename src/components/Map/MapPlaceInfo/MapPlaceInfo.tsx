@@ -78,7 +78,7 @@ const EncounterAreaButtons = ({
   );
 };
 
-const MapPlaceInfoContent = memo(() => {
+const MapPlaceInfoContent = memo(({ enablePointer }: { enablePointer: boolean }) => {
   const [selectedTab, setSelectedTab] = useState("land");
   const { ref: containerRef, height: containerHeight } = useElementSize();
 
@@ -100,7 +100,7 @@ const MapPlaceInfoContent = memo(() => {
   return (
     <div
       ref={containerRef}
-      className="map-place-info-textbox-gradient pointer-events-auto relative flex h-full flex-col rounded-l-lg md:rounded-lg"
+      className={`map-place-info-textbox-gradient pointer-events-${enablePointer ? "auto" : "none"} relative flex h-full flex-col rounded-l-lg md:rounded-lg`}
     >
       <ScrollArea
         className="simplebar-theme-map h-full pb-10 pl-1 pr-3 pt-2 lg:h-full"
@@ -161,7 +161,7 @@ const MapPlaceInfo = memo(() => {
         }}
         className={`${!selectedMap && "will-translate-opacity"} pointer-events-none h-full`}
       >
-        <MapInfoSwitcher />
+        <MapInfoSwitcher enablePointer={selectedMap} />
       </animated.div>
     </div>
   );
@@ -171,26 +171,22 @@ MapPlaceInfo.displayName = "MapPlaceInfo";
 const pages = [
   ({ style }: any) => (
     <animated.div style={style} className="absolute inset-0 pl-1 md:p-2">
-      <div className="relative h-full overflow-hidden">
-        <Suspense>
-          <TrainersList />
-        </Suspense>
-      </div>
+      <Suspense>
+        <TrainersList />
+      </Suspense>
     </animated.div>
   ),
-  ({ style }: any) => (
+  ({ style, enablePointer }: any) => (
     <animated.div style={style} className="absolute inset-0 pl-1 md:p-2">
-      <div className="relative h-full">
-        <MapPlaceInfoContent />
-      </div>
+      <MapPlaceInfoContent enablePointer={enablePointer} />
     </animated.div>
   ),
 ];
 
-const MapInfoSwitcher = memo(function Switcher() {
+const MapInfoSwitcher = memo(function Switcher({ enablePointer }: { enablePointer: boolean }) {
   const trainersListOpen = useMapStore((state) => state.isTrainersListOpen);
 
-  const shuffleTransition = useTransition(trainersListOpen, {
+  const shuffleTransition = useTransition(trainersListOpen ? 0 : 1, {
     from: {
       translateX: "100%",
     },
@@ -214,7 +210,7 @@ const MapInfoSwitcher = memo(function Switcher() {
   return (
     <div className="pointer-events-none h-full py-2">
       <animated.div className="absolute bottom-0 left-0 right-0 top-0 py-2">
-        {shuffleTransition((style, isOpen) => pages[isOpen ? 0 : 1]({ style }))}
+        {shuffleTransition((style, isOpen) => pages[isOpen]({ style, enablePointer }))}
       </animated.div>
     </div>
   );

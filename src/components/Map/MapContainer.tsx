@@ -35,24 +35,35 @@ const MapContainer = ({ children }: any) => {
   const windowSize = useWindowSize();
   const { width: WINDOW_WIDTH, height: WINDOW_HEIGHT } = windowSize;
   const [{ scale, centerOffset }, api] = useSpring(() => {
-    const currentTargetCenterOffset = [WINDOW_WIDTH > 1000 ? 200 : 0, 150]; // Default if no coordinates or mapRef
-    // Default config
-    let currentSpringDelay = 0; // Default delay
-    const xyScales =
-      screenWidth === "sm" || screenWidth === "xs"
-        ? [-3 * rootFontSize, 3 * rootFontSize]
-        : [3 * rootFontSize, 4 * rootFontSize];
-
-    if (selectedCoordinates && mapRef.current) {
-      const [x, y] = selectedCoordinates;
-      // Use center positioning for default coordinates, otherwise offset toward upper-left
-      const offsetFactor = x === 400 && y === 340 ? 1.75 : 0.2; // 0.5 = center, 0.375 = 3/8 toward upper-left
-      currentTargetCenterOffset[0] =
-        WINDOW_WIDTH * offsetFactor - x - xyScales[0];
-      currentTargetCenterOffset[1] =
-        WINDOW_HEIGHT * offsetFactor - y - xyScales[1];
-      currentSpringDelay = 113; // Specific delay for this case
-    }
+    // Booleans as 0/1 so the rest of the math can stay branchless
+    const isSmallScreen = Number(screenWidth === "sm" || screenWidth === "xs");
+    const xyScales: [number, number] = [
+      3 * rootFontSize * (1 - 2 * isSmallScreen),
+      (3 + (1 - isSmallScreen)) * rootFontSize,
+    ];
+    // Default center translation before any coordinate selection kicks in
+    const baseTargetCenterOffset: [number, number] = [
+      200 * Number(WINDOW_WIDTH > 1000),
+      150,
+    ];
+    const hasSelection = Number(Boolean(selectedCoordinates && mapRef.current));
+    const [x = 0, y = 0] = selectedCoordinates ?? [];
+    // When the special 400x340 point is active, nudge toward center instead of upper-left
+    const isDefaultCoordinate = Number(x === 400 && y === 340);
+    const offsetFactorHorizontal = 0.1 + isDefaultCoordinate * (1.75 - 0.1);
+    const offsetFactorVertical = 0.2 + isDefaultCoordinate * (1.5 - 0.2);
+    const selectionTargetCenterOffset: [number, number] = [
+      WINDOW_WIDTH * offsetFactorHorizontal - x - xyScales[0],
+      WINDOW_HEIGHT * offsetFactorVertical - y - xyScales[1],
+    ];
+    // Blend between the base offset and the selection-driven offset with the hasSelection flag
+    const currentTargetCenterOffset: [number, number] = [
+      baseTargetCenterOffset[0] +
+        hasSelection * (selectionTargetCenterOffset[0] - baseTargetCenterOffset[0]),
+      baseTargetCenterOffset[1] +
+        hasSelection * (selectionTargetCenterOffset[1] - baseTargetCenterOffset[1]),
+    ];
+    const currentSpringDelay = 113 * hasSelection;
 
     return {
       scale: 1.32,

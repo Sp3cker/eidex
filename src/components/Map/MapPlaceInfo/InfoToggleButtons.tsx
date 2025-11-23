@@ -1,6 +1,6 @@
 import { animated, config, useSprings } from "@react-spring/web";
 import { useGesture } from "@use-gesture/react";
-import { useCallback, startTransition } from "react";
+import { useCallback, startTransition, memo } from "react";
 import { useMapStore } from "@/stores/useMapStore";
 
 /**
@@ -11,7 +11,7 @@ import { useMapStore } from "@/stores/useMapStore";
 
 const labels = ["Pokémon", "Trainers"] as const;
 
-const InfoToggleButtons = () => {
+const InfoToggleButtons = memo(function InfoToggleButtons() {
   const trainersListOpen = useMapStore((s) => s.isTrainersListOpen);
   const setTrainersListOpen = useMapStore((s) => s.setTrainersListOpen);
 
@@ -53,13 +53,13 @@ const InfoToggleButtons = () => {
           key={labels[idx]}
           {...bind(idx)}
           style={spring}
-          className={`cursor-pointer ${selectedIndex == idx ? "bg-[#C03232] ring ring-1" : "bg-[#9A2828]"} rounded-sm px-2 py-1 text-sm font-bold leading-none text-neutral-200 md:text-base`}
+          className={`cursor-pointer ${selectedIndex == idx ? "bg-[#C03232] ring-1" : "bg-[#9A2828]"} rounded-sm px-2 py-1 text-sm font-bold leading-none text-neutral-200 md:text-base`}
         >
           {labels[idx]}
         </animated.div>
       ))}
     </div>
   );
-};
+});
 
 export default InfoToggleButtons;
