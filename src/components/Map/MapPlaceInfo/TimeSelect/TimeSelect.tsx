@@ -1,7 +1,6 @@
 import useMapStore from "@/stores/useMapStore";
-import React from "react";
 
-const TimeSelect = ({ parentHeight }) => {
+const TimeSelect = ({ parentHeight }: { parentHeight: number }) => {
   const { shouldShow } = useMapStore((state) => ({
     shouldShow: state.selectedLevelLandMons !== undefined,
   }));
