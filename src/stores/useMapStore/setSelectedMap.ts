@@ -1,5 +1,5 @@
 import ItemSearch from "@/utils/itemsData";
-import { LevelsInfo } from "@/data/map";
+import { LevelsInfo, EncounterGroup } from "@/data/map";
 
 import { EncounterMons } from "@/stores/useMapStore/types";
 import { encounterStore } from "@/data/map/encounters";
@@ -22,19 +22,28 @@ const getMap = (map: string) => {
   // );
 };
 
+const getSelectedEncounters = (id: string, levelId: string, time?: string) => {
+  const encounters = encounterStore.getEncounterData(id) as
+    | EncounterGroup[]
+    | undefined;
 
-const getSelectedMapInfo = (id: string, levelId: string) => {
-  const Encounters = encounterStore.getEncounterData();
-
-  const targetMapEncounterGroup = Encounters[id];
-  if (targetMapEncounterGroup === undefined) {
+  if (encounters === undefined) {
     console.warn("No encounters for map %s", id);
     return;
   }
 
-  const targetMapEncounters = targetMapEncounterGroup.find(
-    (enc) => enc.map === levelId,
-  );
+  const targetMapEncounters = encounters
+    .filter((enc) => {
+      if (enc.time === undefined) {
+        return true;
+      }
+      if (time) {
+        return enc.time === time;
+      }
+      return true; // if no time specified, return all
+    })
+    .find((enc) => enc.map === levelId);
+  debugger;
   if (targetMapEncounters === undefined) {
     queueMicrotask(() => {
       console.error("Error selecting encounters %s, level %s", id, levelId);
@@ -74,9 +83,11 @@ const getSelectedMapInfo = (id: string, levelId: string) => {
 const getSelectedLevel = ({
   baseMapName,
   levelIndex,
+  time,
 }: {
   baseMapName: string;
   levelIndex: number;
+  time?: string;
 }) => {
   const targetMap = getMap(baseMapName);
   if (targetMap === undefined) {
@@ -90,9 +101,10 @@ const getSelectedLevel = ({
     throw new Error(`Error selecting map level ${levelIndex}`);
   }
 
-  const thisLevelEncounterData = getSelectedMapInfo(
+  const thisLevelEncounterData = getSelectedEncounters(
     targetLevel.baseMap, // Key for Encounters data (e.g., "MAP_PETALBURG_CITY_LAND")
     targetLevel.thisLevelsId, // Specific sub-level ID (e.g., "MAP_PETALBURG_CITY_LAND_MAIN")
+    time,
   );
   const thisLevelsItems = ItemSearch.byMap(mapBaseName);
 
@@ -110,8 +122,10 @@ const getSelectedLevel = ({
   // Get encounter level IDs for Selecta ("MAP_SHOAL_CAVE_LOW_TIDE_XXX")
   // Encounters are keyed by targetLevel.baseMap
 
-  const encounterGroupForThisBaseMapKey =
-    encounterStore.getEncounterData()[targetLevel.baseMap];
+  const encounterGroupForThisBaseMapKey = encounterStore.getEncounterData(
+    targetLevel.baseMap,
+  ) as EncounterGroup[] | undefined;
+
   /* the selector in the map func below is the unique property for each encounter level
   For Hearth, it's the base_map. EI is map */
   const encounterLevelIdsForSelecta = encounterGroupForThisBaseMapKey
@@ -130,7 +144,7 @@ const getSelectedLevel = ({
     selectedImageName: targetLevel.image,
   };
 };
-export const getInitialMapLevelData = (baseMapName: string) => {
+const getInitialMapLevelData = (baseMapName: string, time: string) => {
   const mapDetails = getMap(baseMapName);
   if (!mapDetails || !mapDetails.levels || mapDetails.levels.length === 0) {
     console.error(
@@ -148,9 +162,10 @@ export const getInitialMapLevelData = (baseMapName: string) => {
     // Call getSelectedMapInfo to check for encounters on this specific level
     // Returns `undefined` early so shouldn't worry
     // aobut calling in loop
-    const encounterData = getSelectedMapInfo(
+    const encounterData = getSelectedEncounters(
       currentLevelDetails.baseMap, // Key for Encounters data (e.g., "MAP_PETALBURG_CITY_LAND")
       currentLevelDetails.thisLevelsId, // Specific sub-level ID (e.g., "MAP_PETALBURG_CITY_LAND_MAIN")
+      time,
     );
 
     if (
@@ -172,6 +187,7 @@ export const getInitialMapLevelData = (baseMapName: string) => {
   const derivedLevelData = getSelectedLevel({
     baseMapName,
     levelIndex: chosenLevelIndex,
+    time,
   });
 
   if (!derivedLevelData) {
@@ -193,4 +209,4 @@ export const getInitialMapLevelData = (baseMapName: string) => {
   };
 };
 
-export { getSelectedMapInfo, getSelectedLevel };
+export { getSelectedEncounters, getSelectedLevel, getInitialMapLevelData };

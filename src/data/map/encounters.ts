@@ -5,15 +5,17 @@ import { randomizeSpeciesForSlot } from "../../lib/randomiser/engine.ts";
 import { RandomizerSpeciesMode } from "../../lib/randomiser/SpeciesTable.ts";
 import { pokemonDataMap } from "../pokemon.ts";
 import { EncounterMons } from "@/stores/useMapStore/types.ts";
+import { EncounterGroup } from "@/data/map/index.ts";
 
 interface Mon {
   min_level?: number;
   max_level?: number;
   species: number;
 }
-type EncounterGroup = {
+type JSONEncounterGroup = {
   map: string;
   base_label: string;
+  time: "day" | "night";
   land: {
     encounter_rate: number;
     mons: EncounterListing[];
@@ -38,13 +40,14 @@ type EncounterListing = {
   species: number;
   name: string;
   rate: number;
+  rod?: string;
 };
 
 interface WildEncounterData {
   wild_encounter_groups: Array<{
     label: string;
     for_maps: boolean;
-    encounters: EncounterGroup[];
+    encounters: JSONEncounterGroup[];
   }>;
 }
 /** looks like this
@@ -60,7 +63,10 @@ interface WildEncounterData {
  *  }
  * }
  */
-const putEncounterRate = (mons: EncounterMons[]) => {
+const stripVowels = (str: string) => {
+  return str.replace(/[aeiou]/gi, "");
+};
+const putEncounterRate = (mons: EncounterListing[]) => {
   const rates = [20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1];
 
   // Calculate total rates for each monster
@@ -82,7 +88,7 @@ const putEncounterRate = (mons: EncounterMons[]) => {
 
   return Array.from(encounterRates.values()) as EncounterMons[];
 };
-const putRodUsed = (mons: EncounterMons[]) => {
+const putRodUsed = (mons: any[]) => {
   // If a mon appears in multiple rod types, it will be combined into a single string like "Old/Good Rod" or "Good/Super Rod"
 
   const rodsByIndex: string[] = [];
@@ -115,10 +121,11 @@ const putRodUsed = (mons: EncounterMons[]) => {
       return;
     }
     // If a species appears in multiple rod types, combine them into a single string like "Old/Good Rod" or "Good/Super Rod"
-    speciesByRod.set(species, currentRod + "/" + rod);
+    speciesByRod.set(species, stripVowels(currentRod) + "/" + stripVowels(rod));
   });
   mons.forEach((mon, index) => {
-    mon.rod = speciesByRod.get(speciesByIndex[index]) + " Rod";
+    const rodLabel = speciesByRod.get(speciesByIndex[index]);
+    mon.rod = (rodLabel ? rodLabel : "") + " Rod";
   });
 };
 
@@ -154,9 +161,7 @@ class EncounterStore {
         .toUpperCase()
     );
   }
-  private parseAndConvertSpecies(
-    jsonData: WildEncounterData,
-  ): EncounterGroup[] {
+  private parseAndConvertSpecies(jsonData: WildEncounterData) {
     // Get the main encounters array (first group that has for_maps: true)
     const mainEncounterGroup = jsonData.wild_encounter_groups[0];
 
@@ -195,7 +200,7 @@ class EncounterStore {
         if (mapObj.water) {
           mapObj.water = {
             encounter_rate: mapObj.water.encounter_rate,
-            mons: putEncounterRate(convertSpecies(mapObj.water.mons)  ),
+            mons: putEncounterRate(convertSpecies(mapObj.water.mons)),
           };
         }
 
@@ -204,7 +209,7 @@ class EncounterStore {
             encounter_rate: mapObj.fish.encounter_rate,
             mons: putEncounterRate(convertSpecies(mapObj.fish.mons)),
           };
-          putRodUsed(mapObj.fish.mons)
+          putRodUsed(mapObj.fish.mons);
         }
 
         if (mapObj.rock) {
@@ -214,7 +219,7 @@ class EncounterStore {
           };
         }
       });
-
+    //@ts-ignore
     return mainEncounterGroup.encounters.filter((map) =>
       hearthMaps.includes(map.map),
     );
@@ -232,7 +237,7 @@ class EncounterStore {
       if (!grouped[key]) {
         grouped[key] = [];
       }
-
+      encounter.time = encounter.base_label.includes("Night") ? "night" : "day";
       grouped[key].push(encounter);
     }
     return grouped;
@@ -245,13 +250,21 @@ class EncounterStore {
     }
     return null;
   }
-
-  public getEncounterData() {
+  getEncounterData(): Record<string, EncounterGroup[]>;
+  getEncounterData(id: string): EncounterGroup[];
+  /* This could return undefined! */
+  public getEncounterData(id?: string) {
     if (this.dataSource === "default") {
+      if (id) {
+        return this.processedDefaultEncounters[id];
+      }
       return this.processedDefaultEncounters;
     }
     if (!this.storedEncounterData) {
       throw new Error("No encounter data found");
+    }
+    if (id) {
+      return this.storedEncounterData[id];
     }
     return this.storedEncounterData;
   }

@@ -113,6 +113,7 @@ export type ItemWithCoords = Item & {
 export type EncounterGroup = {
   map: string;
   base_label: string;
+  time: "day" | "night";
   land: {
     encounter_rate: number;
     mons: EncounterListing[];

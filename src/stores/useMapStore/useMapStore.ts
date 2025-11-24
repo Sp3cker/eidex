@@ -48,7 +48,7 @@ export const useMapStore = create<MapStore>()(
       storedCoordinates: new Map<string, number[]>(),
       mapScale: 1,
       hasEncounterDataStored: encounterStore.isStoredEncounterData(),
-
+      time: "day",
       mapOffset: [0, 0],
       hoveredMap: null,
       hoveredCoordinates: [0, 0],
@@ -63,12 +63,13 @@ export const useMapStore = create<MapStore>()(
         if (get().selectedMap === mapName) {
           return;
         }
+        const time = get().time;
         const currentRoute = window.location.href;
         if (!currentRoute.includes(mapName)) {
           urlManager.requestURLUpdate(mapName, null);
         }
         // updateMapHelmet(mapName);
-        const initialMapData = getInitialMapLevelData(mapName);
+        const initialMapData = getInitialMapLevelData(mapName, time);
         if (!initialMapData) {
           console.error(
             `Failed to get initial data for map: ${mapName}. Deselecting map.`,
@@ -147,13 +148,17 @@ export const useMapStore = create<MapStore>()(
         });
       },
       setSelectedEncounterLevel: (levelId: string) => {
-        debugger
         const baseMapAndLevelIndex = levelIdToLocationMap.get(levelId);
         if (!baseMapAndLevelIndex) {
           console.error("No map selected");
           return;
         }
-        const targetMap = getSelectedLevel(baseMapAndLevelIndex);
+        const time = get().time;
+        const targetMap = getSelectedLevel({
+          baseMapName: baseMapAndLevelIndex.baseMapName,
+          levelIndex: baseMapAndLevelIndex.levelIndex,
+          time,
+        });
         if (targetMap === undefined) {
           console.error(
             "Error selecting map level %s, %s",
@@ -169,7 +174,21 @@ export const useMapStore = create<MapStore>()(
           selectedLevelFishingMons: targetMap.fishingEncounters,
         });
       },
-
+      setTime(to: "day" | "night") {
+        const baseMapId = get().selectedMap;
+        const selectedLevelIndex = get().selectedMapLevel;
+        const targetMap = getSelectedLevel({
+          baseMapName: baseMapId!,
+          levelIndex: selectedLevelIndex,
+          time: to,
+        });
+        set({
+          time: to,
+          selectedLevelLandMons: targetMap?.landEncounters,
+          selectedLevelWaterMons: targetMap?.waterEncounters,
+          selectedLevelFishingMons: targetMap?.fishingEncounters,
+        });
+      },
       setMapScale: (n) => set({ mapScale: n }),
       setMapOffset: (offset) => set({ mapOffset: offset }),
       setHoveredMap: (map: string) => set({ hoveredMap: map }),

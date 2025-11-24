@@ -55,6 +55,7 @@ type MapStore = {
   // EncounterDetails panel state
   selectedEncounter: number | null;
   showEncounter: boolean;
+  time: 'day' | 'night'
 
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
@@ -92,6 +93,7 @@ type MapStore = {
   // Animation coordination
   setAnimating: (animating: boolean) => void;
   getIsAnimating: () => boolean;
+  setTime(to: 'day' | 'night'): void;
 };
 
 export type { EncounterMons, MapStore, Level };
