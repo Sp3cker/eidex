@@ -14,12 +14,12 @@ const TimeSelect = ({ parentHeight }: { parentHeight: number }) => {
   };
   return (
     <div
-      className="font-pkmnem absolute -left-7 flex flex-col rounded-sm bg-amber-700 text-lg"
+      className="font-pkmnem absolute md:-left-10 -left-7 flex flex-col rounded-sm bg-amber-700 text-lg"
       style={topStyle}
     >
       <button
         onPointerDown={toggleTime}
-        className="rounded-xs min-w-5 hover-active-button map-place-info-textbox-gradient m-1 cursor-pointer py-2"
+        className="rounded-xs text-lg md:min-w-8 min-w-5 hover-active-button map-place-info-textbox-gradient m-1 cursor-pointer py-2"
       >
         {time === "day" ? "⛅" : "☾"}
       </button>
