@@ -7,7 +7,7 @@ import { useScreenWidth } from "@/hooks/useScreenWidth";
 const translatesTo = {
   lg: 55,
   md: 15,
-  sm: 14*9,
+  sm: 14 * 9,
   xs: 75,
 };
 const Selecta = () => {
@@ -42,7 +42,14 @@ const Selecta = () => {
       return l === selectedEncounterLevel;
     });
   }, [selectedEncounterLevel, selectedMapEncounterLevels]);
-
+  
+  const [spring] = useSpring(
+    () => ({
+      translateY: shouldShow ? translatesTo[screenWidth] : 0,
+      config: { mass: 0.8, tension: 200, friction: 18 },
+    }),
+    [shouldShow, screenWidth],
+  );
   const handleUpClick = () => {
     if (currentLevelIndex === -1) return;
     const nextIndex = currentLevelIndex + 1;
@@ -60,18 +67,11 @@ const Selecta = () => {
       setSelectedEncounterLevel(selectedMapEncounterLevels[prevIndex]);
     }
   };
-
-  const [spring] = useSpring(
-    () => ({
-      translateY: shouldShow ? translatesTo[screenWidth] : 0,
-      config: { mass: 0.8, tension: 200, friction: 18 },
-    }),
-    [shouldShow, screenWidth],
-  );
   if (!selectedMap) {
     // Special case so it doesn't flash on page load.
     return null;
   }
+
   return (
     <animated.aside
       style={spring}
@@ -89,8 +89,8 @@ const Selecta = () => {
       </button>
 
       <p className="font-pkmnem text-md flex-1 overflow-hidden text-ellipsis whitespace-nowrap px-2 text-center font-bold leading-tight text-neutral-100">
-        {selectedLevelLabel?.length > 12 
-          ? `${selectedLevelLabel.slice(0, 11)}...${selectedLevelLabel.slice(-1)}` 
+        {selectedLevelLabel?.length > 12
+          ? `${selectedLevelLabel.slice(0, 11)}...${selectedLevelLabel.slice(-1)}`
           : selectedLevelLabel || "N/A"}
       </p>
 
@@ -98,8 +98,8 @@ const Selecta = () => {
         className="hover-active-button selecta-button-animation bg-fieldset font-pkmnem hover:bg-fieldset/80 font-pkmnem h-8 w-8 shrink-0 rounded-lg text-xs text-neutral-100 shadow-md disabled:opacity-50"
         onClick={handleUpClick}
         disabled={
-          currentLevelIndex === -1 ||
-          currentLevelIndex >= selectedMapEncounterLevels.length - 1
+          currentLevelIndex === -1
+          // ||          currentLevelIndex >= selectedMapEncounterLevels.length - 1
         }
         title="Go up one floor"
       >

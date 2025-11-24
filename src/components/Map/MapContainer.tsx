@@ -59,16 +59,12 @@ const MapContainer = ({ children }: any) => {
       ? 1.75
       : isSmallScreen
         ? -0.21
-        : 0.1;
-    const verticalOffsetFactor = isDefaultCoordinate
-      ? 1.5
-      : isSmallScreen
-        ? 0.15
-        : 0.2;
+        : 0.25;
+    const verticalOffsetFactor = isDefaultCoordinate ? 1.5 : 0.15;
 
     const dampingX = (x / MAP_WIDTH - 0.5) * MAP_WIDTH * DAMPING_FACTOR;
-    const dampingY = (y / MAP_HEIGHT - 0.5) * MAP_HEIGHT * DAMPING_FACTOR;
-
+    const dampingY = (y / MAP_HEIGHT - 0.5) * MAP_HEIGHT * DAMPING_FACTOR + 0.9;
+    // Gotta be some way to say "if target coord is approachgin map edge, target offset should decrease"
     const selectionTargetCenterOffset: [number, number] = [
       WINDOW_WIDTH * horizontalOffsetFactor - x - xyScales[0] + dampingX,
       WINDOW_HEIGHT * verticalOffsetFactor - y - xyScales[1] + dampingY,

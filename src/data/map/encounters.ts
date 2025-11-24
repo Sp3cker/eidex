@@ -1,8 +1,10 @@
 import defaultEncounters from "./wild_encounters.json" with { type: "json" };
 import mapConstants from "./map_constants.json" with { type: "json" };
+import hearthMaps from "./hearth-map.json" with { type: "json" };
 import { randomizeSpeciesForSlot } from "../../lib/randomiser/engine.ts";
 import { RandomizerSpeciesMode } from "../../lib/randomiser/SpeciesTable.ts";
 import { pokemonDataMap } from "../pokemon.ts";
+import { EncounterMons } from "@/stores/useMapStore/types.ts";
 
 interface Mon {
   min_level?: number;
@@ -35,6 +37,7 @@ type EncounterListing = {
   max_level: number;
   species: number;
   name: string;
+  rate: number;
 };
 
 interface WildEncounterData {
@@ -57,6 +60,68 @@ interface WildEncounterData {
  *  }
  * }
  */
+const putEncounterRate = (mons: EncounterMons[]) => {
+  const rates = [20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1];
+
+  // Calculate total rates for each monster
+  const encounterRates = mons.reduce((currRatesMap, encounter, index) => {
+    if (index >= rates.length) return currRatesMap;
+    const prev = currRatesMap.get(encounter.species);
+    const newRate =
+      prev?.rate === undefined ? rates[index] : prev.rate + rates[index];
+    currRatesMap.set(encounter.species, {
+      species: encounter.species,
+      max_level: encounter.max_level,
+      min_level: encounter.min_level,
+      rate: newRate,
+      name: encounter.name,
+      rod: encounter.rod,
+    });
+    return currRatesMap;
+  }, new Map<number, EncounterMons>());
+
+  return Array.from(encounterRates.values()) as EncounterMons[];
+};
+const putRodUsed = (mons: EncounterMons[]) => {
+  // If a mon appears in multiple rod types, it will be combined into a single string like "Old/Good Rod" or "Good/Super Rod"
+
+  const rodsByIndex: string[] = [];
+  const speciesByIndex: number[] = [];
+  // First pass: assign rod type based on slot
+  mons.forEach((mon, slot) => {
+    speciesByIndex.push(mon.species);
+    if (slot <= 2) {
+      // 0, 1, 2
+      rodsByIndex.push("Old");
+    } else if (slot >= 3 && slot <= 5) {
+      // 3, 4, 5
+      rodsByIndex.push("Good");
+    } else {
+      rodsByIndex.push("Super");
+    }
+  });
+  // look through speciesByIndex, match each index to it's rodsByIndex
+  // If a species appears in multiple rod types, combine them into a single string like "Old/Good Rod" or "Good/Super Rod"
+  const speciesByRod = new Map<number, string>();
+  speciesByIndex.forEach((species, index) => {
+    const rod = rodsByIndex[index];
+    const currentRod = speciesByRod.get(species);
+    if (!currentRod) {
+      speciesByRod.set(species, rod);
+      return;
+    }
+    if (currentRod.includes(rod)) {
+      // Don't want Old/Old/Old Rod
+      return;
+    }
+    // If a species appears in multiple rod types, combine them into a single string like "Old/Good Rod" or "Good/Super Rod"
+    speciesByRod.set(species, currentRod + "/" + rod);
+  });
+  mons.forEach((mon, index) => {
+    mon.rod = speciesByRod.get(speciesByIndex[index]) + " Rod";
+  });
+};
+
 class EncounterStore {
   private static readonly USER_ENCOUNTERS_KEY = "userEncounterData";
   private processedDefaultEncounters: Record<string, EncounterGroup[]>;
@@ -83,6 +148,7 @@ class EncounterStore {
       "MAP_" +
       baseLabel
         .replace(/^g/, "")
+        .replace(/(?:Lunchtime|Night)$/gi, "")
         .replace(/([A-Z])/g, "_$1")
         .replace(/^_/, "")
         .toUpperCase()
@@ -92,15 +158,14 @@ class EncounterStore {
     jsonData: WildEncounterData,
   ): EncounterGroup[] {
     // Get the main encounters array (first group that has for_maps: true)
-    const mainEncounterGroup = jsonData.wild_encounter_groups.find(
-      (group) => group.for_maps,
-    );
+    const mainEncounterGroup = jsonData.wild_encounter_groups[0];
 
     if (!mainEncounterGroup || !mainEncounterGroup.encounters) {
       throw new Error("Could not find main encounters group");
     }
 
     const convertSpecies = (mons: Mon[]): EncounterListing[] => {
+      //@ts-ignore
       return mons.map((mon) => {
         if (mon.min_level === undefined || mon.max_level === undefined) {
           throw new Error("Missing min_level or max_level in encounter data");
@@ -117,37 +182,42 @@ class EncounterStore {
       });
     };
 
-    mainEncounterGroup.encounters.forEach((mapObj: EncounterGroup) => {
-      if (mapObj.land) {
-        mapObj.land = {
-          encounter_rate: mapObj.land.encounter_rate,
-          mons: convertSpecies(mapObj.land.mons),
-        };
-      }
+    mainEncounterGroup.encounters
+      .filter((map) => hearthMaps.includes(map.map))
+      .forEach((mapObj: EncounterGroup) => {
+        if (mapObj.land) {
+          mapObj.land = {
+            encounter_rate: mapObj.land.encounter_rate,
+            mons: putEncounterRate(convertSpecies(mapObj.land.mons)),
+          };
+        }
 
-      if (mapObj.water) {
-        mapObj.water = {
-          encounter_rate: mapObj.water.encounter_rate,
-          mons: convertSpecies(mapObj.water.mons),
-        };
-      }
+        if (mapObj.water) {
+          mapObj.water = {
+            encounter_rate: mapObj.water.encounter_rate,
+            mons: putEncounterRate(convertSpecies(mapObj.water.mons)  ),
+          };
+        }
 
-      if (mapObj.fish) {
-        mapObj.fish = {
-          encounter_rate: mapObj.fish.encounter_rate,
-          mons: convertSpecies(mapObj.fish.mons),
-        };
-      }
+        if (mapObj.fish) {
+          mapObj.fish = {
+            encounter_rate: mapObj.fish.encounter_rate,
+            mons: putEncounterRate(convertSpecies(mapObj.fish.mons)),
+          };
+          putRodUsed(mapObj.fish.mons)
+        }
 
-      if (mapObj.rock) {
-        mapObj.rock = {
-          encounter_rate: mapObj.rock.encounter_rate,
-          mons: convertSpecies(mapObj.rock.mons),
-        };
-      }
-    });
+        if (mapObj.rock) {
+          mapObj.rock = {
+            encounter_rate: mapObj.rock.encounter_rate,
+            mons: convertSpecies(mapObj.rock.mons),
+          };
+        }
+      });
 
-    return mainEncounterGroup.encounters;
+    return mainEncounterGroup.encounters.filter((map) =>
+      hearthMaps.includes(map.map),
+    );
   }
 
   private groupEncounterData(
@@ -155,12 +225,14 @@ class EncounterStore {
   ): Record<string, EncounterGroup[]> {
     const grouped: Record<string, EncounterGroup[]> = {};
     for (const encounter of flatData) {
-      const key = encounter.base_label.includes("Underwater")
+      const key = encounter.base_label.includes("time")
         ? this.baseLabelToMap(encounter.base_label.replace(/_/g, ""))
         : this.baseLabelToMap(encounter.base_label.split("_")[0]);
+      // debugger;
       if (!grouped[key]) {
         grouped[key] = [];
       }
+
       grouped[key].push(encounter);
     }
     return grouped;

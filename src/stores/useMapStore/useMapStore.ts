@@ -105,7 +105,7 @@ export const useMapStore = create<MapStore>()(
           selectedLevelId,
           selectedLevelLabel: mapLabel,
           selectedImageName,
-          selectedEncounterLevel: selectedLevelId, // Sync Selecta with the chosen level
+          selectedEncounterLevel: selectedMapEncounterLevels[0], // Sync Selecta with the chosen level
           selectedCoordinates: storedCoords,
           selectedRoamer: null,
           viewingImage: false,
@@ -147,6 +147,7 @@ export const useMapStore = create<MapStore>()(
         });
       },
       setSelectedEncounterLevel: (levelId: string) => {
+        debugger
         const baseMapAndLevelIndex = levelIdToLocationMap.get(levelId);
         if (!baseMapAndLevelIndex) {
           console.error("No map selected");

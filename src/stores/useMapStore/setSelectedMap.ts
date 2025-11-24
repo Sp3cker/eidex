@@ -22,68 +22,6 @@ const getMap = (map: string) => {
   // );
 };
 
-const putRodUsed = (mons: EncounterMons[]) => {
-  // If a mon appears in multiple rod types, it will be combined into a single string like "Old/Good Rod" or "Good/Super Rod"
-
-  const rodsByIndex: string[] = [];
-  const speciesByIndex: number[] = [];
-  // First pass: assign rod type based on slot
-  mons.forEach((mon, slot) => {
-    speciesByIndex.push(mon.species);
-    if (slot <= 2) {
-      // 0, 1, 2
-      rodsByIndex.push("Old");
-    } else if (slot >= 3 && slot <= 5) {
-      // 3, 4, 5
-      rodsByIndex.push("Good");
-    } else {
-      rodsByIndex.push("Super");
-    }
-  });
-  // look through speciesByIndex, match each index to it's rodsByIndex
-  // If a species appears in multiple rod types, combine them into a single string like "Old/Good Rod" or "Good/Super Rod"
-  const speciesByRod = new Map<number, string>();
-  speciesByIndex.forEach((species, index) => {
-    const rod = rodsByIndex[index];
-    const currentRod = speciesByRod.get(species);
-    if (!currentRod) {
-      speciesByRod.set(species, rod);
-      return;
-    }
-    if (currentRod.includes(rod)) {
-      // Don't want Old/Old/Old Rod
-      return;
-    }
-    // If a species appears in multiple rod types, combine them into a single string like "Old/Good Rod" or "Good/Super Rod"
-    speciesByRod.set(species, currentRod + "/" + rod);
-  });
-  mons.forEach((mon, index) => {
-    mon.rod = speciesByRod.get(speciesByIndex[index]) + " Rod";
-  });
-};
-
-const putEncounterRate = (mons: EncounterMons[]) => {
-  const rates = [20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1];
-
-  // Calculate total rates for each monster
-  const encounterRates = mons.reduce((currRatesMap, encounter, index) => {
-    if (index >= rates.length) return currRatesMap;
-    const prev = currRatesMap.get(encounter.species);
-    const newRate =
-      prev?.rate === undefined ? rates[index] : prev.rate + rates[index];
-    currRatesMap.set(encounter.species, {
-      species: encounter.species,
-      max_level: encounter.max_level,
-      min_level: encounter.min_level,
-      rate: newRate,
-      name: encounter.name,
-      rod: encounter.rod,
-    });
-    return currRatesMap;
-  }, new Map<number, EncounterMons>());
-
-  return Array.from(encounterRates.values()) as EncounterMons[];
-};
 
 const getSelectedMapInfo = (id: string, levelId: string) => {
   const Encounters = encounterStore.getEncounterData();
@@ -111,20 +49,13 @@ const getSelectedMapInfo = (id: string, levelId: string) => {
      */
     //nameKey cause it probly matches encounter Data
     if (targetMapEncounters && targetMapEncounters.land) {
-      landEncounters = putEncounterRate(
-        targetMapEncounters.land?.mons as EncounterMons[],
-      );
+      landEncounters = targetMapEncounters.land?.mons as EncounterMons[];
     }
     if (targetMapEncounters && targetMapEncounters.water) {
-      waterEncounters = putEncounterRate(
-        targetMapEncounters.water?.mons as EncounterMons[],
-      );
+      waterEncounters = targetMapEncounters.water?.mons as EncounterMons[];
     }
     if (targetMapEncounters && targetMapEncounters.fish) {
-      putRodUsed(targetMapEncounters.fish.mons as EncounterMons[]); // Add rod information
-      fishingEncounters = putEncounterRate(
-        targetMapEncounters.fish.mons as EncounterMons[],
-      );
+      fishingEncounters = targetMapEncounters.fish.mons as EncounterMons[];
     }
   }
   return {
@@ -181,8 +112,10 @@ const getSelectedLevel = ({
 
   const encounterGroupForThisBaseMapKey =
     encounterStore.getEncounterData()[targetLevel.baseMap];
+  /* the selector in the map func below is the unique property for each encounter level
+  For Hearth, it's the base_map. EI is map */
   const encounterLevelIdsForSelecta = encounterGroupForThisBaseMapKey
-    ? encounterGroupForThisBaseMapKey.map((lv) => lv.map)
+    ? encounterGroupForThisBaseMapKey.map((lv) => lv.base_label)
     : [];
 
   return {

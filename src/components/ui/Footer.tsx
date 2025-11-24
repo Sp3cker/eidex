@@ -54,7 +54,7 @@ const Footer = memo(function Footer() {
           Data for Hearth Beta
         </p>
         <p className="font-pkmnem leading-xs text-sm/3 text-white">
-        ahh, the purest way to present information: <strong>text</strong>
+           Map may induce adult onset shaken baby syndrome
         </p>
       </div>
       <div className="flex items-center justify-end gap-5">

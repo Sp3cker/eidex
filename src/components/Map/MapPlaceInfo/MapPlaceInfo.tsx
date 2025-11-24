@@ -161,7 +161,7 @@ const MapPlaceInfo = memo(() => {
         }}
         className={`${!selectedMap && "will-translate-opacity"} pointer-events-none h-full`}
       >
-        <MapInfoSwitcher enablePointer={selectedMap} />
+        <MapInfoSwitcher enablePointer={selectedMap !== null} />
       </animated.div>
     </div>
   );

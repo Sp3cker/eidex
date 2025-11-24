@@ -95,7 +95,7 @@ class PokemonSearchStore {
       .slice(0, 6)
       .map((result) => {
         const id = this.monNameKeys.get(result);
-        debugger;
+
         return {
           id, // name not `speciesName` to match what search result uses
           name: result, // name not `speciesName` to match what search result uses

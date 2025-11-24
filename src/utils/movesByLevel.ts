@@ -112,7 +112,7 @@ export function getMoveDetails(moveIds: number[], hpType?: number) {
   return moveIds.map((moveId) => {
     const move = moveDataMap[moveId];
     if (move.name === "Hidden Power" && hpType !== undefined) {
-      debugger;
+
       move.name = `Hidden Power (${hiddenPwTypes[hpType - 1]})`;
     }
     return {
