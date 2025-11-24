@@ -33,8 +33,8 @@ export default React.memo(function ReactSvg() {
         useMapStore
           .getState()
           .storedCoordinates.set(obj.id, [
-            obj.x + obj.width / 2 - (svgDimensions[0]!) / 2,
-            obj.y + obj.height / 2 - (svgDimensions[1]!) / 2,
+            obj.x + obj.width / 2 - svgDimensions[0]! / 2,
+            obj.y + obj.height / 2 - svgDimensions[1]! / 2,
           ]);
         return obj;
       })
@@ -60,27 +60,28 @@ export default React.memo(function ReactSvg() {
       <svg
         viewBox="0 0 1200 800"
         ref={svgRef}
-        className="h-auto max-h-screen w-full"
+        className="h-auto w-full"
         preserveAspectRatio="xMidYMid meet"
       >
         <image href="/HEARTH-MAP.webp" width="1200" height="800" />
-        {toRender && toRender.map((section) => (
-          <rect
-            key={section.id}
-            x={section.x}
-            y={section.y}
-            width={section.width}
-            height={section.height}
-            className={`cursor-pointer transition-all duration-200 filter ${
-              selectedMap === section.id
-                ? "fill-yellow-400/40 stroke-yellow-400 stroke-2"
-                : "fill-[var(--hearth-orange-3)]/25 stroke-[var(--hearth-gray-2)] border-2 hover:fill-white/20 hover:stroke-white/50 hover:stroke-1"
-            } `}
-            onClick={() => setSelectedMap(section.id || "")}
-          >
-            <title>{section.name}</title>
-          </rect>
-        ))}
+        {toRender &&
+          toRender.map((section) => (
+            <rect
+              key={section.id}
+              x={section.x}
+              y={section.y}
+              width={section.width}
+              height={section.height}
+              className={`cursor-pointer filter transition-all duration-200 ${
+                selectedMap === section.id
+                  ? "fill-yellow-400/40 stroke-yellow-400 stroke-2"
+                  : "fill-[var(--hearth-orange-3)]/25 border-2 stroke-[var(--hearth-gray-2)] hover:fill-white/20 hover:stroke-white/50 hover:stroke-1"
+              } `}
+              onClick={() => setSelectedMap(section.id || "")}
+            >
+              <title>{section.name}</title>
+            </rect>
+          ))}
       </svg>
     </div>
   );

@@ -9,9 +9,9 @@ import { EncounterMons } from "@/stores/useMapStore/types";
 
 const zoneToTextColor = (zone: string) => {
   const obj: Record<string, string> = {
-    land: "text-emerald-800",
-    water: "text-cyan-900",
-    fishing: "text-orange-800",
+    land: "text-[#45764A]",
+    water: "text-[#5E718E]",
+    fishing: "text-[#C58741]",
   };
   return obj[zone];
 };

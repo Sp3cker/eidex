@@ -1,4 +1,4 @@
-import { lazy, memo, Suspense, useCallback, useRef, useState } from "react";
+import { memo, useCallback, useRef, useState } from "react";
 import { Modal } from "./Modal";
 // import HiddenFileDrop from "./HiddenFileDrop";
 const PaddingStyles = Object.freeze({
@@ -6,7 +6,7 @@ const PaddingStyles = Object.freeze({
   paddingLeft: "env(safe-area-inset-left)",
   paddingRight: "env(safe-area-inset-right)",
 });
-const SaveFileUploadButton = lazy(() => import("./SaveFileUploadButton"));
+// const SaveFileUploadButton = lazy(() => import("./SaveFileUploadButton"));
 const Footer = memo(function Footer() {
   const [isOpen, setIsOpen] = useState<"upload" | "disclaimer" | null>(null);
 
@@ -14,13 +14,13 @@ const Footer = memo(function Footer() {
     preload: (s: "upload" | "disclaimer" | null) => void;
   } | null>(null);
 
-  const handleUploadButtonHover = useCallback(() => {
-    modalRef.current?.preload("upload");
-  }, [modalRef]);
-  const handleUploadButtonHoverExit = useCallback(() => {}, []);
-  const handleUploadClick = useCallback(() => {
-    setIsOpen("upload");
-  }, []);
+  // const handleUploadButtonHover = useCallback(() => {
+  //   modalRef.current?.preload("upload");
+  // }, [modalRef]);
+  // const handleUploadButtonHoverExit = useCallback(() => {}, []);
+  // const handleUploadClick = useCallback(() => {
+  //   setIsOpen("upload");
+  // }, []);
   const handleDisclosureButtonHover = useCallback(() => {
     modalRef.current?.preload("disclaimer");
   }, []);
@@ -33,7 +33,7 @@ const Footer = memo(function Footer() {
       style={PaddingStyles}
       className="footer-bg-text fade-in-footer fixed bottom-0 left-0 right-0 z-10 flex w-full items-center justify-between bg-gray-700 ring md:relative md:bottom-auto"
     >
-      <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">
+      {/* <div className="font-pkmnem pkmnem-face-shadow text-sm/3 text-neutral-100">
         <div
           onMouseEnter={handleUploadButtonHover}
           onMouseLeave={handleUploadButtonHoverExit}
@@ -48,13 +48,13 @@ const Footer = memo(function Footer() {
             <SaveFileUploadButton isOpen={isOpen} onClick={handleUploadClick} />
           </Suspense>
         </div>
-      </div>
-      <div className="flex flex-col sm:w-80">
+      </div> */}
+      <div className="flex flex-col pl-1 sm:w-80">
         <p className="font-pkmnem leading-xs text-sm/3 text-white">
           Data for Hearth Beta
         </p>
         <p className="font-pkmnem leading-xs text-sm/3 text-white">
-           Map may induce adult onset shaken baby syndrome
+          Map use may induce adult onset shaken baby syndrome
         </p>
       </div>
       <div className="flex items-center justify-end gap-5">

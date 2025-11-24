@@ -6,6 +6,7 @@ import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
 import InfoToggleButtons from "./InfoToggleButtons";
 import ScrollArea from "@/components/ui/ScrollArea";
+import TimeSelect from "./TimeSelect/TimeSelect";
 
 const DRAGGING_TRANSLATE = 100;
 const XS_SCREEN = window.innerWidth > 768;
@@ -78,45 +79,48 @@ const EncounterAreaButtons = ({
   );
 };
 
-const MapPlaceInfoContent = memo(({ enablePointer }: { enablePointer: boolean }) => {
-  const [selectedTab, setSelectedTab] = useState("land");
-  const { ref: containerRef, height: containerHeight } = useElementSize();
+const MapPlaceInfoContent = memo(
+  ({ enablePointer }: { enablePointer: boolean }) => {
+    const [selectedTab, setSelectedTab] = useState("land");
+    const { ref: containerRef, height: containerHeight } = useElementSize();
 
-  const handleTabClick = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      const target = e.currentTarget;
-      const title = target.getAttribute("title");
-      if (title) {
-        setSelectedTab(title);
-      }
-    },
-    [],
-  );
-  const topStyle = {
-    top: `${containerHeight - 64}px`,
-  };
-  // Determine which page to show (0 for list, 1 for details)
+    const handleTabClick = useCallback(
+      (e: React.MouseEvent<HTMLButtonElement>) => {
+        const target = e.currentTarget;
+        const title = target.getAttribute("title");
+        if (title) {
+          setSelectedTab(title);
+        }
+      },
+      [],
+    );
+    const topStyle = {
+      top: `${containerHeight - 64}px`,
+    };
+    // Determine which page to show (0 for list, 1 for details)
 
-  return (
-    <div
-      ref={containerRef}
-      className={`map-place-info-textbox-gradient pointer-events-${enablePointer ? "auto" : "none"} relative flex h-full flex-col rounded-l-lg md:rounded-lg`}
-    >
-      <ScrollArea
-        className="simplebar-theme-map h-full pb-10 pl-1 pr-3 pt-2 lg:h-full"
-        noX
+    return (
+      <div
+        ref={containerRef}
+        className={`map-place-info-textbox-gradient pointer-events-${enablePointer ? "auto" : "none"} relative flex h-full flex-col rounded-l-lg md:rounded-lg`}
       >
-        <EncounterMonsContainer selectedTab={selectedTab} />
-      </ScrollArea>
-      <div className="absolute bottom-0 left-0 right-0" style={topStyle}>
-        <EncounterAreaButtons
-          handleClick={handleTabClick}
-          selectedTab={selectedTab}
-        />
+        <ScrollArea
+          className="simplebar-theme-map h-full pb-10 pl-1 pr-3 pt-2 lg:h-full"
+          noX
+        >
+          <EncounterMonsContainer selectedTab={selectedTab} />
+        </ScrollArea>
+        <TimeSelect parentHeight={containerHeight} />
+        <div className="absolute bottom-0 left-0 right-0" style={topStyle}>
+          <EncounterAreaButtons
+            handleClick={handleTabClick}
+            selectedTab={selectedTab}
+          />
+        </div>
       </div>
-    </div>
-  );
-});
+    );
+  },
+);
 
 MapPlaceInfoContent.displayName = "MapPlaceInfoContent";
 
@@ -183,7 +187,11 @@ const pages = [
   ),
 ];
 
-const MapInfoSwitcher = memo(function Switcher({ enablePointer }: { enablePointer: boolean }) {
+const MapInfoSwitcher = memo(function Switcher({
+  enablePointer,
+}: {
+  enablePointer: boolean;
+}) {
   const trainersListOpen = useMapStore((state) => state.isTrainersListOpen);
 
   const shuffleTransition = useTransition(trainersListOpen ? 0 : 1, {
@@ -210,7 +218,9 @@ const MapInfoSwitcher = memo(function Switcher({ enablePointer }: { enablePointe
   return (
     <div className="pointer-events-none h-full py-2">
       <animated.div className="absolute bottom-0 left-0 right-0 top-0 py-2">
-        {shuffleTransition((style, isOpen) => pages[isOpen]({ style, enablePointer }))}
+        {shuffleTransition((style, isOpen) =>
+          pages[isOpen]({ style, enablePointer }),
+        )}
       </animated.div>
     </div>
   );
