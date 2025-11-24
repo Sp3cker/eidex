@@ -1,0 +1,451 @@
+{
+  "map_sections": [
+    {
+      "id": "MAPSEC_SUNRISE_CAVE",
+      "name": "Beach Cave",
+      "x": 736,
+      "y": 480,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_SILVER_TUNNEL",
+      "name": "Silver Tunnel",
+      "x": 704,
+      "y": 192,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_SEASTROLL_CHANNEL",
+      "name": "Seastroll Channel",
+      "x": 704,
+      "y": 512,
+      "width": 64,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_ORCHARD_PATH",
+      "name": "Orchard Path",
+      "x": 416,
+      "y": 480,
+      "width": 224,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_GINKO_WOODS",
+      "name": "Ginko Woods",
+      "x": 768,
+      "y": 480,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_DYNAMIC",
+      "x": 32,
+      "y": 64,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_DUMMY",
+      "name": "DUMMY",
+      "x": 288,
+      "y": 192,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_SECRET_BASE",
+      "name": "Secret Base",
+      "x": 32,
+      "y": 64,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_TRANQUIL_ROUTE",
+      "name": "Tranquil Route",
+      "x": 768,
+      "y": 288,
+      "width": 32,
+      "height": 160
+    },
+    {
+      "id": "MAPSEC_BEACHBOUND_ROUTE",
+      "name": "Beachbound Route",
+      "x": 736,
+      "y": 224,
+      "width": 96,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_WINDSWEPT_ROUTE",
+      "name": "Windswept Route",
+      "x": 704,
+      "y": 96,
+      "width": 64,
+      "height": 128
+    },
+    {
+      "id": "MAPSEC_WHITESLATE_ROUTE",
+      "name": "Whiteslate Route",
+      "x": 672,
+      "y": 352,
+      "width": 32,
+      "height": 128
+    },
+    {
+      "id": "MAPSEC_SCENIC_ROUTE",
+      "name": "Scenic Route",
+      "x": 512,
+      "y": 96,
+      "width": 224,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_HARVEST_SHRINE",
+      "name": "Harvest Shrine",
+      "x": 800,
+      "y": 192,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_SEATURF_ROUTE",
+      "name": "Seaturf Route",
+      "x": 224,
+      "y": 352,
+      "width": 224,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_LONGTIDE_CHANNEL",
+      "name": "Longtide Channel",
+      "x": 192,
+      "y": 480,
+      "width": 160,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_LONG_TIDE_CHANNEL_SOULKEEP",
+      "name": "Longtide Channel",
+      "x": 192,
+      "y": 384,
+      "width": 32,
+      "height": 96
+    },
+    {
+      "id": "MAPSEC_DRAGONS_PASS",
+      "name": "Dragon's Pass",
+      "x": 448,
+      "y": 224,
+      "width": 32,
+      "height": 96
+    },
+    {
+      "id": "MAPSEC_BURNFOOT_PASS_BOTTOM",
+      "name": "Burnfoot Pass",
+      "x": 480,
+      "y": 352,
+      "width": 96,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_STEEPSTONE_PASS_BOTTOM",
+      "name": "Steepstone Pass",
+      "x": 544,
+      "y": 384,
+      "width": 128,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_BURNFOOT_PASS",
+      "name": "Burnfoot Pass",
+      "x": 544,
+      "y": 288,
+      "width": 32,
+      "height": 64
+    },
+    {
+      "id": "MAPSEC_MT_KAZAN_EXTERIOR",
+      "name": "Mt Kazan (Ext.)",
+      "x": 480,
+      "y": 256,
+      "width": 128,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_STEEPSTONE_PASS",
+      "name": "Steepstone Pass",
+      "x": 608,
+      "y": 256,
+      "width": 32,
+      "height": 128
+    },
+    {
+      "id": "MAPSEC_SHOGUNATE",
+      "name": "Shogunate",
+      "x": 608,
+      "y": 416,
+      "width": 32,
+      "height": 64
+    },
+    {
+      "id": "MAPSEC_SCENIC_ROUTE_SABERSIDE",
+      "name": "Scenic Route",
+      "x": 416,
+      "y": 128,
+      "width": 128,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_UUME_FOREST",
+      "name": "Uume Forest",
+      "x": 512,
+      "y": 448,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_SABERSIDE_CHANNEL",
+      "name": "Saberside Channel",
+      "x": 256,
+      "y": 128,
+      "width": 96,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_CROBAT_HIDEOUT",
+      "name": "Crobat Hideout",
+      "x": 672,
+      "y": 480,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_PUDDLE_PATH",
+      "name": "Puddle Path",
+      "x": 448,
+      "y": 384,
+      "width": 32,
+      "height": 96
+    },
+    {
+      "id": "MAPSEC_SABERSIDE_QUARRY",
+      "name": "Saberside Quarry",
+      "x": 384,
+      "y": 160,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_FISHERMANS_CHANNEL_WINDYCAPE",
+      "name": "Angler's Channel",
+      "x": 768,
+      "y": 96,
+      "width": 128,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_FISHERMANS_CHANNEL_MAGURO",
+      "name": "Angler's Channel",
+      "x": 864,
+      "y": 128,
+      "width": 32,
+      "height": 128
+    },
+    {
+      "id": "MAPSEC_FISHERMANS_CHANNEL_BOTTOM",
+      "name": "Angler's Channel",
+      "x": 896,
+      "y": 224,
+      "width": 32,
+      "height": 96
+    },
+    {
+      "id": "MAPSEC_FISHERMANS_CHANNEL_SACRED",
+      "name": "Angler's Channel",
+      "x": 864,
+      "y": 320,
+      "width": 64,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_OPEN_SEA_CORAL",
+      "name": "Open Sea",
+      "x": 160,
+      "y": 64,
+      "width": 96,
+      "height": 160
+    },
+    {
+      "id": "MAPSEC_OPEN_SEA_HAVEN",
+      "name": "Open Sea",
+      "x": 128,
+      "y": 224,
+      "width": 128,
+      "height": 160
+    },
+    {
+      "id": "MAPSEC_OPEN_SEA_LEAGUE",
+      "name": "Open Sea",
+      "x": 32,
+      "y": 224,
+      "width": 96,
+      "height": 160
+    },
+    {
+      "id": "MAPSEC_OPEN_SEA_ICY",
+      "name": "Icy Waters",
+      "x": 32,
+      "y": 64,
+      "width": 128,
+      "height": 160
+    },
+    {
+      "id": "MAPSEC_FISHERMANS_SHRINE",
+      "name": "Angler's Shrine",
+      "x": 832,
+      "y": 320,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_SUNRISE_VILLAGE",
+      "name": "Sunrise Village",
+      "x": 768,
+      "y": 512,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_HANABI_CITY",
+      "name": "Hanabi City",
+      "x": 448,
+      "y": 320,
+      "width": 32,
+      "height": 64
+    },
+    {
+      "id": "MAPSEC_CHII_TOWN",
+      "name": "Chii Town",
+      "x": 768,
+      "y": 448,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_SAKU_TOWN",
+      "name": "Saku Village",
+      "x": 704,
+      "y": 288,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_KURA_TOWN",
+      "name": "Kura Village",
+      "x": 704,
+      "y": 224,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_SILVERIDGE",
+      "name": "Silveridge",
+      "x": 672,
+      "y": 160,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_WINDYCAPE",
+      "name": "Windycape",
+      "x": 736,
+      "y": 64,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_YIFU_CITY",
+      "name": "Yifu City",
+      "x": 640,
+      "y": 480,
+      "width": 64,
+      "height": 64
+    },
+    {
+      "id": "MAPSEC_MAGURO_HARBOR",
+      "name": "Maguro Harbor",
+      "x": 832,
+      "y": 224,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_SOULKEEP",
+      "name": "Soulkeep",
+      "x": 352,
+      "y": 480,
+      "width": 64,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_SABERSIDE_TOWN",
+      "name": "Saberside Town",
+      "x": 352,
+      "y": 128,
+      "width": 64,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_HAVENISLE",
+      "name": "Havenisle",
+      "x": 192,
+      "y": 352,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_MIDDLEISLE",
+      "name": "Middleisle",
+      "x": 128,
+      "y": 224,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_TOPISLE",
+      "name": "Topisle",
+      "x": 96,
+      "y": 96,
+      "width": 64,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_DRYUGON",
+      "name": "Dryugon",
+      "x": 448,
+      "y": 192,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_COREEF_ISLE",
+      "name": "Coreef Isle",
+      "x": 224,
+      "y": 128,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "MAPSEC_LEAGUE",
+      "name": "Pokémon Council",
+      "x": 32,
+      "y": 256,
+      "width": 32,
+      "height": 32
+    }
+  ]
+}

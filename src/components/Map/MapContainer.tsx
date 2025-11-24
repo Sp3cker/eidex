@@ -64,10 +64,11 @@ const MapContainer = ({ children }: any) => {
 
     const dampingX = (x / MAP_WIDTH - 0.5) * MAP_WIDTH * DAMPING_FACTOR;
     const dampingY = (y / MAP_HEIGHT - 0.5) * MAP_HEIGHT * DAMPING_FACTOR + 0.9;
+    debugger
     // Gotta be some way to say "if target coord is approachgin map edge, target offset should decrease"
     const selectionTargetCenterOffset: [number, number] = [
-      WINDOW_WIDTH * horizontalOffsetFactor - x - xyScales[0] + dampingX,
-      WINDOW_HEIGHT * verticalOffsetFactor - y - xyScales[1] + dampingY,
+      WINDOW_WIDTH * horizontalOffsetFactor - x - xyScales[0] - dampingX,
+      WINDOW_HEIGHT * verticalOffsetFactor - y - xyScales[1] - dampingY,
     ];
     // Choose the appropriate target offset
     const currentTargetCenterOffset: [number, number] = hasSelection

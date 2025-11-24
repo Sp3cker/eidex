@@ -43,7 +43,7 @@ const getSelectedEncounters = (id: string, levelId: string, time?: string) => {
       return true; // if no time specified, return all
     })
     .find((enc) => enc.map === levelId);
-  debugger;
+
   if (targetMapEncounters === undefined) {
     queueMicrotask(() => {
       console.error("Error selecting encounters %s, level %s", id, levelId);

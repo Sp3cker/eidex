@@ -56,8 +56,8 @@ export default React.memo(function ReactSvg() {
   }, [svgRef.current]);
 
   return (
-    <div className="relative flex h-full w-full items-center justify-center bg-slate-900">
       <svg
+   
         viewBox="0 0 1200 800"
         ref={svgRef}
         className="h-auto w-full"
@@ -83,6 +83,6 @@ export default React.memo(function ReactSvg() {
             </rect>
           ))}
       </svg>
-    </div>
+
   );
 });
