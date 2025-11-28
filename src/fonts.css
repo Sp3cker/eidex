@@ -16,30 +16,11 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Calamity";
-  src:
-    url("/fonts/calamity/Calamity-Bold.otf") format("opentype"),
-    url("/fonts/calamity/Calamity-Bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: "Calamity";
-  src:
-    local("Calamity"),
-    url("/fonts/calamity/Calamity-Regular.otf") format("opentype"),
-    url("/fonts/calamity/Calamity-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face {
   font-family: "Kaisho";
-  src: url("/fonts/emerald-pro/Regular-Hatto.otf") format("OpenType");
+  src: url("/fonts/emerald-pro/Hatto-Regular.otf") format("OpenType");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
