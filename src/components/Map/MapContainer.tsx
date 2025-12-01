@@ -18,7 +18,7 @@ const DEFAULT_SPRING_CONFIG = Object.freeze({
 
 const MAP_WIDTH = 1200;
 const MAP_HEIGHT = 800;
-const DAMPING_FACTOR = 0.1;
+const DAMPING_FACTOR = 0.2;
 
 // Allow dragging any corner to center by using map dimensions
 // Map is 1440x600px with scale 0.5, so scaled dimensions are ~720x300px
@@ -52,24 +52,24 @@ const MapContainer = ({ children }: any) => {
       150,
     ];
     const hasSelection = !!(selectedCoordinates && mapRef.current);
-    const [x = 0, y = 0] = selectedCoordinates ?? [];
+    const [x, y] = selectedCoordinates ?? [0, 0];
     // When the special 400x340 point is active, nudge toward center instead of upper-left
-    const isDefaultCoordinate = x === 400 && y === 340;
-    const horizontalOffsetFactor = isDefaultCoordinate
-      ? 1.75
-      : isSmallScreen
-        ? -0.21
-        : 0.25;
-    const verticalOffsetFactor = isDefaultCoordinate ? 1.5 : 0.15;
+
+    const horizontalOffsetFactor = isSmallScreen ? -0.21 : 0.35;
+    const verticalOffsetFactor = 0.05;
 
     const dampingX = (x / MAP_WIDTH - 0.5) * MAP_WIDTH * DAMPING_FACTOR;
-    const dampingY = (y / MAP_HEIGHT - 0.5) * MAP_HEIGHT * DAMPING_FACTOR + 0.9;
-    debugger
+    // Damp if selected map is on bottom or top of the map to keep it more centered.
+    const dampingY =
+      (y / MAP_HEIGHT - 0.5) * MAP_HEIGHT * DAMPING_FACTOR * (y > 0 ? -1 : 1);
+
     // Gotta be some way to say "if target coord is approachgin map edge, target offset should decrease"
     const selectionTargetCenterOffset: [number, number] = [
-      WINDOW_WIDTH * horizontalOffsetFactor - x - xyScales[0] - dampingX,
-      WINDOW_HEIGHT * verticalOffsetFactor - y - xyScales[1] - dampingY,
+      WINDOW_WIDTH * horizontalOffsetFactor - x - xyScales[0] + dampingX,
+      WINDOW_HEIGHT * verticalOffsetFactor - y - xyScales[1] + dampingY,
     ];
+
+
     // Choose the appropriate target offset
     const currentTargetCenterOffset: [number, number] = hasSelection
       ? selectionTargetCenterOffset

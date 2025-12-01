@@ -44,7 +44,7 @@ export const useMapStore = create<MapStore>()(
     };
     return {
       ...initialState,
-      selectedCoordinates: [400, 340],
+      selectedCoordinates: [600, 340],
       storedCoordinates: new Map<string, number[]>(),
       mapScale: 1,
       hasEncounterDataStored: encounterStore.isStoredEncounterData(),
