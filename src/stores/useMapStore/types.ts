@@ -8,8 +8,9 @@ type EncounterMons = {
   max_level: number;
   species: number;
   name: string;
+  dayRate?: number;
+  nightRate?: number;
 
-  rate: number;
   rod?: string; // Optional rod type for fishing encounters
 };
 
@@ -55,7 +56,7 @@ type MapStore = {
   // EncounterDetails panel state
   selectedEncounter: number | null;
   showEncounter: boolean;
-  time: 'day' | 'night'
+  time: "day" | "night";
 
   setStateFromURL: (route: string, param: string) => void;
   deselectMap: () => void;
@@ -93,7 +94,7 @@ type MapStore = {
   // Animation coordination
   setAnimating: (animating: boolean) => void;
   getIsAnimating: () => boolean;
-  setTime(to: 'day' | 'night'): void;
+  setTime(to: "day" | "night"): void;
 };
 
 export type { EncounterMons, MapStore, Level };

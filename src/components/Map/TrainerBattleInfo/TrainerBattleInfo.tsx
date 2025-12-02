@@ -41,7 +41,6 @@ const TrainerBattleInfo = memo(function TrainerBattleInfo() {
           trainerName={trainer.trainerName}
           battlePic={trainer.battlePic}
         />
-        <div></div>
       </div>
 
       <div className="font-pkmnem space-y-4 overflow-y-auto text-lg">

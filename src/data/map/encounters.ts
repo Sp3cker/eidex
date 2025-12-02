@@ -141,6 +141,7 @@ class EncounterStore {
     );
 
     this.processedDefaultEncounters = this.groupEncounterData(processedData);
+    const test = this.flattenEncounterTimes(this.processedDefaultEncounters);
   }
   resetEncounterData() {
     const processedData = this.parseAndConvertSpecies(
@@ -160,6 +161,88 @@ class EncounterStore {
         .replace(/^_/, "")
         .toUpperCase()
     );
+  }
+  private flattenEncounterTimes(groupedData: Record<string, EncounterGroup[]>) {
+    const flattened: Record<string, EncounterGroup[]> = {};
+    /* The goal is to 
+    1. Merge the day and night encounters into 1 array.
+    2. For encounters that are both day and night, they will have a `nightRate` and a `rate` property.
+    3. If they're only night, they'll still have a `nigthRate` property.
+    4. If they're only day, they'll just have a `rate` property.
+    To do this, we first have to look at the map's levels and see what they have.
+    If it's just day encounters, we can bail early.
+    If it's just night encounters, we must change the `rate` property to `nightRate`.
+     - 
+     
+    */ 
+    for (const [mapKey, lvlEncsArr] of Object.entries(groupedData)) {
+      const nightEncs = lvlEncsArr.filter((enc) => enc.time === "night");
+      if (nightEncs.length === 0) {
+        // There's no night encounters, just keep as is
+        flattened[mapKey] = lvlEncsArr;
+        continue;
+      }
+      let indexOfEncsToAppendTo = lvlEncsArr.findIndex(
+        (enc) => enc.time === "day",
+      );
+      // If no day encounters, we will just append to the first entry (night)
+      if (indexOfEncsToAppendTo === -1) {
+        flattened[mapKey] = [lvlEncsArr[0]];
+        continue;
+      }
+      // const dayEncs = lvlEncsArr.findIndex((enc) => enc.time === "day");
+
+      const { hasLandDay, hasWaterDay, hasFishDay, hasRockDay } = {
+        hasLandDay:
+          lvlEncsArr[indexOfEncsToAppendTo].land &&
+          lvlEncsArr[indexOfEncsToAppendTo].land.mons.length > 0,
+        hasWaterDay:
+          lvlEncsArr[indexOfEncsToAppendTo].water &&
+          lvlEncsArr[indexOfEncsToAppendTo].water.mons.length > 0,
+        hasFishDay:
+          lvlEncsArr[indexOfEncsToAppendTo].fish &&
+          lvlEncsArr[indexOfEncsToAppendTo].fish.mons.length > 0,
+        hasRockDay:
+          lvlEncsArr[indexOfEncsToAppendTo].rock &&
+          lvlEncsArr[indexOfEncsToAppendTo].rock.mons.length > 0,
+      };
+      const { hasLandNight, hasWaterNight, hasFishNight, hasRockNight } = {
+        hasLandNight: nightEncs[0].land && nightEncs[0].land.mons.length > 0,
+        hasWaterNight: nightEncs[0].water && nightEncs[0].water.mons.length > 0,
+        hasFishNight: nightEncs[0].fish && nightEncs[0].fish.mons.length > 0,
+        hasRockNight: nightEncs[0].rock && nightEncs[0].rock.mons.length > 0,
+      };
+      // We can append night to day, but if only night and no day...
+      // It will sey
+      const toNight = <T>(mon: T) => ({
+        ...mon,
+        night: true,
+      });
+      if (hasLandDay && hasLandNight) {
+        // Now we go through the land encounters for both day and night
+        // and see if 
+        lvlEncsArr[indexOfEncsToAppendTo].land.mons.push(
+          ...nightEncs[0].land.mons.map(toNight),
+        );
+      }
+      if (hasWaterDay && hasWaterNight) {
+        lvlEncsArr[indexOfEncsToAppendTo].water.mons.push(
+          ...nightEncs[0].water.mons.map(toNight),
+        );
+      }
+      if (hasFishDay && hasFishNight) {
+        lvlEncsArr[indexOfEncsToAppendTo].fish.mons.push(
+          ...nightEncs[0].fish.mons.map(toNight),
+        );
+      }
+      if (hasRockDay && hasRockNight) {
+        lvlEncsArr[indexOfEncsToAppendTo].rock.mons.push(
+          ...nightEncs[0].rock.mons.map(toNight),
+        );
+      }
+      flattened[mapKey] = [lvlEncsArr[indexOfEncsToAppendTo]];
+    }
+    return flattened;
   }
   private parseAndConvertSpecies(jsonData: WildEncounterData) {
     // Get the main encounters array (first group that has for_maps: true)

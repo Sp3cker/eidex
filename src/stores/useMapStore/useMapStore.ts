@@ -221,6 +221,7 @@ export const useMapStore = create<MapStore>()(
       },
       setEncountersData: (data: unknown) => {
         try {
+          debugger
           encounterStore.setEncounterData(data as any);
           encounterStore.dataSource = "next";
           set({ encounterDataSource: "next", hasEncounterDataStored: true });
