@@ -167,7 +167,7 @@ export const randomizerStore = createStore<RandomiserStore>()(
           // No trainer data means nothing to wait for
           // This also avoids setting encounters with bad randos
           markEncountersReady();
-          get().reset();
+          // get().reset(); // Uncomment this if shits fucked
           return;
         }
         const { fullId } = trainerIdInfo;

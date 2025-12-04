@@ -8,7 +8,7 @@ type EncounterMons = {
   max_level: number;
   species: number;
   name: string;
-  dayRate?: number;
+  rate?: number;
   nightRate?: number;
 
   rod?: string; // Optional rod type for fishing encounters

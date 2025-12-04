@@ -4,15 +4,55 @@ import hearthMaps from "./hearth-map.json" with { type: "json" };
 import { randomizeSpeciesForSlot } from "../../lib/randomiser/engine.ts";
 import { RandomizerSpeciesMode } from "../../lib/randomiser/SpeciesTable.ts";
 import { pokemonDataMap } from "../pokemon.ts";
-import { EncounterMons } from "@/stores/useMapStore/types.ts";
-import { EncounterGroup } from "@/data/map/index.ts";
 
-interface Mon {
+// --- Raw JSON Types ---
+interface RawMon {
   min_level?: number;
   max_level?: number;
   species: number;
 }
-type JSONEncounterGroup = {
+
+interface RawEncounterGroup {
+  map: string;
+  base_label: string;
+  time: "day" | "night";
+  land?: {
+    encounter_rate: number;
+    mons: RawMon[];
+  };
+  water?: {
+    encounter_rate: number;
+    mons: RawMon[];
+  };
+  fish?: {
+    encounter_rate: number;
+    mons: RawMon[];
+  };
+  rock?: {
+    encounter_rate: number;
+    mons: RawMon[];
+  };
+}
+
+interface RawWildEncounterData {
+  wild_encounter_groups: Array<{
+    label: string;
+    for_maps: boolean;
+    encounters: RawEncounterGroup[];
+  }>;
+}
+
+export type EncounterListing = {
+  min_level: number;
+  max_level: number;
+  species: number;
+  name: string;
+  rate: number;
+  nightRate?: number;
+  rod?: string;
+};
+
+export type EncounterGroup = {
   map: string;
   base_label: string;
   time: "day" | "night";
@@ -34,35 +74,6 @@ type JSONEncounterGroup = {
   };
 };
 
-type EncounterListing = {
-  min_level: number;
-  max_level: number;
-  species: number;
-  name: string;
-  rate: number;
-  rod?: string;
-};
-
-interface WildEncounterData {
-  wild_encounter_groups: Array<{
-    label: string;
-    for_maps: boolean;
-    encounters: JSONEncounterGroup[];
-  }>;
-}
-/** looks like this
- * "MAP_ROUTE102" :{
- *  "land": {
- *    "encounter_rate": 20,
- *    "mons": [
- *      {
- *        "min_level": 3,
- *        "max_level": 5,}
- *      }
- *    ]
- *  }
- * }
- */
 const stripVowels = (str: string) => {
   return str.replace(/[aeiou]/gi, "");
 };
@@ -84,11 +95,11 @@ const putEncounterRate = (mons: EncounterListing[]) => {
       rod: encounter.rod,
     });
     return currRatesMap;
-  }, new Map<number, EncounterMons>());
+  }, new Map<number, EncounterListing>());
 
-  return Array.from(encounterRates.values()) as EncounterMons[];
+  return Array.from(encounterRates.values()) as EncounterListing[];
 };
-const putRodUsed = (mons: any[]) => {
+const putRodUsed = (mons: EncounterListing[]) => {
   // If a mon appears in multiple rod types, it will be combined into a single string like "Old/Good Rod" or "Good/Super Rod"
 
   const rodsByIndex: string[] = [];
@@ -136,19 +147,17 @@ class EncounterStore {
   public dataSource = "default" as "default" | "next";
   constructor() {
     // Process default encounters the same way as user-provided data
-    const processedData = this.parseAndConvertSpecies(
-      defaultEncounters as unknown as WildEncounterData,
-    );
-
-    this.processedDefaultEncounters = this.groupEncounterData(processedData);
-    const test = this.flattenEncounterTimes(this.processedDefaultEncounters);
+    this.processedDefaultEncounters = {};
+    this.resetEncounterData();
   }
   resetEncounterData() {
     const processedData = this.parseAndConvertSpecies(
-      defaultEncounters as unknown as WildEncounterData,
+      defaultEncounters as unknown as RawWildEncounterData,
     );
 
-    this.processedDefaultEncounters = this.groupEncounterData(processedData);
+    this.processedDefaultEncounters = this.flattenEncounterTimes(
+      this.groupEncounterData(processedData),
+    );
   }
   // TAKES encounter data base label, like `gPetalburgWoods` returns `MAP_PETALBURG_WOODS`
   private baseLabelToMap(baseLabel: string): string {
@@ -174,77 +183,86 @@ class EncounterStore {
     If it's just night encounters, we must change the `rate` property to `nightRate`.
      - 
      
-    */ 
+    */
     for (const [mapKey, lvlEncsArr] of Object.entries(groupedData)) {
-      const nightEncs = lvlEncsArr.filter((enc) => enc.time === "night");
-      if (nightEncs.length === 0) {
+      const [nightEncs] = lvlEncsArr.filter((enc) => enc.time === "night");
+      if (nightEncs === undefined) {
         // There's no night encounters, just keep as is
         flattened[mapKey] = lvlEncsArr;
         continue;
       }
-      let indexOfEncsToAppendTo = lvlEncsArr.findIndex(
-        (enc) => enc.time === "day",
-      );
+      const indexOfDayEncs = lvlEncsArr.findIndex((enc) => enc.time === "day");
       // If no day encounters, we will just append to the first entry (night)
-      if (indexOfEncsToAppendTo === -1) {
+      if (indexOfDayEncs === -1) {
         flattened[mapKey] = [lvlEncsArr[0]];
         continue;
+        // The encounters array will now only have 1 time
       }
       // const dayEncs = lvlEncsArr.findIndex((enc) => enc.time === "day");
 
       const { hasLandDay, hasWaterDay, hasFishDay, hasRockDay } = {
         hasLandDay:
-          lvlEncsArr[indexOfEncsToAppendTo].land &&
-          lvlEncsArr[indexOfEncsToAppendTo].land.mons.length > 0,
+          lvlEncsArr[indexOfDayEncs].land &&
+          lvlEncsArr[indexOfDayEncs].land.mons.length > 0,
         hasWaterDay:
-          lvlEncsArr[indexOfEncsToAppendTo].water &&
-          lvlEncsArr[indexOfEncsToAppendTo].water.mons.length > 0,
+          lvlEncsArr[indexOfDayEncs].water &&
+          lvlEncsArr[indexOfDayEncs].water.mons.length > 0,
         hasFishDay:
-          lvlEncsArr[indexOfEncsToAppendTo].fish &&
-          lvlEncsArr[indexOfEncsToAppendTo].fish.mons.length > 0,
+          lvlEncsArr[indexOfDayEncs].fish &&
+          lvlEncsArr[indexOfDayEncs].fish.mons.length > 0,
         hasRockDay:
-          lvlEncsArr[indexOfEncsToAppendTo].rock &&
-          lvlEncsArr[indexOfEncsToAppendTo].rock.mons.length > 0,
+          lvlEncsArr[indexOfDayEncs].rock &&
+          lvlEncsArr[indexOfDayEncs].rock.mons.length > 0,
       };
       const { hasLandNight, hasWaterNight, hasFishNight, hasRockNight } = {
-        hasLandNight: nightEncs[0].land && nightEncs[0].land.mons.length > 0,
-        hasWaterNight: nightEncs[0].water && nightEncs[0].water.mons.length > 0,
-        hasFishNight: nightEncs[0].fish && nightEncs[0].fish.mons.length > 0,
-        hasRockNight: nightEncs[0].rock && nightEncs[0].rock.mons.length > 0,
+        hasLandNight: nightEncs.land && nightEncs.land.mons.length > 0,
+        hasWaterNight: nightEncs.water && nightEncs.water.mons.length > 0,
+        hasFishNight: nightEncs.fish && nightEncs.fish.mons.length > 0,
+        hasRockNight: nightEncs.rock && nightEncs.rock.mons.length > 0,
       };
-      // We can append night to day, but if only night and no day...
-      // It will sey
-      const toNight = <T>(mon: T) => ({
-        ...mon,
-        night: true,
-      });
+
+      const toNight =
+        (forArea: "land" | "water" | "fish" | "rock", nightEncs: any) =>
+        (enc: EncounterListing, index: number, arr: EncounterListing[]) => {
+          const nightMon = nightEncs[forArea].mons.find(
+            (nightEnc: any) => nightEnc.species === enc.species,
+          );
+          if (nightMon) {
+            // If we found a matching mon, we set the nightRate
+            arr[index].nightRate = nightMon.rate;
+          }
+        };
+      // Once we get here, we need to find species in night that are in day
+      // and copy the `rate` property from the night encounter to the similar day encounter
+
       if (hasLandDay && hasLandNight) {
         // Now we go through the land encounters for both day and night
-        // and see if 
-        lvlEncsArr[indexOfEncsToAppendTo].land.mons.push(
-          ...nightEncs[0].land.mons.map(toNight),
+        // and see if
+        lvlEncsArr[indexOfDayEncs].land.mons.forEach(
+          toNight("land", nightEncs),
         );
       }
       if (hasWaterDay && hasWaterNight) {
-        lvlEncsArr[indexOfEncsToAppendTo].water.mons.push(
-          ...nightEncs[0].water.mons.map(toNight),
-        );
-      }
-      if (hasFishDay && hasFishNight) {
-        lvlEncsArr[indexOfEncsToAppendTo].fish.mons.push(
-          ...nightEncs[0].fish.mons.map(toNight),
+        lvlEncsArr[indexOfDayEncs].water.mons.forEach(
+          toNight("water", nightEncs),
         );
       }
       if (hasRockDay && hasRockNight) {
-        lvlEncsArr[indexOfEncsToAppendTo].rock.mons.push(
-          ...nightEncs[0].rock.mons.map(toNight),
+        lvlEncsArr[indexOfDayEncs].rock.mons.forEach(
+          toNight("rock", nightEncs),
         );
       }
-      flattened[mapKey] = [lvlEncsArr[indexOfEncsToAppendTo]];
+      if (hasFishDay && hasFishNight) {
+        lvlEncsArr[indexOfDayEncs].fish.mons.forEach(
+          toNight("fish", nightEncs),
+        );
+      }
+      flattened[mapKey] = [lvlEncsArr[indexOfDayEncs]];
     }
+    debugger;
     return flattened;
   }
-  private parseAndConvertSpecies(jsonData: WildEncounterData) {
+  private parseAndConvertSpecies(jsonData: RawWildEncounterData) {
     // Get the main encounters array (first group that has for_maps: true)
     const mainEncounterGroup = jsonData.wild_encounter_groups[0];
 
@@ -252,7 +270,7 @@ class EncounterStore {
       throw new Error("Could not find main encounters group");
     }
 
-    const convertSpecies = (mons: Mon[]): EncounterListing[] => {
+    const convertSpecies = (mons: RawMon[]): EncounterListing[] => {
       //@ts-ignore
       return mons.map((mon) => {
         if (mon.min_level === undefined || mon.max_level === undefined) {
@@ -266,13 +284,14 @@ class EncounterStore {
           max_level: mon.max_level,
           species: mon.species,
           name, // Add the name property
+          rate: 0, // Initialize rate, will be filled later
         };
       });
     };
 
     mainEncounterGroup.encounters
       .filter((map) => hearthMaps.includes(map.map))
-      .forEach((mapObj: EncounterGroup) => {
+      .forEach((mapObj: any) => {
         if (mapObj.land) {
           mapObj.land = {
             encounter_rate: mapObj.land.encounter_rate,
@@ -305,7 +324,7 @@ class EncounterStore {
     //@ts-ignore
     return mainEncounterGroup.encounters.filter((map) =>
       hearthMaps.includes(map.map),
-    );
+    ) as EncounterGroup[];
   }
 
   private groupEncounterData(
@@ -356,7 +375,7 @@ class EncounterStore {
 
     return !!storedData;
   }
-  public setEncounterData(rawJson: WildEncounterData) {
+  public setEncounterData(rawJson: RawWildEncounterData) {
     if (
       !rawJson.wild_encounter_groups ||
       !Array.isArray(rawJson.wild_encounter_groups)

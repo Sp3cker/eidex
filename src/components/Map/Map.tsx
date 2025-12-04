@@ -6,7 +6,7 @@ import useMapStore from "@/stores/useMapStore";
 
 import PlacesList from "./PlacesList";
 import { useMapHotkeys } from "@/hooks/useHotkeys";
-import { useRandomizerStore } from "@/stores/randomizerStore";
+// import { useRandomizerStore } from "@/stores/randomizerStore";
 import LoadingSpinner from "../ui/LoadingSpinner";
 import "./map.css";
 import "./grid.css";
@@ -19,7 +19,7 @@ const Dexnav = lazy(() => import("./ItemsBox"));
 const NewMap = lazy(() => import("./ReactSvg"));
 const Search = lazy(() => import("./Search/SearchContainer"));
 const Map = () => {
-  useRandomizerStore(); // this is here to ensure the store is initialized
+  // useRandomizerStore(); // this is here to ensure the store is initialized
   const setStateFromURL = useMapStore((state) => state.setStateFromURL);
   useMapHotkeys();
   useEffect(() => {
