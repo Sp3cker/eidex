@@ -22,7 +22,7 @@ const getMap = (map: string) => {
   // );
 };
 
-const getSelectedEncounters = (id: string, levelId: string, time?: string) => {
+const getSelectedEncounters = (id: string, levelId: string) => {
   const encounters = encounterStore.getEncounterData(id) as
     | EncounterGroup[]
     | undefined;
@@ -32,17 +32,7 @@ const getSelectedEncounters = (id: string, levelId: string, time?: string) => {
     return;
   }
 
-  const targetMapEncounters = encounters
-    .filter((enc) => {
-      if (enc.time === undefined) {
-        return true;
-      }
-      if (time) {
-        return enc.time === time;
-      }
-      return true; // if no time specified, return all
-    })
-    .find((enc) => enc.map === levelId);
+  const targetMapEncounters = encounters.find((enc) => enc.map === levelId);
 
   if (targetMapEncounters === undefined) {
     queueMicrotask(() => {
@@ -83,7 +73,7 @@ const getSelectedEncounters = (id: string, levelId: string, time?: string) => {
 const getSelectedLevel = ({
   baseMapName,
   levelIndex,
-  time,
+
 }: {
   baseMapName: string;
   levelIndex: number;
@@ -104,7 +94,7 @@ const getSelectedLevel = ({
   const thisLevelEncounterData = getSelectedEncounters(
     targetLevel.baseMap, // Key for Encounters data (e.g., "MAP_PETALBURG_CITY_LAND")
     targetLevel.thisLevelsId, // Specific sub-level ID (e.g., "MAP_PETALBURG_CITY_LAND_MAIN")
-    time,
+
   );
   const thisLevelsItems = ItemSearch.byMap(mapBaseName);
 
@@ -165,7 +155,6 @@ const getInitialMapLevelData = (baseMapName: string, time: string) => {
     const encounterData = getSelectedEncounters(
       currentLevelDetails.baseMap, // Key for Encounters data (e.g., "MAP_PETALBURG_CITY_LAND")
       currentLevelDetails.thisLevelsId, // Specific sub-level ID (e.g., "MAP_PETALBURG_CITY_LAND_MAIN")
-      time,
     );
 
     if (

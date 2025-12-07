@@ -27,14 +27,13 @@ const zoneToBgColor = (zone: string) => {
 const EncounterDescriptor = ({
   minLevel,
   maxLevel,
-  zone,
   rate,
   rod,
   types,
   nightRate,
 }: any) => {
   return (
-    <div className="font-pkmnem text-sm/1 flex flex-row items-start justify-between text-nowrap leading-tight">
+    <div className="font-pkmnem flex flex-row items-start justify-between text-nowrap text-sm leading-tight">
       <span>
         <p>
           Lv.{"\u200a"}
@@ -45,21 +44,15 @@ const EncounterDescriptor = ({
         <EncounterTypeBadge types={types} />
       </span>
 
-      <div className="flex flex-col text-right">
-        {rate && (
-          <p
-            className={`text-base/3 md:text-lg/4 ${zoneToTextColor(zone)} font-bold`}
-          >
-            ⛅{rod ? rod : rate + " %"}
-          </p>
-        )}
-        {nightRate && (
-          <p
-            className={`text-base/2 md:text-lg/5 ${zoneToTextColor(zone)} font-bold`}
-          >
-            ☾{rod ? rod : nightRate + " %"}
-          </p>
-        )}
+      <div className="font-calamity flex flex-col text-right">
+        <p className={`text-xs/3 font-light text-stone-600 md:text-sm/4`}>
+          {rate !== undefined && <>⛅{rod ? rod : rate + "%"}</>}
+        </p>
+        <p
+          className={`text-xs/3 font-light text-[var(--hearth-blue)] md:text-sm/4`}
+        >
+          {nightRate && <>☾{rod ? rod : nightRate + "%"}</>}
+        </p>
       </div>
     </div>
   );
@@ -83,7 +76,7 @@ const EncounterMonListItem = ({
   return (
     <div
       key={`${mon.species}`}
-      className={`duration-65 flex w-full cursor-pointer items-start gap-1 overflow-hidden rounded p-0 pl-2 transition-colors md:pr-2 ${zoneToBgColor(zone)} ${isSelected ? "bg-emerald-100" : ""}`}
+      className={`duration-65 flex h-14 w-full cursor-pointer items-start gap-1 overflow-hidden rounded p-0 pl-2 transition-colors md:pr-2 ${zoneToBgColor(zone)} ${isSelected ? "bg-emerald-100" : ""}`}
       onMouseDown={handleClick}
     >
       <div className="relative overflow-hidden drop-shadow-md">

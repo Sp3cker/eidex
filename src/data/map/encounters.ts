@@ -4,6 +4,7 @@ import hearthMaps from "./hearth-map.json" with { type: "json" };
 import { randomizeSpeciesForSlot } from "../../lib/randomiser/engine.ts";
 import { RandomizerSpeciesMode } from "../../lib/randomiser/SpeciesTable.ts";
 import { pokemonDataMap } from "../pokemon.ts";
+import { findDupesAndUniques } from "@/lib/utils.ts";
 
 // --- Raw JSON Types ---
 interface RawMon {
@@ -112,9 +113,9 @@ const putRodUsed = (mons: EncounterListing[]) => {
       rodsByIndex.push("Old");
     } else if (slot >= 3 && slot <= 5) {
       // 3, 4, 5
-      rodsByIndex.push("Good");
+      rodsByIndex.push("Gd.");
     } else {
-      rodsByIndex.push("Super");
+      rodsByIndex.push("Spr");
     }
   });
   // look through speciesByIndex, match each index to it's rodsByIndex
@@ -155,9 +156,8 @@ class EncounterStore {
       defaultEncounters as unknown as RawWildEncounterData,
     );
 
-    this.processedDefaultEncounters = this.flattenEncounterTimes(
-      this.groupEncounterData(processedData),
-    );
+    const groupedData = this.groupEncounterData(processedData);
+    this.processedDefaultEncounters = this.flattenEncounterTimes(groupedData);
   }
   // TAKES encounter data base label, like `gPetalburgWoods` returns `MAP_PETALBURG_WOODS`
   private baseLabelToMap(baseLabel: string): string {
@@ -165,9 +165,10 @@ class EncounterStore {
       "MAP_" +
       baseLabel
         .replace(/^g/, "")
-        .replace(/(?:Lunchtime|Night)$/gi, "")
+        .replace(/(?:Lunchtime|Day|Night)$/gi, "")
         .replace(/([A-Z])/g, "_$1")
         .replace(/^_/, "")
+        .replace(/\d+$/, "")
         .toUpperCase()
     );
   }
@@ -181,8 +182,6 @@ class EncounterStore {
     To do this, we first have to look at the map's levels and see what they have.
     If it's just day encounters, we can bail early.
     If it's just night encounters, we must change the `rate` property to `nightRate`.
-     - 
-     
     */
     for (const [mapKey, lvlEncsArr] of Object.entries(groupedData)) {
       const [nightEncs] = lvlEncsArr.filter((enc) => enc.time === "night");
@@ -222,9 +221,9 @@ class EncounterStore {
       };
 
       const toNight =
-        (forArea: "land" | "water" | "fish" | "rock", nightEncs: any) =>
+        (dupeEncs: any[]) =>
         (enc: EncounterListing, index: number, arr: EncounterListing[]) => {
-          const nightMon = nightEncs[forArea].mons.find(
+          const nightMon = dupeEncs.find(
             (nightEnc: any) => nightEnc.species === enc.species,
           );
           if (nightMon) {
@@ -232,34 +231,55 @@ class EncounterStore {
             arr[index].nightRate = nightMon.rate;
           }
         };
+      const nightifyRate = (u: EncounterListing) => {
+        u.nightRate = u.rate;
+        u.rate = 0;
+        return u;
+      };
       // Once we get here, we need to find species in night that are in day
       // and copy the `rate` property from the night encounter to the similar day encounter
 
       if (hasLandDay && hasLandNight) {
-        // Now we go through the land encounters for both day and night
-        // and see if
-        lvlEncsArr[indexOfDayEncs].land.mons.forEach(
-          toNight("land", nightEncs),
+        const [dupes, uniques] = findDupesAndUniques(
+          lvlEncsArr[indexOfDayEncs].land.mons,
+          nightEncs.land.mons,
+          (a) => a.species,
         );
+        lvlEncsArr[indexOfDayEncs].land.mons.forEach(toNight(dupes));
+        lvlEncsArr[indexOfDayEncs].land.mons.push(...uniques.map(nightifyRate));
       }
       if (hasWaterDay && hasWaterNight) {
-        lvlEncsArr[indexOfDayEncs].water.mons.forEach(
-          toNight("water", nightEncs),
+        const [dupes, uniques] = findDupesAndUniques(
+          lvlEncsArr[indexOfDayEncs].water.mons,
+          nightEncs.water.mons,
+          (a) => a.species,
+        );
+        lvlEncsArr[indexOfDayEncs].water.mons.forEach(toNight(dupes));
+        lvlEncsArr[indexOfDayEncs].water.mons.push(
+          ...uniques.map(nightifyRate),
         );
       }
       if (hasRockDay && hasRockNight) {
-        lvlEncsArr[indexOfDayEncs].rock.mons.forEach(
-          toNight("rock", nightEncs),
+        const [dupes, uniques] = findDupesAndUniques(
+          lvlEncsArr[indexOfDayEncs].rock.mons,
+          nightEncs.rock.mons,
+          (a) => a.species,
         );
+        lvlEncsArr[indexOfDayEncs].rock.mons.forEach(toNight(dupes));
+        lvlEncsArr[indexOfDayEncs].rock.mons.push(...uniques.map(nightifyRate));
       }
       if (hasFishDay && hasFishNight) {
-        lvlEncsArr[indexOfDayEncs].fish.mons.forEach(
-          toNight("fish", nightEncs),
+        const [dupes, uniques] = findDupesAndUniques(
+          lvlEncsArr[indexOfDayEncs].fish.mons,
+          nightEncs.fish.mons,
+          (a) => a.species,
         );
+        lvlEncsArr[indexOfDayEncs].fish.mons.forEach(toNight(dupes));
+        lvlEncsArr[indexOfDayEncs].fish.mons.push(...uniques.map(nightifyRate));
       }
       flattened[mapKey] = [lvlEncsArr[indexOfDayEncs]];
     }
-    debugger;
+
     return flattened;
   }
   private parseAndConvertSpecies(jsonData: RawWildEncounterData) {
@@ -317,7 +337,7 @@ class EncounterStore {
         if (mapObj.rock) {
           mapObj.rock = {
             encounter_rate: mapObj.rock.encounter_rate,
-            mons: convertSpecies(mapObj.rock.mons),
+            mons: putEncounterRate(convertSpecies(mapObj.rock.mons)),
           };
         }
       });

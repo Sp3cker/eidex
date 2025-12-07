@@ -6,7 +6,6 @@ import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
 import InfoToggleButtons from "./InfoToggleButtons";
 import ScrollArea from "@/components/ui/ScrollArea";
-import TimeSelect from "./TimeSelect/TimeSelect";
 
 const DRAGGING_TRANSLATE = 100;
 const XS_SCREEN = window.innerWidth > 768;
@@ -110,7 +109,6 @@ const MapPlaceInfoContent = memo(
         >
           <EncounterMonsContainer selectedTab={selectedTab} />
         </ScrollArea>
-        <TimeSelect parentHeight={containerHeight} />
         <div className="absolute bottom-0 left-0 right-0" style={topStyle}>
           <EncounterAreaButtons
             handleClick={handleTabClick}
