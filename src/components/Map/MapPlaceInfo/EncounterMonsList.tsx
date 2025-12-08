@@ -44,15 +44,17 @@ const EncounterDescriptor = ({
         <EncounterTypeBadge types={types} />
       </span>
 
-      <div className="font-calamity flex flex-col text-right">
-        <p className={`text-xs/3 font-light text-stone-600 md:text-sm/4`}>
-          {rate !== undefined && <>⛅{rod ? rod : rate + "%"}</>}
-        </p>
-        <p
-          className={`text-xs/3 font-light text-[var(--hearth-blue)] md:text-sm/4`}
-        >
-          {nightRate && <>☾{rod ? rod : nightRate + "%"}</>}
-        </p>
+      <div className="font-calamity flex flex-row text-right text-xs/3 font-light md:text-sm/4">
+        <div className={`text-xs/3 font-light text-[var(--hearth-blue)]`}>
+          <p>Day</p>
+          <p >Night</p>
+        </div>
+        <div className={`text-xs/3 text-stone-600`}>
+          <p >
+            {rate !== undefined && <>&nbsp;{rod ? rod : rate + "%"}</>}
+          </p>
+          <p>{nightRate && <>&nbsp;{rod ? rod : nightRate + "%"}</>}</p>
+        </div>
       </div>
     </div>
   );
