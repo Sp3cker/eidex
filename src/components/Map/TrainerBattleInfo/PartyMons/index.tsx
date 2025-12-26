@@ -39,7 +39,6 @@ const PartyMons = memo(function PartyMons({
     },
     enter: {
       translateX: "0%",
-
       opacity: 1,
     },
     leave: {

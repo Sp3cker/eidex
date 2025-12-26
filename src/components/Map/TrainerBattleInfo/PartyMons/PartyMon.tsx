@@ -24,7 +24,15 @@ const pokemonFormattedData = (id: number) => {
     typeObjects: makeTypeObjects(data.types),
   };
 };
+// Note: By here, the trainer mon has been givin a numeric ID.
 const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
+  if (pokemon.id === 0) {
+    return (
+      <h4 className="font-pkmnem py-2 text-center text-md/3 font-bold text-[var(--color-misc-error)]">
+        Error formatting this Party.
+      </h4>
+    );
+  }
   // Provide sensible defaults for optional properties
   const level = pokemon.lvl ?? 1;
   const evs = pokemon.ev ?? [0, 0, 0, 0, 0, 0];

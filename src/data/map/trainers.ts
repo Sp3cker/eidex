@@ -164,6 +164,7 @@ const normalizeTrainer = (trainer: RawTrainer): Trainer => {
 const normalizeTrainerData = (
   data: RawTrainerData,
 ): Record<string, Trainer[]> => {
+
   return Object.entries(data).reduce((acc, [mapId, trainers]) => {
     acc[mapId] = trainers.map(normalizeTrainer);
     return acc;

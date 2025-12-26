@@ -4,7 +4,8 @@ import useMapStore from "@/stores/useMapStore";
 import PartyMons from "./PartyMons";
 
 const rainbowNames = ["Spencer", "iriv24"];
-
+// Trainer party is "normalized" in TrainerList.
+// Here down is pretty much just display logic.
 const TrainerBattleInfo = memo(function TrainerBattleInfo() {
   const trainer = useDeferredValue(
     useMapStore(
