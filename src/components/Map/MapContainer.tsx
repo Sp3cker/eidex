@@ -8,7 +8,7 @@ import { shallow } from "zustand/shallow";
 const rootFontSize = parseFloat(
   getComputedStyle(document.documentElement).fontSize,
 );
-
+const ADJUST_FOR_VIEWPORT_WIDTH = 5 * rootFontSize; // Used to tweak centering on small screens
 const DEFAULT_SPRING_CONFIG = Object.freeze({
   mass: 2,
   stiffness: 0.5,
@@ -24,10 +24,10 @@ const DAMPING_FACTOR = 0.2;
 // Map is 1440x600px with scale 0.5, so scaled dimensions are ~720x300px
 // To center any corner, we need bounds that allow the map to move by its full dimensions
 const BOUNDS = {
-  top: -(600 * 0.5),
-  bottom: 600 * 0.5,
-  left: -(1440 * 0.5),
-  right: 1440 * 0.5,
+  top: -(MAP_HEIGHT * 0.5),
+  bottom: MAP_HEIGHT * 0.5,
+  left: -(MAP_WIDTH * 0.5),
+  right: MAP_WIDTH * 0.5,
 };
 const MapContainer = ({ children }: any) => {
   const [selectedCoordinates, setDragging] = useMapStore(
@@ -42,18 +42,19 @@ const MapContainer = ({ children }: any) => {
   const [{ scale, centerOffset }, api] = useSpring(() => {
     // Booleans and clearer names for readability
     const isSmallScreen = screenWidth === "sm" || screenWidth === "xs";
-    const xyScales: [number, number] = [
-      3 * rootFontSize * (isSmallScreen ? -1 : 1),
-      (isSmallScreen ? 3 : 4) * rootFontSize,
+    const xyOffsetAdjustment: [number, number] = [
+      isSmallScreen
+        ? -1 * ADJUST_FOR_VIEWPORT_WIDTH
+        : ADJUST_FOR_VIEWPORT_WIDTH,
+      isSmallScreen ? 1 : -1 * ADJUST_FOR_VIEWPORT_WIDTH,
     ];
     // Default center translation before any coordinate selection kicks in
     const baseTargetCenterOffset: [number, number] = [
-      WINDOW_WIDTH > 1000 ? -400 : 0,
-      150,
+      WINDOW_WIDTH > 1000 ? WINDOW_WIDTH / 4 : 0,
+      100,
     ];
     const hasSelection = !!(selectedCoordinates && mapRef.current);
     const [x, y] = selectedCoordinates ?? [0, 0];
-    // When the special 400x340 point is active, nudge toward center instead of upper-left
 
     const horizontalOffsetFactor = isSmallScreen ? -0.21 : 0.35;
     const verticalOffsetFactor = 0.05;
@@ -63,24 +64,20 @@ const MapContainer = ({ children }: any) => {
     const dampingY =
       (y / MAP_HEIGHT - 0.5) * MAP_HEIGHT * DAMPING_FACTOR * (y > 0 ? -1 : 1);
 
-    // Gotta be some way to say "if target coord is approachgin map edge, target offset should decrease"
-    const selectionTargetCenterOffset: [number, number] = [
-      WINDOW_WIDTH * horizontalOffsetFactor - x - xyScales[0] + dampingX,
-      WINDOW_HEIGHT * verticalOffsetFactor - y - xyScales[1] + dampingY,
-    ];
-
-
     // Choose the appropriate target offset
     const currentTargetCenterOffset: [number, number] = hasSelection
-      ? selectionTargetCenterOffset
+      ? [
+          WINDOW_WIDTH * horizontalOffsetFactor - x - xyOffsetAdjustment[0] + dampingX,
+          WINDOW_HEIGHT * verticalOffsetFactor - y - xyOffsetAdjustment[1] + dampingY,
+        ]
       : baseTargetCenterOffset;
-    const currentSpringDelay = hasSelection ? 113 : 0;
 
+    console.debug("offsetting to", currentTargetCenterOffset);
     return {
       scale: 1.32,
       centerOffset: currentTargetCenterOffset,
       config: DEFAULT_SPRING_CONFIG,
-      delay: currentSpringDelay,
+      delay: hasSelection ? 113 : 0,
       onRest: () => {
         setDragging(false);
       },
@@ -92,7 +89,7 @@ const MapContainer = ({ children }: any) => {
       if (dragging) {
         setDragging(true);
 
-        // Apply velocity-based smoothing - higher velocity = more responsive
+        //  velocity-based smoothing
         const velocityFactor = Math.min(
           Math.max(Math.sqrt(vx * vx + vy * vy) / 10, 0.1),
           1,
@@ -118,12 +115,13 @@ const MapContainer = ({ children }: any) => {
       },
     },
   );
-  const mapStyle = {
+  const mapStyle = Object.freeze({
     // @ts-expect-error - React Spring transform typing issue
     transform: to([centerOffset, scale], ([x, y], scale) => {
       return `translate3d(${x}px,${y}px, 0) scale(${scale})`;
     }),
-  };
+  });
+
   useEffect(() => {
     if (!selectedCoordinates) {
       api.start({ centerOffset: [WINDOW_WIDTH > 1000 ? 200 : 0, 150] });
