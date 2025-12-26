@@ -93,9 +93,9 @@ export const useMapStore = create<MapStore>()(
         } = initialMapData;
 
         const storedCoords = get().storedCoordinates.get(mapName) || [400, 340];
-        set({ selectedMap: mapName });
+        // set({ selectedMap: mapName });
         set({
-          // selectedMap: mapName,
+          selectedMap: mapName,
           selectedMapLevel: chosenLevelIndex, // Use the index returned by the utility
           selectedLevelLandMons: landEncounters,
           selectedLevelWaterMons: waterEncounters,
@@ -149,6 +149,7 @@ export const useMapStore = create<MapStore>()(
       },
       setSelectedEncounterLevel: (levelId: string) => {
         const baseMapAndLevelIndex = levelIdToLocationMap.get(levelId);
+
         if (!baseMapAndLevelIndex) {
           console.error("No map selected");
           return;
@@ -221,7 +222,6 @@ export const useMapStore = create<MapStore>()(
       },
       setEncountersData: (data: unknown) => {
         try {
-          debugger
           encounterStore.setEncounterData(data as any);
           encounterStore.dataSource = "next";
           set({ encounterDataSource: "next", hasEncounterDataStored: true });

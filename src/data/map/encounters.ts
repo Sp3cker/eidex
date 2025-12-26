@@ -1,6 +1,6 @@
 import defaultEncounters from "./wild_encounters.json" with { type: "json" };
 import mapConstants from "./map_constants.json" with { type: "json" };
-import hearthMaps from "./hearth-map.json" with { type: "json" };
+import hearthMaps from "./levels.json" with { type: "json" };
 import { randomizeSpeciesForSlot } from "../../lib/randomiser/engine.ts";
 import { RandomizerSpeciesMode } from "../../lib/randomiser/SpeciesTable.ts";
 import { pokemonDataMap } from "../pokemon.ts";
@@ -74,6 +74,10 @@ export type EncounterGroup = {
     mons: EncounterListing[];
   };
 };
+/* List of map IDs from level data - used to filter for levels we need. */
+const HEARTH_MAP_NAMES = Object.values(hearthMaps).flatMap((lvlSet) =>
+  lvlSet.map((lvl) => lvl.thisLevelsId),
+);
 
 const stripVowels = (str: string) => {
   return str.replace(/[aeiou]/gi, "");
@@ -310,7 +314,7 @@ class EncounterStore {
     };
 
     mainEncounterGroup.encounters
-      .filter((map) => hearthMaps.includes(map.map))
+      .filter((map) => HEARTH_MAP_NAMES.includes(map.map))
       .forEach((mapObj: any) => {
         if (mapObj.land) {
           mapObj.land = {
@@ -343,7 +347,7 @@ class EncounterStore {
       });
     //@ts-ignore
     return mainEncounterGroup.encounters.filter((map) =>
-      hearthMaps.includes(map.map),
+      HEARTH_MAP_NAMES.includes(map.map),
     ) as EncounterGroup[];
   }
 
@@ -355,7 +359,9 @@ class EncounterStore {
       const key = encounter.base_label.includes("time")
         ? this.baseLabelToMap(encounter.base_label.replace(/_/g, ""))
         : this.baseLabelToMap(encounter.base_label.split("_")[0]);
-      // debugger;
+
+      if (encounter.base_label.includes("Ginko")) {
+      }
       if (!grouped[key]) {
         grouped[key] = [];
       }

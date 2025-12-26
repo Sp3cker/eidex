@@ -119,7 +119,7 @@ const getSelectedLevel = ({
   /* the selector in the map func below is the unique property for each encounter level
   For Hearth, it's the base_map. EI is map */
   const encounterLevelIdsForSelecta = encounterGroupForThisBaseMapKey
-    ? encounterGroupForThisBaseMapKey.map((lv) => lv.base_label)
+    ? encounterGroupForThisBaseMapKey.map((lv) => lv.map)
     : [];
 
   return {
