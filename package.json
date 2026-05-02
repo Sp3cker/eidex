@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.13.13",
-    "@headlessui/react": "^2.2.9",
     "@tailwindcss/vite": "^4.1.15",
     "@types/connect-history-api-fallback": "^1.5.4",
     "@use-gesture/react": "^10.3.1",

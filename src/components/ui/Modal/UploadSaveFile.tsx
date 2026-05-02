@@ -1,5 +1,4 @@
 import React from "react";
-import { DialogTitle } from "@headlessui/react";
 
 import { useRandomizerStore } from "@/stores/randomizerStore";
 const RandomizationModesList = [
@@ -50,9 +49,9 @@ const UploadSave = () => {
   };
   return (
     <div className="font-calamity space-y-4">
-      <DialogTitle className="font-calamity mb-4 text-xl font-bold text-gray-200">
+      <h2 className="font-calamity mb-4 text-xl font-bold text-gray-200">
         Upload Save File
-      </DialogTitle>
+      </h2>
       <div className="space-y-3">
         <p className="font-calamity text-sm text-gray-300">
           Upload your Emerald Imperium save file to randomize encounters based
@@ -141,7 +140,7 @@ const UploadSave = () => {
                   className={`font-calamity fade-in w-full px-10 text-left text-xs text-gray-300 sm:text-sm ${userRandomizerMode === null ? "hidden" : "block"}`}
                 >
                   <p className="text-center">
-                    If you notice the randomizer not matching what's in your
+                    If you notice the randomizer not matching what&apos;s in your
                     game, let me know!!!
                   </p>
                   <p>Shout-out for reporting bugs:</p>

@@ -7,7 +7,7 @@ import {
   forwardRef,
   useImperativeHandle,
 } from "react";
-import { Dialog, DialogPanel } from "@headlessui/react";
+import { createPortal } from "react-dom";
 import { useSpring, animated } from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
 import { ErrorBoundary } from "react-error-boundary";
@@ -30,7 +30,6 @@ type ModalHandle = {
 };
 
 const getAnimationFromValues = (isOpen: "upload" | "disclaimer" | null) => {
-
   if (isOpen === "upload") {
     return {
       translateX: -10,
@@ -112,33 +111,45 @@ const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
     }),
     [],
   );
-
+  const onKey = (e: KeyboardEvent) => {
+    if (e.key === "Escape") setIsOpen(null);
+  };
   useEffect(() => {
-    if (typeof isOpen === "string") {
-      deselectMap();
-      document.body.style.overflow = "hidden";
-    } else {
+    if (isOpen === null) {
       document.body.style.overflow = "";
+      return;
     }
+    deselectMap();
+    document.body.style.overflow = "hidden";
+
+    window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
     };
-  }, [isOpen, deselectMap]);
+  }, [isOpen, deselectMap, setIsOpen]);
 
-  return (
-    <Dialog open={isOpen !== null} onClose={handleClose}>
+  if (isOpen === null) return null;
+
+  return createPortal(
+    <div role="dialog" aria-modal="true">
       <div
-        className={`fade-in-background fixed inset-0 z-[2] bg-black/80 ${isHovering && "will-opacity"}`}
+        className={`fade-in-background z-2 fixed inset-0 bg-black/80 ${isHovering && "will-opacity"}`}
         aria-hidden="true"
+        onClick={handleClose}
       />
 
       <animated.div
         style={springs}
-        className={`${isHovering && "will-transform"} ${isOpen ? "fade-in-opacity" : ""} z-3 absolute inset-0 flex items-start justify-center overflow-y-auto p-4 ${
+        className={`${isHovering && "will-transform"} fade-in-opacity z-3 fixed inset-0 flex items-start justify-center overflow-y-auto p-4 ${
           isOpen === "disclaimer" ? "origin-bottom-right" : "origin-bottom-left"
         }`}
+        onClick={handleClose}
       >
-        <DialogPanel className="relative my-8 w-full max-w-lg rounded-lg bg-zinc-900 p-6 transition">
+        <div
+          className="relative my-8 w-full max-w-lg rounded-lg bg-zinc-900 p-6 transition"
+          onClick={(e) => e.stopPropagation()}
+        >
           <CloseButton
             onClick={handleClose}
             className="absolute right-5 top-5"
@@ -147,11 +158,9 @@ const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
             fallback={<div className="text-red-500">Something went wrong</div>}
           >
             <section className="min-h-[50vh]">
-              {isOpen ? (
-                <Suspense>
-                  <FadeInWAAPI>{renderModalContent()}</FadeInWAAPI>
-                </Suspense>
-              ) : null}
+              <Suspense>
+                <FadeInWAAPI>{renderModalContent()}</FadeInWAAPI>
+              </Suspense>
             </section>
           </ErrorBoundary>
           <div className="max-h-[calc(100vh-8rem)] overflow-y-auto">
@@ -164,9 +173,10 @@ const Modal = forwardRef<ModalHandle, ModalProps>(function ModalComponent(
               </button>
             </div>
           </div>
-        </DialogPanel>
+        </div>
       </animated.div>
-    </Dialog>
+    </div>,
+    document.body,
   );
 });
 

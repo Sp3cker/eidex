@@ -1,4 +1,3 @@
-import { DialogTitle } from "@headlessui/react";
 import { animated, useTrail, config } from "@react-spring/web";
 
 import { ErrorBoundary } from "react-error-boundary";
@@ -138,9 +137,9 @@ const Disclaimer = () => {
 
   return (
     <>
-      <DialogTitle className="font-calamity mb-4 text-xl font-bold text-gray-200">
+      <h2 className="font-calamity mb-4 text-xl font-bold text-gray-200">
         Disclaimer
-      </DialogTitle>
+      </h2>
       <ErrorBoundary fallback={<p>whoopsie</p>}>
         <div className="font-calamity space-y-2.5 text-xs/5 text-gray-300 sm:text-sm/5">
           {wordSprings
