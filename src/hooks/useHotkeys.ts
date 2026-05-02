@@ -1,6 +1,5 @@
-import { useHotkeys } from "react-hotkeys-hook";
+import { useHotkeys, type HotkeyCallback } from "react-hotkeys-hook";
 import { useMapStore } from "@/stores/useMapStore";
-import { HotkeysEvent } from "react-hotkeys-hook/packages/react-hotkeys-hook/dist/types";
 import { shallow } from "zustand/shallow";
 
 const useMapHotkeys = () => {
@@ -23,7 +22,7 @@ const useMapHotkeys = () => {
     shallow,
   );
 
-  const hotkeyHandler = (e: KeyboardEvent, h: HotkeysEvent) => {
+  const hotkeyHandler: HotkeyCallback = (e, h) => {
     if (!h.keys || h.keys.length === 0) {
       return;
     }

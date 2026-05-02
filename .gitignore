@@ -28,3 +28,6 @@ public/fonts/emerald-pro
 # Prettier
 .prettierrc
 .env
+.wrangler/state/v3/cache/miniflare-CacheObject/metadata.sqlite
+.wrangler/state/v3/cache/miniflare-CacheObject/metadata.sqlite-wal
+.wrangler/state/v3/cache/miniflare-CacheObject/metadata.sqlite-shm
