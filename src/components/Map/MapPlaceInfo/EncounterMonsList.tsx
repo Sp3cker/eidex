@@ -47,13 +47,17 @@ const EncounterDescriptor = ({
       <div className="font-calamity flex flex-row text-right text-xs/3 font-light md:text-sm/4">
         <div className={`text-xs/3 font-light text-[var(--hearth-blue)]`}>
           <p>Day</p>
-          <p >Night</p>
+          <p>Night</p>
         </div>
         <div className={`text-xs/3 text-stone-600`}>
-          <p >
-            {rate !== undefined && <>&nbsp;{rod ? rod : rate + "%"}</>}
+          <p>{rate !== undefined && <>&nbsp;{rod ? rod : rate + "%"}</>}</p>
+          <p>
+            {nightRate === undefined ? (
+              "0%"
+            ) : (
+              <>&nbsp;{rod ? rod : nightRate + "%"}</>
+            )}
           </p>
-          <p>{nightRate && <>&nbsp;{rod ? rod : nightRate + "%"}</>}</p>
         </div>
       </div>
     </div>
