@@ -74,7 +74,7 @@ const TrainersOnLevelList = ({
 
 const TrainersList = memo(function TrainersList() {
   const isTrainersListOpen = useMapStore((state) => state.isTrainersListOpen);
-  // const selectedTrainer = useMapStore((state) => state.selectedTrainer);
+
   // const setAnimating = useMapStore((state) => state.setAnimating);
   const { trainers, isLoading, error, selectedMap } = useTrainersData();
 
