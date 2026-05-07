@@ -19,6 +19,7 @@
     "generate-spritesheet": "tsc scripts/generate-spritesheet.ts --outDir dist/scripts --target ES2022 --module ES2022 --moduleResolution bundler && node dist/scripts/generate-spritesheet.js",
     "generate-pokemon-spritesheet": "tsc scripts/generate-pokemon-spritesheet.ts --outDir dist/scripts --target ES2022 --module ES2022 --moduleResolution bundler && node dist/scripts/generate-pokemon-spritesheet.js",
     "generate-mapsvgs": "tsc scripts/generate-map-svgs.ts --outDir dist/scripts --target ES2022 --module ES2022 --moduleResolution bundler && node dist/scripts/generate-map-svgs.js",
+    "bench:encounters": "node --expose-gc scripts/bench-encounters.mjs",
     "scan": "next dev & npx react-scan@latest localhost:3000"
   },
   "dependencies": {
