@@ -8,21 +8,110 @@ import { shallow } from "zustand/shallow";
 const rootFontSize = parseFloat(
   getComputedStyle(document.documentElement).fontSize,
 );
+/* 
+im not vibe coding im not vibecoding
 
+  1. Use transform only, avoid scroll container work
+     MapContainer uses overflow-auto on the drag target. If the browser is also considering scroll/overflow
+     during gesture handling, it can add work. Since dragging is custom, overflow-hidden might feel
+     smoother later if native scrolling is not needed.
+  2. Make bounds match the active scale
+     BOUNDS currently uses the desktop max scale. That is conservative, but on mobile it allows more drag
+     range than needed. Scale-specific bounds may reduce rubberband weirdness.
+  3. Avoid restarting the spring too often
+     The effect depends on selectedCoordinates, screenWidth, WINDOW_WIDTH, WINDOW_HEIGHT, and mapScale.
+     That is correct, but if resize hooks fire during mobile browser chrome changes, the spring can
+     restart. Debouncing is already in the window hook, but mobile address-bar resize may still be
+     noticeable.
+  4. Tune selected-map transition separately from drag
+     The same DEFAULT_SPRING_CONFIG handles programmed moves. Drag uses a different config. If the
+     selected-map snap feels floaty or overshoots, a separate config for selection animations would be
+     cleaner than tuning global values.
+  5. Consider immediate during active drag
+     Drag currently updates through api.start(), which keeps spring physics active while the pointer moves.
+     For direct manipulation, using immediate updates during drag and spring only after release can feel
+     tighter.
+  6. Promote the SVG/map layer carefully
+     You already have will-change: transform. If the SVG is heavy, rasterized image layers inside it may
+     still be expensive. The big ReactSvg plus many interactive map places is likely the main cost, not the
+     math in MapContainer.
+*/
 const DEFAULT_SPRING_CONFIG = Object.freeze({
   mass: 2,
   stiffness: 0.5,
   damping: 0.81,
   frequency: 0.62,
 });
-// Allow dragging any corner to center by using map dimensions
-// Map is 800x667px with scale 1.32, so scaled dimensions are ~1056x880px
+const MAP_RENDER_WIDTH = 720;
+const MAP_RENDER_HEIGHT = 405;
+const DEFAULT_MAP_SCALE = 1.55;
+const DESKTOP_MAP_SCALE = 1.75;
+const DEFAULT_MAP_COORDINATES = Object.freeze([400, 340] as const);
+const MOBILE_MAP_PLACE_INFO_START_COLUMN = 8;
+const MOBILE_GRID_COLUMN_COUNT = 12;
+const MOBILE_NAV_HEIGHT_REMS = 3;
+const MOBILE_FIXED_GRID_HEIGHT_REMS = 13;
+const MOBILE_FLEX_GRID_ROWS = 5;
+const SELECTED_MAP_TARGET_ADJUSTMENT = 0.8;
+const MOBILE_SELECTED_MAP_VERTICAL_ADJUSTMENT = 1.6;
+
+const getCoordinateCenterOffset = (
+  coordinates: readonly number[],
+  windowWidth: number,
+  windowHeight: number,
+  screenWidth: ReturnType<typeof useScreenWidth>,
+  mapScale: number,
+) => {
+  const [x, y] = coordinates;
+  const isDefaultCoordinates =
+    x === DEFAULT_MAP_COORDINATES[0] && y === DEFAULT_MAP_COORDINATES[1];
+  const isMobile = screenWidth === "sm" || screenWidth === "xs";
+  const xyScales = isMobile
+    ? [-3 * rootFontSize, 3 * rootFontSize]
+    : [3 * rootFontSize, 4 * rootFontSize];
+  const xOffsetFactor =
+    isMobile && !isDefaultCoordinates
+      ? ((MOBILE_MAP_PLACE_INFO_START_COLUMN - 1) /
+          MOBILE_GRID_COLUMN_COUNT /
+          2) *
+        SELECTED_MAP_TARGET_ADJUSTMENT
+      : isDefaultCoordinates
+        ? 0.5
+        : 0.375 * SELECTED_MAP_TARGET_ADJUSTMENT;
+  const yOffsetFactor = isDefaultCoordinates
+    ? 0.5
+    : 0.375 * SELECTED_MAP_TARGET_ADJUSTMENT;
+  const mobileFlexRowHeight = Math.max(
+    0,
+    (windowHeight - MOBILE_FIXED_GRID_HEIGHT_REMS * rootFontSize) /
+      MOBILE_FLEX_GRID_ROWS,
+  );
+  const yTarget =
+    isMobile && !isDefaultCoordinates
+      ? MOBILE_NAV_HEIGHT_REMS * rootFontSize +
+        mobileFlexRowHeight * MOBILE_SELECTED_MAP_VERTICAL_ADJUSTMENT
+      : windowHeight * yOffsetFactor;
+  const transformOriginAdjustment = [
+    (MAP_RENDER_WIDTH / 2) * (mapScale - 1),
+    (MAP_RENDER_HEIGHT / 2) * (mapScale - 1),
+  ];
+
+  return [
+    windowWidth * xOffsetFactor -
+      x -
+      xyScales[0] +
+      transformOriginAdjustment[0],
+    yTarget - y - xyScales[1] + transformOriginAdjustment[1],
+  ];
+};
+
+// Allow dragging any corner to center by using map dimensions.
 // To center any corner, we need bounds that allow the map to move by its full dimensions
 const BOUNDS = {
-  top: -(667 * 1.32),
-  bottom: 667 * 1.32,
-  left: -(800 * 1.32),
-  right: 800 * 1.32,
+  top: -(MAP_RENDER_HEIGHT * DESKTOP_MAP_SCALE),
+  bottom: MAP_RENDER_HEIGHT * DESKTOP_MAP_SCALE,
+  left: -(MAP_RENDER_WIDTH * DESKTOP_MAP_SCALE),
+  right: MAP_RENDER_WIDTH * DESKTOP_MAP_SCALE,
 };
 const MapContainer = ({ children }: any) => {
   const [selectedCoordinates, setDragging] = useMapStore(
@@ -34,31 +123,21 @@ const MapContainer = ({ children }: any) => {
   const mapRef = useRef<HTMLDivElement>(null);
   const windowSize = useWindowSize();
   const { width: WINDOW_WIDTH, height: WINDOW_HEIGHT } = windowSize;
+  const mapScale = screenWidth === "lg" ? DESKTOP_MAP_SCALE : DEFAULT_MAP_SCALE;
   const [{ scale, centerOffset }, api] = useSpring(() => {
-    const currentTargetCenterOffset = [WINDOW_WIDTH > 1000 ? 200 : 0, 150]; // Default if no coordinates or mapRef
-    // Default config
-    let currentSpringDelay = 0; // Default delay
-    const xyScales =
-      screenWidth === "sm" || screenWidth === "xs"
-        ? [-3 * rootFontSize, 3 * rootFontSize]
-        : [3 * rootFontSize, 4 * rootFontSize];
-
-    if (selectedCoordinates && mapRef.current) {
-      const [x, y] = selectedCoordinates;
-      // Use center positioning for default coordinates, otherwise offset toward upper-left
-      const offsetFactor = x === 400 && y === 340 ? 0.5 : 0.375; // 0.5 = center, 0.375 = 3/8 toward upper-left
-      currentTargetCenterOffset[0] =
-        WINDOW_WIDTH * offsetFactor - x - xyScales[0];
-      currentTargetCenterOffset[1] =
-        WINDOW_HEIGHT * offsetFactor - y - xyScales[1];
-      currentSpringDelay = 113; // Specific delay for this case
-    }
+    const currentTargetCenterOffset = getCoordinateCenterOffset(
+      selectedCoordinates ?? DEFAULT_MAP_COORDINATES,
+      WINDOW_WIDTH,
+      WINDOW_HEIGHT,
+      screenWidth,
+      mapScale,
+    );
 
     return {
-      scale: 1.32,
+      scale: mapScale,
       centerOffset: currentTargetCenterOffset,
       config: DEFAULT_SPRING_CONFIG,
-      delay: currentSpringDelay,
+      delay: selectedCoordinates ? 113 : 0,
       onRest: () => {
         setDragging(false);
       },
@@ -104,8 +183,26 @@ const MapContainer = ({ children }: any) => {
     }),
   };
   useEffect(() => {
-    api.start({ centerOffset: [WINDOW_WIDTH > 1000 ? 200 : 0, 150] });
-  }, []);
+    api.start({
+      scale: mapScale,
+      centerOffset: getCoordinateCenterOffset(
+        selectedCoordinates ?? DEFAULT_MAP_COORDINATES,
+        WINDOW_WIDTH,
+        WINDOW_HEIGHT,
+        screenWidth,
+        mapScale,
+      ),
+      delay: selectedCoordinates ? 113 : 0,
+      config: DEFAULT_SPRING_CONFIG,
+    });
+  }, [
+    WINDOW_WIDTH,
+    WINDOW_HEIGHT,
+    api,
+    mapScale,
+    screenWidth,
+    selectedCoordinates,
+  ]);
   return (
     <div
       ref={targetRef}
