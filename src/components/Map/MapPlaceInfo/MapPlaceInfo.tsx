@@ -1,6 +1,6 @@
 import { animated, useSpring, useTransition } from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
-import { useCallback, useState, memo, Suspense } from "react";
+import { useCallback, useEffect, useRef, useState, memo, Suspense } from "react";
 import EncounterMonsContainer from "./EncounterMonsContainer";
 import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
@@ -9,6 +9,7 @@ import ScrollArea from "@/components/ui/ScrollArea";
 
 const DRAGGING_TRANSLATE = 100;
 const XS_SCREEN = window.innerWidth > 768;
+const OVERLAY_RETURN_DELAY_MS = 260;
 
 const EncounterAreaButtons = ({
   handleClick,
@@ -124,6 +125,13 @@ const MapPlaceInfo = memo(() => {
   const selectedMap = useMapStore((state) => state.selectedMap);
   const dragging = useMapStore((state) => state.dragging);
   const isTrainersListOpen = useMapStore((state) => state.isTrainersListOpen);
+  const wasDraggingRef = useRef(false);
+  const shouldDelayOverlayReturn =
+    selectedMap !== null && !dragging && wasDraggingRef.current;
+
+  useEffect(() => {
+    wasDraggingRef.current = dragging;
+  }, [dragging]);
 
   const [spring] = useSpring(
     {
@@ -135,6 +143,7 @@ const MapPlaceInfo = memo(() => {
             : 0
         : 100,
       opacity: selectedMap ? 1 : 0,
+      delay: shouldDelayOverlayReturn ? OVERLAY_RETURN_DELAY_MS : 0,
       config: (key: string) =>
         key === "opacity"
           ? { duration: 200 }
@@ -144,7 +153,7 @@ const MapPlaceInfo = memo(() => {
               mass: isTrainersListOpen ? 0.5 : 0.75,
             },
     },
-    [selectedMap, dragging, isTrainersListOpen],
+    [selectedMap, dragging, isTrainersListOpen, shouldDelayOverlayReturn],
   );
 
   return (

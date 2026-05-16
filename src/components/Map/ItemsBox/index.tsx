@@ -1,4 +1,4 @@
-import { lazy, memo, Suspense } from "react";
+import { lazy, memo, Suspense, useEffect, useRef } from "react";
 import { animated, useSpring, useTransition } from "@react-spring/web";
 import useMapStore from "@/stores/useMapStore";
 import { shallow } from "zustand/shallow";
@@ -61,6 +61,7 @@ const pages = [
 ];
 const WINDOW_HEIGHT = window.innerHeight;
 const HIDDEN_TRANSLATE = (WINDOW_HEIGHT * 2) / 5;
+const OVERLAY_RETURN_DELAY_MS = 260;
 
 //@ts-ignore
 const ANIMATE_HEIGHT = navigator.deviceMemory && navigator.deviceMemory > 4;
@@ -71,15 +72,23 @@ const ANIMATE_HEIGHT = navigator.deviceMemory && navigator.deviceMemory > 4;
 //   paddingRight: "env(safe-area-inset-right)",
 // });
 export default memo(function MapItemsBox() {
-  const [selectedMap, selectedTrainer, show, showEncounter] = useMapStore(
+  const [selectedMap, selectedTrainer, dragging, showEncounter] = useMapStore(
     (state) => [
       state.selectedMap !== null,
       state.selectedTrainer,
-      state.selectedMap !== null && state.dragging === false,
+      state.dragging,
       state.showEncounter,
     ],
     shallow,
   );
+  const show = selectedMap && dragging === false;
+  const wasDraggingRef = useRef(false);
+  const shouldDelayOverlayReturn =
+    selectedMap && !dragging && wasDraggingRef.current;
+
+  useEffect(() => {
+    wasDraggingRef.current = dragging;
+  }, [dragging]);
 
   const [springs] = useSpring(
     {
@@ -93,10 +102,11 @@ export default memo(function MapItemsBox() {
       scaleY: selectedTrainer ? 1.25 : 1,
       translateY: show ? (selectedTrainer ? 0 : 0) : HIDDEN_TRANSLATE,
       opacity: selectedMap ? 1 : 0,
+      delay: shouldDelayOverlayReturn ? OVERLAY_RETURN_DELAY_MS : 0,
 
       config: { mass: 1, tension: 220, damping: 0.2 },
     },
-    [show, selectedMap, selectedTrainer, showEncounter],
+    [show, selectedMap, selectedTrainer, showEncounter, shouldDelayOverlayReturn],
   );
   // Determine current page index for memory optimization
   const currentPageIndex = selectedTrainer ? 0 : showEncounter ? 1 : 2;

@@ -4,6 +4,7 @@ import useMapStore from "@/stores/useMapStore";
 import { useSpring, animated, to } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
 import { useEffect, useRef } from "react";
+import type { ReactNode } from "react";
 import { shallow } from "zustand/shallow";
 const rootFontSize = parseFloat(
   getComputedStyle(document.documentElement).fontSize,
@@ -105,15 +106,59 @@ const getCoordinateCenterOffset = (
   ];
 };
 
-// Allow dragging any corner to center by using map dimensions.
-// To center any corner, we need bounds that allow the map to move by its full dimensions
-const BOUNDS = {
-  top: -(MAP_RENDER_HEIGHT * DESKTOP_MAP_SCALE),
-  bottom: MAP_RENDER_HEIGHT * DESKTOP_MAP_SCALE,
-  left: -(MAP_RENDER_WIDTH * DESKTOP_MAP_SCALE),
-  right: MAP_RENDER_WIDTH * DESKTOP_MAP_SCALE,
+const DRAG_RELEASE_VELOCITY_MULTIPLIER = 48;
+const MAX_DRAG_RELEASE_THROW = 64;
+const MIN_DRAG_RELEASE_DISTANCE = 3;
+const MOBILE_RIGHT_OVERLAY_WIDTH_FACTOR = 5 / 12;
+const MAX_OFFSCREEN_MAP_FACTOR = 0.5;
+const MOBILE_MAX_OFFSCREEN_MAP_FACTOR = 0.35;
+const MAX_BOTTOM_OFFSCREEN_MAP_FACTOR = 0.25;
+
+type DragBounds = {
+  top: number;
+  bottom: number;
+  left: number;
+  right: number;
 };
-const MapContainer = ({ children }: any) => {
+
+const getDragBounds = (
+  mapScale: number,
+  windowWidth: number,
+  screenWidth: ReturnType<typeof useScreenWidth>,
+): DragBounds => {
+  const isMobile = screenWidth === "sm" || screenWidth === "xs";
+  const maxOffscreenFactor = isMobile
+    ? MOBILE_MAX_OFFSCREEN_MAP_FACTOR
+    : MAX_OFFSCREEN_MAP_FACTOR;
+  const maxOffscreenX = MAP_RENDER_WIDTH * mapScale * maxOffscreenFactor;
+  const maxOffscreenY = MAP_RENDER_HEIGHT * mapScale * maxOffscreenFactor;
+  const maxBottomOffscreenY =
+    MAP_RENDER_HEIGHT * mapScale * MAX_BOTTOM_OFFSCREEN_MAP_FACTOR;
+  const rightOverlayWidth = isMobile
+    ? windowWidth * MOBILE_RIGHT_OVERLAY_WIDTH_FACTOR
+    : 0;
+
+  return {
+    top: -maxBottomOffscreenY,
+    bottom: maxOffscreenY,
+    left: -(maxOffscreenX + rightOverlayWidth),
+    right: maxOffscreenX,
+  };
+};
+
+const clamp = (value: number, min: number, max: number) =>
+  Math.min(Math.max(value, min), max);
+
+const clampToBounds = (x: number, y: number, bounds: DragBounds) => [
+  clamp(x, bounds.left, bounds.right),
+  clamp(y, bounds.top, bounds.bottom),
+];
+
+type MapContainerProps = {
+  children: ReactNode;
+};
+
+const MapContainer = ({ children }: MapContainerProps) => {
   const [selectedCoordinates, setDragging] = useMapStore(
     (state) => [state.selectedCoordinates, state.setDragging],
     shallow,
@@ -124,6 +169,11 @@ const MapContainer = ({ children }: any) => {
   const windowSize = useWindowSize();
   const { width: WINDOW_WIDTH, height: WINDOW_HEIGHT } = windowSize;
   const mapScale = screenWidth === "lg" ? DESKTOP_MAP_SCALE : DEFAULT_MAP_SCALE;
+  const dragBounds = getDragBounds(
+    mapScale,
+    WINDOW_WIDTH,
+    screenWidth,
+  );
   const [{ scale, centerOffset }, api] = useSpring(() => {
     const currentTargetCenterOffset = getCoordinateCenterOffset(
       selectedCoordinates ?? DEFAULT_MAP_COORDINATES,
@@ -145,32 +195,53 @@ const MapContainer = ({ children }: any) => {
   }, [selectedCoordinates, screenWidth]);
 
   useDrag(
-    ({ offset: [x, y], dragging, velocity: [vx, vy] }) => {
+    ({
+      offset: [x, y],
+      dragging,
+      last,
+      movement: [mx, my],
+      velocity: [vx, vy],
+      direction: [dx, dy],
+    }) => {
       if (dragging) {
         setDragging(true);
 
-        // Apply velocity-based smoothing - higher velocity = more responsive
-        const velocityFactor = Math.min(
-          Math.max(Math.sqrt(vx * vx + vy * vy) / 10, 0.1),
-          1,
-        );
-        const smoothingFactor = 0.7 + velocityFactor * 0.3; // Range: 0.7 to 1.0
+        api.set({
+          centerOffset: clampToBounds(x, y, dragBounds),
+        });
+        return;
+      }
+
+      if (!last) {
+        return;
+      }
+
+      requestAnimationFrame(() => setDragging(false));
+
+      if (Math.hypot(mx, my) >= MIN_DRAG_RELEASE_DISTANCE) {
+        const throwX =
+          dx *
+          Math.min(
+            vx * DRAG_RELEASE_VELOCITY_MULTIPLIER,
+            MAX_DRAG_RELEASE_THROW,
+          );
+        const throwY =
+          dy *
+          Math.min(
+            vy * DRAG_RELEASE_VELOCITY_MULTIPLIER,
+            MAX_DRAG_RELEASE_THROW,
+          );
 
         api.start({
-          centerOffset: [x * smoothingFactor, y * smoothingFactor],
-          config: {
-            mass: 1,
-            tension: velocityFactor > 0.5 ? 200 : 100, // More responsive at higher velocities
-            friction: velocityFactor > 0.5 ? 25 : 15,
-          },
+          centerOffset: clampToBounds(x + throwX, y + throwY, dragBounds),
         });
       }
     },
     {
       target: targetRef,
       filterTaps: true,
-      bounds: BOUNDS,
-      rubberband: true,
+      bounds: dragBounds,
+      rubberband: false,
       from: () => {
         return [centerOffset.get()[0], centerOffset.get()[1]];
       },
