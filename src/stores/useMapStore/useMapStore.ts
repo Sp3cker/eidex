@@ -40,6 +40,7 @@ export const useMapStore = create<MapStore>()(
 
       // EncounterDetails panel state
       selectedEncounter: null,
+      selectedEncounterZone: null,
       showEncounter: false,
     };
     return {
@@ -272,8 +273,11 @@ export const useMapStore = create<MapStore>()(
       },
 
       // EncounterDetails panel actions
-      setSelectedEncounter: (encounterId: number | null) => {
-        set({ selectedEncounter: encounterId });
+      setSelectedEncounter: (encounterId: number | null, zone) => {
+        set({
+          selectedEncounter: encounterId,
+          selectedEncounterZone: encounterId === null ? null : (zone ?? null),
+        });
         // Automatically set showEncounter to true when an encounter is selected
         if (typeof encounterId === "number") {
           set({ showEncounter: true });

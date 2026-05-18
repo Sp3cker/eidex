@@ -4,6 +4,12 @@ import { EncounterTypeBadge } from "./EncounterTypeBadge";
 
 import { useMapStore } from "@/stores/useMapStore";
 import { EncounterMons } from "@/stores/useMapStore/types";
+import {
+  makeCaughtEncounterKey,
+  useCaughtEncounterStore,
+} from "@/stores/caughtEncounterStore";
+import { PokeballStatusIcon } from "./PokeballStatusIcon";
+import type { EncounterZone } from "@/stores/useMapStore/types";
 // Reads species from pokemon by ID, puts type, ie 'Normal' or 'Fire' on encounter
 // This is used to display the type of the encounter in the UI
 
@@ -59,21 +65,59 @@ const EncounterMonListItem = ({
   setSelectedEncounter,
 }: {
   mon: EncounterMons & { types: [number, number] };
-  zone: "water" | "land" | "fishing";
-  setSelectedEncounter: (speciesId: number) => void;
+  zone: EncounterZone;
+  setSelectedEncounter: (speciesId: number, zone: EncounterZone) => void;
 }) => {
   const isSelected = useMapStore(
-    (state) => state.selectedEncounter === mon.species,
+    (state) =>
+      state.selectedEncounter === mon.species &&
+      state.selectedEncounterZone === zone,
   );
+  const selectedEncounterLevel = useMapStore(
+    (state) => state.selectedEncounterLevel,
+  );
+  const caughtStatus = useCaughtEncounterStore((state) => state.status);
+  const caughtKeys = useCaughtEncounterStore((state) => state.caughtKeys);
+  const toggleCaught = useCaughtEncounterStore((state) => state.toggleCaught);
   const zoneColor = zoneToTextColor(zone);
   const handleClick = () => {
-    setSelectedEncounter(mon.species);
+    if (!isSelected) {
+      setSelectedEncounter(mon.species, zone);
+      return;
+    }
+
+    if (caughtStatus !== "ready" || !selectedEncounterLevel) {
+      return;
+    }
+
+    toggleCaught({
+      levelId: selectedEncounterLevel,
+      zone,
+      speciesId: mon.species,
+    });
   };
+  const caughtKey = selectedEncounterLevel
+    ? makeCaughtEncounterKey({
+        levelId: selectedEncounterLevel,
+        zone,
+        speciesId: mon.species,
+      })
+    : "";
+  const isCaught = caughtKey !== "" && caughtKeys.has(caughtKey);
+  const iconState =
+    caughtStatus !== "ready"
+      ? "hidden"
+      : isCaught
+        ? "closed"
+        : isSelected
+          ? "open"
+          : "hidden";
   return (
-    <div
+    <button
+      type="button"
       key={`${mon.species}`}
-      className={`w-37 flex w-full  cursor-pointer items-start gap-1 duration-65 overflow-hidden rounded p-0 pl-2 transition-colors md:pr-2 ${zoneToBgColor(zone)} ${isSelected ? "bg-emerald-100" : ""}`}
-      onMouseDown={handleClick}
+      className={`w-37 flex w-full cursor-pointer items-start gap-1 overflow-hidden rounded p-0 pl-2 text-left duration-65 transition-colors md:pr-2 ${zoneToBgColor(zone)} ${isSelected ? "bg-emerald-100" : ""}`}
+      onClick={handleClick}
     >
       <div className="relative overflow-hidden drop-shadow-md">
         <img
@@ -89,7 +133,7 @@ const EncounterMonListItem = ({
             >
             {mon.name}
           </h3>
-            {isSelected && <p className={`absolute right-2.5 -top-1 text-xl font-bold  fade-scale-rotate ${zoneColor}`}>☼</p>}
+            <PokeballStatusIcon state={iconState} />
 
 
         <EncounterDescriptor
@@ -101,7 +145,7 @@ const EncounterMonListItem = ({
           types={mon.types}
         />
       </div>
-    </div>
+    </button>
   );
 };
 const EncounterMonsList = React.memo(function EncounterList({

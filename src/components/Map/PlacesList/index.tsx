@@ -8,6 +8,8 @@ import CloseButton from "@/components/ui/CloseButton";
 import OpenButton from "./OpenButton";
 import SortBar from "./SortBar";
 import PlaceListContent from "./PlacesListContent";
+import { caughtEncounterStore, useCaughtEncounterStore } from "@/stores/caughtEncounterStore";
+import { cancelIdleTask, scheduleIdleTask } from "@/lib/scheduleIdleTask";
 // Stable className for Clock to prevent re-renders
 
 // Extract unique map IDs from the mapsvgs data
@@ -102,6 +104,10 @@ const PlacesList = memo(function PlacesList() {
     config: { mass: 0.5, friction: 20 },
   }));
   const backdropRef = useRef<HTMLDivElement>(null);
+  const caughtLoadIdleRef = useRef<number | null>(null);
+  const caughtStatus = useCaughtEncounterStore((state) => state.status);
+  const caughtCount = useCaughtEncounterStore((state) => state.caughtKeys.size);
+  const clearCaught = useCaughtEncounterStore((state) => state.clearCaught);
 
   useEffect(() => {
     const backdrop = backdropRef.current;
@@ -110,11 +116,26 @@ const PlacesList = memo(function PlacesList() {
     if (isPlacesListOpen) {
       api.start({ transform: "translateX(0%)" });
       animateBackdrop(backdrop, "show");
+      if (caughtLoadIdleRef.current !== null) {
+        cancelIdleTask(caughtLoadIdleRef.current);
+      }
+      caughtLoadIdleRef.current = scheduleIdleTask(() => {
+        caughtLoadIdleRef.current = null;
+        void caughtEncounterStore.getState().beginLazyLoad();
+      });
     } else {
       api.start({ transform: "translateX(-100%)" });
       animateBackdrop(backdrop, "hide");
     }
   }, [isPlacesListOpen]);
+
+  useEffect(() => {
+    return () => {
+      if (caughtLoadIdleRef.current !== null) {
+        cancelIdleTask(caughtLoadIdleRef.current);
+      }
+    };
+  }, []);
 
   const handlePlaceClick = (mapId: string) => {
     setSelectedMap(mapId);
@@ -169,7 +190,18 @@ const PlacesList = memo(function PlacesList() {
               </div>
             </div>
 
-            {isPlacesListOpen && <Clock />}
+            <div className="flex flex-col items-end gap-2">
+              {isPlacesListOpen && <Clock />}
+              {caughtStatus === "ready" && caughtCount > 0 && (
+                <button
+                  type="button"
+                  onClick={() => void clearCaught()}
+                  className="hover-active-button font-pkmnem rounded-sm bg-neutral-200 px-2 py-1 text-sm font-bold text-neutral-700 ring-1 ring-neutral-300"
+                >
+                  Clear caught
+                </button>
+              )}
+            </div>
           </div>
         </div>
 

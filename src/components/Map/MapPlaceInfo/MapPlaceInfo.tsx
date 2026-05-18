@@ -6,6 +6,8 @@ import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
 import InfoToggleButtons from "./InfoToggleButtons";
 import ScrollArea from "@/components/ui/ScrollArea";
+import { caughtEncounterStore } from "@/stores/caughtEncounterStore";
+import { cancelIdleTask, scheduleIdleTask } from "@/lib/scheduleIdleTask";
 
 const DRAGGING_TRANSLATE = 100;
 const XS_SCREEN = window.innerWidth > 768;
@@ -126,12 +128,21 @@ const MapPlaceInfo = memo(() => {
   const dragging = useMapStore((state) => state.dragging);
   const isTrainersListOpen = useMapStore((state) => state.isTrainersListOpen);
   const wasDraggingRef = useRef(false);
+  const caughtLoadIdleRef = useRef<number | null>(null);
   const shouldDelayOverlayReturn =
     selectedMap !== null && !dragging && wasDraggingRef.current;
 
   useEffect(() => {
     wasDraggingRef.current = dragging;
   }, [dragging]);
+
+  useEffect(() => {
+    return () => {
+      if (caughtLoadIdleRef.current !== null) {
+        cancelIdleTask(caughtLoadIdleRef.current);
+      }
+    };
+  }, []);
 
   const [spring] = useSpring(
     {
@@ -144,6 +155,18 @@ const MapPlaceInfo = memo(() => {
         : 100,
       opacity: selectedMap ? 1 : 0,
       delay: shouldDelayOverlayReturn ? OVERLAY_RETURN_DELAY_MS : 0,
+      onRest: () => {
+        if (!selectedMap) {
+          return;
+        }
+        if (caughtLoadIdleRef.current !== null) {
+          cancelIdleTask(caughtLoadIdleRef.current);
+        }
+        caughtLoadIdleRef.current = scheduleIdleTask(() => {
+          caughtLoadIdleRef.current = null;
+          void caughtEncounterStore.getState().beginLazyLoad();
+        });
+      },
       config: (key: string) =>
         key === "opacity"
           ? { duration: 200 }

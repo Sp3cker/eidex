@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { useRandomizerStore } from "@/stores/randomizerStore";
+import { useCaughtEncounterStore } from "@/stores/caughtEncounterStore";
 const RandomizationModesList = [
   {
     label: "Normal Species",
@@ -32,12 +33,36 @@ const UploadSave = () => {
     userRandomizerMode,
     setUserRandomizerMode,
   } = useRandomizerStore();
+  const hasCaughtRecords = useCaughtEncounterStore(
+    (state) => state.hasCaughtRecords,
+  );
+  const clearCaught = useCaughtEncounterStore((state) => state.clearCaught);
+  const [showCaughtWarning, setShowCaughtWarning] = useState(false);
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  useEffect(() => {
+    let cancelled = false;
+    hasCaughtRecords().then((hasRecords) => {
+      if (!cancelled) {
+        setShowCaughtWarning(hasRecords);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [hasCaughtRecords]);
+
+  const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      handleUpload(file);
+      await clearCaught();
+      setShowCaughtWarning(false);
+      await handleUpload(file);
     }
+  };
+  const handleClearSave = () => {
+    void clearCaught();
+    setShowCaughtWarning(false);
+    reset();
   };
   const handleModeChange = (mode: number) => {
     // setRandomizationMode(mode);
@@ -102,10 +127,15 @@ const UploadSave = () => {
             </p>
           </article>
         </section>
+        {showCaughtWarning && (
+          <p className="font-pkmnem text-sm font-bold text-amber-300">
+            Uploading a save will clear your caught tracker.
+          </p>
+        )}
         <div className="flex flex-row space-y-2">
           {isRandomiserActive ? (
             <button
-              onClick={reset}
+              onClick={handleClearSave}
               className="font-pkmnem rounded-xs block cursor-pointer text-nowrap px-2 py-0 font-bold text-stone-200 ring-1 ring-amber-500 hover:bg-amber-900"
             >
               Clear Save
