@@ -74,20 +74,19 @@ const EncounterMonListItem = ({
       state.selectedEncounterZone === zone,
   );
   const selectedEncounterLevel = useMapStore(
-    (state) => state.selectedEncounterLevel,
+    (state) => state.selectedEncounterLevel!,
   );
   const caughtStatus = useCaughtEncounterStore((state) => state.status);
   const caughtKeys = useCaughtEncounterStore((state) => state.caughtKeys);
   const toggleCaught = useCaughtEncounterStore((state) => state.toggleCaught);
+  const warmDb = useCaughtEncounterStore((state) => state.beginLazyLoad);
   const zoneColor = zoneToTextColor(zone);
   const handleClick = () => {
     if (!isSelected) {
       setSelectedEncounter(mon.species, zone);
+      warmDb()
       return;
-    }
-
-    if (caughtStatus !== "ready" || !selectedEncounterLevel) {
-      return;
+      // Next click set mon as captured
     }
 
     toggleCaught({
@@ -96,14 +95,14 @@ const EncounterMonListItem = ({
       speciesId: mon.species,
     });
   };
-  const caughtKey = selectedEncounterLevel
-    ? makeCaughtEncounterKey({
-        levelId: selectedEncounterLevel,
-        zone,
-        speciesId: mon.species,
-      })
-    : "";
+  const caughtKey = makeCaughtEncounterKey({
+    levelId: selectedEncounterLevel,
+    zone,
+    speciesId: mon.species,
+  });
+
   const isCaught = caughtKey !== "" && caughtKeys.has(caughtKey);
+  console.log({ caughtKey, isCaught, caughtStatus });
   const iconState =
     caughtStatus !== "ready"
       ? "hidden"
@@ -116,7 +115,7 @@ const EncounterMonListItem = ({
     <button
       type="button"
       key={`${mon.species}`}
-      className={`w-37 flex w-full cursor-pointer items-start gap-1 overflow-hidden rounded p-0 pl-2 text-left duration-65 transition-colors md:pr-2 ${zoneToBgColor(zone)} ${isSelected ? "bg-emerald-100" : ""}`}
+      className={`w-37 duration-65 flex w-full cursor-pointer items-start gap-1 overflow-hidden rounded p-0 pl-2 text-left transition-colors md:pr-2 ${zoneToBgColor(zone)} ${isSelected ? "bg-emerald-100" : ""}`}
       onClick={handleClick}
     >
       <div className="relative overflow-hidden drop-shadow-md">
@@ -126,15 +125,13 @@ const EncounterMonListItem = ({
           alt={mon.name}
         />
       </div>
-      <div className="grow pr-0 relative">
-
-          <h3
-            className={`font-bold text-shadow-2xs text-shadow-stone-200 max-w-20 text-xs ${zoneColor}`}
-            >
-            {mon.name}
-          </h3>
-            <PokeballStatusIcon state={iconState} />
-
+      <div className="relative grow pr-0">
+        <h3
+          className={`text-shadow-2xs text-shadow-stone-200 max-w-20 text-xs font-bold ${zoneColor}`}
+        >
+          {mon.name}
+        </h3>
+        <PokeballStatusIcon state={iconState} />
 
         <EncounterDescriptor
           zone={zone}

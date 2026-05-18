@@ -8,7 +8,10 @@ import CloseButton from "@/components/ui/CloseButton";
 import OpenButton from "./OpenButton";
 import SortBar from "./SortBar";
 import PlaceListContent from "./PlacesListContent";
-import { caughtEncounterStore, useCaughtEncounterStore } from "@/stores/caughtEncounterStore";
+import {
+  caughtEncounterStore,
+  useCaughtEncounterStore,
+} from "@/stores/caughtEncounterStore";
 import { cancelIdleTask, scheduleIdleTask } from "@/lib/scheduleIdleTask";
 // Stable className for Clock to prevent re-renders
 
@@ -192,20 +195,23 @@ const PlacesList = memo(function PlacesList() {
 
             <div className="flex flex-col items-end gap-2">
               {isPlacesListOpen && <Clock />}
-              {caughtStatus === "ready" && caughtCount > 0 && (
-                <button
-                  type="button"
-                  onClick={() => void clearCaught()}
-                  className="hover-active-button font-pkmnem rounded-sm bg-neutral-200 px-2 py-1 text-sm font-bold text-neutral-700 ring-1 ring-neutral-300"
-                >
-                  Clear caught
-                </button>
-              )}
             </div>
           </div>
         </div>
 
-        <SortBar />
+        <SortBar
+          rightSide={
+            caughtStatus === "ready" && (
+              <button
+                type="button"
+                onClick={() => void clearCaught()}
+                className="hover-active-button font-pkmnem rounded-sm bg-neutral-200 px-2 py-1 text-sm font-bold text-neutral-700 ring-1 ring-neutral-300"
+              >
+                Clear caught
+              </button>
+            )
+          }
+        />
 
         <div className="h-full overflow-y-auto pb-20">
           <div className="p-2">

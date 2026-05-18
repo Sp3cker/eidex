@@ -1,7 +1,11 @@
 import { memo } from "react";
 import { usePlacesListSortStore } from "@/stores/placesListSortStore";
 
-const SortBar = memo(function SortBar() {
+const SortBar = memo(function SortBar({
+  rightSide,
+}: {
+  rightSide?: React.ReactNode;
+}) {
   const { sortMode, setSortMode } = usePlacesListSortStore();
 
   return (
@@ -31,6 +35,7 @@ const SortBar = memo(function SortBar() {
           Type ♙
         </button>
       </div>
+      {rightSide}
     </div>
   );
 });
