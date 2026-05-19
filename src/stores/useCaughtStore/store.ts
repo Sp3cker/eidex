@@ -8,7 +8,7 @@ function getInitialStatus(): CaughtEncounterStatus {
 }
 
 export const caughtEncounterStore = createStore<CaughtEncounterStore>()(
-  (set, get, store) => ({
+  (_, get, store) => ({
     status: getInitialStatus(),
     caughtKeys: new Set(),
     ...createCaughtActions(

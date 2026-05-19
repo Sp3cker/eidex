@@ -201,7 +201,8 @@ const PlacesList = memo(function PlacesList() {
 
         <SortBar
           rightSide={
-            caughtStatus === "ready" && (
+            caughtStatus === "ready" &&
+            caughtCount > 0 && (
               <button
                 type="button"
                 onClick={() => void clearCaught()}

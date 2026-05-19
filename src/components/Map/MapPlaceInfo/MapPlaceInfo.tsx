@@ -1,13 +1,21 @@
 import { animated, useSpring, useTransition } from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
-import { useCallback, useEffect, useRef, useState, memo, Suspense } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  memo,
+  Suspense,
+  lazy,
+} from "react";
 import EncounterMonsContainer from "./EncounterMonsContainer";
 import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
 import InfoToggleButtons from "./InfoToggleButtons";
 import ScrollArea from "@/components/ui/ScrollArea";
-import { caughtEncounterStore } from "@/stores/caughtEncounterStore";
-import { cancelIdleTask, scheduleIdleTask } from "@/lib/scheduleIdleTask";
+
+const CaughtStoreLoader = lazy(() => import("./CaughtStoreLoader"));
 
 const DRAGGING_TRANSLATE = 100;
 const XS_SCREEN = window.innerWidth > 768;
@@ -128,21 +136,13 @@ const MapPlaceInfo = memo(() => {
   const dragging = useMapStore((state) => state.dragging);
   const isTrainersListOpen = useMapStore((state) => state.isTrainersListOpen);
   const wasDraggingRef = useRef(false);
-  const caughtLoadIdleRef = useRef<number | null>(null);
+  const [shouldLoadCaughtStore, setShouldLoadCaughtStore] = useState(false);
   const shouldDelayOverlayReturn =
     selectedMap !== null && !dragging && wasDraggingRef.current;
 
   useEffect(() => {
     wasDraggingRef.current = dragging;
   }, [dragging]);
-
-  useEffect(() => {
-    return () => {
-      if (caughtLoadIdleRef.current !== null) {
-        cancelIdleTask(caughtLoadIdleRef.current);
-      }
-    };
-  }, []);
 
   const [spring] = useSpring(
     {
@@ -159,13 +159,7 @@ const MapPlaceInfo = memo(() => {
         if (!selectedMap) {
           return;
         }
-        if (caughtLoadIdleRef.current !== null) {
-          cancelIdleTask(caughtLoadIdleRef.current);
-        }
-        caughtLoadIdleRef.current = scheduleIdleTask(() => {
-          caughtLoadIdleRef.current = null;
-          void caughtEncounterStore.getState().beginLazyLoad();
-        });
+        setShouldLoadCaughtStore(true);
       },
       config: (key: string) =>
         key === "opacity"
@@ -195,6 +189,11 @@ const MapPlaceInfo = memo(() => {
       >
         <MapInfoSwitcher />
       </animated.div>
+      {shouldLoadCaughtStore && (
+        <Suspense fallback={null}>
+          <CaughtStoreLoader />
+        </Suspense>
+      )}
     </div>
   );
 });
@@ -221,7 +220,6 @@ const pages = [
 
 const MapInfoSwitcher = memo(function Switcher() {
   const trainersListOpen = useMapStore((state) => state.isTrainersListOpen);
-
   const shuffleTransition = useTransition(trainersListOpen, {
     from: {
       translateX: "100%",

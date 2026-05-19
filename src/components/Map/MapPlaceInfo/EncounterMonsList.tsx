@@ -102,7 +102,6 @@ const EncounterMonListItem = ({
   });
 
   const isCaught = caughtKey !== "" && caughtKeys.has(caughtKey);
-  console.log({ caughtKey, isCaught, caughtStatus });
   const iconState =
     caughtStatus !== "ready"
       ? "hidden"
