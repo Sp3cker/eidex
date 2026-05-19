@@ -1,9 +1,9 @@
 import { memo, useDeferredValue, lazy, Suspense, useCallback } from "react";
 const PartyMon = lazy(() => import("./PartyMons/PartyMon"));
+const PartyMons = lazy(() => import("./PartyMons"));
 
 import TrainerInfo from "./TrainerInfo";
 import useMapStore from "@/stores/useMapStore";
-import PartyMons from "./PartyMons";
 
 const rainbowNames = ["Spencer", "iriv24"];
 
