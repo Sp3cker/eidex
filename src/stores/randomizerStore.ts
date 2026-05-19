@@ -6,7 +6,8 @@ import {
   splitSaveIntoChunks,
   getTrainerIdFromSectors,
 } from "../lib/randomiser/trainerIdExtractor.ts";
-import { pokemonSearchStore } from "./pokemonSearchStore.ts";
+//const { pokemonSearchStore } = await import("./pokemonSearchStore.ts");
+// ^ REQUIRED BELOW!!!!
 
 export type TrainerIdInfo = {
   trainerId: number;
@@ -137,6 +138,7 @@ export const randomizerStore = createStore<RandomiserStore>()(
               randomizerMode,
             );
             markEncountersReady();
+            const { pokemonSearchStore } = await import("./pokemonSearchStore.ts");
             pokemonSearchStore._initialize();
             set({
               isUploading: false,
@@ -177,6 +179,7 @@ export const randomizerStore = createStore<RandomiserStore>()(
             fullId,
             userRandomizerMode,
           );
+          const { pokemonSearchStore } = await import("./pokemonSearchStore.ts");
           pokemonSearchStore._initialize();
           // Signal that randomized encounters are ready for consumers
           markEncountersReady();
