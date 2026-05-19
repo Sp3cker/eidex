@@ -107,6 +107,11 @@ export default defineConfig(({ mode }) => {
 
       // Rollup configuration for better code splitting
       rollupOptions: {
+        treeshake: {
+          // moduleSideEffects: false, // treat modules as side-effect free by default
+          // propertyReadSideEffects: false,
+          tryCatchDeoptimization: false,
+        },
         output: {
           chunkFileNames: () => {
             return `js/[name]-[hash].js`;
@@ -124,11 +129,7 @@ export default defineConfig(({ mode }) => {
             }
             return `assets/[name]-[hash].${ext}`;
           },
-          treeshake: {
-            // moduleSideEffects: false, // treat modules as side-effect free by default
-            // propertyReadSideEffects: false,
-            tryCatchDeoptimization: false,
-          },
+
           // Manual chunk splitting for better caching and loading
           // manualChunks: {
           //   // Vendor chunks - separate large libraries
