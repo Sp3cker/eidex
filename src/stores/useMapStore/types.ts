@@ -12,6 +12,7 @@ type EncounterMons = {
   rate: number;
   rod?: string; // Optional rod type for fishing encounters
 };
+type EncounterZone = "land" | "water" | "fishing";
 
 type Level = {
   /**What the levels indexable by in `cleanEncounters.json */
@@ -54,6 +55,7 @@ type MapStore = {
 
   // EncounterDetails panel state
   selectedEncounter: number | null;
+  selectedEncounterZone: EncounterZone | null;
   showEncounter: boolean;
 
   setStateFromURL: (route: string, param: string) => void;
@@ -86,7 +88,10 @@ type MapStore = {
   setSelectedTrainer: (trainer: DisplayTrainer | null) => void;
 
   // EncounterDetails panel actions
-  setSelectedEncounter: (encounterId: number | null) => void;
+  setSelectedEncounter: (
+    encounterId: number | null,
+    zone?: EncounterZone,
+  ) => void;
   setShowEncounter: (show: boolean) => void;
 
   // Animation coordination
@@ -94,4 +99,4 @@ type MapStore = {
   getIsAnimating: () => boolean;
 };
 
-export type { EncounterMons, MapStore, Level };
+export type { EncounterMons, EncounterZone, MapStore, Level };

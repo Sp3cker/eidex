@@ -1,11 +1,21 @@
 import { animated, useSpring, useTransition } from "@react-spring/web";
 import { useMapStore } from "@/stores/useMapStore";
-import { useCallback, useEffect, useRef, useState, memo, Suspense } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  memo,
+  Suspense,
+  lazy,
+} from "react";
 import EncounterMonsContainer from "./EncounterMonsContainer";
 import TrainersList from "./TrainersList";
 import { useElementSize } from "@/hooks/useElementSize";
 import InfoToggleButtons from "./InfoToggleButtons";
 import ScrollArea from "@/components/ui/ScrollArea";
+
+const CaughtStoreLoader = lazy(() => import("./CaughtStoreLoader"));
 
 const DRAGGING_TRANSLATE = 100;
 const XS_SCREEN = window.innerWidth > 768;
@@ -126,6 +136,7 @@ const MapPlaceInfo = memo(() => {
   const dragging = useMapStore((state) => state.dragging);
   const isTrainersListOpen = useMapStore((state) => state.isTrainersListOpen);
   const wasDraggingRef = useRef(false);
+  const [shouldLoadCaughtStore, setShouldLoadCaughtStore] = useState(false);
   const shouldDelayOverlayReturn =
     selectedMap !== null && !dragging && wasDraggingRef.current;
 
@@ -144,6 +155,12 @@ const MapPlaceInfo = memo(() => {
         : 100,
       opacity: selectedMap ? 1 : 0,
       delay: shouldDelayOverlayReturn ? OVERLAY_RETURN_DELAY_MS : 0,
+      onRest: () => {
+        if (!selectedMap) {
+          return;
+        }
+        setShouldLoadCaughtStore(true);
+      },
       config: (key: string) =>
         key === "opacity"
           ? { duration: 200 }
@@ -172,6 +189,11 @@ const MapPlaceInfo = memo(() => {
       >
         <MapInfoSwitcher />
       </animated.div>
+      {shouldLoadCaughtStore && (
+        <Suspense fallback={null}>
+          <CaughtStoreLoader />
+        </Suspense>
+      )}
     </div>
   );
 });
@@ -198,7 +220,6 @@ const pages = [
 
 const MapInfoSwitcher = memo(function Switcher() {
   const trainersListOpen = useMapStore((state) => state.isTrainersListOpen);
-
   const shuffleTransition = useTransition(trainersListOpen, {
     from: {
       translateX: "100%",

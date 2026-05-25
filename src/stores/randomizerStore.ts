@@ -85,13 +85,13 @@ export const randomizerStore = createStore<RandomiserStore>()(
         });
         encounterStore.clearEncounterData();
         encounterStore.resetEncounterData();
-        window.indexedDB.databases().then((dbs) => {
-          dbs.forEach((db) => {
-            if (db.name) {
-              window.indexedDB.deleteDatabase(db.name);
-            }
-          });
-        });
+        // window.indexedDB.databases().then((dbs) => {
+        //   dbs.forEach((db) => {
+        //     if (db.name) {
+        //       window.indexedDB.deleteDatabase(db.name);
+        //     }
+        //   });
+        // });
         // encounterStore.reset();
       },
       // Actions
