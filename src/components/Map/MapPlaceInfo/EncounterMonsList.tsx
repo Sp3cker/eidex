@@ -59,6 +59,18 @@ const EncounterDescriptor = ({
     </div>
   );
 };
+
+const CaughtText = ({ isCaught }: { isCaught: boolean }) => {
+  return (
+    <p
+      className={`font-pkmnem fade-scale-rotate text-shadow-xs absolute -top-1 right-0 text-xl font-bold text-gray-600 ${
+        isCaught ? "block" : "hidden"
+      }`}
+    >
+      Caught
+    </p>
+  );
+};
 const EncounterMonListItem = ({
   mon,
   zone,
@@ -84,7 +96,7 @@ const EncounterMonListItem = ({
   const handleClick = () => {
     if (!isSelected) {
       setSelectedEncounter(mon.species, zone);
-      warmDb()
+      warmDb();
       return;
       // Next click set mon as captured
     }
@@ -114,7 +126,7 @@ const EncounterMonListItem = ({
     <button
       type="button"
       key={`${mon.species}`}
-      className={`w-37 duration-65 flex w-full cursor-pointer items-start gap-1 overflow-hidden rounded p-0 pl-2 text-left transition-colors md:pr-2 ${zoneToBgColor(zone)} ${isSelected ? "bg-emerald-100" : ""}`}
+      className={`duration-65 flex w-full cursor-pointer items-start gap-1 overflow-hidden rounded p-0 pl-2 text-left transition-colors md:pr-2 ${zoneToBgColor(zone)} ${isSelected ? "bg-emerald-100" : ""}`}
       onClick={handleClick}
     >
       <div className="relative overflow-hidden drop-shadow-md">
@@ -123,15 +135,15 @@ const EncounterMonListItem = ({
           src={`/icon/${mon.species}/icon.webp`}
           alt={mon.name}
         />
+        <PokeballStatusIcon state={iconState} />
       </div>
       <div className="relative grow pr-0">
+        <CaughtText isCaught={isCaught} />
         <h3
           className={`text-shadow-2xs text-shadow-stone-200 max-w-20 text-xs font-bold ${zoneColor}`}
         >
           {mon.name}
         </h3>
-        <PokeballStatusIcon state={iconState} />
-
         <EncounterDescriptor
           zone={zone}
           minLevel={mon.min_level}
