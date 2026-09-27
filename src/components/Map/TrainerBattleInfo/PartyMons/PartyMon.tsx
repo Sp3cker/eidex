@@ -42,7 +42,7 @@ const PartyMon = memo(function PartyMon({ pokemon }: PartyMonProps) {
           (m) => m !== 0,
         ), pokemon.hpType 
       ),
-    [pokemon.id, level],
+    [pokemon.id, level, pokemon.moves, pokemon.hpType],
   );
 
   const levelIsLevelCap = level > 199;
