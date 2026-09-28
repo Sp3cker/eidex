@@ -8,8 +8,8 @@ type ExpandedMove = {
 };
 
 const PartyMonsMoves = ({ moves }: { moves: ExpandedMove[] }) => {
-  return moves.map((m) => (
-    <div key={m.name} title={m.id.toString()}>
+  return moves.map((m, index) => (
+    <div key={`${m.id}-${index}`} title={m.id.toString()}>
       <h3 className="font-calamity text-xs font-bold text-stone-800 sm:text-sm/6">
         {m.name}
       </h3>
